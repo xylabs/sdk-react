@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "extends": [
+    "@xylabs/react"
+  ],
+  "rules": {
+    "import/no-default-export": "warn",
+    "import/no-internal-modules": ["warn", {"allow": [
+      "**/*.jpg",
+      "**/*.png",
+      "**/*.svg",
+      "react-icons/*",
+      "lodash/*",
+      "@mui/**/*"
+    ]}]
+  }
+}
