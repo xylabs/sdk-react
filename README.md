@@ -10,7 +10,7 @@
 [![codeclimate-badge]][codeclimate-link]
 [![snyk-badge]][snyk-link]
 
-> XY Labs generlized React library 
+> XY Labs generalized React library 
 
 ## Table of Contents
 
