@@ -2,7 +2,8 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, Typography } from '@
 import { AxiosError } from 'axios'
 import React from 'react'
 
-import { ButtonEx, FlexRow } from '../components'
+import { ButtonEx } from '../ButtonEx'
+import { FlexRow } from '../FlexBox'
 
 interface Props {
   error?: Error

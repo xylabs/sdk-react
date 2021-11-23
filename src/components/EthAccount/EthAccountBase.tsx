@@ -2,7 +2,7 @@ import { Typography, useMediaQuery, useTheme } from '@mui/material'
 import { MouseEvent, useContext } from 'react'
 
 import { EthersContext } from '../../contexts'
-import { ButtonEx } from '..'
+import { ButtonEx } from '../ButtonEx'
 import { FlexGrowRow, FlexRow } from '../FlexBox'
 import { Identicon } from '../Identicon'
 import { EthAccountProps } from './EthAccountProps'
