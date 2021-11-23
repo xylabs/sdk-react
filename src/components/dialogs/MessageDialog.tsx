@@ -1,6 +1,6 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogProps, DialogTitle } from '@mui/material'
 
-import { FlexCol, FlexRow } from '../components'
+import { FlexCol, FlexRow } from '../FlexBox'
 
 interface Props extends DialogProps {
   onOk?: () => void
