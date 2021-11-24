@@ -32,7 +32,8 @@ const BasePage: React.FC<BasePageProps> = ({
       justifyContent="flex-start"
       color={theme.palette.text.primary}
       alignItems="stretch"
-      width="100vw"
+      width="100%"
+      maxWidth="100vw"
       minHeight="100vh"
       {...props}
     >
