@@ -3394,12 +3394,12 @@
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
 "@xylabs/eslint-config-react@^2":
-  version "2.0.17"
-  resolved "https://registry.yarnpkg.com/@xylabs/eslint-config-react/-/eslint-config-react-2.0.17.tgz#4efa269c92b32afa3ae77b80166eb492b77aaf03"
-  integrity sha512-6l2OC3tIfcD62wwOpqehwI+zacYC4n5FFQXp/vgULp3CIIO95kEgZd65/x/iV6GQxkEF3jOEogOfcX6JVwDm3g==
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@xylabs/eslint-config-react/-/eslint-config-react-2.0.18.tgz#e1f8e4b64f8aa15f35acd1fb8c0fb984ec2362f8"
+  integrity sha512-laZ6DWxu0t4+0/VVGGbkfyPA0LpQjax19VIKvFv5ugp4lD5MfQD8MPjpVnGbOYfM6ShnV93KTZnk7YEDxXj24g==
   dependencies:
     "@xylabs/eslint-config" "^2.0.33"
-    eslint-plugin-react "^7.27.0"
+    eslint-plugin-react "^7.27.1"
     eslint-plugin-react-hooks "^4.3.0"
 
 "@xylabs/eslint-config@^2.0.33":
@@ -5798,7 +5798,7 @@ eslint-plugin-react-hooks@^4.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
   integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
 
-eslint-plugin-react@^7.27.0, eslint-plugin-react@^7.27.1:
+eslint-plugin-react@^7.27.1:
   version "7.27.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.27.1.tgz#469202442506616f77a854d91babaae1ec174b45"
   integrity sha512-meyunDjMMYeWr/4EBLTV1op3iSG3mjT/pz5gti38UzfM4OPpNc2m0t2xvKCOMU5D6FSdd34BIMFOvQbW+i8GAA==
