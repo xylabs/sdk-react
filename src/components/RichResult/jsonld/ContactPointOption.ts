@@ -3,4 +3,4 @@ enum ContactPointOption {
   TollFree = 'TollFree',
 }
 
-export type { ContactPointOption }
+export { ContactPointOption }
