@@ -45,7 +45,7 @@ import { Time } from './Time'
 import { URL } from './URL'
 import { VirtualLocation } from './VirtualLocation'
 
-export { ActionStatusType, ItemAvailability, MapCategoryType }
+export { ActionStatusType, ContactPointOption, ItemAvailability, MapCategoryType }
 export type {
   Action,
   AdministrativeArea,
@@ -54,7 +54,6 @@ export type {
   Base,
   Class,
   ContactPoint,
-  ContactPointOption,
   Country,
   CreativeWork,
   DateTime,
