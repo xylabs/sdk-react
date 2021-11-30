@@ -6,22 +6,28 @@ import React, { useContext } from 'react'
 import { InvertableThemeContext } from './InvertableThemeContext'
 import { InvertableThemeProviderProps } from './InvertableThemeProviderProps'
 
-const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (props) => {
+const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
+  options,
+  children,
+  dark,
+  scoped = false,
+  invert = false,
+  noResponsiveFonts,
+}) => {
   const contextInvertableTheme = useContext(InvertableThemeContext)
-  const { children, dark, scoped = false, invert = false, noResponsiveFonts } = props
-  const { options = clone(contextInvertableTheme.options) } = props
+  const clonedOptions = clone(options ?? contextInvertableTheme.options ?? {})
 
-  options.palette = options.palette ?? {}
+  clonedOptions.palette = clonedOptions.palette ?? {}
 
   if (invert) {
-    options.palette.mode = options.palette.mode === 'dark' ? 'light' : 'dark'
+    clonedOptions.palette.mode = clonedOptions.palette.mode === 'dark' ? 'light' : 'dark'
   }
 
   if (dark !== undefined) {
-    options.palette.mode = dark ? 'dark' : 'light'
+    clonedOptions.palette.mode = dark ? 'dark' : 'light'
   }
 
-  let theme = createTheme(options)
+  let theme = createTheme(clonedOptions)
 
   if (!noResponsiveFonts) {
     theme = responsiveFontSizes(theme)
@@ -29,12 +35,12 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (props) 
 
   return scoped ? (
     <ScopedCssBaseline>
-      <InvertableThemeContext.Provider value={{ options }}>
+      <InvertableThemeContext.Provider value={{ options: clonedOptions }}>
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </InvertableThemeContext.Provider>
     </ScopedCssBaseline>
   ) : (
-    <InvertableThemeContext.Provider value={{ options }}>
+    <InvertableThemeContext.Provider value={{ options: clonedOptions }}>
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </InvertableThemeContext.Provider>
   )

@@ -4,11 +4,11 @@
 
 [![main-build][]][main-build-link]
 [![beta-build][]][beta-build-link]
-[![npm-badge]][npm-link]
-[![bch-badge]][bch-link]
-[![codacy-badge]][codacy-link]
-[![codeclimate-badge]][codeclimate-link]
-[![snyk-badge]][snyk-link]
+[![npm-badge][]][npm-link]
+[![bch-badge][]][bch-link]
+[![codacy-badge][]][codacy-link]
+[![codeclimate-badge][]][codeclimate-link]
+[![snyk-badge][]][snyk-link]
 
 > XY Labs generalized React library 
 
@@ -28,19 +28,39 @@ Common React code that is used throughtout XYO projects that use React.
 
 Using npm:
 
-```
-$ npm i --save @xylabs/sdk-react
+```sh
+npm i --save @xylabs/sdk-react
 ```
 
 Using yarn:
 
+```sh
+yarn add @xylabs/sdk-react
 ```
-$ yarn add @xylabs/sdk-react
+
+## Scripts
+
+See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for list of shared scripts. The below scripts are custom scripts for this repo.
+
+### Build (Storybook)
+
+Build the static Storkbook site
+
+```sh
+yarn build-storybook
+```
+
+### Start
+
+Starts the project in the browser for testing, with auto reload using Storybook
+
+```sh
+yarn start
 ```
 
 ## Maintainers
 
--   [Arie Trouw](https://github.com/arietrouw) (https://arietrouw.com)
+-   [Arie Trouw](https://github.com/arietrouw) [arietrouw.com](https://arietrouw.com)
 
 ## License
 
