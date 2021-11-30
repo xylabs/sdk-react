@@ -38,6 +38,26 @@ Using yarn:
 yarn add @xylabs/sdk-react
 ```
 
+## Scripts
+
+See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for list of shared scripts. The below scripts are custom scripts for this repo.
+
+### Build (Storybook)
+
+Build the static Storkbook site
+
+```sh
+yarn build-storybook
+```
+
+### Start
+
+Starts the project in the browser for testing, with auto reload using Storybook
+
+```sh
+yarn start
+```
+
 ## Maintainers
 
 -   [Arie Trouw](https://github.com/arietrouw) [arietrouw.com](https://arietrouw.com)
