@@ -1,7 +1,8 @@
-import { Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Typography, useTheme } from '@mui/material'
 import { MouseEvent, useContext } from 'react'
 
 import { EthersContext } from '../../contexts'
+import { useMediaQuery } from '../../hooks'
 import { ButtonEx } from '../ButtonEx'
 import { FlexGrowRow, FlexRow } from '../FlexBox'
 import { Identicon } from '../Identicon'
