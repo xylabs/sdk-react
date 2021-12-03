@@ -7,5 +7,4 @@ const Background: React.FC<FlexBoxProps> = (props) => {
   return <FlexRow {...props} />
 }
 
-// eslint-disable-next-line @delagen/deprecation/deprecation
 export { Background }
