@@ -11,7 +11,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'QuickTipButton',
+  title: 'Components/QuickTipButton',
 } as ComponentMeta<typeof QuickTipButton>
 
 const Template: ComponentStory<typeof QuickTipButton> = (args) => <QuickTipButton {...args}></QuickTipButton>

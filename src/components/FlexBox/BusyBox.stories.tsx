@@ -10,7 +10,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'BusyBox',
+  title: 'Components/BusyBox',
 } as ComponentMeta<typeof BusyBox>
 
 const BusyBoxTemplate: ComponentStory<typeof BusyBox> = (args) => <BusyBox {...args}></BusyBox>

@@ -11,7 +11,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'FlexRow',
+  title: 'Components/FlexRow',
 } as ComponentMeta<typeof FlexRow>
 
 const Template: ComponentStory<typeof FlexRow> = (args) => <FlexRow {...args}></FlexRow>

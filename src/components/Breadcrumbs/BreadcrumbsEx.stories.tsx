@@ -11,7 +11,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'BreadcrumbsEx',
+  title: 'Components/BreadcrumbsEx',
 } as ComponentMeta<typeof BreadcrumbsEx>
 
 const Template: ComponentStory<typeof BreadcrumbsEx> = (args) => (

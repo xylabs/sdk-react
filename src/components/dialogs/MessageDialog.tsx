@@ -2,12 +2,12 @@ import { Button, Dialog, DialogActions, DialogContent, DialogProps, DialogTitle 
 
 import { FlexCol, FlexRow } from '../FlexBox'
 
-interface Props extends DialogProps {
+export interface MessageDialogProps extends DialogProps {
   onOk?: () => void
   onCancel?: () => void
 }
 
-const MessageDialog: React.FC<Props> = ({ onOk, onCancel, children, title, ...props }) => {
+export const MessageDialog: React.FC<MessageDialogProps> = ({ onOk, onCancel, children, title, ...props }) => {
   return (
     <Dialog {...props}>
       <DialogTitle>{title}</DialogTitle>
@@ -27,5 +27,3 @@ const MessageDialog: React.FC<Props> = ({ onOk, onCancel, children, title, ...pr
     </Dialog>
   )
 }
-
-export { MessageDialog }
