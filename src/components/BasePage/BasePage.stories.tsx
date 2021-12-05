@@ -10,7 +10,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'BasePage',
+  title: 'Components/BasePage',
 } as ComponentMeta<typeof BasePage>
 
 const Template: ComponentStory<typeof BasePage> = (args) => <BasePage {...args}></BasePage>
@@ -22,4 +22,5 @@ Default.args = {
 
 export { Default }
 
-export { StorybookEntry }
+// eslint-disable-next-line import/no-default-export
+export default StorybookEntry

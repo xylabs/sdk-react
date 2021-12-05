@@ -10,7 +10,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'ErrorsViewer',
+  title: 'Components/ErrorsViewer',
 } as ComponentMeta<typeof ErrorsViewer>
 
 const Template: ComponentStory<typeof ErrorsViewer> = (args) => <ErrorsViewer {...args}></ErrorsViewer>

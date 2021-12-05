@@ -11,7 +11,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'TokenAmount',
+  title: 'Components/TokenAmount',
 } as ComponentMeta<typeof TokenAmount>
 
 const Template: ComponentStory<typeof TokenAmount> = (args) => <TokenAmount {...args}></TokenAmount>

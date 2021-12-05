@@ -1,23 +1,24 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { ErrorViewer } from './ErrorViewer'
+import { ErrorDialog } from './ErrorDialog'
 
 const StorybookEntry = {
   argTypes: {},
-  component: ErrorViewer,
+  component: ErrorDialog,
   parameters: {
     docs: {
       page: null,
     },
   },
-  title: 'Components/ErrorViewer',
-} as ComponentMeta<typeof ErrorViewer>
+  title: 'Dialogs/ErrorDialog',
+} as ComponentMeta<typeof ErrorDialog>
 
-const Template: ComponentStory<typeof ErrorViewer> = (args) => <ErrorViewer {...args}></ErrorViewer>
+const Template: ComponentStory<typeof ErrorDialog> = (args) => <ErrorDialog {...args}></ErrorDialog>
 
 const Default = Template.bind({})
 Default.args = {
-  title: 'Default',
+  error: Error('Test Error'),
+  title: 'Test Error',
 }
 
 export { Default }

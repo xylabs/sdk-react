@@ -10,7 +10,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'InvertableThemeProvider',
+  title: 'Components/InvertableThemeProvider',
 } as ComponentMeta<typeof InvertableThemeProvider>
 
 const Template: ComponentStory<typeof InvertableThemeProvider> = (args) => (

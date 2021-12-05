@@ -11,7 +11,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'ButtonEx',
+  title: 'Components/ButtonEx',
 } as ComponentMeta<typeof ButtonEx>
 
 const DefaultTemplate: ComponentStory<typeof ButtonEx> = (args) => (
