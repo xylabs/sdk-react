@@ -1,20 +1,19 @@
-import { BoxProps } from '@mui/material'
 import { EthAddress } from '@xylabs/sdk-js'
 import { MouseEventHandler } from 'react'
-import { NavigateOptions, To } from 'react-router-dom'
 
-interface EthAccountProps extends BoxProps {
+import { ButtonExProps } from '../ButtonEx'
+
+interface EthAccountProps extends ButtonExProps {
   address?: EthAddress | null
-  auto?: boolean
+  addressLength?: 'auto' | 'short' | 'long'
   full?: boolean
   icon?: boolean
+  iconSize?: number
   iconOnly?: boolean
-  size?: number
   text?: boolean
-  to?: To
-  toOptions?: NavigateOptions
   page?: string
   toEtherScan?: boolean
+  fontFamily?: string
   onButtonClick?: MouseEventHandler<HTMLButtonElement>
 }
 
