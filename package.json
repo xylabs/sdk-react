@@ -108,5 +108,5 @@
   "sideEffects": false,
   "type": "module",
   "types": "dist/index.d.ts",
-  "version": "2.7.10"
+  "version": "2.7.11"
 }
