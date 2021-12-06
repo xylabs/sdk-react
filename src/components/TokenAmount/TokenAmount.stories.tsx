@@ -30,8 +30,8 @@ WithLogo.args = {
 const WithLogoAndColor = Template.bind({})
 WithLogoAndColor.args = {
   amount: new BigNumber('1195c751dbcc90ab4200000', 16),
-  bgcolor: '#ff0',
   logo: true,
+  statusColor: '#ff0',
 }
 
 const WithLabel = Template.bind({})

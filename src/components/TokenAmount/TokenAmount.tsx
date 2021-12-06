@@ -18,7 +18,7 @@ const base10Shift = (bn: BigNumber, places: number) => {
 const TokenAmount: React.FC<TokenAmountProps> = ({
   fontFamily = '"Source Code Pro",monospace',
   textColor,
-  bgcolor,
+  statusColor,
   style,
   amount,
   places = -18,
@@ -32,7 +32,7 @@ const TokenAmount: React.FC<TokenAmountProps> = ({
   const amountString = adjustedAmount ? Math.trunc(adjustedAmount).toLocaleString() : '-'
 
   return (
-    <ButtonEx style={{ backgroundColor: bgcolor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>
+    <ButtonEx style={{ backgroundColor: statusColor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>
       <FlexRow justifyContent="space-between" width="100%" busy={!amount} busySize={16}>
         <FlexRow>
           {logo ? <img src={xyoLogo} height={24} /> : null}

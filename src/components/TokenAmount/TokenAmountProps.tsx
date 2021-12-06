@@ -10,7 +10,7 @@ interface TokenAmountProps extends ButtonExProps {
   places?: number
   fontFamily?: string
   textColor?: string
-  bgcolor?: string
+  statusColor?: string
   onButtonClick?: MouseEventHandler<HTMLButtonElement>
 }
 
