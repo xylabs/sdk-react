@@ -16,7 +16,7 @@ const base10Shift = (bn: BigNumber, places: number) => {
 }
 
 const TokenAmount: React.FC<TokenAmountProps> = ({
-  fontFamily = '"Source Code Pro",monospace',
+  textFontFamily = '"Source Code Pro",monospace',
   textColor,
   statusColor,
   style,
@@ -41,7 +41,7 @@ const TokenAmount: React.FC<TokenAmountProps> = ({
               marginRight={1}
               marginLeft={logo ? 1 : 0}
               noWrap={true}
-              fontFamily={fontFamily}
+              fontFamily={textFontFamily}
               variant="caption"
             >
               {label}
@@ -51,7 +51,7 @@ const TokenAmount: React.FC<TokenAmountProps> = ({
         <Typography
           color={textColor}
           noWrap={true}
-          fontFamily={fontFamily}
+          fontFamily={textFontFamily}
           variant="body1"
           style={{ textTransform: 'none' }}
         >
