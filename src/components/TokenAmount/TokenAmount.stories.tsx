@@ -21,6 +21,16 @@ Default.args = {
   amount: new BigNumber('1195c751dbcc90ab4200000', 16),
 }
 
+const WithNull = Template.bind({})
+WithNull.args = {
+  amount: null,
+}
+
+const WithUndefined = Template.bind({})
+WithUndefined.args = {
+  amount: undefined,
+}
+
 const WithLogo = Template.bind({})
 WithLogo.args = {
   amount: new BigNumber('1195c751dbcc90ab4200000', 16),
@@ -47,7 +57,7 @@ WithLogoAndLabel.args = {
   logo: true,
 }
 
-export { Default, WithLabel, WithLogo, WithLogoAndColor, WithLogoAndLabel }
+export { Default, WithLabel, WithLogo, WithLogoAndColor, WithLogoAndLabel, WithNull, WithUndefined }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

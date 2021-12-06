@@ -33,7 +33,7 @@ const TokenAmount: React.FC<TokenAmountProps> = ({
 
   return (
     <ButtonEx style={{ backgroundColor: statusColor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>
-      <FlexRow justifyContent="space-between" width="100%" busy={!amount} busySize={16}>
+      <FlexRow justifyContent="space-between" width="100%" busy={amount === undefined} busySize={16}>
         <FlexRow>
           {logo ? <img src={xyoLogo} height={24} /> : null}
           {label ? (
