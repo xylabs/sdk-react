@@ -1,23 +1,25 @@
 import md5 from 'md5'
 import React, { useEffect, useRef } from 'react'
 
+import { FlexBoxProps, FlexRow } from './FlexBox'
+
 const range = (n: number, in_min: number, in_max: number, out_min: number, out_max: number) => {
   return ((n - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
 
-interface IdenticonProps {
+interface IdenticonProps extends FlexBoxProps {
   bg?: string
   className?: string
   count?: number
   fg?: string
-  padding?: number
+  iconPadding?: number
   palette?: string[]
   size?: number
   value?: string
 }
 
 const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: IdenticonProps) => {
-  const { value = '', size = 400, bg = 'transparent', count = 5, palette, padding = 0 } = props
+  const { value = '', size = 400, bg = 'transparent', count = 5, palette, iconPadding = 0 } = props
   let { fg } = props
   const hash = md5(value)
   const block = Math.floor(size / count)
@@ -34,9 +36,8 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
     fg = palette[index]
   }
 
-  const pad = padding
-  current.width = block * count + pad
-  current.height = block * count + pad
+  current.width = block * count + iconPadding
+  current.height = block * count + iconPadding
   const arr = hash.split('').map((el) => {
     const parsedEl = parseInt(el, 16)
     if (parsedEl < 8) {
@@ -61,26 +62,38 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
       row.forEach((el, j) => {
         if (el) {
           ctx.fillStyle = fg ? fg : '#' + hashcolor
-          ctx.fillRect(block * i + pad, block * j + pad, block - pad, block - pad)
+          ctx.fillRect(block * i + iconPadding, block * j + iconPadding, block - iconPadding, block - iconPadding)
         } else {
           ctx.fillStyle = bg
-          ctx.fillRect(block * i + pad, block * j + pad, block - pad, block - pad)
+          ctx.fillRect(block * i + iconPadding, block * j + iconPadding, block - iconPadding, block - iconPadding)
         }
       })
     })
   }
 }
 
-const Identicon: React.FC<IdenticonProps> = (props) => {
-  const { size = 400, className = 'identicon' } = props
-
+const Identicon: React.FC<IdenticonProps> = ({
+  size = 400,
+  className = 'identicon',
+  bg,
+  count,
+  fg,
+  iconPadding,
+  palette,
+  value,
+  ...props
+}) => {
   const canvas = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    updateCanvas(canvas, props)
+    updateCanvas(canvas, { bg, className, count, fg, iconPadding, palette, size, value })
   })
 
-  return <canvas className={className} ref={canvas} style={{ height: size, width: size }} />
+  return (
+    <FlexRow {...props}>
+      <canvas className={className} ref={canvas} style={{ height: size, width: size }} />
+    </FlexRow>
+  )
 }
 
 export { Identicon }

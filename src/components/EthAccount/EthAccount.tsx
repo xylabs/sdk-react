@@ -50,7 +50,7 @@ const EthAccount: React.FC<EthAccountProps> = ({
   return (
     <ButtonEx onClick={onClickLocal} title={`0x${address?.toHex()}`} {...props}>
       <FlexGrowRow justifyContent="space-between" alignItems="center">
-        {icon ? <Identicon size={iconSize} value={address?.toHex()} /> : null}
+        {icon && address ? <Identicon size={iconSize} value={address?.toHex()} /> : null}
         {iconOnly ? null : (
           <FlexRow>
             <Typography
