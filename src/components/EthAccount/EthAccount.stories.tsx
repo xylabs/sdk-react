@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { EthAddress } from '@xylabs/sdk-js'
 
+import { FlexRow } from '../FlexBox'
 import { EthAccount } from './EthAccount'
 
 const StorybookEntry = {
@@ -14,18 +15,40 @@ const StorybookEntry = {
   title: 'Components/EthAccount',
 } as ComponentMeta<typeof EthAccount>
 
-const Template: ComponentStory<typeof EthAccount> = (args) => <EthAccount {...args}></EthAccount>
+const Template: ComponentStory<typeof EthAccount> = (args) => (
+  <FlexRow>
+    <EthAccount variant="outlined" {...args}></EthAccount>
+  </FlexRow>
+)
 
-const Default = Template.bind({})
-Default.args = {
+const Long = Template.bind({})
+Long.args = {
   address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
-  auto: true,
+  addressLength: 'long',
   icon: true,
   title: 'Sample EthAccount',
   toEtherScan: true,
 }
 
-export { Default }
+const Short = Template.bind({})
+Short.args = {
+  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  addressLength: 'short',
+  icon: true,
+  title: 'Sample EthAccount',
+  toEtherScan: true,
+}
+
+const Auto = Template.bind({})
+Auto.args = {
+  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  addressLength: 'auto',
+  icon: true,
+  title: 'Sample EthAccount',
+  toEtherScan: true,
+}
+
+export { Auto, Long, Short }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
