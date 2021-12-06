@@ -1,4 +1,5 @@
 import { Typography, useTheme } from '@mui/material'
+import { assertEx, EthAddress } from '@xylabs/sdk-js'
 import { MouseEvent, useContext } from 'react'
 
 import { EthersContext } from '../../contexts'
@@ -24,41 +25,53 @@ const EthAccount: React.FC<EthAccountProps> = ({
 
   const large = useMediaQuery(theme.breakpoints.up('md'))
 
-  if (address) {
-    const isLocalAddress = localAddress?.toString() === address.toString()
+  const isLocalAddress = address ? localAddress?.toString() === address.toString() : false
 
-    const onClickLocal = (event: MouseEvent<HTMLButtonElement>) => {
-      onButtonClick?.(event)
-      if (toEtherScan) {
-        window.open(`https://etherscan.io/address/${address.toString()}`, '_blank')
-      }
+  const onClickLocal = (event: MouseEvent<HTMLButtonElement>) => {
+    onButtonClick?.(event)
+    if (toEtherScan && address) {
+      window.open(`https://etherscan.io/address/${address.toString()}`, '_blank')
     }
+  }
 
-    const testToDisplay =
-      addressLength === 'long'
-        ? address.toString()
-        : addressLength === 'short'
-        ? address.toShortString()
-        : large
-        ? address.toString()
-        : address.toShortString()
+  const addressToDisplay = assertEx(address ?? EthAddress.fromString('0x00'), 'Bad Eth Address')
 
-    return (
-      <ButtonEx onClick={onClickLocal} title={`0x${address?.toHex()}`} {...props}>
-        <FlexGrowRow justifyContent="space-between" alignItems="center">
-          {icon ? <Identicon size={iconSize} value={address?.toHex()} /> : null}
-          {iconOnly ? null : (
-            <Typography marginLeft={icon ? 1 : 0} variant="body1" fontFamily={fontFamily}>
+  const testToDisplay =
+    addressLength === 'long'
+      ? addressToDisplay.toString()
+      : addressLength === 'short'
+      ? addressToDisplay.toShortString()
+      : large
+      ? addressToDisplay.toString()
+      : addressToDisplay.toShortString()
+
+  // Note: We use the all zero address for spacing in case it is
+
+  return (
+    <ButtonEx onClick={onClickLocal} title={`0x${address?.toHex()}`} {...props}>
+      <FlexGrowRow justifyContent="space-between" alignItems="center">
+        {icon ? <Identicon size={iconSize} value={address?.toHex()} /> : null}
+        {iconOnly ? null : (
+          <FlexRow>
+            <Typography
+              marginLeft={icon ? 1 : 0}
+              variant="body1"
+              fontFamily={fontFamily}
+              visibility={address ? 'inherit' : 'hidden'}
+            >
               {testToDisplay}
             </Typography>
-          )}
-          {isLocalAddress ? <FlexRow marginLeft={0.5}>(You)</FlexRow> : null}
-        </FlexGrowRow>
-      </ButtonEx>
-    )
-  } else {
-    return <ButtonEx {...props}>{' - - '}</ButtonEx>
-  }
+            {address ? null : (
+              <Typography position="absolute" marginLeft={icon ? 1 : 0} variant="body1" fontFamily={fontFamily}>
+                -- --
+              </Typography>
+            )}
+          </FlexRow>
+        )}
+        {isLocalAddress ? <FlexRow marginLeft={0.5}>(You)</FlexRow> : null}
+      </FlexGrowRow>
+    </ButtonEx>
+  )
 }
 
 export { EthAccount }

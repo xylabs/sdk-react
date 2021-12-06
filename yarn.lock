@@ -3494,10 +3494,10 @@
     md5 "^2.3.0"
     randombytes "^2.1.0"
 
-"@xylabs/sdk-js@^2.3.12":
-  version "2.3.12"
-  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.12.tgz#bb5edf2717e0d61c5c9561ec660bfcd19bf2202b"
-  integrity sha512-UCFpKjpkst2jCGfhuF8mzfEkfb9LFlzRyzcfHtodT28Hx1yTaG1ZGsvm5bwMBHSM09pHcn6y9zZGSWsElKstrw==
+"@xylabs/sdk-js@^2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.13.tgz#5ef1170782ac84be289d44d1bdec493667304c1f"
+  integrity sha512-SkjoeUU1QRw0nTrE2dnYo/zCDa26gTLWZzHng3CkKyyGFOoXxHfoo7FDXb55atqxp+DGxuE/T/vavCOFFlBFKQ==
   optionalDependencies:
     rollbar "^2.24.0"
 

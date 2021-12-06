@@ -43,7 +43,7 @@
     "@types/react": "^17",
     "@xylabs/eslint-config-react": "^2",
     "@xylabs/pixel": "^1.1.6",
-    "@xylabs/sdk-js": "^2.3.12",
+    "@xylabs/sdk-js": "^2.3.13",
     "@xylabs/ts-scripts": "^1.0.23",
     "babel-loader": "^8.2.3",
     "bn.js": "^5.2.0",
