@@ -27,6 +27,13 @@ WithLogo.args = {
   logo: true,
 }
 
+const WithLogoAndColor = Template.bind({})
+WithLogoAndColor.args = {
+  amount: new BigNumber('1195c751dbcc90ab4200000', 16),
+  bgcolor: '#ff0',
+  logo: true,
+}
+
 const WithLabel = Template.bind({})
 WithLabel.args = {
   amount: new BigNumber('1195c751dbcc90ab4200000', 16),
@@ -40,7 +47,7 @@ WithLogoAndLabel.args = {
   logo: true,
 }
 
-export { Default, WithLabel, WithLogo, WithLogoAndLabel }
+export { Default, WithLabel, WithLogo, WithLogoAndColor, WithLogoAndLabel }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
