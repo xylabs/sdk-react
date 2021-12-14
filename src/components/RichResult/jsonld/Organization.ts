@@ -41,6 +41,7 @@ interface Organization extends Thing {
   event?: Event
   faxNumber?: Text
   founder?: Person | Text
+  founders?: (Person | Text)[]
   foundingDate?: DateTime
   foundingLocation?: Place
   funder?: Organization | Person
