@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "sourceMap": true
+    "outDir": "dist"
   },
-  "extends": "./tsconfig.es.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "exclude": ["dist/**/*"],
+  "extends": "./tsconfig.base.json"
 }

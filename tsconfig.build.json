@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "rootDir": "src"
+    "outDir": "dist"
   },
-  "exclude": ["src/**/*.storybook.tsx", "src/**/*.spec.ts"],
-  "extends": "./tsconfig.json"
+  "exclude": ["src/**/*.spec.ts"],
+  "extends": "./tsconfig.json",
+  "include": ["src"]
 }

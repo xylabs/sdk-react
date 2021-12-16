@@ -3,7 +3,7 @@
   "extends": [
     "@xylabs/react"
   ],
-  "ignorePatterns": "storybook-static",
+  "ignorePatterns": ["node_modules", "build", "dist", "bin", "storybook-static", "package.json"],
   "rules": {
     "import/no-default-export": "warn",
     "import/no-internal-modules": ["warn", {"allow": [
