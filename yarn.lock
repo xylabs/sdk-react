@@ -3553,9 +3553,9 @@
     remark-preset-lint-markdown-style-guide "^5.1.1"
 
 "@xylabs/pixel@^1.1.6":
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/@xylabs/pixel/-/pixel-1.1.6.tgz#5ba46d6d12a772b689d5d3ff714a1af625c98c0e"
-  integrity sha512-jhg6wm7e1IpBof7QqZpwB+AVDYI//sSGmjEurR+s8LTTNfLSL+Yd8ywj//RmQ/2Fd8GDhR5uXZvz0RmcRbwxUg==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@xylabs/pixel/-/pixel-1.2.1.tgz#877623ddaea6d7abbd9dbe552f4d473b89dbdab5"
+  integrity sha512-5FQjkBH/dPHfneaZqh36IwV7y1ZPALrfqVa/ks2ULsbzqYK4LSf1s4iyGTJJEqKmxBalHUIf/ovi0KiN4pHugQ==
   dependencies:
     async-mutex "^0.3.2"
     bowser "^2.11.0"
