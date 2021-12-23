@@ -2,7 +2,7 @@ import { useTheme } from '@mui/material'
 
 import { useMediaQuery } from './useMediaQuery'
 
-const useBreakpoint = () => {
+export const useBreakpoint = () => {
   const theme = useTheme()
   const xs = useMediaQuery(theme.breakpoints.only('xs'))
   const sm = useMediaQuery(theme.breakpoints.only('sm'))
@@ -22,5 +22,3 @@ const useBreakpoint = () => {
     return 'xl'
   }
 }
-
-export { useBreakpoint }

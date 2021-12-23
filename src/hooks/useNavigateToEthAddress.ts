@@ -1,7 +1,7 @@
 import { EthAddress } from '@xylabs/sdk-js'
 import { NavigateOptions, To, useNavigate } from 'react-router-dom'
 
-const useNavigateToEthAddress = () => {
+export const useNavigateToEthAddress = () => {
   const navigate = useNavigate()
   const navigateToEthAddress = (
     address: EthAddress,
@@ -25,5 +25,3 @@ const useNavigateToEthAddress = () => {
   }
   return { navigateToEthAddress }
 }
-
-export { useNavigateToEthAddress }
