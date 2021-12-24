@@ -61,8 +61,8 @@
     "react-router-dom": "^6",
     "rollbar": "^2",
     "rollup": "^2.61.1",
-    "rollup-plugin-typescript2": "^0.31.1",
     "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.31.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4",
     "webpack": "^5"
@@ -128,5 +128,5 @@
   "sideEffects": false,
   "type": "module",
   "types": "dist/index.d.ts",
-  "version": "2.7.18"
+  "version": "2.7.19"
 }
