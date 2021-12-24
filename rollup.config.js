@@ -1,6 +1,7 @@
 import json from '@rollup/plugin-json'
 import replace from '@rollup/plugin-replace'
 import strip from '@rollup/plugin-strip'
+import svg from 'rollup-plugin-svg'
 import typescriptPlugin from 'rollup-plugin-typescript2'
 import typescript from 'typescript'
 
@@ -37,6 +38,7 @@ function generateBuildTargetReplaceConfig(moduleFormat, languageTarget) {
 
   return {
     [BUILD_TARGET_MAGIC_STRING]: buildTarget,
+    preventAssignment: true,
   }
 }
 
@@ -55,6 +57,7 @@ function emitModulePackageFile() {
 
 const es5BuildPlugins = [
   json(),
+  svg(),
   strip({
     functions: ['debugAssert.*'],
   }),
@@ -65,6 +68,7 @@ const es5BuildPlugins = [
 
 const es2017BuildPlugins = [
   json(),
+  svg(),
   strip({
     functions: ['debugAssert.*'],
   }),
