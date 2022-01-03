@@ -3566,9 +3566,9 @@
     randombytes "^2.1.0"
 
 "@xylabs/sdk-js@^2.3.20":
-  version "2.3.20"
-  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.20.tgz#3fe014ed389510891945e3d77eb952441bebe92a"
-  integrity sha512-R4qk4M9sCx1eginMxKeu+YzNKj2lY2NPW8nfWAC6/z+CK1lNdnVd0QPIzIKTHyYIawiGpZ+vQuSxByvKsp3Sqg==
+  version "2.3.21"
+  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.21.tgz#c515474a62af9f42e514e1bc07ff1e15ac31f84f"
+  integrity sha512-0il/ST52yBVkisJA5Z0oxOW7w1iuz+kRSG6ssj1qLlrNbamlENHedBVwRnlYBmOh87rSEm5dz6wpt5rs4bFa/A==
 
 "@xylabs/ts-scripts@^1.0.24":
   version "1.0.24"
