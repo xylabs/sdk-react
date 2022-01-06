@@ -1,5 +1,3 @@
-import { delay } from '@xylabs/sdk-js'
-
 import { global } from '../../global'
 
 class Rdt {
@@ -26,12 +24,11 @@ class Rdt {
     }
   }
 
-  public async track(event: string, data?: Record<string, unknown>) {
+  public track(event: string, data?: Record<string, unknown>) {
     try {
       Rdt.getRdt()('track', event, {
         ...data,
       })
-      await delay(0)
     } catch (ex) {
       console.error(ex)
     }

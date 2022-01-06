@@ -88,8 +88,13 @@ const Experiments: React.FC<Props> = (props) => {
         localStorage.setItem(localStorageKey, mergeData(experimentsTestData))
       }
       if (!isLocalhost) {
-        userEvents?.testStarted({})
-        testStarted?.()
+        Promise.all([userEvents?.testStarted({}), testStarted?.()])
+          .then(() => {
+            return
+          })
+          .catch((reason) => {
+            console.log(`Experiments Excepted: ${reason}`)
+          })
       }
     }
 

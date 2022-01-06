@@ -1,8 +1,8 @@
-import React from 'react'
+import { createContext } from 'react'
 
 import { InvertableTheme } from './InvertableTheme'
 
-const InvertableThemeContext = React.createContext<InvertableTheme>({
+const InvertableThemeContext = createContext<InvertableTheme>({
   options: {},
 })
 

@@ -1,9 +1,9 @@
 import { UserEventHandler } from '@xylabs/pixel'
-import React from 'react'
+import { createContext } from 'react'
 
 interface Props {
   userEvents?: UserEventHandler<unknown>
 }
 
-const UserEventsContext = React.createContext<Props>({})
+const UserEventsContext = createContext<Props>({})
 export { UserEventsContext }

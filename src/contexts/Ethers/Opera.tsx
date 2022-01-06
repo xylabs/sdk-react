@@ -1,7 +1,8 @@
 import { JsonRpcProvider, JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/sdk-js'
-import React, { PropsWithChildren, useState } from 'react'
+import { PropsWithChildren, useState } from 'react'
 
+import { useAsyncEffect } from '../../lib'
 import { EthersContext } from './Context'
 
 interface Props {
@@ -23,37 +24,30 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const chainId = ethereum?.chainId ? parseInt(ethereum?.chainId) : 1
   const isConnected = ethereum?.isConnected() ?? false
 
-  React.useEffect(() => {
-    let cancelled = false
-
-    if (ethereum) {
-      ethereum.enable()
-      const operaProvider = new Web3Provider(ethereum)
-      const provider = operaProvider
-      const signer = operaProvider.getSigner()
-      const load = async () => {
+  useAsyncEffect(
+    async (mounted) => {
+      if (ethereum) {
+        ethereum.enable()
+        const operaProvider = new Web3Provider(ethereum)
+        const provider = operaProvider
+        const signer = operaProvider.getSigner()
         try {
           const localAddress = EthAddress.fromString(await signer.getAddress())
           ethereum.autoRefreshOnNetworkChange = false
-          if (!cancelled) {
+          if (mounted()) {
             setSigner(signer)
             setProvider(provider)
             setLocalAddress(localAddress)
           }
         } catch (ex) {
-          if (!cancelled) {
+          if (mounted()) {
             setError(Error(`localAddress: ${ex}`))
           }
         }
       }
-
-      load()
-    }
-
-    return () => {
-      cancelled = true
-    }
-  }, [ethereum])
+    },
+    [ethereum]
+  )
 
   return (
     <EthersContext.Provider

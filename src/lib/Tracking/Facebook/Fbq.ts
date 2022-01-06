@@ -1,5 +1,3 @@
-import { delay } from '@xylabs/sdk-js'
-
 import { global } from '../../global'
 
 class Fbq {
@@ -36,18 +34,16 @@ class Fbq {
     return this.instance
   }
 
-  public async track(event: string, data: Record<string, unknown>) {
+  public track(event: string, data: Record<string, unknown>) {
     this.fbq('track', event, {
       ...data,
     })
-    await delay(0)
   }
 
-  public async trackCustom(event: string, data: Record<string, unknown>) {
+  public trackCustom(event: string, data: Record<string, unknown>) {
     this.fbq('trackCustom', event, {
       ...data,
     })
-    await delay(0)
   }
 }
 

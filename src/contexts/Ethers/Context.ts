@@ -1,7 +1,7 @@
 import { Signer } from '@ethersproject/abstract-signer'
 import { Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/sdk-js'
-import React from 'react'
+import { createContext } from 'react'
 
 export interface EthersData {
   busy?: boolean
@@ -18,4 +18,4 @@ export interface EthersData {
   walletProvider?: Provider | null
 }
 
-export const EthersContext = React.createContext<EthersData>({})
+export const EthersContext = createContext<EthersData>({})
