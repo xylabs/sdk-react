@@ -1,7 +1,8 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/sdk-js'
-import React, { PropsWithChildren, useEffect, useState } from 'react'
+import { PropsWithChildren, useState } from 'react'
 
+import { useAsyncEffect } from '../../lib'
 import { EthersContext } from './Context'
 
 interface Props {
@@ -22,30 +23,23 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
 
   const provider = trustProvider
 
-  useEffect(() => {
-    let cancelled = false
-
-    if (signer) {
-      const load = async () => {
+  useAsyncEffect(
+    async (mounted) => {
+      if (signer) {
         try {
           const localAddress = EthAddress.fromString(await signer.getAddress())
-          if (!cancelled) {
+          if (mounted()) {
             setLocalAddress(localAddress)
           }
         } catch (ex) {
-          if (!cancelled) {
+          if (mounted()) {
             setError(Error(`localAddress: ${ex}`))
           }
         }
       }
-
-      load()
-    }
-
-    return () => {
-      cancelled = true
-    }
-  }, [signer])
+    },
+    [signer]
+  )
 
   return (
     <EthersContext.Provider

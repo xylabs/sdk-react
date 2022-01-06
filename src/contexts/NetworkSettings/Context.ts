@@ -1,7 +1,7 @@
 import { EthAddress } from '@xylabs/sdk-js'
-import React from 'react'
+import { createContext } from 'react'
 
-const NetworkSettingsContext = React.createContext<{
+const NetworkSettingsContext = createContext<{
   xyStakingConsensusAddress?: EthAddress
   xyBondAddress?: EthAddress
   xyGovernanceAddress?: EthAddress

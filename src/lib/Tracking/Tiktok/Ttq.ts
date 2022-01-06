@@ -1,5 +1,3 @@
-import { delay } from '@xylabs/sdk-js'
-
 import { global } from '../../global'
 
 class Ttq {
@@ -18,21 +16,19 @@ class Ttq {
     return global.ttq
   }
 
-  public static async page() {
+  public static page() {
     try {
       Ttq.getTtq().page()
-      await delay(0)
     } catch (ex) {
       console.error(`Ttq.page: ${ex}`)
     }
   }
 
-  public async track(event: string, data?: Record<string, unknown>) {
+  public track(event: string, data?: Record<string, unknown>) {
     try {
       Ttq.getTtq().track(event, {
         ...data,
       })
-      await delay(0)
     } catch (ex) {
       console.error(`Ttq.track: ${ex}`)
     }

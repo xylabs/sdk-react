@@ -12,11 +12,15 @@ function useAsyncEffect(effect: EffectFunc, inputs?: unknown[]) {
       return mounted
     })
 
-    Promise.resolve(promise).then((callback) => {
-      if (callback) {
-        callback?.()
-      }
-    })
+    Promise.resolve(promise)
+      .then((callback) => {
+        if (callback) {
+          callback?.()
+        }
+      })
+      .catch((reason) => {
+        console.log(`useAsyncEffect Excepted: ${reason}`)
+      })
 
     return function () {
       mounted = false

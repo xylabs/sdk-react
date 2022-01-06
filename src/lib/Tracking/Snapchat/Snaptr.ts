@@ -1,5 +1,3 @@
-import { delay } from '@xylabs/sdk-js'
-
 import { global } from '../../global'
 
 class SnapTr {
@@ -15,10 +13,9 @@ class SnapTr {
     this.track('PAGE_VIEW')
   }
 
-  public static async track<T>(event: string, data?: T) {
+  public static track<T>(event: string, data?: T) {
     this.getSnapTr()('init', this.pixelId)
     this.getSnapTr()('track', event, data)
-    await delay(0)
   }
 }
 
