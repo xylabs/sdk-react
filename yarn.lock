@@ -3584,9 +3584,9 @@
     ts-prune "^0.10"
 
 "@xylabs/tsconfig@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@xylabs/tsconfig/-/tsconfig-1.0.6.tgz#b9d654e73e378a97c227497e8705127b8b7f65ef"
-  integrity sha512-dfT9GKKFulqnWGqlWLXGt5i7ZegGhbczMP4TFng0JcpPQNzXKFwWBxhulnfhfByM2njXkoRC5JbyMeXUY1a/XA==
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@xylabs/tsconfig/-/tsconfig-1.0.8.tgz#880c1beed67322484588efd786984029807fb849"
+  integrity sha512-I8rsMzDwhlp22Aur5pOw6MwFlps+yww3792lr1bxHF6I0jHU5kO+00rGFil0mrKAMFGYH56RwA0IJzNfxws3XA==
 
 abbrev@1:
   version "1.1.1"
