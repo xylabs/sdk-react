@@ -48,8 +48,8 @@
     "@types/node": "^17.0.8",
     "@types/react": "^17",
     "@xylabs/eslint-config-react": "^2",
-    "@xylabs/rollup-config": "^1.0.5",
     "@xylabs/pixel": "^1.2.5",
+    "@xylabs/rollup-config": "^1.0.5",
     "@xylabs/ts-scripts": "^1.0.24",
     "@xylabs/tsconfig": "^1.0.8",
     "babel-loader": "^8.2.3",
@@ -132,5 +132,5 @@
   "sideEffects": false,
   "type": "module",
   "types": "dist/index.d.ts",
-  "version": "2.7.24"
+  "version": "2.7.25"
 }
