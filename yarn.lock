@@ -3595,10 +3595,28 @@
     md5 "^2.3.0"
     randombytes "^2.1.0"
 
-"@xylabs/sdk-js@^2.3.23":
-  version "2.3.23"
-  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.23.tgz#ae69a846484c73a774987bb4b417063a5edac254"
-  integrity sha512-ZKR5FVINrwg+SlE80vExtkf2RQKyp4WgnlHXLpnhlky/0LXg79NuTGnMyAW2DA7Hf3cZtYVW9nbfFZvyrUhXbA==
+"@xylabs/rollup-config@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@xylabs/rollup-config/-/rollup-config-1.0.5.tgz#59c60a8fd679119f79cb37cc89778dadaeaf0db3"
+  integrity sha512-lTct7aMqZoJgbPV5IDGDDySTIZuPSUU++wp7KtNTBlrwpYmz4fiaI3yDVetPaZLrcmdyW8o4C+GD5KffTdgsFw==
+  dependencies:
+    "@rollup/plugin-image" "^2.1.1"
+    "@rollup/plugin-json" "^4.1.0"
+    "@rollup/plugin-replace" "^3.0.1"
+    "@rollup/plugin-strip" "^2.1.0"
+    "@rollup/plugin-typescript" "^8.3.0"
+    depcheck "^1.4.2"
+    eslint-plugin-sonarjs "^0.10.0"
+    npm-check-updates "^12"
+    npm-package-json-lint "^5.4.2"
+    npm-package-json-lint-config-default "^3.0.0"
+    rollup "^2.63.0"
+    ts-prune "^0.10"
+
+"@xylabs/sdk-js@^2.3.25":
+  version "2.3.25"
+  resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.25.tgz#c00f43ed5db74fa1e8a32ca634975dbccc76f3d6"
+  integrity sha512-hM/Y5c4gF9oZmo+UymEq5b0AO5Tqc+foptftTV7vQlm5mM5Ufm/dYAVrkyu7V3d+bd7lj0K49QQykkOENPIG4Q==
 
 "@xylabs/ts-scripts@^1.0.24":
   version "1.0.24"
