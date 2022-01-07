@@ -1,8 +1,8 @@
-import { Log } from '@xylabs/sdk-js'
+import { forget, Log } from '@xylabs/sdk-js'
 import React, { ReactElement, useContext } from 'react'
 
 import { UserEventsContext } from '../../contexts'
-import { getLocalStorageObject, isLocalhost, setLocalStorageObject } from '../../lib'
+import { getLocalStorageObject, setLocalStorageObject } from '../../lib'
 import { ExperimentProps } from './Experiment'
 
 const defaultLocalStorageKey = 'testData'
@@ -31,7 +31,6 @@ type Props = {
   children: ReactElement<ExperimentProps>[] | ReactElement<ExperimentProps>
   localStorageProp?: string | boolean
   name: string
-  testStarted?: () => Promise<void>
 }
 
 const missingKeyError = new Error('Experiment Elements must have Keys')
@@ -61,9 +60,9 @@ const calcTotalWeight = (childList: ReactElement<ExperimentProps>[]) => {
 }
 
 const Experiments: React.FC<Props> = (props) => {
-  const { name, children, testStarted, localStorageProp = true } = props
-  const userEventsConntext = useContext(UserEventsContext)
-  const { userEvents } = userEventsConntext
+  const { name, children, localStorageProp = true } = props
+  const userEventsContext = useContext(UserEventsContext)
+  const { userEvents } = userEventsContext
   loadOutcomes()
 
   const localStorageKey = buildLocalStorageKey(localStorageProp)
@@ -87,14 +86,8 @@ const Experiments: React.FC<Props> = (props) => {
       if (localStorageProp !== false) {
         localStorage.setItem(localStorageKey, mergeData(experimentsTestData))
       }
-      if (!isLocalhost) {
-        Promise.all([userEvents?.testStarted({}), testStarted?.()])
-          .then(() => {
-            return
-          })
-          .catch((reason) => {
-            console.log(`Experiments Excepted: ${reason}`)
-          })
+      if (userEvents) {
+        forget(userEvents.testStarted({ name, variation: child.key }))
       }
     }
 
