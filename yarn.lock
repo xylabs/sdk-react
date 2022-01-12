@@ -3583,10 +3583,10 @@
     prettier "^2"
     remark-preset-lint-markdown-style-guide "^5.1.2"
 
-"@xylabs/pixel@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@xylabs/pixel/-/pixel-1.2.5.tgz#ab30e75e4763e81712e6bbc507115f768608cc48"
-  integrity sha512-/dxOaURuiIA2J91Om6J2BmJQfPpE2jp5mIbF4kGtn7tITf8JDE+AIjzJB5X6YXHh6ynt2z9Fs5p93StuxIQavw==
+"@xylabs/pixel@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@xylabs/pixel/-/pixel-1.2.6.tgz#f27c40e026e0a93218f0ad50cd76c45d21f48eb8"
+  integrity sha512-OBMV4HbdVgygVVBTRCnoa69APEqJI3yQxYrabuJS4BdhUoZWmOplAeq9QxW0wzY/CYvQiB2jeq7nRMhoHrNpFw==
   dependencies:
     async-mutex "^0.3.2"
     bowser "^2.11.0"
@@ -3613,7 +3613,7 @@
     rollup "^2.63.0"
     ts-prune "^0.10"
 
-"@xylabs/sdk-js@^2.3.25":
+"@xylabs/sdk-js@^2.3.27":
   version "2.3.27"
   resolved "https://registry.yarnpkg.com/@xylabs/sdk-js/-/sdk-js-2.3.27.tgz#c23c85403c2be10f851a1af6ffe6bc7cdecef247"
   integrity sha512-2zLif3eTRC4+F78btu051kQidXlJfItaPwKMQ9YveLozH+cYpURxjZK0a+T/7Nk2EXSC3kdZlRzbhwJL97WpcQ==
