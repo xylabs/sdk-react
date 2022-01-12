@@ -130,7 +130,6 @@
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register 'src/**/*.spec.ts'"
   },
   "sideEffects": false,
-  "type": "module",
   "types": "dist/index.d.ts",
   "version": "2.8.1"
 }
