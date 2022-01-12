@@ -11,9 +11,9 @@ const ExperimentsDebuggerToggle: React.FC = () => {
     localStorage.setItem(isDebuggingKey, isDebugging.toString())
   }, [isDebugging])
 
-  const onSliderChange = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => setIsDebugging(checked)
+  const onSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>, checked: boolean) => setIsDebugging(checked)
 
-  return <Switch aria-label={'Enable debugger'} value={isDebugging} onChange={onSliderChange} />
+  return <Switch aria-label={'Enable debugger'} value={isDebugging} onChange={onSwitchToggle} />
 }
 
 export  { ExperimentsDebuggerToggle }
