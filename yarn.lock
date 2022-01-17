@@ -2450,10 +2450,17 @@
     util-deprecate "^1.0.2"
     webpack "4"
 
-"@storybook/core-events@6.4.9", "@storybook/core-events@^6.4.9":
+"@storybook/core-events@6.4.9":
   version "6.4.9"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.4.9.tgz#7febedb8d263fbd6e4a69badbfcdce0101e6f782"
   integrity sha512-YhU2zJr6wzvh5naYYuy/0UKNJ/SaXu73sIr0Tx60ur3bL08XkRg7eZ9vBhNBTlAa35oZqI0iiGCh0ljiX7yEVQ==
+  dependencies:
+    core-js "^3.8.2"
+
+"@storybook/core-events@^6.4.9":
+  version "6.4.13"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-6.4.13.tgz#caf1adafd743f8d53a151bc402449f841896cb9c"
+  integrity sha512-zNlzNv7qVXjLf7yfvY9KfLvDY8nVskxrjmz0+21rIqUefS9+7SWBrtJJURpCaoPf/BmACqh/6c1RnuOY7TESnw==
   dependencies:
     core-js "^3.8.2"
 
