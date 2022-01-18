@@ -13,7 +13,10 @@ class Rdt {
   }
 
   private static getRdt() {
-    return global.rdt
+    if (global.rdt) {
+      return global.rdt
+    }
+    console.warn('Missing rdt')
   }
 
   public load(id: string) {
