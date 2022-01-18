@@ -13,7 +13,10 @@ class Ttq {
   }
 
   public static getTtq() {
-    return global.ttq
+    if (global.ttq) {
+      return global.ttq
+    }
+    console.warn('Missing ttq')
   }
 
   public static page() {
