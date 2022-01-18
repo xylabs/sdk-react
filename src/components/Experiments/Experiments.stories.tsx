@@ -1,10 +1,9 @@
-import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import React from 'react'
 
 import { FlexRow } from '../FlexBox'
-import { Experiments } from './Experiments'
 import { Experiment } from './Experiment'
-
+import { Experiments } from './Experiments'
 
 const StoryBookEntry = {
   argTypes: {},
@@ -12,7 +11,7 @@ const StoryBookEntry = {
   parameters: {
     docs: {
       page: null,
-    }
+    },
   },
   title: 'Components/Experiments',
 } as ComponentMeta<typeof Experiments>
@@ -21,10 +20,10 @@ const Template: ComponentStory<typeof Experiments> = (args) => (
   <FlexRow>
     <Experiments name={'storybookExperiment'}>
       <Experiment key={'true'} weight={50}>
-        <div style={{width: 100, height: 100, display: 'block', backgroundColor: 'red'}}/>
+        <div style={{ backgroundColor: 'red', display: 'block', height: 100, width: 100 }} />
       </Experiment>
       <Experiment key={'false'} weight={50}>
-        <div style={{width: 100, height: 100, display: 'block', backgroundColor: 'blue'}}/>
+        <div style={{ backgroundColor: 'blue', display: 'block', height: 100, width: 100 }} />
       </Experiment>
     </Experiments>
   </FlexRow>
@@ -33,4 +32,3 @@ const Template: ComponentStory<typeof Experiments> = (args) => (
 const BasicExperiment = Template.bind({})
 
 export { BasicExperiment }
-

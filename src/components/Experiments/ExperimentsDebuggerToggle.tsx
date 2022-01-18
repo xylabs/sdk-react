@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
 import { Switch } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 
 const isDebuggingKey = 'isDebuggingExperiments'
 const boolFromString = (str?: string | null) => str?.toLowerCase() === 'true'
@@ -16,4 +16,4 @@ const ExperimentsDebuggerToggle: React.FC = () => {
   return <Switch aria-label={'Enable debugger'} value={isDebugging} onChange={onSwitchToggle} />
 }
 
-export  { ExperimentsDebuggerToggle }
+export { ExperimentsDebuggerToggle }
