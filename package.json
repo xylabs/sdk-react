@@ -130,5 +130,5 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.8.4"
+  "version": "2.8.5"
 }
