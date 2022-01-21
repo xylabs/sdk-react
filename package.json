@@ -9,16 +9,16 @@
     "url": "https://github.com/xylabs/sdk-react/issues"
   },
   "dependencies": {
-    "@types/numeral": "^2.0.2",
-    "@types/react-helmet": "^6.1.5",
-    "@xylabs/sdk-js": "^2.3.28",
-    "axios": "^0.25.0",
-    "lodash": "^4.17.21",
-    "md5": "^2.3.0",
-    "numeral": "^2.0.6",
-    "query-string": "^7.1.0",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.3.1"
+    "@types/react-helmet": "^6",
+    "@xylabs/sdk-js": "^2",
+    "axios": "^0",
+    "bn.js": "^5",
+    "lodash": "^4",
+    "md5": "^2",
+    "numeral": "^2",
+    "query-string": "^7",
+    "react-helmet": "^6",
+    "react-icons": "^4"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
@@ -46,6 +46,7 @@
     "@types/lodash": "^4.14.178",
     "@types/md5": "^2.3.1",
     "@types/node": "^17.0.10",
+    "@types/numeral": "^2",
     "@types/react": "^17",
     "@xylabs/eslint-config-react": "^2",
     "@xylabs/pixel": "^1.2.6",
@@ -53,7 +54,6 @@
     "@xylabs/ts-scripts": "^1.0.24",
     "@xylabs/tsconfig": "^1.0.9",
     "babel-loader": "^8.2.3",
-    "bn.js": "^5.2.0",
     "copyfiles": "^2.4.1",
     "eslint": "^8",
     "eslint-plugin-prettier": "^4.0.0",
@@ -103,7 +103,6 @@
     "@mui/styles": "^5",
     "@xylabs/pixel": "^1",
     "@xylabs/sdk-js": "^2",
-    "bn.js": "^5",
     "react": "^17",
     "react-dom": "^17",
     "react-router-dom": "^6"

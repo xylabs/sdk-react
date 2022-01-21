@@ -1,6 +1,5 @@
 import { Dialog, DialogActions, DialogContent, DialogProps, DialogTitle, Typography } from '@mui/material'
 import { AxiosError } from 'axios'
-import React from 'react'
 
 import { ButtonEx } from '../ButtonEx'
 import { FlexRow } from '../FlexBox'
