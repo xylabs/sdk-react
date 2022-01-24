@@ -1,5 +1,5 @@
 import { Experiment } from './Experiment'
 import { Experiments } from './Experiments'
-import { ExperimentsDebuggerToggle } from './ExperimentsDebuggerToggle'
+import { ExperimentsDebugger } from './ExperimentsDebugger'
 
-export { Experiment, Experiments, ExperimentsDebuggerToggle }
+export { Experiment, Experiments, ExperimentsDebugger }

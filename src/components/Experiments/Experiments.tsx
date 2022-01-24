@@ -4,18 +4,19 @@ import React, { ReactElement, useContext } from 'react'
 import { UserEventsContext } from '../../contexts'
 import { getLocalStorageObject, setLocalStorageObject } from '../../lib'
 import { ExperimentProps } from './Experiment'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models'
 
 const defaultLocalStorageKey = 'testData'
 
 const experimentsTestData: { [index: string]: string } = {}
-let outcomes: { [index: string]: number } = {} //prevent multi-outcome
+let outcomes: OutcomesData = {} //prevent multi-outcome
 
 const saveOutcomes = () => {
-  setLocalStorageObject('outcomes', outcomes)
+  setLocalStorageObject(OutcomesLocalStorageKey, outcomes)
 }
 
 const loadOutcomes = () => {
-  outcomes = getLocalStorageObject('outcomes')
+  outcomes = getLocalStorageObject(OutcomesLocalStorageKey)
 }
 
 const mergeData = (data: { [index: string]: string }, log?: Log) => {
@@ -59,6 +60,18 @@ const calcTotalWeight = (childList: ReactElement<ExperimentProps>[]) => {
   return totalWeight
 }
 
+const saveExperimentDebugRanges = (name: string, totalWeight: number, childList: ReactElement<ExperimentProps>[]) => {
+  const experiments = getLocalStorageObject<ExperimentsData>(ExperimentsLocalStorageKey) || {}
+  experiments[name] = {
+    totalWeight,
+    variants: childList.map((child) => ({
+      key: child.props.key,
+      weight: child.props.weight,
+    })),
+  }
+  setLocalStorageObject(ExperimentsLocalStorageKey, experiments)
+}
+
 const Experiments: React.FC<Props> = (props) => {
   const { name, children, localStorageProp = true } = props
   const userEventsContext = useContext(UserEventsContext)
@@ -71,10 +84,13 @@ const Experiments: React.FC<Props> = (props) => {
 
   const totalWeight = calcTotalWeight(childList)
 
+  saveExperimentDebugRanges(name, totalWeight, childList)
+
   const firstTime = outcomes[name] === undefined
   let targetWeight = outcomes[name] ?? Math.random() * totalWeight
   outcomes[name] = targetWeight
   saveOutcomes()
+
   for (const child of childList) {
     targetWeight -= child.props.weight
     if (targetWeight > 0) continue
