@@ -16,7 +16,7 @@ const ExperimentsDebugger: React.FC = ({ ...props }) => {
         const outcome = (outcomes[name] || 0) as number
 
         const marks =  [
-          ...experiment.variants.map((variant) => ({ value: variant.weight, label: variant.key })),
+          ...experiment.variants.map(({ key, weight }) => ({ value: weight, label: key })),
           { value: experiment.totalWeight, label: 'Max' }
         ]
 
