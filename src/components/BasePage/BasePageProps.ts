@@ -9,7 +9,9 @@ interface BasePageProps extends BoxProps {
   beta?: boolean
   container?: 'xl' | 'lg' | 'md' | 'sm' | 'xs'
   disableGutters?: boolean
+  filterBar?: ReactElement
   hideAppBar?: boolean
+  hideFilterBar?: boolean
   hideFooter?: boolean
   noindex?: boolean
   cookieConsent?: ReactNode

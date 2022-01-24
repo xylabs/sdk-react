@@ -21,11 +21,13 @@ class Gtag {
     this.ga4id = ga4id
     this.awid = awid
     this.domains = domains
-    global.dataLayer = global.dataLayer || []
-    this.gtag = function () {
-      // eslint-disable-next-line prefer-rest-params
-      global.dataLayer.push(arguments)
-    }
+    global.dataLayer = global.dataLayer ?? []
+    this.gtag =
+      global.gtag ??
+      function () {
+        // eslint-disable-next-line prefer-rest-params
+        global.dataLayer.push(arguments)
+      }
     global.gtag = this.gtag
     this.gtag('js', new Date())
     this.gtag('config', ga4id)
