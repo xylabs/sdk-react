@@ -3612,9 +3612,9 @@
     rollbar "^2.24.0"
 
 "@xylabs/ts-scripts@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@xylabs/ts-scripts/-/ts-scripts-1.0.24.tgz#91bbc3dcfc3ce37782d4db86e6f235755e9e2254"
-  integrity sha512-hwGHak7VZhnmIXLz6R4+W+Y3GkgIv1aU4ye7GhJeQnpe17yBtPRJTjTUJHd5GqS5iZlzUjodc8e9ZOv7QK5Tvg==
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/@xylabs/ts-scripts/-/ts-scripts-1.0.26.tgz#761c8249e9156eed91bfb49f710b83bdac03de58"
+  integrity sha512-jnW6OvrZ8Y0m0w7uDwydrfaGqTjfy1avbT5I018oOoyd8gSe38GRO5ezy9xTZfmO3rlDRjW4D0j1u1wGJ1CJvA==
   dependencies:
     "@xylabs/eslint-config" "^2.1.6"
     depcheck "^1.4.2"
@@ -4266,7 +4266,7 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
   integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
-bn.js@^5.0.0, bn.js@^5.1.1, bn.js@^5.2.0:
+bn.js@^5, bn.js@^5.0.0, bn.js@^5.1.1, bn.js@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-5.2.0.tgz#358860674396c6997771a9d051fcc1b57d4ae002"
   integrity sha512-D7iWRBvnZE8ecXiLj/9wbxH7Tk79fAh8IHaTNq1RWRixsS02W+5qS+iE9yq6RYl0asXx5tw0bLhmT5pIfbSquw==
