@@ -19,8 +19,12 @@ const Template: ComponentStory<typeof Experiments> = (args) => <Experiments {...
 const Default = Template.bind({})
 Default.args = {
   children: [
-    <Experiment weight={50} key={'true'}>True</Experiment>,
-    <Experiment weight={50} key={'false'}>False</Experiment>
+    <Experiment weight={50} key={'true'}>
+      True
+    </Experiment>,
+    <Experiment weight={50} key={'false'}>
+      False
+    </Experiment>,
   ],
   name: 'StorybookAB',
 }

@@ -16,8 +16,7 @@ const StorybookEntry = {
 const Template: ComponentStory<typeof ExperimentsDebugger> = (args) => <ExperimentsDebugger {...args} />
 
 const Default = Template.bind({})
-Default.args = {
-}
+Default.args = {}
 
 export { Default }
 

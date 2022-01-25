@@ -14,8 +14,10 @@ export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T)
   })
 
   const setValue = (value: T) => {
+    console.log('setValue', value)
     setStoredValue(value)
     setLocalStorageObject(key, value)
+    console.log('getValue from ls', getLocalStorageObject(key))
   }
 
   return [storedValue, setValue]
