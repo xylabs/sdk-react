@@ -24,15 +24,15 @@ const ExperimentsDebugger: React.FC = ({ ...props }) => {
         const outcome = (outcomes[name] || 0) as number
 
         const marks = [
-          ...experiment.variants.map(({ key, weight }, index) => ({
-            label: key,
-            value: index === 0 ? weight : sumUpVariants(experiment.variants.slice(0, index)),
-          })),
-          { label: 'Max', value: experiment.totalWeight },
+          ...experiment.variants.map(({ name, weight }, index) => ({
+            label: `${name} - ${weight}`,
+            value: index === 0 ? weight : sumUpVariants(experiment.variants.slice(0, index + 1)),
+          }))
         ]
+        console.log(marks)
 
         return (
-          <FlexRow key={`experiment-${name}`} alignItems="stretch">
+          <FlexRow key={`experiment-${name}`} alignItems="stretch" paddingX={4} {...props}>
             {name}:&nbsp;
             <Slider
               aria-label={`Experiment ${name}`}

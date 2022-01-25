@@ -4,6 +4,7 @@ import React, { ReactElement, useContext } from 'react'
 import { UserEventsContext } from '../../contexts'
 import { getLocalStorageObject, setLocalStorageObject } from '../../lib'
 import { ExperimentProps } from './Experiment'
+import { ExperimentsProps } from './ExperimentsProps'
 import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models'
 
 const defaultLocalStorageKey = 'testData'
@@ -26,12 +27,6 @@ const mergeData = (data: { [index: string]: string }, log?: Log) => {
   }
   log?.info('MergeData', dataArray.join('|'))
   return dataArray.join('|')
-}
-
-type Props = {
-  children: ReactElement<ExperimentProps>[] | ReactElement<ExperimentProps>
-  localStorageProp?: string | boolean
-  name: string
 }
 
 const missingKeyError = new Error('Experiment Elements must have Keys')
@@ -65,14 +60,14 @@ const saveExperimentDebugRanges = (name: string, totalWeight: number, childList:
   experiments[name] = {
     totalWeight,
     variants: childList.map((child) => ({
-      key: child.props.key,
+      name: child.key?.toString(),
       weight: child.props.weight,
     })),
   }
   setLocalStorageObject(ExperimentsLocalStorageKey, experiments)
 }
 
-const Experiments: React.FC<Props> = (props) => {
+const Experiments: React.FC<ExperimentsProps> = (props) => {
   const { name, children, localStorageProp = true } = props
   const userEventsContext = useContext(UserEventsContext)
   const { userEvents } = userEventsContext
