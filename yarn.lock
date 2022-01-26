@@ -3556,7 +3556,7 @@
     eslint-plugin-react-hooks "^4.3.0"
     prettier "^2"
 
-"@xylabs/eslint-config@^2.1.6", "@xylabs/eslint-config@^2.2.10":
+"@xylabs/eslint-config@^2.2.10", "@xylabs/eslint-config@^2.2.11":
   version "2.2.11"
   resolved "https://registry.yarnpkg.com/@xylabs/eslint-config/-/eslint-config-2.2.11.tgz#60d8f4dc26dad0e3c883094a1553770b70a20be6"
   integrity sha512-G+38kjOqcJLWZbkRVeAkEVZo3fAYy8wJmAsG8U1cbYBN/ARdIyIPkrItlOyl2y+20k/T3TEX0HrmINszkDWntg==
@@ -3612,16 +3612,18 @@
     rollbar "^2.24.0"
 
 "@xylabs/ts-scripts@^1.0.24":
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/@xylabs/ts-scripts/-/ts-scripts-1.0.24.tgz#91bbc3dcfc3ce37782d4db86e6f235755e9e2254"
-  integrity sha512-hwGHak7VZhnmIXLz6R4+W+Y3GkgIv1aU4ye7GhJeQnpe17yBtPRJTjTUJHd5GqS5iZlzUjodc8e9ZOv7QK5Tvg==
+  version "1.0.30"
+  resolved "https://registry.yarnpkg.com/@xylabs/ts-scripts/-/ts-scripts-1.0.30.tgz#89a6ab0961e6593e3d26aa63416d68e6903f05d0"
+  integrity sha512-AtWWY22dGTmJpvz59LAA03UUj1iTxmbx5pulS9r9LKygcMtmn2hwf+XEVpim/dUgZc0NP4pAZ6dxx7TnSdXqaQ==
   dependencies:
-    "@xylabs/eslint-config" "^2.1.6"
-    depcheck "^1.4.2"
-    eslint-plugin-sonarjs "^0.10.0"
+    "@xylabs/eslint-config" "^2.2.11"
+    depcheck "^1.4.3"
+    eslint-plugin-sonarjs "^0.11.0"
+    node-cmd "^5.0.0"
     npm-check-updates "^12"
     npm-package-json-lint "^5.4.2"
     npm-package-json-lint-config-default "^3.0.0"
+    rimraf "^3.0.2"
     ts-prune "^0.10"
 
 "@xylabs/tsconfig@^1.0.9":
@@ -5414,7 +5416,7 @@ delegates@^1.0.0:
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
   integrity sha1-hMbhWbgZBP3KWaDvRM2HDTElD5o=
 
-depcheck@^1.4.2:
+depcheck@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/depcheck/-/depcheck-1.4.3.tgz#faa4c143921f3fe25d5a7a633f9864327c250843"
   integrity sha512-vy8xe1tlLFu7t4jFyoirMmOR7x7N601ubU9Gkifyr9z8rjBFtEdWHDBMqXyk6OkK+94NXutzddVXJuo0JlUQKQ==
@@ -5984,10 +5986,10 @@ eslint-plugin-simple-import-sort@^7.0.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-7.0.0.tgz#a1dad262f46d2184a90095a60c66fef74727f0f8"
   integrity sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==
 
-eslint-plugin-sonarjs@^0.10.0:
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.10.0.tgz#2b520c6d0dbdecbea98cd82f5cb84fc5c3d2b954"
-  integrity sha512-FBRIBmWQh2UAfuLSnuYEfmle33jIup9hfkR0X8pkfjeCKNpHUG8qyZI63ahs3aw8CJrv47QJ9ccdK3ZxKH016A==
+eslint-plugin-sonarjs@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sonarjs/-/eslint-plugin-sonarjs-0.11.0.tgz#46d18bc4066c66e490de057253b9cc97bde9f176"
+  integrity sha512-ei/WuZiL0wP+qx2KrxKyZs3+eDbxiGAhFSm3GKCOOAUkg+G2ny6TSXDB2j67tvyqHefi+eoQsAgGQvz+nEtIBw==
 
 eslint-plugin-sort-keys-fix@^1.1.2:
   version "1.1.2"
@@ -9157,6 +9159,11 @@ no-case@^3.0.4:
   dependencies:
     lower-case "^2.0.2"
     tslib "^2.0.3"
+
+node-cmd@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/node-cmd/-/node-cmd-5.0.0.tgz#a4a850b569e009bec0199a131c9db607144fdbc0"
+  integrity sha512-4sQTJmsS5uZKAPz/Df9fnIbmvOySfGdW+UreH4X5NcAOOpKjaE+K5wf4ehNBbZVPo0vQ36RkRnhhsXXJAT+Syw==
 
 node-dir@^0.1.10:
   version "0.1.17"
