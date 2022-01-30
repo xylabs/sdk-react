@@ -16,6 +16,7 @@
 
 -   [Description](#description)
 -   [Install](#install)
+-   [Scripts](#scripts)
 -   [Maintainers](#maintainers)
 -   [License](#license)
 -   [Credits](#credits)
@@ -44,7 +45,7 @@ See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for l
 
 ### Build (Storybook)
 
-Build the static Storkbook site
+Build the static Storybook site
 
 ```sh
 yarn build-storybook
