@@ -1,7 +1,7 @@
 import { forget, Log } from '@xylabs/sdk-js'
-import React, { ReactElement, useContext } from 'react'
+import React, { ReactElement } from 'react'
 
-import { UserEventsContext } from '../../contexts'
+import { useUserEvents } from '../../hooks'
 import { getLocalStorageObject, setLocalStorageObject } from '../../lib'
 import { ExperimentProps } from './Experiment'
 import { ExperimentsProps } from './ExperimentsProps'
@@ -69,8 +69,7 @@ const saveExperimentDebugRanges = (name: string, totalWeight: number, childList:
 
 const Experiments: React.FC<ExperimentsProps> = (props) => {
   const { name, children, localStorageProp = true } = props
-  const userEventsContext = useContext(UserEventsContext)
-  const { userEvents } = userEventsContext
+  const userEvents = useUserEvents()
   loadOutcomes()
 
   const localStorageKey = buildLocalStorageKey(localStorageProp)
