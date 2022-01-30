@@ -3,10 +3,10 @@ import React from 'react'
 
 import { UserEventsContext } from './Context'
 
-interface Props {
-  userEvents: UserEventHandler<unknown>
+interface Props<T> {
+  userEvents: UserEventHandler<T>
 }
 
-export const UserEventsLoader: React.FC<Props> = ({ userEvents, children }) => {
+export const UserEventsLoader: React.FC<Props<unknown>> = ({ userEvents, children }) => {
   return <UserEventsContext.Provider value={{ userEvents }}>{children}</UserEventsContext.Provider>
 }
