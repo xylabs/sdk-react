@@ -123,5 +123,5 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.9.8"
+  "version": "2.9.9"
 }
