@@ -4,5 +4,7 @@
     "outDir": "./dist",
     "sourceMap": true
   },
-  "extends": "@xylabs/tsconfig"
+  "exclude": ["src/**/*.spec.ts"],
+  "extends": "@xylabs/tsconfig",
+  "include": ["src"]
 }
