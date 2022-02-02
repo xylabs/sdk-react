@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet'
 import { CookieConsent } from '../CookieConsent'
 import { FlexCol, FlexRow } from '../FlexBox'
 import { InvertableThemeProvider } from '../InvertableThemeProvider'
+import { ScrollToTop } from '../ScrollToTop'
 import { ScrollToTopButton } from '../ScrollToTopButton'
 import { BasePageProps } from './BasePageProps'
 
@@ -39,6 +40,7 @@ const BasePage: React.FC<BasePageProps> = ({
       minHeight="100vh"
       {...props}
     >
+      <ScrollToTop />
       <Helmet title={title}>{noindex ? <meta content="noindex" name="robots" /> : null}</Helmet>
       {scrollToTopButton ? <div id={scrollToTopAnchorId} /> : null}
       {hideAppBar ? null : appBar}
