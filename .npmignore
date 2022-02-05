@@ -6,3 +6,6 @@ rollup.config.ts
 yarn.lock
 storybook-static
 .storybook
+
+.pnp.*
+.yarn/*
