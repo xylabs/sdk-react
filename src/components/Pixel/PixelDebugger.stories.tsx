@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { PixelApi, XyPixel } from '@xylabs/pixel'
+import { useEffect } from 'react'
 
 import { PixelDebuggerToggle } from './index'
-import { useEffect } from 'react'
-import { PixelApi, XyPixel } from '@xylabs/pixel'
 
 const StorybookEntry = {
   argTypes: {},

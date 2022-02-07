@@ -1,8 +1,9 @@
+import { FormControl, FormLabel, Switch } from '@mui/material'
+
 import { useLocalStorage } from '../../hooks'
-import { BusyBoxProps, FlexCol, FlexRow } from '../FlexBox'
+import { BusyBoxProps, FlexRow } from '../FlexBox'
 import { Portal } from '../Portal'
 import { PixelDebugger } from './PixelDebugger'
-import { FormControl, FormLabel, Switch } from '@mui/material'
 
 export const PixelDebuggerToggle: React.FC<BusyBoxProps> = ({ ...props }) => {
   const [showDebugger, setDebugger] = useLocalStorage<boolean>('isDebuggingPixel', false)
