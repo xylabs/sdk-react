@@ -1,3 +1,2 @@
-import { UserEventsContext } from './Context'
+export * from './Context'
 export * from './Loader'
-export { UserEventsContext }

@@ -4,6 +4,17 @@ import { createContext } from 'react'
 interface Props {
   userEvents?: UserEventHandler<unknown>
 }
-
 const UserEventsContext = createContext<Props>({})
-export { UserEventsContext }
+
+interface DebuggingProps {
+  isDebugging: boolean
+  setIsDebugging: (value: boolean) => void
+}
+const DebugUserEventsContext = createContext<DebuggingProps>({
+  isDebugging: false,
+  setIsDebugging: (value) => {
+    console.warn('set is debugging is not set', value)
+  },
+})
+
+export { DebugUserEventsContext, UserEventsContext }
