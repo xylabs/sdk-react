@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { FlexCol } from '../FlexBox'
 import { Badge, Card, Divider, Typography, useTheme } from '@mui/material'
-import { PixelEvent } from './models'
-import { Portal } from '../Portal'
-import { usePixelAltSendHandler } from './hooks'
+import { useState } from 'react'
+
 import { ButtonEx } from '../ButtonEx'
+import { FlexCol } from '../FlexBox'
+import { usePixelAltSendHandler } from './hooks'
+import { PixelEvent } from './models'
 
 export const PixelDebugger: React.FC = () => {
   //TODO - when adding in the location hook to detect location change, was dropping the setEvents in usePixelAltSendHand
@@ -17,43 +17,41 @@ export const PixelDebugger: React.FC = () => {
   })
 
   return (
-    <Portal>
-      <div style={{ bottom: 0, left: 0, position: 'fixed', width: 350 }}>
-        <Badge badgeContent={events.length} color="primary" sx={{ width: '100%' }}>
-          <Card
-            variant="outlined"
-            sx={{
-              backdropFilter: 'blur(16px) saturate(180%)',
-              backgroundColor: 'rgba(18, 18, 18, .70)',
-              overflowY: 'auto',
-              width: '100%',
-            }}
-            color={theme.palette.primary.main}
-          >
-            <FlexCol alignItems="stretch" sx={{ flexFlow: 'column', maxHeight: 400 }}>
-              <FlexCol alignItems="stretch" sx={{ flex: '0 1 auto' }}>
-                <ButtonEx variant="text" onClick={() => setDisplayEvents(!displayEvents)}>
-                  XY Pixel Debugger
-                </ButtonEx>
-              </FlexCol>
-              {displayEvents && !!events.length && (
-                <FlexCol
-                  alignItems="stretch"
-                  alignContent="start"
-                  padding={2}
-                  sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}
-                >
-                  {events.map((e, index) => (
-                    <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
-                  ))}
-                </FlexCol>
-              )}
-              {displayEvents && !events.length && <Typography variant="subtitle2">No Events</Typography>}
+    <div style={{ bottom: 0, left: 0, position: 'fixed', width: 350 }}>
+      <Badge badgeContent={events.length} color="primary" sx={{ width: '100%' }}>
+        <Card
+          variant="outlined"
+          sx={{
+            backdropFilter: 'blur(16px) saturate(180%)',
+            backgroundColor: 'rgba(18, 18, 18, .70)',
+            overflowY: 'auto',
+            width: '100%',
+          }}
+          color={theme.palette.primary.main}
+        >
+          <FlexCol alignItems="stretch" sx={{ flexFlow: 'column', maxHeight: 400 }}>
+            <FlexCol alignItems="stretch" sx={{ flex: '0 1 auto' }}>
+              <ButtonEx variant="text" onClick={() => setDisplayEvents(!displayEvents)}>
+                XY Pixel Debugger
+              </ButtonEx>
             </FlexCol>
-          </Card>
-        </Badge>
-      </div>
-    </Portal>
+            {displayEvents && !!events.length && (
+              <FlexCol
+                alignItems="stretch"
+                alignContent="start"
+                padding={2}
+                sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}
+              >
+                {events.map((e, index) => (
+                  <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
+                ))}
+              </FlexCol>
+            )}
+            {displayEvents && !events.length && <Typography variant="subtitle2">No Events</Typography>}
+          </FlexCol>
+        </Card>
+      </Badge>
+    </div>
   )
 }
 

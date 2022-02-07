@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 export const usePixelAltSendHandler = (altHandler: (event: string, fields?: Record<string, unknown>) => void) => {
   const [pixelSend, setPixelSend] = useState<typeof XyPixel.instance.send>()
   useEffect(() => {
-    if (!pixelSend) {
+    if (!pixelSend && XyPixel.instance.send) {
       const oldHandler = XyPixel.instance.send.bind(XyPixel.instance)
       setPixelSend(oldHandler)
     } else {
