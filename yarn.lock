@@ -3633,10 +3633,10 @@
     eslint-plugin-react "^7.28.0"
     eslint-plugin-react-hooks "^4.3.0"
 
-"@xylabs/eslint-config@^2", "@xylabs/eslint-config@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@xylabs/eslint-config/-/eslint-config-2.3.2.tgz#211a1aebbb1ed7c3395b0f6477c5af9bcff4bef5"
-  integrity sha512-EZrAD3x3eSI5PyMVnr3GRrCav6sktxAfrhpcHdQ6rQvDb8urIOnsZ6pFkh3ajFIryptIL/rKhZpRXigplU6UaA==
+"@xylabs/eslint-config@^2", "@xylabs/eslint-config@^2.3.13":
+  version "2.3.13"
+  resolved "https://registry.yarnpkg.com/@xylabs/eslint-config/-/eslint-config-2.3.13.tgz#853c75d334b75ef71fc5777ce5a27c461f4ce8cd"
+  integrity sha512-NYEegbawMROAhVvQiGCTUEgqDwkBd1yxWVFPbdSpmmWfc/7iZgZgAk7/CfoHvs5unaVcXZLRkx4xFRGNqwLxcA==
   dependencies:
     "@babel/core" "^7"
     "@babel/eslint-parser" "^7"
@@ -3655,6 +3655,7 @@
     eslint-plugin-sort-keys-fix "^1"
     markdown-eslint-parser "^1.2.1"
     prettier "^2"
+    remark-lint-maximum-line-length "^3.1.2"
     remark-preset-lint-markdown-style-guide "^5"
 
 "@xylabs/pixel@^1.3.6":
@@ -3695,11 +3696,11 @@
     rollbar "^2.24.0"
 
 "@xylabs/ts-scripts@^1.0.39":
-  version "1.0.39"
-  resolved "https://registry.yarnpkg.com/@xylabs/ts-scripts/-/ts-scripts-1.0.39.tgz#ef2a0cc5fdfa0523e210bcedf7f1ccfbbdb9e771"
-  integrity sha512-7FbmlC74rV1VkcBc9uU4RPBfChMk047QRJFi3j0+kzvtYReep/JzU0cbgmDXC48WqJCxpFUp6tsvwga8FUp6Pg==
+  version "1.0.41"
+  resolved "https://registry.yarnpkg.com/@xylabs/ts-scripts/-/ts-scripts-1.0.41.tgz#02ef5e0cc0b0ffec03c99af34cc0eb8f2a0f6b8c"
+  integrity sha512-E0OJWcdyi/fg8Dr+AnJRd2fWRKQp7RPQKVASpyY9r9SY8KVmqc1U42qxrjH+Tjjo9gP50m01r7qwGvkFYBoKTg==
   dependencies:
-    "@xylabs/eslint-config" "^2.3.2"
+    "@xylabs/eslint-config" "^2.3.13"
     copyfiles "^2"
     depcheck "^1.4.3"
     eslint-plugin-sonarjs "^0.11.0"
@@ -11734,7 +11735,7 @@ remark-lint-maximum-line-length@^1.0.0:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.4.0"
 
-remark-lint-maximum-line-length@^3.0.0:
+remark-lint-maximum-line-length@^3.0.0, remark-lint-maximum-line-length@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/remark-lint-maximum-line-length/-/remark-lint-maximum-line-length-3.1.2.tgz#4c5c499279c80938878194d4e52102525b7a9e1b"
   integrity sha512-KwddpVmNifTHNXwTQQgVufuUvv0hhu9kJVvmpNdEvfEc7tc3wBkaavyi3kKsUB8WwMhGtZuXVWy6OdPC1axzhw==
