@@ -10,6 +10,7 @@ interface DebuggingProps {
   isDebugging: boolean
   setIsDebugging: (value: boolean) => void
 }
+
 const DebugUserEventsContext = createContext<DebuggingProps>({
   isDebugging: false,
   setIsDebugging: (value) => {
