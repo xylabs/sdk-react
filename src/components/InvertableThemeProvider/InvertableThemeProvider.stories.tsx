@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Paper, Typography, useTheme } from '@mui/material'
+import { Box, CssBaseline, Typography, useTheme } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { InvertableThemeProvider } from './InvertableThemeProvider'
