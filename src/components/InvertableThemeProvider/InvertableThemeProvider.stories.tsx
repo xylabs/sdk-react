@@ -24,13 +24,15 @@ const ThemeEnabledComponent = () => {
     <>
       <CssBaseline />
       <Box sx={{ backgroundColor: theme.palette.background.default }}>
-        <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>
-        <Typography variant="h4" color={theme.palette.primary.main}>
-          Color: {theme.palette.primary.main}
-        </Typography>
-        <Typography variant="h4" color={theme.palette.secondary.main}>
-          Color: {theme.palette.secondary.main}
-        </Typography>
+        <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
+          <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>
+          <Typography variant="h4" color={theme.palette.primary.main}>
+            Color: {theme.palette.primary.main}
+          </Typography>
+          <Typography variant="h4" color={theme.palette.secondary.main}>
+            Color: {theme.palette.secondary.main}
+          </Typography>
+        </Box>
       </Box>
     </>
   )
