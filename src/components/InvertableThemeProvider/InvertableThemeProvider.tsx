@@ -13,6 +13,7 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
   scoped = false,
   invert = false,
   noResponsiveFonts,
+  darkTheme,
 }) => {
   const contextInvertableTheme = useContext(InvertableThemeContext)
   const clonedOptions = clone(options ?? contextInvertableTheme.options ?? {})
@@ -25,6 +26,10 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
 
   if (dark !== undefined) {
     clonedOptions.palette.mode = dark ? 'dark' : 'light'
+  }
+
+  if (clonedOptions.palette.mode === 'dark' && darkTheme?.palette) {
+    clonedOptions.palette = darkTheme.palette
   }
 
   let theme = createTheme(clonedOptions)
