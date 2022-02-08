@@ -6,7 +6,7 @@ export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T)
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = getLocalStorageObject<T>(key)
-      return item || defaultValue
+      return Object.keys(item).length ? item : defaultValue
     } catch (ex) {
       //Error is already logged
       return defaultValue
