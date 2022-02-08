@@ -15,6 +15,7 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
   noResponsiveFonts,
   darkTheme,
 }) => {
+  let internalDarkTheme = {}
   const contextInvertableTheme = useContext(InvertableThemeContext)
   const clonedOptions = clone(options ?? contextInvertableTheme.options ?? {})
 
@@ -29,10 +30,10 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
   }
 
   if (clonedOptions.palette.mode === 'dark' && darkTheme?.palette) {
-    clonedOptions.palette = darkTheme.palette
+    internalDarkTheme = darkTheme
   }
 
-  let theme = createTheme(clonedOptions)
+  let theme = createTheme(clonedOptions, internalDarkTheme)
 
   if (!noResponsiveFonts) {
     theme = responsiveFontSizes(theme)
