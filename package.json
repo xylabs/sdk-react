@@ -118,12 +118,13 @@
   },
   "scripts": {
     "build-storybook": "build-storybook",
+    "deploy": "yarn version patch -i && yarn npm publish",
     "lint-pkg": "npmPkgJsonLint .",
     "start": "start-storybook -p 6006",
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register 'src/**/*.spec.ts'"
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.9.21",
+  "version": "2.9.23",
   "packageManager": "yarn@3.1.1"
 }
