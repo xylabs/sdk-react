@@ -7,6 +7,7 @@ interface InvertableThemeProviderProps {
   noResponsiveFonts?: boolean
   options?: ThemeOptions
   darkTheme?: ThemeOptions
+  resolve?: boolean
 }
 
 export type { InvertableThemeProviderProps }

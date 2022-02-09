@@ -1,15 +1,29 @@
 import { responsiveFontSizes, ScopedCssBaseline, ThemeProvider } from '@mui/material'
-import { createTheme } from '@mui/material/styles'
+import { createTheme, Theme, ThemeOptions } from '@mui/material/styles'
 import clone from 'lodash/clone'
+import merge from 'lodash/merge'
 import React, { useContext } from 'react'
 
 import { InvertableThemeContext } from './InvertableThemeContext'
 import { InvertableThemeProviderProps } from './InvertableThemeProviderProps'
 
-const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
+export const resolveThemeColors = (theme: Theme, options: ThemeOptions) => {
+  const newTheme = createTheme(options, {
+    palette: {
+      text: {
+        primary: theme.palette?.getContrastText(theme.palette.primary.main),
+        secondary: theme.palette?.getContrastText(theme.palette.secondary.main),
+      },
+    },
+  })
+  return newTheme
+}
+
+export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
   options,
   children,
   dark,
+  resolve = false,
   scoped = false,
   invert = false,
   noResponsiveFonts,
@@ -35,6 +49,10 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
 
   let theme = createTheme(clonedOptions, internalDarkTheme)
 
+  if (resolve) {
+    theme = resolveThemeColors(theme, merge({}, clonedOptions, internalDarkTheme))
+  }
+
   if (!noResponsiveFonts) {
     theme = responsiveFontSizes(theme)
   }
@@ -51,5 +69,3 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
     </InvertableThemeContext.Provider>
   )
 }
-
-export { InvertableThemeProvider }
