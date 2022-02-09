@@ -6,7 +6,19 @@ export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T)
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = getLocalStorageObject<T>(key)
-      return Object.keys(item).length ? item : defaultValue
+      if (typeof defaultValue === 'boolean') {
+        if (typeof item === 'boolean') {
+          return item
+        } else {
+          return defaultValue
+        }
+      } else if (Array.isArray(item)) {
+        return item
+      } else if (Object.keys(item).length) {
+        return item
+      } else {
+        return defaultValue
+      }
     } catch (ex) {
       //Error is already logged
       return defaultValue
