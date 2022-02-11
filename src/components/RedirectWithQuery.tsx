@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { NavigateOptions, To, useLocation, useNavigate } from 'react-router-dom'
 
 interface RedirectProps {
-  to: To
+  to?: To
   toOptions?: NavigateOptions
   href?: string
 }
