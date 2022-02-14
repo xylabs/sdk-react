@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/react-helmet": "^6.1.5",
     "@xylabs/sdk-js": "^2.4.2",
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "bn.js": "^5.2.0",
     "lodash": "^4.17.21",
     "md5": "^2.3.0",
