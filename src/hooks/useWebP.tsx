@@ -5,16 +5,14 @@ import { useAsyncEffect } from '../lib'
 let supportsWebP: boolean | undefined = undefined
 
 export const useWebP = (webp: string, alt: string) => {
-  const [img, setImg] = useState<string | undefined>(
-    supportsWebP === true ? webp : supportsWebP === false ? alt : undefined
-  )
+  const [img, setImg] = useState<string>()
   useAsyncEffect(
     async (mounted) => {
       if (supportsWebP === undefined) {
         supportsWebP = await getSupportsWebP()
-        if (mounted()) {
-          setImg(supportsWebP ? webp : alt)
-        }
+      }
+      if (mounted()) {
+        setImg(supportsWebP ? webp : alt)
       }
     },
     [supportsWebP]
