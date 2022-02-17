@@ -28,10 +28,13 @@ export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (
   invert = false,
   noResponsiveFonts,
   darkTheme,
+  darkOptions,
+  lightOptions,
 }) => {
-  let internalDarkTheme = {}
-  const contextInvertableTheme = useContext(InvertableThemeContext)
-  const clonedOptions = cloneDeep(options ?? contextInvertableTheme.options ?? {})
+  const parentContext = useContext(InvertableThemeContext)
+  const clonedOptions = cloneDeep(options ?? parentContext.options ?? {})
+  const clonedDarkOptions = cloneDeep(darkOptions ?? darkTheme ?? parentContext.darkOptions)
+  const clonedLightOptions = cloneDeep(lightOptions ?? parentContext.lightOptions)
 
   clonedOptions.palette = clonedOptions.palette ?? {}
 
@@ -43,11 +46,9 @@ export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (
     clonedOptions.palette.mode = dark ? 'dark' : 'light'
   }
 
-  if (clonedOptions.palette.mode === 'dark' && darkTheme?.palette) {
-    internalDarkTheme = darkTheme
-  }
+  const modeOptions = clonedOptions.palette.mode === 'dark' ? clonedDarkOptions : clonedLightOptions
 
-  let themeOptions = merge(clonedOptions, internalDarkTheme)
+  let themeOptions = merge({}, clonedOptions, modeOptions)
 
   if (resolve) {
     themeOptions = resolveThemeColors(themeOptions)
@@ -55,15 +56,21 @@ export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (
 
   const theme: Theme = noResponsiveFonts ? createTheme(themeOptions) : responsiveFontSizes(createTheme(themeOptions))
 
-  return scoped ? (
-    <ScopedCssBaseline>
-      <InvertableThemeContext.Provider value={{ options: clonedOptions }}>
+  const Provider: React.FC = () => {
+    return (
+      <InvertableThemeContext.Provider
+        value={{ darkOptions: clonedDarkOptions, lightOptions: clonedLightOptions, options: clonedOptions }}
+      >
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </InvertableThemeContext.Provider>
+    )
+  }
+
+  return scoped ? (
+    <ScopedCssBaseline>
+      <Provider />
     </ScopedCssBaseline>
   ) : (
-    <InvertableThemeContext.Provider value={{ options: clonedOptions }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </InvertableThemeContext.Provider>
+    <Provider />
   )
 }
