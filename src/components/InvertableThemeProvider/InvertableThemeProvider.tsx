@@ -1,23 +1,40 @@
-import { responsiveFontSizes, ScopedCssBaseline, ThemeProvider } from '@mui/material'
-import { createTheme } from '@mui/material/styles'
-import clone from 'lodash/clone'
+import { responsiveFontSizes, ScopedCssBaseline, Theme, ThemeProvider } from '@mui/material'
+import { createTheme, ThemeOptions } from '@mui/material/styles'
+import cloneDeep from 'lodash/cloneDeep'
+import merge from 'lodash/merge'
 import React, { useContext } from 'react'
 
 import { InvertableThemeContext } from './InvertableThemeContext'
 import { InvertableThemeProviderProps } from './InvertableThemeProviderProps'
 
-const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
+export const resolveThemeColors = (options: ThemeOptions) => {
+  const theme = createTheme(options)
+  return merge({}, options, {
+    palette: {
+      text: {
+        primary: theme.palette?.getContrastText(theme.palette.primary.main),
+        secondary: theme.palette?.getContrastText(theme.palette.secondary.main),
+      },
+    },
+  })
+}
+
+export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
   options,
   children,
   dark,
+  resolve = false,
   scoped = false,
   invert = false,
   noResponsiveFonts,
   darkTheme,
+  darkOptions,
+  lightOptions,
 }) => {
-  let internalDarkTheme = {}
-  const contextInvertableTheme = useContext(InvertableThemeContext)
-  const clonedOptions = clone(options ?? contextInvertableTheme.options ?? {})
+  const parentContext = useContext(InvertableThemeContext)
+  const clonedOptions = cloneDeep(options ?? parentContext.options ?? {})
+  const clonedDarkOptions = cloneDeep(darkOptions ?? darkTheme ?? parentContext.darkOptions)
+  const clonedLightOptions = cloneDeep(lightOptions ?? parentContext.lightOptions)
 
   clonedOptions.palette = clonedOptions.palette ?? {}
 
@@ -29,27 +46,31 @@ const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = ({
     clonedOptions.palette.mode = dark ? 'dark' : 'light'
   }
 
-  if (clonedOptions.palette.mode === 'dark' && darkTheme?.palette) {
-    internalDarkTheme = darkTheme
+  const modeOptions = clonedOptions.palette.mode === 'dark' ? clonedDarkOptions : clonedLightOptions
+
+  let themeOptions = merge({}, clonedOptions, modeOptions)
+
+  if (resolve) {
+    themeOptions = resolveThemeColors(themeOptions)
   }
 
-  let theme = createTheme(clonedOptions, internalDarkTheme)
+  const theme: Theme = noResponsiveFonts ? createTheme(themeOptions) : responsiveFontSizes(createTheme(themeOptions))
 
-  if (!noResponsiveFonts) {
-    theme = responsiveFontSizes(theme)
+  const Provider: React.FC = () => {
+    return (
+      <InvertableThemeContext.Provider
+        value={{ darkOptions: clonedDarkOptions, lightOptions: clonedLightOptions, options: clonedOptions }}
+      >
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </InvertableThemeContext.Provider>
+    )
   }
 
   return scoped ? (
     <ScopedCssBaseline>
-      <InvertableThemeContext.Provider value={{ options: clonedOptions }}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-      </InvertableThemeContext.Provider>
+      <Provider />
     </ScopedCssBaseline>
   ) : (
-    <InvertableThemeContext.Provider value={{ options: clonedOptions }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </InvertableThemeContext.Provider>
+    <Provider />
   )
 }
-
-export { InvertableThemeProvider }

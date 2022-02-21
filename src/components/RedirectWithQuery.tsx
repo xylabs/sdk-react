@@ -2,18 +2,23 @@ import React, { useEffect } from 'react'
 import { NavigateOptions, To, useLocation, useNavigate } from 'react-router-dom'
 
 interface RedirectProps {
-  to: To
+  to?: To
   toOptions?: NavigateOptions
+  href?: string
 }
 
-const RedirectWithQuery: React.ComponentType<RedirectProps> = ({ to, toOptions }) => {
+const RedirectWithQuery: React.ComponentType<RedirectProps> = ({ href, to, toOptions }) => {
   const newPath = `${to}${document.location.search}`
   const navigate = useNavigate()
   const { pathname } = useLocation()
 
   useEffect(() => {
-    if (newPath !== pathname) {
-      navigate(newPath, { replace: true, ...toOptions })
+    if (href) {
+      window.location.href = href
+    } else {
+      if (newPath !== pathname) {
+        navigate(newPath, { replace: true, ...toOptions })
+      }
     }
   })
 
