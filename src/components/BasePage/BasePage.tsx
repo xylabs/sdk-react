@@ -19,9 +19,7 @@ const BasePage: React.FC<BasePageProps> = ({
   appFooter,
   appBar,
   cookieConsent,
-  filterBar,
   hideAppBar,
-  hideFilterBar,
   noindex = false,
   scrollToTopButton = false,
   title,
@@ -44,7 +42,6 @@ const BasePage: React.FC<BasePageProps> = ({
       <Helmet title={title}>{noindex ? <meta content="noindex" name="robots" /> : null}</Helmet>
       {scrollToTopButton ? <div id={scrollToTopAnchorId} /> : null}
       {hideAppBar ? null : appBar}
-      {hideFilterBar ? null : filterBar}
       {beta ? (
         <FlexRow
           margin={1}
