@@ -1,3 +1,1 @@
-import { LinkToEx } from './LinkToEx'
-
-export { LinkToEx }
+export * from './LinkToEx'
