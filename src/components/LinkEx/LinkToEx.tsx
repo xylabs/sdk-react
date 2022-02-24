@@ -3,11 +3,18 @@ import React from 'react'
 import { Link as RouterLink, To } from 'react-router-dom'
 
 interface Props extends LinkProps {
-  to: To
+  to?: To
 }
 
-const LinkToEx: React.FC<Props> = ({ to, ...props }) => {
-  return <Link component={RouterLink} to={to} {...props} />
+const LinkEx: React.FC<Props> = ({ to, ...props }) => {
+  if (to) {
+    return <Link component={RouterLink} to={to} {...props} />
+  } else {
+    return <Link {...props} />
+  }
 }
 
-export { LinkToEx }
+/** @deprecated use LinkEx instead */
+const LinkToEx = LinkEx
+
+export { LinkEx, LinkToEx }
