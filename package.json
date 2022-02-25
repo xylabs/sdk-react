@@ -128,6 +128,6 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.9.35",
+  "version": "2.9.36",
   "packageManager": "yarn@3.1.1"
 }
