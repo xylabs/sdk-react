@@ -6,6 +6,7 @@ import { ButtonExProps } from '../ButtonEx'
 interface EthAccountProps extends ButtonExProps {
   address?: EthAddress | null
   addressLength?: 'auto' | 'short' | 'long'
+  shortenedLength?: number
   full?: boolean
   icon?: boolean
   iconSize?: number

@@ -14,6 +14,7 @@ const EthAccount: React.FC<EthAccountProps> = ({
   icon = false,
   iconSize = 16,
   iconOnly = false,
+  shortenedLength,
   addressLength = 'auto',
   fontFamily = '"Source Code Pro",monospace',
   toEtherScan,
@@ -40,7 +41,7 @@ const EthAccount: React.FC<EthAccountProps> = ({
     addressLength === 'long'
       ? addressToDisplay.toString()
       : addressLength === 'short'
-      ? addressToDisplay.toShortString()
+      ? addressToDisplay.toShortString(shortenedLength)
       : large
       ? addressToDisplay.toString()
       : addressToDisplay.toShortString()
