@@ -27,6 +27,7 @@ export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (
   scoped = false,
   invert = false,
   noResponsiveFonts,
+  // eslint-disable-next-line deprecation/deprecation
   darkTheme,
   darkOptions,
   lightOptions,

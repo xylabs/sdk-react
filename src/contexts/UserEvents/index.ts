@@ -1,2 +1,2 @@
 export * from './Context'
-export * from './Loader'
+export * from './Provider'
