@@ -17,4 +17,5 @@ const LinkEx: React.FC<Props> = ({ to, ...props }) => {
 /** @deprecated use LinkEx instead */
 const LinkToEx = LinkEx
 
+// eslint-disable-next-line deprecation/deprecation
 export { LinkEx, LinkToEx }

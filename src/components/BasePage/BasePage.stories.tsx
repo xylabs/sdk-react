@@ -21,12 +21,10 @@ const Template: ComponentStory<typeof BasePage> = (args) => (
 )
 
 const AppBar = () => <div>AppBar</div>
-const FilterBar = () => <div>FilterBar</div>
 
 const Default = Template.bind({})
 Default.args = {
   appBar: <AppBar />,
-  filterBar: <FilterBar />,
   title: 'Default',
 }
 
