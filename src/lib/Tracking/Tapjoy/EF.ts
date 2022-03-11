@@ -17,7 +17,7 @@ class EF {
 
   public track(event: string, data?: Record<string, unknown>) {
     switch (event) {
-      case 'conversion':
+      case 'Purchase':
         this.sendConversion(data)
         break
       default:
