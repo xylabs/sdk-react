@@ -124,7 +124,7 @@
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register 'src/**/*.spec.ts'"
   },
   "resolutions": {
-    "eslint-plugin-react": "7.28.0"
+    "eslint-plugin-react": "7.29.4"
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
