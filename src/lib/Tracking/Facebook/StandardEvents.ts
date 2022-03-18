@@ -24,6 +24,10 @@ export interface FacebookCartProperties extends FacebookValueProperties, Faceboo
   num_items?: number
 }
 
+export interface FacebookExternalId extends Record<string, string[] | undefined> {
+  external_id?: string[]
+}
+
 export type FacebookAddPaymentInfo = FacebookCartProperties
 
 export type FacebookAddToCart = FacebookCartProperties
