@@ -57,6 +57,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
   }, [ethereum, isConnected])
 
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       if (signer) {
         try {
@@ -79,6 +80,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
 
   const [chainId, setChainId] = useState<number>()
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       const chainId = (await provider?.getNetwork())?.chainId
       if (!isMounted()) return

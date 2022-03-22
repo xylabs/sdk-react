@@ -24,6 +24,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const provider = trustProvider
 
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (signer) {
         try {
