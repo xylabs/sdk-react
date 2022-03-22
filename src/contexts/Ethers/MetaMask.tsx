@@ -84,6 +84,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
   }, [ethereum, isConnected, enabled])
 
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       if (signer && enabled) {
         try {
@@ -107,6 +108,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
 
   const [chainId, setChainId] = useState<number>()
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       if (enabled) {
         const chainId = (await provider?.getNetwork())?.chainId
