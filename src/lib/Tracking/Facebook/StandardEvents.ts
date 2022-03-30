@@ -54,6 +54,7 @@ export interface FacebookStartTrial extends FacebookValueProperties {
 
 export interface FacebookSubscribe extends FacebookValueProperties {
   predicted_ltv?: string
+  subscription_id?: string
 }
 
 export type FacebookViewContent = FacebookCartProperties
