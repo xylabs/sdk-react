@@ -7,6 +7,7 @@ let supportsWebP: boolean | undefined = undefined
 export const useWebP = (webp: string, alt: string) => {
   const [img, setImg] = useState<string>()
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (supportsWebP === undefined) {
         supportsWebP = await getSupportsWebP()
@@ -15,7 +16,7 @@ export const useWebP = (webp: string, alt: string) => {
         setImg(supportsWebP ? webp : alt)
       }
     },
-    [supportsWebP]
+    [alt, webp]
   )
   return img
 }

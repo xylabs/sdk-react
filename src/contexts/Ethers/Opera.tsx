@@ -25,6 +25,7 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const isConnected = ethereum?.isConnected() ?? false
 
   useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (ethereum) {
         ethereum.enable()
