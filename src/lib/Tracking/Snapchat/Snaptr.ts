@@ -1,9 +1,9 @@
 import { delay } from '@xylabs/sdk-js'
 
-import { global } from '../../global'
-
 class SnapTr {
   public static getSnapTr() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     if (global.snaptr) {
       return global.snaptr
     }

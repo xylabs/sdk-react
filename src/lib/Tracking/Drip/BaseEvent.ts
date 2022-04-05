@@ -1,7 +1,5 @@
 import { delay } from '@xylabs/sdk-js'
 
-import { global } from '../../global'
-
 type DripEvent<T extends Record<string, unknown>> = (string | T)[]
 
 class DripBaseEvent<T extends Record<string, unknown>> {
@@ -27,6 +25,8 @@ class DripBaseEvent<T extends Record<string, unknown>> {
   }
 
   private getDcq() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     if (!global._dcq) {
       throw Error('DCQ not found')
     }
@@ -34,6 +34,8 @@ class DripBaseEvent<T extends Record<string, unknown>> {
   }
 
   private getDcs() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     if (!global._dcs) {
       throw Error('DCS not found')
     }

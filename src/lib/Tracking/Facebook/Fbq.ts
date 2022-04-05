@@ -1,11 +1,11 @@
-import { global } from '../../global'
-
 class Fbq {
   public pixelId?: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public fbq?: any
 
   private constructor(pixelId: string) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     this.pixelId = pixelId
 
     this.fbq = function () {
