@@ -1,8 +1,6 @@
 import { assertEx } from '@xylabs/sdk-js'
 import { parse, stringify } from 'query-string'
 
-import { global } from '../../global'
-
 class Gtag {
   public updatePagePath(page_path: string) {
     const ga4id = assertEx(this.ga4id, 'Missing GA4ID')
@@ -21,6 +19,8 @@ class Gtag {
     this.ga4id = ga4id
     this.awid = awid
     this.domains = domains
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     global.dataLayer = global.dataLayer ?? []
     this.gtag =
       global.gtag ??
@@ -59,6 +59,8 @@ class Gtag {
   }
 
   public static clearDataLayer() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     const dataLayer = global.dataLayer as []
     dataLayer.length = 0
   }

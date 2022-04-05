@@ -1,5 +1,3 @@
-import { global } from '../../global'
-
 class Rdt {
   public static instance: Rdt
   public static init(pixelId: string) {
@@ -13,6 +11,8 @@ class Rdt {
   }
 
   private static getRdt() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     if (global.rdt) {
       return global.rdt
     }

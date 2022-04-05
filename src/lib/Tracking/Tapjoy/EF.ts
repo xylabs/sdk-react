@@ -1,4 +1,3 @@
-import { global } from '../../global'
 class EF {
   public static instance: EF
   public static init() {
@@ -9,6 +8,8 @@ class EF {
     }
   }
   public static getEF() {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const global = window as any
     if (global.EF) {
       return global.EF
     }
