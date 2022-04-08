@@ -1,10 +1,11 @@
 import { useState } from 'react'
 
+import { WithChildren } from '../../WithChildren'
 import { CookieConsentContext } from './Context'
 
 const CookiesAcceptedLocalStorageName = 'CookiesAccepted'
 
-const CookieConsentLoader: React.FC = ({ children }) => {
+const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
   const getAcceptedFromLocalStorage = () => {
     return localStorage.getItem(CookiesAcceptedLocalStorageName) === 'true'
   }
