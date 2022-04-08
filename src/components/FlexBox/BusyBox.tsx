@@ -1,16 +1,15 @@
 import { Box, BoxProps, Paper, useTheme } from '@mui/material'
-import React from 'react'
 
 import { BusyProps } from '../../BusyProps'
 import { BusyCircularProgress } from '../BusyCircularProgress'
 import { BusyLinearProgress } from '../BusyLinearProgress'
 
-interface BusyBoxProps extends BusyProps, BoxProps {
+export interface BusyBoxProps extends BusyProps, BoxProps {
   paper?: boolean
   background?: boolean
 }
 
-const BusyBox: React.FC<BusyBoxProps> = ({
+export const BusyBox: React.FC<BusyBoxProps> = ({
   background,
   children,
   component,
@@ -51,6 +50,3 @@ const BusyBox: React.FC<BusyBoxProps> = ({
     </Box>
   )
 }
-
-export { BusyBox }
-export type { BusyBoxProps }
