@@ -1,4 +1,5 @@
 import { ThemeOptions } from '@mui/material'
+import { ReactNode } from 'react'
 
 interface InvertableThemeProviderProps {
   dark?: boolean
@@ -13,6 +14,7 @@ interface InvertableThemeProviderProps {
   darkOptions?: ThemeOptions
   lightOptions?: ThemeOptions
   resolve?: boolean
+  children?: ReactNode
 }
 
 export type { InvertableThemeProviderProps }

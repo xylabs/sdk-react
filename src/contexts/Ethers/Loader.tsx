@@ -1,14 +1,17 @@
+import { ReactNode } from 'react'
+
 import { InfuraEthersLoader } from './Infura'
 import { MetaMaskEthersLoader } from './MetaMask'
 import { MyEtherWalletEthersLoader } from './MyEtherWallet'
 import { OperaEthersLoader } from './Opera'
 import { TrustEthersLoader } from './Trust'
 
-interface Props {
+export interface EthersLoaderProps {
   enabled?: boolean
+  children?: ReactNode
 }
 
-export const EthersLoader: React.FC<Props> = (props) => {
+export const EthersLoader: React.FC<EthersLoaderProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const global = window as any
   const { children } = props
