@@ -8,7 +8,7 @@ interface Props extends LinkProps {
 
 const LinkEx: React.FC<Props> = ({ to, ...props }) => {
   if (to) {
-    return <Link component={RouterLink} to={to} {...props} />
+    return <Link rel="noopener noreferrer" component={RouterLink} to={to} {...props} />
   } else {
     return <Link {...props} />
   }
