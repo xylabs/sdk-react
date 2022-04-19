@@ -1,10 +1,11 @@
 import { Box, BoxProps, Paper, useTheme } from '@mui/material'
 
 import { BusyProps } from '../../BusyProps'
+import { WithChildren } from '../../WithChildren'
 import { BusyCircularProgress } from '../BusyCircularProgress'
 import { BusyLinearProgress } from '../BusyLinearProgress'
 
-export interface BusyBoxProps extends BusyProps, BoxProps {
+export interface BusyBoxProps extends BusyProps, WithChildren<BoxProps> {
   paper?: boolean
   background?: boolean
 }
