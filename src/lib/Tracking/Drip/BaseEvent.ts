@@ -1,8 +1,8 @@
 import { delay } from '@xylabs/sdk-js'
 
-type DripEvent<T extends Record<string, unknown>> = (string | T)[]
+export type DripEvent<T extends Record<string, unknown>> = (string | T)[]
 
-class DripBaseEvent<T extends Record<string, unknown>> {
+export class DripBaseEvent<T extends Record<string, unknown>> {
   public name: string
   public param?: string
   public dcq: DripEvent<T>[]
@@ -42,5 +42,3 @@ class DripBaseEvent<T extends Record<string, unknown>> {
     return global._dcs as DripEvent<T>[]
   }
 }
-
-export { DripBaseEvent }

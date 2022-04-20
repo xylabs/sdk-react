@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { NavigateOptions, To, useLocation, useNavigate } from 'react-router-dom'
 
-interface RedirectProps {
+export interface RedirectWithQueryProps {
   to?: To
   toOptions?: NavigateOptions
   href?: string
 }
 
-const RedirectWithQuery: React.ComponentType<RedirectProps> = ({ href, to, toOptions }) => {
+export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({ href, to, toOptions }) => {
   const newPath = `${to}${document.location.search}`
   const navigate = useNavigate()
   const { pathname } = useLocation()
@@ -24,5 +24,3 @@ const RedirectWithQuery: React.ComponentType<RedirectProps> = ({ href, to, toOpt
 
   return <div />
 }
-
-export { RedirectWithQuery }

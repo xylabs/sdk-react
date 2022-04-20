@@ -1,92 +1,47 @@
-import { Action } from './Action'
-import { ActionStatusType } from './ActionStatusType'
-import { AdministrativeArea } from './AdministrativeArea'
-import { AggregateRating } from './AggrigateRating'
-import { Article } from './Article'
-import { Base } from './Base'
-import { Class } from './Class'
-import { ContactPoint } from './ContactPoint'
-import { ContactPointOption } from './ContactPointOption'
-import { Country } from './Country'
-import { CreativeWork } from './CreativeWork'
-import { DateTime } from './DateTime'
-import { EntryPoint } from './EntryPoint'
-import { Enumeration } from './Enumeration'
-import { GeoShape } from './GeoShape'
-import { GeospatialGeometry } from './GeospatialGeometry'
-import { ImageObject } from './ImageObject'
-import { Intangible } from './Intangible'
-import { Integer } from './Integer'
-import { ItemAvailability } from './ItemAvailability'
-import { Language } from './Language'
-import { Map } from './Map'
-import { MapCategoryType } from './MapCategoryType'
-import { MediaObject } from './MediaObject'
-import { MobileApplication } from './MobileApplication'
-import { Offer } from './Offer'
-import { Organization } from './Organization'
-import { Person } from './Person'
-import { Photograph } from './Photograph'
-import { Place } from './Place'
-import { PostalAddress } from './PostalAddress'
-import { Product } from './Product'
-import { Property } from './Property'
-import { PropertyValue } from './PropertyValue'
-import { QualitativeValue } from './QualitativeValue'
-import { QuantitativeValue } from './QuantitativeValue'
-import { Rating } from './Rating'
-import { Review } from './Review'
-import { Service } from './Service'
-import { SoftwareApplication } from './SoftwareApplication'
-import { StructuredValue } from './StructuredValue'
-import { Text } from './Text'
-import { Thing } from './Thing'
-import { Time } from './Time'
-import { URL } from './URL'
-import { VirtualLocation } from './VirtualLocation'
-
-export { ActionStatusType, ContactPointOption, ItemAvailability, MapCategoryType }
-export type {
-  Action,
-  AdministrativeArea,
-  AggregateRating,
-  Article,
-  Base,
-  Class,
-  ContactPoint,
-  Country,
-  CreativeWork,
-  DateTime,
-  EntryPoint,
-  Enumeration,
-  GeoShape,
-  GeospatialGeometry,
-  ImageObject,
-  Intangible,
-  Integer,
-  Language,
-  Map,
-  MediaObject,
-  MobileApplication,
-  Offer,
-  Organization,
-  Person,
-  Photograph,
-  Place,
-  PostalAddress,
-  Product,
-  Property,
-  PropertyValue,
-  QualitativeValue,
-  QuantitativeValue,
-  Rating,
-  Review,
-  Service,
-  SoftwareApplication,
-  StructuredValue,
-  Text,
-  Thing,
-  Time,
-  URL,
-  VirtualLocation,
-}
+export * from './Action'
+export * from './ActionStatusType'
+export * from './AdministrativeArea'
+export * from './AggrigateRating'
+export * from './Article'
+export * from './Base'
+export * from './Brand'
+export * from './Class'
+export * from './ContactPoint'
+export * from './ContactPointOption'
+export * from './Country'
+export * from './CreativeWork'
+export * from './DateTime'
+export * from './EntryPoint'
+export * from './Enumeration'
+export * from './GeoShape'
+export * from './GeospatialGeometry'
+export * from './ImageObject'
+export * from './Intangible'
+export * from './Integer'
+export * from './ItemAvailability'
+export * from './Language'
+export * from './Map'
+export * from './MapCategoryType'
+export * from './MediaObject'
+export * from './MobileApplication'
+export * from './Offer'
+export * from './Organization'
+export * from './Person'
+export * from './Photograph'
+export * from './Place'
+export * from './PostalAddress'
+export * from './Product'
+export * from './Property'
+export * from './PropertyValue'
+export * from './QualitativeValue'
+export * from './QuantitativeValue'
+export * from './Rating'
+export * from './Review'
+export * from './Service'
+export * from './SoftwareApplication'
+export * from './StructuredValue'
+export * from './Text'
+export * from './Thing'
+export * from './Time'
+export * from './URL'
+export * from './VirtualLocation'

@@ -34,10 +34,7 @@ class Gtag {
     //this.gtag('config', awid) - this is configured in the Data Stream in Google Analytics
     const parsedQueryString = parse(document.location.search)
     //we handle the utm_referrer here incase a referrer was forwarded (special.coinapp.co does this)
-    sessionStorage.setItem(
-      'initialReferrer',
-      decodeURIComponent(parsedQueryString['utm_referrer']?.toString() ?? document.referrer)
-    )
+    sessionStorage.setItem('initialReferrer', decodeURIComponent(parsedQueryString['utm_referrer']?.toString() ?? document.referrer))
     delete parsedQueryString['utm_referrer']
     const remainingSearch = parsedQueryString ? stringify(parsedQueryString) : ''
     sessionStorage.setItem('initialQuery', remainingSearch)

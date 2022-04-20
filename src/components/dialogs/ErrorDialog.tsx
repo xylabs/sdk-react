@@ -14,12 +14,7 @@ const toAxiosError = (error: Error) => {
   return (error as AxiosError).isAxiosError ? (error as AxiosError) : undefined
 }
 
-const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
-  onAction,
-  title = 'Oops. Something went wrong.',
-  error = Error('Unknown Error'),
-  ...props
-}) => {
+const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({ onAction, title = 'Oops. Something went wrong.', error = Error('Unknown Error'), ...props }) => {
   const onCloseClicked = () => {
     onAction?.(false)
   }
@@ -36,9 +31,7 @@ const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
       <DialogTitle>{title}</DialogTitle>
       <DialogContent>
         <FlexRow>
-          <Typography color="error">
-            {axiosError ? `${message} [${axiosError?.code ?? 'Connection Failure'}]` : `${message}`}
-          </Typography>
+          <Typography color="error">{axiosError ? `${message} [${axiosError?.code ?? 'Connection Failure'}]` : `${message}`}</Typography>
         </FlexRow>
       </DialogContent>
       <DialogActions>

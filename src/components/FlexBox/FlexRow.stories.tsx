@@ -68,13 +68,7 @@ FlexEndJustifiedContent.args = {
   title: 'FlexEndJustifiedContent',
 }
 
-export {
-  FlexEndJustifiedContent,
-  FlexStartJustifiedContent,
-  SpaceAroundJustifiedContent,
-  SpaceBetweenJustifiedContent,
-  SpaceEvenlyJustifiedContent,
-}
+export { FlexEndJustifiedContent, FlexStartJustifiedContent, SpaceAroundJustifiedContent, SpaceBetweenJustifiedContent, SpaceEvenlyJustifiedContent }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

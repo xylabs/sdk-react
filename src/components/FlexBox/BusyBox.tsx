@@ -42,12 +42,8 @@ export const BusyBox: React.FC<BusyBoxProps> = ({
       {...props}
     >
       {children}
-      {busy && busyVariant === 'linear' ? (
-        <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} />
-      ) : null}
-      {busy && busyVariant === 'circular' ? (
-        <BusyCircularProgress color={busyColor} opacity={busyOpacity} size={busySize} {...busyCircularProps} />
-      ) : null}
+      {busy && busyVariant === 'linear' ? <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} /> : null}
+      {busy && busyVariant === 'circular' ? <BusyCircularProgress color={busyColor} opacity={busyOpacity} size={busySize} {...busyCircularProps} /> : null}
     </Box>
   )
 }

@@ -54,12 +54,7 @@ const EthAccount: React.FC<EthAccountProps> = ({
         {icon && address ? <Identicon size={iconSize} value={address?.toHex()} /> : null}
         {iconOnly ? null : (
           <FlexRow>
-            <Typography
-              marginLeft={icon ? 1 : 0}
-              variant="body1"
-              fontFamily={fontFamily}
-              visibility={address ? 'inherit' : 'hidden'}
-            >
+            <Typography marginLeft={icon ? 1 : 0} variant="body1" fontFamily={fontFamily} visibility={address ? 'inherit' : 'hidden'}>
               {testToDisplay}
             </Typography>
             {address ? null : (

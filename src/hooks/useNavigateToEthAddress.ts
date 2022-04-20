@@ -3,14 +3,7 @@ import { NavigateOptions, To, useNavigate } from 'react-router-dom'
 
 export const useNavigateToEthAddress = () => {
   const navigate = useNavigate()
-  const navigateToEthAddress = (
-    address: EthAddress,
-    event: React.MouseEvent,
-    page?: string,
-    to?: To,
-    toOptions?: NavigateOptions,
-    toEtherScan?: boolean
-  ) => {
+  const navigateToEthAddress = (address: EthAddress, event: React.MouseEvent, page?: string, to?: To, toOptions?: NavigateOptions, toEtherScan?: boolean) => {
     const openInEtherScan = toEtherScan || (!to && !page)
     if (openInEtherScan) {
       window.open(`https://etherscan.io/address/${address.toString()}`, '_blank')

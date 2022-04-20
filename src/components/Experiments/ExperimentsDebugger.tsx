@@ -3,13 +3,7 @@ import React from 'react'
 
 import { useLocalStorage } from '../../hooks'
 import { FlexCol, FlexRow } from '../FlexBox'
-import {
-  ExperimentsData,
-  ExperimentsLocalStorageKey,
-  OutcomesData,
-  OutcomesLocalStorageKey,
-  VariantData,
-} from './models'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from './models'
 
 const ExperimentsDebugger: React.FC = ({ ...props }) => {
   const [experiments] = useLocalStorage<ExperimentsData>(ExperimentsLocalStorageKey, {})
@@ -36,8 +30,7 @@ const ExperimentsDebugger: React.FC = ({ ...props }) => {
         const marks = [
           { label: `${experiment.variants[0].name} | ${experiment.variants[0].weight}`, value: 0 },
           ...experiment.variants.map(({ weight }, index) => ({
-            label:
-              index === experiment.variants.length - 1 ? 'End' : `${experiment.variants[index + 1].name} | ${weight}`,
+            label: index === experiment.variants.length - 1 ? 'End' : `${experiment.variants[index + 1].name} | ${weight}`,
             value: index === 0 ? weight : sumUpVariants(experiment.variants.slice(0, index + 1)),
           })),
         ]

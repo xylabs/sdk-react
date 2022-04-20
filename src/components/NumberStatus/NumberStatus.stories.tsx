@@ -75,17 +75,7 @@ Large10Digits.args = {
   value: 334455667788,
 }
 
-export {
-  Default,
-  Default6Digits,
-  Default10Digits,
-  Large,
-  Large6Digits,
-  Large10Digits,
-  Small,
-  Small6Digits,
-  Small10Digits,
-}
+export { Default, Default6Digits, Default10Digits, Large, Large6Digits, Large10Digits, Small, Small6Digits, Small10Digits }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

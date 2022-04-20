@@ -6,16 +6,9 @@ export interface SelectExProps<T> extends SelectProps<T> {
   mode?: PaletteMode
 }
 
-export const SelectEx: <T>(props: SelectExProps<T>) => JSX.Element = ({
-  MenuProps,
-  mode = 'light',
-  colorize,
-  ...props
-}) => {
+export const SelectEx: <T>(props: SelectExProps<T>) => JSX.Element = ({ MenuProps, mode = 'light', colorize, ...props }) => {
   const theme = useTheme()
-  const colorizeMenuProps = colorize
-    ? { MenuListProps: { sx: { backgroundColor: theme.palette[colorize][mode] } } }
-    : {}
+  const colorizeMenuProps = colorize ? { MenuListProps: { sx: { backgroundColor: theme.palette[colorize][mode] } } } : {}
 
   return <Select MenuProps={merge(MenuProps, colorizeMenuProps)} {...props} />
 }

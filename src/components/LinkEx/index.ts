@@ -1,1 +1,1 @@
-export * from './LinkToEx'
+export * from './LinkEx'

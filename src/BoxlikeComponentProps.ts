@@ -1,9 +1,9 @@
 import { Margin } from './Margin'
 import { Padding } from './Padding'
 
-type FlexValue = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'stretch'
+export type FlexValue = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'stretch'
 
-interface BoxlikeComponentProps {
+export interface BoxlikeComponentProps {
   alignContent?: FlexValue
   alignItems?: FlexValue
   alignSelf?: FlexValue
@@ -39,5 +39,3 @@ interface BoxlikeComponentProps {
   style?: React.CSSProperties
   width?: number | string
 }
-
-export type { BoxlikeComponentProps }

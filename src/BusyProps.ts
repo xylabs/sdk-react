@@ -1,9 +1,9 @@
 import { CircularProgressProps, LinearProgressProps } from '@mui/material'
 
-type MaterialUIThemeColor = 'inherit' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning'
-type BusyVariant = 'circular' | 'linear'
+export type MaterialUIThemeColor = 'inherit' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning'
+export type BusyVariant = 'circular' | 'linear'
 
-interface BusyProps {
+export interface BusyProps {
   busy?: boolean
   busyOpacity?: string | number
   busyColor?: MaterialUIThemeColor
@@ -12,5 +12,3 @@ interface BusyProps {
   busyLinearProps?: LinearProgressProps
   busySize?: number
 }
-
-export type { BusyProps }

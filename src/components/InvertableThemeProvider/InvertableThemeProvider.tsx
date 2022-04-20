@@ -59,9 +59,7 @@ export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (
 
   const Provider: React.FC = () => {
     return (
-      <InvertableThemeContext.Provider
-        value={{ darkOptions: clonedDarkOptions, lightOptions: clonedLightOptions, options: clonedOptions }}
-      >
+      <InvertableThemeContext.Provider value={{ darkOptions: clonedDarkOptions, lightOptions: clonedLightOptions, options: clonedOptions }}>
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </InvertableThemeContext.Provider>
     )

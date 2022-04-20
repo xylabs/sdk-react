@@ -7,7 +7,7 @@ const range = (n: number, in_min: number, in_max: number, out_min: number, out_m
   return ((n - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
 
-interface IdenticonProps extends FlexBoxProps {
+export interface IdenticonProps extends FlexBoxProps {
   bg?: string
   className?: string
   count?: number
@@ -72,17 +72,7 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
   }
 }
 
-const Identicon: React.FC<IdenticonProps> = ({
-  size = 400,
-  className = 'identicon',
-  bg,
-  count,
-  fg,
-  iconPadding,
-  palette,
-  value,
-  ...props
-}) => {
+export const Identicon: React.FC<IdenticonProps> = ({ size = 400, className = 'identicon', bg, count, fg, iconPadding, palette, value, ...props }) => {
   const canvas = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -95,5 +85,3 @@ const Identicon: React.FC<IdenticonProps> = ({
     </FlexRow>
   )
 }
-
-export { Identicon }

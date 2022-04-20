@@ -1,9 +1,7 @@
-import { GoogleBaseEvent } from './BaseEvent'
-import { GoogleCustomEvent } from './CustomEvent'
-import { Gtag } from './Gtag'
-import { Gtm } from './Gtm'
-import { GoogleUserEventHandler } from './UserEventHandler'
-
+export * from './BaseEvent'
+export * from './CustomEvent'
+export * from './Gtag'
+export * from './Gtm'
+export * from './StandardEvent'
 export * from './StandardEvents'
-
-export { GoogleBaseEvent, GoogleCustomEvent, GoogleUserEventHandler, Gtag, Gtm }
+export * from './UserEventHandler'

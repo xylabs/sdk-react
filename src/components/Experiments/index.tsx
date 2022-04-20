@@ -1,5 +1,4 @@
-import { Experiment } from './Experiment'
-import { Experiments } from './Experiments'
-import { ExperimentsDebugger } from './ExperimentsDebugger'
-
-export { Experiment, Experiments, ExperimentsDebugger }
+export * from './Experiment'
+export * from './Experiments'
+export * from './ExperimentsDebugger'
+export * from './ExperimentsProps'

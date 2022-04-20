@@ -4,11 +4,11 @@ import React, { PropsWithChildren } from 'react'
 
 import { FlexRow } from './FlexBox'
 
-type Props = PropsWithChildren<{
+export type HoverScaleProps = PropsWithChildren<{
   scale?: number
 }>
 
-const HoverScale: React.FC<Props> = (props) => {
+export const HoverScale: React.FC<HoverScaleProps> = (props) => {
   const { children, scale = 1.1 } = props
 
   const useStyles = makeStyles(() =>
@@ -31,5 +31,3 @@ const HoverScale: React.FC<Props> = (props) => {
     </FlexRow>
   )
 }
-
-export { HoverScale }

@@ -3,11 +3,7 @@ import { Theme } from '@mui/material'
 import { BoxlikeComponentProps } from './BoxlikeComponentProps'
 import { calcSpacing } from './calcSpacing'
 
-const mergeBoxlikeStyles = <T extends BoxlikeComponentProps>(
-  theme: Theme,
-  props: BoxlikeComponentProps,
-  defaultProps?: BoxlikeComponentProps
-): T => {
+const mergeBoxlikeStyles = <T extends BoxlikeComponentProps>(theme: Theme, props: BoxlikeComponentProps, defaultProps?: BoxlikeComponentProps): T => {
   const {
     alignContent,
     alignItems,

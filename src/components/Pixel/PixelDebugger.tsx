@@ -44,12 +44,7 @@ export const PixelDebugger: React.FC = () => {
                 </ButtonEx>
               </FlexCol>
               {displayEvents && !!events.length && (
-                <FlexCol
-                  alignItems="stretch"
-                  alignContent="start"
-                  padding={2}
-                  sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}
-                >
+                <FlexCol alignItems="stretch" alignContent="start" padding={2} sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}>
                   {events.map((e, index) => (
                     <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
                   ))}
@@ -64,12 +59,7 @@ export const PixelDebugger: React.FC = () => {
   )
 }
 
-const PixelEventDetails: React.FC<PixelEvent & { index: number; events: PixelEvent[] }> = ({
-  event,
-  fields,
-  index,
-  events,
-}) => {
+const PixelEventDetails: React.FC<PixelEvent & { index: number; events: PixelEvent[] }> = ({ event, fields, index, events }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <FlexCol alignItems="stretch" marginBottom={0.5} onClick={() => setIsOpen(!isOpen)}>
