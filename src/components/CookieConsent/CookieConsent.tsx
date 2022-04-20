@@ -1,12 +1,6 @@
 import { CookieConsentLoader, useCookieConsent } from '../../contexts'
-import { FlexBoxProps } from '../FlexBox'
 import { CookieConsentBody } from './CookieConsentBody'
-
-export interface CookieConsentProps extends FlexBoxProps {
-  acceptOnScroll?: boolean
-  acceptOnTimer?: number
-  onAccept?: (accepted: boolean) => void
-}
+import { CookieConsentProps } from './CookieConsentProps'
 
 export const CookieConsent: React.FC<CookieConsentProps> = (props) => {
   const { storageName } = useCookieConsent()
