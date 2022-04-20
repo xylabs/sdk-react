@@ -1,11 +1,11 @@
 import { Box, useScrollTrigger, useTheme, Zoom, ZoomProps } from '@mui/material'
 import React from 'react'
 
-interface ScrollToTopButtonProps extends ZoomProps {
+export interface ScrollToTopButtonProps extends ZoomProps {
   anchorId: string
 }
 
-const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ children, anchorId, ...props }) => {
+export const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ children, anchorId, ...props }) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
@@ -23,18 +23,9 @@ const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({ children, anchorI
 
   return (
     <Zoom in={trigger} {...props}>
-      <Box
-        zIndex={10}
-        position="fixed"
-        right={theme.spacing(2)}
-        bottom={theme.spacing(2)}
-        onClick={handleClick}
-        role="presentation"
-      >
+      <Box zIndex={10} position="fixed" right={theme.spacing(2)} bottom={theme.spacing(2)} onClick={handleClick} role="presentation">
         {children}
       </Box>
     </Zoom>
   )
 }
-
-export { ScrollToTopButton }

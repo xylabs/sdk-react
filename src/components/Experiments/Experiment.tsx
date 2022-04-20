@@ -5,9 +5,7 @@ export interface ExperimentProps {
   key: string
 }
 
-const Experiment: React.FC<PropsWithChildren<ExperimentProps>> = (props) => {
+export const Experiment: React.FC<PropsWithChildren<ExperimentProps>> = (props) => {
   const { children } = props
   return <>{children}</>
 }
-
-export { Experiment }

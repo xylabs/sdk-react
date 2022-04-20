@@ -3,7 +3,7 @@ import { assertEx } from '@xylabs/sdk-js'
 import { Gtag } from './Gtag'
 import { Gtm } from './Gtm'
 
-class GoogleBaseEvent<T extends Record<string, unknown>> {
+export class GoogleBaseEvent<T extends Record<string, unknown>> {
   public name: string
   protected adwordConversionId?: string
   constructor(name: string, adwordConversionId?: string) {
@@ -34,5 +34,3 @@ class GoogleBaseEvent<T extends Record<string, unknown>> {
     return assertEx(Gtm.instance, 'Missing/uninitialized gtm')
   }
 }
-
-export { GoogleBaseEvent }

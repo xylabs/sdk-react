@@ -29,40 +29,18 @@ const BasePage: React.FC<BasePageProps> = ({
   const scrollToTopAnchorId = 'scroll-to-top-anchor'
 
   return (
-    <FlexCol
-      justifyContent="flex-start"
-      color={theme.palette.text.primary}
-      alignItems="stretch"
-      width="100%"
-      maxWidth="100vw"
-      minHeight="100vh"
-      {...props}
-    >
+    <FlexCol justifyContent="flex-start" color={theme.palette.text.primary} alignItems="stretch" width="100%" maxWidth="100vw" minHeight="100vh" {...props}>
       <ScrollToTop />
       <Helmet title={title}>{noindex ? <meta content="noindex" name="robots" /> : null}</Helmet>
       {scrollToTopButton ? <div id={scrollToTopAnchorId} /> : null}
       {hideAppBar ? null : appBar}
       {beta ? (
-        <FlexRow
-          margin={1}
-          position="absolute"
-          top={0}
-          left={0}
-          bgcolor="#cccccc88"
-          paddingX={1}
-          style={{ opacity: 0.5 }}
-        >
-          <Typography variant="body2">
-            Important: This page is a Beta page. It is possible that some information may not be correct.
-          </Typography>
+        <FlexRow margin={1} position="absolute" top={0} left={0} bgcolor="#cccccc88" paddingX={1} style={{ opacity: 0.5 }}>
+          <Typography variant="body2">Important: This page is a Beta page. It is possible that some information may not be correct.</Typography>
         </FlexRow>
       ) : null}
       {container ? (
-        <Container
-          style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
-          maxWidth={container}
-          disableGutters={disableGutters}
-        >
+        <Container style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }} maxWidth={container} disableGutters={disableGutters}>
           {children}
         </Container>
       ) : (

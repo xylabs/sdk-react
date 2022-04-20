@@ -1,3 +1,2 @@
-import { DripIdentifyData } from './Identify'
-
-export type { DripIdentifyData }
+export * from './Identify'
+export * from './Result'

@@ -130,9 +130,7 @@ export class GoogleStandardEvents<T extends Record<string, unknown>> {
   }
 
   public earnVirtualCurrency() {
-    return new GoogleStandardEvent<GoogleBaseProperties | GoogleEarnVirtualCurrencyProperties | T>(
-      'earn_virtual_currency'
-    )
+    return new GoogleStandardEvent<GoogleBaseProperties | GoogleEarnVirtualCurrencyProperties | T>('earn_virtual_currency')
   }
 
   public generateLead() {
@@ -160,9 +158,7 @@ export class GoogleStandardEvents<T extends Record<string, unknown>> {
   }
 
   public postScore() {
-    return new GoogleStandardEvent<GoogleBaseProperties | { character?: string; level?: number; score: number } | T>(
-      'post_score'
-    )
+    return new GoogleStandardEvent<GoogleBaseProperties | { character?: string; level?: number; score: number } | T>('post_score')
   }
 
   public purchase() {
@@ -182,9 +178,7 @@ export class GoogleStandardEvents<T extends Record<string, unknown>> {
   }
 
   public selectContent() {
-    return new GoogleStandardEvent<GoogleBaseProperties | { content_type?: string; item_id?: string } | T>(
-      'select_content'
-    )
+    return new GoogleStandardEvent<GoogleBaseProperties | { content_type?: string; item_id?: string } | T>('select_content')
   }
 
   public selectItem() {
@@ -196,9 +190,7 @@ export class GoogleStandardEvents<T extends Record<string, unknown>> {
   }
 
   public share() {
-    return new GoogleStandardEvent<
-      GoogleBaseProperties | { content_is?: string; content_type?: string; method?: string } | T
-    >('share')
+    return new GoogleStandardEvent<GoogleBaseProperties | { content_is?: string; content_type?: string; method?: string } | T>('share')
   }
 
   public signUp() {
@@ -206,9 +198,7 @@ export class GoogleStandardEvents<T extends Record<string, unknown>> {
   }
 
   public spendVirtualCurrency() {
-    return new GoogleStandardEvent<GoogleBaseProperties | GoogleSpendVirtualCurrencyProperties | T>(
-      'spend_virtual_currency'
-    )
+    return new GoogleStandardEvent<GoogleBaseProperties | GoogleSpendVirtualCurrencyProperties | T>('spend_virtual_currency')
   }
 
   public tutorialBegin() {

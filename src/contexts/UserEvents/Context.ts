@@ -1,21 +1,19 @@
 import { UserEventHandler } from '@xylabs/pixel'
 import { createContext } from 'react'
 
-interface Props {
+export interface UserEventsProps {
   userEvents?: UserEventHandler<unknown>
 }
-const UserEventsContext = createContext<Props>({})
+export const UserEventsContext = createContext<UserEventsProps>({})
 
-interface DebuggingProps {
+export interface DebugUserEventsProps {
   isDebugging: boolean
   setIsDebugging: (value: boolean) => void
 }
 
-const DebugUserEventsContext = createContext<DebuggingProps>({
+export const DebugUserEventsContext = createContext<DebugUserEventsProps>({
   isDebugging: false,
   setIsDebugging: (value) => {
     console.warn('set is debugging is not set', value)
   },
 })
-
-export { DebugUserEventsContext, UserEventsContext }

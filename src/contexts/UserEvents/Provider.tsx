@@ -8,13 +8,6 @@ export interface UserEventsProviderProps<T> {
   userEvents: UserEventHandler<T>
 }
 
-export const UserEventsProvider: React.FC<WithChildren<UserEventsProviderProps<unknown>>> = ({
-  userEvents,
-  children,
-}) => {
-  return (
-    <UserEventsContext.Provider value={{ userEvents: userEvents ?? XyoUserEventHandler.get() }}>
-      {children}
-    </UserEventsContext.Provider>
-  )
+export const UserEventsProvider: React.FC<WithChildren<UserEventsProviderProps<unknown>>> = ({ userEvents, children }) => {
+  return <UserEventsContext.Provider value={{ userEvents: userEvents ?? XyoUserEventHandler.get() }}>{children}</UserEventsContext.Provider>
 }

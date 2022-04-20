@@ -14,9 +14,7 @@ const StorybookEntry = {
   title: 'Components/InvertableThemeProvider',
 } as ComponentMeta<typeof InvertableThemeProvider>
 
-const Template: ComponentStory<typeof InvertableThemeProvider> = (args) => (
-  <InvertableThemeProvider {...args}></InvertableThemeProvider>
-)
+const Template: ComponentStory<typeof InvertableThemeProvider> = (args) => <InvertableThemeProvider {...args}></InvertableThemeProvider>
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()

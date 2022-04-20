@@ -24,9 +24,7 @@ const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
   }
 
   return (
-    <CookieConsentContext.Provider
-      value={{ accepted, clearAccepted, setAccepted: setAcceptedHandler, storageName: CookiesAcceptedLocalStorageName }}
-    >
+    <CookieConsentContext.Provider value={{ accepted, clearAccepted, setAccepted: setAcceptedHandler, storageName: CookiesAcceptedLocalStorageName }}>
       {children}
     </CookieConsentContext.Provider>
   )

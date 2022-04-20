@@ -1,3 +1,1 @@
-type Padding = string | number | undefined
-
-export type { Padding }
+export type Padding = string | number | undefined

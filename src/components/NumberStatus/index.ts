@@ -1,3 +1,2 @@
-import { NumberStatus } from './NumberStatus'
-
-export { NumberStatus }
+export * from './NumberStatus'
+export * from './NumberStatusProps'

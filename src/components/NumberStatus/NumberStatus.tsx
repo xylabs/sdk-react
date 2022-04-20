@@ -40,12 +40,7 @@ const NumberStatus: React.FC<NumberStatusProps> = ({
       }}
       {...props}
     >
-      <FlexCol
-        alignItems="stretch"
-        height={sizePixels}
-        width={autoWidth ? '100%' : sizePixels}
-        busy={value === undefined && !error}
-      >
+      <FlexCol alignItems="stretch" height={sizePixels} width={autoWidth ? '100%' : sizePixels} busy={value === undefined && !error}>
         <FlexGrowRow
           bgcolor={bgColorTop}
           color={theme.palette.getContrastText(bgColorTop)}

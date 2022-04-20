@@ -1,7 +1,6 @@
-import { SnapTr } from './Snaptr'
-import { SnapchatStandardProperties } from './StandardProperties'
-import { SnapchatUserProperties } from './UserProperties'
+export * from './BaseEvent'
+export * from './Snaptr'
+export * from './StandardEvent'
 export * from './StandardEvents'
-
-export { SnapTr }
-export type { SnapchatStandardProperties, SnapchatUserProperties }
+export * from './StandardProperties'
+export * from './UserProperties'

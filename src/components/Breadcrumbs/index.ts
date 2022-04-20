@@ -1,3 +1,1 @@
-import { BreadcrumbsEx } from './BreadcrumbsEx'
-
-export { BreadcrumbsEx }
+export * from './BreadcrumbsEx'

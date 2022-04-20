@@ -2,11 +2,11 @@ import { Link, LinkProps } from '@mui/material'
 import React from 'react'
 import { Link as RouterLink, To } from 'react-router-dom'
 
-interface Props extends LinkProps {
+export interface LinkExProps extends LinkProps {
   to?: To
 }
 
-const LinkEx: React.FC<Props> = ({ to, ...props }) => {
+export const LinkEx: React.FC<LinkExProps> = ({ to, ...props }) => {
   if (to) {
     return <Link rel="noopener noreferrer" component={RouterLink} to={to} {...props} />
   } else {
@@ -15,7 +15,4 @@ const LinkEx: React.FC<Props> = ({ to, ...props }) => {
 }
 
 /** @deprecated use LinkEx instead */
-const LinkToEx = LinkEx
-
-// eslint-disable-next-line deprecation/deprecation
-export { LinkEx, LinkToEx }
+export const LinkToEx = LinkEx

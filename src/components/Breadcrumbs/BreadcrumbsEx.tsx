@@ -1,9 +1,9 @@
-import { Breadcrumbs, Link } from '@mui/material'
+import { Breadcrumbs, BreadcrumbsProps, Link } from '@mui/material'
 import { assertEx } from '@xylabs/sdk-js'
+import { ReactElement } from 'react'
 import { Link as RouteLink } from 'react-router-dom'
 
 import { FlexRow } from '../FlexBox'
-import { BreadcrumbsExProps } from './BreadcrumbsExProps'
 
 const getPartialPath = (pathParts: string[], index: number) => {
   const result = []
@@ -13,41 +13,27 @@ const getPartialPath = (pathParts: string[], index: number) => {
   return result.join('')
 }
 
-const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
-  titles,
-  path = document.location.pathname,
-  separator = '|',
-  logo,
-  children,
-  ...props
-}) => {
+export interface BreadcrumbsExProps extends BreadcrumbsProps {
+  logo?: string | ReactElement
+  path?: string
+  titles?: string[]
+}
+
+export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({ titles, path = document.location.pathname, separator = '|', logo, children, ...props }) => {
   const pathParts = path.split('/')
   //if the url has a trailing '/', remove the last part
   if (pathParts[pathParts.length - 1]?.length === 0) {
     pathParts.pop()
   }
 
-  assertEx(
-    pathParts.length - 1 === titles?.length,
-    `Path/Title length mismatch: ${JSON.stringify(titles)} with ${JSON.stringify(pathParts)}`
-  )
+  assertEx(pathParts.length - 1 === titles?.length, `Path/Title length mismatch: ${JSON.stringify(titles)} with ${JSON.stringify(pathParts)}`)
   return (
     <Breadcrumbs separator={separator} {...props}>
       {pathParts.map((_pathPart, index) => {
         const path = getPartialPath(pathParts, index)
         return (
-          <Link
-            title={index > 0 ? titles?.[index - 1] : 'COIN'}
-            color={index === pathParts.length - 1 ? 'textPrimary' : 'inherit'}
-            key={path}
-            component={RouteLink}
-            to={path}
-          >
-            {index > 0 ? (
-              titles?.[index - 1]
-            ) : (
-              <FlexRow>{typeof logo === 'string' ? <img src={logo} /> : logo}</FlexRow>
-            )}
+          <Link title={index > 0 ? titles?.[index - 1] : 'COIN'} color={index === pathParts.length - 1 ? 'textPrimary' : 'inherit'} key={path} component={RouteLink} to={path}>
+            {index > 0 ? titles?.[index - 1] : <FlexRow>{typeof logo === 'string' ? <img src={logo} /> : logo}</FlexRow>}
           </Link>
         )
       })}
@@ -55,5 +41,3 @@ const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
     </Breadcrumbs>
   )
 }
-
-export { BreadcrumbsEx }

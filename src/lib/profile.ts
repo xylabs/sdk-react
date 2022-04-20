@@ -1,4 +1,4 @@
-interface ProfileResult {
+export interface ProfileResult {
   endTime: number
   name: string
   startTime: number

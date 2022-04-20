@@ -1,4 +1,4 @@
-class Referrer {
+export class Referrer {
   private static storageId = '_coin_referrer'
   public local: string
   public session: string
@@ -32,5 +32,3 @@ class Referrer {
     }
   }
 }
-
-export { Referrer }
