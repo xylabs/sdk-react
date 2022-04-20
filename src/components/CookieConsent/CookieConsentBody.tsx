@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useCookieConsent } from '../../contexts'
 import { ButtonEx } from '../ButtonEx'
 import { FlexRow } from '../FlexBox'
-import { CookieConsentProps } from './CookieConsent'
+import { CookieConsentProps } from './CookieConsentProps'
 
 export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll, acceptOnTimer = 0, onAccept, ...props }) => {
   const { accepted, setAccepted, storageName } = useCookieConsent()
