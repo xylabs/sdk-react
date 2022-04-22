@@ -3770,12 +3770,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.1":
-  version: 18.0.1
-  resolution: "@types/react-dom@npm:18.0.1"
+"@types/react-dom@npm:^18.0.2":
+  version: 18.0.2
+  resolution: "@types/react-dom@npm:18.0.2"
   dependencies:
     "@types/react": "*"
-  checksum: 6c183e2e50240b77ed767cd968fe061ef4f2b47f84da5ec9e412a767d68c9a004d1f6ccca4295a5aa2c3ee723377e59006a2031f3767c00d8ac9e240a51bb142
+  checksum: 2b0b138d8634ccfd8a86b17cb5414b122ee0cb6f650377d772f6008761a27e4c2531c08e3cab71aaa19b6893af6a508c664aa314db3ebcff5b8179173c9c9307
   languageName: node
   linkType: hard
 
@@ -3815,14 +3815,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^18.0.5":
-  version: 18.0.5
-  resolution: "@types/react@npm:18.0.5"
+"@types/react@npm:*, @types/react@npm:^18.0.6":
+  version: 18.0.6
+  resolution: "@types/react@npm:18.0.6"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 70d3336d43ef25509fa89ef3278f57fdf1945fc921e69b7890a78ab9a52a55ee38e2f13aa71eb4f6032b7311e7557860ce8836c1acf3028304989571c9736a96
+  checksum: 368b40176f0dab30a611c3263bf1d9878cebede9ce8015bc5661a396787dbe41f0b667b8d6d448dea7bc8c0557bf3cb329ab2b16ad2dacb18eaa764358bd16d4
   languageName: node
   linkType: hard
 
@@ -4451,15 +4451,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/sdk-js@npm:^2.4.1, @xylabs/sdk-js@npm:^2.4.5":
-  version: 2.4.5
-  resolution: "@xylabs/sdk-js@npm:2.4.5"
+"@xylabs/sdk-js@npm:^2.4.1, @xylabs/sdk-js@npm:^2.4.6":
+  version: 2.4.6
+  resolution: "@xylabs/sdk-js@npm:2.4.6"
   dependencies:
     axios: ^0.26.1
     bn.js: ^5.2.0
-    buffer: ^6.0.3
-    rollbar: ^2.24.1
-  checksum: a6ac5ecfc5285e4c059072e902538ed27fe607cf8c87715624859faf9bd964e7eff7cd6d74ce219dc3be8def8a7619d892bc4f0333162b674944687abf3d54b4
+    rollbar: ^2.25.0
+    safe-buffer: ^5.2.1
+  checksum: 71998486b290f90231071bd9dc65afdecab3c36a500ef1341707302510637cccc5acd479c68907b9242bdd1ea7d69a6803010a0c1cc2d1e00018832a8db854c9
   languageName: node
   linkType: hard
 
@@ -4479,13 +4479,13 @@ __metadata:
     "@types/lodash": ^4.14.182
     "@types/md5": ^2.3.2
     "@types/numeral": ^2.0.2
-    "@types/react": ^18.0.5
-    "@types/react-dom": ^18.0.1
+    "@types/react": ^18.0.6
+    "@types/react-dom": ^18.0.2
     "@types/react-helmet": ^6.1.5
     "@xylabs/eslint-config-react": ^2.1.5
     "@xylabs/pixel": ^1.3.7
     "@xylabs/rollup-config": ^1.1.15
-    "@xylabs/sdk-js": ^2.4.5
+    "@xylabs/sdk-js": ^2.4.6
     "@xylabs/ts-scripts": ^1.0.53
     "@xylabs/tsconfig": ^1.0.13
     axios: ^0.26.1
@@ -5100,10 +5100,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:~1.2.1":
-  version: 1.2.1
-  resolution: "async@npm:1.2.1"
-  checksum: dd2d00bede64574660ba114d6431b587d3fbb7760c147f97993ec5232be991cf39126a78beb2dfc9c29607312163c3523fedd797c90bcbf312ae1f70926f182c
+"async@npm:~3.2.3":
+  version: 3.2.3
+  resolution: "async@npm:3.2.3"
+  checksum: c4bee57ab2249af3dc83ca3ef9acfa8e822c0d5e5aa41bae3eaf7f673648343cd64ecd7d26091ffd357f3f044428b17b5f00098494b6cf8b6b3e9681f0636ca1
   languageName: node
   linkType: hard
 
@@ -5398,7 +5398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base64-js@npm:^1.0.2, base64-js@npm:^1.3.1":
+"base64-js@npm:^1.0.2":
   version: 1.5.1
   resolution: "base64-js@npm:1.5.1"
   checksum: 669632eb3745404c2f822a18fc3a0122d2f9a7a13f7fb8b5823ee19d1d2ff9ee5b52c53367176ea4ad093c332fd5ab4bd0ebae5a8e27917a4105a4cfc86b1005
@@ -5705,16 +5705,6 @@ __metadata:
     ieee754: ^1.1.4
     isarray: ^1.0.0
   checksum: 8801bc1ba08539f3be70eee307a8b9db3d40f6afbfd3cf623ab7ef41dffff1d0a31de0addbe1e66e0ca5f7193eeb667bfb1ecad3647f8f1b0750de07c13295c3
-  languageName: node
-  linkType: hard
-
-"buffer@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "buffer@npm:6.0.3"
-  dependencies:
-    base64-js: ^1.3.1
-    ieee754: ^1.2.1
-  checksum: 5ad23293d9a731e4318e420025800b42bf0d264004c0286c8cc010af7a270c7a0f6522e84f54b9ad65cbd6db20b8badbfd8d2ebf4f80fa03dab093b89e68c3f9
   languageName: node
   linkType: hard
 
@@ -9644,7 +9634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ieee754@npm:^1.1.4, ieee754@npm:^1.2.1":
+"ieee754@npm:^1.1.4":
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 5144c0c9815e54ada181d80a0b810221a253562422e7c6c3a60b1901154184f49326ec239d618c416c1c5945a2e197107aee8d986a3dd836b53dffefd99b5e7e
@@ -16067,11 +16057,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollbar@npm:^2.24.0, rollbar@npm:^2.24.1":
-  version: 2.24.1
-  resolution: "rollbar@npm:2.24.1"
+"rollbar@npm:^2.24.0, rollbar@npm:^2.25.0":
+  version: 2.25.0
+  resolution: "rollbar@npm:2.25.0"
   dependencies:
-    async: ~1.2.1
+    async: ~3.2.3
     console-polyfill: 0.3.0
     decache: ^3.0.5
     error-stack-parser: ^2.0.4
@@ -16079,11 +16069,10 @@ __metadata:
     lru-cache: ~2.2.1
     request-ip: ~2.0.1
     source-map: ^0.5.7
-    uuid: 3.0.x
   dependenciesMeta:
     decache:
       optional: true
-  checksum: 1c960baa4f6e11f5fbc3fbba22c112ce494887a3a68e3d1d945d9215d7a8ee36c62199c139050275e3e6177b2fe2b3bd9cf9c14bb656ec7865882167cd3b8018
+  checksum: 2d2a6724d864ce17f61c23a89d8f8bf7424e49b0b82e89536843d967806ae3c30c5fc1ac42b0bca5c75595b431d057230a8c73143e6136ab813571a8cbff3913
   languageName: node
   linkType: hard
 
@@ -16158,7 +16147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:^5.2.0, safe-buffer@npm:~5.2.0":
+"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:^5.1.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:^5.2.0, safe-buffer@npm:^5.2.1, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
@@ -18264,15 +18253,6 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
-  languageName: node
-  linkType: hard
-
-"uuid@npm:3.0.x":
-  version: 3.0.1
-  resolution: "uuid@npm:3.0.1"
-  bin:
-    uuid: ./bin/uuid
-  checksum: 3e18e3bf6fcf92f379c55a816c0d4b2e85c1a15bd67a5c9798a40bac91810673d0e6209a4cc3c334966ec105e861953da49e8cd4e7db05a45c03f6b6a3b6a64b
   languageName: node
   linkType: hard
 
