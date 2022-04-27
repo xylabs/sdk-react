@@ -1,13 +1,13 @@
 import { EthAddress } from '@xylabs/sdk-js'
+import { PropsWithChildren } from 'react'
 
-import { WithChildren } from '../../WithChildren'
 import { NetworkSettingsContext } from './Context'
 
 export interface NetworkSettingsLoaderProps {
   enabled?: boolean
 }
 
-export const NetworkSettingsLoader: React.FC<WithChildren<NetworkSettingsLoaderProps>> = (props) => {
+export const NetworkSettingsLoader: React.FC<PropsWithChildren<NetworkSettingsLoaderProps>> = (props) => {
   const { children } = props
 
   return (
