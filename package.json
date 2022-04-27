@@ -62,14 +62,14 @@
     "react-dom": "^18"
   },
   "docs": "dist/docs.json",
-  "browser": "dist/browserIndex.js",
+  "browser": "dist/index.js",
   "exports": {
     ".": {
       "node": {
         "import": "./dist/bundle/node-esm/index.js",
         "require": "./dist/bundle/node/index.js"
       },
-      "default": "./dist/browserIndex.js"
+      "default": "./dist/index.js"
     },
     "./dist/docs.json": {
       "default": "./dist/docs.json"
@@ -77,7 +77,7 @@
     "./package.json": "./package.json"
   },
   "main": "dist/bundle/node/index.js",
-  "module": "dist/browserIndex.js",
+  "module": "dist/index.js",
   "homepage": "https://xylabs.com",
   "keywords": [
     "utility",
