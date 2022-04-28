@@ -10,7 +10,7 @@ export interface BoxlikeComponentProps {
   bgcolor?: string
   border?: string
   borderColor?: string
-  display?: 'block' | 'inline' | 'flex' | 'innline-block' | 'inherit'
+  display?: 'block' | 'inline' | 'flex' | 'inline-block' | 'inherit'
   flexDirection?: 'row' | 'column'
   flexGrow?: number
   flexShrink?: number
