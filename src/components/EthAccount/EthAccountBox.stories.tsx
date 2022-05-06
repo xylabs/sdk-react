@@ -91,7 +91,16 @@ AutoEmpty.args = {
   toEtherScan: true,
 }
 
-export { Auto, AutoEmpty, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
+const IconOnly = Template.bind({})
+IconOnly.args = {
+  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  icon: true,
+  iconOnly: true,
+  title: 'Sample EthAccount',
+  toEtherScan: true,
+}
+
+export { Auto, AutoEmpty, IconOnly, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

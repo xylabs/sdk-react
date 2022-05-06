@@ -79,9 +79,5 @@ export const Identicon: React.FC<IdenticonProps> = ({ size = 400, className = 'i
     updateCanvas(canvas, { bg, className, count, fg, iconPadding, palette, size, value })
   })
 
-  return (
-    <FlexRow {...props}>
-      <canvas className={className} ref={canvas} style={{ height: size, width: size }} />
-    </FlexRow>
-  )
+  return <FlexRow {...props}>{value ? <canvas className={className} ref={canvas} style={{ height: size, width: size }} /> : null}</FlexRow>
 }
