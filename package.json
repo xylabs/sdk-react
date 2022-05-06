@@ -117,8 +117,11 @@
     "deploy": "yarn version patch -i && yarn build && yarn npm publish",
     "lint-pkg": "npmPkgJsonLint .",
     "start": "start-storybook -p 6006",
+    "copy-images": "yarn copy-images-esm && yarn copy-images-cjs",
+    "copy-images-esm": "copyfiles -u 1 \"src/**/*.svg\" \"src/**/*.jpg\" \"src/**/*.gif\" \"src/**/*.png\" dist/esm",
+    "copy-images-cjs": "copyfiles -u 1 \"src/**/*.svg\" \"src/**/*.jpg\" \"src/**/*.gif\" \"src/**/*.png\" dist/cjs",
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register 'src/**/*.spec.ts'",
-    "build": "yarn clean && tsc -p tsconfig.build.cjs.json && tsc -p tsconfig.build.esm.json && yarn gen:docs",
+    "build": "yarn clean && tsc -p tsconfig.build.cjs.json && tsc -p tsconfig.build.esm.json && yarn copy-images && yarn gen:docs",
     "gen:docs": "typedoc ./src/index.ts --json ./dist/docs.json --tsconfig ./tsconfig.json"
   },
   "sideEffects": false,
