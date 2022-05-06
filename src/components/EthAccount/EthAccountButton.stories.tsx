@@ -2,22 +2,22 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { EthAddress } from '@xylabs/sdk-js'
 
 import { FlexRow } from '../FlexBox'
-import { EthAccount } from './EthAccount'
+import { EthAccountButton } from './EthAccountButton'
 
 const StorybookEntry = {
   argTypes: {},
-  component: EthAccount,
+  component: EthAccountButton,
   parameters: {
     docs: {
       page: null,
     },
   },
-  title: 'Components/EthAccount',
-} as ComponentMeta<typeof EthAccount>
+  title: 'EthAccount/Button',
+} as ComponentMeta<typeof EthAccountButton>
 
-const Template: ComponentStory<typeof EthAccount> = (args) => (
+const Template: ComponentStory<typeof EthAccountButton> = (args) => (
   <FlexRow>
-    <EthAccount variant="outlined" {...args}></EthAccount>
+    <EthAccountButton variant="outlined" {...args}></EthAccountButton>
   </FlexRow>
 )
 
