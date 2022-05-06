@@ -1,5 +1,3 @@
-import { EthAccount } from './EthAccount'
-import { EthAccountProps } from './EthAccountProps'
-
-export { EthAccount }
-export type { EthAccountProps }
+export * from './EthAccountBox'
+export * from './EthAccountButton'
+export * from './EthAccountProps'

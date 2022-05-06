@@ -1,9 +1,6 @@
 import { EthAddress } from '@xylabs/sdk-js'
-import { MouseEventHandler } from 'react'
 
-import { ButtonExProps } from '../ButtonEx'
-
-interface EthAccountProps extends ButtonExProps {
+interface EthAccountProps {
   address?: EthAddress | null
   addressLength?: 'auto' | 'short' | 'long'
   shortenedLength?: number
@@ -11,11 +8,8 @@ interface EthAccountProps extends ButtonExProps {
   icon?: boolean
   iconSize?: number
   iconOnly?: boolean
-  text?: boolean
-  page?: string
   toEtherScan?: boolean
   fontFamily?: string
-  onButtonClick?: MouseEventHandler<HTMLButtonElement>
 }
 
 export type { EthAccountProps }
