@@ -1,4 +1,5 @@
 import { InfuraProvider, JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
+import { MetaMaskInpageProvider } from '@metamask/providers'
 import { EthAddress } from '@xylabs/sdk-js'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 
@@ -12,28 +13,34 @@ interface Props {
 
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => {
   const { children, enabled = true } = props
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const global = window as any
-  const ethereum = global.ethereum
+
+  const ethereum = window.ethereum as MetaMaskInpageProvider
   const [error, setError] = useState<Error>()
   const [localAddress, setLocalAddress] = useState<EthAddress>()
   const [resetCount, setResetCount] = useState(0)
   const [providerName, setProviderName] = useState<string>()
 
-  if (ethereum) {
-    ethereum.autoRefreshOnNetworkChange = false
-  }
-
   const connect = async () => {
-    await global.ethereum?.enable()
-    return localAddress ? [localAddress.toString()] : []
+    const accounts = await walletProvider?.send('eth_requestAccounts', [])
+    // We could have multiple accounts. Check for one.
+    if (accounts.length !== 0) {
+      setLocalAddress(accounts[0])
+      console.log('Connected: ', accounts[0])
+    } else {
+      console.log('No authorized account found.')
+    }
+    return accounts
   }
 
   const [isConnected, setIsConnected] = useState<boolean>()
 
+  const [walletProvider, setWalletProvider] = useState<Web3Provider | null>()
+  const [provider, setProvider] = useState<Provider>()
+  const [signer, setSigner] = useState<JsonRpcSigner | null>()
+
   useEffect(() => {
-    if (ethereum && enabled) {
-      ethereum.on('accountsChanged', (accounts: string[]) => {
+    if (provider && enabled) {
+      provider.on('accountsChanged', (accounts: string[]) => {
         console.log(`accountsChanged: ${JSON.stringify(accounts)}`)
         setResetCount(resetCount + 1)
         if (accounts.length > 0) {
@@ -42,7 +49,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
           setLocalAddress(undefined)
         }
       })
-      ethereum.on('chainChanged', (chainId: string) => {
+      provider.on('chainChanged', (chainId: string) => {
         setResetCount(resetCount + 1)
         if (chainId) {
           setChainId(parseInt(chainId))
@@ -51,15 +58,11 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
         }
       })
     }
-  }, [ethereum, resetCount, enabled])
-
-  const [walletProvider, setWalletProvider] = useState<Web3Provider | null>()
-  const [provider, setProvider] = useState<Provider>()
-  const [signer, setSigner] = useState<JsonRpcSigner | null>()
+  }, [provider, resetCount, enabled])
 
   useEffect(() => {
     if (enabled) {
-      const walletProvider = ethereum ? new Web3Provider(ethereum) : null
+      const walletProvider = ethereum ? new Web3Provider(window.ethereum) : null
       let provider = null
       let providerName = null
       if (walletProvider) {
