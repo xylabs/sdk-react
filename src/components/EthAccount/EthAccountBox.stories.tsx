@@ -17,7 +17,7 @@ const StorybookEntry = {
 
 const Template: ComponentStory<typeof EthAccountBox> = (args) => (
   <FlexRow>
-    <EthAccountBox {...args}></EthAccountBox>
+    <EthAccountBox height={40} {...args}></EthAccountBox>
   </FlexRow>
 )
 
