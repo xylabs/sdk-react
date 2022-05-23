@@ -20,6 +20,7 @@ export class DripBaseEvent<T extends Record<string, unknown>> {
       payload.push(this.param)
     }
     payload.push(data)
+    console.log('sdk-react', payload)
     this.dcq.push(payload)
     await delay(0)
   }
