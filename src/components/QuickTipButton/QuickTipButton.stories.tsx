@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
+import { FlexRow } from '../FlexBox'
 import { QuickTipButton } from './QuickTipButton'
 
 const StorybookEntry = {
@@ -14,7 +15,11 @@ const StorybookEntry = {
   title: 'Components/QuickTipButton',
 } as ComponentMeta<typeof QuickTipButton>
 
-const Template: ComponentStory<typeof QuickTipButton> = (args) => <QuickTipButton {...args}></QuickTipButton>
+const Template: ComponentStory<typeof QuickTipButton> = (args) => (
+  <FlexRow>
+    <QuickTipButton {...args}></QuickTipButton>
+  </FlexRow>
+)
 
 const Default = Template.bind({})
 Default.args = {

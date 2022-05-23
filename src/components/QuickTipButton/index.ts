@@ -1,3 +1,1 @@
-import { QuickTipButton } from './QuickTipButton'
-
-export { QuickTipButton }
+export * from './QuickTipButton'
