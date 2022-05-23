@@ -1,6 +1,6 @@
+import ReplayIcon from '@mui/icons-material/Replay'
 import { IconButton } from '@mui/material'
 import React from 'react'
-import { AiOutlineReload } from 'react-icons/ai'
 
 import { FlexGrowCol } from '../FlexBox'
 import { ErrorsViewerProps } from './ErrorsViewerProps'
@@ -15,7 +15,7 @@ const ErrorsViewer: React.FC<ErrorsViewerProps> = (props) => {
       })}
       {onRetry ? (
         <IconButton onClick={onRetry}>
-          <AiOutlineReload />
+          <ReplayIcon />
         </IconButton>
       ) : null}
     </FlexGrowCol>
