@@ -13,11 +13,13 @@ const ExperimentsHelper = {
   buildLocalStorageKey: (localStorageProp: boolean | string) => {
     return localStorageProp === true ? defaultLocalStorageKey : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey : ''
   },
+
   calcTotalWeight: (variants: VariantData[]) => {
     return variants.reduce((sum, variant) => {
       return sum + variant.weight
     }, 0)
   },
+
   calculateExperiment: (name: string, localStorageProp: string | boolean, variants: VariantData[]) => {
     //TODO - user events, it needs to be in the hook, all other compatibility should
     ExperimentsHelper.loadOutcomes()
@@ -44,11 +46,13 @@ const ExperimentsHelper = {
       return variant
     }
   },
+
   getExperiment: (name: string) => {
     ExperimentsHelper.loadOutcomes()
     const experiments = getLocalStorageObject<ExperimentsData>(ExperimentsLocalStorageKey) || {}
     return experiments[name]
   },
+
   getSelectedVariant: (name: string) => {
     const outcomes = ExperimentsHelper.loadOutcomes()
     const experiment = ExperimentsHelper.getExperiment(name)
@@ -64,6 +68,7 @@ const ExperimentsHelper = {
       }
     }
   },
+
   loadOutcomes: () => {
     outcomes = getLocalStorageObject(OutcomesLocalStorageKey)
     return outcomes
@@ -86,7 +91,6 @@ const ExperimentsHelper = {
     return dataArray.join('|')
   },
 
-  //TODO - cleanup ExperimentProps & VariantData
   saveExperimentRanges: (name: string, totalWeight: number, variants: VariantData[]) => {
     const experiments = getLocalStorageObject<ExperimentsData>(ExperimentsLocalStorageKey) || {}
     experiments[name] = {
