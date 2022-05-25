@@ -1,8 +1,10 @@
-import { Log } from '@xylabs/sdk-js'
 import { ReactElement } from 'react'
+import { forget, Log } from '@xylabs/sdk-js'
 
 import { ExperimentProps, ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components'
 import { getLocalStorageObject, setLocalStorageObject } from '../lib'
+import { UserEventHandler } from '@xylabs/pixel'
+import { UserEventsProps } from '../contexts'
 
 const defaultLocalStorageKey = 'testData'
 const experimentsTestData: { [index: string]: string } = {}
@@ -20,7 +22,7 @@ const ExperimentsHelper = {
     }, 0)
   },
 
-  calculateExperiment: (name: string, localStorageProp: string | boolean, variants: VariantData[]) => {
+  calculateExperiment: (name: string, localStorageProp: string | boolean, variants: VariantData[], userEvents: UserEventHandler<UserEventsProps>) => {
     //TODO - user events, it needs to be in the hook, all other compatibility should
     ExperimentsHelper.loadOutcomes()
     const localStorageKey = ExperimentsHelper.buildLocalStorageKey(localStorageProp)
@@ -40,9 +42,9 @@ const ExperimentsHelper = {
       if (firstTime) {
         localStorage.setItem(localStorageKey, ExperimentsHelper.mergeData(experimentsTestData))
       }
-      // if (userEvents) {
-      //   forget(userEvents.testStarted({ name, variation: variant.name }))
-      // }
+      if (userEvents) {
+        forget(userEvents.testStarted({ name, variation: variant.name }))
+      }
       return variant
     }
   },
