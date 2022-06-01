@@ -6,8 +6,8 @@ class XyBaseEvent<T extends Record<string, unknown>> {
     this.name = name
   }
 
-  async send(fields: T) {
-    await XyPixel.instance.send(this.name, fields)
+  async send(fields: T, eventId?: string) {
+    await XyPixel.instance.send(this.name, fields, eventId)
   }
 }
 

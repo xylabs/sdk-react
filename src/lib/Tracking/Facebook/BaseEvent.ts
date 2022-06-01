@@ -10,7 +10,7 @@ class FacebookBaseEvent<T> {
     this.fbq = assertEx(Fbq.instance, 'Missing Fbq')
   }
 
-  async send(_data: T) {
+  async send(_data: T, eventId?: string) {
     await delay(0) //force async to increase reporting odds
   }
 }

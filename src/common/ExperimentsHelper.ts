@@ -1,10 +1,10 @@
-import { ReactElement } from 'react'
+import { UserEventHandler } from '@xylabs/pixel'
 import { forget, Log } from '@xylabs/sdk-js'
+import { ReactElement } from 'react'
 
 import { ExperimentProps, ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components'
-import { getLocalStorageObject, setLocalStorageObject } from '../lib'
-import { UserEventHandler } from '@xylabs/pixel'
 import { UserEventsProps } from '../contexts'
+import { getLocalStorageObject, setLocalStorageObject } from '../lib'
 
 const defaultLocalStorageKey = 'testData'
 const experimentsTestData: { [index: string]: string } = {}
