@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { EthAddress } from '@xylabs/sdk-js'
 
-import { FlexRow } from '../FlexBox'
 import { EthAccountBox } from './EthAccountBox'
 
 const StorybookEntry = {

@@ -1,8 +1,7 @@
 import { Box } from '@mui/material'
 import { createStyles, makeStyles } from '@mui/styles'
+import { FlexRow } from '@xylabs/react-flexbox'
 import React, { PropsWithChildren } from 'react'
-
-import { FlexRow } from './FlexBox'
 
 export type HoverScaleProps = PropsWithChildren<{
   scale?: number

@@ -1,8 +1,8 @@
 import { FormControl, FormLabel, Switch } from '@mui/material'
+import { BusyBoxProps, FlexRow } from '@xylabs/react-flexbox'
 import { useContext } from 'react'
 
 import { DebugUserEventsContext } from '../../contexts'
-import { BusyBoxProps, FlexRow } from '../FlexBox'
 
 export const PixelDebuggerToggle: React.FC<BusyBoxProps> = ({ ...props }) => {
   const { setIsDebugging, isDebugging } = useContext(DebugUserEventsContext)

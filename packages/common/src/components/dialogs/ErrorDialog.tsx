@@ -1,8 +1,7 @@
 import { Dialog, DialogActions, DialogContent, DialogProps, DialogTitle, Typography } from '@mui/material'
+import { ButtonEx } from '@xylabs/react-button'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { AxiosError } from 'axios'
-
-import { ButtonEx } from '../ButtonEx'
-import { FlexRow } from '../FlexBox'
 
 export interface ErrorDialogProps extends DialogProps {
   error?: Error

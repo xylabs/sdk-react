@@ -1,5 +1,5 @@
 import { Button, useTheme } from '@mui/material'
-import { BusyCircularProgress, BusyLinearProgress } from '@xylabs/react-shared'
+import { BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles } from '@xylabs/react-shared'
 import { MouseEvent } from 'react'
 
 import { ButtonExProps } from './ButtonExProps'

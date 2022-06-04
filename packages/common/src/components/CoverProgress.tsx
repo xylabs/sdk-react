@@ -1,8 +1,8 @@
 import { CircularProgress, useTheme } from '@mui/material'
+import { FlexGrowRow } from '@xylabs/react-flexbox'
 import React from 'react'
 
 import { ErrorsViewer } from './Errors'
-import { FlexGrowRow } from './FlexBox'
 
 export interface CoverProgressProps {
   errors?: Error[]

@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { FlexRow } from '@xylabs/react-flexbox'
 
-import { FlexRow } from '../FlexBox'
 import { QuickTipButton } from './QuickTipButton'
 
 const StorybookEntry = {

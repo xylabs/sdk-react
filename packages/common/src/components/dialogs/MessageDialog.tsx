@@ -1,6 +1,5 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogProps, DialogTitle } from '@mui/material'
-
-import { FlexCol, FlexRow } from '../FlexBox'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
 export interface MessageDialogProps extends DialogProps {
   onOk?: () => void

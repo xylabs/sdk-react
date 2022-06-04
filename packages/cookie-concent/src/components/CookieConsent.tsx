@@ -1,4 +1,4 @@
-import { CookieConsentLoader, useCookieConsent } from '../../contexts'
+import { CookieConsentLoader, useCookieConsent } from '../contexts'
 import { CookieConsentBody } from './CookieConsentBody'
 import { CookieConsentProps } from './CookieConsentProps'
 

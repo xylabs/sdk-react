@@ -1,4 +1,4 @@
-import { ButtonExProps } from '../ButtonEx'
+import { ButtonExProps } from '@xylabs/react-button'
 
 interface NumberStatusProps extends ButtonExProps {
   autoWidth?: boolean

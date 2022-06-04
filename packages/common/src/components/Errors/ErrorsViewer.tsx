@@ -1,8 +1,8 @@
 import ReplayIcon from '@mui/icons-material/Replay'
 import { IconButton } from '@mui/material'
+import { FlexGrowCol } from '@xylabs/react-flexbox'
 import React from 'react'
 
-import { FlexGrowCol } from '../FlexBox'
 import { ErrorsViewerProps } from './ErrorsViewerProps'
 import { ErrorViewer } from './ErrorViewer'
 

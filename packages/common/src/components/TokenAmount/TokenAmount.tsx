@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material'
+import { ButtonEx } from '@xylabs/react-button'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { BigNumber } from '@xylabs/sdk-js'
 
-import { ButtonEx } from '../ButtonEx'
-import { FlexRow } from '../FlexBox'
 import xyoLogo from './img/xyo.svg'
 import { TokenAmountProps } from './TokenAmountProps'
 

@@ -1,4 +1,4 @@
-import { FlexBoxProps, FlexRow } from './FlexBox'
+import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
 
 /**
  * @deprecated The functionality of Background is now part of FlexBox.  Use the 'background' property to enable the background.

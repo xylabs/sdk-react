@@ -1,9 +1,9 @@
 import { useTheme } from '@mui/material'
+import { ButtonEx } from '@xylabs/react-button'
+import { FlexCol, FlexGrowRow } from '@xylabs/react-flexbox'
 import numeral from 'numeral'
 import React from 'react'
 
-import { ButtonEx } from '../ButtonEx'
-import { FlexCol, FlexGrowRow } from '../FlexBox'
 import { NumberStatusProps } from './NumberStatusProps'
 
 const NumberStatus: React.FC<NumberStatusProps> = ({

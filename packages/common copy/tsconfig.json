@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "outDir": "../button/dist",
-    "sourceMap": true
-  },
-  "extends": "@xylabs/tsconfig"
-}

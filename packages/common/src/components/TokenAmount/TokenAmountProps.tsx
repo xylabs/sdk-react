@@ -1,7 +1,6 @@
+import { ButtonExProps } from '@xylabs/react-button'
 import { BigNumber } from '@xylabs/sdk-js'
 import { MouseEventHandler } from 'react'
-
-import { ButtonExProps } from '../ButtonEx'
 
 interface TokenAmountProps extends ButtonExProps {
   amount?: BigNumber | null

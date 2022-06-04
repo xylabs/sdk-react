@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
-import { FlexCol, FlexRow } from '../FlexBox'
 import { ButtonEx } from './ButtonEx'
 
 const StorybookEntry = {

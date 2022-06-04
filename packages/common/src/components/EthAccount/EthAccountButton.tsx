@@ -1,8 +1,8 @@
 import { useTheme } from '@mui/material'
+import { ButtonEx, ButtonExProps } from '@xylabs/react-button'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { MouseEvent } from 'react'
 
-import { ButtonEx, ButtonExProps } from '../ButtonEx'
-import { FlexRow } from '../FlexBox'
 import { Identicon } from '../Identicon'
 import { EthAccountBox } from './EthAccountBox'
 import { EthAccountProps } from './EthAccountProps'

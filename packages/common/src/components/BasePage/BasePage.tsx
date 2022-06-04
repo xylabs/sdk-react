@@ -1,10 +1,10 @@
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
 import { Container, Fab, ScopedCssBaseline, Typography, useTheme } from '@mui/material'
+import { CookieConsent } from '@xylabs/react-cookie-consent'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { CookieConsent } from '../CookieConsent'
-import { FlexCol, FlexRow } from '../FlexBox'
 import { InvertableThemeProvider } from '../InvertableThemeProvider'
 import { ScrollToTop } from '../ScrollToTop'
 import { ScrollToTopButton } from '../ScrollToTopButton'

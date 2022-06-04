@@ -1,9 +1,9 @@
 import { Link, Typography } from '@mui/material'
+import { ButtonEx } from '@xylabs/react-button'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { useEffect } from 'react'
 
-import { useCookieConsent } from '../../contexts'
-import { ButtonEx } from '../ButtonEx'
-import { FlexRow } from '../FlexBox'
+import { useCookieConsent } from '../contexts'
 import { CookieConsentProps } from './CookieConsentProps'
 
 export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll, acceptOnTimer = 0, onAccept, ...props }) => {

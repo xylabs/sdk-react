@@ -1,9 +1,8 @@
 import { Breadcrumbs, BreadcrumbsProps, Link } from '@mui/material'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { assertEx } from '@xylabs/sdk-js'
 import { ReactElement } from 'react'
 import { Link as RouteLink } from 'react-router-dom'
-
-import { FlexRow } from '../FlexBox'
 
 const getPartialPath = (pathParts: string[], index: number) => {
   const result = []

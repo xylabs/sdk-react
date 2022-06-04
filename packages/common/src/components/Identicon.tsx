@@ -1,7 +1,6 @@
+import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
 import md5 from 'md5'
 import React, { useEffect, useRef } from 'react'
-
-import { FlexBoxProps, FlexRow } from './FlexBox'
 
 const range = (n: number, in_min: number, in_max: number, out_min: number, out_max: number) => {
   return ((n - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min

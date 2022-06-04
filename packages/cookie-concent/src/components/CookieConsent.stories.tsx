@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { ButtonEx } from '@xylabs/react-button'
+import { FlexRow } from '@xylabs/react-flexbox'
 
-import { CookieConsentLoader, useCookieConsent } from '../../contexts'
-import { ButtonEx } from '../ButtonEx'
-import { FlexRow } from '../FlexBox'
+import { CookieConsentLoader, useCookieConsent } from '../contexts'
 import { CookieConsent } from './CookieConsent'
 
 const StorybookEntry = {

@@ -1,10 +1,10 @@
 import { Typography, useTheme } from '@mui/material'
+import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
 import { assertEx, EthAddress } from '@xylabs/sdk-js'
 import { useContext } from 'react'
 
 import { EthersContext } from '../../contexts'
 import { useMediaQuery } from '../../hooks'
-import { FlexBoxProps, FlexRow } from '../FlexBox'
 import { Identicon } from '../Identicon'
 import { EthAccountProps } from './EthAccountProps'
 

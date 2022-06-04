@@ -1,8 +1,6 @@
 import { ButtonProps } from '@mui/material'
+import { BoxlikeComponentProps, BusyProps } from '@xylabs/react-shared'
 import { NavigateOptions, To } from 'react-router-dom'
-
-import { BoxlikeComponentProps } from '../../BoxlikeComponentProps'
-import { BusyProps } from '../../BusyProps'
 
 interface ButtonExProps extends ButtonProps, BoxlikeComponentProps, BusyProps {
   target?: string
