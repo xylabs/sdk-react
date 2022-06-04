@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-cookie-consent",
+  "name": "@xylabs/react-identicon",
   "author": {
     "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
@@ -22,7 +22,6 @@
     "@mui/material": "^5.8.2",
     "@mui/styles": "^5.8.0",
     "@xylabs/pixel": "^1.3.9",
-    "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/sdk-js": "^2.5.7",
     "axios": "^0.27.2",

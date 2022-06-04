@@ -1,5 +1,6 @@
-import { useAsyncEffect } from '@xylabs/react-shared'
 import { useState } from 'react'
+
+import { useAsyncEffect } from './useAsyncEffect'
 
 let supportsWebP: boolean | undefined = undefined
 

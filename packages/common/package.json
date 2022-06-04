@@ -87,8 +87,8 @@
   "exports": {
     ".": {
       "node": {
-        "import": "./dist/esm/nodeIndex.js",
-        "require": "./dist/cjs/nodeIndex.js"
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.js"
       },
       "browser": {
         "import": "./dist/esm/index.js",
@@ -101,7 +101,7 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "dist/cjs/nodeIndex.js",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "homepage": "https://xylabs.com",
   "keywords": [

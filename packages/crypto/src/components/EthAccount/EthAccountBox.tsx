@@ -1,11 +1,10 @@
-import { Typography, useTheme } from '@mui/material'
+import { Typography, useMediaQuery, useTheme } from '@mui/material'
 import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
+import { Identicon } from '@xylabs/react-identicon'
 import { assertEx, EthAddress } from '@xylabs/sdk-js'
 import { useContext } from 'react'
 
 import { EthersContext } from '../../contexts'
-import { useMediaQuery } from '../../hooks'
-import { Identicon } from '../Identicon'
 import { EthAccountProps } from './EthAccountProps'
 
 export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
