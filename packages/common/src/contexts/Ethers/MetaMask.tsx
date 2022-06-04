@@ -1,9 +1,9 @@
 import { InfuraProvider, JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
+import { useAsyncEffect } from '@xylabs/react-shared'
 import { EthAddress } from '@xylabs/sdk-js'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 
-import { useAsyncEffect } from '../../lib'
 import { EthersContext } from './Context'
 import { infuraKey } from './Infura'
 

@@ -1,8 +1,8 @@
 import { Slider, Typography } from '@mui/material'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import { useLocalStorage } from '@xylabs/react-shared'
 import React from 'react'
 
-import { useLocalStorage } from '../../hooks'
 import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from './models'
 
 const ExperimentsDebugger: React.FC = ({ ...props }) => {

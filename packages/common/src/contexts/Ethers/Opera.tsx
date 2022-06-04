@@ -1,8 +1,8 @@
 import { JsonRpcProvider, JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
+import { useAsyncEffect } from '@xylabs/react-shared'
 import { EthAddress } from '@xylabs/sdk-js'
 import { PropsWithChildren, useState } from 'react'
 
-import { useAsyncEffect } from '../../lib'
 import { EthersContext } from './Context'
 
 interface Props {

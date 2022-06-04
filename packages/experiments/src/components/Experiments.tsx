@@ -1,8 +1,8 @@
 import { useUserEvents } from '@xylabs/react-pixel'
+import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 import { forget, Log } from '@xylabs/sdk-js'
 import React, { ReactElement } from 'react'
 
-import { getLocalStorageObject, setLocalStorageObject } from '../../lib'
 import { ExperimentProps } from './Experiment'
 import { ExperimentsProps } from './ExperimentsProps'
 import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models'
