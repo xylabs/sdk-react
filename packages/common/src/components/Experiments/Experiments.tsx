@@ -1,7 +1,7 @@
+import { useUserEvents } from '@xylabs/react-pixel'
 import { forget, Log } from '@xylabs/sdk-js'
 import React, { ReactElement } from 'react'
 
-import { useUserEvents } from '../../hooks'
 import { getLocalStorageObject, setLocalStorageObject } from '../../lib'
 import { ExperimentProps } from './Experiment'
 import { ExperimentsProps } from './ExperimentsProps'

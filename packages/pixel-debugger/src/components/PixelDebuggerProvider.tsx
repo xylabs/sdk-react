@@ -1,7 +1,6 @@
+import { useLocalStorage } from '@xylabs/react-common'
+import { DebugUserEventsContext } from '@xylabs/react-pixel'
 import { WithChildren } from '@xylabs/react-shared'
-
-import { DebugUserEventsContext } from '../../contexts'
-import { useLocalStorage } from '../../hooks'
 
 export const PixelDebuggerProvider: React.FC<WithChildren> = ({ children }) => {
   const [isDebugging, setIsDebugging] = useLocalStorage<boolean>('isDebuggingPixel', false)

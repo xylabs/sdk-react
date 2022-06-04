@@ -1,8 +1,8 @@
+import { useUserEvents } from '@xylabs/react-pixel'
 import { ReactNode, useState } from 'react'
 
 import { ExperimentsHelper } from '../common'
 import { VariantData } from '../components'
-import { useUserEvents } from './useUserEvents'
 
 const selectVariant = (current?: string) => (variants: Record<string, ReactNode>, defaultNode: ReactNode) => {
   if (current && current in variants) {

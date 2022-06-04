@@ -1,12 +1,12 @@
 import { Badge, Card, Divider, Typography, useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
+import { Portal } from '@xylabs/react-common'
 import { FlexCol } from '@xylabs/react-flexbox'
+import { DebugUserEventsContext } from '@xylabs/react-pixel'
 import { useContext, useState } from 'react'
 
-import { DebugUserEventsContext } from '../../contexts'
-import { Portal } from '../Portal'
-import { usePixelAltSendHandler } from './hooks'
-import { PixelEvent } from './models'
+import { usePixelAltSendHandler } from '../hooks'
+import { PixelEvent } from '../PixelEvent'
 
 export const PixelDebugger: React.FC = () => {
   const { isDebugging } = useContext(DebugUserEventsContext)

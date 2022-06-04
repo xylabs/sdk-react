@@ -1,2 +1,7 @@
 export * from './Context'
+export * from './Infura'
 export * from './Loader'
+export * from './MetaMask'
+export * from './MyEtherWallet'
+export * from './Opera'
+export * from './Trust'
