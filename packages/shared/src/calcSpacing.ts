@@ -1,8 +1,6 @@
-import { Theme } from '@mui/material'
+import { BoxProps, Theme } from '@mui/material'
 
-import { Margin } from './Margin'
-
-const calcSpacing = (theme: Theme, values: Margin[]) => {
+export const calcSpacing = (theme: Theme, values: BoxProps['margin'][]) => {
   for (let i = 0; i < values.length; i++) {
     const value = values[i]
     if (value !== undefined) {
@@ -14,5 +12,3 @@ const calcSpacing = (theme: Theme, values: Margin[]) => {
     }
   }
 }
-
-export { calcSpacing }

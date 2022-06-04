@@ -1,6 +1,6 @@
+import { WithChildren } from '@xylabs/react-shared'
 import { useState } from 'react'
 
-import { WithChildren } from '../../WithChildren'
 import { CookieConsentContext } from './Context'
 
 const CookiesAcceptedLocalStorageName = 'CookiesAccepted'

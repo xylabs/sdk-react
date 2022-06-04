@@ -1,6 +1,6 @@
 import { AppBar, Container, Toolbar, useTheme } from '@mui/material'
+import { FlexGrowRow } from '@xylabs/react-flexbox'
 
-import { FlexGrowRow } from '../FlexBox'
 import { AppBarExProps } from './AppBarExProps'
 
 const AppBarEx: React.FC<AppBarExProps> = (props) => {

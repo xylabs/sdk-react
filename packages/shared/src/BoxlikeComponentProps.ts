@@ -1,7 +1,6 @@
-import { Margin } from './Margin'
-import { Padding } from './Padding'
+export type Margin = string | number | undefined
 
-export type FlexValue = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'stretch'
+export type Padding = string | number | undefined
 
 export interface BoxlikeComponentProps {
   alignContent?: FlexValue
