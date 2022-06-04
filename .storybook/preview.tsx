@@ -1,4 +1,4 @@
-import { FlexCol, InvertableThemeProvider } from '../src/components'
+import { FlexCol, InvertableThemeProvider } from '../packages/shared/src'
 import { CssBaseline } from '@mui/material';
 import { useDarkMode } from 'storybook-dark-mode';
 

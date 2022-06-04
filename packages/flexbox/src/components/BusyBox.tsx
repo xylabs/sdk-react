@@ -1,8 +1,5 @@
 import { Box, BoxProps, Paper, useTheme } from '@mui/material'
-
-import { BusyProps } from '../../BusyProps'
-import { BusyCircularProgress } from '../BusyCircularProgress'
-import { BusyLinearProgress } from '../BusyLinearProgress'
+import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
 
 export interface BusyBoxProps extends BusyProps, BoxProps {
   paper?: boolean

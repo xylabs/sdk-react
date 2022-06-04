@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "./dist",
+    "sourceMap": true
+  },
+  "extends": "@xylabs/tsconfig"
+}
