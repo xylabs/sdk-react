@@ -135,11 +135,11 @@
     "updo3:package": "yarn update-interactive",
     "build:package:cjs": "tsc -p $INIT_CWD/tsconfig.build.cjs.json",
     "build:package:esm": "tsc -p $INIT_CWD/tsconfig.build.esm.json",
-    "copy-images:package:esm": "copyfiles -u 1 \"$INIT_CWD/src/**/*.svg\" \"$INIT_CWD/src/**/*.jpg\" \"$INIT_CWD/src/**/*.gif\" \"$INIT_CWD/src/**/*.png\" dist/esm",
-    "copy-images:package:cjs": "copyfiles -u 1 \"$INIT_CWD/src/**/*.svg\" \"$INIT_CWD/src/**/*.jpg\" \"$INIT_CWD/src/**/*.gif\" \"$INIT_CWD/src/**/*.png\" dist/cjs"
+    "copy-images:package:esm": "copyfiles -u 9 \"$INIT_CWD/src/**/*.svg\" \"$INIT_CWD/src/**/*.jpg\" \"$INIT_CWD/src/**/*.gif\" \"$INIT_CWD/src/**/*.png\" $INIT_CWD/dist/esm",
+    "copy-images:package:cjs": "copyfiles -u 9 \"$INIT_CWD/src/**/*.svg\" \"$INIT_CWD/src/**/*.jpg\" \"$INIT_CWD/src/**/*.gif\" \"$INIT_CWD/src/**/*.png\" $INIT_CWD/dist/cjs"
   },
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
-  "version": "2.13.2",
+  "version": "2.13.3",
   "packageManager": "yarn@3.1.1"
 }
