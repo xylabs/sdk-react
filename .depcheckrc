@@ -2,5 +2,14 @@ ignores: [
   "@xylabs/ts-scripts",
   "@xylabs/tsconfig",
   "ts-node",
-  "typescript"
+  "typescript",
+  "@storybook/addon-actions",
+  "@storybook/addon-docs",
+  "@storybook/addon-essentials",
+  "@storybook/addon-interactions",
+  "@storybook/addon-links",
+  "@storybook/builder-webpack5",
+  "@storybook/manager-webpack5",
+  "@storybook/testing-library",
+  "typedoc"
 ]
