@@ -8,6 +8,9 @@
     "email": "support@xylabs.com",
     "url": "https://github.com/xylabs/sdk-react/issues"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -18,6 +21,16 @@
     "@mui/material": "^5.8.2",
     "@mui/styles": "^5.8.0",
     "@xylabs/pixel": "^1.3.9",
+    "@xylabs/react-button": "workspace:^",
+    "@xylabs/react-common": "workspace:^",
+    "@xylabs/react-cookie-consent": "workspace:^",
+    "@xylabs/react-crypto": "workspace:^",
+    "@xylabs/react-experiments": "workspace:^",
+    "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/react-identicon": "workspace:^",
+    "@xylabs/react-pixel": "workspace:^",
+    "@xylabs/react-pixel-debugger": "workspace:^",
+    "@xylabs/react-shared": "workspace:^",
     "@xylabs/sdk-js": "^2.5.7",
     "axios": "^0.27.2",
     "lodash": "^4.17.21",
@@ -52,7 +65,6 @@
     "@types/react-dom": "^18.0.5",
     "@types/react-helmet": "^6.1.5",
     "@xylabs/eslint-config-react": "^2.1.5",
-    "@xylabs/rollup-config": "^1.1.17",
     "@xylabs/ts-scripts": "^1.0.66",
     "@xylabs/tsconfig": "^1.0.13",
     "copyfiles": "^2.4.1",
@@ -61,7 +73,6 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rimraf": "^3.0.2",
-    "rollup": "^2.75.5",
     "storybook-dark-mode": "^1.1.0",
     "ts-node": "^10.8.1",
     "typedoc": "^0.22.17",
@@ -81,8 +92,8 @@
   "exports": {
     ".": {
       "node": {
-        "import": "./dist/esm/nodeIndex.js",
-        "require": "./dist/cjs/nodeIndex.js"
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.js"
       },
       "browser": {
         "import": "./dist/esm/index.js",
@@ -95,7 +106,7 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "dist/cjs/nodeIndex.js",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "homepage": "https://xylabs.com",
   "keywords": [
@@ -117,15 +128,38 @@
     "deploy": "yarn version patch -i && yarn build && yarn npm publish",
     "lint-pkg": "npmPkgJsonLint .",
     "start": "start-storybook -p 6006",
-    "copy-images": "yarn copy-images-esm && yarn copy-images-cjs",
-    "copy-images-esm": "copyfiles -u 1 \"src/**/*.svg\" \"src/**/*.jpg\" \"src/**/*.gif\" \"src/**/*.png\" dist/esm",
-    "copy-images-cjs": "copyfiles -u 1 \"src/**/*.svg\" \"src/**/*.jpg\" \"src/**/*.gif\" \"src/**/*.png\" dist/cjs",
+    "copy-images:cjs": "yarn workspaces foreach -ptRv run copy-images:package:cjs",
+    "copy-images:esm": "yarn workspaces foreach -ptRv run copy-images:package:esm",
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha -r ts-node/register 'src/**/*.spec.ts'",
-    "build": "yarn clean && tsc -p tsconfig.build.cjs.json && tsc -p tsconfig.build.esm.json && yarn copy-images && yarn gen:docs",
-    "gen:docs": "typedoc ./src/index.ts --json ./dist/docs.json --tsconfig ./tsconfig.json"
+    "deploy3": "yarn deploy-patch",
+    "deploy-major": "yarn workspaces foreach --all version major --deferred && yarn deploy-common",
+    "deploy-minor": "yarn workspaces foreach --all version minor --deferred && yarn deploy-common",
+    "deploy-patch": "yarn workspaces foreach --all version patch --deferred && yarn deploy-common",
+    "deploy-common": "yarn build && yarn gen:docs && yarn version apply --all && yarn workspaces foreach -ptv npm publish",
+    "clean": "yarn workspaces foreach -pv run clean:package",
+    "deps": "yarn workspaces foreach -pv run deps:package",
+    "lint": "yarn workspaces foreach -pv run lint:package",
+    "fix": "yarn workspaces foreach -pv run fix:package",
+    "outdated": "yarn workspaces foreach -pv outdated",
+    "up": "yarn workspaces foreach -pv up",
+    "updo": "yarn workspaces foreach -pv run updo3:package",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn copy-images:esm && yarn copy-images:cjs && yarn gen:docs",
+    "build:cjs": "yarn workspaces foreach -ptRv run build:package:cjs",
+    "build:esm": "yarn workspaces foreach -ptRv run build:package:esm",
+    "gen:docs": "typedoc ./src/index.ts --json ./dist/docs.json --tsconfig ./tsconfig.json",
+    "gen:docs:package": "typedoc $INIT_CWD/src/index.ts --json $INIT_CWD/dist/docs.json",
+    "clean:package": "rimraf -q $INIT_CWD/dist && rimraf -q $INIT_CWD/build",
+    "fix:package": "yarn eslint $INIT_CWD/src --fix",
+    "lint:package": "yarn eslint $INIT_CWD/src",
+    "deps:package": "depcheck $INIT_CWD",
+    "updo3:package": "yarn update-interactive",
+    "build:package:cjs": "tsc -p $INIT_CWD/tsconfig.build.cjs.json",
+    "build:package:esm": "tsc -p $INIT_CWD/tsconfig.build.esm.json",
+    "copy-images:package:esm": "copyfiles -u 1 \"src/**/*.svg\" \"src/**/*.jpg\" \"src/**/*.gif\" \"src/**/*.png\" dist/esm",
+    "copy-images:package:cjs": "copyfiles -u 1 \"src/**/*.svg\" \"src/**/*.jpg\" \"src/**/*.gif\" \"src/**/*.png\" dist/cjs"
   },
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
-  "version": "2.12.12",
+  "version": "2.13.0",
   "packageManager": "yarn@3.1.1"
 }
