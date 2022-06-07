@@ -15,7 +15,7 @@ const base10Shift = (bn: BigNumber, places: number) => {
   }
 }
 
-const TokenAmount: React.FC<TokenAmountProps> = ({
+export const TokenAmount: React.FC<TokenAmountProps> = ({
   textFontFamily = '"Source Code Pro",monospace',
   textColor,
   statusColor,
@@ -29,7 +29,7 @@ const TokenAmount: React.FC<TokenAmountProps> = ({
 }) => {
   const adjustedAmount = amount ? base10Shift(amount, places).toNumber() : undefined
 
-  const amountString = adjustedAmount ? Math.trunc(adjustedAmount).toLocaleString() : '-'
+  const amountString = adjustedAmount === undefined ? '-' : Math.trunc(adjustedAmount).toLocaleString()
 
   return (
     <ButtonEx style={{ backgroundColor: statusColor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>
@@ -49,5 +49,3 @@ const TokenAmount: React.FC<TokenAmountProps> = ({
     </ButtonEx>
   )
 }
-
-export { TokenAmount }
