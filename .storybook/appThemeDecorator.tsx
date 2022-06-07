@@ -1,5 +1,5 @@
 import { DecoratorFn } from '@storybook/react'
-import { InvertableThemeProvider } from '../packages/shared'
+import { InvertableThemeProvider } from '@xylabs/react-common'
 
 import { useDarkMode } from 'storybook-dark-mode'
 

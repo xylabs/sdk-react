@@ -21,6 +21,8 @@
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
+    "@storybook/react": "^6.5.7",
+    "@storybook/testing-library": "^0.0.11",
     "@types/react": "^18.0.10",
     "@xylabs/eslint-config-react": "^2.1.5",
     "@xylabs/ts-scripts": "^1.0.66",

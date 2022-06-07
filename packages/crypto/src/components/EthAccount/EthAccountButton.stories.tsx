@@ -30,6 +30,16 @@ Long.args = {
   toEtherScan: true,
 }
 
+const LongLarge = Template.bind({})
+LongLarge.args = {
+  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  addressLength: 'long',
+  icon: true,
+  size: 'large',
+  title: 'Sample EthAccount',
+  toEtherScan: true,
+}
+
 const LongEmpty = Template.bind({})
 LongEmpty.args = {
   addressLength: 'long',
@@ -91,7 +101,7 @@ AutoEmpty.args = {
   toEtherScan: true,
 }
 
-export { Auto, AutoEmpty, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
+export { Auto, AutoEmpty, Long, LongEmpty, LongLarge, Medium, MediumEmpty, Short, ShortEmpty }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
