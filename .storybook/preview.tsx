@@ -1,5 +1,6 @@
-import { FlexCol, InvertableThemeProvider } from '../packages/shared/src'
 import { CssBaseline } from '@mui/material';
+import { InvertableThemeProvider } from '@xylabs/react-common';
+import { FlexCol } from '@xylabs/react-flexbox';
 import { useDarkMode } from 'storybook-dark-mode';
 
 export const parameters = {
