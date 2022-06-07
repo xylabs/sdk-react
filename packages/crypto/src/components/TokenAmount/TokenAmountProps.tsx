@@ -2,7 +2,7 @@ import { ButtonExProps } from '@xylabs/react-button'
 import { BigNumber } from '@xylabs/sdk-js'
 import { MouseEventHandler } from 'react'
 
-interface TokenAmountProps extends ButtonExProps {
+export interface TokenAmountProps extends ButtonExProps {
   amount?: BigNumber | null
   label?: string
   logo?: boolean
@@ -12,5 +12,3 @@ interface TokenAmountProps extends ButtonExProps {
   statusColor?: string
   onButtonClick?: MouseEventHandler<HTMLButtonElement>
 }
-
-export type { TokenAmountProps }
