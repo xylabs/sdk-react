@@ -92,6 +92,6 @@
   },
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
-  "version": "2.12.18",
+  "version": "2.12.19",
   "packageManager": "yarn@3.1.1"
 }
