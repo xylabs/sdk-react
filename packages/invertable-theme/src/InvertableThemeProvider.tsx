@@ -2,14 +2,14 @@ import { responsiveFontSizes, ScopedCssBaseline, Theme, ThemeProvider } from '@m
 import { createTheme, ThemeOptions } from '@mui/material/styles'
 import cloneDeep from 'lodash/cloneDeep'
 import merge from 'lodash/merge'
-import React, { useContext } from 'react'
 
 import { InvertableThemeContext } from './InvertableThemeContext'
 import { InvertableThemeProviderProps } from './InvertableThemeProviderProps'
+import { useInvertableThemeProvider } from './use'
 
 export const resolveThemeColors = (options: ThemeOptions) => {
   const theme = createTheme(options)
-  return merge({}, options, {
+  return merge({}, cloneDeep(options), {
     palette: {
       text: {
         primary: theme.palette?.getContrastText(theme.palette.primary.main),
@@ -32,7 +32,7 @@ export const InvertableThemeProvider: React.FC<InvertableThemeProviderProps> = (
   darkOptions,
   lightOptions,
 }) => {
-  const parentContext = useContext(InvertableThemeContext)
+  const parentContext = useInvertableThemeProvider()
   const clonedOptions = cloneDeep(options ?? parentContext.options ?? {})
   const clonedDarkOptions = cloneDeep(darkOptions ?? darkTheme ?? parentContext.darkOptions)
   const clonedLightOptions = cloneDeep(lightOptions ?? parentContext.lightOptions)
