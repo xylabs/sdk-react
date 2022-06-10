@@ -3,7 +3,7 @@ import { FlexBoxProps, FlexGrowRow, FlexRow } from '@xylabs/react-flexbox'
 
 import { AppBarExProps } from './AppBarExProps'
 
-export const AppBarEx: React.FC<AppBarExProps> = ({ contextToolbar, systemToolbar, container, responsive, ...props }) => {
+export const AppBarEx: React.FC<AppBarExProps> = ({ children, contextToolbar, systemToolbar, container, responsive, ...props }) => {
   const AppBarExInner: React.FC<FlexBoxProps> = ({ children, ...props }) => {
     const { breakpoints } = useTheme()
     const belowSm = useMediaQuery(breakpoints.down('sm'))
@@ -23,7 +23,7 @@ export const AppBarEx: React.FC<AppBarExProps> = ({ contextToolbar, systemToolba
     <AppBar position="static" {...props}>
       {container ? (
         <Container maxWidth={container}>
-          <AppBarExInner />
+          <AppBarExInner>{children}</AppBarExInner>
         </Container>
       ) : (
         <AppBarExInner />
