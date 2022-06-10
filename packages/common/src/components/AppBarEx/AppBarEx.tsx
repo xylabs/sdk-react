@@ -1,32 +1,26 @@
-import { AppBar, Container, Toolbar, useTheme } from '@mui/material'
-import { FlexGrowRow } from '@xylabs/react-flexbox'
+import { AppBar, Container, Toolbar, useMediaQuery, useTheme } from '@mui/material'
+import { FlexBoxProps, FlexGrowRow, FlexRow } from '@xylabs/react-flexbox'
 
 import { AppBarExProps } from './AppBarExProps'
 
-const AppBarEx: React.FC<AppBarExProps> = (props) => {
-  const { contextToolbar, systemToolbar, container, style, ...appbarProps } = props
-  const theme = useTheme()
-
-  const AppBarExInner: React.FC = () => {
+export const AppBarEx: React.FC<AppBarExProps> = ({ contextToolbar, systemToolbar, container, responsive, ...props }) => {
+  const AppBarExInner: React.FC<FlexBoxProps> = ({ children, ...props }) => {
+    const { breakpoints } = useTheme()
+    const belowSm = useMediaQuery(breakpoints.down('sm'))
     return (
-      <FlexGrowRow justifyContent="space-between">
-        {contextToolbar ?? <Toolbar />}
-        {systemToolbar ?? <Toolbar />}
-      </FlexGrowRow>
+      <>
+        <FlexRow flexWrap="nowrap" justifyContent="flex-start" {...props}>
+          {contextToolbar ?? <Toolbar />}
+          <FlexGrowRow>{belowSm && responsive ? null : children}</FlexGrowRow>
+          {systemToolbar ?? <Toolbar />}
+        </FlexRow>
+        {belowSm && children && responsive ? <Toolbar>{children}</Toolbar> : null}
+      </>
     )
   }
 
   return (
-    <AppBar
-      position="static"
-      style={{
-        backgroundColor: theme.palette.background.paper,
-        color: theme.palette.text.primary,
-        display: 'flex',
-        ...style,
-      }}
-      {...appbarProps}
-    >
+    <AppBar position="static" {...props}>
       {container ? (
         <Container maxWidth={container}>
           <AppBarExInner />
@@ -37,5 +31,3 @@ const AppBarEx: React.FC<AppBarExProps> = (props) => {
     </AppBar>
   )
 }
-
-export { AppBarEx }
