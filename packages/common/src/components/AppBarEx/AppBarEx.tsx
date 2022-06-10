@@ -26,7 +26,7 @@ export const AppBarEx: React.FC<AppBarExProps> = ({ children, contextToolbar, sy
           <AppBarExInner>{children}</AppBarExInner>
         </Container>
       ) : (
-        <AppBarExInner />
+        <AppBarExInner>{children}</AppBarExInner>
       )}
     </AppBar>
   )
