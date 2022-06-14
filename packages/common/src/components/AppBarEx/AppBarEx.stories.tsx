@@ -1,3 +1,5 @@
+import MenuIcon from '@mui/icons-material/Menu'
+import { Toolbar } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { AppBarEx } from './AppBarEx'
@@ -10,7 +12,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'Components/AppBarEx',
+  title: 'common/AppBarEx',
 } as ComponentMeta<typeof AppBarEx>
 
 const Template: ComponentStory<typeof AppBarEx> = (args) => <AppBarEx {...args}></AppBarEx>
@@ -20,7 +22,17 @@ Empty.args = {
   title: 'Empty',
 }
 
-export { Empty }
+const WithMenu = Template.bind({})
+WithMenu.args = {
+  menu: (
+    <Toolbar>
+      <MenuIcon />
+    </Toolbar>
+  ),
+  title: 'Empty',
+}
+
+export { Empty, WithMenu }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
