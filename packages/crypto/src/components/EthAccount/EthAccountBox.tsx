@@ -41,11 +41,9 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
 
   return (
     <FlexRow height={height} justifyContent="space-between" alignItems="stretch" {...props}>
-      {icon ? (
-        <Identicon minHeight={height ?? theme.spacing(3)} minWidth={height ?? theme.spacing(3)} bgcolor={theme.palette.secondary.main} size={iconSize} value={address?.toHex()} />
-      ) : null}
+      {icon ? <Identicon minWidth={iconSize + parseInt(theme.spacing(1).substring(-2))} bgcolor={theme.palette.secondary.main} size={iconSize} value={address?.toHex()} /> : null}
       {iconOnly ? null : (
-        <Typography alignSelf="center" marginLeft={icon ? 1 : 0} variant="body1" fontFamily={fontFamily}>
+        <Typography alignSelf="center" marginX={1} variant="body1" fontFamily={fontFamily}>
           {textToDisplay}
         </Typography>
       )}

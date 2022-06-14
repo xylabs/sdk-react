@@ -1,5 +1,5 @@
+import { Paper } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { FlexRow } from '@xylabs/react-flexbox'
 import { EthAddress } from '@xylabs/sdk-js'
 
 import { EthAccountBox } from './EthAccountBox'
@@ -16,9 +16,9 @@ const StorybookEntry = {
 } as ComponentMeta<typeof EthAccountBox>
 
 const Template: ComponentStory<typeof EthAccountBox> = (args) => (
-  <FlexRow bgcolor="blue">
+  <Paper variant="outlined" style={{ overflow: 'hidden' }}>
     <EthAccountBox {...args}></EthAccountBox>
-  </FlexRow>
+  </Paper>
 )
 
 const Long = Template.bind({})
