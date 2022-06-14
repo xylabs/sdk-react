@@ -40,7 +40,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
   // Note: We use the all zero address for spacing in case it is
 
   return (
-    <FlexRow height={height} justifyContent="space-between" alignItems="stretch" minHeight={theme.spacing(3)} {...props}>
+    <FlexRow height={height} justifyContent="space-between" alignItems="stretch" {...props}>
       {icon ? (
         <Identicon minHeight={height ?? theme.spacing(3)} minWidth={height ?? theme.spacing(3)} bgcolor={theme.palette.secondary.main} size={iconSize} value={address?.toHex()} />
       ) : null}

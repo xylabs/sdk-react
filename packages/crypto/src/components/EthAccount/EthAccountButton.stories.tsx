@@ -12,7 +12,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'EthAccount/Button',
+  title: 'crypto/EthAccount/Button',
 } as ComponentMeta<typeof EthAccountButton>
 
 const Template: ComponentStory<typeof EthAccountButton> = (args) => (

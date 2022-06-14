@@ -13,9 +13,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.8.2",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.3",
     "@mui/material": "^5.8.3",
     "@mui/styles": "^5.8.3",
     "@xylabs/react-button": "workspace:^",
@@ -31,10 +31,10 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@babel/core": "^7.18.2",
+    "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
-    "@storybook/react": "^6.5.8",
-    "@storybook/testing-library": "^0.0.11",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "@types/lodash": "^4.14.182",
     "@types/numeral": "^2.0.2",
     "@types/react": "^18.0.12",
