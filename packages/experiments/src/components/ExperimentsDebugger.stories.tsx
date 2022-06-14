@@ -10,7 +10,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'Components/ExperimentsDebugger',
+  title: 'experiments/ExperimentsDebugger',
 } as ComponentMeta<typeof ExperimentsDebugger>
 
 const Template: ComponentStory<typeof ExperimentsDebugger> = (args) => <ExperimentsDebugger {...args} />

@@ -13,7 +13,7 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'Components/CookieConsent',
+  title: 'cookie-consent/CookieConsent',
 } as ComponentMeta<typeof CookieConsent>
 
 const TemplateWithContext: ComponentStory<typeof CookieConsent> = (args) => {

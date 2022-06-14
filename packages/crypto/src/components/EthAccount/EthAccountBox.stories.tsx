@@ -12,12 +12,12 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'EthAccount/Box',
+  title: 'crypto/EthAccount/Box',
 } as ComponentMeta<typeof EthAccountBox>
 
 const Template: ComponentStory<typeof EthAccountBox> = (args) => (
-  <FlexRow>
-    <EthAccountBox height={40} {...args}></EthAccountBox>
+  <FlexRow bgcolor="blue">
+    <EthAccountBox {...args}></EthAccountBox>
   </FlexRow>
 )
 
@@ -78,13 +78,30 @@ const Auto = Template.bind({})
 Auto.args = {
   address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
   addressLength: 'auto',
-  icon: true,
+  icon: false,
   title: 'Sample EthAccount',
   toEtherScan: true,
 }
 
 const AutoEmpty = Template.bind({})
 AutoEmpty.args = {
+  addressLength: 'auto',
+  icon: false,
+  title: 'Sample EthAccount',
+  toEtherScan: true,
+}
+
+const AutoIcon = Template.bind({})
+AutoIcon.args = {
+  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  addressLength: 'auto',
+  icon: true,
+  title: 'Sample EthAccount',
+  toEtherScan: true,
+}
+
+const AutoEmptyIcon = Template.bind({})
+AutoEmptyIcon.args = {
   addressLength: 'auto',
   icon: true,
   title: 'Sample EthAccount',
@@ -100,7 +117,7 @@ IconOnly.args = {
   toEtherScan: true,
 }
 
-export { Auto, AutoEmpty, IconOnly, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
+export { Auto, AutoEmpty, AutoEmptyIcon, AutoIcon, IconOnly, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

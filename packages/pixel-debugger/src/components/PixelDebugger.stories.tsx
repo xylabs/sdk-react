@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { PixelApi, XyPixel } from '@xylabs/pixel'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { PixelDebugger, PixelDebuggerToggle } from './index'
 import { PixelDebuggerProvider } from './PixelDebuggerProvider'
@@ -13,19 +13,22 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'Components/PixelDebuggerToggle',
+  title: 'pixel-debugger/PixelDebuggerToggle',
 } as ComponentMeta<typeof PixelDebuggerToggle>
 
 const Template: ComponentStory<typeof PixelDebuggerToggle> = (args) => {
+  const [pixel, setPixel] = useState<XyPixel>()
   useEffect(() => {
     XyPixel.selectApi(new PixelApi('local'))
-    XyPixel.init('storybookPixel')
+    setPixel(XyPixel.init('storybookPixel'))
   }, [])
-  return (
+  return pixel ? (
     <PixelDebuggerProvider>
       <PixelDebuggerToggle {...args} />
       <PixelDebugger />
     </PixelDebuggerProvider>
+  ) : (
+    <></>
   )
 }
 

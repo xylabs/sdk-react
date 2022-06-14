@@ -1,5 +1,5 @@
 import { CssBaseline } from '@mui/material';
-import { InvertableThemeProvider } from '@xylabs/react-common';
+import { InvertableThemeProvider } from '@xylabs/react-invertable-theme';
 import { FlexCol } from '@xylabs/react-flexbox';
 import { useDarkMode } from 'storybook-dark-mode';
 
@@ -16,7 +16,7 @@ export const parameters = {
 
 const withThemeProvider = (Story, context) => {
   // Clear the auth state with each story
-  localStorage.setItem('AuthState', null)
+  localStorage.removeItem('AuthState')
 
   const darkMode = useDarkMode()
 
