@@ -18,10 +18,14 @@ jobs:
           node-version: "16"
       - name: install
         run: yarn install
-      - name: cycle
-        run: yarn cycle
       - name: build
         run: yarn build
+      - name: cycle
+        run: yarn cycle
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
   build-windows:
     runs-on: windows-latest
     steps:
@@ -34,10 +38,10 @@ jobs:
           node-version: "16"
       - name: install
         run: yarn install
-      - name: cycle
-        run: yarn cycle
       - name: build
         run: yarn build
+      - name: cycle
+        run: yarn cycle
   build-macos:
     runs-on: macos-latest
     steps:
@@ -50,7 +54,7 @@ jobs:
           node-version: "16"
       - name: install
         run: yarn install
-      - name: cycle
-        run: yarn cycle
       - name: build
         run: yarn build
+      - name: cycle
+        run: yarn cycle

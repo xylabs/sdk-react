@@ -6,14 +6,18 @@
     "**/.DS_Store": true,
     "**/node_modules": true,
     "**/build": true,
-    "**/dist": false,
+    "**/dist": true,
     "**/.webpack": true,
     "**/.serverless": true,
     "**/.rollup.cache": true,
     "**/storybook-static": true
   },
   "editor.formatOnSave": true,
-  "editor.quickSuggestions": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
   "editor.tabSize": 2,
   "editor.suggestSelection": "first",
   
