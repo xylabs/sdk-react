@@ -1,6 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { AccordionGroup } from './AccordionGroup'
+import { FlexCol } from '../FlexBox'
+import { Grid } from '@mui/material'
 
 const StorybookEntry: ComponentMeta<typeof AccordionGroup> = {
   argTypes: {},
@@ -20,7 +22,21 @@ Default.args = {
   data: [
     { description: 'lorem ipsum', name: 'Section 1' },
     { description: 'lorem ipsum', name: 'Section 2' },
-    { description: 'lorem ipsum', name: 'Section 3' },
+    {
+      name: 'Section 3',
+      children: [
+        <FlexCol alignItems="stretch">
+          <Grid container>
+            <Grid item xs={6}>
+              Column 1
+            </Grid>
+            <Grid item xs={6}>
+              Column 2
+            </Grid>
+          </Grid>
+        </FlexCol>
+      ]
+    },
   ],
   defaultExpandedIndex: 1,
 }
