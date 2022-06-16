@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { AccordionGroup } from './AccordionGroup'
 
-const StorybookEntry = {
+const StorybookEntry: ComponentMeta<typeof AccordionGroup> = {
   argTypes: {},
   component: AccordionGroup,
   parameters: {
@@ -15,7 +15,7 @@ const StorybookEntry = {
 
 const Template: ComponentStory<typeof AccordionGroup> = (args) => <AccordionGroup {...args}></AccordionGroup>
 
-const Default = Template.bind({})
+const Default: ComponentStory<typeof AccordionGroup> = Template.bind({})
 Default.args = {
   data: [
     { description: 'lorem ipsum', name: 'Section 1' },
