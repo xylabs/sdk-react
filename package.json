@@ -16,6 +16,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.4",
+    "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-common": "workspace:^",
     "@xylabs/react-cookie-consent": "workspace:^",
