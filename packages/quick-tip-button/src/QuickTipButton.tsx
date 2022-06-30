@@ -1,8 +1,7 @@
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import { IconButton, IconButtonProps } from '@mui/material'
+import { MessageDialog } from '@xylabs/react-common'
 import { useState } from 'react'
-
-import { MessageDialog } from '../dialogs'
 
 export interface QuickTipButtonProps extends IconButtonProps {
   fontSize?: 'small' | 'medium' | 'large' | 'inherit'
