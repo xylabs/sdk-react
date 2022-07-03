@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-quick-tip-button",
+  "name": "@xylabs/react-dialogs",
   "author": {
     "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
@@ -15,10 +15,10 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
-    "@xylabs/react-dialogs": "workspace:^",
+    "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
+    "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
