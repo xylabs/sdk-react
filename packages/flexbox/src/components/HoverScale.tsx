@@ -1,15 +1,13 @@
 import { Box } from '@mui/material'
 import { createStyles, makeStyles } from '@mui/styles'
-import { FlexRow } from '@xylabs/react-flexbox'
-import React, { PropsWithChildren } from 'react'
 
-export type HoverScaleProps = PropsWithChildren<{
+import { FlexBoxProps, FlexRow } from './FlexRow'
+
+export type HoverScaleProps = FlexBoxProps & {
   scale?: number
-}>
+}
 
-export const HoverScale: React.FC<HoverScaleProps> = (props) => {
-  const { children, scale = 1.1 } = props
-
+export const HoverScale: React.FC<HoverScaleProps> = ({ scale, children, ...props }) => {
   const useStyles = makeStyles(() =>
     createStyles({
       zoomdiv: {
@@ -25,7 +23,7 @@ export const HoverScale: React.FC<HoverScaleProps> = (props) => {
   const classes = useStyles()
 
   return (
-    <FlexRow>
+    <FlexRow {...props}>
       <Box className={classes.zoomdiv}>{children}</Box>
     </FlexRow>
   )
