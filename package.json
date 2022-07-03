@@ -27,6 +27,7 @@
     "@xylabs/react-identicon": "workspace:^",
     "@xylabs/react-invertable-theme": "workspace:^",
     "@xylabs/react-link": "workspace:^",
+    "@xylabs/react-number-status": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-pixel-debugger": "workspace:^",
     "@xylabs/react-quick-tip-button": "workspace:^",

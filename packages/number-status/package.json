@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-flexbox",
+  "name": "@xylabs/react-number-status",
   "author": {
     "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
@@ -16,8 +16,9 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.4",
-    "@mui/styles": "^5.8.4",
-    "@xylabs/react-shared": "workspace:^",
+    "@xylabs/react-button": "workspace:^",
+    "@xylabs/react-flexbox": "workspace:^",
+    "numeral": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -26,6 +27,7 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "@storybook/react": "^6.5.9",
+    "@types/numeral": "^2.0.2",
     "@types/react": "^18.0.12",
     "@xylabs/eslint-config-react": "^2.1.5",
     "@xylabs/ts-scripts": "^1.0.66",
