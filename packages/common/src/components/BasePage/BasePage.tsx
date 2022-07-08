@@ -3,11 +3,9 @@ import { Container, Fab, ScopedCssBaseline, Typography, useTheme } from '@mui/ma
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { InvertableThemeProvider } from '@xylabs/react-invertable-theme'
-import React from 'react'
+import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
 import { Helmet } from 'react-helmet'
 
-import { ScrollToTop } from '../ScrollToTop'
-import { ScrollToTopButton } from '../ScrollToTopButton'
 import { BasePageProps } from './BasePageProps'
 
 const BasePage: React.FC<BasePageProps> = ({

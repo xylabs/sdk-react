@@ -1,7 +1,6 @@
 import { BoxProps } from '@mui/material'
+import { AppBarExProps } from '@xylabs/react-appbar'
 import { ReactElement, ReactNode } from 'react'
-
-import { AppBarExProps } from '../AppBarEx'
 
 interface BasePageProps extends BoxProps {
   appBar?: ReactElement<AppBarExProps>
