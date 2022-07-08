@@ -41,7 +41,8 @@ yarn add @xylabs/sdk-react
 
 ## Scripts
 
-See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for list of shared scripts. The below scripts are custom scripts for this repo.
+See [ts-scripts](https://github.com/xylabs/ts-scripts/blob/main/README.md) for
+list of shared scripts. The below scripts are custom scripts for this repo.
 
 ### Build (Storybook)
 
