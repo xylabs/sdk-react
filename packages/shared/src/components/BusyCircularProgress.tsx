@@ -1,14 +1,14 @@
 import { alpha, Box, CircularProgress, CircularProgressProps, useTheme } from '@mui/material'
 import React from 'react'
 
-interface Props extends CircularProgressProps {
+export interface BusyCircularProgressProps extends CircularProgressProps {
   opacity?: number | string
   bgcolor?: string
   rounded?: boolean
   size?: string | number
 }
 
-const BusyCircularProgress: React.FC<Props> = ({ bgcolor, style, rounded, size, opacity = 0.85, ...props }) => {
+const BusyCircularProgress: React.FC<BusyCircularProgressProps> = ({ bgcolor, style, rounded, size, opacity = 0.85, ...props }) => {
   const theme = useTheme()
   return (
     <Box

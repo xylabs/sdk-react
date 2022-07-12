@@ -19,6 +19,9 @@ const Circular = BusyBoxTemplate.bind({})
 Circular.args = {
   bgcolor: 'gray',
   busy: true,
+  busyCircularProps: {
+    opacity: 0,
+  },
   busyVariant: 'circular',
   height: 180,
   padding: 2,
@@ -29,6 +32,9 @@ const Linear = BusyBoxTemplate.bind({})
 Linear.args = {
   bgcolor: 'gray',
   busy: true,
+  busyLinearProps: {
+    opacity: 0,
+  },
   busyVariant: 'linear',
   height: 180,
   padding: 2,
