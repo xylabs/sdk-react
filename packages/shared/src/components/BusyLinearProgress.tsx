@@ -1,13 +1,13 @@
 import { alpha, Box, LinearProgress, LinearProgressProps, useTheme } from '@mui/material'
 import React from 'react'
 
-interface Props extends LinearProgressProps {
+export interface BusyLinearProgressProps extends LinearProgressProps {
   opacity?: string | number
   rounded?: boolean
   bgcolor?: string
 }
 
-const BusyLinearProgress: React.FC<Props> = ({ bgcolor, style, rounded, opacity = 0.85, ...props }) => {
+const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({ bgcolor, style, rounded, opacity = 0.85, ...props }) => {
   const theme = useTheme()
   return (
     <Box
