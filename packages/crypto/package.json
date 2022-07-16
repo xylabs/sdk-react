@@ -18,7 +18,7 @@
     "@ethersproject/abstract-signer": "^5.6.2",
     "@ethersproject/providers": "^5.6.8",
     "@metamask/providers": "^9.0.0",
-    "@mui/material": "^5.8.7",
+    "@mui/material": "^5.9.0",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-identicon": "workspace:^",
@@ -37,7 +37,7 @@
     "@xylabs/eslint-config-react": "^2.1.7",
     "@xylabs/ts-scripts": "^1.0.66",
     "@xylabs/tsconfig": "^1.0.14",
-    "ts-node": "^10.8.2",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   },
   "resolutions": {
@@ -81,6 +81,6 @@
   },
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
-  "version": "2.14.6",
+  "version": "2.14.7",
   "packageManager": "yarn@3.1.1"
 }
