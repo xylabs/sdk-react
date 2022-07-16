@@ -136,7 +136,7 @@
     "clean:package": "rimraf -q $INIT_CWD/dist && rimraf -q $INIT_CWD/build",
     "fix:package": "yarn eslint $INIT_CWD/src --fix",
     "lint:package": "yarn eslint $INIT_CWD/src",
-    "deps:package": "depcheck $INIT_CWD",
+    "deps:package": "cd $INIT_CWD && depcheck .",
     "updo3:package": "yarn update-interactive",
     "build:package:cjs": "tsc -p $INIT_CWD/tsconfig.build.cjs.json",
     "build:package:esm": "tsc -p $INIT_CWD/tsconfig.build.esm.json",
@@ -145,6 +145,6 @@
   },
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
-  "version": "2.14.7",
+  "version": "2.14.8",
   "packageManager": "yarn@3.2.1"
 }
