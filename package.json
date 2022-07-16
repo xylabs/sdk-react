@@ -136,7 +136,7 @@
     "clean:package": "rimraf -q $INIT_CWD/dist && rimraf -q $INIT_CWD/build",
     "fix:package": "yarn eslint $INIT_CWD/src --fix",
     "lint:package": "yarn eslint $INIT_CWD/src",
-    "deps:package": "depcheck $INIT_CWD",
+    "deps:package": "cd $INIT_CWD && depcheck .",
     "updo3:package": "yarn update-interactive",
     "build:package:cjs": "tsc -p $INIT_CWD/tsconfig.build.cjs.json",
     "build:package:esm": "tsc -p $INIT_CWD/tsconfig.build.esm.json",

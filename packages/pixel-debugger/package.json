@@ -16,7 +16,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.9.0",
-    "@xylabs/pixel": "^1.4.2",
+    "@xylabs/pixel": "^1.4.3",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-common": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
