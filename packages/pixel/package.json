@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/pixel": "^1.4.1",
+    "@xylabs/pixel": "^1.4.2",
     "@xylabs/sdk-js": "^2.5.9",
     "query-string": "^7.1.1",
     "react": "^18.2.0"
