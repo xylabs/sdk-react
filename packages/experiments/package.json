@@ -16,11 +16,11 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.9.0",
-    "@xylabs/pixel": "^1.4.3",
+    "@xylabs/pixel": "^1.4.4",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
-    "@xylabs/sdk-js": "^2.6.1",
+    "@xylabs/sdk-js": "^2.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
