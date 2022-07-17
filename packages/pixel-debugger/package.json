@@ -16,7 +16,7 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.9.0",
-    "@xylabs/pixel": "^1.4.3",
+    "@xylabs/pixel": "^1.4.4",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-common": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
@@ -78,6 +78,6 @@
   },
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
-  "version": "2.14.8",
-  "packageManager": "yarn@3.1.1"
+  "version": "2.14.9",
+  "type": "module"
 }

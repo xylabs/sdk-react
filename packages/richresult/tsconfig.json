@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "outDir": "../rich-result/dist",
-    "sourceMap": true
-  },
-  "extends": "@xylabs/tsconfig"
-}
