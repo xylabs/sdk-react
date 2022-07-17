@@ -5733,9 +5733,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/pixel@npm:^1.4.4":
-  version: 1.4.4
-  resolution: "@xylabs/pixel@npm:1.4.4"
+"@xylabs/pixel@npm:^1.4.5":
+  version: 1.4.5
+  resolution: "@xylabs/pixel@npm:1.4.5"
   dependencies:
     "@xylabs/sdk-js": ^2.6.2
     async-mutex: ^0.3.2
@@ -5745,7 +5745,7 @@ __metadata:
     lodash: ^4.17.21
     md5: ^2.3.0
     randombytes: ^2.1.0
-  checksum: 4834ce0ce3dded191a98765b9787b40fa2a9e5514e1c9412f0e6632e1ec54b5c00ee1dc70a8940b09002f827f092d26e7d745487c8097ad409268d3be749e488
+  checksum: cb1b7a13b93ef70357537b84215f4ab82169cb64793cb60816278021f2aead927c85ab99a62fa6fe6bc731979df167c0816a8e8cd0ea9d15732493d678324dbe
   languageName: node
   linkType: hard
 
@@ -5920,7 +5920,7 @@ __metadata:
     "@storybook/react": ^6.5.9
     "@types/react": ^18.0.15
     "@xylabs/eslint-config-react": ^2.1.7
-    "@xylabs/pixel": ^1.4.4
+    "@xylabs/pixel": ^1.4.5
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
@@ -6057,7 +6057,7 @@ __metadata:
     "@storybook/react": ^6.5.9
     "@types/react": ^18.0.15
     "@xylabs/eslint-config-react": ^2.1.7
-    "@xylabs/pixel": ^1.4.4
+    "@xylabs/pixel": ^1.4.5
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-common": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -6080,7 +6080,7 @@ __metadata:
     "@babel/preset-env": ^7.18.6
     "@types/react": ^18.0.15
     "@xylabs/eslint-config-react": ^2.1.7
-    "@xylabs/pixel": ^1.4.4
+    "@xylabs/pixel": ^1.4.5
     "@xylabs/sdk-js": ^2.6.2
     "@xylabs/ts-scripts": ^1.0.66
     "@xylabs/tsconfig": ^1.0.14
