@@ -27,7 +27,15 @@ const BasePage: React.FC<BasePageProps> = ({
   const scrollToTopAnchorId = 'scroll-to-top-anchor'
 
   return (
-    <FlexCol justifyContent="flex-start" color={theme.palette.text.primary} alignItems="stretch" width="100%" maxWidth="100vw" minHeight="100vh" {...props}>
+    <FlexCol
+      justifyContent="flex-start"
+      color={theme.palette.text.primary}
+      alignItems="stretch"
+      width="100%"
+      maxWidth="100vw"
+      minHeight="100vh"
+      {...props}
+    >
       <ScrollToTop />
       <Helmet title={title}>{noindex ? <meta content="noindex" name="robots" /> : null}</Helmet>
       {scrollToTopButton ? <div id={scrollToTopAnchorId} /> : null}
@@ -38,7 +46,11 @@ const BasePage: React.FC<BasePageProps> = ({
         </FlexRow>
       ) : null}
       {container ? (
-        <Container style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }} maxWidth={container} disableGutters={disableGutters}>
+        <Container
+          style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+          maxWidth={container}
+          disableGutters={disableGutters}
+        >
           {children}
         </Container>
       ) : (

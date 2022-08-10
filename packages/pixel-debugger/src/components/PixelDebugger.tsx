@@ -44,7 +44,12 @@ export const PixelDebugger: React.FC = () => {
                 </ButtonEx>
               </FlexCol>
               {displayEvents && !!events.length && (
-                <FlexCol alignItems="stretch" alignContent="start" padding={2} sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}>
+                <FlexCol
+                  alignItems="stretch"
+                  alignContent="start"
+                  padding={2}
+                  sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}
+                >
                   {events.map((e, index) => (
                     <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
                   ))}

@@ -75,7 +75,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
         }
       }
     },
-    [signer]
+    [signer],
   )
 
   const [chainId, setChainId] = useState<number>()
@@ -86,7 +86,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
       if (!isMounted()) return
       setChainId(chainId)
     },
-    [provider]
+    [provider],
   )
 
   return (

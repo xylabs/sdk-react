@@ -41,7 +41,7 @@ class Fbq {
       {
         ...data,
       },
-      { eventId }
+      { eventId },
     )
   }
 
@@ -52,7 +52,7 @@ class Fbq {
       {
         ...data,
       },
-      { eventId }
+      { eventId },
     )
   }
 }

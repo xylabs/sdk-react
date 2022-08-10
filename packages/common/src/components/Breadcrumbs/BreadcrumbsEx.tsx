@@ -18,7 +18,14 @@ export interface BreadcrumbsExProps extends BreadcrumbsProps {
   titles?: string[]
 }
 
-export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({ titles, path = document.location.pathname, separator = '|', logo, children, ...props }) => {
+export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
+  titles,
+  path = document.location.pathname,
+  separator = '|',
+  logo,
+  children,
+  ...props
+}) => {
   const pathParts = path.split('/')
   //if the url has a trailing '/', remove the last part
   if (pathParts[pathParts.length - 1]?.length === 0) {
@@ -31,7 +38,13 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({ titles, path = doc
       {pathParts.map((_pathPart, index) => {
         const path = getPartialPath(pathParts, index)
         return (
-          <Link title={index > 0 ? titles?.[index - 1] : 'COIN'} color={index === pathParts.length - 1 ? 'textPrimary' : 'inherit'} key={path} component={RouteLink} to={path}>
+          <Link
+            title={index > 0 ? titles?.[index - 1] : 'COIN'}
+            color={index === pathParts.length - 1 ? 'textPrimary' : 'inherit'}
+            key={path}
+            component={RouteLink}
+            to={path}
+          >
             {index > 0 ? titles?.[index - 1] : <FlexRow>{typeof logo === 'string' ? <img src={logo} /> : logo}</FlexRow>}
           </Link>
         )

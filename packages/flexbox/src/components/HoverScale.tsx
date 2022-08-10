@@ -17,7 +17,7 @@ export const HoverScale: React.FC<HoverScaleProps> = ({ scale, children, ...prop
           transitionTimingFunction: 'ease',
         },
       },
-    })
+    }),
   )
 
   const classes = useStyles()

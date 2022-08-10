@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "composite": true,
     "outDir": "./dist",
-    "sourceMap": true
+    "rootDir": "./src"
   },
-  "extends": "@xylabs/tsconfig"
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*"]
 }

@@ -39,7 +39,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
         }
       }
     },
-    [signer]
+    [signer],
   )
 
   return (
