@@ -16,7 +16,7 @@ export const useWebP = (webp: string, alt: string) => {
         setImg(supportsWebP ? webp : alt)
       }
     },
-    [alt, webp]
+    [alt, webp],
   )
   return img
 }

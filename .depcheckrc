@@ -1,7 +1,8 @@
 ignores: [
-  "@xylabs/ts-scripts",
-  "@xylabs/tsconfig",
+  "@xylabs/ts-scripts-yarn3",
+  "@xylabs/tsconfig-dom",
   "ts-node",
+  "chromatic",
   "typescript",
   "@storybook/addon-actions",
   "@storybook/addon-docs",

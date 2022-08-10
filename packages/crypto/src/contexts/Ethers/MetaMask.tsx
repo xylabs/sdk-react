@@ -106,7 +106,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
         }
       }
     },
-    [signer, resetCount, enabled]
+    [signer, resetCount, enabled],
   )
 
   const [chainId, setChainId] = useState<number>()
@@ -119,7 +119,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
         setChainId(chainId)
       }
     },
-    [provider, enabled]
+    [provider, enabled],
   )
 
   return (

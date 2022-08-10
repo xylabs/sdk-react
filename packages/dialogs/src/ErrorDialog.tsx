@@ -13,7 +13,12 @@ const toAxiosError = (error: Error) => {
   return (error as AxiosError).isAxiosError ? (error as AxiosError) : undefined
 }
 
-const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({ onAction, title = 'Oops. Something went wrong.', error = Error('Unknown Error'), ...props }) => {
+const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
+  onAction,
+  title = 'Oops. Something went wrong.',
+  error = Error('Unknown Error'),
+  ...props
+}) => {
   const onCloseClicked = () => {
     onAction?.(false)
   }

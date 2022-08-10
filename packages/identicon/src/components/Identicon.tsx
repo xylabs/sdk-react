@@ -71,7 +71,17 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
   }
 }
 
-export const Identicon: React.FC<IdenticonProps> = ({ size = 400, className = 'identicon', bg, count, fg, iconPadding, palette, value, ...props }) => {
+export const Identicon: React.FC<IdenticonProps> = ({
+  size = 400,
+  className = 'identicon',
+  bg,
+  count,
+  fg,
+  iconPadding,
+  palette,
+  value,
+  ...props
+}) => {
   const canvas = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
