@@ -22,7 +22,7 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-invertable-theme": "workspace:^",
     "@xylabs/react-scroll-to-top": "workspace:^",
-    "@xylabs/sdk-js": "^2.6.4",
+    "@xylabs/sdk-js": "^2.6.5",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

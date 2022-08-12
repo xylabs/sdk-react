@@ -27,7 +27,21 @@ Default.args = {
   title: 'Sample Quick Tip',
 }
 
-export { Default }
+const Hover = Template.bind({})
+Hover.args = {
+  disableDialog: true,
+  hoverText: 'Shown on Hover',
+  title: 'Sample Quick Tip on Hover',
+}
+
+const HoverAndMessage = Template.bind({})
+HoverAndMessage.args = {
+  children: <Typography>This is a test quick tip. This message is supposed to explain something.</Typography>,
+  hoverText: 'Hover is different than the title',
+  title: 'Sample Quick Tip on Hover',
+}
+
+export { Default, Hover, HoverAndMessage }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
