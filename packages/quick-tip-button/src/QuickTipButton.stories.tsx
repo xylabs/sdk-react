@@ -1,3 +1,4 @@
+import NotListedLocationIcon from '@mui/icons-material/NotListedLocation'
 import { Typography } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { FlexRow } from '@xylabs/react-flexbox'
@@ -30,7 +31,6 @@ Default.args = {
 const Hover = Template.bind({})
 Hover.args = {
   disableDialog: true,
-  hoverText: 'Shown on Hover',
   title: 'Sample Quick Tip on Hover',
 }
 
@@ -41,7 +41,14 @@ HoverAndMessage.args = {
   title: 'Sample Quick Tip on Hover',
 }
 
-export { Default, Hover, HoverAndMessage }
+const CustomIcon = Template.bind({})
+CustomIcon.args = {
+  Icon: NotListedLocationIcon,
+  hoverText: 'Hover is different than the title',
+  title: 'Sample Quick Tip on Hover',
+}
+
+export { CustomIcon, Default, Hover, HoverAndMessage }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

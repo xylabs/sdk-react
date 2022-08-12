@@ -14,3 +14,11 @@ storybook-static
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+*.log
+*.tgz
+
+*.tsbuildinfo
+.eslintcache
+
+storybook-static
