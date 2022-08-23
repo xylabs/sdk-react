@@ -6,8 +6,7 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
-    "../packages/**/*.stories.mdx",
-    "../packages/**/*.stories.@(js|jsx|ts|tsx)",
+    "../packages/**/*.stories.@(js|jsx|ts|tsx|mdx)",
   ],
   addons: [
     "@storybook/addon-links",
@@ -15,24 +14,8 @@ module.exports = {
     "@storybook/addon-interactions",
     "storybook-dark-mode"
   ],
+  features: { modernInlineRendering: true },
   typescript: {
     check: true,
-  },
-  // Actual recommended fix from MUI - https://mui.com/guides/migration-v4/#troubleshooting
-  webpackFinal: async (config) => ({
-    ...config,
-    resolve: {
-      ...config.resolve,
-      alias: {
-        ...config.resolve.alias,
-        '@emotion/core': toPath('node_modules/@emotion/react'),
-        'emotion-theming': toPath('node_modules/@emotion/react'),
-     },
-     // can likely be removed in storybook > 6.4 see - https://github.com/storybookjs/storybook/issues/17458
-     fallback: {
-       ...config.resolve.fallback,
-      'assert': toPath('node_modules/assert')
-     }
-    },
- })
+  }
 }
