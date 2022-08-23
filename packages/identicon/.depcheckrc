@@ -1,6 +1,4 @@
 ignores: [
-  "@xylabs/ts-scripts",
-  "@xylabs/tsconfig",
   "ts-node",
   "typescript"
 ]

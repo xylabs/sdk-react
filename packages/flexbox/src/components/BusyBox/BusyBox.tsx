@@ -1,6 +1,8 @@
 import { Box, BoxProps, Paper, useTheme } from '@mui/material'
 import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
 
+import { useBusyTiming } from './useBusyTiming'
+
 export interface BusyBoxProps extends BusyProps, BoxProps {
   paper?: boolean
   background?: boolean
@@ -17,11 +19,14 @@ export const BusyBox: React.FC<BusyBoxProps> = ({
   busy,
   busyCircularProps,
   busyLinearProps,
+  busyMinimum = 0,
   paper,
   style,
   ...props
 }) => {
   const theme = useTheme()
+  const internalBusy = useBusyTiming(busy, busyMinimum)
+
   return (
     <Box
       component={paper ? Paper : component}
@@ -38,8 +43,8 @@ export const BusyBox: React.FC<BusyBoxProps> = ({
       {...props}
     >
       {children}
-      {busy && busyVariant === 'linear' ? <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} /> : null}
-      {busy && busyVariant === 'circular' ? (
+      {internalBusy && busyVariant === 'linear' ? <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} /> : null}
+      {internalBusy && busyVariant === 'circular' ? (
         <BusyCircularProgress color={busyColor} opacity={busyOpacity} size={busySize} {...busyCircularProps} />
       ) : null}
     </Box>

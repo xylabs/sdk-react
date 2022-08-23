@@ -1,2 +1,2 @@
-export * from './deprecate-story'
+export * from './DeprecateStory'
 export * from './appThemeDecorator'
