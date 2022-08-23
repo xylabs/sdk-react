@@ -1,4 +1,6 @@
+import { Button, Typography } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { useState } from 'react'
 
 import { BusyBox } from './BusyBox'
 
@@ -14,6 +16,26 @@ const StorybookEntry = {
 } as ComponentMeta<typeof BusyBox>
 
 const BusyBoxTemplate: ComponentStory<typeof BusyBox> = (args) => <BusyBox {...args}></BusyBox>
+
+const BusyBoxMinimumTemplate: ComponentStory<typeof BusyBox> = (args) => {
+  const [busyToggle, setBusyToggle] = useState(false)
+  return (
+    <>
+      <Typography variant="body1">Busy mode should be at least {(args?.busyMinimum || 0) / 1000} seconds</Typography>
+      {`BusyToggle: ${busyToggle}`}
+      <Button
+        variant="contained"
+        onClick={() => {
+          setBusyToggle(!busyToggle)
+        }}
+        sx={{ marginBottom: 2 }}
+      >
+        Toggle Busy
+      </Button>
+      <BusyBox {...args} busy={busyToggle}></BusyBox>
+    </>
+  )
+}
 
 const Circular = BusyBoxTemplate.bind({})
 Circular.args = {
@@ -80,7 +102,20 @@ LinearQuery.args = {
   width: 360,
 }
 
-export { Circular, Linear, LinearBuffer, LinearDeterminate, LinearQuery }
+const BusyMinimum = BusyBoxMinimumTemplate.bind({})
+BusyMinimum.args = {
+  bgcolor: 'gray',
+  busyCircularProps: {
+    opacity: 0,
+  },
+  busyMinimum: 3000,
+  busyVariant: 'circular',
+  height: 180,
+  padding: 2,
+  width: 360,
+}
+
+export { BusyMinimum, Circular, Linear, LinearBuffer, LinearDeterminate, LinearQuery }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry

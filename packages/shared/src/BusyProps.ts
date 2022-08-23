@@ -11,4 +11,6 @@ export interface BusyProps {
   busyCircularProps?: BusyCircularProgressProps
   busyLinearProps?: BusyLinearProgressProps
   busySize?: number
+  /** minimum duration in milliseconds for busy to appear */
+  busyMinimum?: number
 }
