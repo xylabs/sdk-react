@@ -6209,7 +6209,7 @@ __metadata:
     "@xylabs/react-rich-result": "workspace:^"
     "@xylabs/react-scroll-to-top": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.7.6
+    "@xylabs/ts-scripts-yarn3": ^2.5.6
     "@xylabs/tsconfig-dom": ^2.7.6
     chromatic: ^6.9.0
     react: ^18.2.0
@@ -6220,7 +6220,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/ts-scripts-yarn3@npm:^2.7.6":
+"@xylabs/ts-scripts-yarn3@npm:^2.5.6":
   version: 2.7.6
   resolution: "@xylabs/ts-scripts-yarn3@npm:2.7.6"
   dependencies:
