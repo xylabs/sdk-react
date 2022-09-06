@@ -57,7 +57,7 @@
     "@storybook/theming": "^6.5.10",
     "@types/react": "^18.0.18",
     "@xylabs/eslint-config-react": "^2.7.6",
-    "@xylabs/ts-scripts-yarn3": "^2.5.6",
+    "@xylabs/ts-scripts-yarn3": "~2.5.167",
     "@xylabs/tsconfig-dom": "^2.7.6",
     "chromatic": "^6.9.0",
     "storybook-dark-mode": "^1.1.0",
