@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { getLocalStorageObject, setLocalStorageObject } from '../lib'
 
-export const useLocalStorage = <T extends object>(key: string, defaultValue: T): [T, (value: T) => void] => {
+export const useLocalStorage = <T extends object | boolean>(key: string, defaultValue: T): [T, (value: T) => void] => {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = getLocalStorageObject<T>(key)
