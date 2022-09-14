@@ -10,7 +10,7 @@ export const usePixelAltSendHandler = (altHandler: (event: string, fields?: Reco
     } else {
       XyPixel.instance.send = async (event: string, fields?: Record<string, unknown>, eventId?: string) => {
         altHandler(event, fields)
-        return pixelSend?.(event, fields, eventId)
+        return await pixelSend?.(event, fields, eventId)
       }
     }
     return () => {
