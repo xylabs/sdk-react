@@ -1,10 +1,8 @@
 import { ExpandMoreRounded } from '@mui/icons-material'
-import { Accordion, AccordionDetails, AccordionProps, AccordionSummary, Typography, useTheme } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionProps, AccordionSummary, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { ButtonEx } from '@xylabs/react-button'
 import { Override } from '@xylabs/sdk-js'
 import { ReactNode, useState } from 'react'
-
-import { useMediaQuery } from '../../hooks'
-import { ButtonEx } from '../ButtonEx'
 
 interface SimpleAccordionCardAdditionalProps extends AccordionProps {
   name: string

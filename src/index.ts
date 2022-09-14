@@ -1,3 +1,4 @@
+export * from '@xylabs/react-accordion'
 export * from '@xylabs/react-appbar'
 export * from '@xylabs/react-button'
 export * from '@xylabs/react-common'
