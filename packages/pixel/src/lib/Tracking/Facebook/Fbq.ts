@@ -34,25 +34,25 @@ class Fbq {
     return this.instance
   }
 
-  public track(event: string, data: Record<string, unknown>, eventId?: string) {
+  public track(event: string, data: Record<string, unknown>, eventID?: string) {
     this.fbq(
       'track',
       event,
       {
         ...data,
       },
-      { eventId },
+      { eventID },
     )
   }
 
-  public trackCustom(event: string, data: Record<string, unknown>, eventId?: string) {
+  public trackCustom(event: string, data: Record<string, unknown>, eventID?: string) {
     this.fbq(
       'trackCustom',
       event,
       {
         ...data,
       },
-      { eventId },
+      { eventID },
     )
   }
 }
