@@ -1,16 +1,18 @@
-import React from 'react'
+import { forwardRef } from 'react'
 
-import { BusyBox, BusyBoxProps } from './BusyBox'
+import { BusyBox } from './BusyBox'
+import { FlexBoxProps } from './FlexBoxProps'
 
-type FlexBoxProps = BusyBoxProps
+const FlexRow = forwardRef<unknown, FlexBoxProps>((props, ref) => {
+  return <BusyBox alignItems="center" display="flex" flexDirection="row" justifyContent="center" ref={ref} {...props} />
+})
 
-const FlexRow: React.FC<FlexBoxProps> = (props) => {
-  return <BusyBox alignItems="center" display="flex" flexDirection="row" justifyContent="center" {...props} />
-}
+FlexRow.displayName = 'FlexRow [XY Labs]'
 
-const FlexGrowRow: React.FC<FlexBoxProps> = (props) => {
-  return <FlexRow flexGrow={1} {...props} />
-}
+const FlexGrowRow = forwardRef<unknown, FlexBoxProps>((props, ref) => {
+  return <FlexRow flexGrow={1} ref={ref} {...props} />
+})
+
+FlexGrowRow.displayName = 'FlexGrowRow [XY Labs]'
 
 export { FlexGrowRow, FlexRow }
-export type { FlexBoxProps }
