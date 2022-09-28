@@ -1,7 +1,8 @@
 import { Box } from '@mui/material'
 import { createStyles, makeStyles } from '@mui/styles'
 
-import { FlexBoxProps, FlexRow } from './FlexRow'
+import { FlexBoxProps } from './FlexBoxProps'
+import { FlexRow } from './FlexRow'
 
 export type HoverScaleProps = FlexBoxProps & {
   scale?: number
