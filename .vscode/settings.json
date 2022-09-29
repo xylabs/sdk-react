@@ -46,6 +46,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "cSpell.words": [
+    "flexbox",
     "invertable",
     "xylabs"
   ]

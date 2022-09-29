@@ -1,10 +1,10 @@
-import React, { MouseEvent } from 'react'
+import React, { forwardRef, MouseEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { ButtonExBase } from './ButtonExBase'
 import { ButtonExProps } from './ButtonExProps'
 
-const ButtonExTo: React.FC<ButtonExProps> = ({ to, toOptions, onClick, ...props }) => {
+const ButtonExTo = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions, onClick, ...props }, ref) => {
   const navigate = useNavigate()
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event)
@@ -13,7 +13,9 @@ const ButtonExTo: React.FC<ButtonExProps> = ({ to, toOptions, onClick, ...props 
     }
   }
 
-  return <ButtonExBase onClick={localOnClick} {...props} />
-}
+  return <ButtonExBase ref={ref} onClick={localOnClick} {...props} />
+})
+
+ButtonExTo.displayName = 'ButtonExTo [XY Labs]'
 
 export { ButtonExTo }
