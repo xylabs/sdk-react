@@ -5896,7 +5896,7 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-invertable-theme": "workspace:^"
     "@xylabs/react-scroll-to-top": "workspace:^"
-    "@xylabs/sdk-js": ^2.6.7
+    "@xylabs/sdk-js": ^2.6.9
     lodash: ^4.17.21
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -5944,7 +5944,7 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-identicon": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/sdk-js": ^2.6.7
+    "@xylabs/sdk-js": ^2.6.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.3.0
@@ -5987,7 +5987,7 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/sdk-js": ^2.6.7
+    "@xylabs/sdk-js": ^2.6.9
     react: ^18.2.0
     react-dom: ^18.2.0
     ts-node: ^10.9.1
@@ -6007,7 +6007,7 @@ __metadata:
     "@mui/styles": ^5.10.3
     "@types/react": ^18.0.18
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/sdk-js": ^2.6.7
+    "@xylabs/sdk-js": ^2.6.9
     react: ^18.2.0
     react-dom: ^18.2.0
     ts-node: ^10.9.1
@@ -6120,7 +6120,7 @@ __metadata:
     "@babel/preset-env": ^7.19.0
     "@types/react": ^18.0.18
     "@xylabs/pixel": ^1.4.5
-    "@xylabs/sdk-js": ^2.6.7
+    "@xylabs/sdk-js": ^2.6.9
     query-string: ^7.1.1
     react: ^18.2.0
     ts-node: ^10.9.1
@@ -6188,7 +6188,7 @@ __metadata:
     "@emotion/styled": ^11.10.4
     "@mui/material": ^5.10.4
     "@types/react": ^18.0.18
-    "@xylabs/sdk-js": ^2.6.7
+    "@xylabs/sdk-js": ^2.6.9
     react: ^18.2.0
     react-dom: ^18.2.0
     ts-node: ^10.9.1
@@ -6196,7 +6196,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/sdk-js@npm:^2.6.2, @xylabs/sdk-js@npm:^2.6.7":
+"@xylabs/sdk-js@npm:^2.6.2":
   version: 2.6.7
   resolution: "@xylabs/sdk-js@npm:2.6.7"
   dependencies:
