@@ -16,6 +16,6 @@ const ButtonExTo = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions
   return <ButtonExBase ref={ref} onClick={localOnClick} {...props} />
 })
 
-ButtonExTo.displayName = 'ButtonExTo [XY Labs]'
+ButtonExTo.displayName = 'ButtonExToXYLabs'
 
 export { ButtonExTo }

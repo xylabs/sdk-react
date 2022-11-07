@@ -23,6 +23,6 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>((props, ref) =
   )
 })
 
-ButtonExBase.displayName = 'ButtonExBase [XY Labs]'
+ButtonExBase.displayName = 'ButtonExBaseXYLabs'
 
 export { ButtonExBase }

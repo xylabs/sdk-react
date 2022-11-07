@@ -58,6 +58,6 @@ const BusyBox = forwardRef<unknown, BusyBoxProps>(
   },
 )
 
-BusyBox.displayName = 'BusyBox [XY Labs]'
+BusyBox.displayName = 'BusyBoxXYLabs'
 
 export { BusyBox }
