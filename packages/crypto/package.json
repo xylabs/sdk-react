@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.10.4",
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.0",
-    "@metamask/providers": "^9.1.0",
+    "@metamask/providers": "^10.2.0",
     "@mui/material": "^5.10.4",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
