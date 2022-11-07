@@ -2,9 +2,10 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ReactNode } from 'react'
 
 import { selectVariantForExperiment, useExperiments } from './useExperiment'
+import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 
 const View: React.FC = () => {
-  const { experimentName, selectVariant } = useExperiments<ReactNode>('Storybook Test 2', [
+  const { experimentName, selectVariant } = useExperiments<ReactNode>('Storybook Test 3', [
     { name: 'a/legacy', weight: 33 },
     { name: 'b/testing', weight: 33 },
     { name: 'c/testing', weight: 33 },
@@ -22,9 +23,15 @@ const View: React.FC = () => {
   )
 }
 
+const WrappedView: React.FC = ({ ...props }) => (
+  <UserEventsProvider userEvents={XyoUserEventHandler.get()}>
+    <View {...props}/>
+  </UserEventsProvider>
+)
+
 const StorybookEntry = {
   argTypes: {},
-  component: View,
+  component: WrappedView,
   parameters: {
     docs: {
       page: null,
@@ -33,7 +40,7 @@ const StorybookEntry = {
   title: 'Hooks/useExperiments',
 } as ComponentMeta<typeof View>
 
-const Template: ComponentStory<typeof View> = (args) => <View {...args} />
+const Template: ComponentStory<typeof View> = (args) => <WrappedView {...args} />
 
 const Default = Template.bind({})
 Default.args = {}

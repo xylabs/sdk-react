@@ -43,7 +43,6 @@ const ExperimentsHelper = {
         localStorage.setItem(localStorageKey, ExperimentsHelper.mergeData(experimentsTestData))
       }
       if (userEvents && firstTime) {
-        console.log('Test Stated', variant.name)
         forget(userEvents.testStarted({ name, variation: variant.name }))
       }
       return variant
