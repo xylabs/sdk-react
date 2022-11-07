@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 import { ReactNode } from 'react'
 
 import { selectVariantForExperiment, useExperiments } from './useExperiment'
-import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 
 const View: React.FC = () => {
   const { experimentName, selectVariant } = useExperiments<ReactNode>('Storybook Test 3', [
@@ -25,7 +25,7 @@ const View: React.FC = () => {
 
 const WrappedView: React.FC = ({ ...props }) => (
   <UserEventsProvider userEvents={XyoUserEventHandler.get()}>
-    <View {...props}/>
+    <View {...props} />
   </UserEventsProvider>
 )
 
