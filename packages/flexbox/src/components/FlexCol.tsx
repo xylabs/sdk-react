@@ -7,12 +7,12 @@ const FlexCol = forwardRef<unknown, FlexBoxProps>((props, ref) => {
   return <BusyBox alignItems="center" display="flex" flexDirection="column" justifyContent="center" ref={ref} {...props} />
 })
 
-FlexCol.displayName = 'FlexCol [XY Labs]'
+FlexCol.displayName = 'FlexColXYLabs'
 
 const FlexGrowCol = forwardRef<unknown, FlexBoxProps>((props, ref) => {
   return <FlexCol flexGrow={1} ref={ref} {...props} />
 })
 
-FlexGrowCol.displayName = 'FlexGrowCol [XY Labs]'
+FlexGrowCol.displayName = 'FlexGrowColXYLabs'
 
 export { FlexCol, FlexGrowCol }

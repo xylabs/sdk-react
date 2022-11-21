@@ -14,7 +14,7 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({ to, ...props
   }
 })
 
-LinkEx.displayName = 'LinkEx [XY Labs]'
+LinkEx.displayName = 'LinkExXYLabs'
 
 /** @deprecated use LinkEx instead */
 export const LinkToEx = LinkEx
