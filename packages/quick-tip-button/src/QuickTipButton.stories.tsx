@@ -37,6 +37,7 @@ Hover.args = {
 const HoverAndMessage = Template.bind({})
 HoverAndMessage.args = {
   children: <Typography>This is a test quick tip. This message is supposed to explain something.</Typography>,
+  dialogProps: { fullWidth: true, maxWidth: 'md' },
   hoverText: 'Hover is different than the title',
   title: 'Sample Quick Tip on Hover',
 }
