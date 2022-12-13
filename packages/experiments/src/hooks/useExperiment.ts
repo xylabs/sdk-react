@@ -1,31 +1,31 @@
 import { useUserEvents } from '@xylabs/react-pixel'
-import { ReactNode, useState } from 'react'
+import { useState } from 'react'
 
 import { VariantData } from '../components'
 import { ExperimentsHelper } from '../lib'
 
-const selectVariant = (current?: string) => (variants: Record<string, ReactNode>, defaultNode: ReactNode) => {
-  if (current && current in variants) {
-    return variants[current]
+const selectVariant =
+  <T>(current?: string) =>
+  (variants: Record<string, T>, defaultValue: T) => {
+    if (current && current in variants) {
+      return variants[current]
+    }
+    return defaultValue
   }
-  return defaultNode
-}
 
-const selectVariantForExperiment = (name: string, variants: Record<string, ReactNode>, defaultNode: ReactNode) => {
+export const selectVariantForExperiment = <T>(name: string, variants: Record<string, T>, defaultValue: T): T => {
   const variant = ExperimentsHelper.getSelectedVariant(name)
   if (variants[variant?.name ?? '']) {
     return variants[variant?.name ?? '']
   }
-  return defaultNode
+  return defaultValue
 }
 
-const useExperiments = (name: string, experiments: VariantData[]) => {
+export const useExperiments = <T>(name: string, experiments: VariantData[]) => {
   const [activeExperiment] = useState(ExperimentsHelper.calculateExperiment(name, true, experiments, useUserEvents()))
 
   return {
     experimentName: name,
-    selectVariant: selectVariant(activeExperiment?.name),
+    selectVariant: selectVariant<T>(activeExperiment?.name),
   }
 }
-
-export { selectVariantForExperiment, useExperiments }

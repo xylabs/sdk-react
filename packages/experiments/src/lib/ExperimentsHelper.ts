@@ -28,7 +28,7 @@ const ExperimentsHelper = {
     const localStorageKey = ExperimentsHelper.buildLocalStorageKey(localStorageProp)
     const totalWeight = ExperimentsHelper.calcTotalWeight(variants)
     ExperimentsHelper.saveExperimentRanges(name, totalWeight, variants)
-    const firstTime = name in outcomes
+    const firstTime = !(name in outcomes)
     let targetWeight = outcomes[name] ?? Math.random() * totalWeight
     outcomes[name] = targetWeight
     ExperimentsHelper.saveOutcomes()
@@ -42,7 +42,7 @@ const ExperimentsHelper = {
       if (firstTime) {
         localStorage.setItem(localStorageKey, ExperimentsHelper.mergeData(experimentsTestData))
       }
-      if (userEvents) {
+      if (userEvents && firstTime) {
         forget(userEvents.testStarted({ name, variation: variant.name }))
       }
       return variant
