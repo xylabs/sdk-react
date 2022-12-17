@@ -15,7 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.17",
+    "@mui/material": "^5.11.0",
     "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
     "@xylabs/react-button": "workspace:^",
@@ -54,14 +54,15 @@
     "@storybook/react": "^6.5.14",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.14",
-    "@types/node": "^18.11.13",
+    "@types/node": "^18.11.16",
     "@types/react-dom": "^18.0.9",
-    "@xylabs/eslint-config-react": "^2.7.27",
-    "@xylabs/ts-scripts-yarn3": "^2.7.27",
-    "@xylabs/tsconfig-dom": "^2.7.27",
+    "@xylabs/eslint-config-react": "^2.9.0",
+    "@xylabs/ts-scripts-yarn3": "^2.9.0",
+    "@xylabs/tsconfig-dom": "^2.9.0",
     "axios": "^1.2.1",
-    "chromatic": "^6.12.0",
-    "eslint": "^8.29.0",
+    "chromatic": "^6.13.1",
+    "depcheck": "^1.4.3",
+    "eslint": "^8.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "require-from-string": "^2.0.2",
@@ -116,5 +117,5 @@
   "sideEffects": false,
   "types": "dist/esm/index.d.ts",
   "version": "2.15.4",
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.3.0"
 }

@@ -15,19 +15,19 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.10.16",
-    "@mui/material": "^5.10.17",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.0",
     "@xylabs/react-appbar": "workspace:^",
     "@xylabs/react-cookie-consent": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-invertable-theme": "workspace:^",
     "@xylabs/react-scroll-to-top": "workspace:^",
-    "@xylabs/sdk-js": "^2.6.10",
+    "@xylabs/sdk-js": "^2.6.11",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.5.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
@@ -35,6 +35,7 @@
     "@babel/preset-env": "^7.20.2",
     "@types/lodash": "^4.14.191",
     "@types/react-helmet": "^6.1.6",
+    "@xylabs/ts-scripts-yarn3": "^2.9.0",
     "axios": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

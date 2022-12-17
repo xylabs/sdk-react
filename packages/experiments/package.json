@@ -15,12 +15,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.17",
+    "@mui/material": "^5.11.0",
     "@xylabs/pixel": "^1.4.6",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
-    "@xylabs/sdk-js": "^2.6.10",
+    "@xylabs/sdk-js": "^2.6.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/preset-env": "^7.20.2",
+    "@xylabs/ts-scripts-yarn3": "^2.9.0",
     "axios": "^1.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
