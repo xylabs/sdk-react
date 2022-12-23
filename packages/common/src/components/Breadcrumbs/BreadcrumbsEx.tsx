@@ -1,6 +1,6 @@
 import { Breadcrumbs, BreadcrumbsProps, Link } from '@mui/material'
+import { assertEx } from '@xylabs/assert'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { assertEx } from '@xylabs/sdk-js'
 import { ReactElement } from 'react'
 import { Link as RouteLink } from 'react-router-dom'
 

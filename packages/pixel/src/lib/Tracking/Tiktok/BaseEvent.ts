@@ -1,4 +1,5 @@
-import { assertEx, delay } from '@xylabs/sdk-js'
+import { assertEx } from '@xylabs/assert'
+import { delay } from '@xylabs/delay'
 
 import { Ttq } from './Ttq'
 

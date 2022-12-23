@@ -1,6 +1,7 @@
+import { forget } from '@xylabs/forget'
+import { Log } from '@xylabs/log'
 import { useUserEvents } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
-import { forget, Log } from '@xylabs/sdk-js'
 import React, { ReactElement } from 'react'
 
 import { ExperimentProps } from './Experiment'

@@ -1,4 +1,4 @@
-import { assertEx } from '@xylabs/sdk-js'
+import { assertEx } from '@xylabs/assert'
 
 import { Gtag } from './Gtag'
 import { Gtm } from './Gtm'

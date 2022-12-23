@@ -1,6 +1,6 @@
 import { Paper } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { EthAddress } from '@xylabs/sdk-js'
+import { EthAddress } from '@xylabs/eth-address'
 
 import { EthAccountBox } from './EthAccountBox'
 

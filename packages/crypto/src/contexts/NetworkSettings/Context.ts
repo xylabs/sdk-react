@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/sdk-js'
+import { EthAddress } from '@xylabs/eth-address'
 import { createContext } from 'react'
 
 const NetworkSettingsContext = createContext<{
