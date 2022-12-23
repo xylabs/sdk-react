@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { BigNumber } from '@xylabs/sdk-js'
+import { BigNumber } from '@xylabs/bignumber'
 
 import { TokenAmount } from './TokenAmount'
 

@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/sdk-js'
+import { EthAddress } from '@xylabs/eth-address'
 import { NavigateOptions, To, useNavigate } from 'react-router-dom'
 
 export const useNavigateToEthAddress = () => {

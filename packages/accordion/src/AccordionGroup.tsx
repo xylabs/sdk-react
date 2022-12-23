@@ -1,8 +1,9 @@
 import { ExpandMoreRounded } from '@mui/icons-material'
 import { Accordion, AccordionDetails, AccordionProps, AccordionSummary, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
-import { Override } from '@xylabs/sdk-js'
 import { ReactNode, useState } from 'react'
+
+type Override<T1, T2> = Omit<T1, keyof T2> & T2
 
 interface SimpleAccordionCardAdditionalProps extends AccordionProps {
   name: string

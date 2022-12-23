@@ -1,4 +1,4 @@
-import { getApiStage as baseGetApiStage } from '@xylabs/sdk-js'
+import { getApiStage as baseGetApiStage } from '@xylabs/api'
 
 const getApiStage = () => {
   return baseGetApiStage(document.location.hostname)

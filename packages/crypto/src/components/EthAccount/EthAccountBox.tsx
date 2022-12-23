@@ -1,7 +1,8 @@
 import { Typography, useMediaQuery, useTheme } from '@mui/material'
+import { assertEx } from '@xylabs/assert'
+import { EthAddress } from '@xylabs/eth-address'
 import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
-import { assertEx, EthAddress } from '@xylabs/sdk-js'
 import { useContext } from 'react'
 
 import { EthersContext } from '../../contexts'

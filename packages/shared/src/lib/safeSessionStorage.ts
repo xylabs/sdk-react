@@ -1,4 +1,4 @@
-import { Log } from '@xylabs/sdk-js'
+import { Log } from '@xylabs/log'
 
 export const getSessionStorageObject = (key: string, log?: Log) => {
   let result = {}

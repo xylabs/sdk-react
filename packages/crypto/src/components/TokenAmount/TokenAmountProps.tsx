@@ -1,5 +1,5 @@
+import { BigNumber } from '@xylabs/bignumber'
 import { ButtonExProps } from '@xylabs/react-button'
-import { BigNumber } from '@xylabs/sdk-js'
 import { MouseEventHandler } from 'react'
 
 export interface TokenAmountProps extends ButtonExProps {

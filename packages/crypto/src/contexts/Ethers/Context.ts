@@ -1,6 +1,6 @@
 import { Signer } from '@ethersproject/abstract-signer'
 import { Provider } from '@ethersproject/providers'
-import { EthAddress } from '@xylabs/sdk-js'
+import { EthAddress } from '@xylabs/eth-address'
 import { createContext } from 'react'
 
 export interface EthersData {

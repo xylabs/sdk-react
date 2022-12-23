@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { EthAddress } from '@xylabs/eth-address'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { EthAddress } from '@xylabs/sdk-js'
 
 import { EthAccountButton } from './EthAccountButton'
 

@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/sdk-js'
+import { EthAddress } from '@xylabs/eth-address'
 import { PropsWithChildren } from 'react'
 
 import { NetworkSettingsContext } from './Context'
