@@ -5779,6 +5779,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xylabs/delay@npm:^2.6.15":
+  version: 2.6.15
+  resolution: "@xylabs/delay@npm:2.6.15"
+  checksum: 90e89bd6d5699029c44ccc5e817726c04e5ec6144db0cb202123cb7bf8aafcefddffcb9f905fab4ce44f2e8a0f2166b14815c497e525ef780c1c43626f385b06
+  languageName: node
+  linkType: hard
+
 "@xylabs/eslint-config-react@npm:^2.11.16":
   version: 2.11.16
   resolution: "@xylabs/eslint-config-react@npm:2.11.16"
@@ -5856,11 +5863,11 @@ __metadata:
   linkType: hard
 
 "@xylabs/forget@npm:^2.6.14":
-  version: 2.6.14
-  resolution: "@xylabs/forget@npm:2.6.14"
+  version: 2.6.15
+  resolution: "@xylabs/forget@npm:2.6.15"
   dependencies:
-    "@xylabs/delay": ^2.6.14
-  checksum: 56a1c7ad91bfb759d56c4549905d6034f4f81605f47a6030c19019069c11b62ffa0e361b247733efa142072997a1ba98b5db629325eab34ff1b692897cbc7d95
+    "@xylabs/delay": ^2.6.15
+  checksum: 15e400fe94dd032d3cb366b57fe3fbaf19b705b50dfa44f933bf46782226a27484d6b5fe4bfa9a6571ba5a6c5e526cfc8e71e161984dd3736a02bc921ee2c714
   languageName: node
   linkType: hard
 
