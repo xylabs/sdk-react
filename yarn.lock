@@ -5773,9 +5773,9 @@ __metadata:
   linkType: hard
 
 "@xylabs/delay@npm:^2.6.14":
-  version: 2.6.14
-  resolution: "@xylabs/delay@npm:2.6.14"
-  checksum: ddeee9d1c4421f688abe8d9151b19fd4f96291cf454e3e38c121b2f571b279d1e6b29ccc80f5886b2d1b29ea6249bbe5c795349d71b25ae6018bc99339288026
+  version: 2.6.15
+  resolution: "@xylabs/delay@npm:2.6.15"
+  checksum: 90e89bd6d5699029c44ccc5e817726c04e5ec6144db0cb202123cb7bf8aafcefddffcb9f905fab4ce44f2e8a0f2166b14815c497e525ef780c1c43626f385b06
   languageName: node
   linkType: hard
 
