@@ -5763,12 +5763,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xylabs/assert@npm:^2.6.15":
+  version: 2.6.15
+  resolution: "@xylabs/assert@npm:2.6.15"
+  checksum: b0d9d56d58f8f382488d6b97e09974a395a266671dac79d9eb09bbdf06a7fcf6f631e578f3fd626fc91c119bd8e759cced1ca66d2ed6b3687bf8d8743fee2c39
+  languageName: node
+  linkType: hard
+
 "@xylabs/bignumber@npm:^2.6.14":
   version: 2.6.14
   resolution: "@xylabs/bignumber@npm:2.6.14"
   dependencies:
     bn.js: ^5.2.1
   checksum: 2e38f0e06028b84e54fd54c8b9ee54747676a9873e2e5b28908750c8c678cf44db89e33fb590f9c4d10997e5deabd82e35791afc13aae4fdb2879d3773e9197c
+  languageName: node
+  linkType: hard
+
+"@xylabs/bignumber@npm:^2.6.15":
+  version: 2.6.15
+  resolution: "@xylabs/bignumber@npm:2.6.15"
+  dependencies:
+    bn.js: ^5.2.1
+  checksum: c35b00535a74b64127f8c7b7445238eea45b0ae7c4c0b7ccbe6bddd3b90a9ecd848718afa3157c2c4ae7009f0e82f36dfc53a4bc40b32c32b69b2362243e65f8
   languageName: node
   linkType: hard
 
@@ -5846,12 +5862,12 @@ __metadata:
   linkType: hard
 
 "@xylabs/eth-address@npm:^2.6.14":
-  version: 2.6.14
-  resolution: "@xylabs/eth-address@npm:2.6.14"
+  version: 2.6.15
+  resolution: "@xylabs/eth-address@npm:2.6.15"
   dependencies:
-    "@xylabs/assert": ^2.6.14
-    "@xylabs/bignumber": ^2.6.14
-  checksum: b65b66d6b57f29d86d6435d9988516aa8b22b130188c080a880ebd102264668c0ba9bed3e31b9c602fcaeb46620a8b097d76d7ebfcbaec289c2fea9c52d3311e
+    "@xylabs/assert": ^2.6.15
+    "@xylabs/bignumber": ^2.6.15
+  checksum: af3d04811e577b023e689a9d17a51e2022052d57d373a932e74d691e456de672a3500be9cf2665325c6a854811ba6f6bc093a51d5c2278ce4bb86c57814a2a19
   languageName: node
   linkType: hard
 
