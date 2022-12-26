@@ -5865,11 +5865,11 @@ __metadata:
   linkType: hard
 
 "@xylabs/log@npm:^2.6.14":
-  version: 2.6.14
-  resolution: "@xylabs/log@npm:2.6.14"
+  version: 2.6.15
+  resolution: "@xylabs/log@npm:2.6.15"
   dependencies:
     rollbar: ^2.26.0
-  checksum: b6a513839354e91a7b265bb2b01ed2439373d036d31dfc5d8e290cbb39cfce87d5d44f3ec64608aced5fff2b93c5ac7b9c8b102bf56c8b5856d52d2fe2a37be7
+  checksum: b920f4a3f2616b35f557f3366463307d5cc85ae33572f816abd9c3d924789453d83688173e68fe181e2ebb09ceb002322b7c16d4aabb414bf9429c97ffd47b74
   languageName: node
   linkType: hard
 
