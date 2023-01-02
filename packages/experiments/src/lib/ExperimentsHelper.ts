@@ -3,12 +3,11 @@ import { Log } from '@xylabs/log'
 import { UserEventHandler } from '@xylabs/pixel'
 import { UserEventsProps } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
-import { ReactElement } from 'react'
 
-import { ExperimentProps, ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components'
 
 const defaultLocalStorageKey = 'testData'
-const experimentsTestData: { [index: string]: string } = {}
+let experimentsTestData: { [index: string]: string } = {}
 let outcomes: OutcomesData = {} //prevent multi-outcome
 
 // TODO - some expire logic around experiments
@@ -16,19 +15,19 @@ const ExperimentsHelper = {
   buildLocalStorageKey: (localStorageProp: boolean | string) => {
     return localStorageProp === true ? defaultLocalStorageKey : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey : ''
   },
-
   calcTotalWeight: (variants: VariantData[]) => {
     return variants.reduce((sum, variant) => {
       return sum + variant.weight
     }, 0)
   },
-
   calculateExperiment: (name: string, localStorageProp: string | boolean, variants: VariantData[], userEvents: UserEventHandler<UserEventsProps>) => {
-    //TODO - user events, it needs to be in the hook, all other compatibility should
-    ExperimentsHelper.loadOutcomes()
     const localStorageKey = ExperimentsHelper.buildLocalStorageKey(localStorageProp)
     const totalWeight = ExperimentsHelper.calcTotalWeight(variants)
+
+    ExperimentsHelper.loadOutcomes()
+    ExperimentsHelper.loadExperimentsTestData(localStorageKey)
     ExperimentsHelper.saveExperimentRanges(name, totalWeight, variants)
+
     const firstTime = !(name in outcomes)
     let targetWeight = outcomes[name] ?? Math.random() * totalWeight
     outcomes[name] = targetWeight
@@ -41,7 +40,7 @@ const ExperimentsHelper = {
       }
       experimentsTestData[name] = variant.name
       if (firstTime) {
-        localStorage.setItem(localStorageKey, ExperimentsHelper.mergeData(experimentsTestData))
+        ExperimentsHelper.saveExperimentsTestData(localStorageKey)
       }
       if (userEvents && firstTime) {
         forget(userEvents.testStarted({ name, variation: variant.name }))
@@ -49,13 +48,11 @@ const ExperimentsHelper = {
       return variant
     }
   },
-
   getExperiment: (name: string) => {
     ExperimentsHelper.loadOutcomes()
     const experiments = getLocalStorageObject<ExperimentsData>(ExperimentsLocalStorageKey) || {}
     return experiments[name]
   },
-
   getSelectedVariant: (name: string) => {
     const outcomes = ExperimentsHelper.loadOutcomes()
     const experiment = ExperimentsHelper.getExperiment(name)
@@ -71,29 +68,21 @@ const ExperimentsHelper = {
       }
     }
   },
-
+  loadExperimentsTestData: (key: string) => {
+    experimentsTestData =
+      localStorage
+        .getItem(key)
+        ?.split('|')
+        .reduce((acc, current) => {
+          const data = current.split('-')
+          acc[data[0]] = data[1]
+          return acc
+        }, {} as { [index: string]: string }) ?? {}
+  },
   loadOutcomes: () => {
     outcomes = getLocalStorageObject(OutcomesLocalStorageKey)
     return outcomes
   },
-
-  makeChildrenArray: (children: ReactElement<ExperimentProps>[] | ReactElement<ExperimentProps>) => {
-    if (Array.isArray(children)) {
-      return children as ReactElement<ExperimentProps>[]
-    } else {
-      return [children] as ReactElement<ExperimentProps>[]
-    }
-  },
-
-  mergeData: (data: { [index: string]: string }, log?: Log) => {
-    const dataArray: string[] = []
-    for (const key in data) {
-      dataArray.push(`${key}-${data[key]}`)
-    }
-    log?.info('MergeData', dataArray.join('|'))
-    return dataArray.join('|')
-  },
-
   saveExperimentRanges: (name: string, totalWeight: number, variants: VariantData[]) => {
     const experiments = getLocalStorageObject<ExperimentsData>(ExperimentsLocalStorageKey) || {}
     experiments[name] = {
@@ -103,7 +92,17 @@ const ExperimentsHelper = {
     setLocalStorageObject(ExperimentsLocalStorageKey, experiments)
     return experiments
   },
-
+  saveExperimentsTestData: (key: string) => {
+    const mergeData = (data: { [index: string]: string }, log?: Log): string => {
+      const dataArray: string[] = []
+      for (const key in data) {
+        dataArray.push(`${key}-${data[key]}`)
+      }
+      log?.info('MergeData', dataArray.join('|'))
+      return dataArray.join('|')
+    }
+    localStorage.setItem(key, mergeData(experimentsTestData))
+  },
   saveOutcomes: () => {
     setLocalStorageObject(OutcomesLocalStorageKey, outcomes)
   },

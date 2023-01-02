@@ -5,6 +5,11 @@ import { ReactNode } from 'react'
 import { selectVariantForExperiment, useExperiments } from './useExperiment'
 
 const View: React.FC = () => {
+  useExperiments<ReactNode>('Storybook Test 2', [
+    { name: 'a/legacy', weight: 33 },
+    { name: 'b/testing', weight: 33 },
+    { name: 'c/testing', weight: 33 },
+  ])
   const { experimentName, selectVariant } = useExperiments<ReactNode>('Storybook Test 3', [
     { name: 'a/legacy', weight: 33 },
     { name: 'b/testing', weight: 33 },

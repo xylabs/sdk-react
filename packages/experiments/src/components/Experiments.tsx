@@ -10,24 +10,38 @@ import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLoca
 
 const defaultLocalStorageKey = 'testData'
 
-const experimentsTestData: { [index: string]: string } = {}
+let experimentsTestData: { [index: string]: string } = {}
 let outcomes: OutcomesData = {} //prevent multi-outcome
 
 const saveOutcomes = () => {
   setLocalStorageObject(OutcomesLocalStorageKey, outcomes)
 }
 
+const saveExperimentsTestData = (key: string) => {
+  const mergeData = (data: { [index: string]: string }, log?: Log): string => {
+    const dataArray: string[] = []
+    for (const key in data) {
+      dataArray.push(`${key}-${data[key]}`)
+    }
+    log?.info('MergeData', dataArray.join('|'))
+    return dataArray.join('|')
+  }
+  localStorage.setItem(key, mergeData(experimentsTestData))
+}
+
 const loadOutcomes = () => {
   outcomes = getLocalStorageObject(OutcomesLocalStorageKey)
 }
-
-const mergeData = (data: { [index: string]: string }, log?: Log) => {
-  const dataArray: string[] = []
-  for (const key in data) {
-    dataArray.push(`${key}-${data[key]}`)
-  }
-  log?.info('MergeData', dataArray.join('|'))
-  return dataArray.join('|')
+const loadExperimentsTestData = (key: string) => {
+  experimentsTestData =
+    localStorage
+      .getItem(key)
+      ?.split('|')
+      .reduce((acc, current) => {
+        const data = current.split('-')
+        acc[data[0]] = data[1]
+        return acc
+      }, {} as { [index: string]: string }) ?? {}
 }
 
 const missingKeyError = new Error('Experiment Elements must have Keys')
@@ -67,14 +81,12 @@ const saveExperimentDebugRanges = (name: string, totalWeight: number, childList:
 const Experiments: React.FC<ExperimentsProps> = (props) => {
   const { name, children, localStorageProp = true } = props
   const userEvents = useUserEvents()
-  loadOutcomes()
-
   const localStorageKey = buildLocalStorageKey(localStorageProp)
-
   const childList = makeChildrenArray(children)
-
   const totalWeight = calcTotalWeight(childList)
 
+  loadOutcomes()
+  loadExperimentsTestData(localStorageKey)
   saveExperimentDebugRanges(name, totalWeight, childList)
 
   const firstTime = outcomes[name] === undefined
@@ -91,7 +103,7 @@ const Experiments: React.FC<ExperimentsProps> = (props) => {
     experimentsTestData[name] = child.key?.toString()
     if (firstTime) {
       if (localStorageProp !== false) {
-        localStorage.setItem(localStorageKey, mergeData(experimentsTestData))
+        saveExperimentsTestData(localStorageKey)
       }
       if (userEvents) {
         forget(userEvents.testStarted({ name, variation: child.key }))
