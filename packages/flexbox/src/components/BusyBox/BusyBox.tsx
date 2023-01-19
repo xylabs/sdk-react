@@ -1,4 +1,5 @@
-import { Box, BoxProps, BoxTypeMap, Paper, useTheme } from '@mui/material'
+import { Box, BoxProps, Paper, useTheme } from '@mui/material'
+import { BoxTypeMap } from '@mui/system'
 import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
 import { forwardRef } from 'react'
 

@@ -15,19 +15,21 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.11.1",
+    "@mui/material": "^5.11.5",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@babel/core": "^7.20.7",
+    "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "@storybook/react": "^6.5.15",
     "@types/lodash": "^4.14.191",
-    "@xylabs/ts-scripts-yarn3": "^2.11.16",
+    "@xylabs/ts-scripts-yarn3": "^2.12.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "require-from-string": "^2.0.2",
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
