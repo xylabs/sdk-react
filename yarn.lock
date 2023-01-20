@@ -5864,9 +5864,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/pixel@npm:^1.4.9":
-  version: 1.4.9
-  resolution: "@xylabs/pixel@npm:1.4.9"
+"@xylabs/pixel@npm:^1.4.10":
+  version: 1.4.10
+  resolution: "@xylabs/pixel@npm:1.4.10"
   peerDependencies:
     "@xylabs/assert": ^2.6.14
     async-mutex: ^0.4.0
@@ -5876,7 +5876,7 @@ __metadata:
     lodash: ^4.17.21
     md5: ^2.3.0
     randombytes: ^2.1.0
-  checksum: fbdbf0172a7d34e3e437d1755dc7083b0a395b598460d44f9b53d37e21e02b32cb26d61097dd6f301ad0723d620c1da58df67a9a7a05001c2c6ecbd1e3a3423d
+  checksum: adb9ded6bb67835ce6e35e8129ac2777f99944b996516a7b89b40fcf2675e6b4f19d556b133e58c6babd6e961d7e7481ef03149d74b4522baca0874195090430
   languageName: node
   linkType: hard
 
@@ -6072,7 +6072,7 @@ __metadata:
     "@xylabs/assert": ^2.6.16
     "@xylabs/forget": ^2.6.16
     "@xylabs/log": ^2.6.16
-    "@xylabs/pixel": ^1.4.9
+    "@xylabs/pixel": ^1.4.10
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
@@ -6225,7 +6225,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@storybook/react": ^6.5.15
     "@xylabs/assert": ^2.6.16
-    "@xylabs/pixel": ^1.4.9
+    "@xylabs/pixel": ^1.4.10
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-common": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -6268,7 +6268,7 @@ __metadata:
     "@babel/preset-env": ^7.20.2
     "@xylabs/assert": ^2.6.16
     "@xylabs/delay": ^2.6.16
-    "@xylabs/pixel": ^1.4.9
+    "@xylabs/pixel": ^1.4.10
     "@xylabs/ts-scripts-yarn3": ^2.12.23
     async-mutex: ^0.4.0
     axios: ^1.2.3
@@ -6405,7 +6405,7 @@ __metadata:
     "@types/react-dom": ^18.0.10
     "@xylabs/assert": 2.6.16
     "@xylabs/eslint-config-react": ^2.12.23
-    "@xylabs/pixel": ^1.4.9
+    "@xylabs/pixel": ^1.4.10
     "@xylabs/react-accordion": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"
     "@xylabs/react-button": "workspace:^"
