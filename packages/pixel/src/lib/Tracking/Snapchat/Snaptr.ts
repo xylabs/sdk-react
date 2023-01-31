@@ -1,6 +1,7 @@
 import { delay } from '@xylabs/delay'
 
 class SnapTr {
+  public static instance: SnapTr
   public static getSnapTr() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
@@ -9,8 +10,6 @@ class SnapTr {
     }
     console.warn('Missing snaptr')
   }
-
-  public static instance: SnapTr
 
   public static async track<T>(event: string, data?: T) {
     this.getSnapTr()('track', event, data)

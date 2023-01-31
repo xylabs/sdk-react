@@ -2,8 +2,8 @@ import { Button, Dialog, DialogActions, DialogContent, DialogProps, DialogTitle 
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
 export interface MessageDialogProps extends DialogProps {
-  onOk?: () => void
   onCancel?: () => void
+  onOk?: () => void
 }
 
 export const MessageDialog: React.FC<MessageDialogProps> = ({ onOk, onCancel, children, title, ...props }) => {

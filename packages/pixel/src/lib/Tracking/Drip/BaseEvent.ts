@@ -3,10 +3,11 @@ import { delay } from '@xylabs/delay'
 export type DripEvent<T extends Record<string, unknown>> = (string | T)[]
 
 export class DripBaseEvent<T extends Record<string, unknown>> {
-  public name: string
-  public param?: string
   public dcq: DripEvent<T>[]
   public dcs: unknown
+  public name: string
+  public param?: string
+
   constructor(name: string, param?: string) {
     this.name = name
     this.param = param

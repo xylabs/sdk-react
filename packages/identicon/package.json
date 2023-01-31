@@ -22,10 +22,10 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "@types/md5": "^2.3.2",
-    "@xylabs/ts-scripts-yarn3": "^2.12.25",
+    "@xylabs/ts-scripts-yarn3": "^2.12.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": "^18.2.0",

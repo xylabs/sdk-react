@@ -6,13 +6,13 @@ import { ReactNode, useState } from 'react'
 type Override<T1, T2> = Omit<T1, keyof T2> & T2
 
 interface SimpleAccordionCardAdditionalProps extends AccordionProps {
-  name: string
-  linkText?: string
-  to?: string
-  href?: string
   description?: string
   expanded?: boolean
+  href?: string
+  linkText?: string
+  name: string
   onChange?: () => void
+  to?: string
 }
 
 interface OptionalChildren {
@@ -22,8 +22,8 @@ interface OptionalChildren {
 export type SimpleAccordionCardProps = Override<SimpleAccordionCardAdditionalProps, OptionalChildren>
 
 interface AccordionGroupProps {
-  defaultExpandedIndex?: number
   data?: SimpleAccordionCardProps[]
+  defaultExpandedIndex?: number
 }
 
 export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedIndex, data }) => {

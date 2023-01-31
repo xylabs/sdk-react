@@ -1,7 +1,4 @@
-import { useContext } from 'react'
+import { useInvertibleThemeProvider } from '@xylabs/react-invertible-theme'
 
-import { InvertableThemeContext } from './InvertableThemeContext'
-
-export const useInvertableThemeProvider = () => {
-  return useContext(InvertableThemeContext)
-}
+/** @deprecated use useInvertibleThemeProvider (@xylabs/react-invertible-theme) instead*/
+export const useInvertableThemeProvider = useInvertibleThemeProvider

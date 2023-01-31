@@ -7,8 +7,8 @@ import { OperaEthersLoader } from './Opera'
 import { TrustEthersLoader } from './Trust'
 
 export interface EthersLoaderProps {
-  enabled?: boolean
   children?: ReactNode
+  enabled?: boolean
 }
 
 export const EthersLoader: React.FC<EthersLoaderProps> = (props) => {

@@ -1,12 +1,6 @@
 class EF {
   public static instance: EF
-  public static init() {
-    try {
-      EF.instance = new EF()
-    } catch (ex) {
-      console.error(`EF.init: ${ex}`)
-    }
-  }
+
   public static getEF() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
@@ -14,6 +8,14 @@ class EF {
       return global.EF
     }
     console.warn('Missing EF')
+  }
+
+  public static init() {
+    try {
+      EF.instance = new EF()
+    } catch (ex) {
+      console.error(`EF.init: ${ex}`)
+    }
   }
 
   public track(event: string, data?: Record<string, unknown>) {

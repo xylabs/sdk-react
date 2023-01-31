@@ -5,11 +5,11 @@ interface NumberStatusProps extends ButtonExProps {
   error?: Error
   fontSize?: number
   format?: string
+  rounded?: boolean
   shorten?: string | boolean
   title?: string
   value?: number | string
   width?: number
-  rounded?: boolean
 }
 
 export type { NumberStatusProps }

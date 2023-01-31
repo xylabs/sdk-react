@@ -6,8 +6,8 @@ import { forwardRef } from 'react'
 import { useBusyTiming } from '../../hooks'
 
 export interface BusyBoxProps extends BusyProps, Omit<BoxProps<BoxTypeMap['defaultComponent']>, 'ref'> {
-  paper?: boolean
   background?: boolean
+  paper?: boolean
 }
 
 const BusyBox = forwardRef<unknown, BusyBoxProps>(

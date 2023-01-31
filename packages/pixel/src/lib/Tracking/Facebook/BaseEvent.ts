@@ -4,8 +4,9 @@ import { delay } from '@xylabs/delay'
 import { Fbq } from './Fbq'
 
 class FacebookBaseEvent<T> {
-  public name: string
   public fbq: Fbq
+  public name: string
+
   constructor(name: string) {
     this.name = name
     this.fbq = assertEx(Fbq.instance, 'Missing Fbq')

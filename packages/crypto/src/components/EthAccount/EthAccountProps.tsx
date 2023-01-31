@@ -3,13 +3,14 @@ import { EthAddress } from '@xylabs/eth-address'
 interface EthAccountProps {
   address?: EthAddress | null
   addressLength?: 'auto' | 'short' | 'long'
-  shortenedLength?: number
+  fontFamily?: string
   full?: boolean
   icon?: boolean
-  iconSize?: number
+
   iconOnly?: boolean
+  iconSize?: number
+  shortenedLength?: number
   toEtherScan?: boolean
-  fontFamily?: string
 }
 
 export type { EthAccountProps }

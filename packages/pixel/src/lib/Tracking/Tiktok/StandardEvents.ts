@@ -1,12 +1,8 @@
 import { TiktokStandardEvent } from './StandardEvent'
 
 export class TiktokStandardEvents<T extends Record<string, unknown>> {
-  public pageView() {
-    return new TiktokStandardEvent<T>('Browse')
-  }
-
-  public viewContent() {
-    return new TiktokStandardEvent<T>('ViewContent')
+  public addBilling() {
+    return new TiktokStandardEvent<T>('AddBilling')
   }
 
   public addToCart() {
@@ -17,40 +13,12 @@ export class TiktokStandardEvents<T extends Record<string, unknown>> {
     return new TiktokStandardEvent<T>('Checkout')
   }
 
-  public purchase() {
-    return new TiktokStandardEvent<T>('Purchase')
-  }
-
-  public registration() {
-    return new TiktokStandardEvent<T>('Registration')
-  }
-
-  public startCheckout() {
-    return new TiktokStandardEvent<T>('StartCheckout')
-  }
-
-  public addBilling() {
-    return new TiktokStandardEvent<T>('AddBilling')
-  }
-
-  public search() {
-    return new TiktokStandardEvent<T>('Search')
-  }
-
-  public viewForm() {
-    return new TiktokStandardEvent<T>('ViewForm')
+  public clickButton() {
+    return new TiktokStandardEvent<T>('ClickButton')
   }
 
   public clickForm() {
     return new TiktokStandardEvent<T>('ClickForm')
-  }
-
-  public submitForm() {
-    return new TiktokStandardEvent<T>('SubmitForm')
-  }
-
-  public viewDownloadPage() {
-    return new TiktokStandardEvent<T>('ViewDownloadPage')
   }
 
   public clickInDownloadPage() {
@@ -61,7 +29,39 @@ export class TiktokStandardEvents<T extends Record<string, unknown>> {
     return new TiktokStandardEvent<T>('ClickToDownload')
   }
 
-  public clickButton() {
-    return new TiktokStandardEvent<T>('ClickButton')
+  public pageView() {
+    return new TiktokStandardEvent<T>('Browse')
+  }
+
+  public purchase() {
+    return new TiktokStandardEvent<T>('Purchase')
+  }
+
+  public registration() {
+    return new TiktokStandardEvent<T>('Registration')
+  }
+
+  public search() {
+    return new TiktokStandardEvent<T>('Search')
+  }
+
+  public startCheckout() {
+    return new TiktokStandardEvent<T>('StartCheckout')
+  }
+
+  public submitForm() {
+    return new TiktokStandardEvent<T>('SubmitForm')
+  }
+
+  public viewContent() {
+    return new TiktokStandardEvent<T>('ViewContent')
+  }
+
+  public viewDownloadPage() {
+    return new TiktokStandardEvent<T>('ViewDownloadPage')
+  }
+
+  public viewForm() {
+    return new TiktokStandardEvent<T>('ViewForm')
   }
 }

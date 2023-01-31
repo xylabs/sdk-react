@@ -16,7 +16,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.5",
+    "@mui/material": "^5.11.7",
     "@xylabs/assert": "^2.6.16",
     "@xylabs/react-appbar": "workspace:^",
     "@xylabs/react-cookie-consent": "workspace:^",
@@ -27,20 +27,20 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.7.0"
+    "react-router-dom": "^6.8.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
-    "@storybook/react": "^6.5.15",
+    "@storybook/react": "^6.5.16",
     "@types/lodash": "^4.14.191",
     "@types/react-helmet": "^6.1.6",
-    "@xylabs/ts-scripts-yarn3": "^2.12.25",
+    "@xylabs/ts-scripts-yarn3": "^2.12.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "require-from-string": "^2.0.2",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": "^18.2.0",

@@ -1,20 +1,20 @@
 import { Box, CssBaseline, Typography, useTheme } from '@mui/material'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { InvertableThemeProvider } from './InvertableThemeProvider'
+import { InvertibleThemeProvider } from './InvertibleThemeProvider'
 
 const StorybookEntry = {
   argTypes: {},
-  component: InvertableThemeProvider,
+  component: InvertibleThemeProvider,
   parameters: {
     docs: {
       page: null,
     },
   },
-  title: 'invertable-theme/InvertableThemeProvider',
-} as ComponentMeta<typeof InvertableThemeProvider>
+  title: 'invertible-theme/InvertibleThemeProvider',
+} as ComponentMeta<typeof InvertibleThemeProvider>
 
-const Template: ComponentStory<typeof InvertableThemeProvider> = (args) => <InvertableThemeProvider {...args}></InvertableThemeProvider>
+const Template: ComponentStory<typeof InvertibleThemeProvider> = (args) => <InvertibleThemeProvider {...args}></InvertibleThemeProvider>
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()

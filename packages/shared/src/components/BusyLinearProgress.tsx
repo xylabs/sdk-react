@@ -2,9 +2,9 @@ import { alpha, Box, LinearProgress, LinearProgressProps, useTheme } from '@mui/
 import React from 'react'
 
 export interface BusyLinearProgressProps extends LinearProgressProps {
+  bgcolor?: string
   opacity?: string | number
   rounded?: boolean
-  bgcolor?: string
 }
 
 const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({ bgcolor, style, rounded, opacity = 0.85, ...props }) => {

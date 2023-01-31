@@ -64,7 +64,7 @@ export const PixelDebugger: React.FC = () => {
   )
 }
 
-const PixelEventDetails: React.FC<PixelEvent & { index: number; events: PixelEvent[] }> = ({ event, fields, index, events }) => {
+const PixelEventDetails: React.FC<PixelEvent & { events: PixelEvent[]; index: number }> = ({ event, fields, index, events }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <FlexCol alignItems="stretch" marginBottom={0.5} onClick={() => setIsOpen(!isOpen)}>
