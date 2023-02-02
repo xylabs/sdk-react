@@ -13,7 +13,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.6.16",
     "@xylabs/forget": "^2.6.16",
     "@xylabs/log": "^2.6.16",
     "@xylabs/react-flexbox": "workspace:^",

@@ -5959,7 +5959,6 @@ __metadata:
     "@babel/core": ^7.20.12
     "@babel/preset-env": ^7.20.2
     "@storybook/react": ^6.5.16
-    "@xylabs/assert": ^2.6.16
     "@xylabs/forget": ^2.6.16
     "@xylabs/log": ^2.6.16
     "@xylabs/pixel": ^1.4.10
@@ -6123,7 +6122,6 @@ __metadata:
     "@babel/core": ^7.20.12
     "@babel/preset-env": ^7.20.2
     "@storybook/react": ^6.5.16
-    "@xylabs/assert": ^2.6.16
     "@xylabs/pixel": ^1.4.10
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-common": "workspace:^"
