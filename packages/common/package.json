@@ -13,8 +13,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
     "@xylabs/assert": "^2.6.16",

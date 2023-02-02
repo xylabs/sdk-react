@@ -13,8 +13,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.7",
     "@xylabs/api": "^2.6.16",
     "@xylabs/log": "^2.6.16"

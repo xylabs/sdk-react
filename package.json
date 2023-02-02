@@ -38,8 +38,6 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.7",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-docs": "^6.5.16",
@@ -80,8 +78,6 @@
     "webpack": "^5.75.0"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.5",
     "@xylabs/assert": "2.6.15",
     "@xylabs/pixel": "^1.4.9",
@@ -137,5 +133,9 @@
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
   "version": "2.15.14",
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.4.1",
+  "volta": {
+    "node": "18.13.0",
+    "yarn": "3.4.1"
+  }
 }
