@@ -1,16 +1,16 @@
 import { Log } from '@xylabs/log'
 
-export const getSessionStorageObject = <T>(key: string, log?: Log): T => {
-  let result = {} as T
+export const getSessionStorageObject = (key: string, log?: Log) => {
+  let result = {}
   try {
-    result = JSON.parse(sessionStorage.getItem(key) ?? '{}') as T
+    result = JSON.parse(sessionStorage.getItem(key) ?? '{}')
   } catch (e) {
     log?.error('getSessionStorageObject', e)
   }
   return result
 }
 
-export const setSessionStorageObject = <T>(key: string, value: T, log?: Log) => {
+export const setSessionStorageObject = (key: string, value: Record<string, unknown>, log?: Log) => {
   try {
     sessionStorage.setItem(key, JSON.stringify(value))
   } catch (e) {
