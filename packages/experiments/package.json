@@ -13,7 +13,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.6.16",
     "@xylabs/forget": "^2.6.16",
     "@xylabs/log": "^2.6.16",
     "@xylabs/react-flexbox": "workspace:^",
@@ -40,8 +39,6 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.5",
     "@xylabs/pixel": "^1.4.9",
     "async-mutex": "^0.4.0",
@@ -91,5 +88,5 @@
   },
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
-  "version": "2.15.14"
+  "version": "2.15.15"
 }

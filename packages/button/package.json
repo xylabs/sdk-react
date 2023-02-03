@@ -13,8 +13,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.7",
     "@xylabs/react-shared": "workspace:^",
     "react": "^18.2.0",
@@ -74,5 +72,5 @@
   },
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
-  "version": "2.15.14"
+  "version": "2.15.15"
 }
