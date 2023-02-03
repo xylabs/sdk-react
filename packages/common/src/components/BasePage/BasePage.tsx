@@ -2,7 +2,7 @@ import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
 import { Container, Fab, ScopedCssBaseline, Typography, useTheme } from '@mui/material'
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { InvertableThemeProvider } from '@xylabs/react-invertable-theme'
+import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
 import { Helmet } from 'react-helmet'
 
@@ -59,9 +59,9 @@ const BasePage: React.FC<BasePageProps> = ({
       {hideFooter ? null : <footer>{appFooter}</footer>}
       {cookieConsent ?? (
         <ScopedCssBaseline>
-          <InvertableThemeProvider invert>
+          <InvertibleThemeProvider invert>
             <CookieConsent borderRadius={0} />
-          </InvertableThemeProvider>
+          </InvertibleThemeProvider>
         </ScopedCssBaseline>
       )}
       {scrollToTopButton ? (

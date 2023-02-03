@@ -1,9 +1,7 @@
-import { createContext } from 'react'
+import { InvertibleThemeContext } from '@xylabs/react-invertible-theme'
 
-import { InvertableTheme } from './InvertableTheme'
+/** @deprecated use InvertibleThemeContext (@xylabs/react-invertible-theme) instead*/
+const InvertableThemeContext = InvertibleThemeContext
 
-const InvertableThemeContext = createContext<InvertableTheme>({
-  options: {},
-})
-
+// eslint-disable-next-line deprecation/deprecation
 export { InvertableThemeContext }

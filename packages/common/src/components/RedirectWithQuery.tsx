@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { NavigateOptions, To, useLocation, useNavigate } from 'react-router-dom'
 
 export interface RedirectWithQueryProps {
+  href?: string
   to?: To
   toOptions?: NavigateOptions
-  href?: string
 }
 
 export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({ href, to, toOptions }) => {

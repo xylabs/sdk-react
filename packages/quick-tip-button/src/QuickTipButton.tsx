@@ -4,11 +4,11 @@ import { MessageDialog } from '@xylabs/react-dialogs'
 import { JSXElementConstructor, useState } from 'react'
 
 export interface QuickTipButtonProps extends IconButtonProps {
-  fontSize?: 'small' | 'medium' | 'large' | 'inherit'
-  disableDialog?: boolean
-  hoverText?: string
   Icon?: JSXElementConstructor<SvgIconProps>
   dialogProps?: Omit<DialogProps, 'open'>
+  disableDialog?: boolean
+  fontSize?: 'small' | 'medium' | 'large' | 'inherit'
+  hoverText?: string
 }
 
 export const QuickTipButton: React.FC<QuickTipButtonProps> = ({

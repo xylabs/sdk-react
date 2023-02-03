@@ -6,9 +6,9 @@ export interface TokenAmountProps extends ButtonExProps {
   amount?: BigNumber | null
   label?: string
   logo?: boolean
-  places?: number
-  textFontFamily?: string
-  textColor?: string
-  statusColor?: string
   onButtonClick?: MouseEventHandler<HTMLButtonElement>
+  places?: number
+  statusColor?: string
+  textColor?: string
+  textFontFamily?: string
 }

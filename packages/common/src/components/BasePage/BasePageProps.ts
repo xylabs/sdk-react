@@ -7,11 +7,11 @@ interface BasePageProps extends BoxProps {
   appFooter?: ReactElement
   beta?: boolean
   container?: 'xl' | 'lg' | 'md' | 'sm' | 'xs'
+  cookieConsent?: ReactNode
   disableGutters?: boolean
   hideAppBar?: boolean
   hideFooter?: boolean
   noindex?: boolean
-  cookieConsent?: ReactNode
   scrollToTopButton?: boolean
   title?: string
 }

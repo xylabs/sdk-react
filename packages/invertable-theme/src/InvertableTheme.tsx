@@ -1,9 +1,3 @@
-import { ThemeOptions } from '@mui/material'
+import { InvertibleTheme } from '@xylabs/react-invertible-theme'
 
-interface InvertableTheme {
-  options: ThemeOptions
-  lightOptions?: ThemeOptions
-  darkOptions?: ThemeOptions
-}
-
-export type { InvertableTheme }
+export type InvertableTheme = InvertibleTheme

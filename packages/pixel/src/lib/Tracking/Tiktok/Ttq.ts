@@ -1,14 +1,5 @@
 class Ttq {
   public static instance: Ttq
-  public static init(pixelId: string) {
-    try {
-      Ttq.instance = new Ttq()
-      Ttq.getTtq().load(pixelId)
-      Ttq.page()
-    } catch (ex) {
-      console.error(`Ttq.init: ${ex}`)
-    }
-  }
 
   public static getTtq() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,6 +8,16 @@ class Ttq {
       return global.ttq
     }
     console.warn('Missing ttq')
+  }
+
+  public static init(pixelId: string) {
+    try {
+      Ttq.instance = new Ttq()
+      Ttq.getTtq().load(pixelId)
+      Ttq.page()
+    } catch (ex) {
+      console.error(`Ttq.init: ${ex}`)
+    }
   }
 
   public static page() {

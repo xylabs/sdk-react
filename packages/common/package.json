@@ -16,29 +16,31 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.1",
-    "@xylabs/assert": "^2.6.14",
+    "@mui/material": "^5.11.7",
+    "@xylabs/assert": "^2.6.16",
     "@xylabs/react-appbar": "workspace:^",
     "@xylabs/react-cookie-consent": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-invertable-theme": "workspace:^",
+    "@xylabs/react-invertible-theme": "workspace:^",
     "@xylabs/react-scroll-to-top": "workspace:^",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.6.1"
+    "react-router-dom": "^6.8.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@babel/core": "^7.20.7",
+    "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
+    "@storybook/react": "^6.5.16",
     "@types/lodash": "^4.14.191",
     "@types/react-helmet": "^6.1.6",
-    "@xylabs/ts-scripts-yarn3": "^2.11.16",
+    "@xylabs/ts-scripts-yarn3": "^2.12.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "require-from-string": "^2.0.2",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -80,6 +82,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "types": "dist/esm/index.d.ts",
-  "version": "2.15.8"
+  "types": "dist/types/index.d.ts",
+  "version": "2.15.14"
 }

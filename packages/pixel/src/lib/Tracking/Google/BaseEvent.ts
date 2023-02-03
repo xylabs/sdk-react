@@ -11,6 +11,14 @@ export class GoogleBaseEvent<T extends Record<string, unknown>> {
     this.adwordConversionId = adwordConversionId
   }
 
+  public gtag() {
+    return assertEx(Gtag.instance, 'Missing/uninitialized gtag')
+  }
+
+  public gtm() {
+    return assertEx(Gtm.instance, 'Missing/uninitialized gtm')
+  }
+
   async send(data: T) {
     return await this.sendGtag(data)
   }
@@ -24,13 +32,5 @@ export class GoogleBaseEvent<T extends Record<string, unknown>> {
 
   async sendGtm(data: T) {
     await this.gtm().send(this.name, data)
-  }
-
-  public gtag() {
-    return assertEx(Gtag.instance, 'Missing/uninitialized gtag')
-  }
-
-  public gtm() {
-    return assertEx(Gtm.instance, 'Missing/uninitialized gtm')
   }
 }

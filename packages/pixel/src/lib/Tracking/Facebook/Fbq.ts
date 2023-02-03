@@ -1,7 +1,8 @@
 class Fbq {
-  public pixelId?: string
+  public static instance: Fbq
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public fbq?: any
+  public pixelId?: string
 
   private constructor(pixelId: string) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,7 +27,6 @@ class Fbq {
     this.fbq('track', 'PageView')
   }
 
-  public static instance: Fbq
   public static init(pixelId: string) {
     if (!this.instance) {
       this.instance = new Fbq(pixelId)

@@ -5,12 +5,14 @@ export type BusyVariant = 'circular' | 'linear'
 
 export interface BusyProps {
   busy?: boolean
-  busyOpacity?: string | number
-  busyColor?: MaterialUIThemeColor
-  busyVariant?: BusyVariant
   busyCircularProps?: BusyCircularProgressProps
+  busyColor?: MaterialUIThemeColor
   busyLinearProps?: BusyLinearProgressProps
-  busySize?: number
+
   /** minimum duration in milliseconds for busy to appear */
   busyMinimum?: number
+
+  busyOpacity?: string | number
+  busySize?: number
+  busyVariant?: BusyVariant
 }

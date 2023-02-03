@@ -16,17 +16,20 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.1",
+    "@mui/material": "^5.11.7",
     "@xylabs/react-button": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@xylabs/ts-scripts-yarn3": "^2.11.16",
+    "@storybook/react": "^6.5.16",
+    "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/ts-scripts-yarn3": "^2.12.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "require-from-string": "^2.0.2",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -68,6 +71,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "types": "dist/esm/index.d.ts",
-  "version": "2.15.8"
+  "types": "dist/types/index.d.ts",
+  "version": "2.15.14"
 }

@@ -2,8 +2,8 @@ import { createContext } from 'react'
 
 const CookieConsentContext = createContext<{
   accepted?: boolean
-  setAccepted?: (accepted: boolean) => void
   clearAccepted?: () => void
+  setAccepted?: (accepted: boolean) => void
   storageName?: string
 }>({})
 export { CookieConsentContext }

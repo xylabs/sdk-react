@@ -1,4 +1,5 @@
-ignores: [ "@xylabs/ts-scripts-yarn3",
+ignores: [
+  "@xylabs/ts-scripts-yarn3",
   "@xylabs/ts-scripts-yarn3",
   "@xylabs/tsconfig-dom",
   "ts-node",
@@ -9,8 +10,14 @@ ignores: [ "@xylabs/ts-scripts-yarn3",
   "@storybook/addon-essentials",
   "@storybook/addon-interactions",
   "@storybook/addon-links",
+  "@storybook/api",
   "@storybook/builder-webpack5",
+  "@storybook/components",
+  "@storybook/core-events",
   "@storybook/manager-webpack5",
+  "@types/node",
+  "@types/react-dom",
   "@storybook/testing-library",
-  "typedoc"
+  "typedoc",
+  "webpack"
 ]

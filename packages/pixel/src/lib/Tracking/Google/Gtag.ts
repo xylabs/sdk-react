@@ -2,16 +2,11 @@ import { assertEx } from '@xylabs/assert'
 import { parse, stringify } from 'query-string'
 
 class Gtag {
-  public updatePagePath(page_path: string) {
-    const ga4id = assertEx(this.ga4id, 'Missing GA4ID')
-    const pathOnly = page_path.split('?')[0]
-    const search = Gtag.getInitialQuery()
-    this.gtag('config', ga4id, { page_path: `${pathOnly}${search}` })
-  }
-
-  public ga4id?: string
+  public static instance: Gtag
   public awid?: string
   public domains?: string[]
+  public ga4id?: string
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public gtag?: any
 
@@ -41,20 +36,6 @@ class Gtag {
     sessionStorage.setItem('initialPage', document.location.href)
   }
 
-  //
-
-  public static getInitialQuery() {
-    return sessionStorage.getItem('initialQuery') || ''
-  }
-
-  public static getInitialPage() {
-    return sessionStorage.getItem('initialPage') || ''
-  }
-
-  public static getInitialReferrer() {
-    return sessionStorage.getItem('initialReferrer') || ''
-  }
-
   public static clearDataLayer() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
@@ -62,7 +43,18 @@ class Gtag {
     dataLayer.length = 0
   }
 
-  public static instance: Gtag
+  public static getInitialPage() {
+    return sessionStorage.getItem('initialPage') || ''
+  }
+
+  public static getInitialQuery() {
+    return sessionStorage.getItem('initialQuery') || ''
+  }
+
+  public static getInitialReferrer() {
+    return sessionStorage.getItem('initialReferrer') || ''
+  }
+
   public static init(ga4id: string, awid: string, domains?: string[]) {
     if (!this.instance) {
       return this.reinit(ga4id, awid, domains)
@@ -80,6 +72,19 @@ class Gtag {
     return instance.updatePagePath(page_path)
   }
 
+  public sendAdwords(event: string, data: Record<string, unknown>) {
+    return new Promise<void>((resolve) => {
+      this.gtag('event', 'conversion', {
+        ...data,
+        event_callback: () => {
+          resolve()
+        },
+        event_timeout: 2000,
+        send_to: `${this.awid}/${event}`,
+      })
+    })
+  }
+
   public sendAnalytics(event: string, data: Record<string, unknown>) {
     return new Promise<void>((resolve) => {
       this.gtag('event', event, {
@@ -95,17 +100,11 @@ class Gtag {
     })
   }
 
-  public sendAdwords(event: string, data: Record<string, unknown>) {
-    return new Promise<void>((resolve) => {
-      this.gtag('event', 'conversion', {
-        ...data,
-        event_callback: () => {
-          resolve()
-        },
-        event_timeout: 2000,
-        send_to: `${this.awid}/${event}`,
-      })
-    })
+  public updatePagePath(page_path: string) {
+    const ga4id = assertEx(this.ga4id, 'Missing GA4ID')
+    const pathOnly = page_path.split('?')[0]
+    const search = Gtag.getInitialQuery()
+    this.gtag('config', ga4id, { page_path: `${pathOnly}${search}` })
   }
 }
 

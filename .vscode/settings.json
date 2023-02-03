@@ -6,7 +6,7 @@
     "**/.DS_Store": true,
     "**/node_modules": true,
     "**/build": true,
-    "**/dist": true,
+    "**/dist": false,
     "**/.webpack": true,
     "**/.serverless": true,
     "**/.rollup.cache": true,
@@ -47,11 +47,21 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "cSpell.words": [
+    "adword",
+    "Adwords",
     "appbar",
+    "awid",
     "bignumber",
+    "bowser",
     "ethersproject",
     "flexbox",
-    "invertable",
-    "xylabs"
+    "instrumenter",
+    "Merkle",
+    "noindex",
+    "reinit",
+    "Tiktok",
+    "typedoc",
+    "xylabs",
+    "yarnpkg"
   ]
 }

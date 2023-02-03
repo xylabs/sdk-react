@@ -1,20 +1,7 @@
-import { ThemeOptions } from '@mui/material'
-import { ReactNode } from 'react'
+import { InvertibleThemeProviderProps } from '@xylabs/react-invertible-theme'
 
-interface InvertableThemeProviderProps {
-  dark?: boolean
-  scoped?: boolean
-  invert?: boolean
-  noResponsiveFonts?: boolean
-  options?: ThemeOptions
-  /**
-   * @deprecated use darkOptions instead
-   */
-  darkTheme?: ThemeOptions
-  darkOptions?: ThemeOptions
-  lightOptions?: ThemeOptions
-  resolve?: boolean
-  children?: ReactNode
-}
+/** @deprecated use InvertibleThemeProviderProps (@xylabs/react-invertible-theme) instead*/
+type InvertableThemeProviderProps = InvertibleThemeProviderProps
 
+// eslint-disable-next-line deprecation/deprecation
 export type { InvertableThemeProviderProps }

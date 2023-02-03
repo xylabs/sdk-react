@@ -2,8 +2,8 @@ import { alpha, Box, CircularProgress, CircularProgressProps, useTheme } from '@
 import React from 'react'
 
 export interface BusyCircularProgressProps extends CircularProgressProps {
-  opacity?: number | string
   bgcolor?: string
+  opacity?: number | string
   rounded?: boolean
   size?: string | number
 }
