@@ -13,25 +13,23 @@
     "packages/*"
   ],
   "dependencies": {
-    "@mui/material": "^5.11.7",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-shared": "workspace:^",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@xylabs/react-shared": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2",
+    "@mui/material": "^5.11.8",
     "@storybook/react": "^6.5.16",
-    "@xylabs/ts-scripts-yarn3": "^2.12.30",
+    "@xylabs/ts-scripts-yarn3": "^2.13.11",
+    "@xylabs/tsconfig-react": "^2.13.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "require-from-string": "^2.0.2",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
+    "@mui/material": "^5.11.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

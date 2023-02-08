@@ -16,30 +16,31 @@
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^10.2.1",
-    "@mui/material": "^5.11.7",
-    "@xylabs/assert": "^2.6.16",
-    "@xylabs/bignumber": "^2.6.16",
-    "@xylabs/eth-address": "^2.6.16",
+    "@xylabs/assert": "^2.7.1",
+    "@xylabs/bignumber": "^2.7.1",
+    "@xylabs/eth-address": "^2.7.1",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-identicon": "workspace:^",
-    "@xylabs/react-shared": "workspace:^",
-    "react-router-dom": "^6.8.0"
+    "@xylabs/react-shared": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/preset-env": "^7.20.2",
+    "@mui/material": "^5.11.8",
     "@storybook/react": "^6.5.16",
-    "@xylabs/ts-scripts-yarn3": "^2.12.30",
+    "@xylabs/ts-scripts-yarn3": "^2.13.11",
+    "@xylabs/tsconfig-react": "^2.13.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "require-from-string": "^2.0.2",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
+    "@mui/material": "^5.11.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0"
   },
   "browser": "dist/esm/index.js",
   "docs": "dist/docs.json",

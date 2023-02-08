@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "declarationDir": "./dist/types",
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "outDir": "dist",
-    "sourceMap": true
+    "declarationDir": "./dist/types"
   },
-  "extends": "@xylabs/tsconfig-dom"
+  "extends": "@xylabs/tsconfig-react"
 }
