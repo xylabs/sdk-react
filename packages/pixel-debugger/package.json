@@ -38,7 +38,10 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.5",
+    "@mui/styles": "^5.11.7",
+    "@mui/system": "^5.11",
     "@xylabs/pixel": "^1.4.9",
     "async-mutex": "^0.4.0",
     "axios": "^1.2",
@@ -48,7 +51,9 @@
     "md5": "^2.3.0",
     "randombytes": "^2.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.8.1"
   },
   "browser": "dist/esm/index.js",
   "docs": "dist/docs.json",

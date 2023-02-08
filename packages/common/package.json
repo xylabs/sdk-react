@@ -40,6 +40,8 @@
   "peerDependencies": {
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
+    "@mui/styles": "^5.11.7",
+    "@mui/system": "^5.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
