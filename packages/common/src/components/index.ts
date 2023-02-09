@@ -1,5 +1,4 @@
 export * from './Background'
-export * from './BasePage'
 export * from './Breadcrumbs'
 export * from './CoverProgress'
 export * from './MenuEx'

@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-crypto",
+  "name": "@xylabs/react-base-page",
   "author": {
     "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
@@ -13,33 +13,35 @@
     "packages/*"
   ],
   "dependencies": {
-    "@ethersproject/abstract-signer": "^5.7.0",
-    "@ethersproject/providers": "^5.7.2",
-    "@metamask/providers": "^10.2.1",
-    "@xylabs/assert": "^2.7.1",
-    "@xylabs/bignumber": "^2.7.1",
-    "@xylabs/eth-address": "^2.7.1",
-    "@xylabs/react-button": "workspace:^",
+    "@xylabs/react-appbar": "workspace:^",
+    "@xylabs/react-cookie-consent": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-identicon": "workspace:^",
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-invertible-theme": "workspace:^",
+    "@xylabs/react-scroll-to-top": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.8",
     "@storybook/react": "^6.5.16",
+    "@types/react-helmet": "^6.1.6",
     "@xylabs/ts-scripts-yarn3": "^2.14.1",
     "@xylabs/tsconfig-react": "^2.14.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.8.1",
     "require-from-string": "^2.0.2",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
+    "@mui/styles": "^5.11.7",
+    "@mui/system": "^5.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.8.0"
   },
   "browser": "dist/esm/index.js",
