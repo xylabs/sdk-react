@@ -6031,10 +6031,10 @@ __metadata:
     require-from-string: ^2.0.2
     typescript: ^4.9.5
   peerDependencies:
-    "@mui/material": ^5.11.7
-    "@mui/styles": ^5.11.7
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    "@mui/material": ^5
+    "@mui/styles": ^5
+    react: ^18
+    react-dom: ^18
   peerDependenciesMeta:
     "@mui/styles":
       optional: true
@@ -6054,8 +6054,9 @@ __metadata:
     react-dom: ^18.2.0
     typescript: ^4.9.5
   peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6132,9 +6133,10 @@ __metadata:
     require-from-string: ^2.0.2
     typescript: ^4.9.5
   peerDependencies:
-    "@mui/material": ^5.11.7
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
+    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6220,10 +6222,11 @@ __metadata:
     require-from-string: ^2.0.2
     typescript: ^4.9.5
   peerDependencies:
-    "@mui/styles": ^5.11.7
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-router-dom: ^6.8.1
+    "@mui/material": ^5
+    "@mui/styles": ^5
+    react: ^18
+    react-dom: ^18
+    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
