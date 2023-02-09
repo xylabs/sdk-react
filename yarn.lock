@@ -6035,6 +6035,9 @@ __metadata:
     "@mui/styles": ^5.11.7
     react: ^18.2.0
     react-dom: ^18.2.0
+  peerDependenciesMeta:
+    "@mui/styles":
+      optional: true
   languageName: unknown
   linkType: soft
 
