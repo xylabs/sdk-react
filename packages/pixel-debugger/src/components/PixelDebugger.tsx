@@ -1,8 +1,8 @@
 import { Badge, Card, Divider, Typography, useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
-import { Portal } from '@xylabs/react-common'
 import { FlexCol } from '@xylabs/react-flexbox'
 import { DebugUserEventsContext } from '@xylabs/react-pixel'
+import { Portal } from '@xylabs/react-portal'
 import { useContext, useState } from 'react'
 
 import { usePixelAltSendHandler } from '../hooks'

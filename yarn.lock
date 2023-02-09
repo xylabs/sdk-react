@@ -4814,7 +4814,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^18.13.0":
+"@types/node@npm:*, @types/node@npm:~18.13.0":
   version: 18.13.0
   resolution: "@types/node@npm:18.13.0"
   checksum: 4ea10f8802848b01672bce938f678b6774ca2cee0c9774f12275ab064ae07818419c3e2e41d6257ce7ba846d1ea26c63214aa1dfa4166fa3746291752b8c6416
@@ -5642,9 +5642,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/eslint-config-react@npm:^2.14.1":
-  version: 2.14.1
-  resolution: "@xylabs/eslint-config-react@npm:2.14.1"
+"@xylabs/eslint-config-react@npm:^2.14.2":
+  version: 2.14.2
+  resolution: "@xylabs/eslint-config-react@npm:2.14.2"
   dependencies:
     "@babel/core": ^7.20.12
     "@babel/eslint-parser": ^7.19.1
@@ -5652,7 +5652,7 @@ __metadata:
     "@babel/plugin-transform-react-jsx": ^7.20.13
     "@typescript-eslint/eslint-plugin": ^5.51.0
     "@typescript-eslint/parser": ^5.51.0
-    "@xylabs/eslint-config": ^2.14.1
+    "@xylabs/eslint-config": ^2.14.2
     eslint-config-prettier: ^8.6.0
     eslint-config-react-app: ^7.0.1
     eslint-import-resolver-typescript: ^3.5.3
@@ -5674,13 +5674,13 @@ __metadata:
     typescript: ^4.9.5
   peerDependencies:
     eslint: ^8.23.0
-  checksum: 26289ee1345dc33ee01884ba4253d0f5276176f22a4febbaf8084710b2fd1fb19f32cf30db5accdc7c3f1c1a1fd5120f6c72667c4f7490cc804c855f5eae97f9
+  checksum: 0213cee7c5b4a8459a7d236fc12f1dbd144223e9b3651335267c30e7264337dde5b0528bb5ef12d0a5dda2c692806f158db874cbe4d2749ad515446fa52e695e
   languageName: node
   linkType: hard
 
-"@xylabs/eslint-config@npm:^2.14.1":
-  version: 2.14.1
-  resolution: "@xylabs/eslint-config@npm:2.14.1"
+"@xylabs/eslint-config@npm:^2.14.2":
+  version: 2.14.2
+  resolution: "@xylabs/eslint-config@npm:2.14.2"
   dependencies:
     "@babel/core": ^7.20.12
     "@babel/eslint-parser": ^7.19.1
@@ -5704,7 +5704,7 @@ __metadata:
     typescript: ^4.9.5
   peerDependencies:
     eslint: ^8.23.0
-  checksum: 4c81e990a0b1bede3d5d4dd845991f21c06c4b37b2915f8b09ad2810ff3f3a1445ffc6267a723fea9ee1733d55e3ad37e5d29f29c927b0ba20382a2ded47fa6c
+  checksum: 419f211fd28a8c6e3bafae8071e976762a5e0375709cddf6844819d447c30a023b2d948f1051dffaac34063dd491b04d8a1c4c03c2f794e44a9b4ff86c9043e6
   languageName: node
   linkType: hard
 
@@ -5762,8 +5762,8 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -5784,8 +5784,8 @@ __metadata:
     "@mui/material": ^5.11.8
     "@storybook/react": ^6.5.16
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -5811,8 +5811,8 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-invertible-theme": "workspace:^"
     "@xylabs/react-scroll-to-top": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
@@ -5838,8 +5838,8 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.8.1
@@ -5865,12 +5865,13 @@ __metadata:
     "@xylabs/react-base-page": "workspace:^"
     "@xylabs/react-error": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/react-portal": "workspace:^"
+    "@xylabs/react-select": "workspace:^"
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     lodash: ^4.17.21
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-helmet: ^6.1.0
     react-router-dom: ^6.8.1
     require-from-string: ^2.0.2
     typescript: ^4.9.5
@@ -5894,8 +5895,8 @@ __metadata:
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -5925,8 +5926,8 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-identicon": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.8.1
@@ -5948,20 +5949,19 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     axios: ^1.3.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
     typescript: ^4.9.5
   peerDependencies:
-    "@mui/material": ^5.11.7
-    "@mui/styles": ^5.11
-    axios: ^1.3.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-router-dom: ^6.8.1
+    "@mui/material": ^5
+    "@mui/styles": ^5
+    react: ^18
+    react-dom: ^18
+    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -5972,26 +5972,18 @@ __metadata:
     "@mui/icons-material": ^5.11.0
     "@mui/material": ^5.11.8
     "@storybook/react": ^6.5.16
-    "@types/lodash": ^4.14.191
-    "@xylabs/assert": ^2.7.1
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
-    lodash: ^4.17.21
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-helmet: ^6.1.0
-    react-router-dom: ^6.8.1
     require-from-string: ^2.0.2
     typescript: ^4.9.5
   peerDependencies:
     "@mui/icons-material": ^5.11.0
     "@mui/material": ^5.11.7
-    "@mui/styles": ^5.11.7
     react: ^18.2.0
     react-dom: ^18.2.0
-    react-helmet: ^6.1.0
-    react-router-dom: ^6.8.0
   languageName: unknown
   linkType: soft
 
@@ -6006,9 +5998,8 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
-    axios: ^1.3.2
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -6017,7 +6008,6 @@ __metadata:
     "@mui/material": ^5.11.5
     "@mui/styles": ^5.11.7
     "@xylabs/pixel": ^1.4.9
-    axios: ^1.2
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -6029,11 +6019,12 @@ __metadata:
   dependencies:
     "@mui/material": ^5.11.8
     "@mui/styles": ^5.11.7
+    "@mui/system": ^5.11.8
     "@storybook/react": ^6.5.16
     "@xylabs/delay": ^2.7.1
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -6052,8 +6043,8 @@ __metadata:
   dependencies:
     "@types/md5": ^2.3.2
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     md5: ^2.3.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6069,8 +6060,8 @@ __metadata:
   resolution: "@xylabs/react-invertable-theme@workspace:packages/invertable-theme"
   dependencies:
     "@xylabs/react-invertible-theme": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^4.9.5
@@ -6088,8 +6079,8 @@ __metadata:
     "@mui/material": ^5.11.8
     "@storybook/react": ^6.5.16
     "@types/lodash": ^4.14.191
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     lodash: ^4.17.21
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6107,8 +6098,8 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@mui/material": ^5.11.8
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.8.1
@@ -6129,8 +6120,8 @@ __metadata:
     "@types/numeral": ^2.0.2
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     numeral: ^2.0.6
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6150,13 +6141,12 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/pixel": ^1.4.13
     "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-common": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
+    "@xylabs/react-portal": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
-    axios: ^1.3.2
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -6166,7 +6156,6 @@ __metadata:
     "@mui/material": ^5.11.5
     "@mui/styles": ^5.11.7
     "@xylabs/pixel": ^1.4.9
-    axios: ^1.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.8.1
@@ -6180,18 +6169,32 @@ __metadata:
     "@xylabs/assert": ^2.7.1
     "@xylabs/delay": ^2.7.1
     "@xylabs/pixel": ^1.4.13
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
-    axios: ^1.3.2
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     query-string: ^7.1.3
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^4.9.5
   peerDependencies:
     "@xylabs/pixel": ^1.4.9
-    axios: ^1.2
     react: ^18.2.0
     react-dom: ^18.2.0
+  languageName: unknown
+  linkType: soft
+
+"@xylabs/react-portal@workspace:^, @xylabs/react-portal@workspace:packages/portal":
+  version: 0.0.0-use.local
+  resolution: "@xylabs/react-portal@workspace:packages/portal"
+  dependencies:
+    "@types/react-dom": ^18.0.10
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    typescript: ^4.9.5
+  peerDependencies:
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6204,8 +6207,8 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/react-dialogs": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -6222,8 +6225,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-rich-result@workspace:packages/rich-result"
   dependencies:
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^4.9.5
@@ -6238,8 +6241,8 @@ __metadata:
   resolution: "@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top"
   dependencies:
     "@mui/material": ^5.11.8
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.8.1
@@ -6251,6 +6254,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@xylabs/react-select@workspace:^, @xylabs/react-select@workspace:packages/select":
+  version: 0.0.0-use.local
+  resolution: "@xylabs/react-select@workspace:packages/select"
+  dependencies:
+    "@mui/material": ^5.11.8
+    "@types/lodash": ^4.14.191
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
+    lodash: ^4.17.21
+    react: ^18.2.0
+    typescript: ^4.9.5
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
+  languageName: unknown
+  linkType: soft
+
 "@xylabs/react-shared@workspace:^, @xylabs/react-shared@workspace:packages/shared":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-shared@workspace:packages/shared"
@@ -6259,8 +6280,8 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/api": ^2.7.1
     "@xylabs/log": ^2.7.1
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     react: ^18.2.0
     react-dom: ^18.2.0
     require-from-string: ^2.0.2
@@ -6295,9 +6316,7 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@storybook/testing-library": ^0.0.13
     "@storybook/theming": ^6.5.16
-    "@types/node": ^18.13.0
-    "@types/react-dom": ^18.0.10
-    "@xylabs/eslint-config-react": ^2.14.1
+    "@xylabs/eslint-config-react": ^2.14.2
     "@xylabs/pixel": ^1.4.13
     "@xylabs/react-accordion": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"
@@ -6319,9 +6338,8 @@ __metadata:
     "@xylabs/react-rich-result": "workspace:^"
     "@xylabs/react-scroll-to-top": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.14.1
-    "@xylabs/tsconfig-react": ^2.14.1
-    axios: ^1.3.2
+    "@xylabs/ts-scripts-yarn3": ^2.14.2
+    "@xylabs/tsconfig-react": ^2.14.2
     bowser: ^2.11.0
     eslint: ^8.33.0
     js-cookie: ^3.0.1
@@ -6339,7 +6357,6 @@ __metadata:
     "@mui/material": ^5
     "@mui/styles": ^5
     "@xylabs/pixel": ^1.4.9
-    axios: ^1.2
     bowser: ^2.11
     js-cookie: ^3.0.1
     lodash: ^4.17.21
@@ -6347,18 +6364,20 @@ __metadata:
     randombytes: ^2.1.0
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-helmet: ^6.1.0
     react-router-dom: ^6.8.1
   languageName: unknown
   linkType: soft
 
-"@xylabs/ts-scripts-yarn3@npm:^2.14.1":
-  version: 2.14.1
-  resolution: "@xylabs/ts-scripts-yarn3@npm:2.14.1"
+"@xylabs/ts-scripts-yarn3@npm:^2.14.2":
+  version: 2.14.2
+  resolution: "@xylabs/ts-scripts-yarn3@npm:2.14.2"
   dependencies:
     "@babel/core": ^7.20.12
     "@babel/preset-env": ^7.20.2
-    "@xylabs/eslint-config": ^2.14.1
-    "@xylabs/tsconfig": ^2.14.1
+    "@types/node": ~18.13.0
+    "@xylabs/eslint-config": ^2.14.2
+    "@xylabs/tsconfig": ^2.14.2
     chalk: ^4.1.2
     cpy: ^8.1.2
     depcheck: ^1.4.3
@@ -6374,7 +6393,7 @@ __metadata:
     license-checker: ^25.0.1
     lodash: ^4.17.21
     node-cmd: ^5.0.0
-    npm-check-updates: ^16.6.5
+    npm-check-updates: ^16.7.2
     npm-package-json-lint: ^6.4.0
     npm-package-json-lint-config-default: ^5.0.0
     parse-git-config: ^3.0.0
@@ -6432,34 +6451,34 @@ __metadata:
     xy: dist/cjs/bin/xy.js
     xy-ts: src/bin/xy-ts.ts
     yarn3only: dist/cjs/bin/yarn3only.js
-  checksum: 6eb0079681d4dba45e0a562d32cf0dbe71f25e6996a13b6dd9ee0c158d4032d879a04006a47dc0716e12aa7d9fece16a00907b9578cfa469f62f0cd1da5fc6ea
+  checksum: 450be8670ff53d11541ffadf573cf93f5224dfdbee058408ff843724f85003cfcf71d135816d863bd084afc1ca46e0f660c1975f8c7f348533c13ba8cf6ff10d
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig-dom@npm:^2.14.1":
-  version: 2.14.1
-  resolution: "@xylabs/tsconfig-dom@npm:2.14.1"
+"@xylabs/tsconfig-dom@npm:^2.14.2":
+  version: 2.14.2
+  resolution: "@xylabs/tsconfig-dom@npm:2.14.2"
   dependencies:
-    "@xylabs/tsconfig": ^2.14.1
-  checksum: 545c4051525da308cb7c9de517b1006a0a834e4187fd6b882ec398a3f5b5e1da95c1f788f7c0f3ff85354304bc6e979e58f7b9af94844b57cfbf43bf2d37b1d2
+    "@xylabs/tsconfig": ^2.14.2
+  checksum: 2238629a7eceb11d3ebeb300c8c3ce2d20c4d7abf1d18a39f900c39417dedf129528ab26476d62a91e30fb8d5c83f40ac79a5d6b21598cdce3dc906e063d1dee
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig-react@npm:^2.14.1":
-  version: 2.14.1
-  resolution: "@xylabs/tsconfig-react@npm:2.14.1"
+"@xylabs/tsconfig-react@npm:^2.14.2":
+  version: 2.14.2
+  resolution: "@xylabs/tsconfig-react@npm:2.14.2"
   dependencies:
-    "@xylabs/tsconfig-dom": ^2.14.1
+    "@xylabs/tsconfig-dom": ^2.14.2
   peerDependencies:
     typescript: ^4
-  checksum: 03af584e5f76522df9c07285c9049184598f3415a5489142fcb1ec6bfa324c8c7cb91d059f4ab20597e04483961786644b76c60419441be467886f2c7adf7a60
+  checksum: f07c6564dd72107b6deed6501f233f36701fbfd18a092a0304ac54bf8e735fd160ac7bc85a5ac671cc23e8b21c36791715263bf58156d32aaae600dcd0f89f65
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig@npm:^2.14.1":
-  version: 2.14.1
-  resolution: "@xylabs/tsconfig@npm:2.14.1"
-  checksum: fcb1c90a9582136d87e5096dc1e40492bbaae419a915a510b7bf7486c0cc36125a5e754d986a7f6febf3d8ab0c5cbaae080003706eab710836053039caf5d765
+"@xylabs/tsconfig@npm:^2.14.2":
+  version: 2.14.2
+  resolution: "@xylabs/tsconfig@npm:2.14.2"
+  checksum: edfb6e1343dd3ec7ab5ebcb900c4ea49708b3b206c5317ad2903723ba3e35140fe59f00542898144b2ac726e71e5c745d7954131bd54241deeff3c9cd30394de
   languageName: node
   linkType: hard
 
@@ -16119,7 +16138,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^16.6.5":
+"npm-check-updates@npm:^16.7.2":
   version: 16.7.2
   resolution: "npm-check-updates@npm:16.7.2"
   dependencies:

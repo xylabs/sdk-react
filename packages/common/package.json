@@ -17,6 +17,8 @@
     "@xylabs/react-base-page": "workspace:^",
     "@xylabs/react-error": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/react-portal": "workspace:^",
+    "@xylabs/react-select": "workspace:^",
     "lodash": "^4.17.21"
   },
   "description": "Common React library for all XY Labs projects that use React",
@@ -25,11 +27,10 @@
     "@mui/material": "^5.11.8",
     "@storybook/react": "^6.5.16",
     "@types/lodash": "^4.14.191",
-    "@xylabs/ts-scripts-yarn3": "^2.14.1",
-    "@xylabs/tsconfig-react": "^2.14.1",
+    "@xylabs/ts-scripts-yarn3": "^2.14.2",
+    "@xylabs/tsconfig-react": "^2.14.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-router-dom": "^6.8.1",
     "require-from-string": "^2.0.2",
     "typescript": "^4.9.5"

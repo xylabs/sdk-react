@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-accordion",
+  "name": "@xylabs/react-select",
   "author": {
     "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
@@ -13,26 +13,21 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-button": "workspace:^"
+    "lodash": "^4.17.21"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.8",
-    "@storybook/react": "^6.5.16",
-    "@xylabs/react-flexbox": "workspace:^",
+    "@types/lodash": "^4.14.191",
     "@xylabs/ts-scripts-yarn3": "^2.14.2",
     "@xylabs/tsconfig-react": "^2.14.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "require-from-string": "^2.0.2",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@mui/material": "^5",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "browser": "dist/esm/index.js",
   "docs": "dist/docs.json",

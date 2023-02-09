@@ -1,3 +1,5 @@
 export * from './components'
 export * from '@xylabs/react-base-page'
 export * from '@xylabs/react-error'
+export * from '@xylabs/react-portal'
+export * from '@xylabs/react-select'

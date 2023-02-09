@@ -1,5 +1,4 @@
 ignores: [
-  "@types/node",
   "@storybook/addon-actions",
   "@storybook/addon-docs",
   "@storybook/addon-essentials",
@@ -11,6 +10,6 @@ ignores: [
   "@storybook/core-events",
   "@storybook/manager-webpack5",
   "@storybook/testing-library",
-  "@types/react-dom",
+  "react-dom",
   "webpack"
 ]
