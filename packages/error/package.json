@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-common",
+  "name": "@xylabs/react-error",
   "author": {
     "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
@@ -14,8 +14,6 @@
   ],
   "dependencies": {
     "@xylabs/assert": "^2.7.1",
-    "@xylabs/react-base-page": "workspace:^",
-    "@xylabs/react-error": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "lodash": "^4.17.21"
   },

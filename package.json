@@ -79,7 +79,6 @@
     "@mui/icons-material": "^5",
     "@mui/material": "^5",
     "@mui/styles": "^5",
-    "@mui/system": "^5",
     "@xylabs/pixel": "^1.4.9",
     "axios": "^1.2",
     "bowser": "^2.11",
