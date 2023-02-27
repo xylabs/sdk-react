@@ -6464,23 +6464,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig-dom@npm:^2.14.3":
-  version: 2.14.3
-  resolution: "@xylabs/tsconfig-dom@npm:2.14.3"
+"@xylabs/tsconfig-dom@npm:^2.15.0":
+  version: 2.15.0
+  resolution: "@xylabs/tsconfig-dom@npm:2.15.0"
   dependencies:
-    "@xylabs/tsconfig": ^2.14.3
-  checksum: d0fc732cb433a55baeea72c420e4290a3db27bcfc578e3956d091bc3804d95765804ab12fa78c2335351e10d1ab697324a6c433a224842f07950f6fe4f04cf5a
+    "@xylabs/tsconfig": ^2.15.0
+  checksum: 06cf3168defdfccd4a33b8ea47e679b865e0e1bc4d47152d73e7e1e39a3d394101900c7f7e1ac2cf9b160f920b83c524d96aec8312d76784d058ebe6e868a184
   languageName: node
   linkType: hard
 
 "@xylabs/tsconfig-react@npm:^2.14.3":
-  version: 2.14.3
-  resolution: "@xylabs/tsconfig-react@npm:2.14.3"
+  version: 2.15.0
+  resolution: "@xylabs/tsconfig-react@npm:2.15.0"
   dependencies:
-    "@xylabs/tsconfig-dom": ^2.14.3
+    "@xylabs/tsconfig-dom": ^2.15.0
   peerDependencies:
     typescript: ^4
-  checksum: 9cf67c4869d5ff4bd96de834f3b6ab22b6420841cab4dc385a8ce720719b9ef2e0c4273337f22044dd81009fb10583f8757523f32d31add90f9b51fbcd62b581
+  checksum: 44894c23ed5e1f8a6ebc225384dbdc3a4f2ef184a4c829d5537dba70233d52da8674106a1d9ff1d36a0dce8507eff10557003511b37158c3522b1cf58d00097a
   languageName: node
   linkType: hard
 
@@ -6488,6 +6488,13 @@ __metadata:
   version: 2.14.3
   resolution: "@xylabs/tsconfig@npm:2.14.3"
   checksum: 0deb0c1f04e1f068ecd655dc2ef0675c4f35937a19842ecf33f51301eeb6c8fe3f7b94479932ecd12f2866af77af66abb3e92830775dea4e5feac3c764960d87
+  languageName: node
+  linkType: hard
+
+"@xylabs/tsconfig@npm:^2.15.0":
+  version: 2.15.0
+  resolution: "@xylabs/tsconfig@npm:2.15.0"
+  checksum: 8bf5954823615ec108da60c18cae137a83b1eb05ef8c7b8d310286b0c7d064ee59cf85ec847858722d0a15068b54ac0f02e42c86dbd798722179cb8e34eec498
   languageName: node
   linkType: hard
 
