@@ -20886,8 +20886,8 @@ __metadata:
   linkType: hard
 
 "storybook-dark-mode@npm:^2.0.6":
-  version: 2.0.6
-  resolution: "storybook-dark-mode@npm:2.0.6"
+  version: 2.1.1
+  resolution: "storybook-dark-mode@npm:2.1.1"
   dependencies:
     "@storybook/addons": ^6.5.14
     "@storybook/api": ^6.5.14
@@ -20905,7 +20905,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 00660ed22c4fb1f2885423cbeb4b0afff6256601f0d9d003ae468874d9d0f2d833423896f48fe5a33cbabdaddfa596003da7dd6646a0202ac4cbfda2a713e3da
+  checksum: 44d6313013a1d63f47c95e2e8e0d11c24d467b3540259e152ceb3236636dbadf7a46c6f7f183946b105ee53173cb13815f1f88ca6da41fc74673c3c11f619863
   languageName: node
   linkType: hard
 
