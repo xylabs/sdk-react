@@ -6,7 +6,7 @@ export type EffectFuncWithoutMounted = () => Promise<(() => void) | void>
 export type EffectFunc = EffectFuncWithMounted | EffectFuncWithoutMounted
 
 export function useAsyncEffect(effect: EffectFunc, inputs?: unknown[]) {
-  let _callback: () => void
+  let _callback: () => void | undefined
 
   useEffect(function () {
     let mounted = true
@@ -26,7 +26,7 @@ export function useAsyncEffect(effect: EffectFunc, inputs?: unknown[]) {
 
     return function () {
       mounted = false
-      _callback()
+      _callback?.()
     }
   }, inputs ?? [])
 }

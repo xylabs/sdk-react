@@ -4,18 +4,19 @@ import { useState } from 'react'
 
 import { useAsyncEffect } from './useAsyncEffect'
 
-const UseAsyncEffectTest: React.FC = () => {
+interface UseAsyncEffectTestProps {
+  unmountCallback?: () => void
+}
+const UseAsyncEffectTest: React.FC<UseAsyncEffectTestProps> = ({ unmountCallback }) => {
   const [resolvedValue, setResolvedValue] = useState('')
 
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async () => {
       setResolvedValue(await Promise.resolve(JSON.stringify({ value: true })))
-      return () => {
-        alert('unmounted useAsyncEffect')
-      }
+      return unmountCallback
     },
-    [],
+    [unmountCallback],
   )
 
   return (
@@ -45,4 +46,9 @@ const Template: ComponentStory<typeof UseAsyncEffectTest> = (args) => {
 
 const Default = Template.bind({})
 
-export { Default }
+const WithUnmountCallback = Template.bind({})
+WithUnmountCallback.args = {
+  unmountCallback: () => alert('unmounted useAsyncEffect'),
+}
+
+export { Default, WithUnmountCallback }
