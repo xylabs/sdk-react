@@ -6,6 +6,8 @@ export type EffectFuncWithoutMounted = () => Promise<(() => void) | void>
 export type EffectFunc = EffectFuncWithMounted | EffectFuncWithoutMounted
 
 export function useAsyncEffect(effect: EffectFunc, inputs?: unknown[]) {
+  let _callback: () => void
+
   useEffect(function () {
     let mounted = true
     const promise: Promise<(() => void) | void> = effect(() => {
@@ -13,9 +15,9 @@ export function useAsyncEffect(effect: EffectFunc, inputs?: unknown[]) {
     })
 
     Promise.resolve(promise)
-      .then((callback) => {
+      .then((callback /* return value from passed async function*/) => {
         if (callback) {
-          callback?.()
+          _callback = callback
         }
       })
       .catch((reason) => {
@@ -24,6 +26,7 @@ export function useAsyncEffect(effect: EffectFunc, inputs?: unknown[]) {
 
     return function () {
       mounted = false
+      _callback()
     }
   }, inputs ?? [])
 }
