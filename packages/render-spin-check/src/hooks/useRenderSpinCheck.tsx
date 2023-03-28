@@ -11,19 +11,21 @@ export interface RenderSpinCheckBounce {
   name: string
 }
 
+//this is external to prevent us from creating our own spin
+const spinCountMap = new Map<number, number>()
+
 export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: RenderSpinCheckConfig) => {
-  const [spinCount, setSpinCount] = useState(0)
   const startTime = useMemo(() => Date.now(), [])
   const [error, setError] = useState<Error>()
 
   useEffect(() => {
     if (!error) {
-      const newSpinCount = spinCount + 1
+      const spinCount = spinCountMap.get(startTime) ?? 0
       if (spinCount > (config?.minSamples ?? 20)) {
         const elapsedTime = Date.now() - startTime
         const refreshRate = elapsedTime / spinCount
         if (refreshRate < (config?.maxRate ?? 1000)) {
-          const error = Error(`Spinning [${bounce.name}] [Rate=${refreshRate.toFixed(2)}ms, Samples=${newSpinCount}]`)
+          const error = Error(`Spinning [${bounce.name}] [Rate=${refreshRate.toFixed(2)}ms, Samples=${spinCount}]`)
           console.warn(error.message)
           setError(error)
           if (!config?.noThrow) {
@@ -31,13 +33,15 @@ export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: Rende
           }
         }
       }
-      setSpinCount(newSpinCount)
+      spinCountMap.set(startTime, spinCount + 1)
     } else {
       if (!config?.reportOnce) {
         console.warn(error.message)
       }
     }
-    // Intentionally only listening to bounce & config
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [bounce, config])
+
+    return () => {
+      spinCountMap.delete(startTime)
+    }
+  }, [bounce, config, error, startTime])
 }
