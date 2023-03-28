@@ -1,0 +1,27 @@
+releases:
+  "@xylabs/react-accordion": patch
+  "@xylabs/react-appbar": patch
+  "@xylabs/react-base-page": patch
+  "@xylabs/react-button": patch
+  "@xylabs/react-common": patch
+  "@xylabs/react-cookie-consent": patch
+  "@xylabs/react-crypto": patch
+  "@xylabs/react-dialogs": patch
+  "@xylabs/react-error": patch
+  "@xylabs/react-experiments": patch
+  "@xylabs/react-flexbox": patch
+  "@xylabs/react-identicon": patch
+  "@xylabs/react-invertable-theme": patch
+  "@xylabs/react-invertible-theme": patch
+  "@xylabs/react-link": patch
+  "@xylabs/react-number-status": patch
+  "@xylabs/react-pixel": patch
+  "@xylabs/react-pixel-debugger": patch
+  "@xylabs/react-portal": patch
+  "@xylabs/react-quick-tip-button": patch
+  "@xylabs/react-render-spin-check": patch
+  "@xylabs/react-rich-result": patch
+  "@xylabs/react-scroll-to-top": patch
+  "@xylabs/react-select": patch
+  "@xylabs/react-shared": patch
+  "@xylabs/sdk-react": patch

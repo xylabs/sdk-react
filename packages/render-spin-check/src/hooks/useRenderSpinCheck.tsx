@@ -12,32 +12,32 @@ export interface RenderSpinCheckBounce {
 }
 
 export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: RenderSpinCheckConfig) => {
-  const { minSamples = 20, maxRate = 1000, noThrow = false, reportOnce = false } = useMemo(() => config ?? {}, [config])
   const [spinCount, setSpinCount] = useState(0)
-  const [startTime] = useState(Date.now())
+  const startTime = useMemo(() => Date.now(), [])
   const [error, setError] = useState<Error>()
 
   useEffect(() => {
     if (!error) {
       const newSpinCount = spinCount + 1
-      if (spinCount > minSamples) {
+      if (spinCount > (config?.minSamples ?? 20)) {
         const elapsedTime = Date.now() - startTime
         const refreshRate = elapsedTime / spinCount
-        if (refreshRate < maxRate) {
+        if (refreshRate < (config?.maxRate ?? 1000)) {
           const error = Error(`Spinning [${bounce.name}] [Rate=${refreshRate.toFixed(2)}ms, Samples=${newSpinCount}]`)
           console.warn(error.message)
           setError(error)
-          if (!noThrow) {
+          if (!config?.noThrow) {
             throw error
           }
         }
       }
       setSpinCount(newSpinCount)
     } else {
-      if (!reportOnce) {
+      if (!config?.reportOnce) {
         console.warn(error.message)
       }
     }
+    // Intentionally only listening to bounce & config
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [startTime, maxRate, bounce, minSamples])
+  }, [bounce, config])
 }
