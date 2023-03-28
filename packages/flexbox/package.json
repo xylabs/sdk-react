@@ -13,14 +13,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^2.7.4",
+    "@xylabs/delay": "^2.7.6",
     "@xylabs/react-shared": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.11.12",
-    "@mui/styles": "^5.11.12",
-    "@mui/system": "^5.11.12",
+    "@mui/material": "^5.11.15",
+    "@mui/styles": "^5.11.13",
+    "@mui/system": "^5.11.15",
     "@storybook/react": "^6.5.16",
     "@xylabs/ts-scripts-yarn3": "^2.16.1",
     "@xylabs/tsconfig-react": "^2.16.1",

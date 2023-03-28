@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 export interface RenderSpinCheckConfig {
   maxRate?: number
@@ -11,8 +11,8 @@ export interface RenderSpinCheckBounce {
   name: string
 }
 
-export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config: RenderSpinCheckConfig = {}) => {
-  const { minSamples = 20, maxRate = 1000, noThrow = false, reportOnce = false } = config
+export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: RenderSpinCheckConfig) => {
+  const { minSamples = 20, maxRate = 1000, noThrow = false, reportOnce = false } = useMemo(() => config ?? {}, [config])
   const [spinCount, setSpinCount] = useState(0)
   const [startTime] = useState(Date.now())
   const [error, setError] = useState<Error>()
