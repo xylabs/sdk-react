@@ -19,7 +19,6 @@
   "devDependencies": {
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.16",
-    "@storybook/react": "^6.5.16",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^2.16.1",
     "@xylabs/tsconfig-react": "^2.16.1",

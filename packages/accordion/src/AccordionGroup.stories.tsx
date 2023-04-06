@@ -1,10 +1,10 @@
 import { Grid } from '@mui/material'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { FlexCol } from '@xylabs/react-flexbox'
 
 import { AccordionGroup } from './AccordionGroup'
 
-const StorybookEntry: ComponentMeta<typeof AccordionGroup> = {
+const StorybookEntry: Meta<typeof AccordionGroup> = {
   argTypes: {},
   component: AccordionGroup,
   parameters: {
@@ -13,11 +13,11 @@ const StorybookEntry: ComponentMeta<typeof AccordionGroup> = {
     },
   },
   title: 'Components/AccordionGroup',
-} as ComponentMeta<typeof AccordionGroup>
+} as Meta<typeof AccordionGroup>
 
-const Template: ComponentStory<typeof AccordionGroup> = (args) => <AccordionGroup {...args}></AccordionGroup>
+const Template: StoryFn<typeof AccordionGroup> = (args) => <AccordionGroup {...args}></AccordionGroup>
 
-const Default: ComponentStory<typeof AccordionGroup> = Template.bind({})
+const Default: StoryFn<typeof AccordionGroup> = Template.bind({})
 Default.args = {
   data: [
     { description: 'lorem ipsum', name: 'Section 1' },
