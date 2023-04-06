@@ -23,8 +23,8 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.15",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.11.16",
     "@storybook/react": "^6.5.16",
     "@types/lodash": "^4.14.192",
     "@xylabs/ts-scripts-yarn3": "^2.16.1",
@@ -81,5 +81,5 @@
   },
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
-  "version": "2.16.14"
+  "version": "2.16.15"
 }
