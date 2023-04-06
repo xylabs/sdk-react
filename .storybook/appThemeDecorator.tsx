@@ -1,5 +1,5 @@
 import { DecoratorFn } from '@storybook/react'
-import { InvertableThemeProvider } from '@xylabs/react-common'
+import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
 
 import { useDarkMode } from 'storybook-dark-mode'
 
@@ -8,9 +8,9 @@ const appThemeDecorator: DecoratorFn = (Story, { args }) => {
   const darkMode = useDarkMode()
 
   return (
-    <InvertableThemeProvider dark={darkMode} options={{}}>
+    <InvertibleThemeProvider dark={darkMode} options={{}}>
       <Story {...args} />
-    </InvertableThemeProvider>
+    </InvertibleThemeProvider>
   )
 }
 

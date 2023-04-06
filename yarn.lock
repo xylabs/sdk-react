@@ -5837,6 +5837,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@xylabs/react-async-effect@workspace:^, @xylabs/react-async-effect@workspace:packages/async-effect":
+  version: 0.0.0-use.local
+  resolution: "@xylabs/react-async-effect@workspace:packages/async-effect"
+  dependencies:
+    "@mui/material": ^5.11.16
+    "@storybook/react": ^6.5.16
+    "@xylabs/api": ^2.7.6
+    "@xylabs/log": ^2.7.6
+    "@xylabs/ts-scripts-yarn3": ^2.16.1
+    "@xylabs/tsconfig-react": ^2.16.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    require-from-string: ^2.0.2
+    typescript: ^4.9.5
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
+  languageName: unknown
+  linkType: soft
+
 "@xylabs/react-base-page@workspace:^, @xylabs/react-base-page@workspace:packages/base-page":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-base-page@workspace:packages/base-page"
@@ -6099,23 +6120,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-invertable-theme@workspace:^, @xylabs/react-invertable-theme@workspace:packages/invertable-theme":
-  version: 0.0.0-use.local
-  resolution: "@xylabs/react-invertable-theme@workspace:packages/invertable-theme"
-  dependencies:
-    "@xylabs/react-invertible-theme": "workspace:^"
-    "@xylabs/ts-scripts-yarn3": ^2.16.1
-    "@xylabs/tsconfig-react": ^2.16.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    typescript: ^4.9.5
-  peerDependencies:
-    "@mui/material": ^5
-    react: ^18
-    react-dom: ^18
-  languageName: unknown
-  linkType: soft
-
 "@xylabs/react-invertible-theme@workspace:^, @xylabs/react-invertible-theme@workspace:packages/invertible-theme":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-invertible-theme@workspace:packages/invertible-theme"
@@ -6346,6 +6350,7 @@ __metadata:
     "@storybook/react": ^6.5.16
     "@xylabs/api": ^2.7.6
     "@xylabs/log": ^2.7.6
+    "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/ts-scripts-yarn3": ^2.16.1
     "@xylabs/tsconfig-react": ^2.16.1
     react: ^18.2.0
@@ -6386,6 +6391,7 @@ __metadata:
     "@xylabs/pixel": ^1.4.13
     "@xylabs/react-accordion": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-common": "workspace:^"
     "@xylabs/react-cookie-consent": "workspace:^"
@@ -6394,7 +6400,6 @@ __metadata:
     "@xylabs/react-experiments": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-identicon": "workspace:^"
-    "@xylabs/react-invertable-theme": "workspace:^"
     "@xylabs/react-invertible-theme": "workspace:^"
     "@xylabs/react-link": "workspace:^"
     "@xylabs/react-number-status": "workspace:^"

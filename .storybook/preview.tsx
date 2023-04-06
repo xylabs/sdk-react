@@ -1,5 +1,5 @@
 import { CssBaseline } from '@mui/material';
-import { InvertableThemeProvider } from '@xylabs/react-invertable-theme';
+import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme';
 import { FlexCol } from '@xylabs/react-flexbox';
 import { useDarkMode } from 'storybook-dark-mode';
 
@@ -21,12 +21,12 @@ const withThemeProvider = (Story, context) => {
   const darkMode = useDarkMode()
 
   return (
-    <InvertableThemeProvider dark={darkMode} darkTheme={{}} options={{}}>
+    <InvertibleThemeProvider dark={darkMode} darkTheme={{}} options={{}}>
       <CssBaseline enableColorScheme />
       <FlexCol alignItems="unset">
         <Story {...context}/>
       </FlexCol>
-    </InvertableThemeProvider>
+    </InvertibleThemeProvider>
   );
 };
 

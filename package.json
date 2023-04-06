@@ -15,6 +15,7 @@
   "dependencies": {
     "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
+    "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-common": "workspace:^",
     "@xylabs/react-cookie-consent": "workspace:^",
@@ -23,7 +24,6 @@
     "@xylabs/react-experiments": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-identicon": "workspace:^",
-    "@xylabs/react-invertable-theme": "workspace:^",
     "@xylabs/react-invertible-theme": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-number-status": "workspace:^",

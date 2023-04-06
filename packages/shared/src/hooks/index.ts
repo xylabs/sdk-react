@@ -1,4 +1,3 @@
-export * from './useAsyncEffect'
 export * from './useBreakpoint'
 export * from './useInterval'
 export * from './useLocalStorage'

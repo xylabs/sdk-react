@@ -18,6 +18,3 @@ export * from '@xylabs/react-render-spin-check'
 export * from '@xylabs/react-rich-result'
 export * from '@xylabs/react-scroll-to-top'
 export * from '@xylabs/react-shared'
-
-// eslint-disable-next-line deprecation/deprecation
-export { InvertableTheme, InvertableThemeContext, InvertableThemeProvider, InvertableThemeProviderProps } from '@xylabs/react-invertable-theme'
