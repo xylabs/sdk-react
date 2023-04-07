@@ -15,8 +15,8 @@
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@types/react-dom": "^18.0.11",
-    "@xylabs/ts-scripts-yarn3": "^2.16.1",
-    "@xylabs/tsconfig-react": "^2.16.1",
+    "@xylabs/ts-scripts-yarn3": "^2.16.5",
+    "@xylabs/tsconfig-react": "^2.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.5"
