@@ -30,7 +30,7 @@ export function useAsyncEffect(effect: EffectFunc, inputs: unknown[] = []) {
         }
       })
       .catch((reason) => {
-        console.log(`useAsyncEffect Excepted: ${reason}`)
+        console.error(`useAsyncEffect Excepted: ${JSON.stringify(reason, null, 2)}`)
       })
 
     return function () {
