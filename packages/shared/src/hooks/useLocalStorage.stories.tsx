@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { useEffect } from 'react'
 
 import { useLocalStorage } from './useLocalStorage'
@@ -40,9 +40,9 @@ const StorybookEntry = {
     },
   },
   title: 'Hooks/useLocalStorage',
-} as ComponentMeta<typeof View>
+} as Meta<typeof View>
 
-const Template: ComponentStory<typeof View> = (args) => <View {...args} />
+const Template: StoryFn<typeof View> = (args) => <View {...args} />
 
 const Default = Template.bind({})
 Default.args = {}

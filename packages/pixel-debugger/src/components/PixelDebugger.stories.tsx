@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { PixelApi, XyPixel } from '@xylabs/pixel'
 import { useEffect, useState } from 'react'
 
@@ -14,9 +14,9 @@ const StorybookEntry = {
     },
   },
   title: 'pixel-debugger/PixelDebuggerToggle',
-} as ComponentMeta<typeof PixelDebuggerToggle>
+} as Meta<typeof PixelDebuggerToggle>
 
-const Template: ComponentStory<typeof PixelDebuggerToggle> = (args) => {
+const Template: StoryFn<typeof PixelDebuggerToggle> = (args) => {
   const [pixel, setPixel] = useState<XyPixel>()
   useEffect(() => {
     XyPixel.selectApi(new PixelApi('local'))

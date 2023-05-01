@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { BigNumber } from '@xylabs/bignumber'
 
 import { TokenAmount } from './TokenAmount'
@@ -12,9 +12,9 @@ const StorybookEntry = {
     },
   },
   title: 'crypto/TokenAmount',
-} as ComponentMeta<typeof TokenAmount>
+} as Meta<typeof TokenAmount>
 
-const Template: ComponentStory<typeof TokenAmount> = (args) => <TokenAmount {...args}></TokenAmount>
+const Template: StoryFn<typeof TokenAmount> = (args) => <TokenAmount {...args}></TokenAmount>
 
 const Default = Template.bind({})
 Default.args = {

@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { ErrorDialog } from './ErrorDialog'
 
@@ -11,9 +11,9 @@ const StorybookEntry = {
     },
   },
   title: 'Dialogs/ErrorDialog',
-} as ComponentMeta<typeof ErrorDialog>
+} as Meta<typeof ErrorDialog>
 
-const Template: ComponentStory<typeof ErrorDialog> = (args) => <ErrorDialog {...args}></ErrorDialog>
+const Template: StoryFn<typeof ErrorDialog> = (args) => <ErrorDialog {...args}></ErrorDialog>
 
 const Default = Template.bind({})
 Default.args = {

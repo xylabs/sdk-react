@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { ExperimentsDebugger } from './index'
 
@@ -11,9 +11,9 @@ const StorybookEntry = {
     },
   },
   title: 'experiments/ExperimentsDebugger',
-} as ComponentMeta<typeof ExperimentsDebugger>
+} as Meta<typeof ExperimentsDebugger>
 
-const Template: ComponentStory<typeof ExperimentsDebugger> = (args) => <ExperimentsDebugger {...args} />
+const Template: StoryFn<typeof ExperimentsDebugger> = (args) => <ExperimentsDebugger {...args} />
 
 const Default = Template.bind({})
 Default.args = {}

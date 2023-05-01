@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { BrowserRouter } from 'react-router-dom'
 
 import { BreadcrumbsEx } from './BreadcrumbsEx'
@@ -12,9 +12,9 @@ const StorybookEntry = {
     },
   },
   title: 'Components/BreadcrumbsEx',
-} as ComponentMeta<typeof BreadcrumbsEx>
+} as Meta<typeof BreadcrumbsEx>
 
-const Template: ComponentStory<typeof BreadcrumbsEx> = (args) => (
+const Template: StoryFn<typeof BreadcrumbsEx> = (args) => (
   <BrowserRouter>
     <BreadcrumbsEx {...args}></BreadcrumbsEx>
   </BrowserRouter>

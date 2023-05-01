@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import { ComponentStory } from '@storybook/react'
+import { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 
 import { useAsyncEffect } from './useAsyncEffect'
@@ -32,7 +32,7 @@ export default {
   title: 'useAsyncEffect',
 }
 
-const Template: ComponentStory<typeof UseAsyncEffectTest> = (args) => {
+const Template: StoryFn<typeof UseAsyncEffectTest> = (args) => {
   const [unmounted, setUnmounted] = useState(false)
   return (
     <div>

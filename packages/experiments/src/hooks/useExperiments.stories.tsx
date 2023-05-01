@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 import { ReactNode } from 'react'
 
@@ -43,9 +43,9 @@ const StorybookEntry = {
     },
   },
   title: 'Hooks/useExperiments',
-} as ComponentMeta<typeof View>
+} as Meta<typeof View>
 
-const Template: ComponentStory<typeof View> = (args) => <WrappedView {...args} />
+const Template: StoryFn<typeof View> = (args) => <WrappedView {...args} />
 
 const Default = Template.bind({})
 Default.args = {}

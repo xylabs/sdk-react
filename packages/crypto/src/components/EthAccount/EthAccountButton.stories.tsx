@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
 import { FlexRow } from '@xylabs/react-flexbox'
 
@@ -13,9 +13,9 @@ const StorybookEntry = {
     },
   },
   title: 'crypto/EthAccount/Button',
-} as ComponentMeta<typeof EthAccountButton>
+} as Meta<typeof EthAccountButton>
 
-const Template: ComponentStory<typeof EthAccountButton> = (args) => (
+const Template: StoryFn<typeof EthAccountButton> = (args) => (
   <FlexRow>
     <EthAccountButton variant="outlined" {...args}></EthAccountButton>
   </FlexRow>

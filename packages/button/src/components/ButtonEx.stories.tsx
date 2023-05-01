@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
 import { ButtonEx } from './ButtonEx'
@@ -12,9 +12,9 @@ const StorybookEntry = {
     },
   },
   title: 'button/ButtonEx',
-} as ComponentMeta<typeof ButtonEx>
+} as Meta<typeof ButtonEx>
 
-const DefaultTemplate: ComponentStory<typeof ButtonEx> = (args) => (
+const DefaultTemplate: StoryFn<typeof ButtonEx> = (args) => (
   <FlexRow justifyContent="flex-start">
     <FlexCol marginX={1}>
       <ButtonEx {...args}>Default</ButtonEx>

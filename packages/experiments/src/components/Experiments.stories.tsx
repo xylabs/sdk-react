@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { Experiment } from './Experiment'
 import { Experiments } from './Experiments'
@@ -12,9 +12,9 @@ const StorybookEntry = {
     },
   },
   title: 'experiments/Experiments',
-} as ComponentMeta<typeof Experiments>
+} as Meta<typeof Experiments>
 
-const Template: ComponentStory<typeof Experiments> = (args) => <Experiments {...args}></Experiments>
+const Template: StoryFn<typeof Experiments> = (args) => <Experiments {...args}></Experiments>
 
 const Default = Template.bind({})
 Default.args = {

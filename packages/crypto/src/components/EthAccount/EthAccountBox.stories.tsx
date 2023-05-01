@@ -1,5 +1,5 @@
 import { Paper } from '@mui/material'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
 
 import { EthAccountBox } from './EthAccountBox'
@@ -13,9 +13,9 @@ const StorybookEntry = {
     },
   },
   title: 'crypto/EthAccount/Box',
-} as ComponentMeta<typeof EthAccountBox>
+} as Meta<typeof EthAccountBox>
 
-const Template: ComponentStory<typeof EthAccountBox> = (args) => (
+const Template: StoryFn<typeof EthAccountBox> = (args) => (
   <Paper variant="outlined" style={{ overflow: 'hidden' }}>
     <EthAccountBox {...args}></EthAccountBox>
   </Paper>

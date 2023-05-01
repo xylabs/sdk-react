@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { ErrorViewer } from './ErrorViewer'
 
@@ -11,9 +11,9 @@ const StorybookEntry = {
     },
   },
   title: 'Components/ErrorViewer',
-} as ComponentMeta<typeof ErrorViewer>
+} as Meta<typeof ErrorViewer>
 
-const Template: ComponentStory<typeof ErrorViewer> = (args) => <ErrorViewer {...args}></ErrorViewer>
+const Template: StoryFn<typeof ErrorViewer> = (args) => <ErrorViewer {...args}></ErrorViewer>
 
 const Default = Template.bind({})
 Default.args = {

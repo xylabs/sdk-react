@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { MessageDialog } from './MessageDialog'
 
@@ -11,9 +11,9 @@ const StorybookEntry = {
     },
   },
   title: 'Dialogs/MessageDialog',
-} as ComponentMeta<typeof MessageDialog>
+} as Meta<typeof MessageDialog>
 
-const Template: ComponentStory<typeof MessageDialog> = (args) => <MessageDialog {...args}>Test Message</MessageDialog>
+const Template: StoryFn<typeof MessageDialog> = (args) => <MessageDialog {...args}>Test Message</MessageDialog>
 
 const Default = Template.bind({})
 Default.args = {

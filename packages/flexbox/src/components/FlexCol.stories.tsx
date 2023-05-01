@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { FlexCol } from './FlexCol'
 import { FlexRow } from './FlexRow'
@@ -12,9 +12,9 @@ const StorybookEntry = {
     },
   },
   title: 'flexbox/FlexCol',
-} as ComponentMeta<typeof FlexCol>
+} as Meta<typeof FlexCol>
 
-const Template: ComponentStory<typeof FlexCol> = (args) => <FlexCol {...args}></FlexCol>
+const Template: StoryFn<typeof FlexCol> = (args) => <FlexCol {...args}></FlexCol>
 
 const testRows = {
   border: 'solid 1px gray',

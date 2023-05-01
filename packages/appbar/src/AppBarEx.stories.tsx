@@ -1,6 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu'
 import { Toolbar } from '@mui/material'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { AppBarEx } from './AppBarEx'
 
@@ -13,9 +13,9 @@ const StorybookEntry = {
     },
   },
   title: 'common/AppBarEx',
-} as ComponentMeta<typeof AppBarEx>
+} as Meta<typeof AppBarEx>
 
-const Template: ComponentStory<typeof AppBarEx> = (args) => <AppBarEx {...args}></AppBarEx>
+const Template: StoryFn<typeof AppBarEx> = (args) => <AppBarEx {...args}></AppBarEx>
 
 const Empty = Template.bind({})
 Empty.args = {

@@ -1,6 +1,6 @@
 import NotListedLocationIcon from '@mui/icons-material/NotListedLocation'
 import { Typography } from '@mui/material'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { FlexRow } from '@xylabs/react-flexbox'
 
 import { QuickTipButton } from './QuickTipButton'
@@ -14,9 +14,9 @@ const StorybookEntry = {
     },
   },
   title: 'Components/QuickTipButton',
-} as ComponentMeta<typeof QuickTipButton>
+} as Meta<typeof QuickTipButton>
 
-const Template: ComponentStory<typeof QuickTipButton> = (args) => (
+const Template: StoryFn<typeof QuickTipButton> = (args) => (
   <FlexRow>
     <QuickTipButton {...args}></QuickTipButton>
   </FlexRow>

@@ -1,5 +1,5 @@
 import { Button, Typography } from '@mui/material'
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 import { useState } from 'react'
 
 import { BusyBox } from './BusyBox'
@@ -13,11 +13,11 @@ const StorybookEntry = {
     },
   },
   title: 'flexbox/BusyBox',
-} as ComponentMeta<typeof BusyBox>
+} as Meta<typeof BusyBox>
 
-const BusyBoxTemplate: ComponentStory<typeof BusyBox> = (args) => <BusyBox {...args}></BusyBox>
+const BusyBoxTemplate: StoryFn<typeof BusyBox> = (args) => <BusyBox {...args}></BusyBox>
 
-const BusyBoxMinimumTemplate: ComponentStory<typeof BusyBox> = (args) => {
+const BusyBoxMinimumTemplate: StoryFn<typeof BusyBox> = (args) => {
   const [busyToggle, setBusyToggle] = useState(false)
   return (
     <>

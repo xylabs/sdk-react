@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Meta, StoryFn } from '@storybook/react'
 
 import { NumberStatus } from './NumberStatus'
 
@@ -11,9 +11,9 @@ const StorybookEntry = {
     },
   },
   title: 'Components/NumberStatus',
-} as ComponentMeta<typeof NumberStatus>
+} as Meta<typeof NumberStatus>
 
-const NumberStatusTemplate: ComponentStory<typeof NumberStatus> = (args) => <NumberStatus {...args}></NumberStatus>
+const NumberStatusTemplate: StoryFn<typeof NumberStatus> = (args) => <NumberStatus {...args}></NumberStatus>
 
 const Default = NumberStatusTemplate.bind({})
 Default.args = {
