@@ -1,6 +1,6 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/eth-address'
-import { useAsyncEffect } from '@xylabs/react-shared'
+import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { PropsWithChildren, useState } from 'react'
 
 import { EthersContext } from './Context'

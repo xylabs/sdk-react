@@ -1,5 +1,5 @@
 import { delay } from '@xylabs/delay'
-import { useAsyncEffect } from '@xylabs/react-shared'
+import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { useCallback, useMemo, useState } from 'react'
 
 export const useBusyTiming = (busy?: boolean, busyMinimum = 0) => {

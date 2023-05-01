@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "@xylabs/delay": "^2.7.6",
+    "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-shared": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
@@ -22,8 +23,8 @@
     "@mui/styles": "^5.12.0",
     "@mui/system": "^5.12.1",
     "@storybook/react": "^7.0.7",
-    "@xylabs/ts-scripts-yarn3": "^2.17.3",
-    "@xylabs/tsconfig-react": "^2.17.3",
+    "@xylabs/ts-scripts-yarn3": "^2.17.6",
+    "@xylabs/tsconfig-react": "^2.17.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.4"

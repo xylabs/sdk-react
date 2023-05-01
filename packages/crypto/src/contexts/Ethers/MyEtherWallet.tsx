@@ -1,6 +1,6 @@
 import { InfuraProvider, JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/eth-address'
-import { useAsyncEffect } from '@xylabs/react-shared'
+import { useAsyncEffect } from '@xylabs/react-async-effect'
 import React, { PropsWithChildren, useEffect, useState } from 'react'
 
 import { EthersContext } from './Context'
