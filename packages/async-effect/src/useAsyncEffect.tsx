@@ -13,6 +13,9 @@ export function useAsyncEffect(effect: EffectFunc, inputs: unknown[] = []) {
   //this useEffect's return should only ever get called once
   //since it has no dependencies
   useEffect(() => {
+    // ensure mount is true during development mode when the
+    // cleanup function is called after the initial render
+    mounted.current = true
     return () => {
       mounted.current = false
     }

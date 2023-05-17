@@ -29,7 +29,7 @@ const UseAsyncEffectTest: React.FC<UseAsyncEffectTestProps> = ({ unmountCallback
 // eslint-disable-next-line import/no-default-export
 export default {
   component: UseAsyncEffectTest,
-  title: 'useAsyncEffect',
+  title: 'hooks/useAsyncEffect',
 }
 
 const Template: StoryFn<typeof UseAsyncEffectTest> = (args) => {
