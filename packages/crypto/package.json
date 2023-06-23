@@ -16,9 +16,9 @@
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^10.2.1",
-    "@xylabs/assert": "^2.8.1",
-    "@xylabs/bignumber": "^2.8.1",
-    "@xylabs/eth-address": "^2.8.1",
+    "@xylabs/assert": "^2.9.1",
+    "@xylabs/bignumber": "^2.9.1",
+    "@xylabs/eth-address": "^2.9.1",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
@@ -26,14 +26,14 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.13.1",
-    "@storybook/react": "^7.0.12",
-    "@xylabs/ts-scripts-yarn3": "^2.17.13",
-    "@xylabs/tsconfig-react": "^2.17.13",
+    "@mui/material": "^5.13.6",
+    "@storybook/react": "^7.0.23",
+    "@xylabs/ts-scripts-yarn3": "^2.17.17",
+    "@xylabs/tsconfig-react": "^2.17.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2",
-    "typescript": "^5.0.4"
+    "react-router-dom": "^6.14.0",
+    "typescript": "^5.1.3"
   },
   "peerDependencies": {
     "@mui/material": "^5",
