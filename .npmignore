@@ -8,6 +8,8 @@ storybook-static
 .storybook
 .eslintcache
 
+docs
+
 .tsconfig*
 
 .pnp.*
