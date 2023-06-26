@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react'
+import { usePromise } from '@xylabs/react-promise'
+import { DependencyList, useEffect, useRef } from 'react'
 
 export type EffectFuncWithMounted = (isMounted: () => boolean) => Promise<(() => void) | void>
 export type EffectFuncWithoutMounted = () => Promise<(() => void) | void>
@@ -6,9 +7,10 @@ export type EffectFunc = EffectFuncWithMounted | EffectFuncWithoutMounted
 
 export type EffectCallback = () => void | undefined
 
-export function useAsyncEffect(effect: EffectFunc, inputs: unknown[] = []) {
-  const _callback = useRef<EffectCallback>()
+export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList = []) {
   const mounted = useRef(true)
+
+  console.log(`** useAsyncEffect:effect: ${!!effect}`)
 
   //this useEffect's return should only ever get called once
   //since it has no dependencies
@@ -21,24 +23,9 @@ export function useAsyncEffect(effect: EffectFunc, inputs: unknown[] = []) {
     }
   }, [])
 
-  useEffect(function () {
-    const promise: Promise<(() => void) | void> = effect(() => {
-      return mounted.current
-    })
-
-    Promise.resolve(promise)
-      .then((callback /* return value from passed async function*/) => {
-        if (callback) {
-          _callback.current = callback
-        }
-      })
-      .catch((reason) => {
-        console.error(`useAsyncEffect Excepted: ${JSON.stringify(reason, null, 2)}`)
-      })
-
-    return function () {
-      _callback.current?.()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, inputs)
+  usePromise(async () => {
+    console.log(`** useAsyncEffect:promise:start ${!!effect}`)
+    await effect(() => mounted.current)
+    console.log(`** useAsyncEffect:promise:end ${!!effect}`)
+  }, dependencies)
 }
