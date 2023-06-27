@@ -10,8 +10,6 @@ export type EffectCallback = () => void | undefined
 export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList = []) {
   const mounted = useRef(true)
 
-  console.log(`** useAsyncEffect:effect: ${!!effect}`)
-
   //this useEffect's return should only ever get called once
   //since it has no dependencies
   useEffect(() => {
@@ -24,8 +22,6 @@ export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList 
   }, [])
 
   usePromise(async () => {
-    console.log(`** useAsyncEffect:promise:start ${!!effect}`)
     await effect(() => mounted.current)
-    console.log(`** useAsyncEffect:promise:end ${!!effect}`)
   }, dependencies)
 }
