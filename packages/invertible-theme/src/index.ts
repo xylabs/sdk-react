@@ -1,3 +1,4 @@
+export * from './CssVarsProvider'
 export * from './InvertibleTheme'
 export * from './InvertibleThemeContext'
 export * from './InvertibleThemeProvider'
