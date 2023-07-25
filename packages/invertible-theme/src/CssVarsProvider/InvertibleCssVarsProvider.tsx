@@ -1,7 +1,6 @@
 import { Experimental_CssVarsProvider as CssVarsProvider, responsiveFontSizes, useColorScheme } from '@mui/material'
 import type {} from '@mui/material/themeCssVarsAugmentation'
-import { WithChildren } from '@xylabs/react-shared'
-import { useEffect } from 'react'
+import { ReactNode, useEffect } from 'react'
 
 import { InvertibleCssVarsProvider, Mode } from './InvertibleCssVars'
 
@@ -15,7 +14,9 @@ export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   return <></>
 }
 
-export interface InvertibleCssVarsProviderProps extends InvertibleCssVarsProvider, WithChildren {}
+export interface InvertibleCssVarsProviderProps extends InvertibleCssVarsProvider {
+  children?: ReactNode | undefined
+}
 
 export const InvertableCssVarsProvider: React.FC<InvertibleCssVarsProviderProps> = ({
   children,
