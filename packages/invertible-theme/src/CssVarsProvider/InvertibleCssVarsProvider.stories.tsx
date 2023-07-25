@@ -79,6 +79,7 @@ const theme = extendTheme({
 const Default = Template.bind({})
 Default.args = {
   children: <ThemeEnabledComponent />,
+  // defaultMode is 'system' color scheme preference
 }
 
 const DefaultLight = Template.bind({})
