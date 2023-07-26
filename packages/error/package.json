@@ -17,14 +17,14 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.6",
-    "@storybook/react": "^7.0.23",
-    "@xylabs/ts-scripts-yarn3": "^2.17.17",
-    "@xylabs/tsconfig-react": "^2.17.17",
+    "@mui/icons-material": "^5.14.1",
+    "@mui/material": "^5.14.2",
+    "@storybook/react": "^7.1.1",
+    "@xylabs/ts-scripts-yarn3": "^2.19.0",
+    "@xylabs/tsconfig-react": "^2.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.6"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",
