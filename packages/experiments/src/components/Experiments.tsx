@@ -37,11 +37,14 @@ const loadExperimentsTestData = (key: string) => {
     localStorage
       .getItem(key)
       ?.split('|')
-      .reduce((acc, current) => {
-        const data = current.split('-')
-        acc[data[0]] = data[1]
-        return acc
-      }, {} as { [index: string]: string }) ?? {}
+      .reduce(
+        (acc, current) => {
+          const data = current.split('-')
+          acc[data[0]] = data[1]
+          return acc
+        },
+        {} as { [index: string]: string },
+      ) ?? {}
 }
 
 const missingKeyError = new Error('Experiment Elements must have Keys')

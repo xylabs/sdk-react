@@ -15,7 +15,7 @@
   "dependencies": {
     "@xylabs/api": "^2.9.3",
     "@xylabs/log": "^2.9.3",
-    "@xylabs/react-async-effect": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {

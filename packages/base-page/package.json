@@ -13,11 +13,11 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-appbar": "workspace:^",
-    "@xylabs/react-cookie-consent": "workspace:^",
-    "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-invertible-theme": "workspace:^",
-    "@xylabs/react-scroll-to-top": "workspace:^"
+    "@xylabs/react-appbar": "workspace:~",
+    "@xylabs/react-cookie-consent": "workspace:~",
+    "@xylabs/react-flexbox": "workspace:~",
+    "@xylabs/react-invertible-theme": "workspace:~",
+    "@xylabs/react-scroll-to-top": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {

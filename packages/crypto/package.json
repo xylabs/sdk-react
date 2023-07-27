@@ -19,10 +19,10 @@
     "@xylabs/assert": "^2.9.3",
     "@xylabs/bignumber": "^2.9.3",
     "@xylabs/eth-address": "^2.9.3",
-    "@xylabs/react-async-effect": "workspace:^",
-    "@xylabs/react-button": "workspace:^",
-    "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-identicon": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~",
+    "@xylabs/react-button": "workspace:~",
+    "@xylabs/react-flexbox": "workspace:~",
+    "@xylabs/react-identicon": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {

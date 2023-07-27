@@ -7,7 +7,7 @@ export type EffectFunc = EffectFuncWithMounted | EffectFuncWithoutMounted
 
 export type EffectCallback = () => void | undefined
 
-export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList = []) {
+export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList) {
   const mounted = useRef(true)
 
   //this useEffect's return should only ever get called once
@@ -23,5 +23,6 @@ export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList 
 
   usePromise(async () => {
     await effect(() => mounted.current)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies)
 }

@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-button": "workspace:^",
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~",
+    "@xylabs/react-flexbox": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {

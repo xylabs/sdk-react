@@ -73,11 +73,14 @@ const ExperimentsHelper = {
       localStorage
         .getItem(key)
         ?.split('|')
-        .reduce((acc, current) => {
-          const data = current.split('-')
-          acc[data[0]] = data[1]
-          return acc
-        }, {} as { [index: string]: string }) ?? {}
+        .reduce(
+          (acc, current) => {
+            const data = current.split('-')
+            acc[data[0]] = data[1]
+            return acc
+          },
+          {} as { [index: string]: string },
+        ) ?? {}
   },
   loadOutcomes: () => {
     outcomes = getLocalStorageObject(OutcomesLocalStorageKey)

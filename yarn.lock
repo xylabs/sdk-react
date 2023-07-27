@@ -5226,7 +5226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.5.0, @typescript-eslint/eslint-plugin@npm:^5.62.0":
+"@typescript-eslint/eslint-plugin@npm:^5.5.0":
   version: 5.62.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.62.0"
   dependencies:
@@ -5250,7 +5250,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^6.1.0":
+"@typescript-eslint/eslint-plugin@npm:^6.1.0, @typescript-eslint/eslint-plugin@npm:^6.2.0":
   version: 6.2.0
   resolution: "@typescript-eslint/eslint-plugin@npm:6.2.0"
   dependencies:
@@ -5287,7 +5287,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.5.0, @typescript-eslint/parser@npm:^5.62.0":
+"@typescript-eslint/parser@npm:^5.5.0":
   version: 5.62.0
   resolution: "@typescript-eslint/parser@npm:5.62.0"
   dependencies:
@@ -5304,7 +5304,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^6.1.0":
+"@typescript-eslint/parser@npm:^6.1.0, @typescript-eslint/parser@npm:^6.2.0":
   version: 6.2.0
   resolution: "@typescript-eslint/parser@npm:6.2.0"
   dependencies:
@@ -5922,15 +5922,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/react-accordion@workspace:^, @xylabs/react-accordion@workspace:packages/accordion":
+"@xylabs/react-accordion@workspace:packages/accordion, @xylabs/react-accordion@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-accordion@workspace:packages/accordion"
   dependencies:
     "@mui/icons-material": ^5.14.1
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -5945,14 +5945,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-appbar@workspace:^, @xylabs/react-appbar@workspace:packages/appbar":
+"@xylabs/react-appbar@workspace:packages/appbar, @xylabs/react-appbar@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-appbar@workspace:packages/appbar"
   dependencies:
     "@mui/icons-material": ^5.14.1
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -5966,13 +5966,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-async-effect@workspace:^, @xylabs/react-async-effect@workspace:packages/async-effect":
+"@xylabs/react-async-effect@workspace:packages/async-effect, @xylabs/react-async-effect@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-async-effect@workspace:packages/async-effect"
   dependencies:
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-promise": "workspace:^"
+    "@xylabs/react-promise": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -5985,7 +5985,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-base-page@workspace:^, @xylabs/react-base-page@workspace:packages/base-page":
+"@xylabs/react-base-page@workspace:packages/base-page, @xylabs/react-base-page@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-base-page@workspace:packages/base-page"
   dependencies:
@@ -5993,11 +5993,11 @@ __metadata:
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
     "@types/react-helmet": ^6.1.6
-    "@xylabs/react-appbar": "workspace:^"
-    "@xylabs/react-cookie-consent": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-invertible-theme": "workspace:^"
-    "@xylabs/react-scroll-to-top": "workspace:^"
+    "@xylabs/react-appbar": "workspace:~"
+    "@xylabs/react-cookie-consent": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-invertible-theme": "workspace:~"
+    "@xylabs/react-scroll-to-top": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6016,14 +6016,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-button@workspace:^, @xylabs/react-button@workspace:packages/button":
+"@xylabs/react-button@workspace:packages/button, @xylabs/react-button@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-button@workspace:packages/button"
   dependencies:
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6038,7 +6038,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-common@workspace:^, @xylabs/react-common@workspace:packages/common":
+"@xylabs/react-common@workspace:packages/common, @xylabs/react-common@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-common@workspace:packages/common"
   dependencies:
@@ -6047,11 +6047,11 @@ __metadata:
     "@storybook/react": ^7.1.1
     "@types/lodash": ^4.14.196
     "@xylabs/assert": ^2.9.3
-    "@xylabs/react-base-page": "workspace:^"
-    "@xylabs/react-error": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-portal": "workspace:^"
-    "@xylabs/react-select": "workspace:^"
+    "@xylabs/react-base-page": "workspace:~"
+    "@xylabs/react-error": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-portal": "workspace:~"
+    "@xylabs/react-select": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     lodash: ^4.17.21
@@ -6070,15 +6070,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-cookie-consent@workspace:^, @xylabs/react-cookie-consent@workspace:packages/cookie-consent":
+"@xylabs/react-cookie-consent@workspace:packages/cookie-consent, @xylabs/react-cookie-consent@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-cookie-consent@workspace:packages/cookie-consent"
   dependencies:
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6093,7 +6093,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-crypto@workspace:^, @xylabs/react-crypto@workspace:packages/crypto":
+"@xylabs/react-crypto@workspace:packages/crypto, @xylabs/react-crypto@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-crypto@workspace:packages/crypto"
   dependencies:
@@ -6105,10 +6105,10 @@ __metadata:
     "@xylabs/assert": ^2.9.3
     "@xylabs/bignumber": ^2.9.3
     "@xylabs/eth-address": ^2.9.3
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-identicon": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-identicon": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6123,14 +6123,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-dialogs@workspace:^, @xylabs/react-dialogs@workspace:packages/dialogs":
+"@xylabs/react-dialogs@workspace:packages/dialogs, @xylabs/react-dialogs@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-dialogs@workspace:packages/dialogs"
   dependencies:
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     axios: ^1.4.0
@@ -6146,14 +6146,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-error@workspace:^, @xylabs/react-error@workspace:packages/error":
+"@xylabs/react-error@workspace:packages/error, @xylabs/react-error@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-error@workspace:packages/error"
   dependencies:
     "@mui/icons-material": ^5.14.1
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6167,7 +6167,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-experiments@workspace:^, @xylabs/react-experiments@workspace:packages/experiments":
+"@xylabs/react-experiments@workspace:packages/experiments, @xylabs/react-experiments@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
@@ -6175,9 +6175,9 @@ __metadata:
     "@xylabs/forget": ^2.9.3
     "@xylabs/log": ^2.9.3
     "@xylabs/pixel": ^1.4.14
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6193,7 +6193,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
+"@xylabs/react-flexbox@workspace:packages/flexbox, @xylabs/react-flexbox@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
@@ -6202,8 +6202,8 @@ __metadata:
     "@mui/system": ^5.14.1
     "@storybook/react": ^7.1.1
     "@xylabs/delay": ^2.9.3
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6220,12 +6220,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-identicon@workspace:^, @xylabs/react-identicon@workspace:packages/identicon":
+"@xylabs/react-identicon@workspace:packages/identicon, @xylabs/react-identicon@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-identicon@workspace:packages/identicon"
   dependencies:
     "@types/md5": ^2.3.2
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     md5: ^2.3.0
@@ -6239,7 +6239,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-invertible-theme@workspace:^, @xylabs/react-invertible-theme@workspace:packages/invertible-theme":
+"@xylabs/react-invertible-theme@workspace:packages/invertible-theme, @xylabs/react-invertible-theme@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-invertible-theme@workspace:packages/invertible-theme"
   dependencies:
@@ -6259,7 +6259,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-link@workspace:^, @xylabs/react-link@workspace:packages/link":
+"@xylabs/react-link@workspace:packages/link, @xylabs/react-link@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
@@ -6277,15 +6277,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-number-status@workspace:^, @xylabs/react-number-status@workspace:packages/number-status":
+"@xylabs/react-number-status@workspace:packages/number-status, @xylabs/react-number-status@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-number-status@workspace:packages/number-status"
   dependencies:
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
     "@types/numeral": ^2.0.2
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     numeral: ^2.0.6
@@ -6300,17 +6300,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-pixel-debugger@workspace:^, @xylabs/react-pixel-debugger@workspace:packages/pixel-debugger":
+"@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger, @xylabs/react-pixel-debugger@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger"
   dependencies:
     "@storybook/react": ^7.1.1
     "@xylabs/pixel": ^1.4.14
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-portal": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-portal": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6328,7 +6328,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-pixel@workspace:^, @xylabs/react-pixel@workspace:packages/pixel":
+"@xylabs/react-pixel@workspace:packages/pixel, @xylabs/react-pixel@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
@@ -6349,7 +6349,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-portal@workspace:^, @xylabs/react-portal@workspace:packages/portal":
+"@xylabs/react-portal@workspace:packages/portal, @xylabs/react-portal@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-portal@workspace:packages/portal"
   dependencies:
@@ -6365,7 +6365,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-promise@workspace:^, @xylabs/react-promise@workspace:packages/promise":
+"@xylabs/react-promise@workspace:packages/promise, @xylabs/react-promise@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-promise@workspace:packages/promise"
   dependencies:
@@ -6383,15 +6383,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-quick-tip-button@workspace:^, @xylabs/react-quick-tip-button@workspace:packages/quick-tip-button":
+"@xylabs/react-quick-tip-button@workspace:packages/quick-tip-button, @xylabs/react-quick-tip-button@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-quick-tip-button@workspace:packages/quick-tip-button"
   dependencies:
     "@mui/icons-material": ^5.14.1
     "@mui/material": ^5.14.2
     "@storybook/react": ^7.1.1
-    "@xylabs/react-dialogs": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-dialogs": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6406,7 +6406,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-render-spin-check@workspace:^, @xylabs/react-render-spin-check@workspace:packages/render-spin-check":
+"@xylabs/react-render-spin-check@workspace:packages/render-spin-check, @xylabs/react-render-spin-check@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-render-spin-check@workspace:packages/render-spin-check"
   dependencies:
@@ -6422,7 +6422,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-rich-result@workspace:^, @xylabs/react-rich-result@workspace:packages/rich-result":
+"@xylabs/react-rich-result@workspace:packages/rich-result, @xylabs/react-rich-result@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-rich-result@workspace:packages/rich-result"
   dependencies:
@@ -6437,7 +6437,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-scroll-to-top@workspace:^, @xylabs/react-scroll-to-top@workspace:packages/scroll-to-top":
+"@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top, @xylabs/react-scroll-to-top@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top"
   dependencies:
@@ -6455,7 +6455,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-select@workspace:^, @xylabs/react-select@workspace:packages/select":
+"@xylabs/react-select@workspace:packages/select, @xylabs/react-select@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-select@workspace:packages/select"
   dependencies:
@@ -6473,7 +6473,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-shared@workspace:^, @xylabs/react-shared@workspace:packages/shared":
+"@xylabs/react-shared@workspace:packages/shared, @xylabs/react-shared@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-shared@workspace:packages/shared"
   dependencies:
@@ -6481,7 +6481,7 @@ __metadata:
     "@storybook/react": ^7.1.1
     "@xylabs/api": ^2.9.3
     "@xylabs/log": ^2.9.3
-    "@xylabs/react-async-effect": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
@@ -6520,38 +6520,38 @@ __metadata:
     "@storybook/react-webpack5": ^7.1.1
     "@storybook/testing-library": ^0.2.0
     "@storybook/theming": ^7.1.1
-    "@typescript-eslint/eslint-plugin": ^5.62.0
-    "@typescript-eslint/parser": ^5.62.0
+    "@typescript-eslint/eslint-plugin": ^6.2.0
+    "@typescript-eslint/parser": ^6.2.0
     "@xylabs/eslint-config-react": ^2.19.0
     "@xylabs/pixel": ^1.4.14
-    "@xylabs/react-accordion": "workspace:^"
-    "@xylabs/react-appbar": "workspace:^"
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-common": "workspace:^"
-    "@xylabs/react-cookie-consent": "workspace:^"
-    "@xylabs/react-crypto": "workspace:^"
-    "@xylabs/react-dialogs": "workspace:^"
-    "@xylabs/react-experiments": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-identicon": "workspace:^"
-    "@xylabs/react-invertible-theme": "workspace:^"
-    "@xylabs/react-link": "workspace:^"
-    "@xylabs/react-number-status": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-pixel-debugger": "workspace:^"
-    "@xylabs/react-promise": "workspace:^"
-    "@xylabs/react-quick-tip-button": "workspace:^"
-    "@xylabs/react-render-spin-check": "workspace:^"
-    "@xylabs/react-rich-result": "workspace:^"
-    "@xylabs/react-scroll-to-top": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-accordion": "workspace:~"
+    "@xylabs/react-appbar": "workspace:~"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-common": "workspace:~"
+    "@xylabs/react-cookie-consent": "workspace:~"
+    "@xylabs/react-crypto": "workspace:~"
+    "@xylabs/react-dialogs": "workspace:~"
+    "@xylabs/react-experiments": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-identicon": "workspace:~"
+    "@xylabs/react-invertible-theme": "workspace:~"
+    "@xylabs/react-link": "workspace:~"
+    "@xylabs/react-number-status": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-pixel-debugger": "workspace:~"
+    "@xylabs/react-promise": "workspace:~"
+    "@xylabs/react-quick-tip-button": "workspace:~"
+    "@xylabs/react-render-spin-check": "workspace:~"
+    "@xylabs/react-rich-result": "workspace:~"
+    "@xylabs/react-scroll-to-top": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     axios: ^1.4.0
     eslint: ^8.45.0
     eslint-import-resolver-typescript: ^3.5.5
-    eslint-plugin-deprecation: ^1.4.1
+    eslint-plugin-deprecation: ^1.5.0
     eslint-plugin-import: ^2.27.5
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -9999,9 +9999,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-deprecation@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "eslint-plugin-deprecation@npm:1.4.1"
+"eslint-plugin-deprecation@npm:^1.4.1, eslint-plugin-deprecation@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "eslint-plugin-deprecation@npm:1.5.0"
   dependencies:
     "@typescript-eslint/utils": ^5.57.0
     tslib: ^2.3.1
@@ -10009,7 +10009,7 @@ __metadata:
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
     typescript: ^3.7.5 || ^4.0.0 || ^5.0.0
-  checksum: 75c7535d820d1749664705724cc979d706da126a2277f2937467f70156a2c220b10c66670f18226801c9555e4cd02312d353936f14d5752c2d2c648455fe5769
+  checksum: ec0ff3df1dbbbb85d14c8f6656bb126377280db58789c2ba3c4500250b291559c651a0fb2ac29aa977408fef3a919ad41e706100b55672ceb6c1ad09550e7396
   languageName: node
   linkType: hard
 
