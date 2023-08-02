@@ -12,6 +12,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "resolutions": {
+    "@mui/material": "5.14.2",
+    "@mui/system": "5.14.1"
+  },
   "dependencies": {
     "@xylabs/react-accordion": "workspace:~",
     "@xylabs/react-appbar": "workspace:~",
