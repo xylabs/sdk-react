@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "composite": true,
-    "declarationDir": "../promise/dist/types",
-    "typeRoots": []
-  },
-  "extends": "@xylabs/tsconfig-react"
-}

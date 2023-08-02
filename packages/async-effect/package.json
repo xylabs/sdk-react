@@ -14,11 +14,12 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "@xylabs/react-promise": "workspace:~"
+    "@xylabs/react-promise": "workspace:~",
+    "async-mutex": "^0.4.0"
   },
   "devDependencies": {
-    "@mui/material": "^5.14.2",
-    "@storybook/react": "^7.1.1",
+    "@mui/material": "^5.14.3",
+    "@storybook/react": "^7.2.0",
     "@xylabs/ts-scripts-yarn3": "^2.19.0",
     "@xylabs/tsconfig-react": "^2.19.0",
     "react": "^18.2.0",
