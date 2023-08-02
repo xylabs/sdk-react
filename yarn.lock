@@ -6299,7 +6299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/delay@npm:^2.9.3":
+"@xylabs/delay@npm:^2.9.3, @xylabs/delay@npm:~2.9.3":
   version: 2.9.3
   resolution: "@xylabs/delay@npm:2.9.3"
   checksum: 7ef85e736f846decc23efdea726b5637b19f1b105335dbf526bcc3a47ad3ad311750a4cd1fd21804a28173ee25b5fb324bffc99f02b0ab0bbeba837866047ad4
@@ -6867,6 +6867,7 @@ __metadata:
   dependencies:
     "@mui/material": ^5.14.3
     "@storybook/react": ^7.2.0
+    "@xylabs/delay": ~2.9.3
     "@xylabs/ts-scripts-yarn3": ^2.19.0
     "@xylabs/tsconfig-react": ^2.19.0
     react: ^18.2.0
