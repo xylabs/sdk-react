@@ -1,5 +1,6 @@
 // Inspired from https://github.com/bsonntag/react-use-promise
 
+import { Mutex } from 'async-mutex'
 import { DependencyList, useEffect, useMemo, useState } from 'react'
 
 export enum State {
@@ -19,6 +20,7 @@ export const usePromise = <TResult>(
   const [result, setResult] = useState<TResult>()
   const [error, setError] = useState<Error>()
   const [state, setState] = useState<State>(State.pending)
+  const mutex = useMemo(() => new Mutex(), [])
 
   if (debug) console.log(`usePromise [${debug}]: started [${typeof promise}]`)
 
@@ -26,7 +28,9 @@ export const usePromise = <TResult>(
     try {
       if (debug) console.log(`usePromise [${debug}]: re-memo [${typeof promise}]`)
       setState(State.pending)
-      return promise?.()
+      return mutex.runExclusive(async () => {
+        return await promise?.()
+      })
     } catch (e) {
       if (debug) console.log(`usePromise [${debug}]: useMemo rejection [${typeof promise}]`)
       setResult(undefined)
