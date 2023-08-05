@@ -1,6 +1,5 @@
 import { usePromise } from '@xylabs/react-promise'
-import { Mutex } from 'async-mutex'
-import { DependencyList, useEffect, useMemo, useRef } from 'react'
+import { DependencyList, useEffect, useRef } from 'react'
 
 export type EffectFuncWithMounted = (isMounted: () => boolean) => Promise<(() => void) | void>
 export type EffectFuncWithoutMounted = () => Promise<(() => void) | void>
@@ -10,7 +9,6 @@ export type EffectCallback = () => void | undefined
 
 export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList = []) {
   //we use a mutex to make sure consecutive runs of the effect are serialized
-  const mutex = useMemo(() => new Mutex(), [])
   const mounted = useRef(true)
 
   //this useEffect's return should only ever get called once
@@ -24,11 +22,8 @@ export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList 
     }
   }, [])
 
-  usePromise(
-    () =>
-      mutex.runExclusive(async () => {
-        await effect(() => mounted.current)
-      }),
-    dependencies,
-  )
+  usePromise(async () => {
+    await effect(() => mounted.current)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, dependencies)
 }

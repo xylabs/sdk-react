@@ -13,6 +13,7 @@ const UsePromiseTest: React.FC<UseAsyncEffectTestProps> = ({ refresh, delayTicks
   const [refreshValue] = usePromise(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async () => {
+      console.log('UsePromiseTest')
       if (delayTicks) {
         await delay(delayTicks)
       }
