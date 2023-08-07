@@ -14,8 +14,7 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "@xylabs/react-promise": "workspace:~",
-    "async-mutex": "^0.4.0"
+    "@xylabs/react-promise": "workspace:~"
   },
   "devDependencies": {
     "@mui/material": "^5.14.3",
@@ -68,5 +67,5 @@
   },
   "sideEffects": false,
   "types": "dist/types/index.d.ts",
-  "version": "2.17.10"
+  "version": "2.17.11"
 }
