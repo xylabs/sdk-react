@@ -13,7 +13,7 @@ export enum State {
  * usePromise -
  */
 export const usePromise = <TResult>(
-  promise: (() => Promise<TResult>) | undefined,
+  promise: () => Promise<TResult | undefined>,
   dependencies: DependencyList,
   debug: string | undefined = undefined,
 ): [TResult | undefined, Error | undefined, State | undefined] => {
@@ -26,7 +26,7 @@ export const usePromise = <TResult>(
 
   if (debug) console.log(`usePromise [${debug}]: started [${typeof promise}]`)
 
-  const promiseMemo: Promise<TResult> | undefined = useMemo(() => {
+  const promiseMemo: Promise<TResult | undefined> | undefined = useMemo(() => {
     try {
       if (debug) console.log(`usePromise [${debug}]: re-memo [${typeof promise}]`)
       setState(State.pending)
