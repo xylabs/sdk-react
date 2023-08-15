@@ -6,9 +6,9 @@ interface EthAccountProps {
   fontFamily?: string
   full?: boolean
   icon?: boolean
-
   iconOnly?: boolean
   iconSize?: number
+  removeMargin?: boolean
   shortenedLength?: number
   toEtherScan?: boolean
 }

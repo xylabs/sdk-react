@@ -17,6 +17,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
   height,
   addressLength = 'auto',
   fontFamily = '"Source Code Pro",monospace',
+  removeMargin,
   ...props
 }) => {
   const { localAddress } = useContext(EthersContext)
@@ -51,7 +52,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
         />
       ) : null}
       {iconOnly ? null : (
-        <Typography alignSelf="center" marginX={1} variant="body1" fontFamily={fontFamily}>
+        <Typography alignSelf="center" marginX={removeMargin ? 0 : 1} variant="body1" fontFamily={fontFamily}>
           {textToDisplay}
         </Typography>
       )}
