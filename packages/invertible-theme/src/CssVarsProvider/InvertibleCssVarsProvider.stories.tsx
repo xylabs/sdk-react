@@ -1,8 +1,9 @@
-import { Box, CssBaseline, Typography, useTheme } from '@mui/material'
+import { Box, Button, ButtonGroup, CssBaseline, Stack, Typography, useTheme } from '@mui/material'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import { Meta, StoryFn } from '@storybook/react'
 
 import { InvertableCssVarsProvider } from './InvertibleCssVarsProvider'
+import { useColorSchemeEx } from './useColorSchemeEx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -19,20 +20,35 @@ const Template: StoryFn<typeof InvertableCssVarsProvider> = (args) => <Invertabl
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
+  const { darkMode, lightMode, systemMode, setMode } = useColorSchemeEx()
+
   return (
     <>
       <CssBaseline />
-      <Box sx={{ backgroundColor: theme.palette.background.default }}>
-        <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
-          <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>
-          <Typography variant="h4" color={theme.palette.primary.main}>
-            Color: {theme.palette.primary.main}
-          </Typography>
-          <Typography variant="h4" color={theme.palette.secondary.main}>
-            Color: {theme.palette.secondary.main}
-          </Typography>
+      <Stack direction={'column'} gap={2}>
+        <ButtonGroup>
+          <Button variant={darkMode ? 'contained' : 'outlined'} onClick={() => setMode('dark')}>
+            DarkMode
+          </Button>
+          <Button variant={lightMode ? 'contained' : 'outlined'} onClick={() => setMode('light')}>
+            LightMode
+          </Button>
+          <Button variant={systemMode ? 'contained' : 'outlined'} onClick={() => setMode('system')}>
+            System
+          </Button>
+        </ButtonGroup>
+        <Box sx={{ backgroundColor: theme.palette.background.default }}>
+          <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
+            <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>
+            <Typography variant="h4" color={theme.palette.primary.main}>
+              Color: {theme.palette.primary.main}
+            </Typography>
+            <Typography variant="h4" color={theme.palette.secondary.main}>
+              Color: {theme.palette.secondary.main}
+            </Typography>
+          </Box>
         </Box>
-      </Box>
+      </Stack>
     </>
   )
 }
