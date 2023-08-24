@@ -3,17 +3,17 @@ import { useMemo } from 'react'
 
 // A hook with a similar interface to the darkMode app setting to make migrating easier.
 export const useColorSchemeEx = () => {
-  const { mode, setMode } = useColorScheme()
+  const { mode, setMode, systemMode } = useColorScheme()
 
   const state = useMemo(
     () => ({
-      darkMode: mode === 'dark',
-      lightMode: mode === 'light',
+      darkMode: mode === 'dark' || systemMode === 'dark',
+      lightMode: mode === 'light' || systemMode === 'light',
       mode,
       setMode,
       systemMode: mode === 'system',
     }),
-    [mode, setMode],
+    [mode, setMode, systemMode],
   )
 
   return state

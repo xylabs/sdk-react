@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, CssBaseline, Stack, Typography, useTheme } from '@mui/material'
+import { Box, Button, ButtonGroup, Chip, CssBaseline, Stack, Typography, useTheme } from '@mui/material'
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import { Meta, StoryFn } from '@storybook/react'
 
@@ -20,12 +20,15 @@ const Template: StoryFn<typeof InvertableCssVarsProvider> = (args) => <Invertabl
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
-  const { darkMode, lightMode, systemMode, setMode } = useColorSchemeEx()
+  const { darkMode, lightMode, mode, setMode } = useColorSchemeEx()
 
   return (
     <>
       <CssBaseline />
-      <Stack direction={'column'} gap={2}>
+      <Stack direction={'column'} gap={2} alignItems="start">
+        <Stack direction={'row'} gap={2}>
+          Current Mode: <Chip label={mode} />
+        </Stack>
         <ButtonGroup>
           <Button variant={darkMode ? 'contained' : 'outlined'} onClick={() => setMode('dark')}>
             DarkMode
@@ -33,9 +36,7 @@ const ThemeEnabledComponent = () => {
           <Button variant={lightMode ? 'contained' : 'outlined'} onClick={() => setMode('light')}>
             LightMode
           </Button>
-          <Button variant={systemMode ? 'contained' : 'outlined'} onClick={() => setMode('system')}>
-            System
-          </Button>
+          <Button onClick={() => setMode('system')}>System</Button>
         </ButtonGroup>
         <Box sx={{ backgroundColor: theme.palette.background.default }}>
           <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
