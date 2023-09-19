@@ -6435,35 +6435,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/api@npm:^2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/api@npm:2.11.5"
+"@xylabs/api@npm:^2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/api@npm:2.11.6"
   dependencies:
     axios: ^1.5.0
-  checksum: 93ae18132b13d2158cbdc422e143f4afc9513eb97a0548ee2f8c08f183e450ac59c40f34edcdde189e403bc7ed60c60a31d25990f13c81b7f17d025812550f8b
+  checksum: 136f7c4bd611733b016e0dc0b42fbe1ffe47d0fe5c8fc8b50d1938f765b340a01cb900efc65372d40fbd27e107df3efacd1e44473269ad7aab82f8200773a346
   languageName: node
   linkType: hard
 
-"@xylabs/assert@npm:^2.11.5, @xylabs/assert@npm:^2.7.1, @xylabs/assert@npm:~2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/assert@npm:2.11.5"
-  checksum: 1238b487cd9ce8b3d052c2f46ac24f3e1de7f9be7adc5ff4635e6fc10800c8a00cb8efbf13656f7ff5b70f8051670b44b8aa7a2a51f9c5634bfb717600720d93
+"@xylabs/assert@npm:^2.11.6, @xylabs/assert@npm:^2.7.1, @xylabs/assert@npm:~2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/assert@npm:2.11.6"
+  checksum: efdb25e2fef2193f4082f6fd1950ed7c3cee91c357bf29680976defeb7492f00e9e22c569549948160b5d8a9b94d7fbe0acbe93753ac4e41a4ca4002ebf116d2
   languageName: node
   linkType: hard
 
-"@xylabs/bignumber@npm:^2.11.5, @xylabs/bignumber@npm:~2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/bignumber@npm:2.11.5"
+"@xylabs/bignumber@npm:^2.11.6, @xylabs/bignumber@npm:~2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/bignumber@npm:2.11.6"
   dependencies:
     bn.js: ^5.2.1
-  checksum: 5ad035889a577c7b30004df2095c5b30b2e74c284a8990cc9b00d0e855ce0bb020f4b3506ef10ec87992815794ab2206819c0ecd1c98649be1b48a435b74065b
+  checksum: 89a3c55de4cf7f8bee674a549dcc96447feab19878448f997291b9e39a8366769175338fbcc4696ca225f407831a159946a65dc658130aaa4caf9c7413cd6f43
   languageName: node
   linkType: hard
 
-"@xylabs/delay@npm:^2.11.5, @xylabs/delay@npm:~2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/delay@npm:2.11.5"
-  checksum: 169e0a5677554e0767e718eeb25157932b24ad807194dd9989b2e40299a34b1ddd66214496639ddcc92fb34e12d8d61c4875f88ae32c31db927842bd42468f13
+"@xylabs/delay@npm:^2.11.6, @xylabs/delay@npm:~2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/delay@npm:2.11.6"
+  checksum: f6772ee6dad37dd7fff521301abadf74db8346e25b2eaeba529e8bd16fd5b0cf11436464e23f0ccf536823b66768b7cde5da7fb2bd77afab792371c7283e9763
   languageName: node
   linkType: hard
 
@@ -6534,34 +6534,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/eth-address@npm:^2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/eth-address@npm:2.11.5"
+"@xylabs/eth-address@npm:^2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/eth-address@npm:2.11.6"
   dependencies:
-    "@xylabs/assert": ~2.11.5
-    "@xylabs/bignumber": ~2.11.5
-  checksum: 90656056cd5c9670ed4ebf610c99979cedccfc3833e29fe1382c71496a6a06fd0cdb5f00e242f432d49b1e2f7683eb131ab428f51e8a5e54c310d64b3040ed31
+    "@xylabs/assert": ~2.11.6
+    "@xylabs/bignumber": ~2.11.6
+  checksum: 0698f452ab582e577533eb5f9cd25732e070767e92627dc1603dcb647ed9654a6ce80775ea27b9281ad91a9f3290f6f0ac7511abc091118448935819947470ff
   languageName: node
   linkType: hard
 
-"@xylabs/forget@npm:^2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/forget@npm:2.11.5"
+"@xylabs/forget@npm:^2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/forget@npm:2.11.6"
   dependencies:
-    "@xylabs/delay": ~2.11.5
-  checksum: 560afbf2490bbb059de053849a6f5638e8b892ba040b0c8e1ef648086d72a0e61c6b7ebe0faa8ad907718c8ee824c627a89ae988a5cb6c42006bd54a19e7e811
+    "@xylabs/delay": ~2.11.6
+  checksum: 0a415ff21e84390015e856ead0c470351a1fb0923b94b8dd725003657943d6fecbb1330a0c22687cabd7a658bb571340807954eaf0d8a5bd6d0d332e2fa594d2
   languageName: node
   linkType: hard
 
-"@xylabs/log@npm:^2.11.5":
-  version: 2.11.5
-  resolution: "@xylabs/log@npm:2.11.5"
+"@xylabs/log@npm:^2.11.6":
+  version: 2.11.6
+  resolution: "@xylabs/log@npm:2.11.6"
   dependencies:
     rollbar: ^2.26.2
   dependenciesMeta:
     rollbar:
       optional: true
-  checksum: 47220d521a524aba13bf0236a0e37793c91c23fa2b87266a5a8ada7051e5b9e6c775e36ba69c1a00a4daf1e5904a078151a711059d75405b9ea9cc8f613179fe
+  checksum: ba3bf087b006eb684816f9edf9bd4104d8ea62d4e83d561904f340bc61ed0c95ac6fa6e485d3f436bbd2c3cd168387ec344d9cb0ab813ad69f7c9aa2146eb395
   languageName: node
   linkType: hard
 
@@ -6706,7 +6706,7 @@ __metadata:
     "@mui/material": ^5.14.10
     "@storybook/react": ^7.4.2
     "@types/lodash": ^4.14.198
-    "@xylabs/assert": ^2.11.5
+    "@xylabs/assert": ^2.11.6
     "@xylabs/react-base-page": "workspace:~"
     "@xylabs/react-error": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -6762,9 +6762,9 @@ __metadata:
     "@metamask/providers": ^10.2.1
     "@mui/material": ^5.14.10
     "@storybook/react": ^7.4.2
-    "@xylabs/assert": ^2.11.5
-    "@xylabs/bignumber": ^2.11.5
-    "@xylabs/eth-address": ^2.11.5
+    "@xylabs/assert": ^2.11.6
+    "@xylabs/bignumber": ^2.11.6
+    "@xylabs/eth-address": ^2.11.6
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -6832,8 +6832,8 @@ __metadata:
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
     "@storybook/react": ^7.4.2
-    "@xylabs/forget": ^2.11.5
-    "@xylabs/log": ^2.11.5
+    "@xylabs/forget": ^2.11.6
+    "@xylabs/log": ^2.11.6
     "@xylabs/pixel": ^1.4.14
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-pixel": "workspace:~"
@@ -6861,7 +6861,7 @@ __metadata:
     "@mui/styles": ^5.14.10
     "@mui/system": ^5.14.10
     "@storybook/react": ^7.4.2
-    "@xylabs/delay": ^2.11.5
+    "@xylabs/delay": ^2.11.6
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^3.0.28
@@ -6992,8 +6992,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
-    "@xylabs/assert": ^2.11.5
-    "@xylabs/delay": ^2.11.5
+    "@xylabs/assert": ^2.11.6
+    "@xylabs/delay": ^2.11.6
     "@xylabs/pixel": ^1.4.14
     "@xylabs/ts-scripts-yarn3": ^3.0.28
     "@xylabs/tsconfig-react": ^3.0.28
@@ -7031,7 +7031,7 @@ __metadata:
   dependencies:
     "@mui/material": ^5.14.10
     "@storybook/react": ^7.4.2
-    "@xylabs/delay": ~2.11.5
+    "@xylabs/delay": ~2.11.6
     "@xylabs/ts-scripts-yarn3": ^3.0.28
     "@xylabs/tsconfig-react": ^3.0.28
     async-mutex: ^0.4.0
@@ -7141,8 +7141,8 @@ __metadata:
   dependencies:
     "@mui/material": ^5.14.10
     "@storybook/react": ^7.4.2
-    "@xylabs/api": ^2.11.5
-    "@xylabs/log": ^2.11.5
+    "@xylabs/api": ^2.11.6
+    "@xylabs/log": ^2.11.6
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/ts-scripts-yarn3": ^3.0.28
     "@xylabs/tsconfig-react": ^3.0.28

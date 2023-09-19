@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.11.5",
+    "@xylabs/assert": "^2.11.6",
     "@xylabs/react-base-page": "workspace:~",
     "@xylabs/react-error": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -90,5 +90,5 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.18.0"
+  "version": "2.18.1"
 }

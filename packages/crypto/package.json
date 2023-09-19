@@ -16,9 +16,9 @@
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^10.2.1",
-    "@xylabs/assert": "^2.11.5",
-    "@xylabs/bignumber": "^2.11.5",
-    "@xylabs/eth-address": "^2.11.5",
+    "@xylabs/assert": "^2.11.6",
+    "@xylabs/bignumber": "^2.11.6",
+    "@xylabs/eth-address": "^2.11.6",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -88,5 +88,5 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.18.0"
+  "version": "2.18.1"
 }

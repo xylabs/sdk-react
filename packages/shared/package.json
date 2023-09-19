@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^2.11.5",
-    "@xylabs/log": "^2.11.5",
+    "@xylabs/api": "^2.11.6",
+    "@xylabs/log": "^2.11.6",
     "@xylabs/react-async-effect": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
@@ -79,5 +79,5 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.18.0"
+  "version": "2.18.1"
 }

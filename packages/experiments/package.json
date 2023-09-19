@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^2.11.5",
-    "@xylabs/log": "^2.11.5",
+    "@xylabs/forget": "^2.11.6",
+    "@xylabs/log": "^2.11.6",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-pixel": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
@@ -84,5 +84,5 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "2.18.0"
+  "version": "2.18.1"
 }
