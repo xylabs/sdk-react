@@ -1,5 +1,4 @@
-import { responsiveFontSizes, ScopedCssBaseline, Theme, ThemeProvider } from '@mui/material'
-import { createTheme, ThemeOptions } from '@mui/material/styles'
+import { ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material'
 import { cloneDeep, merge } from '@xylabs/lodash'
 
 import { InvertibleThemeContext } from './InvertibleThemeContext'
