@@ -1,5 +1,5 @@
 import { Menu, MenuProps, PaletteMode, useTheme } from '@mui/material'
-import merge from 'lodash/merge'
+import { merge } from '@xylabs/lodash'
 
 export interface MenuExProps extends MenuProps {
   colorize?: 'primary' | 'secondary'
