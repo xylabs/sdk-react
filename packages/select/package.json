@@ -17,12 +17,12 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.14.4",
-    "@types/lodash": "^4.14.197",
-    "@xylabs/ts-scripts-yarn3": "^2.19.0",
-    "@xylabs/tsconfig-react": "^2.19.0",
+    "@mui/material": "^5.14.10",
+    "@types/lodash": "^4.14.198",
+    "@xylabs/ts-scripts-yarn3": "^2.19.12",
+    "@xylabs/tsconfig-react": "^2.19.12",
     "react": "^18.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "@mui/material": "^5",

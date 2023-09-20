@@ -17,15 +17,15 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.14.3",
-    "@mui/material": "^5.14.4",
-    "@storybook/react": "^7.2.2",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "@storybook/react": "^7.4.3",
     "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/ts-scripts-yarn3": "^2.19.0",
-    "@xylabs/tsconfig-react": "^2.19.0",
+    "@xylabs/ts-scripts-yarn3": "^2.19.12",
+    "@xylabs/tsconfig-react": "^2.19.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",
