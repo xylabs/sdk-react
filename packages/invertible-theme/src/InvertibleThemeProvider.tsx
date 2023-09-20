@@ -1,5 +1,4 @@
-import { responsiveFontSizes, ScopedCssBaseline, Theme, ThemeProvider } from '@mui/material'
-import { createTheme, ThemeOptions } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
 import cloneDeep from 'lodash/cloneDeep'
 import merge from 'lodash/merge'
 
