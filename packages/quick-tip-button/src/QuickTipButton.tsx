@@ -1,4 +1,4 @@
-import { HelpOutline as HelpOutlineIcon } from '@mui/icons-material'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline.js'
 import { DialogProps, IconButton, IconButtonProps, SvgIconProps, Tooltip } from '@mui/material'
 import { MessageDialog } from '@xylabs/react-dialogs'
 import { JSXElementConstructor, useState } from 'react'
