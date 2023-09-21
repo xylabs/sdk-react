@@ -1,4 +1,4 @@
-import ReplayIcon from '@mui/icons-material/Replay'
+import { Replay as ReplayIcon } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
 import { FlexGrowCol } from '@xylabs/react-flexbox'
 import React from 'react'
