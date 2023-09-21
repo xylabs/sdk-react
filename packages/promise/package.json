@@ -20,8 +20,8 @@
     "@mui/material": "^5.14.10",
     "@storybook/react": "^7.4.3",
     "@xylabs/delay": "~2.11.7",
-    "@xylabs/ts-scripts-yarn3": "^3.0.28",
-    "@xylabs/tsconfig-react": "^3.0.28",
+    "@xylabs/ts-scripts-yarn3": "^3.0.36",
+    "@xylabs/tsconfig-react": "^3.0.36",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -45,8 +45,8 @@
       },
       "browser": {
         "import": {
-          "types": "./dist/index.d.mts",
-          "default": "./dist/index.mjs"
+          "types": "./dist/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
         },
         "require": {
           "types": "./dist/index.d.ts",

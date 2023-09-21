@@ -15,8 +15,8 @@
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@types/react-dom": "^18.2.7",
-    "@xylabs/ts-scripts-yarn3": "^3.0.28",
-    "@xylabs/tsconfig-react": "^3.0.28",
+    "@xylabs/ts-scripts-yarn3": "^3.0.36",
+    "@xylabs/tsconfig-react": "^3.0.36",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -39,8 +39,8 @@
       },
       "browser": {
         "import": {
-          "types": "./dist/index.d.mts",
-          "default": "./dist/index.mjs"
+          "types": "./dist/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
         },
         "require": {
           "types": "./dist/index.d.ts",

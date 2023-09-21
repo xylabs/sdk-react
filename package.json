@@ -62,10 +62,10 @@
     "@storybook/theming": "^7.4.3",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
-    "@xylabs/eslint-config-react": "^3.0.28",
+    "@xylabs/eslint-config-react": "^3.0.36",
     "@xylabs/pixel": "^1.4.14",
-    "@xylabs/ts-scripts-yarn3": "^3.0.28",
-    "@xylabs/tsconfig-react": "^3.0.28",
+    "@xylabs/ts-scripts-yarn3": "^3.0.36",
+    "@xylabs/tsconfig-react": "^3.0.36",
     "axios": "^1.5.0",
     "eslint": "^8.49.0",
     "eslint-import-resolver-typescript": "^3.6.0",
@@ -106,8 +106,8 @@
       },
       "browser": {
         "import": {
-          "types": "./dist/index.d.mts",
-          "default": "./dist/index.mjs"
+          "types": "./dist/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
         },
         "require": {
           "types": "./dist/index.d.ts",
