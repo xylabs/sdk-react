@@ -13,22 +13,21 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.11.7",
+    "@xylabs/assert": "^2.11.11",
+    "@xylabs/lodash": "^2.11.11",
     "@xylabs/react-base-page": "workspace:~",
     "@xylabs/react-error": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-portal": "workspace:~",
-    "@xylabs/react-select": "workspace:~",
-    "lodash": "^4.17.21"
+    "@xylabs/react-select": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
-    "@storybook/react": "^7.4.3",
-    "@types/lodash": "^4.14.198",
-    "@xylabs/ts-scripts-yarn3": "^2.19.12",
-    "@xylabs/tsconfig-react": "^2.19.12",
+    "@storybook/react": "^7.4.4",
+    "@xylabs/ts-scripts-yarn3": "^3.0.55",
+    "@xylabs/tsconfig-react": "^3.0.55",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -43,27 +42,32 @@
     "react-helmet": "^6",
     "react-router-dom": "^6"
   },
-  "browser": "dist/esm/index.js",
-  "docs": "dist/docs.json",
   "exports": {
     ".": {
       "node": {
-        "import": "./dist/esm/index.js",
-        "require": "./dist/cjs/index.js"
+        "import": {
+          "types": "./dist/node/index.d.mts",
+          "default": "./dist/node/index.mjs"
+        },
+        "require": {
+          "types": "./dist/node/index.d.ts",
+          "default": "./dist/node/index.js"
+        }
       },
       "browser": {
-        "import": "./dist/esm/index.js",
-        "require": "./dist/cjs/index.js"
+        "types": "./dist/browser/index.d.ts",
+        "default": "./dist/browser/index.js"
       },
-      "default": "./dist/esm/index.js"
+      "default": "./dist/browser/index.js"
     },
     "./dist/docs.json": {
       "default": "./dist/docs.json"
     },
     "./package.json": "./package.json"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "types": "dist/browser/index.d.ts",
+  "main": "./dist/node/index.js",
+  "module": "./dist/browser/index.js",
   "homepage": "https://xylabs.com",
   "keywords": [
     "utility",
@@ -79,6 +83,5 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "types": "dist/types/index.d.ts",
-  "version": "2.19.1"
+  "version": "3.0.1"
 }

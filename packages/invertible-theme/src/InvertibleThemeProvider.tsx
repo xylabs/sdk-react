@@ -1,7 +1,5 @@
-import { responsiveFontSizes, ScopedCssBaseline, Theme, ThemeProvider } from '@mui/material'
-import { createTheme, ThemeOptions } from '@mui/material/styles'
-import cloneDeep from 'lodash/cloneDeep'
-import merge from 'lodash/merge'
+import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
+import { cloneDeep, merge } from '@xylabs/lodash'
 
 import { InvertibleThemeContext } from './InvertibleThemeContext'
 import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps'
@@ -27,7 +25,6 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
   scoped = false,
   invert = false,
   noResponsiveFonts,
-  // eslint-disable-next-line deprecation/deprecation
   darkTheme,
   darkOptions,
   lightOptions,

@@ -1,5 +1,5 @@
 import { PaletteMode, Select, SelectProps, useTheme } from '@mui/material'
-import merge from 'lodash/merge'
+import { merge } from '@xylabs/lodash'
 import React from 'react'
 
 export interface SelectExProps<T> extends SelectProps<T> {

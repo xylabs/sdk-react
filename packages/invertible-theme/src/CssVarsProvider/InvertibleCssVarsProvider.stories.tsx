@@ -1,5 +1,4 @@
-import { Box, Button, ButtonGroup, Chip, CssBaseline, Stack, Typography, useTheme } from '@mui/material'
-import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
+import { Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 
 import { InvertableCssVarsProvider } from './InvertibleCssVarsProvider'
