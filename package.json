@@ -137,11 +137,10 @@
   },
   "sideEffects": false,
   "types": "dist/index.d.ts",
-  "version": "3.1.0-rc.6",
+  "version": "3.0.1",
   "packageManager": "yarn@3.6.1",
   "volta": {
     "node": "18.17.1",
     "yarn": "3.4.1"
-  },
-  "stableVersion": "3.0.0"
+  }
 }
