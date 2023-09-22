@@ -14,8 +14,8 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@xylabs/ts-scripts-yarn3": "^3.0.52",
-    "@xylabs/tsconfig-react": "^3.0.52",
+    "@xylabs/ts-scripts-yarn3": "^3.0.55",
+    "@xylabs/tsconfig-react": "^3.0.55",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -65,6 +65,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.1.0-rc.5",
+  "version": "3.1.0-rc.6",
   "stableVersion": "3.0.0"
 }
