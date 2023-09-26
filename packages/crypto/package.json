@@ -16,9 +16,9 @@
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^10.2.1",
-    "@xylabs/assert": "^2.11.11",
-    "@xylabs/bignumber": "^2.11.11",
-    "@xylabs/eth-address": "^2.11.11",
+    "@xylabs/assert": "^2.11.17",
+    "@xylabs/bignumber": "^2.11.17",
+    "@xylabs/eth-address": "^2.11.17",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -26,10 +26,10 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.14.10",
-    "@storybook/react": "^7.4.4",
-    "@xylabs/ts-scripts-yarn3": "^3.0.55",
-    "@xylabs/tsconfig-react": "^3.0.55",
+    "@mui/material": "^5.14.11",
+    "@storybook/react": "^7.4.5",
+    "@xylabs/ts-scripts-yarn3": "^3.0.67",
+    "@xylabs/tsconfig-react": "^3.0.67",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -82,5 +82,5 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.1"
+  "version": "3.0.2"
 }

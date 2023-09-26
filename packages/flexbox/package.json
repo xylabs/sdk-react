@@ -13,18 +13,18 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^2.11.11",
+    "@xylabs/delay": "^2.11.17",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.14.10",
-    "@mui/styles": "^5.14.10",
-    "@mui/system": "^5.14.10",
-    "@storybook/react": "^7.4.4",
-    "@xylabs/ts-scripts-yarn3": "^3.0.55",
-    "@xylabs/tsconfig-react": "^3.0.55",
+    "@mui/material": "^5.14.11",
+    "@mui/styles": "^5.14.11",
+    "@mui/system": "^5.14.11",
+    "@storybook/react": "^7.4.5",
+    "@xylabs/ts-scripts-yarn3": "^3.0.67",
+    "@xylabs/tsconfig-react": "^3.0.67",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -81,5 +81,5 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.1"
+  "version": "3.0.2"
 }
