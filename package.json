@@ -105,16 +105,23 @@
         }
       },
       "browser": {
-        "types": "./dist/browser/index.d.ts",
-        "default": "./dist/browser/index.js"
+        "import": {
+          "types": "./dist/browser/index.d.ts",
+          "default": "./dist/browser/index.js"
+        },
+        "require": {
+          "types": "./dist/browser/index.d.ts",
+          "default": "./dist/browser/index.cjs"
+        }
       },
       "default": "./dist/browser/index.js"
     },
-    "./dist/docs.json": {
+    "./docs": {
       "default": "./dist/docs.json"
     },
     "./package.json": "./package.json"
   },
+  "types": "dist/browser/index.d.ts",
   "main": "./dist/browser/index.js",
   "module": "./dist/browser/index.js",
   "homepage": "https://xylabs.com",
@@ -139,7 +146,7 @@
     "start": "storybook dev -p 6006"
   },
   "sideEffects": false,
-  "version": "3.0.2",
+  "version": "3.0.3",
   "packageManager": "yarn@3.6.1",
   "volta": {
     "node": "18.17.1",

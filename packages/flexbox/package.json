@@ -53,18 +53,24 @@
         }
       },
       "browser": {
-        "types": "./dist/browser/index.d.ts",
-        "default": "./dist/browser/index.js"
+        "import": {
+          "types": "./dist/browser/index.d.ts",
+          "default": "./dist/browser/index.js"
+        },
+        "require": {
+          "types": "./dist/browser/index.d.ts",
+          "default": "./dist/browser/index.cjs"
+        }
       },
       "default": "./dist/browser/index.js"
     },
-    "./dist/docs.json": {
+    "./docs": {
       "default": "./dist/docs.json"
     },
     "./package.json": "./package.json"
   },
   "types": "dist/browser/index.d.ts",
-  "main": "./dist/node/index.js",
+  "main": "./dist/browser/index.js",
   "module": "./dist/browser/index.js",
   "homepage": "https://xylabs.com",
   "keywords": [
@@ -81,5 +87,5 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.2"
+  "version": "3.0.3"
 }
