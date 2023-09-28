@@ -62,10 +62,10 @@
     "@storybook/theming": "^7.4.5",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
-    "@xylabs/eslint-config-react": "^3.0.78",
+    "@xylabs/eslint-config-react": "^3.0.79",
     "@xylabs/pixel": "^1.4.14",
-    "@xylabs/ts-scripts-yarn3": "^3.0.78",
-    "@xylabs/tsconfig-react": "^3.0.78",
+    "@xylabs/ts-scripts-yarn3": "^3.0.79",
+    "@xylabs/tsconfig-react": "^3.0.79",
     "axios": "^1.5.1",
     "eslint": "^8.50.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -146,7 +146,7 @@
     "start": "storybook dev -p 6006"
   },
   "sideEffects": false,
-  "version": "3.0.5",
+  "version": "3.0.6",
   "packageManager": "yarn@3.6.1",
   "volta": {
     "node": "18.17.1",

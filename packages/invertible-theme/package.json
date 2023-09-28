@@ -13,14 +13,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/lodash": "^2.12.10"
+    "@xylabs/lodash": "^2.12.14"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@mui/material": "^5.14.11",
     "@storybook/react": "^7.4.5",
-    "@xylabs/ts-scripts-yarn3": "^3.0.78",
-    "@xylabs/tsconfig-react": "^3.0.78",
+    "@xylabs/ts-scripts-yarn3": "^3.0.79",
+    "@xylabs/tsconfig-react": "^3.0.79",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -77,6 +77,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.5",
+  "version": "3.0.6",
   "type": "module"
 }

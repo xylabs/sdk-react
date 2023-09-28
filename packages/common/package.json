@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.12.10",
-    "@xylabs/lodash": "^2.12.10",
+    "@xylabs/assert": "^2.12.14",
+    "@xylabs/lodash": "^2.12.14",
     "@xylabs/react-base-page": "workspace:~",
     "@xylabs/react-error": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -26,8 +26,8 @@
     "@mui/icons-material": "^5.14.11",
     "@mui/material": "^5.14.11",
     "@storybook/react": "^7.4.5",
-    "@xylabs/ts-scripts-yarn3": "^3.0.78",
-    "@xylabs/tsconfig-react": "^3.0.78",
+    "@xylabs/ts-scripts-yarn3": "^3.0.79",
+    "@xylabs/tsconfig-react": "^3.0.79",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -89,6 +89,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.5",
+  "version": "3.0.6",
   "type": "module"
 }
