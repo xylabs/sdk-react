@@ -139,7 +139,8 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "resolutions": {
-    "@xylabs/buffer": "2.11.13"
+    "@xylabs/buffer": "2.11.13",
+    "postcss": "^8.4.31"
   },
   "scripts": {
     "build-storybook": "storybook build",
