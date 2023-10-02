@@ -145,7 +145,7 @@
   "scripts": {
     "build-storybook": "storybook build",
     "start": "storybook dev -p 6006",
-    "build-typedoc-site": "xy gen-docs @xylabs/sdk-react"
+    "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
   "version": "3.0.6",
