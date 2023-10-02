@@ -36,8 +36,7 @@
     "@xylabs/pixel": "^1.4.9",
     "axios": "^1",
     "react": "^18",
-    "react-dom": "^18",
-    "react-router-dom": "^6"
+    "react-dom": "^18"
   },
   "exports": {
     ".": {

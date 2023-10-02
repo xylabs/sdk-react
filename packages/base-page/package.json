@@ -39,8 +39,7 @@
     "@mui/styles": "^5",
     "react": "^18",
     "react-dom": "^18",
-    "react-helmet": "^6",
-    "react-router-dom": "^6"
+    "react-helmet": "^6"
   },
   "exports": {
     ".": {

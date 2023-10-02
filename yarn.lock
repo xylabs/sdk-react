@@ -6627,7 +6627,6 @@ __metadata:
     "@mui/material": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6698,7 +6697,6 @@ __metadata:
     react: ^18
     react-dom: ^18
     react-helmet: ^6
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6720,7 +6718,6 @@ __metadata:
     "@mui/material": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6751,7 +6748,6 @@ __metadata:
     react: ^18
     react-dom: ^18
     react-helmet: ^6
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6774,7 +6770,6 @@ __metadata:
     "@mui/styles": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6804,7 +6799,6 @@ __metadata:
     "@mui/material": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6827,7 +6821,6 @@ __metadata:
     "@mui/styles": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6957,7 +6950,6 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -6980,7 +6972,6 @@ __metadata:
     "@mui/material": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -7008,7 +6999,6 @@ __metadata:
     axios: ^1
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -7088,7 +7078,6 @@ __metadata:
     "@mui/styles": ^5
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -7137,7 +7126,6 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -7256,7 +7244,6 @@ __metadata:
     react: ^18
     react-dom: ^18
     react-helmet: ^6
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
