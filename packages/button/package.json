@@ -13,24 +13,26 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-shared": "workspace:~",
-    "react-router-dom": "^6.16.0"
+    "@xylabs/react-shared": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@mui/material": "^5.14.11",
     "@storybook/react": "^7.4.5",
+    "@types/react-router-dom-5": "npm:@types/react-router-dom@^5.3.3",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/ts-scripts-yarn3": "^3.0.82",
     "@xylabs/tsconfig-react": "^3.0.82",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "@mui/material": "^5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-router-dom": ">=5.1"
   },
   "exports": {
     ".": {

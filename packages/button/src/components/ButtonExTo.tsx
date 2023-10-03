@@ -1,11 +1,17 @@
 import { forwardRef, MouseEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import * as ReactRouterDom from 'react-router-dom'
+import * as ReactRouterDom5 from 'react-router-dom-5'
 
 import { ButtonExBase } from './ButtonExBase'
 import { ButtonExProps } from './ButtonExProps'
 
-const ButtonToEx = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions, onClick, ...props }, ref) => {
-  const navigate = useNavigate()
+const isReactRouter6 = () => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return !!(ReactRouterDom as any)?.useNavigate
+}
+
+const ButtonToEx6 = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions, onClick, ...props }, ref) => {
+  const navigate = ReactRouterDom.useNavigate()
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event)
     if (to) {
@@ -16,6 +22,22 @@ const ButtonToEx = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions
   return <ButtonExBase ref={ref} onClick={localOnClick} {...props} />
 })
 
-ButtonToEx.displayName = 'ButtonToExXYLabs'
+ButtonToEx6.displayName = 'ButtonToExXYLabs'
+
+const ButtonToEx5 = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions, onClick, ...props }, ref) => {
+  const history = ReactRouterDom5.useHistory()
+  const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
+    onClick?.(event)
+    if (to) {
+      history.push(to, toOptions?.state)
+    }
+  }
+
+  return <ButtonExBase ref={ref} onClick={localOnClick} {...props} />
+})
+
+ButtonToEx5.displayName = 'ButtonToExXYLabs'
+
+const ButtonToEx = isReactRouter6() ? ButtonToEx6 : ButtonToEx5
 
 export { ButtonToEx }
