@@ -13,13 +13,15 @@
     "packages/*"
   ],
   "description": "Common React library for all XY Labs projects that use React",
+  "dependencies": {
+    "react-router-dom": "^6.16.0"
+  },
   "devDependencies": {
     "@mui/material": "^5.14.11",
     "@xylabs/ts-scripts-yarn3": "^3.0.82",
     "@xylabs/tsconfig-react": "^3.0.82",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
@@ -73,6 +75,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.8",
+  "version": "3.0.9",
   "type": "module"
 }
