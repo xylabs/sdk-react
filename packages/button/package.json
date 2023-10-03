@@ -26,6 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
+    "react-router-dom-5": "npm:react-router-dom@^5.3.4",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
@@ -81,6 +82,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.9",
+  "version": "3.0.10",
   "type": "module"
 }
