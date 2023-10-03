@@ -1,6 +1,6 @@
 import { forwardRef, MouseEvent } from 'react'
 import * as ReactRouterDom from 'react-router-dom'
-import * as ReactRouterDom5 from 'react-router-dom-5'
+import type { useHistory } from 'react-router-dom-5'
 
 import { ButtonExBase } from './ButtonExBase'
 import { ButtonExProps } from './ButtonExProps'
@@ -25,7 +25,8 @@ const ButtonToEx6 = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOption
 ButtonToEx6.displayName = 'ButtonToExXYLabs'
 
 const ButtonToEx5 = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions, onClick, ...props }, ref) => {
-  const history = ReactRouterDom5.useHistory()
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const history = ((ReactRouterDom as any).useHistory as typeof useHistory)()
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event)
     if (to) {
