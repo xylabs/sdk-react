@@ -6899,7 +6899,6 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-    react-router-dom: ">=5.1"
   languageName: unknown
   linkType: soft
 
@@ -7194,7 +7193,6 @@ __metadata:
     react: ^18
     react-dom: ^18
     react-helmet: ^6
-    react-router-dom: ">=5.1"
   languageName: unknown
   linkType: soft
 
