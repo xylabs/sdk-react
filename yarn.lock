@@ -6639,14 +6639,14 @@ __metadata:
   linkType: hard
 
 "@xylabs/log@npm:^2.12.20":
-  version: 2.12.20
-  resolution: "@xylabs/log@npm:2.12.20"
+  version: 2.12.21
+  resolution: "@xylabs/log@npm:2.12.21"
   dependencies:
     rollbar: ^2.26.2
   dependenciesMeta:
     rollbar:
       optional: true
-  checksum: 72716cffcb138e222738c9a26f88b61c049f1edb96a3c3bfb04fa867eb1af26ac27d8858c9e94e304b5116e070c48818d16ce9d27e319a3dd4bb8dbf82e3914d
+  checksum: f98a0d3c5228312a0360abb8828089e0527df4fe87850f896fac13f3e9440a895310c3b1be358c9bd0c34dc26683295f34438ad75a57c0142b4d76ff1d77372a
   languageName: node
   linkType: hard
 
