@@ -137,17 +137,13 @@
     "type": "git",
     "url": "https://github.com/xylabs/sdk-react.git"
   },
-  "resolutions": {
-    "@xylabs/buffer": "2.11.13",
-    "postcss": "^8.4.31"
-  },
   "scripts": {
     "build-storybook": "storybook build",
     "start": "storybook dev -p 6006",
     "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
-  "version": "3.0.16",
+  "version": "3.0.17",
   "packageManager": "yarn@3.6.1",
   "volta": {
     "node": "18.17.1",

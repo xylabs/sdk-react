@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.12.21",
-    "@xylabs/delay": "^2.12.21",
+    "@xylabs/assert": "^2.12.22",
+    "@xylabs/delay": "^2.12.22",
     "query-string": "^8.1.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
@@ -79,6 +79,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.16",
+  "version": "3.0.17",
   "type": "module"
 }
