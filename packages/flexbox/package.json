@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^2.12.20",
+    "@xylabs/delay": "^2.12.21",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
   },
@@ -87,6 +87,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.15",
+  "version": "3.0.16",
   "type": "module"
 }
