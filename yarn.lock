@@ -6504,11 +6504,11 @@ __metadata:
   linkType: hard
 
 "@xylabs/api@npm:^2.12.20":
-  version: 2.12.20
-  resolution: "@xylabs/api@npm:2.12.20"
+  version: 2.12.21
+  resolution: "@xylabs/api@npm:2.12.21"
   dependencies:
     axios: ^1.5.1
-  checksum: 5daa9680a24d2a117dd66152629691534bb98536004fe2aac84df461d9c421c6bb529aa2eb2cddb0e74eb9e299f409b190201eecae6fb301aa81f91877744ce0
+  checksum: 3c938ca8dffe127f71692a9901e982efa91362617689870992557500b4c86717540974735bcecb00a473fe6aa69b14a89935dc59c2094ebc31bcd61399886db9
   languageName: node
   linkType: hard
 
