@@ -6622,8 +6622,8 @@ __metadata:
   linkType: hard
 
 "@xylabs/lodash@npm:^2.12.20":
-  version: 2.12.20
-  resolution: "@xylabs/lodash@npm:2.12.20"
+  version: 2.12.21
+  resolution: "@xylabs/lodash@npm:2.12.21"
   dependencies:
     "@types/lodash": ^4.14.199
     "@types/lodash-es": ^4.17.9
@@ -6634,7 +6634,7 @@ __metadata:
       optional: true
     lodash-es:
       optional: true
-  checksum: 8b1aab8aca3d9c1d173790988cdf2f8d45e94c7c447030b310f271f0b19e2bcc7c438b1762479bb0d0b33d92d786f49d7b197312f5d1b12df8b22b011cf4e7a4
+  checksum: 833302b58076d9f7124a97801497fededefdf43f5eff61f656c5b529c85c211ff7532233829cada33ccc990d4386d3b133af16683ed03980c1062ee5b9565268
   languageName: node
   linkType: hard
 
