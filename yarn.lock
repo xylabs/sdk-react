@@ -6520,11 +6520,11 @@ __metadata:
   linkType: hard
 
 "@xylabs/bignumber@npm:^2.12.20, @xylabs/bignumber@npm:~2.12.20":
-  version: 2.12.20
-  resolution: "@xylabs/bignumber@npm:2.12.20"
+  version: 2.12.21
+  resolution: "@xylabs/bignumber@npm:2.12.21"
   dependencies:
     bn.js: ^5.2.1
-  checksum: 8881042910c5c3d3b8fae9438118f51a1bc68ca081bbf622bdb0bd611b40e83fa6a4da950ee04d84ed52b8ed4440b8b82aa9d14e0b180d93ebcc541db136d6fb
+  checksum: 29c8dca154a870f6a964eacd83e7c60c858b71a36806a7bfd79eb91345b130f052a847d39392742bfebcc0ad02718101c3c7e6ef635a743fb983b4ab86647ee6
   languageName: node
   linkType: hard
 
