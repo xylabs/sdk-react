@@ -6512,19 +6512,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/assert@npm:^2.12.20, @xylabs/assert@npm:^2.7.1, @xylabs/assert@npm:~2.12.20":
+"@xylabs/assert@npm:^2.12.20, @xylabs/assert@npm:^2.7.1":
   version: 2.12.20
   resolution: "@xylabs/assert@npm:2.12.20"
   checksum: 690fdb043c17ea594c305925f46e959ce461fe84df572a4abbd105ae9128933d85d8656dd985ee7c03ecf2541bb19d32e9cf77e41af3500e0a07c2b225cfd394
   languageName: node
   linkType: hard
 
-"@xylabs/bignumber@npm:^2.12.20, @xylabs/bignumber@npm:~2.12.20":
+"@xylabs/assert@npm:~2.12.22":
+  version: 2.12.22
+  resolution: "@xylabs/assert@npm:2.12.22"
+  checksum: 76123e55a7ac3c9ec52391eeac1a9117918b00d5b335b2bdcdf000a8017977599dc09a34a5b7bae1991235599924a336a9839ceb27275cef6891453463f6596f
+  languageName: node
+  linkType: hard
+
+"@xylabs/bignumber@npm:^2.12.20":
   version: 2.12.20
   resolution: "@xylabs/bignumber@npm:2.12.20"
   dependencies:
     bn.js: ^5.2.1
   checksum: 8881042910c5c3d3b8fae9438118f51a1bc68ca081bbf622bdb0bd611b40e83fa6a4da950ee04d84ed52b8ed4440b8b82aa9d14e0b180d93ebcc541db136d6fb
+  languageName: node
+  linkType: hard
+
+"@xylabs/bignumber@npm:~2.12.22":
+  version: 2.12.22
+  resolution: "@xylabs/bignumber@npm:2.12.22"
+  dependencies:
+    bn.js: ^5.2.1
+  checksum: 499fee593ab6b0db1ead68dfbdb08b7dd6f1f3751e9cc0e5e96af752d11636f3393b95e3191d16dba9acfee34ea9ef4ec98eec86c915867c0526ba7fb9355941
   languageName: node
   linkType: hard
 
@@ -6603,12 +6619,12 @@ __metadata:
   linkType: hard
 
 "@xylabs/eth-address@npm:^2.12.20":
-  version: 2.12.20
-  resolution: "@xylabs/eth-address@npm:2.12.20"
+  version: 2.12.22
+  resolution: "@xylabs/eth-address@npm:2.12.22"
   dependencies:
-    "@xylabs/assert": ~2.12.20
-    "@xylabs/bignumber": ~2.12.20
-  checksum: d535009f0aec9ce5390ae10a0eae5b96935e599ee720eb6b941e142851d108176eb7eabdfef15da9b68730a00df4b30d6612bf6bd76503c90270973c393e7a82
+    "@xylabs/assert": ~2.12.22
+    "@xylabs/bignumber": ~2.12.22
+  checksum: 760453331cdf2838e55b10d57cedb50b586c3e835f00f63f77a30fe86f3a8528a003efe9e5ab7b005b009eec618b8259adde3f961199aa1ecfe78db9f8d5bbce
   languageName: node
   linkType: hard
 
