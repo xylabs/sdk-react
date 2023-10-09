@@ -13,15 +13,15 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.12.22",
-    "@xylabs/delay": "^2.12.22",
+    "@xylabs/assert": "^2.12.23",
+    "@xylabs/delay": "^2.12.23",
     "query-string": "^8.1.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@xylabs/pixel": "^1.4.14",
-    "@xylabs/ts-scripts-yarn3": "^3.0.88",
-    "@xylabs/tsconfig-react": "^3.0.88",
+    "@xylabs/ts-scripts-yarn3": "^3.1.1",
+    "@xylabs/tsconfig-react": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -79,6 +79,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.17",
+  "version": "3.0.18",
   "type": "module"
 }

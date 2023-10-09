@@ -20,8 +20,8 @@
   "devDependencies": {
     "@mui/material": "^5.14.12",
     "@storybook/react": "^7.4.6",
-    "@xylabs/ts-scripts-yarn3": "^3.0.88",
-    "@xylabs/tsconfig-react": "^3.0.88",
+    "@xylabs/ts-scripts-yarn3": "^3.1.1",
+    "@xylabs/tsconfig-react": "^3.1.1",
     "axios": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -80,6 +80,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.17",
+  "version": "3.0.18",
   "type": "module"
 }
