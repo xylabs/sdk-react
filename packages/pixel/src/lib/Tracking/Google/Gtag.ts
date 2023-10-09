@@ -1,5 +1,5 @@
 import { assertEx } from '@xylabs/assert'
-import { parse, stringify } from 'query-string'
+import queryString from 'query-string'
 
 class Gtag {
   public static instance: Gtag
@@ -27,11 +27,11 @@ class Gtag {
     this.gtag('js', new Date())
     this.gtag('config', ga4id)
     //this.gtag('config', awid) - this is configured in the Data Stream in Google Analytics
-    const parsedQueryString = parse(document.location.search)
+    const parsedQueryString = queryString.parse(document.location.search)
     //we handle the utm_referrer here incase a referrer was forwarded (special.coinapp.co does this)
     sessionStorage.setItem('initialReferrer', decodeURIComponent(parsedQueryString['utm_referrer']?.toString() ?? document.referrer))
     delete parsedQueryString['utm_referrer']
-    const remainingSearch = parsedQueryString ? stringify(parsedQueryString) : ''
+    const remainingSearch = parsedQueryString ? queryString.stringify(parsedQueryString) : ''
     sessionStorage.setItem('initialQuery', remainingSearch)
     sessionStorage.setItem('initialPage', document.location.href)
   }
