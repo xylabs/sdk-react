@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^2.12.14",
-    "@xylabs/lodash": "^2.12.14",
+    "@xylabs/assert": "^2.12.20",
+    "@xylabs/lodash": "^2.12.20",
     "@xylabs/react-base-page": "workspace:~",
     "@xylabs/react-error": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
