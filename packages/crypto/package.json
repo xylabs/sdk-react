@@ -16,9 +16,9 @@
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^13.0.0",
-    "@xylabs/assert": "^2.12.23",
-    "@xylabs/bignumber": "^2.12.23",
-    "@xylabs/eth-address": "^2.12.23",
+    "@xylabs/assert": "^2.12.24",
+    "@xylabs/bignumber": "^2.12.24",
+    "@xylabs/eth-address": "^2.12.24",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -29,8 +29,8 @@
   "devDependencies": {
     "@mui/material": "^5.14.12",
     "@storybook/react": "^7.4.6",
-    "@xylabs/ts-scripts-yarn3": "^3.1.2",
-    "@xylabs/tsconfig-react": "^3.1.2",
+    "@xylabs/ts-scripts-yarn3": "^3.1.9",
+    "@xylabs/tsconfig-react": "^3.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"

@@ -5895,12 +5895,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.12":
-  version: 18.2.12
-  resolution: "@types/react-dom@npm:18.2.12"
+"@types/react-dom@npm:^18.2.13":
+  version: 18.2.13
+  resolution: "@types/react-dom@npm:18.2.13"
   dependencies:
     "@types/react": "*"
-  checksum: 64eaf808e91c1d58270ea92dda0e0cbb671f7289be4a5a4e0ccbd85857dd69394970eaa403d958dfbca739735c0af9cde4cf8fe135ff34434838360beae8d306
+  checksum: 22ba066b141dca5a5a9227fae0afc7c94b470fff8e8a38ade72649da57a8ea04d0cb2ba3e22005e7d8e772d49bddd28855b1dd98e6defd033bba6afb6edff883
   languageName: node
   linkType: hard
 
@@ -6503,43 +6503,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/api@npm:^2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/api@npm:2.12.23"
+"@xylabs/api@npm:^2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/api@npm:2.12.24"
   dependencies:
     axios: ^1.5.1
-  checksum: b08a22d1d491fd056a7f6983acebe1b818a1e4e2479a8c69a22823e612fb4af7c78b705e61a02133a8391b69b9ebaa1ed653d3565392f228987a6e47100b33da
+  checksum: e93b2c40e03d048ef75c8d4892abf6b74ca44e0b074b8f80de302bad3e525413426214d1ad786ca26d7387d485d8480ee2002dcc2399c68edfbd1075b761c61e
   languageName: node
   linkType: hard
 
-"@xylabs/assert@npm:^2.12.23, @xylabs/assert@npm:^2.7.1, @xylabs/assert@npm:~2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/assert@npm:2.12.23"
-  checksum: db274da2e316c5389450bf67adcd21184c5f70469246e3f9e28b2127861fcf00f1a867a0e6faf6180fdebd60967acc53b3a5ac6d1b599ecccab4c3cc42d7094d
+"@xylabs/assert@npm:^2.12.24, @xylabs/assert@npm:^2.7.1, @xylabs/assert@npm:~2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/assert@npm:2.12.24"
+  checksum: b614be519c3cc3ecdbea6b8e37a8a451c0d5abcc54b6ef718f07e68ab0c2526375e54a5e16258c2bc3bb18a64bdbb279acb6dd045324b4655c3ba2769e43dfce
   languageName: node
   linkType: hard
 
-"@xylabs/bignumber@npm:^2.12.23, @xylabs/bignumber@npm:~2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/bignumber@npm:2.12.23"
+"@xylabs/bignumber@npm:^2.12.24, @xylabs/bignumber@npm:~2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/bignumber@npm:2.12.24"
   dependencies:
     bn.js: ^5.2.1
-  checksum: f14c8ee0c3c17369705ac2e31b6a1e5fee4905011ca453cfc88657fe99413865b61513a4eb5aa2fe91bf0a1dc18a9b7e963537d36227e8b3bba472afdd258dd9
+  checksum: 692d2b6b854afcbaacd970e4d3c80fdc6b9a3b7ca4e541028e6cc5a646cb131dfdc3b258f114cf421cddc2c03104c6728b4e2140dab4c2b22446fb0fc8908118
   languageName: node
   linkType: hard
 
-"@xylabs/delay@npm:^2.12.23, @xylabs/delay@npm:~2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/delay@npm:2.12.23"
-  checksum: 56ecad11bb78f98fddee4ecb8f476eaeca4aa2f6fdecddd48415708929d5ffe2eb22e1d469f26daaae3061c605ed19b53af163081dca0186271e64cdb8fc305e
+"@xylabs/delay@npm:^2.12.24, @xylabs/delay@npm:~2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/delay@npm:2.12.24"
+  checksum: 0648a10a805f92ffd5fbc81c8b4cd91e1c80605f911bc4d9ddebe8e425ecabacf2b7399ff8f4e2f9b7b92ce7bc9ced84b144c35827376170774968a18782628e
   languageName: node
   linkType: hard
 
-"@xylabs/eslint-config-react@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "@xylabs/eslint-config-react@npm:3.1.2"
+"@xylabs/eslint-config-react@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "@xylabs/eslint-config-react@npm:3.1.9"
   dependencies:
-    "@xylabs/eslint-config": ~3.1.2
+    "@xylabs/eslint-config": ~3.1.9
     eslint: ^8.51.0
     eslint-config-prettier: ^9.0.0
     eslint-config-react-app: ^7.0.1
@@ -6563,13 +6563,13 @@ __metadata:
     typescript: ^5.2.2
   peerDependencies:
     eslint: ^8.23.0
-  checksum: 649e5490e4e0e2c498df327c0dee7f7f572dafa483e91d9439540e7ea13016e7f6fdca03507a7c4361a82fe73cb98b43481ba871e74f82f2f6b0341c29a6801a
+  checksum: d40577139e337981752d9bf4d4db4e06be9b11042ae66f11b34d27858f65bcfb8664dd369024c56f127d2d454da965f993d73523cfaad3c5aeebc6e6f515b6f9
   languageName: node
   linkType: hard
 
-"@xylabs/eslint-config@npm:~3.1.2":
-  version: 3.1.2
-  resolution: "@xylabs/eslint-config@npm:3.1.2"
+"@xylabs/eslint-config@npm:~3.1.9":
+  version: 3.1.9
+  resolution: "@xylabs/eslint-config@npm:3.1.9"
   dependencies:
     "@typescript-eslint/eslint-plugin": ^6.7.3
     "@typescript-eslint/parser": ^6.7.3
@@ -6592,32 +6592,32 @@ __metadata:
     typescript: ^5.2.2
   peerDependencies:
     eslint: ^8.23.0
-  checksum: 9ce37fd4797c7ef972b437c2abf564f1ed050c495a90c33e072d432c4efce829b17b8add0e284cffc2a7c610a7d7a91321c1c40e17c99c1492f53fa95d2a3129
+  checksum: 7a7f402a0cb151f7308592870721b24aff7526c29189594f886231374d950abee3e81f1eeefb036e4bd8f6b5793088a6b9d703930a1f28338fabc03efd4b65db
   languageName: node
   linkType: hard
 
-"@xylabs/eth-address@npm:^2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/eth-address@npm:2.12.23"
+"@xylabs/eth-address@npm:^2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/eth-address@npm:2.12.24"
   dependencies:
-    "@xylabs/assert": ~2.12.23
-    "@xylabs/bignumber": ~2.12.23
-  checksum: 551fe853e12d0c92a25d450789df5474267104cd99dfccc865832d6b4a201efc267631a0642ce759fa1e3c4d4983f75e78ce9a4a2e66eaeb5e1b04636dfd3981
+    "@xylabs/assert": ~2.12.24
+    "@xylabs/bignumber": ~2.12.24
+  checksum: 1634e4ce3d2b6cd1d61c2fb2d2dc23236388869a96c850ee84778759f73acbc97b589c6ae2142bf7cc4eadc50e20babb71b737a417633c7b803fa8aa4f49fe9e
   languageName: node
   linkType: hard
 
-"@xylabs/forget@npm:^2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/forget@npm:2.12.23"
+"@xylabs/forget@npm:^2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/forget@npm:2.12.24"
   dependencies:
-    "@xylabs/delay": ~2.12.23
-  checksum: 61d605ceaee43e78a2249e6a5b63ac3fadcfe0431e93003d7fdf80d93cd0efae43f84f1f103f8f0aeda1a26521157e27daf2fc643b60a799b72613731303b149
+    "@xylabs/delay": ~2.12.24
+  checksum: 8cafae053bc903c51dc726d2443e51a099a65dfebc7f26344c44365da28606356e68d733176c2c63fd466b6f6d676d5ea68c6cdb45e3d3e80b5d687b216f3905
   languageName: node
   linkType: hard
 
-"@xylabs/lodash@npm:^2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/lodash@npm:2.12.23"
+"@xylabs/lodash@npm:^2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/lodash@npm:2.12.24"
   dependencies:
     "@types/lodash": ^4.14.199
     "@types/lodash-es": ^4.17.9
@@ -6628,19 +6628,19 @@ __metadata:
       optional: true
     lodash-es:
       optional: true
-  checksum: ec8446b187900420872f2616304e3d71524050ecb851d52342c075dbaf6e8ea0e1feaeaed9a80617a3eb111a37dc610a42997c904522bc937f8514d6667eaffe
+  checksum: 8e22fc630c18478c86dd295131434b69d2ffbe6c8c1f1877bae9f1d6067a1f77658c48a1840d811fd28fee9f5f249b76de6b59c384dc1599570cd49342eda30b
   languageName: node
   linkType: hard
 
-"@xylabs/log@npm:^2.12.23":
-  version: 2.12.23
-  resolution: "@xylabs/log@npm:2.12.23"
+"@xylabs/log@npm:^2.12.24":
+  version: 2.12.24
+  resolution: "@xylabs/log@npm:2.12.24"
   dependencies:
     rollbar: ^2.26.2
   dependenciesMeta:
     rollbar:
       optional: true
-  checksum: 683ca4b2593a2c4be27798acf4102fb0f48a8f5962780dd2ed002629a880f2084010a996ebac06fe4393f8b7635d9e093e299778c30a6699e3297c35d21255a2
+  checksum: b7fb45783dbbeb8e128414a0bd1e856584a2677b5e116cb88de3d79128bb0bf804d28cc7ac40742d62f13b79cb0fe4f0e4322415219f4868b9f0073fe0929cc2
   languageName: node
   linkType: hard
 
@@ -6670,8 +6670,8 @@ __metadata:
     "@storybook/react": ^7.4.6
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6691,8 +6691,8 @@ __metadata:
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6711,8 +6711,8 @@ __metadata:
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
     "@xylabs/react-promise": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6736,8 +6736,8 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-invertible-theme": "workspace:~"
     "@xylabs/react-scroll-to-top": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
@@ -6761,8 +6761,8 @@ __metadata:
     "@storybook/react": ^7.4.6
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.16.0
@@ -6781,15 +6781,15 @@ __metadata:
     "@mui/icons-material": ^5.14.12
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
-    "@xylabs/assert": ^2.12.23
-    "@xylabs/lodash": ^2.12.23
+    "@xylabs/assert": ^2.12.24
+    "@xylabs/lodash": ^2.12.24
     "@xylabs/react-base-page": "workspace:~"
     "@xylabs/react-error": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-portal": "workspace:~"
     "@xylabs/react-select": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.16.0
@@ -6813,8 +6813,8 @@ __metadata:
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6835,15 +6835,15 @@ __metadata:
     "@metamask/providers": ^13.0.0
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
-    "@xylabs/assert": ^2.12.23
-    "@xylabs/bignumber": ^2.12.23
-    "@xylabs/eth-address": ^2.12.23
+    "@xylabs/assert": ^2.12.24
+    "@xylabs/bignumber": ^2.12.24
+    "@xylabs/eth-address": ^2.12.24
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-identicon": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.16.0
@@ -6863,8 +6863,8 @@ __metadata:
     "@storybook/react": ^7.4.6
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     axios: ^1.5.1
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6885,8 +6885,8 @@ __metadata:
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6903,14 +6903,14 @@ __metadata:
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
     "@storybook/react": ^7.4.6
-    "@xylabs/forget": ^2.12.23
-    "@xylabs/log": ^2.12.23
+    "@xylabs/forget": ^2.12.24
+    "@xylabs/log": ^2.12.24
     "@xylabs/pixel": ^1.4.14
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-pixel": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6932,11 +6932,11 @@ __metadata:
     "@mui/styles": ^5.14.12
     "@mui/system": ^5.14.12
     "@storybook/react": ^7.4.6
-    "@xylabs/delay": ^2.12.23
+    "@xylabs/delay": ^2.12.24
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6957,8 +6957,8 @@ __metadata:
   dependencies:
     "@types/md5": ^2.3.3
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     md5: ^2.3.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -6976,9 +6976,9 @@ __metadata:
   dependencies:
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
-    "@xylabs/lodash": ^2.12.23
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/lodash": ^2.12.24
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -6994,8 +6994,8 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@mui/material": ^5.14.12
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.16.0
@@ -7015,8 +7015,8 @@ __metadata:
     "@types/numeral": ^2.0.3
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     numeral: ^2.0.6
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7039,8 +7039,8 @@ __metadata:
     "@xylabs/react-pixel": "workspace:~"
     "@xylabs/react-portal": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -7059,11 +7059,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
-    "@xylabs/assert": ^2.12.23
-    "@xylabs/delay": ^2.12.23
+    "@xylabs/assert": ^2.12.24
+    "@xylabs/delay": ^2.12.24
     "@xylabs/pixel": ^1.4.14
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     query-string: ^8.1.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7080,9 +7080,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-portal@workspace:packages/portal"
   dependencies:
-    "@types/react-dom": ^18.2.12
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@types/react-dom": ^18.2.13
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -7098,9 +7098,9 @@ __metadata:
   dependencies:
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
-    "@xylabs/delay": ^2.12.23
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/delay": ^2.12.24
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     async-mutex: ^0.4.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -7121,8 +7121,8 @@ __metadata:
     "@storybook/react": ^7.4.6
     "@xylabs/react-dialogs": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -7139,8 +7139,8 @@ __metadata:
   resolution: "@xylabs/react-render-spin-check@workspace:packages/render-spin-check"
   dependencies:
     "@mui/material": ^5.14.12
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     typescript: ^5.2.2
   peerDependencies:
@@ -7154,8 +7154,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-rich-result@workspace:packages/rich-result"
   dependencies:
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -7170,8 +7170,8 @@ __metadata:
   resolution: "@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top"
   dependencies:
     "@mui/material": ^5.14.12
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     react-router-dom: ^6.16.0
@@ -7187,9 +7187,9 @@ __metadata:
   resolution: "@xylabs/react-select@workspace:packages/select"
   dependencies:
     "@mui/material": ^5.14.12
-    "@xylabs/lodash": ^2.12.23
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/lodash": ^2.12.24
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     typescript: ^5.2.2
   peerDependencies:
@@ -7205,11 +7205,11 @@ __metadata:
   dependencies:
     "@mui/material": ^5.14.12
     "@storybook/react": ^7.4.6
-    "@xylabs/api": ^2.12.23
-    "@xylabs/log": ^2.12.23
+    "@xylabs/api": ^2.12.24
+    "@xylabs/log": ^2.12.24
     "@xylabs/react-async-effect": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     react: ^18.2.0
     react-dom: ^18.2.0
     typescript: ^5.2.2
@@ -7248,7 +7248,7 @@ __metadata:
     "@storybook/theming": ^7.4.6
     "@typescript-eslint/eslint-plugin": ^6.7.5
     "@typescript-eslint/parser": ^6.7.5
-    "@xylabs/eslint-config-react": ^3.1.2
+    "@xylabs/eslint-config-react": ^3.1.9
     "@xylabs/pixel": ^1.4.14
     "@xylabs/react-accordion": "workspace:~"
     "@xylabs/react-appbar": "workspace:~"
@@ -7272,8 +7272,8 @@ __metadata:
     "@xylabs/react-rich-result": "workspace:~"
     "@xylabs/react-scroll-to-top": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
-    "@xylabs/ts-scripts-yarn3": ^3.1.2
-    "@xylabs/tsconfig-react": ^3.1.2
+    "@xylabs/ts-scripts-yarn3": ^3.1.9
+    "@xylabs/tsconfig-react": ^3.1.9
     axios: ^1.5.1
     eslint: ^8.51.0
     eslint-import-resolver-typescript: ^3.6.1
@@ -7300,9 +7300,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/ts-scripts-yarn3@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "@xylabs/ts-scripts-yarn3@npm:3.1.2"
+"@xylabs/ts-scripts-yarn3@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "@xylabs/ts-scripts-yarn3@npm:3.1.9"
   dependencies:
     "@rollup/plugin-commonjs": ^25.0.4
     "@rollup/plugin-json": ^6.0.0
@@ -7311,7 +7311,7 @@ __metadata:
     "@types/yargs": ^17.0.26
     "@typescript-eslint/eslint-plugin": ^6.7.3
     "@typescript-eslint/parser": ^6.7.3
-    "@xylabs/tsconfig": ~3.1.2
+    "@xylabs/tsconfig": ~3.1.9
     chalk: ^4.1.2
     cosmiconfig: ^8.3.6
     cpy: ^8.1.2
@@ -7397,34 +7397,34 @@ __metadata:
     xy: dist/bin/xy.js
     xy-ts: src/bin/xy-ts.ts
     yarn3only: dist/bin/yarn3only.js
-  checksum: 6cc50722a6774d344e5b0f4b78662b1aaec27e783a728c7fa06c5fc244082ae9bc8a801eaca98856a0bdb3b69294aa322977458352efaeba625c17da736ff598
+  checksum: 2bb1beb1bdd1be1243747c61c1324eae569a9754a642edbf8c90bedf34b1d40f1c9f85609c75b41ecef315eda0aa0a44bd8d165478de0705840dbe7d8e40a8c4
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig-dom@npm:~3.1.2":
-  version: 3.1.2
-  resolution: "@xylabs/tsconfig-dom@npm:3.1.2"
+"@xylabs/tsconfig-dom@npm:~3.1.9":
+  version: 3.1.9
+  resolution: "@xylabs/tsconfig-dom@npm:3.1.9"
   dependencies:
-    "@xylabs/tsconfig": ~3.1.2
-  checksum: 5d68d92ea7f63e655fa08f2b0edb583b7a486436688134302fd07d1782dc99b9907a415c336c7cd25cd124bfe7045dc288a403c3be80b2f590e989d959cb0d06
+    "@xylabs/tsconfig": ~3.1.9
+  checksum: dcecf95d1beac2ddc6a38d39373eae9e5c01191f780b696edf63d416f9ca383f950e14f6add8fc2f115fc96f6bd4c63c52e7836e403821ef296a859391789dc9
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig-react@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "@xylabs/tsconfig-react@npm:3.1.2"
+"@xylabs/tsconfig-react@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "@xylabs/tsconfig-react@npm:3.1.9"
   dependencies:
-    "@xylabs/tsconfig-dom": ~3.1.2
+    "@xylabs/tsconfig-dom": ~3.1.9
   peerDependencies:
     typescript: ^5
-  checksum: 624cb9d071b9f98c7de7d169e4c7bc2f1bc0642450b1280731b64ff8e499180e96e582a99e24fa2402bd1f9ff04e9cffd4f2e0b393f8eac766c6d39b06948dbb
+  checksum: 15b6706bc182dbf499eba11bcc5c9dab52ffdb104fd183c60c17e5c39126328bdc17f436b147d9779c5ece0c219c841e666d44285452acdba7f2cbd409ab7a3e
   languageName: node
   linkType: hard
 
-"@xylabs/tsconfig@npm:~3.1.2":
-  version: 3.1.2
-  resolution: "@xylabs/tsconfig@npm:3.1.2"
-  checksum: b98e1ee446fb3da798101837f687476daa252b0861d442e75a6ec7df425afcff7b505fd8c0bf8812490199208b0fa27a4333e7fd8bfb2f581a01b7422d1ee3c7
+"@xylabs/tsconfig@npm:~3.1.9":
+  version: 3.1.9
+  resolution: "@xylabs/tsconfig@npm:3.1.9"
+  checksum: b85349b901a5986833ea9f30e580a2ae828a3e9a7282306c72438ef1a6a222ad46ac562eb5cb1e1a889c6b7ac6463b6ba15b3065cb3e5e9f9996e8429471dad7
   languageName: node
   linkType: hard
 
