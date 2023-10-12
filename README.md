@@ -23,6 +23,14 @@
 
 Common React code that is used throughtout XYO projects that use React.
 
+Features:
+
+- Mono-repo that publishes individual packages to npm
+- Fully written in TypeScript
+- Tree-shaking focused; include only what you need during bundling
+- UI components built from the mui library
+- Crypto utilities backed by the Ethers.js library
+
 ## Install
 
 Using npm:
