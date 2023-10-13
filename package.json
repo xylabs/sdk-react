@@ -79,7 +79,7 @@
     "storybook": "^7.4.6",
     "storybook-dark-mode": "^3.0.1",
     "typescript": "^5.2.2",
-    "webpack": "^5.88.2"
+    "webpack": "^5.89.0"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",

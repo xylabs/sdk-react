@@ -115,8 +115,8 @@ See the [LICENSE](LICENSE) file for license details
 [snyk-badge]: https://snyk.io/test/github/xylabs/sdk-react/badge.svg?targetFile=package.json
 [snyk-link]: https://snyk.io/test/github/xylabs/sdk-react?targetFile=package.json
 
-[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/react-shared
-[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/react-shared
+[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/sdk-react
+[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/sdk-react
 
-[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/react-shared/badge
-[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/react-shared
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/sdk-react/badge
+[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/sdk-react
