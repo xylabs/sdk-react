@@ -42,10 +42,10 @@ yarn add @xylabs/react-cookie-consent
 
 ## Maintainers
 
-- [Arie Trouw](https://github.com/arietrouw) ([arietrouw.com](https://arietrouw.com))
-- [Matt Jones](https://github.com/jonesmac)
-- [Joel Carter](https://github.com/JoelBCarter)
-- [Jordan Trouw](https://github.com/jordantrouw)
+-   [Arie Trouw](https://github.com/arietrouw) ([arietrouw.com](https://arietrouw.com))
+-   [Matt Jones](https://github.com/jonesmac)
+-   [Joel Carter](https://github.com/JoelBCarter)
+-   [Jordan Trouw](https://github.com/jordantrouw)
 
 ## License
 

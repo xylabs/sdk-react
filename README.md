@@ -28,11 +28,11 @@ Common React code that is used throughout XYO projects that use React.
 
 Features:
 
-- Mono-repo that publishes individual packages to npm
-- Fully written in TypeScript
-- Tree-shaking focused; include only what you need during bundling
-- UI components built from the mui library
-- Crypto utilities backed by the Ethers.js library
+-   Mono-repo that publishes individual packages to npm
+-   Fully written in TypeScript
+-   Tree-shaking focused; include only what you need during bundling
+-   UI components built from the mui library
+-   Crypto utilities backed by the Ethers.js library
 
 ## Install
 
@@ -85,10 +85,10 @@ yarn start
 
 ## Maintainers
 
-- [Arie Trouw](https://github.com/arietrouw) ([arietrouw.com](https://arietrouw.com))
-- [Matt Jones](https://github.com/jonesmac)
-- [Joel Carter](https://github.com/JoelBCarter)
-- [Jordan Trouw](https://github.com/jordantrouw)
+-   [Arie Trouw](https://github.com/arietrouw) ([arietrouw.com](https://arietrouw.com))
+-   [Matt Jones](https://github.com/jonesmac)
+-   [Joel Carter](https://github.com/JoelBCarter)
+-   [Jordan Trouw](https://github.com/jordantrouw)
 
 ## License
 
