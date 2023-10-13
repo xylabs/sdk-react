@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^2.12.24",
-    "@xylabs/log": "^2.12.24",
+    "@xylabs/forget": "^2.12.25",
+    "@xylabs/log": "^2.12.25",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-pixel": "workspace:~",
     "@xylabs/react-shared": "workspace:~"

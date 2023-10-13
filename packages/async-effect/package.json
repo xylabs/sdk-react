@@ -17,7 +17,7 @@
     "@xylabs/react-promise": "workspace:~"
   },
   "devDependencies": {
-    "@mui/material": "^5.14.12",
+    "@mui/material": "^5.14.13",
     "@storybook/react": "^7.4.6",
     "@xylabs/ts-scripts-yarn3": "^3.1.9",
     "@xylabs/tsconfig-react": "^3.1.9",
