@@ -107,7 +107,7 @@ See the [LICENSE](LICENSE) file for license details
 [npm-link]: https://www.npmjs.com/package/@xylabs/sdk-react
 
 [codacy-badge]: https://app.codacy.com/project/badge/Grade/c2a69d4530ed4b7da6ddb070169dd339
-[codacy-link]: https://www.codacy.com/gh/xylabs/sdk-react/dashboard?utm_source=github.com&utm_medium=referral&utm_content=xylabs/sdk-react&utm_campaign=Badge_Grade
+[codacy-link]: https://app.codacy.com/gh/xylabs/sdk-react
 
 [codeclimate-badge]: https://api.codeclimate.com/v1/badges/c461e0bc2b00c0b01ac0/maintainability
 [codeclimate-link]: https://codeclimate.com/github/xylabs/sdk-react/maintainability
