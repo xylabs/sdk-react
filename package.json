@@ -62,10 +62,10 @@
     "@storybook/theming": "^7.4.6",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
-    "@xylabs/eslint-config-react": "^3.1.9",
+    "@xylabs/eslint-config-react": "^3.1.10",
     "@xylabs/pixel": "^1.4.14",
-    "@xylabs/ts-scripts-yarn3": "^3.1.9",
-    "@xylabs/tsconfig-react": "^3.1.9",
+    "@xylabs/ts-scripts-yarn3": "^3.1.10",
+    "@xylabs/tsconfig-react": "^3.1.10",
     "axios": "^1.5.1",
     "eslint": "^8.51.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -115,9 +115,6 @@
       },
       "default": "./dist/browser/index.js"
     },
-    "./docs": {
-      "default": "./dist/docs.json"
-    },
     "./package.json": "./package.json"
   },
   "types": "dist/browser/index.d.ts",
@@ -143,7 +140,7 @@
     "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
-  "version": "3.0.19",
+  "version": "3.0.20",
   "packageManager": "yarn@3.6.1",
   "volta": {
     "node": "18.17.1",

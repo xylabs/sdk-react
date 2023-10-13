@@ -23,8 +23,8 @@
   "devDependencies": {
     "@storybook/react": "^7.4.6",
     "@xylabs/pixel": "^1.4.14",
-    "@xylabs/ts-scripts-yarn3": "^3.1.9",
-    "@xylabs/tsconfig-react": "^3.1.9",
+    "@xylabs/ts-scripts-yarn3": "^3.1.10",
+    "@xylabs/tsconfig-react": "^3.1.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
@@ -61,9 +61,6 @@
       },
       "default": "./dist/browser/index.js"
     },
-    "./docs": {
-      "default": "./dist/docs.json"
-    },
     "./package.json": "./package.json"
   },
   "types": "dist/browser/index.d.ts",
@@ -84,6 +81,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.19",
+  "version": "3.0.20",
   "type": "module"
 }
