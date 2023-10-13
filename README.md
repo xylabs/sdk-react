@@ -4,6 +4,9 @@
 
 [![main-build][]][main-build-link]
 [![npm-badge][]][npm-link]
+[![npm-downloads-badge][]][npm-link]
+[![jsdelivr-badge][]][jsdelivr-link]
+[![npm-license-badge][]](LICENSE)
 [![codacy-badge][]][codacy-link]
 [![codeclimate-badge][]][codeclimate-link]
 [![snyk-badge][]][snyk-link]
@@ -21,7 +24,7 @@
 
 ## Description
 
-Common React code that is used throughtout XYO projects that use React.
+Common React code that is used throughout XYO projects that use React.
 
 Features:
 
@@ -45,10 +48,24 @@ Using yarn:
 yarn add @xylabs/sdk-react
 ```
 
+## Documentation
+[Developer Reference](https://xylabs.github.io/sdk-react)
+
+[Storybook](https://xylabs.github.io/sdk-react/storybook)
+
 ## Scripts
 
-See [ts-scripts-yarn3](https://github.com/xylabs/ts-scripts-yarn3/blob/main/README.md) for
-list of shared scripts. The below scripts are custom scripts for this repo.
+Using npm:
+
+```sh
+npm xy --help
+```
+
+Using yarn:
+
+```sh
+yarn xy --help
+```
 
 ### Build (Storybook)
 
@@ -68,7 +85,10 @@ yarn start
 
 ## Maintainers
 
--   [Arie Trouw](https://github.com/arietrouw) [arietrouw.com](https://arietrouw.com)
+- [Arie Trouw](https://github.com/arietrouw) ([arietrouw.com](https://arietrouw.com))
+- [Matt Jones](https://github.com/jonesmac)
+- [Joel Carter](https://github.com/JoelBCarter)
+- [Jordan Trouw](https://github.com/jordantrouw)
 
 ## License
 
@@ -94,3 +114,9 @@ See the [LICENSE](LICENSE) file for license details
 
 [snyk-badge]: https://snyk.io/test/github/xylabs/sdk-react/badge.svg?targetFile=package.json
 [snyk-link]: https://snyk.io/test/github/xylabs/sdk-react?targetFile=package.json
+
+[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/react-shared
+[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/react-shared
+
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/react-shared/badge
+[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/react-shared

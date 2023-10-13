@@ -1,6 +1,6 @@
 [![logo][]](https://xylabs.com)
 
-# @xylabs/react-invertible-theme
+# @xylabs/react-accordion
 
 [![npm-badge][]][npm-link]
 [![npm-downloads-badge][]][npm-link]
@@ -26,13 +26,13 @@ Common React code that is used throughout XYO projects that use React.
 Using npm:
 
 ```sh
-npm i --save @xylabs/react-invertible-theme
+npm i --save @xylabs/react-accordion
 ```
 
 Using yarn:
 
 ```sh
-yarn add @xylabs/react-invertible-theme
+yarn add @xylabs/react-accordion
 ```
 
 ## Documentation
@@ -57,11 +57,11 @@ See the [LICENSE](LICENSE) file for license details
 
 [logo]: https://cdn.xy.company/img/brand/XYPersistentCompany_Logo_Icon_Colored.svg
 
-[npm-badge]: https://img.shields.io/npm/v/@xylabs/react-invertible-theme.svg
-[npm-link]: https://www.npmjs.com/package/@xylabs/react-invertible-theme
+[npm-badge]: https://img.shields.io/npm/v/@xylabs/react-accordion.svg
+[npm-link]: https://www.npmjs.com/package/@xylabs/react-accordion
 
-[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/react-invertible-theme
-[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/react-invertible-theme
+[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/react-accordion
+[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/react-accordion
 
-[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/react-invertible-theme/badge
-[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/react-invertible-theme
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/react-accordion/badge
+[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/react-accordion
