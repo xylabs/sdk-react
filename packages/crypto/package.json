@@ -16,9 +16,9 @@
     "@ethersproject/abstract-signer": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^13.1.0",
-    "@xylabs/assert": "^2.12.25",
-    "@xylabs/bignumber": "^2.12.25",
-    "@xylabs/eth-address": "^2.12.25",
+    "@xylabs/assert": "^2.12.27",
+    "@xylabs/bignumber": "^2.12.27",
+    "@xylabs/eth-address": "^2.12.27",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -84,6 +84,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.20",
+  "version": "3.0.21",
   "type": "module"
 }

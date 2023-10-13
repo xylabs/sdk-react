@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^2.12.25",
-    "@xylabs/log": "^2.12.25",
+    "@xylabs/api": "^2.12.27",
+    "@xylabs/log": "^2.12.27",
     "@xylabs/react-async-effect": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
@@ -76,6 +76,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.20",
+  "version": "3.0.21",
   "type": "module"
 }

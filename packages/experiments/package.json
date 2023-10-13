@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^2.12.25",
-    "@xylabs/log": "^2.12.25",
+    "@xylabs/forget": "^2.12.27",
+    "@xylabs/log": "^2.12.27",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-pixel": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
@@ -81,6 +81,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.20",
+  "version": "3.0.21",
   "type": "module"
 }
