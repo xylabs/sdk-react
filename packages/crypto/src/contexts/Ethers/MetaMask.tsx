@@ -68,7 +68,6 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
       setConnectRefused(false)
       // We could have multiple accounts. Check for one.
       if (accounts && accounts?.length !== 0) {
-        setLocalAddress(accounts[0])
         console.log('Connected: ', accounts[0])
       } else {
         console.log('No authorized account found.')
