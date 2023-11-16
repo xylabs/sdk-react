@@ -1,8 +1,7 @@
-import { BaseProvider } from '@metamask/providers'
+import { ExternalProvider } from '@ethersproject/providers'
 
 declare global {
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ethereum: BaseProvider
+    ethereum: unknown | ExternalProvider
   }
 }
