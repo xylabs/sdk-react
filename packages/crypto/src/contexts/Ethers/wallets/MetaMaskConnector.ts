@@ -24,10 +24,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  get chainId() {
-    return this.ethereum?.networkVersion
-  }
-
   get currentAccount() {
     return this.ethereum?.selectedAddress
   }
@@ -36,12 +32,20 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return this.ethereum && this.ethereum.isMetaMask
   }
 
+  get signer() {
+    return this.provider.getSigner()
+  }
+
   get walletConnected() {
     if (this.currentAccount) {
       console.log('Found an authorized account: ', this.ethereum?.selectedAddress)
       return true
     }
     return false
+  }
+
+  async chainId() {
+    return await this.provider?.send('net_version', [])
   }
 
   async connectWallet() {
