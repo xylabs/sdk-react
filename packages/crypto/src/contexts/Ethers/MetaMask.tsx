@@ -1,5 +1,4 @@
 import { InfuraProvider, JsonRpcSigner, Listener, Provider, Web3Provider } from '@ethersproject/providers'
-import { MetaMaskInpageProvider } from '@metamask/providers'
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { usePromise } from '@xylabs/react-promise'
@@ -9,18 +8,14 @@ import { EthersContext } from './Context'
 import { infuraKey } from './Infura'
 import { MetaMaskConnector } from './wallets'
 
-const ethereum = window.ethereum as MetaMaskInpageProvider
-
 export interface Props {
+  defaultChainId?: number
   enabled?: boolean
 }
 
-export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, enabled = true }) => {
+export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1, enabled = true }) => {
   const [metamaskConnector] = useState<MetaMaskConnector>(new MetaMaskConnector())
   const [error, setError] = useState<Error>()
-  const [resetCount, setResetCount] = useState(0)
-
-  const [isConnected, setIsConnected] = useState<boolean>()
 
   // Provider/Signer - fallback to infura?
   const [provider, setProvider] = useState<Provider>()
@@ -36,7 +31,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         provider = walletProvider
         providerName = metamaskConnector.providerName
       } else {
-        provider = new InfuraProvider(1, infuraKey)
+        provider = new InfuraProvider(defaultChainId, infuraKey)
         providerName = 'Infura (Default)'
       }
       provider = walletProvider ?? provider
@@ -45,13 +40,14 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
       setWalletProvider(walletProvider)
       let signer = null
       try {
-        signer = provider?.getSigner()
+        const currentAddress = metamaskConnector.currentAddress ?? undefined
+        signer = provider?.getSigner(currentAddress)
       } catch (ex) {
         console.error(ex)
       }
       setSigner(signer)
     }
-  }, [isConnected, enabled, metamaskConnector])
+  }, [defaultChainId, enabled, metamaskConnector])
 
   // Connectivity and Account / Address
   const [localAddress, setLocalAddress] = useState<EthAddress>()
@@ -63,32 +59,36 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
           const localAddress = EthAddress.fromString(await signer.getAddress())
           console.log(`Setting Local Address: ${localAddress}`)
           setLocalAddress(localAddress)
-          setIsConnected(true)
         } catch (ex) {
           setError(Error(`localAddress: ${ex}`))
           setLocalAddress(undefined)
-          setIsConnected(false)
         }
       }
     },
-    [signer, resetCount, enabled],
+    [signer, enabled],
   )
 
+  const [connectRefused, setConnectRefused] = useState(false)
   const connect = useCallback(async () => {
-    const accounts = await walletProvider?.send('eth_requestAccounts', [])
-    // We could have multiple accounts. Check for one.
-    if (accounts && accounts?.length !== 0) {
-      setLocalAddress(accounts[0])
-      console.log('Connected: ', accounts[0])
-    } else {
-      console.log('No authorized account found.')
+    try {
+      const accounts = await walletProvider?.send('eth_requestAccounts', [])
+      // We could have multiple accounts. Check for one.
+      if (accounts && accounts?.length !== 0) {
+        setLocalAddress(accounts[0])
+        console.log('Connected: ', accounts[0])
+      } else {
+        console.log('No authorized account found.')
+      }
+      return accounts
+    } catch (e) {
+      console.log(e)
+      setError(e as Error)
+      if ((e as { code: number }).code === 4001) setConnectRefused(true)
     }
-    return accounts
   }, [walletProvider])
 
   useEffect(() => {
     const accountsChangedListener: Listener = (accounts: string[]) => {
-      setResetCount(resetCount + 1)
       setError(undefined)
       if (accounts.length > 0) {
         setLocalAddress(EthAddress.fromString(accounts[0]))
@@ -97,19 +97,20 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
       }
     }
 
-    if (provider && enabled) {
-      ethereum.on('accountsChanged', accountsChangedListener)
+    if (metamaskConnector) {
+      metamaskConnector.onAccountsChanged(accountsChangedListener)
     }
 
     return () => {
-      if (window.ethereum) {
-        ethereum.off('accountsChanged', accountsChangedListener)
-      }
+      metamaskConnector.removeEIP11193Listener('accountsChanged', accountsChangedListener)
     }
-  }, [provider, resetCount, enabled])
+  }, [provider, enabled, metamaskConnector])
 
   // Chain Id
   const [chainId] = usePromise(async () => await metamaskConnector.chainId(), [metamaskConnector])
+
+  // Signer Address
+  const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
 
   return (
     <EthersContext.Provider
@@ -117,12 +118,14 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         busy: false,
         chainId,
         connect,
+        connectRefused,
         error,
         isConnected: metamaskConnector.walletConnected,
         localAddress,
         provider: metamaskConnector.provider,
         providerName,
         signer: metamaskConnector.signer || signer,
+        signerAddress: signerAddress,
         walletProvider,
       }}
     >
