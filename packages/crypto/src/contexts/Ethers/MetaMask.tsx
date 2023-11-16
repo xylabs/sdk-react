@@ -13,7 +13,7 @@ export interface Props {
   enabled?: boolean
 }
 
-export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, enabled }) => {
+export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, enabled = true }) => {
   const [error, setError] = useState<Error>()
   const [resetCount, setResetCount] = useState(0)
 
@@ -74,7 +74,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
   const connect = useCallback(async () => {
     const accounts = await walletProvider?.send('eth_requestAccounts', [])
     // We could have multiple accounts. Check for one.
-    if (accounts.length !== 0) {
+    if (accounts && accounts?.length !== 0) {
       setLocalAddress(accounts[0])
       console.log('Connected: ', accounts[0])
     } else {

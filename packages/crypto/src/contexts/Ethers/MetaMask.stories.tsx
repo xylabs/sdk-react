@@ -17,7 +17,7 @@ const StorybookEntry = {
 } as Meta<typeof MetaMaskEthersLoader>
 
 const ConnectMetaMaskProvider = () => {
-  const { connect, chainId, error, isConnected, localAddress, provider, providerName, signer, walletProvider } = useEthersContext()
+  const { connect, connectRefused, chainId, error, isConnected, localAddress, provider, providerName, signer, walletProvider } = useEthersContext()
   return (
     <FlexCol alignItems="start" gap={2}>
       <Button variant="contained" onClick={async () => await connect?.()}>
@@ -34,6 +34,7 @@ const ConnectMetaMaskProvider = () => {
         <ListItem>Provider: {JSON.stringify(provider?._isProvider)}</ListItem>
         <ListItem>Wallet Provider: {JSON.stringify(walletProvider?._isProvider)}</ListItem>
         <ListItem>Signer: {JSON.stringify(signer?._isSigner)}</ListItem>
+        <ListItem>Connection Refused: {JSON.stringify(connectRefused)}</ListItem>
         <ListItem>Error: {error?.message}</ListItem>
       </List>
     </FlexCol>
