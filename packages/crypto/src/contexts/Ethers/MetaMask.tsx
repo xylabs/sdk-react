@@ -40,16 +40,17 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
 
   useEffect(() => {
     if (provider && enabled) {
-      provider.on('accountsChanged', (accounts: string[]) => {
+      window.ethereum.on('accountsChanged', (accounts: string[]) => {
         console.log(`accountsChanged: ${JSON.stringify(accounts)}`)
         setResetCount(resetCount + 1)
+        setError(undefined)
         if (accounts.length > 0) {
           setLocalAddress(EthAddress.fromString(accounts[0]))
         } else {
           setLocalAddress(undefined)
         }
       })
-      provider.on('chainChanged', (chainId: string) => {
+      window.ethereum.on('chainChanged', (chainId: string) => {
         setResetCount(resetCount + 1)
         if (chainId) {
           setChainId(parseInt(chainId))
