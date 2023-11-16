@@ -21,16 +21,16 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.14.13",
-    "@mui/material": "^5.14.13",
-    "@storybook/react": "^7.4.6",
-    "@types/react-helmet": "^6.1.7",
-    "@xylabs/ts-scripts-yarn3": "^3.1.11",
-    "@xylabs/tsconfig-react": "^3.1.11",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
+    "@storybook/react": "^7.5.3",
+    "@types/react-helmet": "^6.1.9",
+    "@xylabs/ts-scripts-yarn3": "^3.1.21",
+    "@xylabs/tsconfig-react": "^3.1.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.16.0",
+    "react-router-dom": "^6.18.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
