@@ -1,17 +1,27 @@
-import { Listener, Web3Provider } from '@ethersproject/providers'
+import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
 
-import { EthWalletConnectorBase } from './EthWalletConnectorBase'
+import { EthWalletConnectorBase } from './lib'
 
-export class MetaMaskConnector extends EthWalletConnectorBase<MetaMaskInpageProvider> {
+export class MetaMaskConnector extends EthWalletConnectorBase {
+  // instance of provider with Meta Mask specific methods
+  public override ethereum = window.ethereum as MetaMaskInpageProvider
+  // instance of Ethers Web3Provider
+  public override provider: Web3Provider
+
+  // Name of the Provider
   public providerName = 'Meta Mask'
   private account = ''
 
   private listeners: Listener[] = []
-  private providerListeners: [event: string, listener: Listener][] = []
 
   constructor(provider?: Web3Provider) {
-    super(provider)
+    super(['EIP-1193'])
+    if (provider) {
+      this.provider = provider
+    } else {
+      this.provider = new Web3Provider(window.ethereum as ExternalProvider)
+    }
   }
 
   get chainId() {
@@ -48,41 +58,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase<MetaMaskInpageProv
     } else {
       console.log('No authorized account found.')
     }
-  }
-
-  /**
-   * EIP-1193 Event Listeners
-   *
-   * .on in Web3Provider does not understand EIP-1193 events
-   * see - https://github.com/ethers-io/ethers.js/discussions/1560#discussioncomment-730893
-   */
-  providerOnAccountsChanged(listener: Listener) {
-    this.ethereum?.on('accountsChanged', listener)
-    this.providerListeners.push(['accountsChanged', listener])
-  }
-
-  providerOnChainChanged(listener: Listener) {
-    this.ethereum?.on('chainChanged', listener)
-    this.providerListeners.push(['chainChanged', listener])
-  }
-
-  providerOnConnect(listener: Listener) {
-    this.ethereum?.on('connect', listener)
-    this.providerListeners.push(['connect', listener])
-  }
-
-  providerOnDisconnect(listener: Listener) {
-    this.ethereum?.on('disconnect', listener)
-    this.providerListeners.push(['disconnect', listener])
-  }
-
-  providerRemoveListener(event: string, listener: Listener) {
-    this.ethereum?.removeListener(event, listener)
-    this.providerListeners = this.providerListeners.filter(([, savedListener]) => listener !== savedListener)
-  }
-
-  providerRemoveListeners() {
-    this.providerListeners.forEach(([event, listener]) => this.ethereum?.removeListener(event, listener))
   }
 
   async requestAccounts(): Promise<string[] | null> {
