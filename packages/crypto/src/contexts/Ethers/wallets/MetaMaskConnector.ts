@@ -38,7 +38,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   get walletConnected() {
     if (this.currentAddress) {
-      console.log('Found an authorized account: ', this.ethereum?.selectedAddress)
       return true
     }
     return false
