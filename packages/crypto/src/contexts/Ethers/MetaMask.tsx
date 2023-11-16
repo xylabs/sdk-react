@@ -39,25 +39,35 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
   const [signer, setSigner] = useState<JsonRpcSigner | null>()
 
   useEffect(() => {
+    const accountsChangedListener = (accounts: string[]) => {
+      setResetCount(resetCount + 1)
+      setError(undefined)
+      if (accounts.length > 0) {
+        setLocalAddress(EthAddress.fromString(accounts[0]))
+      } else {
+        setLocalAddress(undefined)
+      }
+    }
+
+    const chainChangedListener = (chainId: string) => {
+      setResetCount(resetCount + 1)
+      if (chainId) {
+        setChainId(parseInt(chainId))
+      } else {
+        setChainId(undefined)
+      }
+    }
+
     if (provider && enabled) {
-      window.ethereum.on('accountsChanged', (accounts: string[]) => {
-        console.log(`accountsChanged: ${JSON.stringify(accounts)}`)
-        setResetCount(resetCount + 1)
-        setError(undefined)
-        if (accounts.length > 0) {
-          setLocalAddress(EthAddress.fromString(accounts[0]))
-        } else {
-          setLocalAddress(undefined)
-        }
-      })
-      window.ethereum.on('chainChanged', (chainId: string) => {
-        setResetCount(resetCount + 1)
-        if (chainId) {
-          setChainId(parseInt(chainId))
-        } else {
-          setChainId(undefined)
-        }
-      })
+      window.ethereum.on('accountsChanged', accountsChangedListener)
+      window.ethereum.on('chainChanged', chainChangedListener)
+    }
+
+    return () => {
+      if (window.ethereum) {
+        window.ethereum.off('accountsChanged', accountsChangedListener)
+        window.ethereum.off('chainChanged', chainChangedListener)
+      }
     }
   }, [provider, resetCount, enabled])
 
@@ -89,21 +99,17 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
 
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    async (isMounted) => {
+    async () => {
       if (signer && enabled) {
         try {
           const localAddress = EthAddress.fromString(await signer.getAddress())
           console.log(`Setting Local Address: ${localAddress}`)
-          if (isMounted()) {
-            setLocalAddress(localAddress)
-            setIsConnected(true)
-          }
+          setLocalAddress(localAddress)
+          setIsConnected(true)
         } catch (ex) {
-          if (isMounted()) {
-            setError(Error(`localAddress: ${ex}`))
-            setLocalAddress(undefined)
-            setIsConnected(false)
-          }
+          setError(Error(`localAddress: ${ex}`))
+          setLocalAddress(undefined)
+          setIsConnected(false)
         }
       }
     },
