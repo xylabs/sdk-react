@@ -7,7 +7,7 @@ import React, { PropsWithChildren, useEffect, useState } from 'react'
 import { EthersContext } from './Context'
 import { infuraKey } from './Infura'
 
-interface Props {
+export interface Props {
   enabled?: boolean
 }
 
