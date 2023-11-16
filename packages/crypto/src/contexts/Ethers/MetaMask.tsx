@@ -1,4 +1,4 @@
-import { InfuraProvider, JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
+import { InfuraProvider, JsonRpcSigner, Listener, Provider, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
@@ -39,7 +39,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
   const [signer, setSigner] = useState<JsonRpcSigner | null>()
 
   useEffect(() => {
-    const accountsChangedListener = (accounts: string[]) => {
+    const accountsChangedListener: Listener = (accounts: string[]) => {
       setResetCount(resetCount + 1)
       setError(undefined)
       if (accounts.length > 0) {
@@ -49,7 +49,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
       }
     }
 
-    const chainChangedListener = (chainId: string) => {
+    const chainChangedListener: Listener = (chainId: string) => {
       setResetCount(resetCount + 1)
       if (chainId) {
         setChainId(parseInt(chainId))
@@ -59,17 +59,17 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = (props) 
     }
 
     if (provider && enabled) {
-      window.ethereum.on('accountsChanged', accountsChangedListener)
-      window.ethereum.on('chainChanged', chainChangedListener)
+      ethereum.on('accountsChanged', accountsChangedListener)
+      ethereum.on('chainChanged', chainChangedListener)
     }
 
     return () => {
       if (window.ethereum) {
-        window.ethereum.off('accountsChanged', accountsChangedListener)
-        window.ethereum.off('chainChanged', chainChangedListener)
+        ethereum.off('accountsChanged', accountsChangedListener)
+        ethereum.off('chainChanged', chainChangedListener)
       }
     }
-  }, [provider, resetCount, enabled])
+  }, [provider, resetCount, enabled, ethereum])
 
   useEffect(() => {
     if (enabled) {
