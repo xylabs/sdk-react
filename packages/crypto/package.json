@@ -23,6 +23,7 @@
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-identicon": "workspace:~",
+    "@xylabs/react-promise": "workspace:~",
     "react-router-dom": "^6.18.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
