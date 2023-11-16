@@ -19,6 +19,15 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
 
   const [localAddress, setLocalAddress] = useState<EthAddress>()
 
+  // Setup logic to put existing selected address into state
+  useEffect(() => {
+    const currentAddress = metamaskConnector.currentAddress ?? undefined
+    if (currentAddress !== localAddress?.toString()) {
+      setLocalAddress(EthAddress.fromString(metamaskConnector.currentAddress ?? undefined))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   // Provider/Signer - fallback to infura?
   const [provider, walletProvider, providerName] = useMemo(() => {
     if (enabled) {
@@ -42,10 +51,8 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
   const signer = useMemo(() => {
     if (enabled) {
       let signer = null
-      const currentAddress = metamaskConnector.currentAddress ?? undefined
-      if (currentAddress !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(metamaskConnector.currentAddress ?? undefined))
       try {
-        signer = provider?.getSigner(currentAddress)
+        signer = provider?.getSigner(metamaskConnector.currentAddress ?? undefined)
       } catch (ex) {
         console.error(ex)
       }
@@ -58,6 +65,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
   const connect = useCallback(async () => {
     try {
       const accounts = await walletProvider?.send('eth_requestAccounts', [])
+      setConnectRefused(false)
       // We could have multiple accounts. Check for one.
       if (accounts && accounts?.length !== 0) {
         setLocalAddress(accounts[0])
