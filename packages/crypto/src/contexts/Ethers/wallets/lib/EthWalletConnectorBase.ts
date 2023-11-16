@@ -16,7 +16,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events<EIP1193Provid
     super(supportedEvents)
   }
 
-  abstract get currentAccount(): string | null
+  abstract get currentAddress(): string | null
   abstract get installed(): boolean
   abstract get signer(): JsonRpcSigner
   abstract get walletConnected(): boolean

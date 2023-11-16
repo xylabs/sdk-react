@@ -24,7 +24,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  get currentAccount() {
+  get currentAddress() {
     return this.ethereum?.selectedAddress
   }
 
@@ -37,7 +37,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   }
 
   get walletConnected() {
-    if (this.currentAccount) {
+    if (this.currentAddress) {
       console.log('Found an authorized account: ', this.ethereum?.selectedAddress)
       return true
     }
@@ -83,6 +83,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     await signer.getAddress()
     const signature = await signer.signMessage(message)
     return signature
+  }
+
+  async signerAddress() {
+    return await this.provider.getSigner().getAddress()
   }
 
   /** Web3Provider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
