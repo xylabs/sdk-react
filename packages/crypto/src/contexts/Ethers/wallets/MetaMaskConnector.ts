@@ -7,9 +7,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
   public allowedAddresses: string[] = []
 
-  // Listeners that only want to be notified when chainId changes
-  public chainChangedNotifiers: Listener[] = []
-
   // current chainId
   public chainId: string | undefined = undefined
 
@@ -21,6 +18,12 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   // Name of the Provider
   public providerName = 'Meta Mask'
+
+  // Listeners that only want to be notified when addresses change
+  private addressChangeNotifiers: Listener[] = []
+
+  // Listeners that only want to be notified when chainId changes
+  private chainChangedNotifiers: Listener[] = []
 
   // listeners for provider events
   private listeners: Listener[] = []
@@ -86,6 +89,13 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return await this.provider.getSigner().getAddress()
   }
 
+  public subscribeToAddressChanges(listener: () => void) {
+    this.addressChangeNotifiers = [listener, ...this.addressChangeNotifiers]
+    return () => {
+      this.addressChangeNotifiers = this.addressChangeNotifiers.filter((l) => l !== listener)
+    }
+  }
+
   public subscribeToChainChanges(listener: () => void) {
     this.chainChangedNotifiers = [listener, ...this.chainChangedNotifiers]
     return () => {
@@ -126,6 +136,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     this.allowedAddresses = (await this.currentAddress()) ?? []
     const listener = (accounts: string[]) => {
       this.allowedAddresses = accounts
+      this.addressChangeNotifiers.forEach((listener) => listener())
     }
     this.onAccountsChanged(listener)
   }

@@ -7,12 +7,7 @@ export const useCurrentAddressExternal = (metamaskConnector: MetaMaskConnector) 
   const { getSnapShot, subscribe } = useMemo(() => {
     return {
       getSnapShot: () => metamaskConnector.allowedAddresses,
-      subscribe: (onStoreChange: () => void) => {
-        metamaskConnector.onAccountsChanged(onStoreChange)
-        return () => {
-          metamaskConnector.removeEIP11193Listener('accountsChanged', onStoreChange)
-        }
-      },
+      subscribe: (onStoreChange: () => void) => metamaskConnector.subscribeToAddressChanges(onStoreChange),
     }
   }, [metamaskConnector])
 
