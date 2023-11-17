@@ -1,6 +1,6 @@
 import { Listener } from '@ethersproject/providers'
 
-import { EIP1193EventNames, EIP1193Provider } from './EIP1193'
+import { EIP1193EventNames, EIP1193EventsCompatible, EIP1193Provider } from './EIP1193'
 import { SupportedEventProposals } from './SupportedEvents'
 
 /**
@@ -8,7 +8,7 @@ import { SupportedEventProposals } from './SupportedEvents'
  *
  * See - https://eips.ethereum.org/EIPS/eip-1193
  */
-export class EIP1193Events<TProvider extends EIP1193Provider> {
+export class EIP1193Events<TProvider extends EIP1193Provider> implements EIP1193EventsCompatible {
   private eventsEnabled: boolean = false
   // Not relying on an ethers provider because it doesn't have types for EIP-1193 events
   private listeningProvider = window.ethereum as TProvider
