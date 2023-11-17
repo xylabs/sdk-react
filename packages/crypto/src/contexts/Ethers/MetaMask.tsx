@@ -173,7 +173,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         connect,
         connectRefused,
         error,
-        isConnected: metamaskConnector.walletConnected,
+        isConnected: !!localAddress,
         localAddress,
         provider,
         providerName,
