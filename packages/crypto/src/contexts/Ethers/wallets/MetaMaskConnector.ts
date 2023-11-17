@@ -7,6 +7,12 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
   public allowedAddresses: string[] = []
 
+  // Listeners that only want to be notified when chainId changes
+  public chainChangedNotifiers: Listener[] = []
+
+  // current chainId
+  public chainId: string | undefined = undefined
+
   // instance of provider with Meta Mask specific methods
   public override ethereum = window.ethereum as MetaMaskInpageProvider
 
@@ -27,6 +33,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
       this.provider = new Web3Provider(window.ethereum as ExternalProvider)
     }
     this.onAccountsChangedListener()
+    this.onChainChangedListener()
   }
 
   get installed() {
@@ -35,10 +42,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   get signer() {
     return this.provider.getSigner()
-  }
-
-  async chainId() {
-    return await this.provider?.send('net_version', [])
   }
 
   async connectWallet() {
@@ -52,6 +55,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   async currentAddress(): Promise<string[] | undefined> {
     return await this.provider?.send('eth_accounts', [])
+  }
+
+  async currentChainId() {
+    return await this.provider?.send('net_version', [])
   }
 
   async requestAccounts(): Promise<string[] | null> {
@@ -77,6 +84,13 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   async signerAddress() {
     return await this.provider.getSigner().getAddress()
+  }
+
+  public subscribeToChainChanges(listener: () => void) {
+    this.chainChangedNotifiers = [listener, ...this.chainChangedNotifiers]
+    return () => {
+      this.chainChangedNotifiers = this.chainChangedNotifiers.filter((l) => l !== listener)
+    }
   }
 
   async walletConnected() {
@@ -114,5 +128,17 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
       this.allowedAddresses = accounts
     }
     this.onAccountsChanged(listener)
+  }
+
+  /**
+   * Keep class state internally consistent
+   */
+  private async onChainChangedListener() {
+    this.chainId = (await this.currentChainId()) ?? undefined
+    const listener = (chainId: string | undefined) => {
+      this.chainId = chainId
+      this.chainChangedNotifiers.forEach((listener) => listener())
+    }
+    this.onChainChanged(listener)
   }
 }
