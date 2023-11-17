@@ -6,7 +6,7 @@ import { createContext } from 'react'
 export interface EthersData {
   busy?: boolean
   chainId?: number | null
-  connect?: () => Promise<string[] | undefined>
+  connect?: () => Promise<string[] | null | undefined>
   connectRefused?: boolean
   error?: Error | null
   isConnected?: boolean

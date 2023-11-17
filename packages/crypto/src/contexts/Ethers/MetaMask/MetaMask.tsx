@@ -13,19 +13,18 @@ export interface Props {
 const metamaskConnector = new MetaMaskConnector()
 
 // TODO - separate out infura provider into new hook
-// TODO - make single hook for metamask interaction
 
-export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1, enabled = true }) => {
+export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1 }) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentAddress, additionalAddresses] = useCurrentAddress(metamaskConnector)
 
   const chainId = useChainId(metamaskConnector)
 
-  const [provider, walletProvider, providerName] = useProviders(metamaskConnector, enabled, chainId ?? defaultChainId)
+  const [provider, walletProvider, providerName] = useProviders(metamaskConnector, chainId ?? defaultChainId)
 
-  const [connect, connectRefused, connectError] = useConnectMetaMask(walletProvider)
+  const { connect, connectRefused, connectError } = useConnectMetaMask(metamaskConnector)
 
-  const signer = useSigner(metamaskConnector, enabled, walletProvider, currentAddress)
+  const signer = useSigner(metamaskConnector, currentAddress)
   const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
 
   return (

@@ -43,10 +43,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return this.ethereum && this.ethereum.isMetaMask
   }
 
-  get signer() {
-    return this.provider.getSigner()
-  }
-
   async connectWallet() {
     if (!this.provider) {
       this.logProviderMissing()
@@ -73,16 +69,20 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return await this.provider.send('eth_requestAccounts', [])
   }
 
-  async signMessage(message: string) {
+  async signMessage(message: string, address?: string) {
     if (!this.provider) {
       this.logProviderMissing()
       return
     }
 
-    const signer = this.provider.getSigner()
+    const signer = this.signer(address)
     await signer.getAddress()
     const signature = await signer.signMessage(message)
     return signature
+  }
+
+  signer(address?: string) {
+    return this.provider.getSigner(address)
   }
 
   async signerAddress() {

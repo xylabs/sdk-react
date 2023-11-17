@@ -1,13 +1,14 @@
-import { Web3Provider } from '@ethersproject/providers'
 import { useCallback, useState } from 'react'
 
-export const useConnectMetaMask = (walletProvider?: Web3Provider): [() => Promise<string[] | undefined>, boolean, Error | undefined] => {
+import { MetaMaskConnector } from '../../wallets'
+
+export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
   const [connectRefused, setConnectRefused] = useState(false)
   const [connectError, setConnectError] = useState<Error>()
 
   const connect = useCallback(async () => {
     try {
-      const accounts = await walletProvider?.send('eth_requestAccounts', [])
+      const accounts = await metamaskConnector.requestAccounts()
       setConnectRefused(false)
       setConnectError(undefined)
       // We could have multiple accounts. Check for one.
@@ -21,7 +22,7 @@ export const useConnectMetaMask = (walletProvider?: Web3Provider): [() => Promis
       setConnectError(e as Error)
       if ((e as { code: number }).code === 4001) setConnectRefused(true)
     }
-  }, [walletProvider])
+  }, [metamaskConnector])
 
-  return [connect, connectRefused, connectError]
+  return { connect, connectError, connectRefused }
 }
