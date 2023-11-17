@@ -1,8 +1,8 @@
 import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
+import { EthAddress } from '@xylabs/eth-address'
 
 import { EthWalletConnectorBase } from './lib'
-import { EthAddress } from '@xylabs/eth-address'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // instance of provider with Meta Mask specific methods
