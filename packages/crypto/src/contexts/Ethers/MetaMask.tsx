@@ -108,7 +108,6 @@ const useConnectMetaMask = (
 }
 
 const useChainId = (metamaskConnector: MetaMaskConnector, enabled?: boolean) => {
-  // Chain Id
   const [chainId, setChainId] = useState<number>()
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -116,9 +115,9 @@ const useChainId = (metamaskConnector: MetaMaskConnector, enabled?: boolean) => 
       const currentChainId = await metamaskConnector.chainId()
       setChainId((existingChainId) => (existingChainId === undefined ? currentChainId : existingChainId))
 
-      const chainChangedListener: Listener = (chainId: number) => {
+      const chainChangedListener: Listener = (chainIdHex: number) => {
         if (chainId) {
-          setChainId(chainId)
+          setChainId(Number(chainIdHex))
         } else {
           setChainId(undefined)
         }
