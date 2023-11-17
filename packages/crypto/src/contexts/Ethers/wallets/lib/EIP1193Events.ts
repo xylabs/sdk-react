@@ -10,10 +10,11 @@ import { SupportedEventProposals } from './SupportedEvents'
  */
 export class EIP1193Events<TProvider extends EIP1193Provider> {
   private eventsEnabled: boolean = false
+  // Not relying on an ethers provider because it doesn't have types for EIP-1193 events
   private listeningProvider = window.ethereum as TProvider
   private providerListeners: [event: EIP1193EventNames, listener: Listener][] = []
 
-  constructor(private supportedEvents?: SupportedEventProposals[]) {
+  constructor(supportedEvents?: SupportedEventProposals[]) {
     this.eventsEnabled = !!supportedEvents?.includes('EIP-1193')
   }
 
