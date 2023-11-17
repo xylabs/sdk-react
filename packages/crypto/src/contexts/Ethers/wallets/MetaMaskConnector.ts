@@ -24,23 +24,12 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  get currentAddress() {
-    return this.ethereum?.selectedAddress
-  }
-
   get installed() {
     return this.ethereum && this.ethereum.isMetaMask
   }
 
   get signer() {
     return this.provider.getSigner()
-  }
-
-  get walletConnected() {
-    if (this.currentAddress) {
-      return true
-    }
-    return false
   }
 
   async chainId() {
@@ -61,6 +50,11 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     } else {
       console.log('No authorized account found.')
     }
+  }
+
+  async currentAddress() {
+    const [currentAddress] = (await this.provider?.send('eth_accounts', [])) ?? []
+    return currentAddress
   }
 
   async requestAccounts(): Promise<string[] | null> {
@@ -86,6 +80,13 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   async signerAddress() {
     return await this.provider.getSigner().getAddress()
+  }
+
+  async walletConnected() {
+    if (await this.currentAddress()) {
+      return true
+    }
+    return false
   }
 
   /** Web3Provider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
