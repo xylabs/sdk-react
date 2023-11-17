@@ -9,10 +9,14 @@ import { SupportedEventProposals } from './SupportedEvents'
  * See - https://eips.ethereum.org/EIPS/eip-1193
  */
 export class EIP1193Events<TProvider extends EIP1193Provider> implements EIP1193EventsCompatible {
+  // list of EIP-1193 specific event names and listeners for easy cleanup
+  private eip1193Listeners: [event: EIP1193EventNames, listener: Listener][] = []
+
+  // opt-in to EIP-1193 events since not all wallets will support them
   private eventsEnabled: boolean = false
+
   // Not relying on an ethers provider because it doesn't have types for EIP-1193 events
   private listeningProvider = window.ethereum as TProvider
-  private providerListeners: [event: EIP1193EventNames, listener: Listener][] = []
 
   constructor(supportedEvents?: SupportedEventProposals[]) {
     this.eventsEnabled = !!supportedEvents?.includes('EIP-1193')
@@ -21,40 +25,40 @@ export class EIP1193Events<TProvider extends EIP1193Provider> implements EIP1193
   onAccountsChanged(listener: Listener) {
     this.enabled(() => {
       this.listeningProvider?.on('accountsChanged', listener)
-      this.providerListeners.push(['accountsChanged', listener])
+      this.eip1193Listeners.push(['accountsChanged', listener])
     })
   }
 
   onChainChanged(listener: Listener) {
     this.enabled(() => {
       this.listeningProvider?.on('chainChanged', listener)
-      this.providerListeners.push(['chainChanged', listener])
+      this.eip1193Listeners.push(['chainChanged', listener])
     })
   }
 
   onConnect(listener: Listener) {
     this.enabled(() => {
       this.listeningProvider?.on('connect', listener)
-      this.providerListeners.push(['connect', listener])
+      this.eip1193Listeners.push(['connect', listener])
     })
   }
 
   onDisconnect(listener: Listener) {
     this.enabled(() => {
       this.listeningProvider?.on('disconnect', listener)
-      this.providerListeners.push(['disconnect', listener])
+      this.eip1193Listeners.push(['disconnect', listener])
     })
   }
 
   removeEIP11193Listener(event: EIP1193EventNames, listener: Listener) {
     this.enabled(() => {
       this.listeningProvider?.removeListener(event, listener)
-      this.providerListeners = this.providerListeners.filter(([, savedListener]) => listener !== savedListener)
+      this.eip1193Listeners = this.eip1193Listeners.filter(([, savedListener]) => listener !== savedListener)
     })
   }
 
   removeEIP11193Listeners() {
-    this.providerListeners.forEach(([event, listener]) => this.listeningProvider?.removeListener(event, listener))
+    this.eip1193Listeners.forEach(([event, listener]) => this.listeningProvider?.removeListener(event, listener))
   }
 
   private enabled(method?: () => void) {
