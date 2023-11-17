@@ -11,7 +11,7 @@ import { MetaMaskConnector } from './wallets'
 const useMetaMaskProviders = (
   metamaskConnector: MetaMaskConnector,
   enabled?: boolean,
-  defaultChainId?: number,
+  chainId?: number,
 ): [Provider | undefined, Web3Provider | undefined, string | undefined] => {
   // Establish Meta Mask provider and fallback to Infura
   const [provider, walletProvider, providerName] = useMemo(() => {
@@ -23,7 +23,7 @@ const useMetaMaskProviders = (
         provider = walletProvider
         providerName = metamaskConnector.providerName
       } else {
-        provider = new InfuraProvider(defaultChainId, infuraKey)
+        provider = new InfuraProvider(chainId, infuraKey)
         providerName = 'Infura (Default)'
       }
       provider = walletProvider ?? provider
@@ -31,7 +31,7 @@ const useMetaMaskProviders = (
     } else {
       return []
     }
-  }, [defaultChainId, enabled, metamaskConnector.provider, metamaskConnector.providerName])
+  }, [chainId, enabled, metamaskConnector.provider, metamaskConnector.providerName])
 
   return [provider, walletProvider, providerName]
 }
