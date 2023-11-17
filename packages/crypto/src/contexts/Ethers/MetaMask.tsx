@@ -46,7 +46,7 @@ const useSigner = (
     if (enabled) {
       let signer = null
       try {
-        signer = provider?.getSigner(metamaskConnector.currentAddress ?? undefined)
+        signer = provider?.getSigner(localAddress?.toString())
       } catch (ex) {
         console.error(ex)
       }
@@ -146,24 +146,26 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
   const [localAddress, setLocalAddress] = useState<EthAddress>()
 
   // Setup logic to put existing selected address into state
-  useEffect(() => {
-    const currentAddress = metamaskConnector.currentAddress ?? undefined
-    if (currentAddress !== localAddress?.toString()) {
-      setLocalAddress(EthAddress.fromString(metamaskConnector.currentAddress ?? undefined))
-    }
+  useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const [provider, walletProvider, providerName] = useMetaMaskProviders(metamaskConnector, enabled, defaultChainId)
-
-  const signer = useSigner(metamaskConnector, enabled, walletProvider, localAddress)
-
-  const [connect, connectRefused, error] = useConnectMetaMask(metamaskConnector, setLocalAddress, walletProvider, enabled)
+    async () => {
+      const currentAddress = (await metamaskConnector.currentAddress()) ?? undefined
+      if (currentAddress !== localAddress?.toString()) {
+        setLocalAddress(EthAddress.fromString(currentAddress))
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  )
 
   const chainId = useChainId(metamaskConnector, enabled)
 
-  // Signer Address
+  const [provider, walletProvider, providerName] = useMetaMaskProviders(metamaskConnector, enabled, chainId ?? defaultChainId)
+
+  const signer = useSigner(metamaskConnector, enabled, walletProvider, localAddress)
   const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
+
+  const [connect, connectRefused, connectError] = useConnectMetaMask(metamaskConnector, setLocalAddress, walletProvider, enabled)
 
   return (
     <EthersContext.Provider
@@ -172,7 +174,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         chainId,
         connect,
         connectRefused,
-        error,
+        error: connectError,
         isConnected: !!localAddress,
         localAddress,
         provider,
