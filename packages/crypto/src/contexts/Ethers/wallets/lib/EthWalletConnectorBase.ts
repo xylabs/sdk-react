@@ -1,4 +1,5 @@
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
+import { EthAddress } from '@xylabs/eth-address'
 
 import { EIP1193Provider } from './EIP1193'
 import { EIP1193Events } from './EIP1193Events'
@@ -21,6 +22,6 @@ export abstract class EthWalletConnectorBase extends EIP1193Events<EIP1193Provid
 
   abstract chainId(): Promise<string | number | null>
   abstract connectWallet(): Promise<void>
-  abstract currentAddress(): Promise<string | null>
+  abstract currentAddress(): Promise<EthAddress | undefined>
   abstract walletConnected(): Promise<boolean>
 }

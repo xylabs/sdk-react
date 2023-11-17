@@ -2,6 +2,7 @@ import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/provide
 import { MetaMaskInpageProvider } from '@metamask/providers'
 
 import { EthWalletConnectorBase } from './lib'
+import { EthAddress } from '@xylabs/eth-address'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // instance of provider with Meta Mask specific methods
@@ -54,7 +55,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   async currentAddress() {
     const [currentAddress] = (await this.provider?.send('eth_accounts', [])) ?? []
-    return currentAddress
+    return EthAddress.fromString(currentAddress)
   }
 
   async requestAccounts(): Promise<string[] | null> {
