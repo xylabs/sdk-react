@@ -1,5 +1,5 @@
 import { usePromise } from '@xylabs/react-promise'
-import React, { PropsWithChildren, useState } from 'react'
+import React, { PropsWithChildren } from 'react'
 
 import { EthersContext } from '../Context'
 import { MetaMaskConnector } from '../wallets'
@@ -10,16 +10,16 @@ export interface Props {
   enabled?: boolean
 }
 
+const metamaskConnector = new MetaMaskConnector()
+
 // TODO - separate out infura provider into new hook
 // TODO - make single hook for metamask interaction
 
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1, enabled = true }) => {
-  const [metamaskConnector] = useState<MetaMaskConnector>(new MetaMaskConnector())
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentAddress, additionalAddresses] = useCurrentAddress(metamaskConnector)
 
-  const chainId = useChainId(metamaskConnector, enabled)
+  const chainId = useChainId(metamaskConnector)
 
   const [provider, walletProvider, providerName] = useProviders(metamaskConnector, enabled, chainId ?? defaultChainId)
 
