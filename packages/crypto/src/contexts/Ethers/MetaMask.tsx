@@ -2,7 +2,7 @@ import { InfuraProvider, JsonRpcSigner, Listener, Provider, Web3Provider } from 
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { usePromise } from '@xylabs/react-promise'
-import React, { Dispatch, PropsWithChildren, SetStateAction, useCallback, useEffect, useMemo, useState } from 'react'
+import React, { PropsWithChildren, useCallback, useEffect, useMemo, useState } from 'react'
 
 import { EthersContext } from './Context'
 import { infuraKey } from './Infura'
@@ -13,7 +13,7 @@ const useMetaMaskProviders = (
   enabled?: boolean,
   chainId?: number,
 ): [Provider | undefined, Web3Provider | undefined, string | undefined] => {
-  // Establish Meta Mask provider and fallback to Infura
+  // Establish a provider from window or fallback to infura provider - should all wallet connector contexts do that?
   const [provider, walletProvider, providerName] = useMemo(() => {
     if (enabled) {
       const walletProvider = metamaskConnector.provider
@@ -34,6 +34,41 @@ const useMetaMaskProviders = (
   }, [chainId, enabled, metamaskConnector.provider, metamaskConnector.providerName])
 
   return [provider, walletProvider, providerName]
+}
+
+const useCurrentAddress = (metamaskConnector: MetaMaskConnector, enabled?: boolean) => {
+  const [currentAddress, setCurrentAddress] = useState<EthAddress>()
+
+  useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    async () => {
+      const defaultAddress = await metamaskConnector.currentAddress()
+      setCurrentAddress((currentAddress) => (currentAddress === undefined && defaultAddress ? defaultAddress : undefined))
+    },
+    [metamaskConnector],
+  )
+
+  // watch for changes
+  useEffect(() => {
+    const accountsChangedListener: Listener = (accounts: string[]) => {
+      // setConnectError(undefined)
+      if (accounts.length > 0) {
+        setCurrentAddress(EthAddress.fromString(accounts[0]))
+      } else {
+        setCurrentAddress(undefined)
+      }
+    }
+
+    if (metamaskConnector) {
+      metamaskConnector.onAccountsChanged(accountsChangedListener)
+    }
+
+    return () => {
+      metamaskConnector.removeEIP11193Listener('accountsChanged', accountsChangedListener)
+    }
+  }, [enabled, metamaskConnector])
+
+  return currentAddress
 }
 
 const useSigner = (
@@ -57,12 +92,7 @@ const useSigner = (
   return signer
 }
 
-const useConnectMetaMask = (
-  metamaskConnector: MetaMaskConnector,
-  setLocalAddress: Dispatch<SetStateAction<EthAddress | undefined>>,
-  walletProvider?: Web3Provider,
-  enabled?: boolean,
-): [() => Promise<string[] | undefined>, boolean, Error | undefined] => {
+const useConnectMetaMask = (walletProvider?: Web3Provider): [() => Promise<string[] | undefined>, boolean, Error | undefined] => {
   const [connectRefused, setConnectRefused] = useState(false)
   const [connectError, setConnectError] = useState<Error>()
 
@@ -70,6 +100,7 @@ const useConnectMetaMask = (
     try {
       const accounts = await walletProvider?.send('eth_requestAccounts', [])
       setConnectRefused(false)
+      setConnectError(undefined)
       // We could have multiple accounts. Check for one.
       if (accounts && accounts?.length !== 0) {
         console.log('Connected: ', accounts[0])
@@ -78,31 +109,10 @@ const useConnectMetaMask = (
       }
       return accounts
     } catch (e) {
-      console.log(e)
       setConnectError(e as Error)
       if ((e as { code: number }).code === 4001) setConnectRefused(true)
     }
   }, [walletProvider])
-
-  // watch for changes
-  useEffect(() => {
-    const accountsChangedListener: Listener = (accounts: string[]) => {
-      setConnectError(undefined)
-      if (accounts.length > 0) {
-        setLocalAddress(EthAddress.fromString(accounts[0]))
-      } else {
-        setLocalAddress(undefined)
-      }
-    }
-
-    if (metamaskConnector) {
-      metamaskConnector.onAccountsChanged(accountsChangedListener)
-    }
-
-    return () => {
-      metamaskConnector.removeEIP11193Listener('accountsChanged', accountsChangedListener)
-    }
-  }, [enabled, metamaskConnector, setLocalAddress])
 
   return [connect, connectRefused, connectError]
 }
@@ -143,29 +153,16 @@ export interface Props {
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1, enabled = true }) => {
   const [metamaskConnector] = useState<MetaMaskConnector>(new MetaMaskConnector())
 
-  const [localAddress, setLocalAddress] = useState<EthAddress>()
-
-  // Setup logic to put existing selected address into state
-  useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    async () => {
-      const currentAddress = (await metamaskConnector.currentAddress()) ?? undefined
-      if (currentAddress !== localAddress?.toString()) {
-        setLocalAddress(EthAddress.fromString(currentAddress))
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  )
+  const currentAddress = useCurrentAddress(metamaskConnector, enabled)
 
   const chainId = useChainId(metamaskConnector, enabled)
 
   const [provider, walletProvider, providerName] = useMetaMaskProviders(metamaskConnector, enabled, chainId ?? defaultChainId)
 
-  const signer = useSigner(metamaskConnector, enabled, walletProvider, localAddress)
-  const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
+  const [connect, connectRefused, connectError] = useConnectMetaMask(walletProvider)
 
-  const [connect, connectRefused, connectError] = useConnectMetaMask(metamaskConnector, setLocalAddress, walletProvider, enabled)
+  const signer = useSigner(metamaskConnector, enabled, walletProvider, currentAddress)
+  const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
 
   return (
     <EthersContext.Provider
@@ -175,8 +172,8 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         connect,
         connectRefused,
         error: connectError,
-        isConnected: !!localAddress,
-        localAddress,
+        isConnected: !!currentAddress,
+        localAddress: currentAddress,
         provider,
         providerName,
         signer,
