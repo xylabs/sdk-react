@@ -1,33 +1,20 @@
-import { Listener } from '@ethersproject/providers'
-import { useAsyncEffect } from '@xylabs/react-async-effect'
-import { useState } from 'react'
+import { useMemo, useSyncExternalStore } from 'react'
 
 import { MetaMaskConnector } from '../../wallets'
 
-export const useChainId = (metamaskConnector: MetaMaskConnector, enabled?: boolean) => {
-  const [chainId, setChainId] = useState<number>()
-  useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    async () => {
-      const currentChainId = await metamaskConnector.chainId()
-      setChainId((existingChainId) => (existingChainId === undefined ? currentChainId : existingChainId))
+export const useChainIdExternal = (metamaskConnector: MetaMaskConnector) => {
+  const { getSnapShot, subscribe } = useMemo(() => {
+    return {
+      getSnapShot: () => metamaskConnector.chainId,
+      subscribe: (onStoreChange: () => void) => metamaskConnector.subscribeToChainChanges(onStoreChange),
+    }
+  }, [metamaskConnector])
 
-      const chainChangedListener: Listener = (chainIdHex: number) => {
-        if (chainId) {
-          setChainId(Number(chainIdHex))
-        } else {
-          setChainId(undefined)
-        }
-      }
+  return useSyncExternalStore(subscribe, getSnapShot)
+}
 
-      metamaskConnector.onChainChanged(chainChangedListener)
-
-      return () => {
-        metamaskConnector.removeEIP11193Listener('chainChanged', chainChangedListener)
-      }
-    },
-    [enabled, metamaskConnector, chainId],
-  )
-
+export const useChainId = (metamaskConnector: MetaMaskConnector) => {
+  const chainIdHex = useChainIdExternal(metamaskConnector)
+  const chainId = useMemo(() => Number(chainIdHex), [chainIdHex])
   return chainId
 }
