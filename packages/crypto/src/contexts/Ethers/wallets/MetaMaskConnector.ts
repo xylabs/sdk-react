@@ -1,19 +1,22 @@
 import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
-import { EthAddress } from '@xylabs/eth-address'
 
 import { EthWalletConnectorBase } from './lib'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
+  // current address enabled in metamask
+  public allowedAddresses: string[] = []
+
   // instance of provider with Meta Mask specific methods
   public override ethereum = window.ethereum as MetaMaskInpageProvider
+
   // instance of Ethers Web3Provider
   public override provider: Web3Provider
 
   // Name of the Provider
   public providerName = 'Meta Mask'
-  private account = ''
 
+  // listeners for provider events
   private listeners: Listener[] = []
 
   constructor(provider?: Web3Provider) {
@@ -23,6 +26,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     } else {
       this.provider = new Web3Provider(window.ethereum as ExternalProvider)
     }
+    this.onAccountsChangedListener()
   }
 
   get installed() {
@@ -43,19 +47,11 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
       return
     }
 
-    const accounts = await this.provider.send('eth_requestAccounts', [])
-    // We could have multiple accounts. Check for one.
-    if (accounts.length !== 0) {
-      this.account = accounts[0]
-      console.log('Connected: ', this.account)
-    } else {
-      console.log('No authorized account found.')
-    }
+    return await this.provider.send('eth_requestAccounts', [])
   }
 
-  async currentAddress() {
-    const [currentAddress] = (await this.provider?.send('eth_accounts', [])) ?? []
-    return EthAddress.fromString(currentAddress)
+  async currentAddress(): Promise<string[] | undefined> {
+    return await this.provider?.send('eth_accounts', [])
   }
 
   async requestAccounts(): Promise<string[] | null> {
@@ -107,5 +103,16 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   private logProviderMissing() {
     console.warn('Cannot call this method because there is no web3 provider connected.  Please confirm that metamask is installed')
+  }
+
+  /**
+   * Keep class state internally consistent
+   */
+  private async onAccountsChangedListener() {
+    this.allowedAddresses = (await this.currentAddress()) ?? []
+    const listener = (accounts: string[]) => {
+      this.allowedAddresses = accounts
+    }
+    this.onAccountsChanged(listener)
   }
 }
