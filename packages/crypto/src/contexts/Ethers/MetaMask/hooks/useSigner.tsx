@@ -4,15 +4,15 @@ import { JsonRpcSigner } from 'ethers'
 
 import { MetaMaskConnector } from '../../wallets'
 
-export const useSigner = (metamaskConnector: MetaMaskConnector, localAddress?: EthAddress): JsonRpcSigner | null | undefined => {
+export const useSigner = (metamaskConnector: MetaMaskConnector, localAddress?: EthAddress): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {
-    let signer = null
     try {
-      signer = await metamaskConnector.signerFromAddress(localAddress?.toString())
+      if (localAddress) {
+        return await metamaskConnector.signerFromAddress(localAddress?.toString())
+      }
     } catch (ex) {
       console.error(ex)
     }
-    return signer
   }, [localAddress, metamaskConnector])
 
   return signer
