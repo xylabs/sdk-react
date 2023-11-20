@@ -6,6 +6,7 @@ export interface EthersData {
   busy?: boolean
   chainId?: number | null
   connect?: () => Promise<string[] | null | undefined>
+  connectError?: Error | null
   connectRefused?: boolean
   error?: Error | null
   isConnected?: boolean
