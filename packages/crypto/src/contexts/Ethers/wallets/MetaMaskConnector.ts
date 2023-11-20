@@ -47,6 +47,21 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return this.ethereum && this.ethereum.isMetaMask
   }
 
+  /** Provider Listeners - https://docs.ethers.org/v6/api/providers/#ProviderEvent */
+  override browserProviderOn(event: string, listener: Listener) {
+    this.provider?.on(event, listener)
+    this.listeners.push(listener)
+  }
+
+  override browserProviderRemoveListener(event: string, listener: Listener) {
+    this.provider?.removeListener(event, listener)
+    this.listeners = this.listeners.filter((savedListener) => listener !== savedListener)
+  }
+
+  override browserProviderRemoveListeners() {
+    this.provider?.removeAllListeners()
+  }
+
   async connectWallet() {
     if (!this.provider) {
       this.logProviderMissing()
@@ -103,23 +118,8 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  /** BrowserProvider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
-  override web3ProviderOn(event: string, listener: Listener) {
-    this.provider?.on(event, listener)
-    this.listeners.push(listener)
-  }
-
-  override web3ProviderRemoveListener(event: string, listener: Listener) {
-    this.provider?.removeListener(event, listener)
-    this.listeners = this.listeners.filter((savedListener) => listener !== savedListener)
-  }
-
-  override web3ProviderRemoveListeners() {
-    this.provider?.removeAllListeners()
-  }
-
   private logProviderMissing() {
-    console.warn('Cannot call this method because there is no web3 provider connected.  Please confirm that metamask is installed')
+    console.warn('Cannot call this method because there is no browser provider connected.  Please confirm that metamask is installed')
   }
 
   /**
