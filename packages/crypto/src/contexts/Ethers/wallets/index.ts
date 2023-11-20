@@ -1,2 +1,2 @@
-export * from './EthWalletConnector'
+export * from './EthWallet'
 export * from './MetaMaskConnector'

@@ -1,6 +1,6 @@
 import { JsonRpcSigner, Listener, Web3Provider } from '@ethersproject/providers'
 
-import { EthWalletConnector } from './EthWalletConnector'
+import { EthWalletConnector } from './EthWallet'
 import { EIP1193Events, EIP1193Provider, SupportedEventProposals } from './lib'
 
 /**
