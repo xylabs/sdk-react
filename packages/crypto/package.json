@@ -13,8 +13,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@ethersproject/abstract-signer": "^5.7.0",
-    "@ethersproject/providers": "^5.7.2",
     "@metamask/providers": "^14.0.1",
     "@xylabs/assert": "^2.13.9",
     "@xylabs/bignumber": "^2.13.9",
@@ -24,6 +22,7 @@
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-identicon": "workspace:~",
     "@xylabs/react-promise": "workspace:~",
+    "ethers": "^6.0.0",
     "react-router-dom": "^6.19.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
