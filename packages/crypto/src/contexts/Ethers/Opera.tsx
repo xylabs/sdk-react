@@ -31,23 +31,27 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
         ethereum.enable()
         const operaProvider = new BrowserProvider(ethereum)
         const provider = operaProvider
-        const signer = await operaProvider.getSigner()
-        try {
-          const localAddress = EthAddress.fromString(await signer.getAddress())
-          ethereum.autoRefreshOnNetworkChange = false
-          if (mounted()) {
-            setSigner(signer)
-            setProvider(provider)
-            setLocalAddress(localAddress)
-          }
-        } catch (ex) {
-          if (mounted()) {
-            setError(Error(`localAddress: ${ex}`))
+        const existingAddress = (await provider.send('eth_accounts', [])) as string[]
+        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        if (localAddress) {
+          const signer = await operaProvider.getSigner()
+          try {
+            const localAddress = EthAddress.fromString(await signer.getAddress())
+            ethereum.autoRefreshOnNetworkChange = false
+            if (mounted()) {
+              setSigner(signer)
+              setProvider(provider)
+              setLocalAddress(localAddress)
+            }
+          } catch (ex) {
+            if (mounted()) {
+              setError(Error(`localAddress: ${ex}`))
+            }
           }
         }
       }
     },
-    [ethereum],
+    [ethereum, localAddress],
   )
 
   return (

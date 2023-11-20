@@ -52,13 +52,17 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
       setWalletProvider(walletProvider)
       let signer: JsonRpcSigner | null = null
       try {
-        signer = (await walletProvider?.getSigner()) ?? null
+        const existingAddress = (await provider.send('eth_accounts', [])) as string[]
+        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        if (localAddress) {
+          signer = (await walletProvider?.getSigner()) ?? null
+        }
       } catch (ex) {
         console.error(ex)
       }
       setSigner(signer)
     },
-    [ethereum, isConnected],
+    [ethereum, isConnected, localAddress],
   )
 
   useAsyncEffect(
