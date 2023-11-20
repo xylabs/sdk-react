@@ -7,9 +7,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
   public allowedAddresses: string[] = []
 
-  // current chainId
-  public chainId: string | undefined = undefined
-
   // instance of provider with Meta Mask specific methods
   public override ethereum = window.ethereum as MetaMaskInpageProvider
 
@@ -25,6 +22,9 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // Listeners that only want to be notified when chainId changes
   private chainChangedNotifiers: Listener[] = []
 
+  // current chainId in hex format
+  private chainIdHex: string | undefined = undefined
+
   // listeners for provider events
   private listeners: Listener[] = []
 
@@ -37,6 +37,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
     this.onAccountsChangedListener()
     this.onChainChangedListener()
+  }
+
+  get chainId() {
+    return this.chainIdHex ? Number(this.chainIdHex) : undefined
   }
 
   get installed() {
@@ -145,9 +149,9 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
    * Keep class state internally consistent
    */
   private async onChainChangedListener() {
-    this.chainId = (await this.currentChainId()) ?? undefined
+    this.chainIdHex = (await this.currentChainId()) ?? undefined
     const listener = (chainId: string | undefined) => {
-      this.chainId = chainId
+      this.chainIdHex = chainId
       this.chainChangedNotifiers.forEach((listener) => listener())
     }
     this.onChainChanged(listener)
