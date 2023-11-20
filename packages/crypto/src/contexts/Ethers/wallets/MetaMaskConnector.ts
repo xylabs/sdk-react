@@ -7,11 +7,8 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
   public allowedAddresses: string[] = []
 
-  // instance of provider with Meta Mask specific methods
-  public override ethereum = window.ethereum as MetaMaskInpageProvider
-
   // instance of Ethers Web3Provider
-  public override provider: Web3Provider
+  public provider: Web3Provider
 
   // Name of the Provider
   public providerName = 'Meta Mask'
@@ -24,6 +21,9 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   // current chainId in hex format
   private chainIdHex: string | undefined = undefined
+
+  // instance of provider with Meta Mask specific methods
+  private ethereum = window.ethereum as MetaMaskInpageProvider
 
   // listeners for provider events
   private listeners: Listener[] = []
@@ -85,22 +85,18 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return signature
   }
 
-  async signerAddress() {
-    return await this.provider.getSigner().getAddress()
-  }
-
   signerFromAddress(address?: string) {
     return this.provider.getSigner(address)
   }
 
-  public subscribeToAddressChanges(listener: () => void) {
+  override subscribeToAddressChanges(listener: () => void) {
     this.addressChangeNotifiers = [listener, ...this.addressChangeNotifiers]
     return () => {
       this.addressChangeNotifiers = this.addressChangeNotifiers.filter((l) => l !== listener)
     }
   }
 
-  public subscribeToChainChanges(listener: () => void) {
+  override subscribeToChainChanges(listener: () => void) {
     this.chainChangedNotifiers = [listener, ...this.chainChangedNotifiers]
     return () => {
       this.chainChangedNotifiers = this.chainChangedNotifiers.filter((l) => l !== listener)
@@ -108,17 +104,17 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   }
 
   /** Web3Provider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
-  web3ProviderOn(event: string, listener: Listener) {
+  override web3ProviderOn(event: string, listener: Listener) {
     this.provider?.on(event, listener)
     this.listeners.push(listener)
   }
 
-  web3ProviderRemoveListener(event: string, listener: Listener) {
+  override web3ProviderRemoveListener(event: string, listener: Listener) {
     this.provider?.removeListener(event, listener)
     this.listeners = this.listeners.filter((savedListener) => listener !== savedListener)
   }
 
-  web3ProviderRemoveListeners() {
+  override web3ProviderRemoveListeners() {
     this.provider?.removeAllListeners()
   }
 
