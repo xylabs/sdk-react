@@ -31,7 +31,6 @@ const MetaMaskTester: React.FC<EthersData> = ({
   signMessage,
   signer,
   signerAddress,
-  walletProvider,
 }) => {
   const [signResponse, setSignResponse] = useState<string>()
 
@@ -63,9 +62,8 @@ const MetaMaskTester: React.FC<EthersData> = ({
         <ListItem>Connected: {JSON.stringify(isConnected)}</ListItem>
         <ListItem>Local Address: {localAddress?.toString()}</ListItem>
         <ListItem>ProviderName: {providerName}</ListItem>
-        <ListItem>Provider: {JSON.stringify(provider?._isProvider)}</ListItem>
-        <ListItem>Wallet Provider: {JSON.stringify(walletProvider?._isProvider)}</ListItem>
-        <ListItem>Signer: {JSON.stringify(signer?._isSigner)}</ListItem>
+        <ListItem>Provider: {JSON.stringify(!!provider)}</ListItem>
+        <ListItem>Signer: {JSON.stringify(!!signer)}</ListItem>
         <ListItem>Signer Address: {signerAddress}</ListItem>
         <ListItem>Connection Refused: {JSON.stringify(connectRefused)}</ListItem>
         <ListItem>Error: {error?.message}</ListItem>
