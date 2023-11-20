@@ -32,9 +32,3 @@ export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
 
   return { connect, connectError, connectRefused }
 }
-
-/**
- * Example Error
- *
- * "user rejected action (action=\"requestAccess\", reason=\"rejected\", info={ \"error\": { \"code\": 4001, \"message\": \"ethers-user-denied: User rejected the request.\" }, \"payload\": { \"id\": 4, \"jsonrpc\": \"2.0\", \"method\": \"eth_requestAccounts\", \"params\": [  ] } }, code=ACTION_REJECTED, version=6.8.1)";
- */
