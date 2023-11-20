@@ -3,10 +3,10 @@ import { Meta, StoryFn } from '@storybook/react'
 import { FlexCol } from '@xylabs/react-flexbox'
 import { PropsWithChildren } from 'react'
 
-import { EthersData } from './Context'
-import { MetaMaskEthersLoader } from './MetaMask'
-import { useMetaMask } from './MetaMask/hooks'
-import { useEthersContext } from './use'
+import { EthersData } from '../Context'
+import { useEthersContext } from '../use'
+import { MetaMaskEthersLoader } from './EthersLoader'
+import { useMetaMask } from './hooks'
 
 const StorybookEntry = {
   argTypes: {},
@@ -19,7 +19,7 @@ const StorybookEntry = {
   title: 'common/EthersLoader/MetaMaskEthersLoader',
 } as Meta<typeof MetaMaskEthersLoader>
 
-const ConnectMetaMaskProvider: React.FC<EthersData> = ({
+const MetaMaskTester: React.FC<EthersData> = ({
   connect,
   connectRefused,
   chainId,
@@ -60,7 +60,7 @@ const WithProviderTemplate: StoryFn<typeof MetaMaskEthersLoader> = (args) => {
   const Context: React.FC<PropsWithChildren> = ({ children }) => <MetaMaskEthersLoader {...args}>{children}</MetaMaskEthersLoader>
   const ContextValues: React.FC = () => {
     const contextState = useEthersContext()
-    return <ConnectMetaMaskProvider {...contextState} />
+    return <MetaMaskTester {...contextState} />
   }
   return (
     <Context>
@@ -71,11 +71,13 @@ const WithProviderTemplate: StoryFn<typeof MetaMaskEthersLoader> = (args) => {
 
 const WithHookTemplate = () => {
   const { currentAddress: localAddress, ...hookState } = useMetaMask()
-  return <ConnectMetaMaskProvider localAddress={localAddress} {...hookState} />
+  return <MetaMaskTester localAddress={localAddress} {...hookState} />
 }
 
 const WithProvider = WithProviderTemplate.bind({})
 const WithHook = WithHookTemplate.bind({})
+
+// TODO - story for signing a datagram
 
 export { WithHook, WithProvider }
 

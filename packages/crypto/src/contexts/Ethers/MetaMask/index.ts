@@ -1,2 +1,2 @@
+export * from './EthersLoader'
 export * from './hooks'
-export * from './MetaMask'
