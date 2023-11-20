@@ -1,5 +1,5 @@
-import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
+import { BrowserProvider, Listener } from 'ethers'
 
 import { EthWalletConnectorBase } from './EthWalletConnectorBase'
 
@@ -7,8 +7,8 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
   public allowedAddresses: string[] = []
 
-  // instance of Ethers Web3Provider
-  public provider: Web3Provider
+  // instance of Ethers BrowserProvider
+  public provider: BrowserProvider
 
   // Name of the Provider
   public providerName = 'Meta Mask'
@@ -28,12 +28,12 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // listeners for provider events
   private listeners: Listener[] = []
 
-  constructor(provider?: Web3Provider) {
+  constructor(provider?: BrowserProvider) {
     super(['EIP-1193'])
     if (provider) {
       this.provider = provider
     } else {
-      this.provider = new Web3Provider(window.ethereum as ExternalProvider)
+      this.provider = new BrowserProvider(window.ethereum)
     }
     this.onAccountsChangedListener()
     this.onChainChangedListener()
@@ -79,14 +79,14 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
       return
     }
 
-    const signer = this.signerFromAddress(address)
+    const signer = await this.signerFromAddress(address)
     await signer.getAddress()
     const signature = await signer.signMessage(message)
     return signature
   }
 
-  signerFromAddress(address?: string) {
-    return this.provider.getSigner(address)
+  async signerFromAddress(address?: string) {
+    return await this.provider.getSigner(address)
   }
 
   override subscribeToAddressChanges(listener: () => void) {
@@ -103,7 +103,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  /** Web3Provider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
+  /** BrowserProvider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
   override web3ProviderOn(event: string, listener: Listener) {
     this.provider?.on(event, listener)
     this.listeners.push(listener)
