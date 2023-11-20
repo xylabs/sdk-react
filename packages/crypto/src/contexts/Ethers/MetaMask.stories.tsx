@@ -1,8 +1,11 @@
 import { Button, List, ListItem, Typography } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 import { FlexCol } from '@xylabs/react-flexbox'
+import { PropsWithChildren } from 'react'
 
+import { EthersData } from './Context'
 import { MetaMaskEthersLoader } from './MetaMask'
+import { useMetaMask } from './MetaMask/hooks'
 import { useEthersContext } from './use'
 
 const StorybookEntry = {
@@ -16,9 +19,19 @@ const StorybookEntry = {
   title: 'common/EthersLoader/MetaMaskEthersLoader',
 } as Meta<typeof MetaMaskEthersLoader>
 
-const ConnectMetaMaskProvider = () => {
-  const { connect, connectRefused, chainId, error, isConnected, localAddress, provider, providerName, signer, signerAddress, walletProvider } =
-    useEthersContext()
+const ConnectMetaMaskProvider: React.FC<EthersData> = ({
+  connect,
+  connectRefused,
+  chainId,
+  error,
+  isConnected,
+  localAddress,
+  provider,
+  providerName,
+  signer,
+  signerAddress,
+  walletProvider,
+}) => {
   return (
     <FlexCol alignItems="start" gap={2}>
       <Button variant="contained" onClick={async () => await connect?.()}>
@@ -43,15 +56,28 @@ const ConnectMetaMaskProvider = () => {
   )
 }
 
-const Template: StoryFn<typeof MetaMaskEthersLoader> = (args) => (
-  <MetaMaskEthersLoader {...args}>
-    <ConnectMetaMaskProvider />
-  </MetaMaskEthersLoader>
-)
+const WithProviderTemplate: StoryFn<typeof MetaMaskEthersLoader> = (args) => {
+  const Context: React.FC<PropsWithChildren> = ({ children }) => <MetaMaskEthersLoader {...args}>{children}</MetaMaskEthersLoader>
+  const ContextValues: React.FC = () => {
+    const contextState = useEthersContext()
+    return <ConnectMetaMaskProvider {...contextState} />
+  }
+  return (
+    <Context>
+      <ContextValues />
+    </Context>
+  )
+}
 
-const Default = Template.bind({})
+const WithHookTemplate = () => {
+  const { currentAddress: localAddress, ...hookState } = useMetaMask()
+  return <ConnectMetaMaskProvider localAddress={localAddress} {...hookState} />
+}
 
-export { Default }
+const WithProvider = WithProviderTemplate.bind({})
+const WithHook = WithHookTemplate.bind({})
+
+export { WithHook, WithProvider }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
