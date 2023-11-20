@@ -1,7 +1,7 @@
 import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
 
-import { EthWalletConnectorBase } from './lib'
+import { EthWalletConnectorBase } from './EthWalletConnectorBase'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
