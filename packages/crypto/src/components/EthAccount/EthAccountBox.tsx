@@ -33,10 +33,10 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
     ? addressLength === 'long'
       ? addressToDisplay.toString()
       : addressLength === 'short'
-      ? addressToDisplay.toShortString(shortenedLength)
-      : large
-      ? addressToDisplay.toString()
-      : addressToDisplay.toShortString()
+        ? addressToDisplay.toShortString(shortenedLength)
+        : large
+          ? addressToDisplay.toString()
+          : addressToDisplay.toShortString()
     : '-- --'
 
   // Note: We use the all zero address for spacing in case it is
