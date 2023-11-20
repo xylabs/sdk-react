@@ -126,7 +126,11 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
    * Keep class state internally consistent
    */
   private async onAccountsChangedListener() {
+    // set the initial value
     this.allowedAddresses = (await this.currentAddress()) ?? []
+    // notify existing subscribers that the default was set
+    this.addressChangeNotifiers.forEach((listener) => listener())
+
     const listener = (accounts: string[]) => {
       this.allowedAddresses = accounts
       this.addressChangeNotifiers.forEach((listener) => listener())
@@ -138,7 +142,11 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
    * Keep class state internally consistent
    */
   private async onChainChangedListener() {
+    // set the initial value
     this.chainIdHex = (await this.currentChainId()) ?? undefined
+    // notify existing subscribers that the default was set
+    this.chainChangedNotifiers.forEach((listener) => listener())
+
     const listener = (chainId: string | undefined) => {
       this.chainIdHex = chainId
       this.chainChangedNotifiers.forEach((listener) => listener())
