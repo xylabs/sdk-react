@@ -1,4 +1,4 @@
-import { InfuraProvider } from '@ethersproject/providers'
+import { InfuraProvider } from 'ethers'
 import { useMemo } from 'react'
 
 import { infuraKey } from './Infura'
