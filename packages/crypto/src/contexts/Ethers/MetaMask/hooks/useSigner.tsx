@@ -7,6 +7,7 @@ import { MetaMaskConnector } from '../../wallets'
 export const useSigner = (metamaskConnector: MetaMaskConnector, localAddress?: EthAddress): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {
     try {
+      // In a browser context, we should never build a signer without first having an allowed address
       if (localAddress) {
         return await metamaskConnector.signerFromAddress(localAddress?.toString())
       }
