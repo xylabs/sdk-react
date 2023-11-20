@@ -1,7 +1,7 @@
-import { Web3Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
-import { PropsWithChildren, useState } from 'react'
+import { BrowserProvider, JsonRpcSigner } from 'ethers'
+import { PropsWithChildren, useMemo, useState } from 'react'
 
 import { EthersContext } from './Context'
 
@@ -11,13 +11,11 @@ interface Props {
 
 export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => {
   const { children } = props
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const global = window as any
   const [error, setError] = useState<Error>()
+  const [signer, setSigner] = useState<JsonRpcSigner>()
   const [localAddress, setLocalAddress] = useState<EthAddress>()
 
-  const trustProvider = new Web3Provider(global.ethereum)
-  const signer = trustProvider.getSigner()
+  const trustProvider = useMemo(() => new BrowserProvider(window.ethereum), [])
 
   const chainId = 1
 
@@ -26,9 +24,11 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
-      if (signer) {
+      const localSigner = await trustProvider.getSigner()
+      setSigner(localSigner)
+      if (localSigner) {
         try {
-          const localAddress = EthAddress.fromString(await signer.getAddress())
+          const localAddress = EthAddress.fromString(await localSigner.getAddress())
           if (mounted()) {
             setLocalAddress(localAddress)
           }
@@ -39,7 +39,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
         }
       }
     },
-    [signer],
+    [trustProvider],
   )
 
   return (
