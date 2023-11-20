@@ -75,18 +75,18 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
       return
     }
 
-    const signer = this.signer(address)
+    const signer = this.signerFromAddress(address)
     await signer.getAddress()
     const signature = await signer.signMessage(message)
     return signature
   }
 
-  signer(address?: string) {
-    return this.provider.getSigner(address)
-  }
-
   async signerAddress() {
     return await this.provider.getSigner().getAddress()
+  }
+
+  signerFromAddress(address?: string) {
+    return this.provider.getSigner(address)
   }
 
   public subscribeToAddressChanges(listener: () => void) {

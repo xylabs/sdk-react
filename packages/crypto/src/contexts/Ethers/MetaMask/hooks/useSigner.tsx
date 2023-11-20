@@ -8,7 +8,7 @@ export const useSigner = (metamaskConnector: MetaMaskConnector, localAddress?: E
   const signer = useMemo(() => {
     let signer = null
     try {
-      signer = metamaskConnector.signer(localAddress?.toString())
+      signer = metamaskConnector.signerFromAddress(localAddress?.toString())
     } catch (ex) {
       console.error(ex)
     }

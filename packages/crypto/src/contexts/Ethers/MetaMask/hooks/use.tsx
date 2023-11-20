@@ -1,4 +1,5 @@
 import { usePromise } from '@xylabs/react-promise'
+import { useMemo } from 'react'
 
 import { MetaMaskConnector } from '../../wallets'
 import { useChainId } from './useChainId'
@@ -22,6 +23,9 @@ export const useMetaMask = (defaultChainId = 1) => {
   const signer = useSigner(metamaskConnector, currentAddress)
   const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
 
+  // preserve the 'this' context when calling a class method
+  const signMessage = useMemo(() => metamaskConnector.signMessage.bind(metamaskConnector), [])
+
   return {
     chainId,
     connect,
@@ -30,7 +34,7 @@ export const useMetaMask = (defaultChainId = 1) => {
     currentAddress,
     provider,
     providerName,
-    signMessage: metamaskConnector.signMessage,
+    signMessage,
     signer,
     signerAddress,
     walletProvider,

@@ -37,8 +37,8 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         localAddress: currentAddress,
         provider,
         providerName,
+        signMessage,
         signer,
-
         signerAddress,
         walletProvider,
       }}
