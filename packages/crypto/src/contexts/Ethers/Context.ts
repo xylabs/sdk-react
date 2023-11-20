@@ -17,6 +17,7 @@ export interface EthersData {
   signMessage?: (message: string, address?: string) => Promise<string | undefined>
   signer?: Signer | null
   signerAddress?: string
+  /** @deprecated - use the provider property and do not rely on wallet specific version */
   walletProvider?: Provider | null
 }
 

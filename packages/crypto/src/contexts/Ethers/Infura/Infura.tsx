@@ -1,7 +1,7 @@
 import { InfuraProvider } from '@ethersproject/providers'
 import React, { PropsWithChildren } from 'react'
 
-import { EthersContext } from './Context'
+import { EthersContext } from '../Context'
 
 interface Props {
   enabled?: boolean

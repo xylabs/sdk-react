@@ -5,7 +5,7 @@ import { MetaMaskConnector } from '../../wallets'
 import { useChainId } from './useChainId'
 import { useConnectMetaMask } from './useConnect'
 import { useCurrentAddress } from './useCurrentAddress'
-import { useProviders } from './useProvider'
+import { useProvider } from './useProvider'
 import { useSigner } from './useSigner'
 
 const metamaskConnector = new MetaMaskConnector()
@@ -16,7 +16,7 @@ export const useMetaMask = (defaultChainId = 1) => {
 
   const chainId = useChainId(metamaskConnector)
 
-  const [provider, walletProvider, providerName] = useProviders(metamaskConnector, chainId ?? defaultChainId)
+  const { provider, providerName } = useProvider(metamaskConnector)
 
   const { connect, connectRefused, connectError } = useConnectMetaMask(metamaskConnector)
 
@@ -27,7 +27,7 @@ export const useMetaMask = (defaultChainId = 1) => {
   const signMessage = useMemo(() => metamaskConnector.signMessage.bind(metamaskConnector), [])
 
   return {
-    chainId,
+    chainId: chainId ?? defaultChainId,
     connect,
     connectError,
     connectRefused,
@@ -37,6 +37,5 @@ export const useMetaMask = (defaultChainId = 1) => {
     signMessage,
     signer,
     signerAddress,
-    walletProvider,
   }
 }
