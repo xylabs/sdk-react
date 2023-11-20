@@ -15,10 +15,13 @@ export class EIP1193Events implements EIP1193EventsCompatible {
   // opt-in to EIP-1193 events since not all wallets will support them
   private eventsEnabled: boolean = false
 
-  private listeningProvider = window.ethereum as BrowserProvider
+  private listeningProvider = window.ethereum as BrowserProvider | undefined
 
   constructor(supportedEvents?: SupportedEventProposals[]) {
     this.eventsEnabled = !!supportedEvents?.includes('EIP-1193')
+    if (window.ethereum === undefined) {
+      console.warn('attempting to subscribe to EIP1193 events but window.ethereum is undefined')
+    }
   }
 
   onAccountsChanged(listener: Listener) {

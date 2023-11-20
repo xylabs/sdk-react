@@ -8,7 +8,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   public allowedAddresses: string[] = []
 
   // instance of Ethers BrowserProvider
-  public provider: BrowserProvider
+  public provider: BrowserProvider | undefined
 
   // Name of the Provider
   public providerName = 'Meta Mask'
@@ -23,7 +23,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   private chainIdHex: string | undefined = undefined
 
   // instance of provider with Meta Mask specific methods
-  private ethereum = window.ethereum as MetaMaskInpageProvider
+  private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
 
   // listeners for provider events
   private listeners: Listener[] = []
@@ -32,8 +32,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     super(['EIP-1193'])
     if (provider) {
       this.provider = provider
-    } else {
+    } else if (window.ethereum) {
       this.provider = new BrowserProvider(window.ethereum)
+    } else {
+      throw new Error('Attempting to use metamask class when its not installed')
     }
     this.onAccountsChangedListener()
     this.onChainChangedListener()
@@ -44,7 +46,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   }
 
   get installed() {
-    return this.ethereum && this.ethereum.isMetaMask
+    return !!(this.ethereum && this.ethereum.isMetaMask)
   }
 
   /** Provider Listeners - https://docs.ethers.org/v6/api/providers/#ProviderEvent */
@@ -95,13 +97,13 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
 
     const signer = await this.signerFromAddress(address)
-    await signer.getAddress()
-    const signature = await signer.signMessage(message)
+    await signer?.getAddress()
+    const signature = await signer?.signMessage(message)
     return signature
   }
 
   async signerFromAddress(address?: string) {
-    return await this.provider.getSigner(address)
+    return await this.provider?.getSigner(address)
   }
 
   override subscribeToAddressChanges(listener: () => void) {

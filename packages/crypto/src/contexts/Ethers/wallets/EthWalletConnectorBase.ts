@@ -1,14 +1,13 @@
 import { BrowserProvider, JsonRpcSigner, Listener } from 'ethers'
 
-import { EthWalletConnector } from './EthWallet'
 import { EIP1193Events, SupportedEventProposals } from './lib'
 
 /**
  * Base class for connecting to an ethereum compatible wallet
  */
-export abstract class EthWalletConnectorBase extends EIP1193Events implements EthWalletConnector {
+export abstract class EthWalletConnectorBase extends EIP1193Events {
   abstract allowedAddresses: string[]
-  abstract provider: BrowserProvider
+  abstract provider: BrowserProvider | undefined
   abstract providerName: string
 
   constructor(supportedEvents?: SupportedEventProposals[]) {
@@ -33,5 +32,5 @@ export abstract class EthWalletConnectorBase extends EIP1193Events implements Et
   abstract requestAccounts(): Promise<string[] | null>
 
   abstract signMessage(message: string, address?: string): Promise<string | undefined>
-  abstract signerFromAddress(address?: string): Promise<JsonRpcSigner>
+  abstract signerFromAddress(address?: string): Promise<JsonRpcSigner | undefined>
 }
