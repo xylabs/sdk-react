@@ -15,7 +15,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const [signer, setSigner] = useState<JsonRpcSigner>()
   const [localAddress, setLocalAddress] = useState<EthAddress>()
 
-  const trustProvider = useMemo(() => new BrowserProvider(window.ethereum), [])
+  const trustProvider = useMemo(() => (window.ethereum ? new BrowserProvider(window.ethereum) : undefined), [])
 
   const chainId = 1
 
@@ -24,20 +24,22 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
-      const existingAddress = (await trustProvider.send('eth_accounts', [])) as string[]
-      setLocalAddress(EthAddress.fromString(existingAddress[0]))
-      if (localAddress) {
-        const localSigner = await trustProvider.getSigner()
-        setSigner(localSigner)
-        if (localSigner) {
-          try {
-            const localAddress = EthAddress.fromString(await localSigner.getAddress())
-            if (mounted()) {
-              setLocalAddress(localAddress)
-            }
-          } catch (ex) {
-            if (mounted()) {
-              setError(Error(`localAddress: ${ex}`))
+      if (trustProvider) {
+        const existingAddress = (await trustProvider.send('eth_accounts', [])) as string[]
+        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        if (localAddress) {
+          const localSigner = await trustProvider.getSigner()
+          setSigner(localSigner)
+          if (localSigner) {
+            try {
+              const localAddress = EthAddress.fromString(await localSigner.getAddress())
+              if (mounted()) {
+                setLocalAddress(localAddress)
+              }
+            } catch (ex) {
+              if (mounted()) {
+                setError(Error(`localAddress: ${ex}`))
+              }
             }
           }
         }
