@@ -1,31 +1,18 @@
-import { usePromise } from '@xylabs/react-promise'
 import React, { PropsWithChildren } from 'react'
 
 import { EthersContext } from '../Context'
-import { MetaMaskConnector } from '../wallets'
-import { useChainId, useConnectMetaMask, useCurrentAddress, useProviders, useSigner } from './hooks'
+import { useMetaMask } from './hooks'
 
 export interface Props {
   defaultChainId?: number
   enabled?: boolean
 }
 
-const metamaskConnector = new MetaMaskConnector()
-
 // TODO - separate out infura provider into new hook
 
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1 }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentAddress, additionalAddresses] = useCurrentAddress(metamaskConnector)
-
-  const chainId = useChainId(metamaskConnector)
-
-  const [provider, walletProvider, providerName] = useProviders(metamaskConnector, chainId ?? defaultChainId)
-
-  const { connect, connectRefused, connectError } = useConnectMetaMask(metamaskConnector)
-
-  const signer = useSigner(metamaskConnector, currentAddress)
-  const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
+  const { chainId, connect, connectRefused, connectError, currentAddress, provider, providerName, signer, signerAddress, walletProvider } =
+    useMetaMask(defaultChainId)
 
   return (
     <EthersContext.Provider
