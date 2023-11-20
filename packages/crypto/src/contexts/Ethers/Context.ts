@@ -14,6 +14,7 @@ export interface EthersData {
   provider?: Provider | null
   providerName?: string
   showConnectWalletDialog?: () => void
+  signMessage?: () => string | undefined
   signer?: Signer | null
   signerAddress?: string
   walletProvider?: Provider | null

@@ -30,6 +30,7 @@ export const useMetaMask = (defaultChainId = 1) => {
     currentAddress,
     provider,
     providerName,
+    signMessage: metamaskConnector.signMessage,
     signer,
     signerAddress,
     walletProvider,

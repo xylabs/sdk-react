@@ -1,7 +1,7 @@
-import { Button, List, ListItem, Typography } from '@mui/material'
+import { Alert, AlertTitle, Button, List, ListItem, Typography } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import { FlexCol } from '@xylabs/react-flexbox'
-import { PropsWithChildren } from 'react'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import { PropsWithChildren, useState } from 'react'
 
 import { EthersData } from '../Context'
 import { useEthersContext } from '../use'
@@ -28,15 +28,33 @@ const MetaMaskTester: React.FC<EthersData> = ({
   localAddress,
   provider,
   providerName,
+  signMessage,
   signer,
   signerAddress,
   walletProvider,
 }) => {
+  const [signResponse, setSignResponse] = useState<string>()
+
+  const onSign = async () => {
+    const signResult = await signMessage?.('test')
+    setSignResponse(signResult)
+  }
   return (
     <FlexCol alignItems="start" gap={2}>
-      <Button variant="contained" onClick={async () => await connect?.()}>
-        Connect
-      </Button>
+      <FlexRow justifyContent="start" gap={2}>
+        <Button variant="contained" onClick={async () => await connect?.()}>
+          Connect
+        </Button>
+        <Button disabled={!localAddress} variant="contained" onClick={onSign}>
+          Sign
+        </Button>
+      </FlexRow>
+      {signResponse ? (
+        <Alert severity={'success'}>
+          <AlertTitle>Sign Response</AlertTitle>
+          {signResponse}
+        </Alert>
+      ) : null}
       <Typography variant="h6" mb={0}>
         Provider Details
       </Typography>
