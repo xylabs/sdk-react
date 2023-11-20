@@ -107,13 +107,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  async walletConnected() {
-    if (await this.currentAddress()) {
-      return true
-    }
-    return false
-  }
-
   /** Web3Provider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
   web3ProviderOn(event: string, listener: Listener) {
     this.provider?.on(event, listener)
