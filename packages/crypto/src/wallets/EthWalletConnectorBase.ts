@@ -124,4 +124,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   private logProviderMissing() {
     console.warn('Cannot call this method because there is no browser provider connected.  Please confirm that metamask is installed')
   }
+
+  // Since init likely relies on derived class members, derived classes must implement it
+  abstract init(): void
 }

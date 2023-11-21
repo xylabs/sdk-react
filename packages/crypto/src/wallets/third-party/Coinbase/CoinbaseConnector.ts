@@ -12,6 +12,14 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'])
+    this.init(provider)
+  }
+
+  get installed() {
+    return !!(this.ethereum && this.ethereum.isCoinbaseWallet)
+  }
+
+  init(provider?: BrowserProvider) {
     if (provider) {
       this.provider = provider
     } else if (window.ethereum) {
@@ -23,9 +31,5 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
       this.onAccountsChangedListener()
       this.onChainChangedListener()
     }
-  }
-
-  get installed() {
-    return !!(this.ethereum && this.ethereum.isCoinbaseWallet)
   }
 }

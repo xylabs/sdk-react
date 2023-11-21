@@ -12,20 +12,24 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'])
+    this.init(provider)
+  }
+
+  get installed() {
+    return !!(this.ethereum && this.ethereum.isMetaMask)
+  }
+
+  init(provider?: BrowserProvider) {
     if (provider) {
       this.provider = provider
     } else if (window.ethereum) {
       this.provider = new BrowserProvider(window.ethereum)
     } else {
-      console.warn('Attempting to use metamask class when its not installed')
+      console.warn(`Attempting to use ${this.providerName} class when its not installed`)
     }
     if (this.installed) {
       this.onAccountsChangedListener()
       this.onChainChangedListener()
     }
-  }
-
-  get installed() {
-    return !!(this.ethereum && this.ethereum.isMetaMask)
   }
 }
