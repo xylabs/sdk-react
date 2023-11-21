@@ -7,7 +7,7 @@ export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
   const [connectRefused, setConnectRefused] = useState(false)
   const [connectError, setConnectError] = useState<Error>()
 
-  const connect = useCallback(async () => {
+  const connectWallet = useCallback(async () => {
     try {
       const accounts = await metamaskConnector.requestAccounts()
       setConnectRefused(false)
@@ -30,5 +30,5 @@ export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
     }
   }, [metamaskConnector])
 
-  return { connect, connectError, connectRefused }
+  return { connectError, connectRefused, connectWallet }
 }

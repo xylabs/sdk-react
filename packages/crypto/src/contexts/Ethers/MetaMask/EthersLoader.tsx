@@ -11,10 +11,11 @@ export interface Props {
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1 }) => {
   const {
     chainId,
-    connect,
+    connectWallet: connect,
     connectRefused,
     connectError,
     currentAccount: currentAddress,
+    installed,
     provider,
     providerName,
     signMessage,
@@ -30,7 +31,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         connect,
         connectRefused,
         error: connectError,
-        isConnected: !!currentAddress,
+        isConnected: installed,
         localAddress: currentAddress,
         provider,
         providerName,

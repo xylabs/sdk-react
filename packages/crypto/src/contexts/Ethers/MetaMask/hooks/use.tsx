@@ -1,7 +1,7 @@
 import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
-import { MetaMaskConnector } from '../../wallets'
+import { EthWallet, MetaMaskConnector } from '../../wallets'
 import { useChainId } from './useChainId'
 import { useConnectMetaMask } from './useConnect'
 import { useCurrentAccount } from './useCurrentAccount'
@@ -10,7 +10,7 @@ import { useSigner } from './useSigner'
 
 const metamaskConnector = new MetaMaskConnector()
 
-export const useMetaMask = (defaultChainId = 1) => {
+export const useMetaMask = (defaultChainId = 1): EthWallet => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentAccount, additionalAccounts] = useCurrentAccount(metamaskConnector)
 
@@ -18,7 +18,7 @@ export const useMetaMask = (defaultChainId = 1) => {
 
   const { provider, providerName } = useProvider(metamaskConnector)
 
-  const { connect, connectRefused, connectError } = useConnectMetaMask(metamaskConnector)
+  const { connectWallet, connectRefused, connectError } = useConnectMetaMask(metamaskConnector)
 
   const signer = useSigner(metamaskConnector, currentAccount)
   const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
@@ -26,12 +26,15 @@ export const useMetaMask = (defaultChainId = 1) => {
   // preserve the 'this' context when calling a class method
   const signMessage = useMemo(() => metamaskConnector.signMessage.bind(metamaskConnector), [])
 
+  const installed = useMemo(() => metamaskConnector.installed, [])
+
   return {
     chainId: chainId ?? defaultChainId,
-    connect,
     connectError,
     connectRefused,
+    connectWallet,
     currentAccount,
+    installed,
     provider,
     providerName,
     signMessage,
