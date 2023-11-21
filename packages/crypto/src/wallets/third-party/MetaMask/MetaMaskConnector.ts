@@ -19,8 +19,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     } else {
       throw new Error('Attempting to use metamask class when its not installed')
     }
-    this.onAccountsChangedListener()
-    this.onChainChangedListener()
+    if (this.installed) {
+      this.onAccountsChangedListener()
+      this.onChainChangedListener()
+    }
   }
 
   get installed() {
