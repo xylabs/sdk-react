@@ -1,25 +1,10 @@
 import { Alert, AlertTitle, Button, List, ListItem, Typography } from '@mui/material'
-import { Meta, StoryFn } from '@storybook/react'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { PropsWithChildren, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 
-import { useEthersContext } from '../use'
-import { EthWallet } from '../wallets'
-import { MetaMaskEthersLoader } from './EthersLoader'
-import { useMetaMask } from './use'
+import { EthWallet } from '../../wallets'
 
-const StorybookEntry = {
-  argTypes: {},
-  component: MetaMaskEthersLoader,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
-  title: 'common/EthersLoader/MetaMaskEthersLoader',
-} as Meta<typeof MetaMaskEthersLoader>
-
-const MetaMaskTester: React.FC<EthWallet> = ({
+export const EthWalletSBComponent: React.FC<EthWallet> = ({
   connectWallet,
   connectRefused,
   chainId,
@@ -73,31 +58,3 @@ const MetaMaskTester: React.FC<EthWallet> = ({
     </FlexCol>
   )
 }
-
-const WithProviderTemplate: StoryFn<typeof MetaMaskEthersLoader> = (args) => {
-  const Context: React.FC<PropsWithChildren> = ({ children }) => <MetaMaskEthersLoader {...args}>{children}</MetaMaskEthersLoader>
-  const ContextValues: React.FC = () => {
-    const { connect: connectWallet, isConnected: installed, ...contextState } = useEthersContext()
-    return <MetaMaskTester connectWallet={connectWallet} installed={installed} {...contextState} />
-  }
-  return (
-    <Context>
-      <ContextValues />
-    </Context>
-  )
-}
-
-const WithHookTemplate = () => {
-  const hookState = useMetaMask()
-  return <MetaMaskTester {...hookState} />
-}
-
-const WithProvider = WithProviderTemplate.bind({})
-const WithHook = WithHookTemplate.bind({})
-
-// TODO - story for signing a datagram
-
-export { WithHook, WithProvider }
-
-// eslint-disable-next-line import/no-default-export
-export default StorybookEntry
