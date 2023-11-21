@@ -27,6 +27,7 @@ export const EthWalletSBComponent: React.FC<EthWallet> = ({
   const localAddress = useMemo(() => currentAccount?.toString(), [currentAccount])
   return (
     <FlexCol alignItems="start" gap={2}>
+      {window.ethereum ? <Alert>Found window.ethereum</Alert> : null}
       <FlexRow justifyContent="start" gap={2}>
         <Button variant="contained" onClick={async () => await connectWallet?.()}>
           Connect
