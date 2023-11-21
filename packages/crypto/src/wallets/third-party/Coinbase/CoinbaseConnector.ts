@@ -7,7 +7,6 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
   // Name of the Provider
   public providerName = 'Coinbase'
 
-  // instance of provider with Meta Mask specific methods
   private ethereum = window.ethereum as CoinbaseProvider | undefined
 
   constructor(provider?: BrowserProvider) {

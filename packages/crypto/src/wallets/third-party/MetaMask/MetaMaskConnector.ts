@@ -7,7 +7,6 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider
   public providerName = 'Meta Mask'
 
-  // instance of provider with Meta Mask specific methods
   private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
 
   constructor(provider?: BrowserProvider) {
@@ -16,7 +15,8 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   }
 
   get installed() {
-    return !!(this.ethereum && this.ethereum.isMetaMask)
+    // Phantom camps on the isMetaMask method as well :(
+    return !!(this.ethereum && this.ethereum.isMetaMask && !window.phantom?.ethereum.isPhantom)
   }
 
   init(provider?: BrowserProvider) {
