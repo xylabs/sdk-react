@@ -17,7 +17,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     } else if (window.ethereum) {
       this.provider = new BrowserProvider(window.ethereum)
     } else {
-      throw new Error('Attempting to use metamask class when its not installed')
+      console.warn('Attempting to use metamask class when its not installed')
     }
     if (this.installed) {
       this.onAccountsChangedListener()
