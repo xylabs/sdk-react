@@ -1,5 +1,6 @@
 export * from './useChainId'
 export * from './useConnect'
 export * from './useCurrentAccount'
+export * from './useEthWallet'
 export * from './useProvider'
 export * from './useSigner'
