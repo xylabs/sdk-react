@@ -1,13 +1,14 @@
 import React, { PropsWithChildren } from 'react'
 
-import { EthersContext } from '../Context'
-import { useMetaMask } from './use'
+import { useMetaMask } from '../../wallets'
+import { EthersContext } from './Context'
 
 export interface Props {
   defaultChainId?: number
   enabled?: boolean
 }
 
+/** @deprecated - use useMetaMask hook instead */
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1 }) => {
   const {
     chainId,

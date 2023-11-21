@@ -21,4 +21,5 @@ export interface EthersData {
   walletProvider?: BrowserProvider
 }
 
+/** @deprecated - get provider and wallet info from wallet hooks */
 export const EthersContext = createContext<EthersData>({})
