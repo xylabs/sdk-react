@@ -26,7 +26,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     async (mounted) => {
       if (trustProvider) {
         const [existingAddress]: string[] = (await trustProvider.send('eth_accounts', [])) ?? []
-        if (existingAddress[0] !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        if (existingAddress !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(existingAddress))
         if (localAddress) {
           const localSigner = await trustProvider.getSigner()
           setSigner(localSigner)
