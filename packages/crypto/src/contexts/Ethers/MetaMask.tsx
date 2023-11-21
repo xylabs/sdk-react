@@ -4,12 +4,13 @@ import { useMetaMask } from '../../wallets'
 import { EthersContext } from './Context'
 
 export interface Props {
+  /** @deprecated - wallet should determine this for you */
   defaultChainId?: number
   enabled?: boolean
 }
 
 /** @deprecated - use useMetaMask hook instead */
-export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1 }) => {
+export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children }) => {
   const {
     chainId,
     connectWallet: connect,
@@ -22,7 +23,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
     signMessage,
     signer,
     signerAddress,
-  } = useMetaMask(defaultChainId)
+  } = useMetaMask()
 
   return (
     <EthersContext.Provider
