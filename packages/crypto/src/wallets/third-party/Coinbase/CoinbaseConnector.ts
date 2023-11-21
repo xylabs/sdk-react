@@ -1,14 +1,14 @@
-import { MetaMaskInpageProvider } from '@metamask/providers'
 import { BrowserProvider } from 'ethers'
 
 import { EthWalletConnectorBase } from '../../EthWalletConnectorBase'
+import { CoinbaseProvider } from './lib'
 
 export class CoinbaseConnector extends EthWalletConnectorBase {
   // Name of the Provider
   public providerName = 'Coinbase'
 
   // instance of provider with Meta Mask specific methods
-  private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
+  private ethereum = window.ethereum as CoinbaseProvider | undefined
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'])
@@ -19,11 +19,13 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
     } else {
       throw new Error(`Attempting to use ${this.providerName} class when its not installed`)
     }
-    this.onAccountsChangedListener()
-    this.onChainChangedListener()
+    if (this.installed) {
+      this.onAccountsChangedListener()
+      this.onChainChangedListener()
+    }
   }
 
   get installed() {
-    return !!(this.ethereum && this.ethereum.isMetaMask)
+    return !!(this.ethereum && this.ethereum.isCoinbaseWallet)
   }
 }
