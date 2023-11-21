@@ -25,31 +25,19 @@ export class EIP1193Events implements EIP1193EventsCompatible {
   }
 
   onAccountsChanged(listener: Listener) {
-    this.enabled(() => {
-      this.listeningProvider?.on('accountsChanged', listener)
-      this.eip1193Listeners.push(['accountsChanged', listener])
-    })
+    this.addListener('accountsChanged', listener)
   }
 
   onChainChanged(listener: Listener) {
-    this.enabled(() => {
-      this.listeningProvider?.on('chainChanged', listener)
-      this.eip1193Listeners.push(['chainChanged', listener])
-    })
+    this.addListener('chainChanged', listener)
   }
 
   onConnect(listener: Listener) {
-    this.enabled(() => {
-      this.listeningProvider?.on('connect', listener)
-      this.eip1193Listeners.push(['connect', listener])
-    })
+    this.addListener('connect', listener)
   }
 
   onDisconnect(listener: Listener) {
-    this.enabled(() => {
-      this.listeningProvider?.on('disconnect', listener)
-      this.eip1193Listeners.push(['disconnect', listener])
-    })
+    this.addListener('disconnect', listener)
   }
 
   removeEIP11193Listener(event: EIP1193EventNames, listener: Listener) {
@@ -61,6 +49,13 @@ export class EIP1193Events implements EIP1193EventsCompatible {
 
   removeEIP11193Listeners() {
     this.eip1193Listeners.forEach(([event, listener]) => this.listeningProvider?.removeListener(event, listener))
+  }
+
+  private addListener(event: EIP1193EventNames, listener: Listener) {
+    this.enabled(() => {
+      this.listeningProvider?.on(event, listener)
+      this.eip1193Listeners.push([event, listener])
+    })
   }
 
   private enabled(method?: () => void) {
