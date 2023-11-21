@@ -1,7 +1,7 @@
-import { InfuraProvider, JsonRpcSigner, Provider, Web3Provider } from '@ethersproject/providers'
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
-import React, { PropsWithChildren, useEffect, useState } from 'react'
+import { BrowserProvider, InfuraProvider, JsonRpcSigner, Provider } from 'ethers'
+import React, { PropsWithChildren, useState } from 'react'
 
 import { EthersContext } from './Context'
 import { infuraKey } from './Infura'
@@ -30,31 +30,40 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
 
   const [isConnected, setIsConnected] = useState<boolean>()
 
-  const [walletProvider, setWalletProvider] = useState<Web3Provider | null>()
+  const [walletProvider, setWalletProvider] = useState<BrowserProvider | null>()
   const [provider, setProvider] = useState<Provider>()
   const [signer, setSigner] = useState<JsonRpcSigner | null>()
-  useEffect(() => {
-    const walletProvider = ethereum ? new Web3Provider(ethereum) : null
-    let provider = null
-    let providerName = null
-    if (walletProvider) {
-      provider = walletProvider
-      providerName = 'MyEtherWallet'
-    } else {
-      provider = new InfuraProvider(1, infuraKey)
-      providerName = 'Infura (Default)'
-    }
-    setProvider(provider)
-    setProviderName(providerName)
-    setWalletProvider(walletProvider)
-    let signer = null
-    try {
-      signer = walletProvider?.getSigner()
-    } catch (ex) {
-      console.error(ex)
-    }
-    setSigner(signer)
-  }, [ethereum, isConnected])
+
+  useAsyncEffect(
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    async () => {
+      const walletProvider = ethereum ? new BrowserProvider(ethereum) : null
+      let provider = null
+      let providerName = null
+      if (walletProvider) {
+        provider = walletProvider
+        providerName = 'MyEtherWallet'
+      } else {
+        provider = new InfuraProvider(1, infuraKey)
+        providerName = 'Infura (Default)'
+      }
+      setProvider(provider)
+      setProviderName(providerName)
+      setWalletProvider(walletProvider)
+      let signer: JsonRpcSigner | null = null
+      try {
+        const [existingAddress]: string[] = (await provider.send('eth_accounts', [])) ?? []
+        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        if (localAddress) {
+          signer = (await walletProvider?.getSigner()) ?? null
+        }
+      } catch (ex) {
+        console.error(ex)
+      }
+      setSigner(signer)
+    },
+    [ethereum, isConnected, localAddress],
+  )
 
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,12 +88,13 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
   )
 
   const [chainId, setChainId] = useState<number>()
+
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       const chainId = (await provider?.getNetwork())?.chainId
       if (!isMounted()) return
-      setChainId(chainId)
+      setChainId(Number(chainId?.toString()))
     },
     [provider],
   )

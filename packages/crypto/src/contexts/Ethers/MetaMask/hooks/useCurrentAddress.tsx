@@ -17,6 +17,11 @@ export const useCurrentAddressExternal = (metamaskConnector: MetaMaskConnector) 
 export const useCurrentAddress = (metamaskConnector: MetaMaskConnector): [EthAddress | undefined, string[]] => {
   const addresses = useCurrentAddressExternal(metamaskConnector)
 
+  /**
+   * According to the metamask docs, the first account is considered their 'selected account'
+   *
+   * see - https://docs.metamask.io/wallet/how-to/connect/access-accounts/#handle-accounts
+   */
   const [currentAddress, additionalAddresses] = useMemo(
     () => [EthAddress.fromString(addresses[0]), addresses.slice(0, addresses.length)],
     [addresses],

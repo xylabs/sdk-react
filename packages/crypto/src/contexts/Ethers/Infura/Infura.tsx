@@ -1,4 +1,4 @@
-import { InfuraProvider } from '@ethersproject/providers'
+import { InfuraProvider } from 'ethers'
 import React, { PropsWithChildren } from 'react'
 
 import { EthersContext } from '../Context'

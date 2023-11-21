@@ -1,3 +1,4 @@
+import { isError, JsonRpcError } from 'ethers'
 import { useCallback, useState } from 'react'
 
 import { MetaMaskConnector } from '../../wallets'
@@ -19,8 +20,13 @@ export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
       }
       return accounts
     } catch (e) {
-      setConnectError(e as Error)
-      if ((e as { code: number }).code === 4001) setConnectRefused(true)
+      if (isError(e, 'ACTION_REJECTED')) {
+        const error = (e.info as JsonRpcError | undefined)?.error
+        if (error?.code === 4001) {
+          setConnectRefused(true)
+          setConnectError(new Error(error.message))
+        }
+      }
     }
   }, [metamaskConnector])
 

@@ -1,5 +1,5 @@
-import { ExternalProvider, Listener, Web3Provider } from '@ethersproject/providers'
 import { MetaMaskInpageProvider } from '@metamask/providers'
+import { BrowserProvider, Listener } from 'ethers'
 
 import { EthWalletConnectorBase } from './EthWalletConnectorBase'
 
@@ -7,8 +7,8 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // current address enabled in metamask
   public allowedAddresses: string[] = []
 
-  // instance of Ethers Web3Provider
-  public provider: Web3Provider
+  // instance of Ethers BrowserProvider
+  public provider: BrowserProvider | undefined
 
   // Name of the Provider
   public providerName = 'Meta Mask'
@@ -23,17 +23,19 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   private chainIdHex: string | undefined = undefined
 
   // instance of provider with Meta Mask specific methods
-  private ethereum = window.ethereum as MetaMaskInpageProvider
+  private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
 
   // listeners for provider events
   private listeners: Listener[] = []
 
-  constructor(provider?: Web3Provider) {
+  constructor(provider?: BrowserProvider) {
     super(['EIP-1193'])
     if (provider) {
       this.provider = provider
+    } else if (window.ethereum) {
+      this.provider = new BrowserProvider(window.ethereum)
     } else {
-      this.provider = new Web3Provider(window.ethereum as ExternalProvider)
+      throw new Error('Attempting to use metamask class when its not installed')
     }
     this.onAccountsChangedListener()
     this.onChainChangedListener()
@@ -44,7 +46,22 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   }
 
   get installed() {
-    return this.ethereum && this.ethereum.isMetaMask
+    return !!(this.ethereum && this.ethereum.isMetaMask)
+  }
+
+  /** Provider Listeners - https://docs.ethers.org/v6/api/providers/#ProviderEvent */
+  override browserProviderOn(event: string, listener: Listener) {
+    this.provider?.on(event, listener)
+    this.listeners.push(listener)
+  }
+
+  override browserProviderRemoveListener(event: string, listener: Listener) {
+    this.provider?.removeListener(event, listener)
+    this.listeners = this.listeners.filter((savedListener) => listener !== savedListener)
+  }
+
+  override browserProviderRemoveListeners() {
+    this.provider?.removeAllListeners()
   }
 
   async connectWallet() {
@@ -79,14 +96,14 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
       return
     }
 
-    const signer = this.signerFromAddress(address)
-    await signer.getAddress()
-    const signature = await signer.signMessage(message)
+    const signer = await this.signerFromAddress(address)
+    await signer?.getAddress()
+    const signature = await signer?.signMessage(message)
     return signature
   }
 
-  signerFromAddress(address?: string) {
-    return this.provider.getSigner(address)
+  async signerFromAddress(address?: string) {
+    return await this.provider?.getSigner(address)
   }
 
   override subscribeToAddressChanges(listener: () => void) {
@@ -103,30 +120,19 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     }
   }
 
-  /** Web3Provider Listeners - https://docs.ethers.org/v5/api/providers/provider/#Provider--events */
-  override web3ProviderOn(event: string, listener: Listener) {
-    this.provider?.on(event, listener)
-    this.listeners.push(listener)
-  }
-
-  override web3ProviderRemoveListener(event: string, listener: Listener) {
-    this.provider?.removeListener(event, listener)
-    this.listeners = this.listeners.filter((savedListener) => listener !== savedListener)
-  }
-
-  override web3ProviderRemoveListeners() {
-    this.provider?.removeAllListeners()
-  }
-
   private logProviderMissing() {
-    console.warn('Cannot call this method because there is no web3 provider connected.  Please confirm that metamask is installed')
+    console.warn('Cannot call this method because there is no browser provider connected.  Please confirm that metamask is installed')
   }
 
   /**
    * Keep class state internally consistent
    */
   private async onAccountsChangedListener() {
+    // set the initial value
     this.allowedAddresses = (await this.currentAddress()) ?? []
+    // notify existing subscribers that the default was set
+    this.addressChangeNotifiers.forEach((listener) => listener())
+
     const listener = (accounts: string[]) => {
       this.allowedAddresses = accounts
       this.addressChangeNotifiers.forEach((listener) => listener())
@@ -138,7 +144,11 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
    * Keep class state internally consistent
    */
   private async onChainChangedListener() {
+    // set the initial value
     this.chainIdHex = (await this.currentChainId()) ?? undefined
+    // notify existing subscribers that the default was set
+    this.chainChangedNotifiers.forEach((listener) => listener())
+
     const listener = (chainId: string | undefined) => {
       this.chainIdHex = chainId
       this.chainChangedNotifiers.forEach((listener) => listener())
