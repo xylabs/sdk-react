@@ -28,7 +28,7 @@ export const useConnectWallet = (ethWalletConnector: EthWalletConnectorBase) => 
 
   const connectWallet = useCallback(async () => {
     try {
-      const accounts = await ethWalletConnector.requestAccounts()
+      const accounts = await ethWalletConnector.connectWallet()
       setConnectRefused(false)
       setConnectError(undefined)
       return checkAccounts(accounts)

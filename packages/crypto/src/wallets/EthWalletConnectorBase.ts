@@ -51,15 +51,6 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     return await this.provider?.send('net_version', [])
   }
 
-  async requestAccounts(): Promise<string[] | null> {
-    if (!this.provider) {
-      this.logProviderMissing()
-      return null
-    }
-
-    return await this.provider.send('eth_requestAccounts', [])
-  }
-
   async signMessage(message: string, allowedAccounts?: string) {
     if (!this.provider) {
       this.logProviderMissing()
