@@ -6,8 +6,13 @@ import { EIP1193Events, SupportedEventProposals } from './lib'
  * Base class for connecting to an ethereum compatible wallet
  */
 export abstract class EthWalletConnectorBase extends EIP1193Events {
-  abstract allowedAddresses: string[]
-  abstract provider: BrowserProvider | undefined
+  // current address enabled in metamask
+  public allowedAddresses: string[] = []
+
+  // instance of Ethers BrowserProvider
+  public provider: BrowserProvider | undefined
+
+  // Name of the Provider
   abstract providerName: string
 
   constructor(supportedEvents?: SupportedEventProposals[]) {

@@ -4,12 +4,6 @@ import { BrowserProvider, Listener } from 'ethers'
 import { EthWalletConnectorBase } from './EthWalletConnectorBase'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
-  // current address enabled in metamask
-  public allowedAddresses: string[] = []
-
-  // instance of Ethers BrowserProvider
-  public provider: BrowserProvider | undefined
-
   // Name of the Provider
   public providerName = 'Meta Mask'
 
