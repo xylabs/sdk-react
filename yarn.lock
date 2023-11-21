@@ -6840,6 +6840,7 @@ __metadata:
   resolution: "@xylabs/react-crypto@workspace:packages/crypto"
   dependencies:
     "@metamask/providers": ^14.0.1
+    "@mui/icons-material": ^5.14.18
     "@mui/material": ^5.14.18
     "@storybook/react": ^7.5.3
     "@xylabs/assert": ^2.13.9
