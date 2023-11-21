@@ -4,10 +4,10 @@ import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
 
 export const useProvider = (ethWalletConnector: EthWalletConnectorBase) => {
   const { provider, providerName } = useMemo(() => {
-    const metaMaskProvider = ethWalletConnector.provider
-    const providerName = 'Meta Mask'
-    return { provider: metaMaskProvider, providerName }
-  }, [ethWalletConnector.provider])
+    const provider = ethWalletConnector.provider
+    const providerName = ethWalletConnector.providerName
+    return { provider, providerName }
+  }, [ethWalletConnector])
 
   if (ethWalletConnector.installed) {
     return { provider, providerName }
