@@ -3,19 +3,19 @@ import { useMemo, useSyncExternalStore } from 'react'
 
 import { MetaMaskConnector } from '../../wallets'
 
-export const useCurrentAddressExternal = (metamaskConnector: MetaMaskConnector) => {
+export const useCurrentAccountExternal = (metamaskConnector: MetaMaskConnector) => {
   const { getSnapShot, subscribe } = useMemo(() => {
     return {
-      getSnapShot: () => metamaskConnector.allowedAddresses,
-      subscribe: (notifier: () => void) => metamaskConnector.subscribeToAddressChanges(notifier),
+      getSnapShot: () => metamaskConnector.allowedAccounts,
+      subscribe: (notifier: () => void) => metamaskConnector.subscribeToAccountsChanges(notifier),
     }
   }, [metamaskConnector])
 
   return useSyncExternalStore(subscribe, getSnapShot)
 }
 
-export const useCurrentAddress = (metamaskConnector: MetaMaskConnector): [EthAddress | undefined, string[]] => {
-  const addresses = useCurrentAddressExternal(metamaskConnector)
+export const useCurrentAccount = (metamaskConnector: MetaMaskConnector): [EthAddress | undefined, string[]] => {
+  const addresses = useCurrentAccountExternal(metamaskConnector)
 
   /**
    * According to the metamask docs, the first account is considered their 'selected account'

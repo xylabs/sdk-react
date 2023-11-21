@@ -87,7 +87,7 @@ const WithProviderTemplate: StoryFn<typeof MetaMaskEthersLoader> = (args) => {
 }
 
 const WithHookTemplate = () => {
-  const { currentAddress: localAddress, ...hookState } = useMetaMask()
+  const { currentAccount: localAddress, ...hookState } = useMetaMask()
   return <MetaMaskTester localAddress={localAddress} {...hookState} />
 }
 

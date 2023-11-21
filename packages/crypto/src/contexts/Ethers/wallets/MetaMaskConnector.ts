@@ -7,8 +7,8 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider
   public providerName = 'Meta Mask'
 
-  // Listeners that only want to be notified when addresses change
-  private addressChangeNotifiers: Listener[] = []
+  // Listeners that only want to be notified when accounts change
+  private accountChangeNotifiers: Listener[] = []
 
   // Listeners that only want to be notified when chainId changes
   private chainChangedNotifiers: Listener[] = []
@@ -67,7 +67,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return await this.provider.send('eth_requestAccounts', [])
   }
 
-  async currentAddress(): Promise<string[] | undefined> {
+  async currentAccounts(): Promise<string[] | undefined> {
     return await this.provider?.send('eth_accounts', [])
   }
 
@@ -84,14 +84,13 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return await this.provider.send('eth_requestAccounts', [])
   }
 
-  async signMessage(message: string, address?: string) {
+  async signMessage(message: string, allowedAccounts?: string) {
     if (!this.provider) {
       this.logProviderMissing()
       return
     }
 
-    const signer = await this.signerFromAddress(address)
-    await signer?.getAddress()
+    const signer = await this.signerFromAddress(allowedAccounts)
     const signature = await signer?.signMessage(message)
     return signature
   }
@@ -100,10 +99,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     return await this.provider?.getSigner(address)
   }
 
-  override subscribeToAddressChanges(listener: () => void) {
-    this.addressChangeNotifiers = [listener, ...this.addressChangeNotifiers]
+  override subscribeToAccountsChanges(listener: () => void) {
+    this.accountChangeNotifiers = [listener, ...this.accountChangeNotifiers]
     return () => {
-      this.addressChangeNotifiers = this.addressChangeNotifiers.filter((l) => l !== listener)
+      this.accountChangeNotifiers = this.accountChangeNotifiers.filter((l) => l !== listener)
     }
   }
 
@@ -123,13 +122,13 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
    */
   private async onAccountsChangedListener() {
     // set the initial value
-    this.allowedAddresses = (await this.currentAddress()) ?? []
+    this.allowedAccounts = (await this.currentAccounts()) ?? []
     // notify existing subscribers that the default was set
-    this.addressChangeNotifiers.forEach((listener) => listener())
+    this.accountChangeNotifiers.forEach((listener) => listener())
 
     const listener = (accounts: string[]) => {
-      this.allowedAddresses = accounts
-      this.addressChangeNotifiers.forEach((listener) => listener())
+      this.allowedAccounts = accounts
+      this.accountChangeNotifiers.forEach((listener) => listener())
     }
     this.onAccountsChanged(listener)
   }

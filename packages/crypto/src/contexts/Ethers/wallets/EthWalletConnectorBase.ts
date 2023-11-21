@@ -7,7 +7,7 @@ import { EIP1193Events, SupportedEventProposals } from './lib'
  */
 export abstract class EthWalletConnectorBase extends EIP1193Events {
   // current address enabled in metamask
-  public allowedAddresses: string[] = []
+  public allowedAccounts: string[] = []
 
   // instance of Ethers BrowserProvider
   public provider: BrowserProvider | undefined
@@ -26,12 +26,12 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   browserProviderRemoveListener?(event: string, listener: Listener): void
   browserProviderRemoveListeners?(): void
 
-  subscribeToAddressChanges?(listener: () => void): () => void
+  subscribeToAccountsChanges?(listener: () => void): () => void
   subscribeToChainChanges?(listener: () => void): () => void
 
   abstract connectWallet(): Promise<void>
 
-  abstract currentAddress(): Promise<string[] | undefined>
+  abstract currentAccounts(): Promise<string[] | undefined>
   abstract currentChainId(): Promise<string | number | null>
 
   abstract requestAccounts(): Promise<string[] | null>

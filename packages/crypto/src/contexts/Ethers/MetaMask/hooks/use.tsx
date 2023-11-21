@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import { MetaMaskConnector } from '../../wallets'
 import { useChainId } from './useChainId'
 import { useConnectMetaMask } from './useConnect'
-import { useCurrentAddress } from './useCurrentAddress'
+import { useCurrentAccount } from './useCurrentAccount'
 import { useProvider } from './useProvider'
 import { useSigner } from './useSigner'
 
@@ -12,7 +12,7 @@ const metamaskConnector = new MetaMaskConnector()
 
 export const useMetaMask = (defaultChainId = 1) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentAddress, additionalAddresses] = useCurrentAddress(metamaskConnector)
+  const [currentAccount, additionalAccounts] = useCurrentAccount(metamaskConnector)
 
   const chainId = useChainId(metamaskConnector)
 
@@ -20,7 +20,7 @@ export const useMetaMask = (defaultChainId = 1) => {
 
   const { connect, connectRefused, connectError } = useConnectMetaMask(metamaskConnector)
 
-  const signer = useSigner(metamaskConnector, currentAddress)
+  const signer = useSigner(metamaskConnector, currentAccount)
   const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
 
   // preserve the 'this' context when calling a class method
@@ -31,7 +31,7 @@ export const useMetaMask = (defaultChainId = 1) => {
     connect,
     connectError,
     connectRefused,
-    currentAddress,
+    currentAccount,
     provider,
     providerName,
     signMessage,

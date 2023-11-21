@@ -8,11 +8,19 @@ export interface Props {
   enabled?: boolean
 }
 
-// TODO - separate out infura provider into new hook
-
 export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ children, defaultChainId = 1 }) => {
-  const { chainId, connect, connectRefused, connectError, currentAddress, provider, providerName, signMessage, signer, signerAddress } =
-    useMetaMask(defaultChainId)
+  const {
+    chainId,
+    connect,
+    connectRefused,
+    connectError,
+    currentAccount: currentAddress,
+    provider,
+    providerName,
+    signMessage,
+    signer,
+    signerAddress,
+  } = useMetaMask(defaultChainId)
 
   return (
     <EthersContext.Provider

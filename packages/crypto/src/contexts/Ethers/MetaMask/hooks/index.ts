@@ -1,6 +1,6 @@
 export * from './use'
 export * from './useChainId'
 export * from './useConnect'
-export * from './useCurrentAddress'
+export * from './useCurrentAccount'
 export * from './useProvider'
 export * from './useSigner'
