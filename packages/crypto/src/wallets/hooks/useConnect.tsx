@@ -1,0 +1,47 @@
+import { isError, JsonRpcError } from 'ethers'
+import { useCallback, useState } from 'react'
+
+import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
+
+const checkAccounts = (accounts: string[] | null) => {
+  // We could have multiple accounts. Check for one.
+  if (accounts && accounts?.length !== 0) {
+    console.log('Connected: ', accounts[0])
+    return accounts
+  } else {
+    console.log('No authorized account found.')
+  }
+}
+
+const handleActionRejected = (e: unknown, rejectCallback: (e: JsonRpcError['error']) => void) => {
+  if (isError(e, 'ACTION_REJECTED')) {
+    const error = (e.info as JsonRpcError | undefined)?.error
+    if (error?.code === 4001) {
+      rejectCallback(error)
+    }
+  }
+}
+
+export const useConnectWallet = (ethWalletConnector: EthWalletConnectorBase) => {
+  const [connectRefused, setConnectRefused] = useState(false)
+  const [connectError, setConnectError] = useState<Error>()
+
+  const connectWallet = useCallback(async () => {
+    try {
+      const accounts = await ethWalletConnector.requestAccounts()
+      setConnectRefused(false)
+      setConnectError(undefined)
+      return checkAccounts(accounts)
+    } catch (e) {
+      handleActionRejected(e, (error) => {
+        setConnectRefused(true)
+        setConnectError(new Error(error.message))
+      })
+    }
+  }, [ethWalletConnector])
+
+  if (ethWalletConnector.installed) {
+    return { connectError, connectRefused, connectWallet }
+  }
+  return {}
+}

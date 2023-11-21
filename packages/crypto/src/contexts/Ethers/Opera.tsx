@@ -17,8 +17,8 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const [error, setError] = useState<Error>()
   const [signer, setSigner] = useState<JsonRpcSigner>()
   const [provider, setProvider] = useState<BrowserProvider>()
-  const [localAddress, setLocalAddress] = useState<EthAddress | undefined | null>(
-    (global.ethereum?.addresses?.length ?? 0) > 0 ? EthAddress.fromString(global.ethereum?.addresses?.[0]) : null,
+  const [localAddress, setLocalAddress] = useState<EthAddress | undefined>(
+    (global.ethereum?.addresses?.length ?? 0) > 0 ? EthAddress.fromString(global.ethereum?.addresses?.[0]) : undefined,
   )
 
   const chainId = ethereum?.chainId ? parseInt(ethereum?.chainId) : 1

@@ -1,7 +1,7 @@
 import { MetaMaskInpageProvider } from '@metamask/providers'
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from './EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../../EthWalletConnectorBase'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider
@@ -19,8 +19,10 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     } else {
       throw new Error('Attempting to use metamask class when its not installed')
     }
-    this.onAccountsChangedListener()
-    this.onChainChangedListener()
+    if (this.installed) {
+      this.onAccountsChangedListener()
+      this.onChainChangedListener()
+    }
   }
 
   get installed() {

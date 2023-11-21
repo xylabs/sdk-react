@@ -1,6 +1,6 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
-import { BrowserProvider, InfuraProvider, JsonRpcSigner, Provider } from 'ethers'
+import { BrowserProvider, InfuraProvider, JsonRpcSigner } from 'ethers'
 import React, { PropsWithChildren, useState } from 'react'
 
 import { EthersContext } from './Context'
@@ -30,14 +30,14 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
 
   const [isConnected, setIsConnected] = useState<boolean>()
 
-  const [walletProvider, setWalletProvider] = useState<BrowserProvider | null>()
-  const [provider, setProvider] = useState<Provider>()
-  const [signer, setSigner] = useState<JsonRpcSigner | null>()
+  const [walletProvider, setWalletProvider] = useState<BrowserProvider>()
+  const [provider, setProvider] = useState<BrowserProvider>()
+  const [signer, setSigner] = useState<JsonRpcSigner>()
 
   useAsyncEffect(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async () => {
-      const walletProvider = ethereum ? new BrowserProvider(ethereum) : null
+      const walletProvider = ethereum ? new BrowserProvider(ethereum) : undefined
       let provider = null
       let providerName = null
       if (walletProvider) {
@@ -47,15 +47,15 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
         provider = new InfuraProvider(1, infuraKey)
         providerName = 'Infura (Default)'
       }
-      setProvider(provider)
+      setProvider(provider as BrowserProvider)
       setProviderName(providerName)
       setWalletProvider(walletProvider)
-      let signer: JsonRpcSigner | null = null
+      let signer: JsonRpcSigner | undefined = undefined
       try {
         const [existingAddress]: string[] = (await provider.send('eth_accounts', [])) ?? []
         setLocalAddress(EthAddress.fromString(existingAddress[0]))
         if (localAddress) {
-          signer = (await walletProvider?.getSigner()) ?? null
+          signer = await walletProvider?.getSigner()
         }
       } catch (ex) {
         console.error(ex)
