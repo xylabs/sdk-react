@@ -25,8 +25,8 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (trustProvider) {
-        const existingAddress = (await trustProvider.send('eth_accounts', [])) as string[]
-        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        const [existingAddress]: string[] = (await trustProvider.send('eth_accounts', [])) ?? []
+        if (existingAddress[0] !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(existingAddress[0]))
         if (localAddress) {
           const localSigner = await trustProvider.getSigner()
           setSigner(localSigner)

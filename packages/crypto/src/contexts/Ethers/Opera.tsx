@@ -31,8 +31,8 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
         ethereum.enable()
         const operaProvider = new BrowserProvider(ethereum)
         const provider = operaProvider
-        const existingAddress = (await provider.send('eth_accounts', [])) as string[]
-        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        const [existingAddress]: string[] = (await provider.send('eth_accounts', [])) ?? []
+        if (existingAddress !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(existingAddress))
         if (localAddress) {
           const signer = await operaProvider.getSigner()
           try {
