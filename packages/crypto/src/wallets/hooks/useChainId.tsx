@@ -1,6 +1,6 @@
 import { useMemo, useSyncExternalStore } from 'react'
 
-import { EthWalletConnectorBase } from '../../wallets'
+import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
 
 export const useChainId = (ethWalletConnector: EthWalletConnectorBase) => {
   const { getSnapShot, subscribe } = useMemo(() => {

@@ -1,7 +1,7 @@
 import { isError, JsonRpcError } from 'ethers'
 import { useCallback, useState } from 'react'
 
-import { EthWalletConnectorBase } from '../../wallets'
+import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
 
 export const useConnectMetaMask = (ethWalletConnector: EthWalletConnectorBase) => {
   const [connectRefused, setConnectRefused] = useState(false)
