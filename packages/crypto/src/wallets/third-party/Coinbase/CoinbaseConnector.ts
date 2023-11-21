@@ -1,11 +1,11 @@
 import { MetaMaskInpageProvider } from '@metamask/providers'
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../wallets/EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../../EthWalletConnectorBase'
 
-export class MetaMaskConnector extends EthWalletConnectorBase {
+export class CoinbaseConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = 'Meta Mask'
+  public providerName = 'Coinbase'
 
   // instance of provider with Meta Mask specific methods
   private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
@@ -17,7 +17,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
     } else if (window.ethereum) {
       this.provider = new BrowserProvider(window.ethereum)
     } else {
-      throw new Error('Attempting to use metamask class when its not installed')
+      throw new Error(`Attempting to use ${this.providerName} class when its not installed`)
     }
     this.onAccountsChangedListener()
     this.onChainChangedListener()
