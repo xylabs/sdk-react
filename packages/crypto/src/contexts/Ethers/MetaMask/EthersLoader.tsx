@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 
 import { EthersContext } from '../Context'
-import { useMetaMask } from './hooks'
+import { useMetaMask } from './use'
 
 export interface Props {
   defaultChainId?: number

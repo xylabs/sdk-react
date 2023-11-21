@@ -1,4 +1,4 @@
-import { InfuraProvider } from 'ethers'
+import { BrowserProvider, InfuraProvider } from 'ethers'
 import React, { PropsWithChildren } from 'react'
 
 import { EthersContext } from '../Context'
@@ -13,7 +13,7 @@ export const InfuraEthersLoader: React.FC<PropsWithChildren<Props>> = (props) =>
   const { children } = props
 
   const chainId = 1
-  const provider = new InfuraProvider(1, infuraKey)
+  const provider = new InfuraProvider(1, infuraKey) as unknown as BrowserProvider
 
   return (
     <EthersContext.Provider
@@ -22,7 +22,6 @@ export const InfuraEthersLoader: React.FC<PropsWithChildren<Props>> = (props) =>
         chainId,
         isConnected: true,
         provider,
-        signer: null,
       }}
     >
       {children}
