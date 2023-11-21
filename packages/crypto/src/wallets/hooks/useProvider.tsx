@@ -9,5 +9,8 @@ export const useProvider = (ethWalletConnector: EthWalletConnectorBase) => {
     return { provider: metaMaskProvider, providerName }
   }, [ethWalletConnector.provider])
 
-  return { provider, providerName }
+  if (ethWalletConnector.installed) {
+    return { provider, providerName }
+  }
+  return {}
 }

@@ -27,5 +27,8 @@ export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [
     [addresses],
   )
 
-  return [currentAddress, additionalAddresses]
+  if (ethWalletConnector.installed) {
+    return [currentAddress, additionalAddresses]
+  }
+  return [undefined, []]
 }

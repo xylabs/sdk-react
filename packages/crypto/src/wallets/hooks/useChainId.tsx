@@ -4,9 +4,15 @@ import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
 
 export const useChainId = (ethWalletConnector: EthWalletConnectorBase) => {
   const { getSnapShot, subscribe } = useMemo(() => {
+    if (ethWalletConnector.installed) {
+      return {
+        getSnapShot: () => ethWalletConnector.chainId,
+        subscribe: (onStoreChange: () => void) => ethWalletConnector.subscribeToChainChanges(onStoreChange),
+      }
+    }
     return {
-      getSnapShot: () => ethWalletConnector.chainId,
-      subscribe: (onStoreChange: () => void) => ethWalletConnector.subscribeToChainChanges(onStoreChange),
+      getSnapShot: () => undefined,
+      subscribe: () => () => undefined,
     }
   }, [ethWalletConnector])
 

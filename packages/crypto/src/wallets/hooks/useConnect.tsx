@@ -30,5 +30,8 @@ export const useConnectMetaMask = (ethWalletConnector: EthWalletConnectorBase) =
     }
   }, [ethWalletConnector])
 
-  return { connectError, connectRefused, connectWallet }
+  if (ethWalletConnector.installed) {
+    return { connectError, connectRefused, connectWallet }
+  }
+  return {}
 }

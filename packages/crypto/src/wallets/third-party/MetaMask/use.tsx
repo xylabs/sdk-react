@@ -7,7 +7,7 @@ import { MetaMaskConnector } from './MetaMaskConnector'
 
 const metamaskConnector = new MetaMaskConnector()
 
-export const useMetaMask = (defaultChainId = 1): EthWallet => {
+export const useMetaMask = (): EthWallet => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentAccount, additionalAccounts] = useCurrentAccount(metamaskConnector)
 
@@ -26,7 +26,7 @@ export const useMetaMask = (defaultChainId = 1): EthWallet => {
   const installed = useMemo(() => metamaskConnector.installed, [])
 
   return {
-    chainId: chainId ?? defaultChainId,
+    chainId,
     connectError,
     connectRefused,
     connectWallet,
