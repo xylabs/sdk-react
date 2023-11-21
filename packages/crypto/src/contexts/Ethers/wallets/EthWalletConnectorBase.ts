@@ -1,4 +1,4 @@
-import { BrowserProvider, JsonRpcSigner, Listener } from 'ethers'
+import { BrowserProvider, Listener } from 'ethers'
 
 import { EIP1193Events, SupportedEventProposals } from './lib'
 
@@ -7,10 +7,19 @@ import { EIP1193Events, SupportedEventProposals } from './lib'
  */
 export abstract class EthWalletConnectorBase extends EIP1193Events {
   // current address enabled in metamask
-  public allowedAccounts: string[] = []
+  allowedAccounts: string[] = []
 
   // instance of Ethers BrowserProvider
-  public provider: BrowserProvider | undefined
+  provider: BrowserProvider | undefined
+
+  // Listeners that only want to be notified when accounts change
+  protected accountChangeNotifiers: Listener[] = []
+
+  // Listeners that only want to be notified when chainId changes
+  protected chainChangedNotifiers: Listener[] = []
+
+  // current chainId in hex format
+  protected chainIdHex: string | undefined = undefined
 
   // Name of the Provider
   abstract providerName: string
@@ -19,23 +28,100 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     super(supportedEvents)
   }
 
-  abstract get chainId(): number | undefined
+  get chainId() {
+    return this.chainIdHex ? Number(this.chainIdHex) : undefined
+  }
+
   abstract get installed(): boolean
 
-  browserProviderOn?(event: string, listener: Listener): void
-  browserProviderRemoveListener?(event: string, listener: Listener): void
-  browserProviderRemoveListeners?(): void
+  async connectWallet() {
+    if (!this.provider) {
+      this.logProviderMissing()
+      return
+    }
 
-  subscribeToAccountsChanges?(listener: () => void): () => void
-  subscribeToChainChanges?(listener: () => void): () => void
+    return await this.provider.send('eth_requestAccounts', [])
+  }
 
-  abstract connectWallet(): Promise<void>
+  async currentAccounts(): Promise<string[] | undefined> {
+    return await this.provider?.send('eth_accounts', [])
+  }
 
-  abstract currentAccounts(): Promise<string[] | undefined>
-  abstract currentChainId(): Promise<string | number | null>
+  async currentChainId() {
+    return await this.provider?.send('net_version', [])
+  }
 
-  abstract requestAccounts(): Promise<string[] | null>
+  async requestAccounts(): Promise<string[] | null> {
+    if (!this.provider) {
+      this.logProviderMissing()
+      return null
+    }
 
-  abstract signMessage(message: string, address?: string): Promise<string | undefined>
-  abstract signerFromAddress(address?: string): Promise<JsonRpcSigner | undefined>
+    return await this.provider.send('eth_requestAccounts', [])
+  }
+
+  async signMessage(message: string, allowedAccounts?: string) {
+    if (!this.provider) {
+      this.logProviderMissing()
+      return
+    }
+
+    const signer = await this.signerFromAddress(allowedAccounts)
+    const signature = await signer?.signMessage(message)
+    return signature
+  }
+
+  async signerFromAddress(address?: string) {
+    return await this.provider?.getSigner(address)
+  }
+
+  subscribeToAccountsChanges(listener: () => void) {
+    this.accountChangeNotifiers = [listener, ...this.accountChangeNotifiers]
+    return () => {
+      this.accountChangeNotifiers = this.accountChangeNotifiers.filter((l) => l !== listener)
+    }
+  }
+
+  subscribeToChainChanges(listener: () => void) {
+    this.chainChangedNotifiers = [listener, ...this.chainChangedNotifiers]
+    return () => {
+      this.chainChangedNotifiers = this.chainChangedNotifiers.filter((l) => l !== listener)
+    }
+  }
+
+  /**
+   * Keep class state internally consistent
+   */
+  protected async onAccountsChangedListener() {
+    // set the initial value
+    this.allowedAccounts = (await this.currentAccounts()) ?? []
+    // notify existing subscribers that the default was set
+    this.accountChangeNotifiers.forEach((listener) => listener())
+
+    const listener = (accounts: string[]) => {
+      this.allowedAccounts = accounts
+      this.accountChangeNotifiers.forEach((listener) => listener())
+    }
+    this.onAccountsChanged(listener)
+  }
+
+  /**
+   * Keep class state internally consistent
+   */
+  protected async onChainChangedListener() {
+    // set the initial value
+    this.chainIdHex = (await this.currentChainId()) ?? undefined
+    // notify existing subscribers that the default was set
+    this.chainChangedNotifiers.forEach((listener) => listener())
+
+    const listener = (chainId: string | undefined) => {
+      this.chainIdHex = chainId
+      this.chainChangedNotifiers.forEach((listener) => listener())
+    }
+    this.onChainChanged(listener)
+  }
+
+  private logProviderMissing() {
+    console.warn('Cannot call this method because there is no browser provider connected.  Please confirm that metamask is installed')
+  }
 }
