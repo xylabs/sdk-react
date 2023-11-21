@@ -1,21 +1,21 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { useMemo, useSyncExternalStore } from 'react'
 
-import { MetaMaskConnector } from '../../wallets'
+import { EthWalletConnectorBase } from '../../wallets'
 
-export const useCurrentAccountExternal = (metamaskConnector: MetaMaskConnector) => {
+export const useCurrentAccountExternal = (ethWalletConnector: EthWalletConnectorBase) => {
   const { getSnapShot, subscribe } = useMemo(() => {
     return {
-      getSnapShot: () => metamaskConnector.allowedAccounts,
-      subscribe: (notifier: () => void) => metamaskConnector.subscribeToAccountsChanges(notifier),
+      getSnapShot: () => ethWalletConnector.allowedAccounts,
+      subscribe: (notifier: () => void) => ethWalletConnector.subscribeToAccountsChanges(notifier),
     }
-  }, [metamaskConnector])
+  }, [ethWalletConnector])
 
   return useSyncExternalStore(subscribe, getSnapShot)
 }
 
-export const useCurrentAccount = (metamaskConnector: MetaMaskConnector): [EthAddress | undefined, string[]] => {
-  const addresses = useCurrentAccountExternal(metamaskConnector)
+export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [EthAddress | undefined, string[]] => {
+  const addresses = useCurrentAccountExternal(ethWalletConnector)
 
   /**
    * According to the metamask docs, the first account is considered their 'selected account'

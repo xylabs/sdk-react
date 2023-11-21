@@ -2,19 +2,19 @@ import { EthAddress } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import { JsonRpcSigner } from 'ethers'
 
-import { MetaMaskConnector } from '../../wallets'
+import { EthWalletConnectorBase } from '../../wallets'
 
-export const useSigner = (metamaskConnector: MetaMaskConnector, localAddress?: EthAddress): JsonRpcSigner | undefined => {
+export const useSigner = (ethWalletConnector: EthWalletConnectorBase, localAddress?: EthAddress): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {
     try {
       // In a browser context, we should never build a signer without first having an allowed address
       if (localAddress) {
-        return await metamaskConnector.signerFromAddress(localAddress?.toString())
+        return await ethWalletConnector.signerFromAddress(localAddress?.toString())
       }
     } catch (ex) {
       console.error(ex)
     }
-  }, [localAddress, metamaskConnector])
+  }, [localAddress, ethWalletConnector])
 
   return signer
 }

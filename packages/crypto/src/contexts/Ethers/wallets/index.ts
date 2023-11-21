@@ -1,2 +1,3 @@
 export * from './EthWallet'
-export * from './MetaMaskConnector'
+export * from './EthWalletConnectorBase'
+export * from './hooks'

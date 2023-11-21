@@ -6,7 +6,7 @@ import { PropsWithChildren, useMemo, useState } from 'react'
 import { useEthersContext } from '../use'
 import { EthWallet } from '../wallets'
 import { MetaMaskEthersLoader } from './EthersLoader'
-import { useMetaMask } from './hooks'
+import { useMetaMask } from './use'
 
 const StorybookEntry = {
   argTypes: {},

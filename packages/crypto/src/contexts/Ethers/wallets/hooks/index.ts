@@ -1,4 +1,3 @@
-export * from './use'
 export * from './useChainId'
 export * from './useConnect'
 export * from './useCurrentAccount'

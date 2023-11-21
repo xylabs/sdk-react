@@ -1,15 +1,15 @@
 import { isError, JsonRpcError } from 'ethers'
 import { useCallback, useState } from 'react'
 
-import { MetaMaskConnector } from '../../wallets'
+import { EthWalletConnectorBase } from '../../wallets'
 
-export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
+export const useConnectMetaMask = (ethWalletConnector: EthWalletConnectorBase) => {
   const [connectRefused, setConnectRefused] = useState(false)
   const [connectError, setConnectError] = useState<Error>()
 
   const connectWallet = useCallback(async () => {
     try {
-      const accounts = await metamaskConnector.requestAccounts()
+      const accounts = await ethWalletConnector.requestAccounts()
       setConnectRefused(false)
       setConnectError(undefined)
       // We could have multiple accounts. Check for one.
@@ -28,7 +28,7 @@ export const useConnectMetaMask = (metamaskConnector: MetaMaskConnector) => {
         }
       }
     }
-  }, [metamaskConnector])
+  }, [ethWalletConnector])
 
   return { connectError, connectRefused, connectWallet }
 }

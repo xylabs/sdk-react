@@ -1,7 +1,7 @@
 import { MetaMaskInpageProvider } from '@metamask/providers'
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from './EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../wallets/EthWalletConnectorBase'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider

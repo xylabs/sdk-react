@@ -1,12 +1,8 @@
 import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
-import { EthWallet, MetaMaskConnector } from '../../wallets'
-import { useChainId } from './useChainId'
-import { useConnectMetaMask } from './useConnect'
-import { useCurrentAccount } from './useCurrentAccount'
-import { useProvider } from './useProvider'
-import { useSigner } from './useSigner'
+import { EthWallet, useChainId, useConnectMetaMask, useCurrentAccount, useProvider, useSigner } from '../wallets'
+import { MetaMaskConnector } from './MetaMaskConnector'
 
 const metamaskConnector = new MetaMaskConnector()
 
