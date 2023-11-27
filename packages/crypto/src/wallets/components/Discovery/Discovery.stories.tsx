@@ -7,7 +7,9 @@ import { DiscoveredWalletsMenu, WalletDiscoveryMenu, WalletDiscoveryMenuProps } 
 import { EIP6963ProviderDetail } from './lib'
 
 const StorybookEntry = {
-  argTypes: {},
+  args: {
+    open: true,
+  },
   component: WalletDiscoveryMenu,
   parameters: {
     actions: { argTypesRegex: '!(^on.*)' },
@@ -19,7 +21,8 @@ const StorybookEntry = {
 } as Meta<typeof WalletDiscoveryMenu>
 
 const Template: StoryFn<WalletDiscoveryMenuProps> = (args) => <DiscoveredWalletsMenu {...args} />
-const TemplateWithItems: StoryFn<WalletDiscoveryMenuProps> = (args) => {
+
+const TemplateWithWallets: StoryFn<WalletDiscoveryMenuProps> = (args) => {
   const [selectedWallet, setSelectedWallet] = useState<string>()
   const onWalletSelect = ({ info }: EIP6963ProviderDetail) => {
     setSelectedWallet(info.name)
@@ -38,12 +41,9 @@ const TemplateWithItems: StoryFn<WalletDiscoveryMenuProps> = (args) => {
 }
 
 const Default = Template.bind({})
-const Open = TemplateWithItems.bind({})
-Open.args = {
-  open: true,
-}
+const WithWallets = TemplateWithWallets.bind({})
 
-export { Default, Open }
+export { Default, WithWallets }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
