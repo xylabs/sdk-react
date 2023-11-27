@@ -7,7 +7,7 @@ export class TrustConnector extends EthWalletConnectorBase {
   // Name of the Provider
   public providerName = 'Trust'
 
-  // instance of provider with Meta Mask specific methods
+  // instance of provider with Trust specific methods
   private ethereum = window.ethereum as TrustProvider | undefined
 
   constructor(provider?: BrowserProvider) {

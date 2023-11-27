@@ -1,6 +1,6 @@
 import { BrowserProvider, Listener } from 'ethers'
 
-import { EIP1193Events, SupportedEventProposals } from './lib'
+import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from './lib'
 
 /**
  * Base class for connecting to an ethereum compatible wallet
@@ -117,5 +117,5 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   }
 
   // Since init likely relies on derived class members, derived classes must implement it
-  abstract init(): void
+  abstract init(provider?: BrowserProvider, info?: EIP6963ProviderInfo): void
 }
