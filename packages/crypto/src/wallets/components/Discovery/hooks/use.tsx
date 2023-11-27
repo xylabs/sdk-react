@@ -1,14 +1,6 @@
-import { BrowserProvider } from 'ethers'
 import { useEffect, useState } from 'react'
 
-import { EIP6963ProviderInfo, isEIP6963AnnounceProviderEvent } from '../lib'
-
-interface DiscoveredWallets {
-  [rdns: string]: {
-    info: EIP6963ProviderInfo
-    provider: BrowserProvider
-  }
-}
+import { DiscoveredWallets, isEIP6963AnnounceProviderEvent } from '../lib'
 
 export const useWalletDiscovery = () => {
   const [discoveredWallets, setDiscoveredWallets] = useState<DiscoveredWallets>({})
