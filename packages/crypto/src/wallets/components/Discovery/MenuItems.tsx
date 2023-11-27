@@ -1,8 +1,7 @@
 import { Alert, ListItemIcon, MenuItem, MenuItemProps, styled } from '@mui/material'
 import { Fragment } from 'react'
 
-import { DiscoveredWallets } from './lib'
-import { onWalletSelect } from './Paper'
+import { DiscoveredWallets, onWalletSelect } from './lib'
 
 export interface WalletsDiscoveredMenuItemsProps extends MenuItemProps {
   discoveredWallets?: DiscoveredWallets

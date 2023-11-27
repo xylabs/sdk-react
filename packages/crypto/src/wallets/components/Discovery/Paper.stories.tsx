@@ -17,10 +17,10 @@ const StorybookEntry = {
       page: null,
     },
   },
-  title: 'wallets/Discovery',
+  title: 'wallets/Discovery/Paper',
 } as Meta<typeof WalletDiscoveryPaper>
 
-const TemplateWithWallets: StoryFn<WalletDiscoveryPaperProps> = (args) => {
+const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
   const [selectedWallet, setSelectedWallet] = useState<string>()
   const onWalletSelect = ({ info }: EIP6963ProviderDetail) => {
     setSelectedWallet(info.name)
@@ -38,7 +38,7 @@ const TemplateWithWallets: StoryFn<WalletDiscoveryPaperProps> = (args) => {
   )
 }
 
-const Default = TemplateWithWallets.bind({})
+const Default = Template.bind({})
 
 export { Default }
 
