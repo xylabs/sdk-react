@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
-import { DiscoveredWallets, isEIP6963AnnounceProviderEvent } from '../lib'
+import { isEIP6963AnnounceProviderEvent } from '../../../lib'
+import { DiscoveredWallets } from '../lib'
 
 export const useWalletDiscovery = () => {
   const [discoveredWallets, setDiscoveredWallets] = useState<DiscoveredWallets>({})
