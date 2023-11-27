@@ -3,14 +3,14 @@ import { Meta, StoryFn } from '@storybook/react'
 import { FlexCol } from '@xylabs/react-flexbox'
 import { useState } from 'react'
 
-import { DiscoveredWalletsMenu, WalletDiscoveryMenu, WalletDiscoveryMenuProps } from './DiscoveryMenu'
 import { EIP6963ProviderDetail } from './lib'
+import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper'
 
 const StorybookEntry = {
   args: {
     open: true,
   },
-  component: WalletDiscoveryMenu,
+  component: WalletDiscoveryPaper,
   parameters: {
     actions: { argTypesRegex: '!(^on.*)' },
     docs: {
@@ -18,11 +18,9 @@ const StorybookEntry = {
     },
   },
   title: 'wallets/Discovery',
-} as Meta<typeof WalletDiscoveryMenu>
+} as Meta<typeof WalletDiscoveryPaper>
 
-const Template: StoryFn<WalletDiscoveryMenuProps> = (args) => <DiscoveredWalletsMenu {...args} />
-
-const TemplateWithWallets: StoryFn<WalletDiscoveryMenuProps> = (args) => {
+const TemplateWithWallets: StoryFn<WalletDiscoveryPaperProps> = (args) => {
   const [selectedWallet, setSelectedWallet] = useState<string>()
   const onWalletSelect = ({ info }: EIP6963ProviderDetail) => {
     setSelectedWallet(info.name)
@@ -35,15 +33,14 @@ const TemplateWithWallets: StoryFn<WalletDiscoveryMenuProps> = (args) => {
           {selectedWallet}
         </Alert>
       ) : null}
-      <WalletDiscoveryMenu onWalletSelect={onWalletSelect} {...args} />
+      <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
     </FlexCol>
   )
 }
 
-const Default = Template.bind({})
-const WithWallets = TemplateWithWallets.bind({})
+const Default = TemplateWithWallets.bind({})
 
-export { Default, WithWallets }
+export { Default }
 
 // eslint-disable-next-line import/no-default-export
 export default StorybookEntry
