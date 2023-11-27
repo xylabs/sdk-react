@@ -1,5 +1,5 @@
 import { Alert, ListItemIcon, Menu, MenuItem, MenuProps, styled } from '@mui/material'
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 
 import { useWalletDiscovery } from './hooks'
 import { DiscoveredWallets, EIP6963ProviderDetail } from './lib'
@@ -20,14 +20,16 @@ export const DiscoveredWalletsMenu: React.FC<WalletDiscoveryMenuProps> = ({
   return (
     <div ref={ref}>
       {discoveredWallets && ref.current ? (
-        <Menu anchorEl={ref.current} {...props}>
+        <Menu anchorEl={ref.current} MenuListProps={{ sx: { py: 0 } }} {...props}>
           {Object.values(discoveredWallets).map(({ info, provider }, index) => (
-            <MenuItem divider key={index} sx={{ py: 2 }} onClick={() => onWalletSelect?.({ info, provider })} value={info.rdns}>
-              <ListItemIcon>
-                <StyledImg src={info.icon} />
-              </ListItemIcon>
-              {info.name}
-            </MenuItem>
+            <Fragment key={index}>
+              <StyledMenuItem onClick={() => onWalletSelect?.({ info, provider })} value={info.rdns}>
+                <ListItemIcon>
+                  <StyledImg src={info.icon} />
+                </ListItemIcon>
+                {info.name}
+              </StyledMenuItem>
+            </Fragment>
           ))}
         </Menu>
       ) : (
@@ -44,4 +46,11 @@ export const WalletDiscoveryMenu: React.FC<WalletDiscoveryMenuProps> = (props) =
 
 const StyledImg = styled('img', { name: 'StyledImg' })(({ theme }) => ({
   maxWidth: theme.spacing(3),
+}))
+
+const StyledMenuItem = styled(MenuItem, { name: 'StyledMenuItem' })(({ theme }) => ({
+  '&:not(:last-child)': {
+    borderBottom: `1px solid ${theme.palette.divider}`,
+  },
+  padding: `${theme.spacing(2)}`,
 }))
