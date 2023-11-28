@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { SelectedWallet } from '../../lib'
 import { useEIP6963Wallet } from '../../third-party'
-import { WalletDetailsPaper } from '../Details'
+import { WalletOverviewCard } from '../Overview'
 import { onWalletSelect } from './lib'
 import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper'
 
@@ -34,7 +34,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
   return (
     <FlexRow justifyContent="start" alignItems="start" gap={4}>
       <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
-      {selectedWallet ? <WalletDetailsPaper {...hookState} /> : null}
+      {selectedWallet ? <WalletOverviewCard {...hookState} sx={{ width: '300px' }} /> : null}
     </FlexRow>
   )
 }
