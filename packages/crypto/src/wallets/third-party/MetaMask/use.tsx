@@ -1,5 +1,5 @@
-import { EthWallet } from '../../EthWallet'
 import { useEthWallet } from '../../hooks'
+import { EthWallet } from '../../types'
 import { MetaMaskConnector } from './MetaMaskConnector'
 
 const metamaskConnector = new MetaMaskConnector()

@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../classes'
 
 export const useProvider = (ethWalletConnector: EthWalletConnectorBase) => {
   const { provider, providerName } = useMemo(() => {

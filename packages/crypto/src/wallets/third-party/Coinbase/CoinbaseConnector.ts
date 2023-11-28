@@ -1,6 +1,6 @@
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../../EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../../classes'
 import { CoinbaseProvider } from './lib'
 
 export class CoinbaseConnector extends EthWalletConnectorBase {

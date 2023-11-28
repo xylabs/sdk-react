@@ -1,6 +1,6 @@
 import { BrowserProvider, Eip1193Provider } from 'ethers'
 
-import { EIP6963ProviderInfo } from './EIP6963'
+import { EIP6963ProviderInfo } from '../lib'
 
 export interface SelectedWallet {
   info: EIP6963ProviderInfo

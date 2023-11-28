@@ -1,6 +1,6 @@
 import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
-import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from './lib'
+import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../lib'
 
 /**
  * Base class for connecting to an ethereum compatible wallet

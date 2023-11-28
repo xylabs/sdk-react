@@ -1,8 +1,7 @@
 import { useMemo } from 'react'
 
-import { EthWalletWithProviderInfo } from '../../EthWallet'
 import { useEthWallet } from '../../hooks'
-import { SelectedWallet } from '../../lib'
+import { EthWalletWithProviderInfo, SelectedWallet } from '../../types'
 import { EIP6963Connector } from './EIP6963Connector'
 
 export const useEIP6963Wallet = (selectedWallet: SelectedWallet | undefined): EthWalletWithProviderInfo => {

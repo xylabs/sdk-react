@@ -3,12 +3,12 @@ import { EthAddress } from '@xylabs/eth-address'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { useEffect, useMemo, useState } from 'react'
 
-import { EthWalletWithProviderInfo } from '../../EthWallet'
+import { EthWalletWithProviderInfo } from '../../types'
 
 export interface WalletOverviewCardProps extends EthWalletWithProviderInfo, CardProps {}
 
 export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWallet, info, ...props }) => {
-  const { connectWallet, connectRefused, chainId, connectError, currentAccount, providerName, signMessage, signer, signerAddress } = ethWallet ?? {}
+  const { connectWallet, connectRefused, chainId, connectError, currentAccount, providerName, signMessage, signerAddress } = ethWallet ?? {}
   const [signResponse, setSignResponse] = useState<EthAddress>()
 
   useEffect(() => {

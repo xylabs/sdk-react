@@ -2,7 +2,7 @@ import { EthAddress } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import { JsonRpcSigner } from 'ethers'
 
-import { EthWalletConnectorBase } from '../EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../classes'
 
 export const useSigner = (ethWalletConnector: EthWalletConnectorBase, localAddress?: EthAddress): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {

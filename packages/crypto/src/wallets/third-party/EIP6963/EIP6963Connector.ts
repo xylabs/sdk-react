@@ -1,6 +1,6 @@
 import { BrowserProvider, Eip1193Provider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../../EthWalletConnectorBase'
+import { EthWalletConnectorBase } from '../../classes'
 import { EIP6963ProviderInfo } from '../../lib'
 
 /**
