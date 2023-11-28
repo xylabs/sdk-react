@@ -8,19 +8,9 @@ import { WalletDisplayAdditionalDetails } from './AdditionalDetails'
 
 export interface WalletDetailsPaperProps extends EthWalletWithProviderInfo, PaperProps {}
 
-export const WalletDetailsPaper: React.FC<WalletDetailsPaperProps> = ({
-  connectWallet,
-  connectRefused,
-  chainId,
-  connectError,
-  currentAccount,
-  providerName,
-  signMessage,
-  signer,
-  signerAddress,
-  info,
-  ...props
-}) => {
+export const WalletDetailsPaper: React.FC<WalletDetailsPaperProps> = ({ ethWallet, info, ...props }) => {
+  const { connectWallet, connectRefused, chainId, connectError, currentAccount, providerName, signMessage, signer, signerAddress } = ethWallet ?? {}
+
   const [signResponse, setSignResponse] = useState<EthAddress>()
   const [connecting, setConnecting] = useState(false)
 

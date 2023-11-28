@@ -14,7 +14,7 @@ export const useEIP6963Wallet = (selectedWallet: SelectedWallet | undefined): Et
   const ethWallet = useEthWallet(connector)
 
   return {
-    ...ethWallet,
+    ethWallet,
     info: selectedWallet?.info,
   }
 }

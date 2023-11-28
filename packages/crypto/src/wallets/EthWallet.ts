@@ -21,6 +21,7 @@ export interface EthWallet {
   // TODO - transactions
 }
 
-export interface EthWalletWithProviderInfo extends EthWallet {
+export interface EthWalletWithProviderInfo {
+  ethWallet?: EthWallet
   info?: EIP6963ProviderInfo
 }
