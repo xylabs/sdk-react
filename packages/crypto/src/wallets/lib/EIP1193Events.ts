@@ -1,4 +1,4 @@
-import { BrowserProvider, Listener } from 'ethers'
+import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
 import { EIP1193EventNames, EIP1193EventsCompatible } from './EIP1193'
 import { SupportedEventProposals } from './SupportedEvents'
@@ -15,13 +15,14 @@ export class EIP1193Events implements EIP1193EventsCompatible {
   // opt-in to EIP-1193 events since not all wallets will support them
   private eventsEnabled: boolean = false
 
-  private listeningProvider = window.ethereum as BrowserProvider | undefined
+  private listeningProvider: BrowserProvider | undefined
 
-  constructor(supportedEvents?: SupportedEventProposals[]) {
+  constructor(supportedEvents?: SupportedEventProposals[], provider?: Eip1193Provider) {
     this.eventsEnabled = !!supportedEvents?.includes('EIP-1193')
-    if (window.ethereum === undefined) {
-      console.warn('attempting to subscribe to EIP1193 events but window.ethereum is undefined')
+    if (window.ethereum === undefined && provider === undefined) {
+      console.warn('attempting to subscribe to EIP1193 events but missing provider in arguments or at window.ethereum')
     }
+    this.listeningProvider = (provider ?? window.ethereum) as BrowserProvider | undefined
   }
 
   onAccountsChanged(listener: Listener) {

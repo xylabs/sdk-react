@@ -22,10 +22,13 @@ export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [
    *
    * see - https://docs.metamask.io/wallet/how-to/connect/access-accounts/#handle-accounts
    */
-  const [currentAddress, additionalAddresses] = useMemo(
-    () => [EthAddress.fromString(addresses[0]), addresses.slice(0, addresses.length)],
-    [addresses],
-  )
+  const [currentAddress, additionalAddresses] = useMemo(() => {
+    if (addresses.length) {
+      return [EthAddress.fromString(addresses[0]), addresses.slice(0, addresses.length)]
+    } else {
+      return [undefined, []]
+    }
+  }, [addresses])
 
   if (ethWalletConnector.installed) {
     return [currentAddress, additionalAddresses]

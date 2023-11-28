@@ -1,4 +1,4 @@
-import { BrowserProvider } from 'ethers'
+import { Eip1193Provider } from 'ethers'
 
 /**
  * Assets needed to display a wallet
@@ -15,7 +15,7 @@ export interface EIP6963ProviderInfo {
  */
 export interface EIP6963ProviderDetail {
   info: EIP6963ProviderInfo
-  provider: BrowserProvider
+  provider: Eip1193Provider
 }
 
 /**

@@ -1,4 +1,4 @@
-import { BrowserProvider, Listener } from 'ethers'
+import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
 import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from './lib'
 
@@ -24,8 +24,8 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   // Name of the Provider
   abstract providerName: string
 
-  constructor(supportedEvents?: SupportedEventProposals[]) {
-    super(supportedEvents)
+  constructor(supportedEvents?: SupportedEventProposals[], rawProvider?: Eip1193Provider) {
+    super(supportedEvents, rawProvider)
   }
 
   get chainId() {

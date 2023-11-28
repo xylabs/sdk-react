@@ -1,9 +1,12 @@
-import { Alert, AlertTitle } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import { FlexCol } from '@xylabs/react-flexbox'
+import { FlexRow } from '@xylabs/react-flexbox'
+import { BrowserProvider } from 'ethers'
 import { useState } from 'react'
 
-import { EIP6963ProviderDetail } from './lib'
+import { EthWalletSBComponent } from '../../../components'
+import { SelectedWallet } from '../../lib'
+import { useEIP6963Wallet } from '../../third-party'
+import { onWalletSelect } from './lib'
 import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper'
 
 const StorybookEntry = {
@@ -21,20 +24,18 @@ const StorybookEntry = {
 } as Meta<typeof WalletDiscoveryPaper>
 
 const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
-  const [selectedWallet, setSelectedWallet] = useState<string>()
-  const onWalletSelect = ({ info }: EIP6963ProviderDetail) => {
-    setSelectedWallet(info.name)
+  const [selectedWallet, setSelectedWallet] = useState<SelectedWallet>()
+  const onWalletSelect: onWalletSelect = ({ info, provider }) => {
+    const browserProvider = new BrowserProvider(provider)
+    setSelectedWallet({ info, provider: browserProvider, rawProvider: provider })
   }
+
+  const eip6963WalletState = useEIP6963Wallet(selectedWallet)
   return (
-    <FlexCol alignItems="start">
-      {selectedWallet ? (
-        <Alert>
-          <AlertTitle>Selected Wallet</AlertTitle>
-          {selectedWallet}
-        </Alert>
-      ) : null}
+    <FlexRow justifyContent="start" alignItems="start" gap={4}>
       <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
-    </FlexCol>
+      {selectedWallet ? <EthWalletSBComponent {...eip6963WalletState} /> : null}
+    </FlexRow>
   )
 }
 
