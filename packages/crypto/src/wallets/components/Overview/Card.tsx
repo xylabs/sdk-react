@@ -36,7 +36,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
 
   return (
     <Card {...props}>
-      <CardHeader avatar={<img src={info?.icon} />} title={providerName} />
+      <CardHeader avatar={<img style={{ width: '42px' }} src={info?.icon} />} title={providerName} />
       <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         {window.parent !== window ? (
           <Alert severity={'warning'}>
