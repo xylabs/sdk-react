@@ -3,9 +3,9 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import { BrowserProvider } from 'ethers'
 import { useState } from 'react'
 
-import { EthWalletSBComponent } from '../../../components'
 import { SelectedWallet } from '../../lib'
 import { useEIP6963Wallet } from '../../third-party'
+import { WalletDetailsPaper } from '../Details'
 import { onWalletSelect } from './lib'
 import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper'
 
@@ -30,11 +30,11 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
     setSelectedWallet({ info, provider: browserProvider, rawProvider: provider })
   }
 
-  const eip6963WalletState = useEIP6963Wallet(selectedWallet)
+  const hookState = useEIP6963Wallet(selectedWallet)
   return (
     <FlexRow justifyContent="start" alignItems="start" gap={4}>
       <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
-      {selectedWallet ? <EthWalletSBComponent {...eip6963WalletState} /> : null}
+      {selectedWallet ? <WalletDetailsPaper {...hookState} /> : null}
     </FlexRow>
   )
 }
