@@ -1,7 +1,8 @@
 import { OpenInNewOutlined } from '@mui/icons-material'
 import { Alert, AlertTitle, Button, List, ListItem, Typography } from '@mui/material'
+import { EthAddress } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { EthWallet } from '../../wallets'
 
@@ -23,11 +24,15 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
   signer,
   signerAddress,
 }) => {
-  const [signResponse, setSignResponse] = useState<string>()
+  const [signResponse, setSignResponse] = useState<EthAddress>()
+
+  useEffect(() => {
+    setSignResponse(undefined)
+  }, [provider])
 
   const onSign = async () => {
     const signResult = await signMessage?.('test')
-    setSignResponse(signResult)
+    setSignResponse(EthAddress.fromString(signResult))
   }
 
   const localAddress = useMemo(() => currentAccount?.toString(), [currentAccount])
@@ -53,7 +58,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
         {signResponse ? (
           <Alert severity={'success'}>
             <AlertTitle>Sign Response</AlertTitle>
-            {signResponse}
+            {signResponse.toShortString()}
           </Alert>
         ) : null}
         <Typography variant="h6" mb={0}>
@@ -66,7 +71,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
           <ListItem>ProviderName: {providerName}</ListItem>
           <ListItem>Provider: {JSON.stringify(!!provider)}</ListItem>
           <ListItem>Signer: {JSON.stringify(!!signer)}</ListItem>
-          <ListItem>Signer Address: {signerAddress}</ListItem>
+          <ListItem>Signer Address: {signerAddress?.toShortString()}</ListItem>
           <ListItem>Connection Refused: {JSON.stringify(connectRefused)}</ListItem>
           <ListItem>Error: {connectError?.message ?? connectError?.message}</ListItem>
         </List>

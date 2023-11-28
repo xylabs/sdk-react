@@ -39,7 +39,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
         providerName,
         signMessage,
         signer,
-        signerAddress,
+        signerAddress: signerAddress?.toString(),
         walletProvider: provider,
       }}
     >

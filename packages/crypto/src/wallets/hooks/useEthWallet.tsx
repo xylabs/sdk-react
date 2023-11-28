@@ -1,3 +1,4 @@
+import { EthAddress } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
@@ -19,7 +20,7 @@ export const useEthWallet = (connector: EthWalletConnectorBase) => {
   const { connectWallet, connectRefused, connectError } = useConnectWallet(connector)
 
   const signer = useSigner(connector, currentAccount)
-  const [signerAddress] = usePromise(async () => await signer?.getAddress(), [signer])
+  const [signerAddress] = usePromise(async () => EthAddress.fromString(await signer?.getAddress()), [signer])
 
   // preserve the 'this' context when calling a class method
   const signMessage = useMemo(() => connector.signMessage.bind(connector), [connector])

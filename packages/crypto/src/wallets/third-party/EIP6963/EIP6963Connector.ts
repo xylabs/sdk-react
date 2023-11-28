@@ -12,7 +12,11 @@ export class EIP6963Connector extends EthWalletConnectorBase {
   // Name of the Provider
   public providerName = ''
 
-  constructor(provider?: BrowserProvider, rawProvider?: Eip1193Provider, info?: EIP6963ProviderInfo) {
+  constructor(
+    provider?: BrowserProvider,
+    rawProvider?: Eip1193Provider,
+    public info?: EIP6963ProviderInfo,
+  ) {
     super(['EIP-1193'], rawProvider)
     this.init(provider, info)
   }
