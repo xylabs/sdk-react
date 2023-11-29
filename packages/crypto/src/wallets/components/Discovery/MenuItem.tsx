@@ -1,8 +1,7 @@
 import { RadioButtonChecked } from '@mui/icons-material'
 import { ListItemIcon, ListItemText, MenuItem, MenuItemProps, styled, useTheme } from '@mui/material'
 
-import { useEthWallet } from '../../hooks'
-import { EIP6963Connector } from '../../third-party'
+import { EIP6963Connector, useEthWallet } from '../../third-party'
 import { ConstrainedImage } from '../shared'
 
 export interface WalletDiscoveryMenuItemInnerProps extends MenuItemProps {

@@ -1,7 +1,7 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { useMemo, useSyncExternalStore } from 'react'
 
-import { EthWalletConnectorBase } from '../third-party/classes'
+import { EthWalletConnectorBase } from '../classes'
 
 export const useCurrentAccountExternal = (ethWalletConnector: EthWalletConnectorBase) => {
   const { getSnapShot, subscribe } = useMemo(() => {

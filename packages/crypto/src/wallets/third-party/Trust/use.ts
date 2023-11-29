@@ -1,5 +1,5 @@
-import { useEthWallet } from '../../hooks'
 import { EthWallet } from '../../types'
+import { useEthWallet } from '../hooks'
 import { TrustConnector } from './TrustConnector'
 
 const trustConnector = new TrustConnector()
