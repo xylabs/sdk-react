@@ -24,7 +24,7 @@ export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [
    */
   const [currentAddress, additionalAddresses] = useMemo(() => {
     if (addresses.length) {
-      return [EthAddress.fromString(addresses[0]), addresses.slice(0, addresses.length)]
+      return [EthAddress.fromString(addresses[0]), addresses.slice(1, addresses.length)]
     } else {
       return [undefined, []]
     }
