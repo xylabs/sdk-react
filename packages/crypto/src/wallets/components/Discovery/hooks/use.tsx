@@ -1,36 +1,9 @@
-import { BrowserProvider } from 'ethers'
-import { useEffect, useState } from 'react'
+import { useSyncExternalStore } from 'react'
 
-import { isEIP6963AnnounceProviderEvent } from '../../../lib'
-import { EIP6963Connector } from '../../../third-party'
-import { DiscoveredWallets } from '../lib'
+import { EthWalletConnections } from '../../../classes'
+
+const ethWalletConnections = new EthWalletConnections()
 
 export const useWalletDiscovery = () => {
-  const [discoveredWallets, setDiscoveredWallets] = useState<DiscoveredWallets>({})
-
-  useEffect(() => {
-    const listener = (event: Event) => {
-      if (isEIP6963AnnounceProviderEvent(event)) {
-        const { info, provider } = event.detail
-        // capture installed wallets as they come in
-        setDiscoveredWallets((previous) => ({
-          [info.rdns]: new EIP6963Connector(new BrowserProvider(provider), provider, info),
-          ...previous,
-        }))
-      }
-    }
-
-    // listen when providers announce themselves
-    window.addEventListener('eip6963:announceProvider', listener)
-
-    // dispatch an event to ask all installed providers to identify themselves
-    window.dispatchEvent(new Event('eip6963:requestProvider'))
-
-    return () => {
-      // clean up listener
-      window.removeEventListener('eip6963:announceProvider', listener)
-    }
-  }, [])
-
-  return discoveredWallets
+  return useSyncExternalStore(ethWalletConnections.subscribe.bind(ethWalletConnections), ethWalletConnections.wallets.bind(ethWalletConnections))
 }

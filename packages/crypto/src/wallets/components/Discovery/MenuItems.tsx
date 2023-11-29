@@ -1,6 +1,7 @@
 import { Alert, MenuItemProps } from '@mui/material'
 
-import { DiscoveredWallets, onWalletSelect } from './lib'
+import { DiscoveredWallets } from '../../types'
+import { onWalletSelect } from './lib'
 import { WalletDiscoveryMenuItem } from './MenuItem'
 
 export interface WalletsDiscoveredMenuItemsProps extends MenuItemProps {
