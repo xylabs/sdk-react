@@ -3,13 +3,17 @@ import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
 import { EthWalletConnectorBase } from '../classes'
+import { EthWallet } from '../types'
 import { useChainId } from './useChainId'
 import { useConnectWallet } from './useConnect'
 import { useCurrentAccount } from './useCurrentAccount'
 import { useProvider } from './useProvider'
 import { useSigner } from './useSigner'
 
-export const useEthWallet = (connector: EthWalletConnectorBase) => {
+/**
+ * A hook that takes an instance of EthWalletConnectorBase and makes certain functionality reactive.
+ */
+export const useEthWallet = (connector: EthWalletConnectorBase): EthWallet => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentAccount, additionalAccounts] = useCurrentAccount(connector)
 
@@ -27,6 +31,8 @@ export const useEthWallet = (connector: EthWalletConnectorBase) => {
 
   const installed = useMemo(() => connector.installed, [connector.installed])
 
+  const providerInfo = useMemo(() => connector.providerInfo, [connector.providerInfo])
+
   return {
     chainId,
     connectError,
@@ -35,6 +41,7 @@ export const useEthWallet = (connector: EthWalletConnectorBase) => {
     currentAccount,
     installed,
     provider,
+    providerInfo,
     providerName,
     signMessage,
     signer,

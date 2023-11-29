@@ -14,14 +14,10 @@ export interface EthWallet {
   currentAccount?: EthAddress
   installed?: boolean
   provider?: BrowserProvider
+  providerInfo?: EIP6963ProviderInfo
   providerName?: string
   signMessage?: (message: string, address?: string) => Promise<string | undefined>
   signer?: JsonRpcSigner
   signerAddress?: EthAddress
   // TODO - transactions
-}
-
-export interface EthWalletWithProviderInfo {
-  ethWallet?: EthWallet
-  info?: EIP6963ProviderInfo
 }
