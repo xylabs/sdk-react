@@ -1,6 +1,6 @@
 import { Alert, AlertTitle, CardContent, CardContentProps, Chip, Divider, styled, Typography } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
-import { FlexRow } from '@xylabs/react-flexbox'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
 export interface WalletOverviewCardContentProps extends CardContentProps {
   chainId?: number
@@ -24,15 +24,15 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
           <AlertTitle>Avoid calling wallets inside of iFrames</AlertTitle>
         </Alert>
       ) : null}
-      <FlexRow justifyContent="start" gap={2}>
-        <span>
+      <FlexRow justifyContent="start" alignItems="start" gap={2}>
+        <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Approved Address:</StyledTypographyHeading>
-          <Typography>{currentAccount ? <Chip label={currentAccount?.toShortString()} /> : <Chip label={'none'} />}</Typography>
-        </span>
-        <span>
+          <Chip label={currentAccount ? currentAccount?.toShortString() : 'none'} />
+        </FlexCol>
+        <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Chain Id:</StyledTypographyHeading>
           <Typography>{chainId ? chainId : 'none'}</Typography>
-        </span>
+        </FlexCol>
       </FlexRow>
       <Divider flexItem />
 
