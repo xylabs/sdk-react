@@ -14,7 +14,6 @@ import { useSigner } from './useSigner'
  * A hook that takes an instance of EthWalletConnectorBase and makes certain functionality reactive.
  */
 export const useEthWallet = (connector: EthWalletConnectorBase): EthWallet => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentAccount, additionalAccounts] = useCurrentAccount(connector)
 
   const chainId = useChainId(connector)
@@ -34,6 +33,7 @@ export const useEthWallet = (connector: EthWalletConnectorBase): EthWallet => {
   const providerInfo = useMemo(() => connector.providerInfo, [connector.providerInfo])
 
   return {
+    additionalAccounts,
     chainId,
     connectError,
     connectRefused,

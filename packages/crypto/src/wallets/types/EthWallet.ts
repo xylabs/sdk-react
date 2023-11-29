@@ -7,6 +7,7 @@ import { EIP6963ProviderInfo } from '../lib'
  * Base interface for wallet state and interaction
  */
 export interface EthWallet {
+  additionalAccounts?: string[]
   chainId?: number | undefined
   connectError?: Error
   connectRefused?: boolean
