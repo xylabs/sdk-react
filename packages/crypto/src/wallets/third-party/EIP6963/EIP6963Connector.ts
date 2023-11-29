@@ -10,24 +10,22 @@ import { EIP6963ProviderInfo } from '../../lib'
  */
 export class EIP6963Connector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = ''
+  providerName = ''
 
-  constructor(
-    provider?: BrowserProvider,
-    rawProvider?: Eip1193Provider,
-    public info?: EIP6963ProviderInfo,
-  ) {
+  constructor(provider?: BrowserProvider, rawProvider?: Eip1193Provider, info?: EIP6963ProviderInfo) {
     super(['EIP-1193'], rawProvider)
-    this.init(provider, info)
+    this.provider = provider
+    this.rawProvider = rawProvider
+    this.providerInfo = info
+    this.providerName = info?.name ?? ''
+    this.init()
   }
 
   get installed() {
     return !!this.provider
   }
 
-  init(provider?: BrowserProvider, info?: EIP6963ProviderInfo) {
-    this.providerName = info?.name ?? ''
-    this.provider = provider
+  init() {
     if (this.installed) {
       this.onAccountsChangedListener()
       this.onChainChangedListener()

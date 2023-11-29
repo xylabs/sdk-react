@@ -12,6 +12,12 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   // instance of Ethers BrowserProvider
   provider: BrowserProvider | undefined
 
+  // Assets provided by the wallet
+  providerInfo: EIP6963ProviderInfo | undefined
+
+  // instance of the raw provider injected by the wallet
+  rawProvider: Eip1193Provider | undefined
+
   // Listeners that only want to be notified when accounts change
   protected accountChangeNotifiers: Listener[] = []
 
