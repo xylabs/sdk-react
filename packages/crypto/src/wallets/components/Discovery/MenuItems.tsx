@@ -1,6 +1,6 @@
 import { Alert, MenuItemProps } from '@mui/material'
 
-import { DiscoveredWallets } from '../../types'
+import { DiscoveredWallets } from '../../third-party'
 import { onWalletSelect } from './lib'
 import { WalletDiscoveryMenuItem } from './MenuItem'
 

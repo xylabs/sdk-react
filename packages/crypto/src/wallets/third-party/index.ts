@@ -1,3 +1,4 @@
+export * from './classes'
 export * from './Coinbase'
 export * from './EIP6963'
 export * from './MetaMask'

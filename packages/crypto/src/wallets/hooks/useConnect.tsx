@@ -1,7 +1,7 @@
 import { isError, JsonRpcError } from 'ethers'
 import { useCallback, useState } from 'react'
 
-import { EthWalletConnectorBase } from '../classes'
+import { EthWalletConnectorBase } from '../third-party/classes'
 
 const checkAccounts = (accounts: string[] | null) => {
   // We could have multiple accounts. Check for one.

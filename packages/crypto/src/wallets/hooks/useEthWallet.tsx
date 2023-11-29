@@ -2,7 +2,7 @@ import { EthAddress } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
-import { EthWalletConnectorBase } from '../classes'
+import { EthWalletConnectorBase } from '../third-party/classes'
 import { EthWallet } from '../types'
 import { useChainId } from './useChainId'
 import { useConnectWallet } from './useConnect'

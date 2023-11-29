@@ -1,7 +1,7 @@
 import { BrowserProvider, Eip1193Provider } from 'ethers'
 
+import { EIP6963ProviderInfo } from '../../../lib'
 import { EthWalletConnectorBase } from '../../classes'
-import { EIP6963ProviderInfo } from '../../lib'
 
 /**
  * A generic connector for EIP-6963 compatible wallets

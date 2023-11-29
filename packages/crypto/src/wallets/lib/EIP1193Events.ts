@@ -8,7 +8,7 @@ import { SupportedEventProposals } from './SupportedEvents'
  *
  * See - https://eips.ethereum.org/EIPS/eip-1193
  */
-export class EIP1193Events implements EIP1193EventsCompatible {
+export abstract class EIP1193Events implements EIP1193EventsCompatible {
   // list of EIP-1193 specific event names and listeners for easy cleanup
   private eip1193Listeners: [event: EIP1193EventNames, listener: Listener][] = []
 

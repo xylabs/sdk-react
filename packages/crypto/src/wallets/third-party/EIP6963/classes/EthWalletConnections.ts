@@ -1,8 +1,8 @@
 import { BrowserProvider } from 'ethers'
 
-import { isEIP6963AnnounceProviderEvent } from '../lib'
-import { EIP6963Connector } from '../third-party'
-import { DiscoveredWallets } from '../types'
+import { isEIP6963AnnounceProviderEvent } from '../../../lib'
+import { EIP6963Connector } from './EIP6963Connector'
+import { DiscoveredWallets } from './types'
 
 export type WalletListener = () => void
 

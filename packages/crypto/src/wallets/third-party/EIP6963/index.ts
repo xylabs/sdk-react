@@ -1,2 +1,2 @@
-export * from './EIP6963Connector'
+export * from './classes'
 export * from './use'

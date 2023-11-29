@@ -1,6 +1,6 @@
 import { BrowserProvider, Eip1193Provider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../../classes'
+import { EthWalletConnectorBase } from '../classes'
 
 export class PhantomConnector extends EthWalletConnectorBase {
   // Name of the Provider

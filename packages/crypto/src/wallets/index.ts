@@ -1,5 +1,5 @@
-export * from './classes'
 export * from './components'
 export * from './hooks'
 export * from './third-party'
+export * from './third-party/classes'
 export * from './types'

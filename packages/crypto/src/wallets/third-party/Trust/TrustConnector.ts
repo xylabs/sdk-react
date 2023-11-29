@@ -1,6 +1,6 @@
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../../classes'
+import { EthWalletConnectorBase } from '../classes'
 import { TrustProvider } from './lib'
 
 export class TrustConnector extends EthWalletConnectorBase {
