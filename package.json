@@ -140,7 +140,7 @@
     "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
-  "version": "3.0.25",
+  "version": "3.0.26",
   "packageManager": "yarn@4.0.2",
   "volta": {
     "node": "18.17.1",
