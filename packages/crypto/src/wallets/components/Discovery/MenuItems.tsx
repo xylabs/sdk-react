@@ -1,7 +1,7 @@
-import { Alert, ListItemIcon, MenuItem, MenuItemProps, styled } from '@mui/material'
-import { Fragment } from 'react'
+import { Alert, MenuItemProps } from '@mui/material'
 
 import { DiscoveredWallets, onWalletSelect } from './lib'
+import { WalletDiscoveryMenuItem } from './MenuItem'
 
 export interface WalletsDiscoveredMenuItemsProps extends MenuItemProps {
   discoveredWallets?: DiscoveredWallets
@@ -16,33 +16,10 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
   ...props
 }) => {
   return discoveredWallets ? (
-    Object.values(discoveredWallets).map((eIP6963Connector, index) => {
-      const { providerInfo: info } = eIP6963Connector
-      if (info) {
-        return (
-          <Fragment key={index}>
-            <StyledMenuItem onClick={() => onWalletSelect?.(eIP6963Connector)} value={info.rdns} {...props}>
-              <ListItemIcon>
-                <StyledImg src={info.icon} />
-              </ListItemIcon>
-              {info.name}
-            </StyledMenuItem>
-          </Fragment>
-        )
-      }
-    })
+    Object.values(discoveredWallets).map((eip6963Connector, index) => (
+      <WalletDiscoveryMenuItem key={index} ethWalletConnector={eip6963Connector} onClick={() => onWalletSelect?.(eip6963Connector)} {...props} />
+    ))
   ) : suppressNoWalletsWarning ? null : (
     <Alert severity={'warning'}>Unable to locate any installed wallets</Alert>
   )
 }
-
-const StyledImg = styled('img', { name: 'StyledImg' })(({ theme }) => ({
-  maxWidth: theme.spacing(3),
-}))
-
-const StyledMenuItem = styled(MenuItem, { name: 'StyledMenuItem' })(({ theme }) => ({
-  '&:not(:last-child)': {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
-  padding: `${theme.spacing(2)}`,
-}))
