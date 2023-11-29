@@ -31,7 +31,7 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
         </FlexCol>
         <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Chain Id:</StyledTypographyHeading>
-          <Typography>{chainId ? chainId : 'none'}</Typography>
+          <Chip label={chainId ? chainId : 'unknown'} />
         </FlexCol>
       </FlexRow>
       <Divider flexItem />
