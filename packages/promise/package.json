@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@mui/material": "^5.14.18",
-    "@storybook/react": "^7.6.0",
+    "@storybook/react": "^7.6.1",
     "@xylabs/delay": "^2.13.18",
     "@xylabs/ts-scripts-yarn3": "^3.2.10",
     "@xylabs/tsconfig-react": "^3.2.10",
