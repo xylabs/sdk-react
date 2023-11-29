@@ -1,16 +1,12 @@
-import { CheckCircleOutline } from '@mui/icons-material/'
-import { Alert, AlertTitle, Button, Card, CardActions, CardContent, CardHeader, CardProps, Chip, Divider, styled, Typography } from '@mui/material'
+import { Card, CardProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
-import { FlexRow } from '@xylabs/react-flexbox'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useEthWallet } from '../../hooks'
 import { EIP6963Connector } from '../../third-party'
-
-/**
- * TODO - Decompose top level component that decomposes the props from the class
- *
- */
+import { WalletOverviewCardActions } from './CardActions'
+import { WalletOverviewCardContent } from './CardContent'
+import { WalletOverviewCardHeader } from './CardHeader'
 
 export interface WalletOverviewCardProps extends CardProps {
   ethWalletConnector: EIP6963Connector
@@ -30,73 +26,17 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
     setSignResponse(EthAddress.fromString(signResult))
   }
 
-  const [connecting, setConnecting] = useState(false)
-
-  const approvedAddress = useMemo(() => currentAccount?.toShortString(), [currentAccount])
-
-  const onConnect = async () => {
-    setConnecting(true)
-    try {
-      await connectWallet?.()
-    } catch (e) {
-      console.warn(e)
-    }
-    setConnecting(false)
-  }
-
   return (
     <Card {...props}>
-      <CardHeader
-        avatar={<img style={{ width: '42px' }} src={providerInfo?.icon} />}
-        title={providerName}
-        action={currentAccount ? <CheckCircleOutline color="success" /> : null}
+      <WalletOverviewCardHeader currentAccount={currentAccount} icon={providerInfo?.icon} walletName={providerName} />
+      <WalletOverviewCardContent
+        chainId={chainId}
+        connectError={connectError}
+        connectRefused={connectRefused}
+        currentAccount={currentAccount}
+        signResponse={signResponse}
       />
-      <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        {window.parent !== window ? (
-          <Alert severity={'warning'}>
-            <AlertTitle>Avoid calling wallets inside of iFrames</AlertTitle>
-          </Alert>
-        ) : null}
-        <FlexRow justifyContent="start" gap={2}>
-          <span>
-            <StyledTypographyHeading variant="overline">Wallet Name:</StyledTypographyHeading>
-            <Typography>{providerName}</Typography>
-          </span>
-          <span>
-            <StyledTypographyHeading variant="overline">Chain Id:</StyledTypographyHeading>
-            <Typography>{chainId ? chainId : 'none'}</Typography>
-          </span>
-        </FlexRow>
-        <Divider flexItem />
-        <span>
-          <StyledTypographyHeading variant="overline">Approved Address:</StyledTypographyHeading>
-          <Typography>{approvedAddress ? <Chip label={approvedAddress} /> : 'none'}</Typography>
-        </span>
-        {connectRefused ? (
-          <Alert severity={'error'}>
-            <AlertTitle>Connection Refused</AlertTitle>
-            Error: {connectError?.message}
-          </Alert>
-        ) : null}
-        {signResponse ? (
-          <Alert severity={'success'}>
-            <AlertTitle>Sign Response</AlertTitle>
-            {signResponse.toShortString()}
-          </Alert>
-        ) : null}
-      </CardContent>
-      <CardActions sx={{ justifyContent: 'right' }}>
-        <Button disabled={!currentAccount} variant="contained" onClick={onSign} size="small">
-          Sign Test Message
-        </Button>
-        <Button size="small" disabled={connecting || !!approvedAddress} variant="contained" onClick={onConnect}>
-          {approvedAddress ? 'Connected' : 'Connect'}
-        </Button>
-      </CardActions>
+      <WalletOverviewCardActions connectWallet={connectWallet} currentAccount={currentAccount} onSign={onSign} />
     </Card>
   )
 }
-
-const StyledTypographyHeading = styled(Typography, { name: 'StyledTypographyHeading' })(() => ({
-  opacity: 0.7,
-}))
