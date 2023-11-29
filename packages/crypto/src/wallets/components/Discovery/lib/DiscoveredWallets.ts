@@ -1,5 +1,5 @@
-import { EIP6963ProviderDetail } from '../../../lib'
+import { EIP6963Connector } from '../../../third-party'
 
 export interface DiscoveredWallets {
-  [rdns: string]: EIP6963ProviderDetail
+  [rdns: string]: EIP6963Connector
 }

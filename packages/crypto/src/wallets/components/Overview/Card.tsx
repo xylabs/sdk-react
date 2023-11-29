@@ -1,14 +1,24 @@
-import { Alert, AlertTitle, Button, Card, CardActions, CardContent, CardHeader, CardProps, Divider, styled, Typography } from '@mui/material'
+import { CheckCircleOutline } from '@mui/icons-material/'
+import { Alert, AlertTitle, Button, Card, CardActions, CardContent, CardHeader, CardProps, Chip, Divider, styled, Typography } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { useEffect, useMemo, useState } from 'react'
 
-import { EthWalletWithProviderInfo } from '../../types'
+import { useEthWallet } from '../../hooks'
+import { EIP6963Connector } from '../../third-party'
 
-export interface WalletOverviewCardProps extends EthWalletWithProviderInfo, CardProps {}
+/**
+ * TODO - Decompose top level component that decomposes the props from the class
+ *
+ */
 
-export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWallet, info, ...props }) => {
-  const { connectWallet, connectRefused, chainId, connectError, currentAccount, providerName, signMessage, signerAddress } = ethWallet ?? {}
+export interface WalletOverviewCardProps extends CardProps {
+  ethWalletConnector: EIP6963Connector
+}
+
+export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalletConnector, ...props }) => {
+  const { connectWallet, connectRefused, chainId, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress } =
+    useEthWallet(ethWalletConnector)
   const [signResponse, setSignResponse] = useState<EthAddress>()
 
   useEffect(() => {
@@ -36,7 +46,11 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
 
   return (
     <Card {...props}>
-      <CardHeader avatar={<img style={{ width: '42px' }} src={info?.icon} />} title={providerName} />
+      <CardHeader
+        avatar={<img style={{ width: '42px' }} src={providerInfo?.icon} />}
+        title={providerName}
+        action={currentAccount ? <CheckCircleOutline color="success" /> : null}
+      />
       <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         {window.parent !== window ? (
           <Alert severity={'warning'}>
@@ -56,7 +70,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
         <Divider flexItem />
         <span>
           <StyledTypographyHeading variant="overline">Approved Address:</StyledTypographyHeading>
-          <Typography>{approvedAddress ? approvedAddress : 'none'}</Typography>
+          <Typography>{approvedAddress ? <Chip label={approvedAddress} /> : 'none'}</Typography>
         </span>
         {connectRefused ? (
           <Alert severity={'error'}>

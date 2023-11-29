@@ -1,6 +1,8 @@
+import { BrowserProvider } from 'ethers'
 import { useEffect, useState } from 'react'
 
 import { isEIP6963AnnounceProviderEvent } from '../../../lib'
+import { EIP6963Connector } from '../../../third-party'
 import { DiscoveredWallets } from '../lib'
 
 export const useWalletDiscovery = () => {
@@ -12,10 +14,7 @@ export const useWalletDiscovery = () => {
         const { info, provider } = event.detail
         // capture installed wallets as they come in
         setDiscoveredWallets((previous) => ({
-          [info.rdns]: {
-            info,
-            provider,
-          },
+          [info.rdns]: new EIP6963Connector(new BrowserProvider(provider), provider, info),
           ...previous,
         }))
       }

@@ -16,16 +16,21 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
   ...props
 }) => {
   return discoveredWallets ? (
-    Object.values(discoveredWallets).map(({ info, provider }, index) => (
-      <Fragment key={index}>
-        <StyledMenuItem onClick={() => onWalletSelect?.({ info, provider })} value={info.rdns} {...props}>
-          <ListItemIcon>
-            <StyledImg src={info.icon} />
-          </ListItemIcon>
-          {info.name}
-        </StyledMenuItem>
-      </Fragment>
-    ))
+    Object.values(discoveredWallets).map((eIP6963Connector, index) => {
+      const { providerInfo: info } = eIP6963Connector
+      if (info) {
+        return (
+          <Fragment key={index}>
+            <StyledMenuItem onClick={() => onWalletSelect?.(eIP6963Connector)} value={info.rdns} {...props}>
+              <ListItemIcon>
+                <StyledImg src={info.icon} />
+              </ListItemIcon>
+              {info.name}
+            </StyledMenuItem>
+          </Fragment>
+        )
+      }
+    })
   ) : suppressNoWalletsWarning ? null : (
     <Alert severity={'warning'}>Unable to locate any installed wallets</Alert>
   )

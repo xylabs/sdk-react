@@ -1,10 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { BrowserProvider } from 'ethers'
 import { useState } from 'react'
 
-import { useEIP6963Wallet } from '../../third-party'
-import { SelectedWallet } from '../../types'
+import { EIP6963Connector } from '../../third-party'
 import { WalletOverviewCard } from '../Overview'
 import { onWalletSelect } from './lib'
 import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper'
@@ -24,17 +22,15 @@ const StorybookEntry = {
 } as Meta<typeof WalletDiscoveryPaper>
 
 const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
-  const [selectedWallet, setSelectedWallet] = useState<SelectedWallet>()
-  const onWalletSelect: onWalletSelect = ({ info, provider }) => {
-    const browserProvider = new BrowserProvider(provider)
-    setSelectedWallet({ info, provider: browserProvider, rawProvider: provider })
+  const [selectedWallet, setSelectedWallet] = useState<EIP6963Connector>(new EIP6963Connector())
+  const onWalletSelect: onWalletSelect = (eIP6963Connector) => {
+    setSelectedWallet(eIP6963Connector)
   }
 
-  const hookState = useEIP6963Wallet(selectedWallet)
   return (
     <FlexRow justifyContent="start" alignItems="start" gap={4}>
       <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
-      {selectedWallet ? <WalletOverviewCard {...hookState} sx={{ width: '300px' }} /> : null}
+      {selectedWallet.rawProvider ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} /> : null}
     </FlexRow>
   )
 }
