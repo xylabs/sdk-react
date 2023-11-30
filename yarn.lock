@@ -6202,6 +6202,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wagmi/chains@npm:^1.8.0":
+  version: 1.8.0
+  resolution: "@wagmi/chains@npm:1.8.0"
+  peerDependencies:
+    typescript: ">=5.0.4"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 8248419554a90c0d514acfc46f3a6f2090a282ff546b2488705e81fcdfaf197590e67a1fc62539383b4dd22ccafe9f16018cadad27acee098dc9d87b82f173e4
+  languageName: node
+  linkType: hard
+
 "@webassemblyjs/ast@npm:1.11.6, @webassemblyjs/ast@npm:^1.11.5":
   version: 1.11.6
   resolution: "@webassemblyjs/ast@npm:1.11.6"
@@ -6701,6 +6713,7 @@ __metadata:
     "@mui/icons-material": "npm:^5.14.18"
     "@mui/material": "npm:^5.14.18"
     "@storybook/react": "npm:^7.6.1"
+    "@wagmi/chains": "npm:^1.8.0"
     "@xylabs/assert": "npm:^2.13.18"
     "@xylabs/bignumber": "npm:^2.13.18"
     "@xylabs/eth-address": "npm:^2.13.18"
