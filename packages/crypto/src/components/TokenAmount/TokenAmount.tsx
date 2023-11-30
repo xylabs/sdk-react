@@ -1,17 +1,16 @@
 import { Typography } from '@mui/material'
-import { BigNumber } from '@xylabs/bignumber'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 
 import xyoLogo from './img/xyo.svg'
 import { TokenAmountProps } from './TokenAmountProps'
 
-const base10Shift = (bn: BigNumber, places: number) => {
-  const factor = new BigNumber(10).pow(new BigNumber(Math.abs(places)))
+const base10Shift = (value: bigint, places: number): bigint => {
+  const factor = BigInt(10 ** Math.abs(places))
   if (places > 0) {
-    return bn.mul(factor)
+    return value * factor
   } else {
-    return bn.div(factor)
+    return value / factor
   }
 }
 
@@ -27,9 +26,10 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
   onButtonClick,
   ...props
 }) => {
-  const adjustedAmount = amount ? base10Shift(amount, places).toNumber() : undefined
+  const amountBigInt = amount ? BigInt(amount) : undefined
+  const adjustedAmount = amountBigInt ? base10Shift(amountBigInt, places) : undefined
 
-  const amountString = adjustedAmount === undefined ? '-' : Math.trunc(adjustedAmount).toLocaleString()
+  const amountString = adjustedAmount === undefined ? '-' : adjustedAmount.toString(10)
 
   return (
     <ButtonEx style={{ backgroundColor: statusColor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>

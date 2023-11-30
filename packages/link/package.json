@@ -17,7 +17,7 @@
     "react-router-dom": "^6.20.0"
   },
   "devDependencies": {
-    "@mui/material": "^5.14.18",
+    "@mui/material": "^5.14.19",
     "@xylabs/ts-scripts-yarn3": "^3.2.10",
     "@xylabs/tsconfig-react": "^3.2.10",
     "react": "^18.2.0",
