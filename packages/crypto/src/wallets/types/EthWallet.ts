@@ -8,7 +8,8 @@ import { EIP6963ProviderInfo } from '../lib'
  */
 export interface EthWallet {
   additionalAccounts?: string[]
-  chainId?: number | undefined
+  chainId?: number
+  chainName?: string
   connectError?: Error
   connectRefused?: boolean
   connectWallet?: () => Promise<string[] | null | undefined>

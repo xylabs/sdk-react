@@ -22,7 +22,7 @@ export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({
   }
 
   return (
-    <CardActions sx={{ justifyContent: 'right' }}>
+    <CardActions sx={{ justifyContent: 'center' }}>
       <Button disabled={!currentAccount} variant="contained" onClick={onSign} size="small">
         Sign Test Message
       </Button>

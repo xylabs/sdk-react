@@ -3,7 +3,7 @@ import { EthAddress } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
 export interface WalletOverviewCardContentProps extends CardContentProps {
-  chainId?: number
+  chainName?: string
   connectError?: Error
   connectRefused?: boolean
   currentAccount?: EthAddress
@@ -11,7 +11,7 @@ export interface WalletOverviewCardContentProps extends CardContentProps {
 }
 
 export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps> = ({
-  chainId,
+  chainName,
   connectError,
   connectRefused,
   currentAccount,
@@ -24,14 +24,14 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
           <AlertTitle>Avoid calling wallets inside of iFrames</AlertTitle>
         </Alert>
       ) : null}
-      <FlexRow justifyContent="start" alignItems="start" gap={2}>
+      <FlexRow justifyContent="space-between" alignItems="start" gap={2}>
         <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Approved Address:</StyledTypographyHeading>
           <Chip label={currentAccount ? currentAccount?.toShortString() : 'none'} />
         </FlexCol>
         <FlexCol alignItems="start" justifyContent="start">
-          <StyledTypographyHeading variant="overline">Chain Id:</StyledTypographyHeading>
-          <Chip label={chainId ? chainId : 'unknown'} />
+          <StyledTypographyHeading variant="overline">Chain:</StyledTypographyHeading>
+          <Chip label={chainName ? chainName : 'unknown'} />
         </FlexCol>
       </FlexRow>
       <Divider flexItem />

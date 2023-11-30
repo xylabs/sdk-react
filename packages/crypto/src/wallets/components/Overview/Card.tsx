@@ -12,7 +12,7 @@ export interface WalletOverviewCardProps extends CardProps {
 }
 
 export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalletConnector, ...props }) => {
-  const { connectWallet, connectRefused, chainId, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress } =
+  const { connectWallet, connectRefused, chainName, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress } =
     useEthWallet(ethWalletConnector)
   const [signResponse, setSignResponse] = useState<EthAddress>()
 
@@ -29,7 +29,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
     <Card {...props}>
       <WalletOverviewCardHeader currentAccount={currentAccount} icon={providerInfo?.icon} walletName={providerName} />
       <WalletOverviewCardContent
-        chainId={chainId}
+        chainName={chainName}
         connectError={connectError}
         connectRefused={connectRefused}
         currentAccount={currentAccount}

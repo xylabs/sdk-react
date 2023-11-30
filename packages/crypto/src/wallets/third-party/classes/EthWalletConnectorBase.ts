@@ -1,6 +1,7 @@
 import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
 import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib'
+import { findChainName } from '../../utils'
 
 /**
  * Base class for connecting to an ethereum compatible wallet
@@ -36,6 +37,10 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   get chainId() {
     return this.chainIdHex ? Number(this.chainIdHex) : undefined
+  }
+
+  get chainName() {
+    return this.chainId ? findChainName(this.chainId).name : undefined
   }
 
   abstract get installed(): boolean
