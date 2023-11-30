@@ -2,8 +2,10 @@ import { EthWallet } from '../../types'
 import { useEthWallet } from '../hooks'
 import { PhantomConnector } from './PhantomConnector'
 
-const phantomConnector = new PhantomConnector()
+let phantomConnector: PhantomConnector | undefined
 
 export const usePhantomWallet = (): EthWallet => {
+  if (!phantomConnector) phantomConnector = new PhantomConnector()
+
   return useEthWallet(phantomConnector)
 }
