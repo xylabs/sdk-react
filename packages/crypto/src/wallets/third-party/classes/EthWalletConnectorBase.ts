@@ -1,5 +1,6 @@
 import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
+import { AccountsChangedEventDetails, AccountsChangedEventName, ChainChangedEventDetails, ChainChangedEventName } from '../../events'
 import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib'
 import { findChainName } from '../../utils'
 
@@ -62,6 +63,10 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     return await this.provider?.send('net_version', [])
   }
 
+  emitEvent(eventName: string, customEvent: CustomEventInit) {
+    window.dispatchEvent(new CustomEvent(eventName, customEvent))
+  }
+
   async signMessage(message: string, allowedAccounts?: string) {
     if (!this.provider) {
       this.logProviderMissing()
@@ -103,6 +108,11 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     const listener = (accounts: string[]) => {
       this.allowedAccounts = accounts
       this.accountChangeNotifiers.forEach((listener) => listener())
+
+      const eventDetails: AccountsChangedEventDetails = {
+        detail: { allowedAccounts: accounts, providerName: this.providerName },
+      }
+      this.emitEvent(AccountsChangedEventName, eventDetails)
     }
     this.onAccountsChanged(listener)
   }
@@ -119,6 +129,11 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     const listener = (chainId: string | undefined) => {
       this.chainIdHex = chainId
       this.chainChangedNotifiers.forEach((listener) => listener())
+
+      const eventDetails: ChainChangedEventDetails = {
+        detail: { chainId: this.chainId, providerName: this.providerName },
+      }
+      this.emitEvent(ChainChangedEventName, eventDetails)
     }
     this.onChainChanged(listener)
   }

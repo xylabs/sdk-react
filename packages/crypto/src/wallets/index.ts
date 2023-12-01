@@ -1,4 +1,5 @@
 export * from './components'
+export * from './events'
 export * from './third-party'
 export * from './types'
 export * from './utils'
