@@ -2,14 +2,16 @@ import { BrowserProvider, Eip1193Provider } from 'ethers'
 
 import { EthWalletConnectorBase } from '../classes'
 
+const PROVIDER_NAME = 'Phantom'
+
 export class PhantomConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = 'Phantom'
+  public providerName = PROVIDER_NAME
 
   private ethereum = window.phantom?.ethereum
 
   constructor(provider?: BrowserProvider) {
-    super(['EIP-1193'])
+    super(['EIP-1193'], undefined, PROVIDER_NAME)
     this.init(provider)
   }
 

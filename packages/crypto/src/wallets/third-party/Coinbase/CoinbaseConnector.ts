@@ -3,14 +3,16 @@ import { BrowserProvider } from 'ethers'
 import { EthWalletConnectorBase } from '../classes'
 import { CoinbaseProvider } from './lib'
 
+const PROVIDER_NAME = 'Coinbase'
+
 export class CoinbaseConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = 'Coinbase'
+  public providerName = PROVIDER_NAME
 
   private ethereum = window.ethereum as CoinbaseProvider | undefined
 
   constructor(provider?: BrowserProvider) {
-    super(['EIP-1193'])
+    super(['EIP-1193'], undefined, PROVIDER_NAME)
     this.init(provider)
   }
 

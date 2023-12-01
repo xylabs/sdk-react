@@ -9,6 +9,9 @@ import { SupportedEventProposals } from './SupportedEvents'
  * See - https://eips.ethereum.org/EIPS/eip-1193
  */
 export abstract class EIP1193Events implements EIP1193EventsCompatible {
+  // helpful for crafting debug/error messages to know the injected wallet
+  public _providerName: string | undefined
+
   // list of EIP-1193 specific event names and listeners for easy cleanup
   private eip1193Listeners: [event: EIP1193EventNames, listener: Listener][] = []
 
@@ -17,7 +20,8 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
 
   private listeningProvider: BrowserProvider | undefined
 
-  constructor(supportedEvents?: SupportedEventProposals[], provider?: Eip1193Provider) {
+  constructor(supportedEvents?: SupportedEventProposals[], provider?: Eip1193Provider, providerName?: string) {
+    this._providerName = providerName
     this.eventsEnabled = !!supportedEvents?.includes('EIP-1193')
     if (window.ethereum === undefined && provider === undefined) {
       console.warn('attempting to subscribe to EIP1193 events but missing provider in arguments or at window.ethereum')
@@ -61,7 +65,14 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
 
   private enabled(method?: () => void) {
     if (this.eventsEnabled) {
-      method?.()
+      // Not all injected providers fail gracefully so we can prevent their errors from bubbling up
+      // This might not be the best long-term solution but logging for now should surface which wallet
+      // and method combinations cause the most issues.
+      try {
+        method?.()
+      } catch (e) {
+        console.warn(`Error calling method on the raw provider: ${this._providerName}`, e)
+      }
     } else {
       console.warn('EIP1193 events not enabled')
     }

@@ -3,14 +3,16 @@ import { BrowserProvider } from 'ethers'
 
 import { EthWalletConnectorBase } from '../classes'
 
+const PROVIDER_NAME = 'MetaMask'
+
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = 'Meta Mask'
+  public providerName = 'MetaMask'
 
   private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
 
   constructor(provider?: BrowserProvider) {
-    super(['EIP-1193'])
+    super(['EIP-1193'], undefined, PROVIDER_NAME)
     this.init(provider)
   }
 

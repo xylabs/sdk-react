@@ -7,7 +7,7 @@ import { findChainName } from '../../utils'
  * Base class for connecting to an ethereum compatible wallet
  */
 export abstract class EthWalletConnectorBase extends EIP1193Events {
-  // current address enabled in metamask
+  // allowed accounts according to the wallet
   allowedAccounts: string[] = []
 
   // instance of Ethers BrowserProvider
@@ -31,8 +31,8 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   // Name of the Provider
   abstract providerName: string
 
-  constructor(supportedEvents?: SupportedEventProposals[], rawProvider?: Eip1193Provider) {
-    super(supportedEvents, rawProvider)
+  constructor(supportedEvents?: SupportedEventProposals[], rawProvider?: Eip1193Provider, providerName?: string) {
+    super(supportedEvents, rawProvider, providerName)
   }
 
   get chainId() {
