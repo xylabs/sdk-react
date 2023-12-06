@@ -4,6 +4,11 @@ import { AccountsChangedEventName, ChainChangedEventName } from '../../events'
 import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib'
 import { findChainName } from '../../utils'
 
+export interface ProviderErrorLogEntry {
+  error: Error
+  providerName: string
+}
+
 /**
  * Base class for connecting to an ethereum compatible wallet
  */
@@ -13,6 +18,8 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   // instance of Ethers BrowserProvider
   provider: BrowserProvider | undefined
+
+  providerErrorLog: ProviderErrorLogEntry[] = []
 
   // Assets provided by the wallet
   providerInfo: EIP6963ProviderInfo | undefined
@@ -56,11 +63,11 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   }
 
   async currentAccounts(): Promise<string[] | undefined> {
-    return await this.provider?.send('eth_accounts', [])
+    return await this.tryRpcSendCall<string[] | undefined>('eth_accounts')
   }
 
   async currentChainId() {
-    return await this.provider?.send('net_version', [])
+    return await this.tryRpcSendCall<string | undefined>('net_version')
   }
 
   async signMessage(message: string, allowedAccounts?: string) {
@@ -126,6 +133,10 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     this.onChainChanged(listener)
   }
 
+  private logProviderErrors(error: Error) {
+    this.providerErrorLog.push({ error, providerName: this.providerName })
+  }
+
   private logProviderMissing() {
     console.warn('Cannot call this method because there is no browser provider connected.  Please confirm that metamask is installed')
   }
@@ -139,6 +150,16 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
     // Allow anyone to listen for changes
     window.dispatchEvent(new CustomEvent(eventName, details))
+  }
+
+  private async tryRpcSendCall<TReturn = unknown>(method: string, params = []): Promise<TReturn | undefined> {
+    try {
+      const result = await this.provider?.send(method, params)
+      return result as TReturn
+    } catch (e) {
+      console.warn(`Error calling ${method} from ${this.providerName}`, e)
+      this.logProviderErrors(e as Error)
+    }
   }
 
   // Since init likely relies on derived class members, derived classes must implement it
