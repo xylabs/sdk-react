@@ -1,4 +1,4 @@
-import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
+import { BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener } from 'ethers'
 
 import { AccountsChangedEventName, ChainChangedEventName } from '../../events'
 import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib'
@@ -53,7 +53,10 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   abstract get installed(): boolean
 
-  async connectWallet() {
+  /**
+   * Request to enable accounts in the wallet
+   */
+  async connectWallet(): Promise<string[] | null | undefined> {
     if (!this.provider) {
       this.logProviderMissing()
       return
@@ -62,29 +65,53 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     return await this.provider.send('eth_requestAccounts', [])
   }
 
+  /**
+   * Request the current active allowed from the wallet
+   */
   async currentAccounts(): Promise<string[] | undefined> {
     return await this.tryRpcSendCall<string[] | undefined>('eth_accounts')
   }
 
+  /**
+   * Request the current chain id selection on the wallet
+   */
   async currentChainId() {
     return await this.tryRpcSendCall<string | undefined>('net_version')
   }
 
-  async signMessage(message: string, allowedAccounts?: string) {
+  /**
+   * Sign a string with a specific account enabled in the wallet
+   *
+   * @param message Message to sign with the signer
+   * @param allowedAccount Account being used to sign the message
+   */
+  async signMessage(message: string, allowedAccount?: string) {
     if (!this.provider) {
       this.logProviderMissing()
       return
     }
 
-    const signer = await this.signerFromAddress(allowedAccounts)
+    const signer = await this.signerFromAddress(allowedAccount)
     const signature = await signer?.signMessage(message)
     return signature
   }
 
-  async signerFromAddress(address?: string) {
+  /**
+   * Get a signer from a given address
+   *
+   * @param address Fetch a signer for a given address
+   */
+  async signerFromAddress(address?: string): Promise<JsonRpcSigner | undefined> {
     return await this.provider?.getSigner(address)
   }
 
+  /**
+   * Pass a callback to be notified when accounts are changed
+   * Note: This is a notifier so it does not return updated values so check the allowed accounts
+   * after the passed listener is invoked
+   *
+   * @param listener A notify function that will be called when allowed accounts change
+   */
   subscribeToAccountsChanges(listener: () => void) {
     this.accountChangeNotifiers = [listener, ...this.accountChangeNotifiers]
     return () => {
@@ -92,6 +119,13 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     }
   }
 
+  /**
+   * Pass a callback to be notified when chainId is changed
+   * Note: This is a notifier so it does not return updated values so check the chainId
+   * after the passed listener is invoked
+   *
+   * @param listener A notify function that will be called when chainId changes
+   */
   subscribeToChainChanges(listener: () => void) {
     this.chainChangedNotifiers = [listener, ...this.chainChangedNotifiers]
     return () => {

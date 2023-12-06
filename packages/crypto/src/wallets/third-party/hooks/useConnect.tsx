@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react'
 
 import { EthWalletConnectorBase } from '../classes'
 
-const checkAccounts = (accounts: string[] | null) => {
+const checkAccounts = (accounts: string[] | null | undefined) => {
   // We could have multiple accounts. Check for one.
   if (accounts && accounts?.length !== 0) {
     console.log('Connected: ', accounts[0])
