@@ -55,6 +55,8 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   /**
    * Request to enable accounts in the wallet
+   * Note: This call is not wrapped in a try/catch by design.  Errors from connecting to a wallet can be intentional behavior
+   * (i.e. the user rejected the request to connect).  Handle errors in the calling code.
    */
   async connectWallet(): Promise<string[] | null | undefined> {
     if (!this.provider) {
