@@ -1,13 +1,9 @@
 import { BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener } from 'ethers'
+import { LRUCache } from 'lru-cache'
 
 import { AccountsChangedEventName, ChainChangedEventName } from '../../events'
 import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib'
 import { findChainName } from '../../utils'
-
-export interface ProviderErrorLogEntry {
-  error: Error
-  providerName: string
-}
 
 /**
  * Base class for connecting to an ethereum compatible wallet
@@ -19,7 +15,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   // instance of Ethers BrowserProvider
   provider: BrowserProvider | undefined
 
-  providerErrorLog: ProviderErrorLogEntry[] = []
+  providerErrorLog = new LRUCache<string, Error>({ max: 300 })
 
   // Assets provided by the wallet
   providerInfo: EIP6963ProviderInfo | undefined
@@ -170,7 +166,8 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   }
 
   private logProviderErrors(error: Error) {
-    this.providerErrorLog.push({ error, providerName: this.providerName })
+    const timestamp = Date.now()
+    this.providerErrorLog.set(`${this.providerName} - ${timestamp}`, error)
   }
 
   private logProviderMissing() {

@@ -65,16 +65,7 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
 
   private enabled(method?: () => void) {
     if (this.eventsEnabled) {
-      // Not all injected providers fail gracefully so we can prevent their errors from bubbling up
-      // This might not be the best long-term solution but logging for now should surface which wallet
-      // and method combinations cause the most issues.
-      try {
-        method?.()
-      } catch (e) {
-        console.warn(`Error calling method on the raw provider: ${this._providerName}`, e)
-      }
-    } else {
-      console.warn('EIP1193 events not enabled')
+      method?.()
     }
   }
 }
