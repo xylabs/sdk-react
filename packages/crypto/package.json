@@ -23,13 +23,14 @@
     "@xylabs/react-identicon": "workspace:~",
     "@xylabs/react-promise": "workspace:~",
     "ethers": "^6.9.0",
-    "react-router-dom": "^6.20.0"
+    "lru-cache": "^10.1.0",
+    "react-router-dom": "^6.20.1"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@mui/icons-material": "^5.14.19",
-    "@mui/material": "^5.14.19",
-    "@storybook/react": "^7.6.3",
+    "@mui/material": "^5.14.20",
+    "@storybook/react": "^7.6.4",
     "@xylabs/ts-scripts-yarn3": "^3.2.10",
     "@xylabs/tsconfig-react": "^3.2.10",
     "react": "^18.2.0",

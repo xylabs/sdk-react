@@ -17,8 +17,8 @@
     "async-mutex": "^0.4.0"
   },
   "devDependencies": {
-    "@mui/material": "^5.14.19",
-    "@storybook/react": "^7.6.3",
+    "@mui/material": "^5.14.20",
+    "@storybook/react": "^7.6.4",
     "@xylabs/delay": "^2.13.20",
     "@xylabs/ts-scripts-yarn3": "^3.2.10",
     "@xylabs/tsconfig-react": "^3.2.10",
