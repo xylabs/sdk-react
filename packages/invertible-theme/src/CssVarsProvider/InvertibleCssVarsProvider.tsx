@@ -1,4 +1,5 @@
 import { Experimental_CssVarsProvider as CssVarsProvider, responsiveFontSizes, useColorScheme } from '@mui/material'
+import type {} from '@mui/material/themeCssVarsAugmentation'
 import { ReactNode, useEffect } from 'react'
 
 import { InvertibleCssVarsProvider, Mode } from './InvertibleCssVars'
