@@ -2,119 +2,119 @@ import { SnapchatStandardEvent } from './StandardEvent'
 import { SnapchatStandardProperties } from './StandardProperties'
 
 export class SnapchatStandardEvents<T extends SnapchatStandardProperties> {
-  public achievementUnlocked() {
+  achievementUnlocked() {
     return new SnapchatStandardEvent<T>('ACHIEVEMENT_UNLOCKED')
   }
 
-  public adClick() {
+  adClick() {
     return new SnapchatStandardEvent<T>('AD_CLICK')
   }
 
-  public adView() {
+  adView() {
     return new SnapchatStandardEvent<T>('AD_VIEW')
   }
 
-  public addBilling() {
+  addBilling() {
     return new SnapchatStandardEvent<T>('ADD_BILLING')
   }
 
-  public addCart() {
+  addCart() {
     return new SnapchatStandardEvent<T>('ADD_CART')
   }
 
-  public addToWishlist() {
+  addToWishlist() {
     return new SnapchatStandardEvent<T>('ADD_TO_WISHLIST')
   }
 
-  public completeTutorial() {
+  completeTutorial() {
     return new SnapchatStandardEvent<T>('COMPLETE_TUTORIAL')
   }
 
-  public custom1() {
+  custom1() {
     return new SnapchatStandardEvent<T>('CUSTOM_EVENT_1')
   }
 
-  public custom2() {
+  custom2() {
     return new SnapchatStandardEvent<T>('CUSTOM_EVENT_2')
   }
 
-  public custom3() {
+  custom3() {
     return new SnapchatStandardEvent<T>('CUSTOM_EVENT_3')
   }
 
-  public custom4() {
+  custom4() {
     return new SnapchatStandardEvent<T>('CUSTOM_EVENT_4')
   }
 
-  public custom5() {
+  custom5() {
     return new SnapchatStandardEvent<T>('CUSTOM_EVENT_5')
   }
 
-  public invite() {
+  invite() {
     return new SnapchatStandardEvent<T>('INVITE')
   }
 
-  public listView() {
+  listView() {
     return new SnapchatStandardEvent<T>('LIST_VIEW')
   }
 
-  public login() {
+  login() {
     return new SnapchatStandardEvent<T>('LOGIN')
   }
 
-  public openApp() {
+  openApp() {
     return new SnapchatStandardEvent<T>('OPEN_APP')
   }
 
-  public pageView() {
+  pageView() {
     return new SnapchatStandardEvent<T>('PAGE_VIEW')
   }
 
-  public purchase() {
+  purchase() {
     return new SnapchatStandardEvent<T>('PURCHASE')
   }
 
-  public rate() {
+  rate() {
     return new SnapchatStandardEvent<T>('RATE')
   }
 
-  public reserve() {
+  reserve() {
     return new SnapchatStandardEvent<T>('RESERVE')
   }
 
-  public save() {
+  save() {
     return new SnapchatStandardEvent<T>('SAVE')
   }
 
-  public search() {
+  search() {
     return new SnapchatStandardEvent<T>('SEARCH')
   }
 
-  public share() {
+  share() {
     return new SnapchatStandardEvent<T>('SHARE')
   }
 
-  public signUp() {
+  signUp() {
     return new SnapchatStandardEvent<T>('SIGN_UP')
   }
 
-  public spentCredits() {
+  spentCredits() {
     return new SnapchatStandardEvent<T>('SPENT_CREDITS')
   }
 
-  public startCheckout() {
+  startCheckout() {
     return new SnapchatStandardEvent<T>('START_CHECKOUT')
   }
 
-  public startTrial() {
+  startTrial() {
     return new SnapchatStandardEvent<T>('START_TRIAL')
   }
 
-  public subscribe() {
+  subscribe() {
     return new SnapchatStandardEvent<T>('SUBSCRIBE')
   }
 
-  public viewContent() {
+  viewContent() {
     return new SnapchatStandardEvent<T>('VIEW_CONTENT')
   }
 }

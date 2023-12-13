@@ -4,8 +4,8 @@ import { delay } from '@xylabs/delay'
 import { Fbq } from './Fbq'
 
 class FacebookBaseEvent<T> {
-  public fbq: Fbq
-  public name: string
+  fbq: Fbq
+  name: string
 
   constructor(name: string) {
     this.name = name

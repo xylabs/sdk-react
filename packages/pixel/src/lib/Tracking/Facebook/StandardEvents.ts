@@ -60,75 +60,75 @@ export interface FacebookSubscribe extends FacebookValueProperties {
 export type FacebookViewContent = FacebookCartProperties
 
 export class FacebookStandardEvents<T extends Record<string, unknown>> {
-  public addPaymentInfo() {
+  addPaymentInfo() {
     return new FacebookStandardEvent<FacebookAddPaymentInfo | T>('AddPaymentInfo')
   }
 
-  public addToCart() {
+  addToCart() {
     return new FacebookStandardEvent<FacebookAddToCart | T>('AddToCart')
   }
 
-  public addToWishList() {
+  addToWishList() {
     return new FacebookStandardEvent<FacebookAddToWishList | T>('AddToWishList')
   }
 
-  public completedRegistration() {
+  completedRegistration() {
     return new FacebookStandardEvent<FacebookCompleteRegistration | T>('CompleteRegistration')
   }
 
-  public contact() {
+  contact() {
     return new FacebookStandardEvent<T>('Contact')
   }
 
-  public customizeProduct() {
+  customizeProduct() {
     return new FacebookStandardEvent<T>('CustomizeProduct')
   }
 
-  public donate() {
+  donate() {
     return new FacebookStandardEvent<T>('Donate')
   }
 
-  public findLocation() {
+  findLocation() {
     return new FacebookStandardEvent<T>('FindLocation')
   }
 
-  public initiateCheckout() {
+  initiateCheckout() {
     return new FacebookStandardEvent<FacebookInitiateCheckout | T>('InitiateCheckout')
   }
 
-  public lead() {
+  lead() {
     return new FacebookStandardEvent<FacebookLead | T>('Lead')
   }
 
-  public pageView() {
+  pageView() {
     return new FacebookStandardEvent<T>('PageView')
   }
 
-  public purchase() {
+  purchase() {
     return new FacebookStandardEvent<FacebookPurchase | T>('Purchase')
   }
 
-  public schedule() {
+  schedule() {
     return new FacebookStandardEvent<T>('Schedule')
   }
 
-  public search() {
+  search() {
     return new FacebookStandardEvent<FacebookSearch | T>('Search')
   }
 
-  public startTrial() {
+  startTrial() {
     return new FacebookStandardEvent<FacebookStartTrial | T>('StartTrial')
   }
 
-  public submitApplication() {
+  submitApplication() {
     return new FacebookStandardEvent<T>('SubmitApplication')
   }
 
-  public subscribe() {
+  subscribe() {
     return new FacebookStandardEvent<FacebookSubscribe | T>('Subscribe')
   }
 
-  public viewContent() {
+  viewContent() {
     return new FacebookStandardEvent<FacebookViewContent | T>('ViewContent')
   }
 }

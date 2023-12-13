@@ -4,8 +4,8 @@ import { delay } from '@xylabs/delay'
 import { Rdt } from './Rdt'
 
 class RedditBaseEvent<T> {
-  public name: string
-  public rdt: Rdt
+  name: string
+  rdt: Rdt
   constructor(name: string) {
     this.name = name
     this.rdt = assertEx(Rdt.instance, 'Missing Rdt')

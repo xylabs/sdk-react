@@ -4,8 +4,8 @@ import { delay } from '@xylabs/delay'
 import { EF } from './EF'
 
 class TapjoyBaseEvent<T> {
-  public ef: EF
-  public name: string
+  ef: EF
+  name: string
 
   constructor(name: string) {
     this.name = name

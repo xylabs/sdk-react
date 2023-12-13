@@ -4,18 +4,18 @@ import { Gtag } from './Gtag'
 import { Gtm } from './Gtm'
 
 export class GoogleBaseEvent<T extends Record<string, unknown>> {
-  public name: string
+  name: string
   protected adwordConversionId?: string
   constructor(name: string, adwordConversionId?: string) {
     this.name = name
     this.adwordConversionId = adwordConversionId
   }
 
-  public gtag() {
+  gtag() {
     return assertEx(Gtag.instance, 'Missing/uninitialized gtag')
   }
 
-  public gtm() {
+  gtm() {
     return assertEx(Gtm.instance, 'Missing/uninitialized gtm')
   }
 

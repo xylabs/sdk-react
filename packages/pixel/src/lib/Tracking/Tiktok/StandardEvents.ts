@@ -1,67 +1,67 @@
 import { TiktokStandardEvent } from './StandardEvent'
 
 export class TiktokStandardEvents<T extends Record<string, unknown>> {
-  public addBilling() {
+  addBilling() {
     return new TiktokStandardEvent<T>('AddBilling')
   }
 
-  public addToCart() {
+  addToCart() {
     return new TiktokStandardEvent<T>('AddToCart')
   }
 
-  public checkout() {
+  checkout() {
     return new TiktokStandardEvent<T>('Checkout')
   }
 
-  public clickButton() {
+  clickButton() {
     return new TiktokStandardEvent<T>('ClickButton')
   }
 
-  public clickForm() {
+  clickForm() {
     return new TiktokStandardEvent<T>('ClickForm')
   }
 
-  public clickInDownloadPage() {
+  clickInDownloadPage() {
     return new TiktokStandardEvent<T>('ClickInDownloadPage')
   }
 
-  public clickToDownload() {
+  clickToDownload() {
     return new TiktokStandardEvent<T>('ClickToDownload')
   }
 
-  public pageView() {
+  pageView() {
     return new TiktokStandardEvent<T>('Browse')
   }
 
-  public purchase() {
+  purchase() {
     return new TiktokStandardEvent<T>('Purchase')
   }
 
-  public registration() {
+  registration() {
     return new TiktokStandardEvent<T>('Registration')
   }
 
-  public search() {
+  search() {
     return new TiktokStandardEvent<T>('Search')
   }
 
-  public startCheckout() {
+  startCheckout() {
     return new TiktokStandardEvent<T>('StartCheckout')
   }
 
-  public submitForm() {
+  submitForm() {
     return new TiktokStandardEvent<T>('SubmitForm')
   }
 
-  public viewContent() {
+  viewContent() {
     return new TiktokStandardEvent<T>('ViewContent')
   }
 
-  public viewDownloadPage() {
+  viewDownloadPage() {
     return new TiktokStandardEvent<T>('ViewDownloadPage')
   }
 
-  public viewForm() {
+  viewForm() {
     return new TiktokStandardEvent<T>('ViewForm')
   }
 }

@@ -10,7 +10,7 @@ import { SupportedEventProposals } from './SupportedEvents'
  */
 export abstract class EIP1193Events implements EIP1193EventsCompatible {
   // helpful for crafting debug/error messages to know the injected wallet
-  public _providerName: string | undefined
+  _providerName: string | undefined
 
   // list of EIP-1193 specific event names and listeners for easy cleanup
   private eip1193Listeners: [event: EIP1193EventNames, listener: Listener][] = []

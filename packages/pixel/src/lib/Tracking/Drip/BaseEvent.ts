@@ -3,10 +3,10 @@ import { delay } from '@xylabs/delay'
 export type DripEvent<T extends Record<string, unknown>> = (string | T)[]
 
 export class DripBaseEvent<T extends Record<string, unknown>> {
-  public dcq: DripEvent<T>[]
-  public dcs: unknown
-  public name: string
-  public param?: string
+  dcq: DripEvent<T>[]
+  dcs: unknown
+  name: string
+  param?: string
 
   constructor(name: string, param?: string) {
     this.name = name
@@ -15,7 +15,7 @@ export class DripBaseEvent<T extends Record<string, unknown>> {
     this.dcs = this.getDcs()
   }
 
-  public async send(data: T) {
+  async send(data: T) {
     const payload: (string | T)[] = [this.name]
     if (this.param) {
       payload.push(this.param)

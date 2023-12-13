@@ -1,7 +1,7 @@
 class Ttq {
-  public static instance: Ttq
+  static instance: Ttq
 
-  public static getTtq() {
+  static getTtq() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
     if (global.ttq) {
@@ -10,7 +10,7 @@ class Ttq {
     console.warn('Missing ttq')
   }
 
-  public static init(pixelId: string) {
+  static init(pixelId: string) {
     try {
       Ttq.instance = new Ttq()
       Ttq.getTtq().load(pixelId)
@@ -20,7 +20,7 @@ class Ttq {
     }
   }
 
-  public static page() {
+  static page() {
     try {
       Ttq.getTtq().page()
     } catch (ex) {
@@ -28,7 +28,7 @@ class Ttq {
     }
   }
 
-  public track(event: string, data?: Record<string, unknown>) {
+  track(event: string, data?: Record<string, unknown>) {
     try {
       Ttq.getTtq().track(event, {
         ...data,

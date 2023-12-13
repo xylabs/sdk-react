@@ -1,7 +1,7 @@
 export class Referrer {
   private static storageId = '_coin_referrer'
-  public local: string
-  public session: string
+  local: string
+  session: string
   constructor() {
     this.session = this.getFromSession() ?? document.referrer
     sessionStorage.setItem(Referrer.storageId, this.session)
@@ -9,7 +9,7 @@ export class Referrer {
     localStorage.setItem(Referrer.storageId, this.local)
   }
 
-  public toJson() {
+  toJson() {
     if ((this.local && this.local.length > 0) || (this.session && this.session.length > 0)) {
       return {
         local: this.local,

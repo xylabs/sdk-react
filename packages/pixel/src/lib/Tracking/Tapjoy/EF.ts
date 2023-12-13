@@ -1,7 +1,7 @@
 class EF {
-  public static instance: EF
+  static instance: EF
 
-  public static getEF() {
+  static getEF() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
     if (global.EF) {
@@ -10,7 +10,7 @@ class EF {
     console.warn('Missing EF')
   }
 
-  public static init() {
+  static init() {
     try {
       EF.instance = new EF()
     } catch (ex) {
@@ -18,7 +18,7 @@ class EF {
     }
   }
 
-  public track(event: string, data?: Record<string, unknown>) {
+  track(event: string, data?: Record<string, unknown>) {
     switch (event) {
       case 'Purchase':
         this.sendConversion(data)

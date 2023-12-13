@@ -1,8 +1,8 @@
 class Fbq {
-  public static instance: Fbq
+  static instance: Fbq
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public fbq?: any
-  public pixelId?: string
+  fbq?: any
+  pixelId?: string
 
   private constructor(pixelId: string) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -27,14 +27,14 @@ class Fbq {
     this.fbq('track', 'PageView')
   }
 
-  public static init(pixelId: string) {
+  static init(pixelId: string) {
     if (!this.instance) {
       this.instance = new Fbq(pixelId)
     }
     return this.instance
   }
 
-  public track(event: string, data: Record<string, unknown>, eventID?: string) {
+  track(event: string, data: Record<string, unknown>, eventID?: string) {
     this.fbq(
       'track',
       event,
@@ -45,7 +45,7 @@ class Fbq {
     )
   }
 
-  public trackCustom(event: string, data: Record<string, unknown>, eventID?: string) {
+  trackCustom(event: string, data: Record<string, unknown>, eventID?: string) {
     this.fbq(
       'trackCustom',
       event,

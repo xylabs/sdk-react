@@ -109,123 +109,123 @@ export interface GoogleRefundProperties extends GoogleValueProperties, GoogleIte
 }
 
 export class GoogleStandardEvents<T extends Record<string, unknown>> {
-  public addPaymentInfo() {
+  addPaymentInfo() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleAddPaymentInfoProperties | T>('add_paymennt_info')
   }
 
-  public addShippingInfo() {
+  addShippingInfo() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleAddShippingInfoProperties | T>('add_shipping_info')
   }
 
-  public addToCart() {
+  addToCart() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleAddToCartProperties | T>('add_to_cart')
   }
 
-  public addToWishList() {
+  addToWishList() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleAddToWishlistProperties | T>('add_to_wishlist')
   }
 
-  public beginCheckout() {
+  beginCheckout() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleBeginCheckoutProperties | T>('begin_checkout')
   }
 
-  public earnVirtualCurrency() {
+  earnVirtualCurrency() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleEarnVirtualCurrencyProperties | T>('earn_virtual_currency')
   }
 
-  public generateLead() {
+  generateLead() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleValueProperties | T>('generate_lead')
   }
 
-  public joinGroup() {
+  joinGroup() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleJoinGroupProperties | T>('join_group')
   }
 
-  public levelEnd() {
+  levelEnd() {
     return new GoogleStandardEvent<GoogleBaseProperties | { level_name?: string; success?: boolean } | T>('level_end')
   }
 
-  public levelStart() {
+  levelStart() {
     return new GoogleStandardEvent<GoogleBaseProperties | { level_name?: string } | T>('level_start')
   }
 
-  public levelUp() {
+  levelUp() {
     return new GoogleStandardEvent<GoogleBaseProperties | { character?: string; level?: number } | T>('level_up')
   }
 
-  public login() {
+  login() {
     return new GoogleStandardEvent<GoogleBaseProperties | { method?: string } | T>('login')
   }
 
-  public postScore() {
+  postScore() {
     return new GoogleStandardEvent<GoogleBaseProperties | { character?: string; level?: number; score: number } | T>('post_score')
   }
 
-  public purchase() {
+  purchase() {
     return new GoogleStandardEvent<GoogleBaseProperties | GooglePurchaseProperties | T>('purchase')
   }
 
-  public refund() {
+  refund() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleRefundProperties | T>('refund')
   }
 
-  public removeFromCart() {
+  removeFromCart() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleRemoveFromCartProperties | T>('remove_from_cart')
   }
 
-  public search() {
+  search() {
     return new GoogleStandardEvent<GoogleBaseProperties | { search_term?: string } | T>('search')
   }
 
-  public selectContent() {
+  selectContent() {
     return new GoogleStandardEvent<GoogleBaseProperties | { content_type?: string; item_id?: string } | T>('select_content')
   }
 
-  public selectItem() {
+  selectItem() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleSelectItemProperties | T>('select_item')
   }
 
-  public selectPromotion() {
+  selectPromotion() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleSelectPromotionProperties | T>('select_promotion')
   }
 
-  public share() {
+  share() {
     return new GoogleStandardEvent<GoogleBaseProperties | { content_is?: string; content_type?: string; method?: string } | T>('share')
   }
 
-  public signUp() {
+  signUp() {
     return new GoogleStandardEvent<GoogleBaseProperties | { method?: string } | T>('sign_up')
   }
 
-  public spendVirtualCurrency() {
+  spendVirtualCurrency() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleSpendVirtualCurrencyProperties | T>('spend_virtual_currency')
   }
 
-  public tutorialBegin() {
+  tutorialBegin() {
     return new GoogleStandardEvent<GoogleBaseProperties | T>('tutorial_begin')
   }
 
-  public tutorialComplete() {
+  tutorialComplete() {
     return new GoogleStandardEvent<GoogleBaseProperties | T>('tutorial_complete')
   }
 
-  public unlockAchievement() {
+  unlockAchievement() {
     return new GoogleStandardEvent<GoogleBaseProperties | { achievement_id: string } | T>('unlock_achievement')
   }
 
-  public viewCart() {
+  viewCart() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleViewCartProperties | T>('view_cart')
   }
 
-  public viewItem() {
+  viewItem() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleViewItemProperties | T>('view_item')
   }
 
-  public viewItemList() {
+  viewItemList() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleViewItemListProperties | T>('view_item_list')
   }
 
-  public viewPromotion() {
+  viewPromotion() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleViewPromotionProperties | T>('view_promotion')
   }
 }

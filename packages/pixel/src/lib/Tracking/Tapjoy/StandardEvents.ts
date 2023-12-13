@@ -1,7 +1,7 @@
 import { TapjoyStandardEvent } from './StandardEvent'
 
 class TapjoyStandardEvents<T extends Record<string, unknown>> {
-  public accountCreated() {
+  accountCreated() {
     return new TapjoyStandardEvent<T>('Conversion')
   }
 }

@@ -2,13 +2,13 @@ import { assertEx } from '@xylabs/assert'
 import queryString from 'query-string'
 
 class Gtag {
-  public static instance: Gtag
-  public awid?: string
-  public domains?: string[]
-  public ga4id?: string
+  static instance: Gtag
+  awid?: string
+  domains?: string[]
+  ga4id?: string
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  public gtag?: any
+  gtag?: any
 
   private constructor(ga4id: string, awid: string, domains?: string[]) {
     this.ga4id = ga4id
@@ -36,43 +36,43 @@ class Gtag {
     sessionStorage.setItem('initialPage', document.location.href)
   }
 
-  public static clearDataLayer() {
+  static clearDataLayer() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
     const dataLayer = global.dataLayer as []
     dataLayer.length = 0
   }
 
-  public static getInitialPage() {
+  static getInitialPage() {
     return sessionStorage.getItem('initialPage') || ''
   }
 
-  public static getInitialQuery() {
+  static getInitialQuery() {
     return sessionStorage.getItem('initialQuery') || ''
   }
 
-  public static getInitialReferrer() {
+  static getInitialReferrer() {
     return sessionStorage.getItem('initialReferrer') || ''
   }
 
-  public static init(ga4id: string, awid: string, domains?: string[]) {
+  static init(ga4id: string, awid: string, domains?: string[]) {
     if (!this.instance) {
       return this.reinit(ga4id, awid, domains)
     }
     return this.instance
   }
 
-  public static reinit(ga4id: string, awid: string, domains?: string[]) {
+  static reinit(ga4id: string, awid: string, domains?: string[]) {
     this.instance = new Gtag(ga4id, awid, domains)
     return this.instance
   }
 
-  public static updatePagePath(page_path: string) {
+  static updatePagePath(page_path: string) {
     const instance = assertEx(this.instance, 'Not initialized')
     return instance.updatePagePath(page_path)
   }
 
-  public sendAdwords(event: string, data: Record<string, unknown>) {
+  sendAdwords(event: string, data: Record<string, unknown>) {
     return new Promise<void>((resolve) => {
       this.gtag('event', 'conversion', {
         ...data,
@@ -85,7 +85,7 @@ class Gtag {
     })
   }
 
-  public sendAnalytics(event: string, data: Record<string, unknown>) {
+  sendAnalytics(event: string, data: Record<string, unknown>) {
     return new Promise<void>((resolve) => {
       this.gtag('event', event, {
         ...data,
@@ -100,7 +100,7 @@ class Gtag {
     })
   }
 
-  public updatePagePath(page_path: string) {
+  updatePagePath(page_path: string) {
     const ga4id = assertEx(this.ga4id, 'Missing GA4ID')
     const pathOnly = page_path.split('?')[0]
     const search = Gtag.getInitialQuery()

@@ -1,7 +1,7 @@
 import { delay } from '@xylabs/delay'
 
 class SnapchatBaseEvent<T> {
-  public name: string
+  name: string
   constructor(name: string) {
     this.name = name
   }

@@ -1,6 +1,6 @@
 class Rdt {
-  public static instance: Rdt
-  public static init(pixelId: string) {
+  static instance: Rdt
+  static init(pixelId: string) {
     try {
       Rdt.instance = new Rdt()
       Rdt.instance.load(pixelId)
@@ -19,7 +19,7 @@ class Rdt {
     console.warn('Missing rdt')
   }
 
-  public load(id: string) {
+  load(id: string) {
     try {
       Rdt.getRdt()('init', id)
     } catch (ex) {
@@ -27,7 +27,7 @@ class Rdt {
     }
   }
 
-  public track(event: string, data?: Record<string, unknown>) {
+  track(event: string, data?: Record<string, unknown>) {
     try {
       Rdt.getRdt()('track', event, {
         ...data,

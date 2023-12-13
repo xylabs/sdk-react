@@ -1,35 +1,35 @@
 import { RedditStandardEvent } from './StandardEvent'
 
 class RedditStandardEvents<T extends Record<string, unknown>> {
-  public addToCart() {
+  addToCart() {
     return new RedditStandardEvent<T>('AddToCart')
   }
 
-  public addToWishlist() {
+  addToWishlist() {
     return new RedditStandardEvent<T>('AddToWishlist')
   }
 
-  public lead() {
+  lead() {
     return new RedditStandardEvent<T>('Lead')
   }
 
-  public pageView() {
+  pageView() {
     return new RedditStandardEvent<T>('PageView')
   }
 
-  public purchase() {
+  purchase() {
     return new RedditStandardEvent<T>('Purchase')
   }
 
-  public search() {
+  search() {
     return new RedditStandardEvent<T>('Search')
   }
 
-  public signup() {
+  signup() {
     return new RedditStandardEvent<T>('SignUp')
   }
 
-  public viewContent() {
+  viewContent() {
     return new RedditStandardEvent<T>('ViewContent')
   }
 }
