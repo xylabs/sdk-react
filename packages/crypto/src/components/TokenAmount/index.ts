@@ -1,5 +1,2 @@
-import { TokenAmount } from './TokenAmount'
-import { TokenAmountProps } from './TokenAmountProps'
-
-export { TokenAmount }
-export type { TokenAmountProps }
+export { TokenAmount } from './TokenAmount'
+export { type TokenAmountProps } from './TokenAmountProps'

@@ -22,7 +22,7 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
   let { fg } = props
   const hash = md5(value)
   const block = Math.floor(size / count)
-  const hashcolor = hash.slice(0, 6)
+  const hashColor = hash.slice(0, 6)
 
   const current = canvas.current
 
@@ -30,20 +30,16 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
     return
   }
 
-  if (palette && palette.length) {
-    const index = Math.floor(range(parseInt(hash.slice(-3), 16), 0, 4095, 0, palette.length))
+  if (palette && palette.length > 0) {
+    const index = Math.floor(range(Number.parseInt(hash.slice(-3), 16), 0, 4095, 0, palette.length))
     fg = palette[index]
   }
 
   current.width = block * count + iconPadding
   current.height = block * count + iconPadding
-  const arr = hash.split('').map((el) => {
-    const parsedEl = parseInt(el, 16)
-    if (parsedEl < 8) {
-      return 0
-    } else {
-      return 1
-    }
+  const arr = [...hash].map((el) => {
+    const parsedEl = Number.parseInt(el, 16)
+    return parsedEl < 8 ? 0 : 1
   })
 
   const map = []
@@ -57,17 +53,17 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
     ctx.imageSmoothingEnabled = false
     ctx.clearRect(0, 0, current.width, current.height)
 
-    map.forEach((row, i) => {
-      row.forEach((el, j) => {
+    for (const [i, row] of map.entries()) {
+      for (const [j, el] of row.entries()) {
         if (el) {
-          ctx.fillStyle = fg ? fg : '#' + hashcolor
+          ctx.fillStyle = fg ?? '#' + hashColor
           ctx.fillRect(block * i + iconPadding, block * j + iconPadding, block - iconPadding, block - iconPadding)
         } else {
           ctx.fillStyle = bg
           ctx.fillRect(block * i + iconPadding, block * j + iconPadding, block - iconPadding, block - iconPadding)
         }
-      })
-    })
+      }
+    }
   }
 }
 

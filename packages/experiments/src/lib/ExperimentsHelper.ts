@@ -73,6 +73,7 @@ const ExperimentsHelper = {
       localStorage
         .getItem(key)
         ?.split('|')
+        // eslint-disable-next-line unicorn/no-array-reduce
         .reduce(
           (acc, current) => {
             const data = current.split('-')

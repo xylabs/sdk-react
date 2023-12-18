@@ -7,7 +7,7 @@ const PROVIDER_NAME = 'Coinbase'
 
 export class CoinbaseConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = PROVIDER_NAME
+  providerName = PROVIDER_NAME
 
   private ethereum = window.ethereum as CoinbaseProvider | undefined
 

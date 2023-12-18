@@ -53,7 +53,7 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
   }
 
   removeEIP11193Listeners() {
-    this.eip1193Listeners.forEach(([event, listener]) => this.listeningProvider?.removeListener(event, listener))
+    for (const [event, listener] of this.eip1193Listeners) this.listeningProvider?.removeListener(event, listener)
   }
 
   private addListener(event: EIP1193EventNames, listener: Listener) {

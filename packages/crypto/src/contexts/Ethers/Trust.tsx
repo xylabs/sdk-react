@@ -1,3 +1,4 @@
+/* eslint-disable import/no-deprecated */
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, JsonRpcSigner } from 'ethers'

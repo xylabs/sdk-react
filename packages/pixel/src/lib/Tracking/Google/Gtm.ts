@@ -9,7 +9,7 @@ class Gtm {
     this.containerId = containerId
     const global = window as WithDataLayer
     global.dataLayer = global.dataLayer || []
-    global.dataLayer.push({ event: 'gtm.js', 'gtm.start': new Date().getTime() })
+    global.dataLayer.push({ event: 'gtm.js', 'gtm.start': Date.now() })
   }
 
   static clearDataLayer() {

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-deprecated */
 import { Typography, useMediaQuery, useTheme } from '@mui/material'
 import { assertEx } from '@xylabs/assert'
 import { EthAddress } from '@xylabs/eth-address'
@@ -45,7 +46,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
     <FlexRow height={height} justifyContent="space-between" alignItems="stretch" {...props}>
       {icon ? (
         <Identicon
-          minWidth={iconSize + parseInt(theme.spacing(1).substring(-2))}
+          minWidth={iconSize + Number.parseInt(theme.spacing(1))}
           bgcolor={theme.palette.secondary.main}
           size={iconSize}
           value={address?.toHex()}

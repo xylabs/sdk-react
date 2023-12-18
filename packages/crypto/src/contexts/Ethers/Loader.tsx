@@ -1,3 +1,4 @@
+/* eslint-disable import/no-deprecated */
 import { ReactNode } from 'react'
 
 import { InfuraEthersLoader } from './Infura'

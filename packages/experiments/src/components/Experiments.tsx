@@ -37,6 +37,7 @@ const loadExperimentsTestData = (key: string) => {
     localStorage
       .getItem(key)
       ?.split('|')
+      // eslint-disable-next-line unicorn/no-array-reduce
       .reduce(
         (acc, current) => {
           const data = current.split('-')
@@ -50,11 +51,7 @@ const loadExperimentsTestData = (key: string) => {
 const missingKeyError = new Error('Experiment Elements must have Keys')
 
 const makeChildrenArray = (children: ReactElement<ExperimentProps>[] | ReactElement<ExperimentProps>) => {
-  if (Array.isArray(children)) {
-    return children as ReactElement<ExperimentProps>[]
-  } else {
-    return [children] as ReactElement<ExperimentProps>[]
-  }
+  return Array.isArray(children) ? (children as ReactElement<ExperimentProps>[]) : ([children] as ReactElement<ExperimentProps>[])
 }
 
 const buildLocalStorageKey = (localStorageProp: boolean | string) => {

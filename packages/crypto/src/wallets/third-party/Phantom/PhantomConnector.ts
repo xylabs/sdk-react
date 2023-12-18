@@ -6,7 +6,7 @@ const PROVIDER_NAME = 'Phantom'
 
 export class PhantomConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = PROVIDER_NAME
+  providerName = PROVIDER_NAME
 
   private ethereum = window.phantom?.ethereum
 

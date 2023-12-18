@@ -44,7 +44,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   }
 
   get chainName() {
-    return this.chainId ? findChainName(this.chainId).name : undefined
+    return this.chainId ? findChainName(this.chainId)?.name : undefined
   }
 
   abstract get installed(): boolean
@@ -175,7 +175,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   }
 
   private notifySubscribers(listeners: Listener[], eventName: string, value: { [key: string]: unknown }) {
-    listeners.forEach((listener) => listener())
+    for (const listener of listeners) listener()
 
     const details = {
       detail: { ...value, providerName: this.providerName },

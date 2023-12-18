@@ -5,7 +5,7 @@ import { TrustProvider } from './lib'
 
 export class TrustConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = 'Trust'
+  providerName = 'Trust'
 
   // instance of provider with Trust specific methods
   private ethereum = window.ethereum as TrustProvider | undefined

@@ -14,15 +14,15 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "react-router-dom": "^6.20.1"
+    "react-router-dom": "^6.21.0"
   },
   "devDependencies": {
     "@mui/material": "^5.15.0",
-    "@xylabs/ts-scripts-yarn3": "^3.2.19",
-    "@xylabs/tsconfig-react": "^3.2.19",
+    "@xylabs/ts-scripts-yarn3": "^3.2.24",
+    "@xylabs/tsconfig-react": "^3.2.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.1",
+    "react-router-dom": "^6.21.0",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

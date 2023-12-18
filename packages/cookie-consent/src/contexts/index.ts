@@ -1,5 +1,3 @@
-import { CookieConsentContext } from './Context'
-import { CookieConsentLoader } from './Loader'
-import { useCookieConsent } from './use'
-
-export { CookieConsentContext, CookieConsentLoader, useCookieConsent }
+export { CookieConsentContext } from './Context'
+export { CookieConsentLoader } from './Loader'
+export { useCookieConsent } from './use'

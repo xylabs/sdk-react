@@ -12,7 +12,7 @@ const ExperimentsDebugger: React.FC = ({ ...props }) => {
   const sumUpVariants = (items: VariantData[]) => items.reduce((acc, curr) => acc + curr.weight, 0)
   const experimentEntries = Object.entries(experiments)
 
-  if (!experiments || !experimentEntries.length) {
+  if (!experiments || experimentEntries.length === 0) {
     return (
       <FlexCol alignItems="stretch" {...props}>
         <Typography variant="subtitle1">No Experiments loaded</Typography>

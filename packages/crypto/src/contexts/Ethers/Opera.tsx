@@ -1,3 +1,4 @@
+/* eslint-disable import/no-deprecated */
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, JsonRpcSigner } from 'ethers'
@@ -21,7 +22,7 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     (global.ethereum?.addresses?.length ?? 0) > 0 ? EthAddress.fromString(global.ethereum?.addresses?.[0]) : undefined,
   )
 
-  const chainId = ethereum?.chainId ? parseInt(ethereum?.chainId) : 1
+  const chainId = ethereum?.chainId ? Number.parseInt(ethereum?.chainId) : 1
   const isConnected = ethereum?.isConnected() ?? false
 
   useAsyncEffect(

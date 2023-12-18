@@ -19,11 +19,11 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
 }) => {
   return (
     <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-      {window.parent !== window ? (
+      {window.parent === window ? null : (
         <Alert severity={'warning'}>
           <AlertTitle>Avoid calling wallets inside of iFrames</AlertTitle>
         </Alert>
-      ) : null}
+      )}
       <FlexRow justifyContent="space-between" alignItems="start" gap={2}>
         <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Approved Address:</StyledTypographyHeading>
@@ -31,7 +31,7 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
         </FlexCol>
         <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Chain:</StyledTypographyHeading>
-          <Chip label={chainName ? chainName : 'unknown'} />
+          <Chip label={chainName ?? 'unknown'} />
         </FlexCol>
       </FlexRow>
       <Divider flexItem />

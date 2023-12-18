@@ -1,5 +1,2 @@
-import { BasePage } from './BasePage'
-import { BasePageProps } from './BasePageProps'
-
-export { BasePage }
-export type { BasePageProps }
+export { BasePage } from './BasePage'
+export { type BasePageProps } from './BasePageProps'

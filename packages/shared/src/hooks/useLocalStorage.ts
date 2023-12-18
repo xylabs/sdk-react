@@ -10,13 +10,13 @@ export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T)
         return item
       } else if (Array.isArray(item)) {
         return item
-      } else if (Object.keys(item as object).length) {
+      } else if (Object.keys(item as object).length > 0) {
         return item
       } else {
         setLocalStorageObject(key, defaultValue)
         return defaultValue
       }
-    } catch (ex) {
+    } catch {
       //Error is already logged
       return defaultValue
     }

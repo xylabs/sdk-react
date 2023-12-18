@@ -13,7 +13,7 @@ const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({ bgcolor, style,
     <Box
       display="flex"
       flexDirection="column"
-      bgcolor={alpha(bgcolor ?? theme.palette.background.default, parseFloat(`${opacity}`))}
+      bgcolor={alpha(bgcolor ?? theme.palette.background.default, Number.parseFloat(`${opacity}`))}
       position="absolute"
       left={0}
       right={0}

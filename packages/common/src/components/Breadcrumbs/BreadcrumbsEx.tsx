@@ -28,7 +28,7 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
 }) => {
   const pathParts = path.split('/')
   //if the url has a trailing '/', remove the last part
-  if (pathParts[pathParts.length - 1]?.length === 0) {
+  if (pathParts.at(-1)?.length === 0) {
     pathParts.pop()
   }
 

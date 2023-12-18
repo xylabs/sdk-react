@@ -1,3 +1,2 @@
-import { NetworkSettingsContext } from './Context'
+export { NetworkSettingsContext } from './Context'
 export * from './Loader'
-export { NetworkSettingsContext }

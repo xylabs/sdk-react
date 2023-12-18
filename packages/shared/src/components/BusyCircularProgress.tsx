@@ -13,7 +13,7 @@ const BusyCircularProgress: React.FC<BusyCircularProgressProps> = ({ bgcolor, st
   return (
     <Box
       display="flex"
-      bgcolor={alpha(bgcolor ?? theme.palette.background.default, parseFloat(`${opacity}`))}
+      bgcolor={alpha(bgcolor ?? theme.palette.background.default, Number.parseFloat(`${opacity}`))}
       flexGrow={1}
       position="absolute"
       left={0}

@@ -7,7 +7,7 @@ const PROVIDER_NAME = 'MetaMask'
 
 export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider
-  public providerName = 'MetaMask'
+  providerName = 'MetaMask'
 
   private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
 

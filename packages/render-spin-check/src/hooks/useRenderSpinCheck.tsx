@@ -19,7 +19,11 @@ export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: Rende
   const [error, setError] = useState<Error>()
 
   useEffect(() => {
-    if (!error) {
+    if (error) {
+      if (!config?.reportOnce) {
+        console.warn(error.message)
+      }
+    } else {
       const spinCount = spinCountMap.get(startTime) ?? 0
       if (spinCount > (config?.minSamples ?? 20)) {
         const elapsedTime = Date.now() - startTime
@@ -34,10 +38,6 @@ export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: Rende
         }
       }
       spinCountMap.set(startTime, spinCount + 1)
-    } else {
-      if (!config?.reportOnce) {
-        console.warn(error.message)
-      }
     }
 
     return () => {

@@ -2,16 +2,13 @@ import { Typography } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 
+// eslint-disable-next-line import/no-internal-modules
 import xyoLogo from './img/xyo.svg'
 import { TokenAmountProps } from './TokenAmountProps'
 
 const base10Shift = (value: bigint, places: number): bigint => {
   const factor = BigInt(10 ** Math.abs(places))
-  if (places > 0) {
-    return value * factor
-  } else {
-    return value / factor
-  }
+  return places > 0 ? value * factor : value / factor
 }
 
 export const TokenAmount: React.FC<TokenAmountProps> = ({

@@ -24,15 +24,15 @@
     "@xylabs/react-promise": "workspace:~",
     "ethers": "^6.9.0",
     "lru-cache": "^10.1.0",
-    "react-router-dom": "^6.20.1"
+    "react-router-dom": "^6.21.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
-    "@storybook/react": "^7.6.4",
-    "@xylabs/ts-scripts-yarn3": "^3.2.19",
-    "@xylabs/tsconfig-react": "^3.2.19",
+    "@storybook/react": "^7.6.5",
+    "@xylabs/ts-scripts-yarn3": "^3.2.24",
+    "@xylabs/tsconfig-react": "^3.2.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3"

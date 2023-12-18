@@ -6,7 +6,7 @@ import { EthWalletConnectorBase } from '../classes'
 const checkAccounts = (accounts: string[] | null | undefined) => {
   // We could have multiple accounts. Check for one.
   if (accounts && accounts?.length !== 0) {
-    console.log('Connected: ', accounts[0])
+    console.log('Connected:', accounts[0])
     return accounts
   } else {
     console.log('No authorized account found.')

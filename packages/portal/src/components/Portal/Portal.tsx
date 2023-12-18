@@ -13,9 +13,9 @@ export const Portal: React.FC<PortalProps> = ({ children, className, el = 'div',
     if (!targetElement) {
       console.warn(`Unable to find target element: ${target}`)
     }
-    targetElement?.appendChild(container)
+    targetElement?.append(container)
     return () => {
-      targetElement?.removeChild(container)
+      container.remove()
     }
   }, [container, target])
 

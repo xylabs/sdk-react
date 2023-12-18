@@ -20,11 +20,13 @@ class EF {
 
   track(event: string, data?: Record<string, unknown>) {
     switch (event) {
-      case 'Purchase':
+      case 'Purchase': {
         this.sendConversion(data)
         break
-      default:
+      }
+      default: {
         console.error(`EF.track: missing event ${event}`)
+      }
     }
   }
 

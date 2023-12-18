@@ -1,3 +1,4 @@
+/* eslint-disable import/no-deprecated */
 import { BrowserProvider, InfuraProvider } from 'ethers'
 import React, { PropsWithChildren } from 'react'
 

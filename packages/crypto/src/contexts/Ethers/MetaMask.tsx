@@ -1,3 +1,4 @@
+/* eslint-disable import/no-deprecated */
 import React, { PropsWithChildren } from 'react'
 
 import { useMetaMask } from '../../wallets'

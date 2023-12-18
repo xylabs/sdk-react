@@ -43,7 +43,7 @@ export const PixelDebugger: React.FC = () => {
                   XY Pixel Debugger
                 </ButtonEx>
               </FlexCol>
-              {displayEvents && !!events.length && (
+              {displayEvents && events.length > 0 && (
                 <FlexCol
                   alignItems="stretch"
                   alignContent="start"
@@ -55,7 +55,7 @@ export const PixelDebugger: React.FC = () => {
                   ))}
                 </FlexCol>
               )}
-              {displayEvents && !events.length && <Typography variant="subtitle2">No Events</Typography>}
+              {displayEvents && events.length === 0 && <Typography variant="subtitle2">No Events</Typography>}
             </FlexCol>
           </Card>
         </Badge>

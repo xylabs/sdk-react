@@ -25,7 +25,8 @@ export class EthWalletConnections {
     }
   }
 
-  public onDestroy() {
+  onDestroy() {
+    // eslint-disable-next-line unicorn/no-invalid-remove-event-listener
     window.removeEventListener('eip6963:announceProvider', this.newWalletListener.bind(this))
   }
 

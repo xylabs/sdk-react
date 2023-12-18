@@ -1,5 +1,6 @@
 import { delay } from '@xylabs/delay'
 
+// eslint-disable-next-line unicorn/no-static-only-class
 class SnapTr {
   static instance: SnapTr
   static getSnapTr() {

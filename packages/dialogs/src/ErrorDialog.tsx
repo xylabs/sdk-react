@@ -53,9 +53,5 @@ const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
 }
 
 export const ErrorDialog: React.FC<ErrorDialogProps> = ({ open, error, ...props }) => {
-  if (error) {
-    return <ErrorDialogOpen open={!!error || open} error={error} {...props} />
-  } else {
-    return null
-  }
+  return error ? <ErrorDialogOpen open={!!error || open} error={error} {...props} /> : null
 }
