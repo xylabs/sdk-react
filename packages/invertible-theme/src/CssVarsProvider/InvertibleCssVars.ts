@@ -4,7 +4,7 @@ import { CssVarsTheme, Theme } from '@mui/material'
 export type CssVarsThemeObject = Omit<Theme, 'palette'> & CssVarsTheme
 export type Mode = 'light' | 'dark' | 'system'
 
-export interface InvertibleCssVarsProvider {
+export interface InvertibleCssVarsProviderInterface {
   defaultMode?: Mode
   noResponsiveFontSizes?: boolean
   syncAppSettings?: boolean

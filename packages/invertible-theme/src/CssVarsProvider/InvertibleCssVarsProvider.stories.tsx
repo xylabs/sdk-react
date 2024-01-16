@@ -1,21 +1,21 @@
 import { Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 
-import { InvertableCssVarsProvider } from './InvertibleCssVarsProvider'
+import { InvertibleCssVarsProvider } from './InvertibleCssVarsProvider'
 import { useColorSchemeEx } from './useColorSchemeEx'
 
 const StorybookEntry = {
   argTypes: {},
-  component: InvertableCssVarsProvider,
+  component: InvertibleCssVarsProvider,
   parameters: {
     docs: {
       page: null,
     },
   },
-  title: 'invertible-theme/InvertableCssVarsProvider',
-} as Meta<typeof InvertableCssVarsProvider>
+  title: 'invertible-theme/InvertibleCssVarsProvider',
+} as Meta<typeof InvertibleCssVarsProvider>
 
-const Template: StoryFn<typeof InvertableCssVarsProvider> = (args) => <InvertableCssVarsProvider {...args} />
+const Template: StoryFn<typeof InvertibleCssVarsProvider> = (args) => <InvertibleCssVarsProvider {...args} />
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
