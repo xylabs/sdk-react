@@ -22,6 +22,7 @@ const handleActionRejected = (e: unknown, rejectCallback: (e: JsonRpcError['erro
   }
 }
 
+/** Initiate a connection to the passed in wallet */
 export const useConnectWallet = (ethWalletConnector: EthWalletConnectorBase) => {
   const [connectRefused, setConnectRefused] = useState(false)
   const [connectError, setConnectError] = useState<Error>()

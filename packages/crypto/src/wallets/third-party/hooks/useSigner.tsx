@@ -4,6 +4,7 @@ import { JsonRpcSigner } from 'ethers'
 
 import { EthWalletConnectorBase } from '../classes'
 
+/** Locate the signer on the passed wallet for a given address */
 export const useSigner = (ethWalletConnector: EthWalletConnectorBase, localAddress?: EthAddress): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {
     if (ethWalletConnector.installed) {
