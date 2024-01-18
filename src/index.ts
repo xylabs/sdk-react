@@ -1,4 +1,5 @@
 export * from '@xylabs/react-accordion'
+export * from '@xylabs/react-animation'
 export * from '@xylabs/react-appbar'
 export * from '@xylabs/react-async-effect'
 export * from '@xylabs/react-button'

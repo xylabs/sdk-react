@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "typeRoots": []
+  },
+  "exclude": ["dist", "docs"],
+  "extends": "@xylabs/tsconfig-react"
+}
