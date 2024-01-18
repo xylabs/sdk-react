@@ -15,7 +15,7 @@
   "dependencies": {
     "@xylabs/lodash": "^2.13.23",
     "@xylabs/react-animation": "workspace:~",
-    "@xylabs/react-flexbox": "^3.0.38"
+    "@xylabs/react-flexbox": "^3.0.39"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
@@ -78,6 +78,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.38",
+  "version": "3.0.39",
   "type": "module"
 }
