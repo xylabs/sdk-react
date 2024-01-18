@@ -13,11 +13,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/lodash": "^2.13.23"
+    "@xylabs/lodash": "^2.13.23",
+    "@xylabs/react-animation": "workspace:~",
+    "@xylabs/react-flexbox": "^3.0.36"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.15.4",
+    "@mui/icons-material": "^5",
+    "@mui/material": "^5",
     "@storybook/react": "^7.6.8",
     "@xylabs/ts-scripts-yarn3": "^3.2.41",
     "@xylabs/tsconfig-react": "^3.2.41",
@@ -26,6 +29,7 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
+    "@mui/icons-material": "^5",
     "@mui/material": "^5",
     "react": "^18",
     "react-dom": "^18"

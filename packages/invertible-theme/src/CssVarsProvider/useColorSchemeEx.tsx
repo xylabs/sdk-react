@@ -1,7 +1,6 @@
 import { useColorScheme } from '@mui/material'
 import { useMemo } from 'react'
 
-// A hook with a similar interface to the darkMode app setting to make migrating easier.
 export const useColorSchemeEx = () => {
   const { mode, setMode, systemMode } = useColorScheme()
 
