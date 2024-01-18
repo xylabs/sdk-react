@@ -25,13 +25,19 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
   toggleMode,
   ...props
 }) => {
-  const [iconColor, setIconColor] = useState<iconColor>('inherit')
-  const [iconColorIsSet, setIconColorIsSet] = useState(false)
   const darkModeIconColor = defaultDarkModeColor ?? 'inherit'
   const lightModeIconColor = defaultLightModeColor ?? 'inherit'
+  const [iconColor, setIconColor] = useState<iconColor>(darkMode ? defaultDarkModeColor : defaultLightModeColor)
+  const [iconColorIsSet, setIconColorIsSet] = useState(false)
 
   const handleHover = () => {
-    setIconColor(darkMode ? (iconColorIsSet ? darkModeIconColor : 'info') : iconColorIsSet ? lightModeIconColor : 'warning')
+    setIconColor(() => {
+      if (darkMode) {
+        return iconColorIsSet ? darkModeIconColor : 'info'
+      } else {
+        return iconColorIsSet ? lightModeIconColor : 'warning'
+      }
+    })
     setIconColorIsSet(!iconColorIsSet)
   }
 
