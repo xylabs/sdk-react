@@ -38,7 +38,7 @@ const ThemeEnabledComponent = () => {
           </Button>
           <Button onClick={() => setMode('system')}>System</Button>
         </ButtonGroup>
-        <Stack direction={'row'} gap={1}><p>DarkModeIconButton:</p><DarkModeIconButtonForColorScheme /></Stack>
+        <Stack direction={'row'} gap={1}><p>DarkModeIconButton:</p><DarkModeIconButtonForColorScheme defaultLightModeColor={'default'} /></Stack>
         <Box sx={{ backgroundColor: theme.palette.background.default }}>
           <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
             <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>

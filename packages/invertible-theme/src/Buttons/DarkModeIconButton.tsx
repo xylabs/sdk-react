@@ -8,17 +8,30 @@ import { useColorSchemeEx } from '../CssVarsProvider'
 
 type iconColor = IconButtonProps['color']
 
-export interface DarkModeIconButtonProps extends IconButtonProps {
+interface DefaultModeColors {
+  defaultDarkModeColor?: IconButtonProps['color']
+  defaultLightModeColor?: IconButtonProps['color']
+}
+
+export interface DarkModeIconButtonProps extends IconButtonProps, DefaultModeColors {
   darkMode?: boolean
   toggleMode?: () => void
 }
 
-export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({ darkMode, toggleMode, ...props }) => {
+export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
+  darkMode,
+  defaultDarkModeColor,
+  defaultLightModeColor,
+  toggleMode,
+  ...props
+}) => {
   const [iconColor, setIconColor] = useState<iconColor>('inherit')
   const [iconColorIsSet, setIconColorIsSet] = useState(false)
+  const darkModeIconColor = defaultDarkModeColor ?? 'inherit'
+  const lightModeIconColor = defaultLightModeColor ?? 'inherit'
 
   const handleHover = () => {
-    setIconColor(darkMode ? (iconColorIsSet ? 'inherit' : 'info') : iconColorIsSet ? 'inherit' : 'warning')
+    setIconColor(darkMode ? (iconColorIsSet ? darkModeIconColor : 'info') : iconColorIsSet ? lightModeIconColor : 'warning')
     setIconColorIsSet(!iconColorIsSet)
   }
 
@@ -37,7 +50,9 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({ darkMode
   )
 }
 
-export const DarkModeIconButtonForColorScheme: React.FC<IconButtonProps> = (props) => {
+export interface DarkModeIconButtonForColorSchemeProps extends DefaultModeColors, IconButtonProps {}
+
+export const DarkModeIconButtonForColorScheme: React.FC<DarkModeIconButtonForColorSchemeProps> = (props) => {
   const { darkMode, setMode } = useColorSchemeEx()
   const toggleMode = () => setMode(darkMode ? 'light' : 'dark')
 
