@@ -6863,7 +6863,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@npm:^3.0.36, @xylabs/react-flexbox@workspace:packages/flexbox, @xylabs/react-flexbox@workspace:~":
+"@xylabs/react-flexbox@npm:^3.0.37, @xylabs/react-flexbox@workspace:packages/flexbox, @xylabs/react-flexbox@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
@@ -6919,7 +6919,7 @@ __metadata:
     "@storybook/react": "npm:^7.6.10"
     "@xylabs/lodash": "npm:^2.13.23"
     "@xylabs/react-animation": "workspace:~"
-    "@xylabs/react-flexbox": "npm:^3.0.36"
+    "@xylabs/react-flexbox": "npm:^3.0.37"
     "@xylabs/ts-scripts-yarn3": "npm:^3.2.41"
     "@xylabs/tsconfig-react": "npm:^3.2.41"
     react: "npm:^18.2.0"
