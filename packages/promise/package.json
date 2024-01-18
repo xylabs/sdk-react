@@ -14,11 +14,11 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "async-mutex": "^0.4.0"
+    "async-mutex": "^0.4.1"
   },
   "devDependencies": {
-    "@mui/material": "^5.15.4",
-    "@storybook/react": "^7.6.8",
+    "@mui/material": "^5.15.5",
+    "@storybook/react": "^7.6.10",
     "@xylabs/delay": "^2.13.23",
     "@xylabs/ts-scripts-yarn3": "^3.2.41",
     "@xylabs/tsconfig-react": "^3.2.41",
