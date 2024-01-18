@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "@metamask/providers": "^14.0.2",
+    "@mui/icons-material": "^5.15.5",
     "@wagmi/chains": "^1.8.0",
     "@xylabs/assert": "^2.13.23",
     "@xylabs/eth-address": "^2.13.23",

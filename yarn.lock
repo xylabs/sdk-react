@@ -6766,6 +6766,7 @@ __metadata:
   resolution: "@xylabs/react-crypto@workspace:packages/crypto"
   dependencies:
     "@metamask/providers": "npm:^14.0.2"
+    "@mui/icons-material": "npm:^5.15.5"
     "@mui/material": "npm:^5.15.5"
     "@storybook/react": "npm:^7.6.10"
     "@wagmi/chains": "npm:^1.8.0"
