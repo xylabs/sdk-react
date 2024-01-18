@@ -6766,7 +6766,6 @@ __metadata:
   resolution: "@xylabs/react-crypto@workspace:packages/crypto"
   dependencies:
     "@metamask/providers": "npm:^14.0.2"
-    "@mui/icons-material": "npm:^5.15.5"
     "@mui/material": "npm:^5.15.5"
     "@storybook/react": "npm:^7.6.10"
     "@wagmi/chains": "npm:^1.8.0"
@@ -6786,6 +6785,7 @@ __metadata:
     react-router-dom: "npm:^6.21.3"
     typescript: "npm:^5.3.3"
   peerDependencies:
+    "@mui/icons-material": ^5.15.5
     "@mui/material": ^5
     react: ^18
     react-dom: ^18
@@ -6809,6 +6809,7 @@ __metadata:
   peerDependencies:
     "@mui/material": ^5
     "@mui/styles": ^5
+    axios: ^1.6.5
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -6880,6 +6881,7 @@ __metadata:
   peerDependencies:
     "@mui/material": ^5
     "@mui/styles": ^5
+    "@mui/system": ^5
     react: ^18
     react-dom: ^18
   peerDependenciesMeta:
@@ -7192,6 +7194,7 @@ __metadata:
     "@xylabs/eslint-config-react": "npm:^3.2.41"
     "@xylabs/pixel": "npm:^1.4.14"
     "@xylabs/react-accordion": "workspace:~"
+    "@xylabs/react-animation": "workspace:~"
     "@xylabs/react-appbar": "workspace:~"
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-button": "workspace:~"
