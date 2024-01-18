@@ -14,7 +14,6 @@
   ],
   "dependencies": {
     "@metamask/providers": "^14.0.2",
-    "@mui/icons-material": "^5.15.5",
     "@wagmi/chains": "^1.8.0",
     "@xylabs/assert": "^2.13.23",
     "@xylabs/eth-address": "^2.13.23",
@@ -29,6 +28,7 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
+    "@mui/icons-material": "^5.15.5",
     "@mui/material": "^5.15.5",
     "@storybook/react": "^7.6.10",
     "@xylabs/ts-scripts-yarn3": "^3.2.41",
