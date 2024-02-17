@@ -35,7 +35,7 @@ export const EthAccountButton: React.FC<EthAccountButtonProps & ButtonExProps> =
 
   return (
     <ButtonEx onClick={onClickLocal} title={`0x${address?.toHex()}`} {...props}>
-      {icon ? (
+      {icon ?
         <FlexRow position="absolute" top={0} left={0} bottom={0} paddingX={0.5} bgcolor={theme.palette.secondary.main}>
           <Identicon
             minHeight={theme.spacing(3)}
@@ -45,7 +45,7 @@ export const EthAccountButton: React.FC<EthAccountButtonProps & ButtonExProps> =
             value={address?.toHex()}
           />
         </FlexRow>
-      ) : null}
+      : null}
       <EthAccountBox
         marginLeft={icon ? 3 : 0}
         address={address}

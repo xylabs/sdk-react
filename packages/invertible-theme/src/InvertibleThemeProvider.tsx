@@ -62,11 +62,9 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
     )
   }
 
-  return scoped ? (
-    <ScopedCssBaseline>
-      <Provider />
-    </ScopedCssBaseline>
-  ) : (
-    <Provider />
-  )
+  return scoped ?
+      <ScopedCssBaseline>
+        <Provider />
+      </ScopedCssBaseline>
+    : <Provider />
 }

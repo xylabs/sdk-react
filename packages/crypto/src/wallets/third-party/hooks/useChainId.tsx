@@ -16,7 +16,9 @@ export const useChainId = (ethWalletConnector: EthWalletConnectorBase) => {
       }
     }
     return {
+      // eslint-disable-next-line unicorn/no-useless-undefined
       getSnapShot: () => undefined,
+      // eslint-disable-next-line unicorn/no-useless-undefined
       subscribe: () => () => undefined,
     }
   }, [ethWalletConnector])

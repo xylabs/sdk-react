@@ -38,15 +38,17 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
   const localAddress = useMemo(() => currentAccount?.toString(), [currentAccount])
   return (
     <FlexCol alignItems="start" gap={2}>
-      {noIFrames && window.parent !== window ? (
+      {noIFrames && window.parent !== window ?
         <Alert severity={'warning'}>
           <AlertTitle>Must test outside of iframe</AlertTitle>
           The {providerName} wallet does not allow the the permissions for to work from a nested iframe. Look for the <OpenInNewOutlined /> icon in
           the upper right.
         </Alert>
-      ) : null}
+      : null}
       <FlexCol alignItems="start" gap={2}>
-        {window.ethereum ? <Alert>Found window.ethereum</Alert> : null}
+        {window.ethereum ?
+          <Alert>Found window.ethereum</Alert>
+        : null}
         <FlexRow justifyContent="start" gap={2}>
           <Button variant="contained" onClick={async () => await connectWallet?.()}>
             Connect
@@ -55,12 +57,12 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
             Sign
           </Button>
         </FlexRow>
-        {signResponse ? (
+        {signResponse ?
           <Alert severity={'success'}>
             <AlertTitle>Sign Response</AlertTitle>
             {signResponse.toShortString()}
           </Alert>
-        ) : null}
+        : null}
         <Typography variant="h6" mb={0}>
           Provider Details
         </Typography>

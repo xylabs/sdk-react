@@ -14,7 +14,9 @@ const AppBarExInner: React.FC<AppBarExProps> = ({ children, menu, contextToolbar
         {systemToolbar ?? <Toolbar />}
         {menu}
       </FlexRow>
-      {belowSm && children && responsive ? <Toolbar>{children}</Toolbar> : null}
+      {belowSm && children && responsive ?
+        <Toolbar>{children}</Toolbar>
+      : null}
     </>
   )
 }
@@ -22,13 +24,11 @@ const AppBarExInner: React.FC<AppBarExProps> = ({ children, menu, contextToolbar
 export const AppBarEx: React.FC<AppBarExProps> = ({ container, children, menu, contextToolbar, systemToolbar, responsive, ...props }) => {
   return (
     <AppBar position="static" {...props}>
-      {container ? (
+      {container ?
         <Container maxWidth={container}>
           <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />
         </Container>
-      ) : (
-        <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />
-      )}
+      : <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />}
     </AppBar>
   )
 }

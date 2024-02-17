@@ -36,18 +36,18 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
       </FlexRow>
       <Divider flexItem />
 
-      {connectRefused ? (
+      {connectRefused ?
         <Alert severity={'error'}>
           <AlertTitle>Connection Refused</AlertTitle>
           Error: {connectError?.message}
         </Alert>
-      ) : null}
-      {signResponse ? (
+      : null}
+      {signResponse ?
         <Alert severity={'success'}>
           <AlertTitle>Sign Response</AlertTitle>
           {signResponse.toShortString()}
         </Alert>
-      ) : null}
+      : null}
     </CardContent>
   )
 }

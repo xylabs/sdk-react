@@ -13,11 +13,11 @@ const ErrorsViewer: React.FC<ErrorsViewerProps> = (props) => {
       {errors?.map((error, index) => {
         return <ErrorViewer error={error} key={index} />
       })}
-      {onRetry ? (
+      {onRetry ?
         <IconButton onClick={onRetry}>
           <ReplayIcon />
         </IconButton>
-      ) : null}
+      : null}
     </FlexGrowCol>
   )
 }

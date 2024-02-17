@@ -55,7 +55,11 @@ const makeChildrenArray = (children: ReactElement<ExperimentProps>[] | ReactElem
 }
 
 const buildLocalStorageKey = (localStorageProp: boolean | string) => {
-  return localStorageProp === true ? defaultLocalStorageKey : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey : ''
+  return (
+    localStorageProp === true ? defaultLocalStorageKey
+    : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey
+    : ''
+  )
 }
 
 const calcTotalWeight = (childList: ReactElement<ExperimentProps>[]) => {

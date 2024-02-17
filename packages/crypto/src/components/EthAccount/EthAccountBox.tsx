@@ -30,34 +30,34 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
 
   const addressToDisplay = assertEx(address ?? EthAddress.fromString('0x00'), 'Bad Eth Address')
 
-  const textToDisplay = address
-    ? addressLength === 'long'
-      ? addressToDisplay.toString()
-      : addressLength === 'short'
-        ? addressToDisplay.toShortString(shortenedLength)
-        : large
-          ? addressToDisplay.toString()
-          : addressToDisplay.toShortString()
+  const textToDisplay =
+    address ?
+      addressLength === 'long' ? addressToDisplay.toString()
+      : addressLength === 'short' ? addressToDisplay.toShortString(shortenedLength)
+      : large ? addressToDisplay.toString()
+      : addressToDisplay.toShortString()
     : '-- --'
 
   // Note: We use the all zero address for spacing in case it is
 
   return (
     <FlexRow height={height} justifyContent="space-between" alignItems="stretch" {...props}>
-      {icon ? (
+      {icon ?
         <Identicon
           minWidth={iconSize + Number.parseInt(theme.spacing(1))}
           bgcolor={theme.palette.secondary.main}
           size={iconSize}
           value={address?.toHex()}
         />
-      ) : null}
+      : null}
       {iconOnly ? null : (
         <Typography alignSelf="center" marginX={removeMargin ? 0 : 1} variant="body1" fontFamily={fontFamily}>
           {textToDisplay}
         </Typography>
       )}
-      {isLocalAddress ? <FlexRow marginLeft={0.5}>(You)</FlexRow> : null}
+      {isLocalAddress ?
+        <FlexRow marginLeft={0.5}>(You)</FlexRow>
+      : null}
     </FlexRow>
   )
 }

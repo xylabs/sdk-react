@@ -49,7 +49,9 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
     <FlexCol>
       <RotationAnimation rotation={20}>
         <IconButton color={iconColor} onClick={handleDarkModeChange} onMouseEnter={() => handleHover()} onMouseLeave={() => handleHover()} {...props}>
-          {darkMode ? <DarkModeRounded /> : <LightModeRounded />}
+          {darkMode ?
+            <DarkModeRounded />
+          : <LightModeRounded />}
         </IconButton>
       </RotationAnimation>
     </FlexCol>

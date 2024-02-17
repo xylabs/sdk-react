@@ -25,7 +25,11 @@ export const InvertibleCssVarsProvider: React.FC<InvertibleCssVarsProviderProps>
   noResponsiveFontSizes,
   theme,
 }) => {
-  const updatedTheme = theme ? (noResponsiveFontSizes ? theme : responsiveFontSizes(theme)) : theme
+  const updatedTheme =
+    theme ?
+      noResponsiveFontSizes ? theme
+      : responsiveFontSizes(theme)
+    : theme
 
   return (
     <CssVarsProvider theme={updatedTheme} defaultMode={defaultMode}>

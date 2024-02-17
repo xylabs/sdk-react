@@ -16,8 +16,12 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>((props, ref) =
 
   return (
     <Button ref={ref} onClick={localOnClick} {...rootProps}>
-      {busy && busyVariant === 'linear' ? <BusyLinearProgress rounded opacity={busyOpacity ?? 0} /> : null}
-      {busy && busyVariant === 'circular' ? <BusyCircularProgress rounded size={24} opacity={busyOpacity ?? 0.5} /> : null}
+      {busy && busyVariant === 'linear' ?
+        <BusyLinearProgress rounded opacity={busyOpacity ?? 0} />
+      : null}
+      {busy && busyVariant === 'circular' ?
+        <BusyCircularProgress rounded size={24} opacity={busyOpacity ?? 0.5} />
+      : null}
       {children}
     </Button>
   )

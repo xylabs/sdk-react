@@ -51,7 +51,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
       setProvider(provider as BrowserProvider)
       setProviderName(providerName)
       setWalletProvider(walletProvider)
-      let signer: JsonRpcSigner | undefined = undefined
+      let signer: JsonRpcSigner | undefined
       try {
         const [existingAddress]: string[] = (await provider.send('eth_accounts', [])) ?? []
         setLocalAddress(EthAddress.fromString(existingAddress[0]))

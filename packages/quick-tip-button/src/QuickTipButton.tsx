@@ -30,7 +30,11 @@ export const QuickTipButton: React.FC<QuickTipButtonProps> = ({
   return (
     <>
       <IconButton onClick={() => setMessageOpen(true)} size="small" sx={{ cursor: disableDialog ? 'default' : 'pointer' }} {...props}>
-        <Tooltip title={hoverText ?? title ?? ''}>{Icon ? <Icon fontSize={fontSize} /> : <HelpOutlineIcon fontSize={fontSize} />}</Tooltip>
+        <Tooltip title={hoverText ?? title ?? ''}>
+          {Icon ?
+            <Icon fontSize={fontSize} />
+          : <HelpOutlineIcon fontSize={fontSize} />}
+        </Tooltip>
       </IconButton>
 
       {disableDialog ? null : (

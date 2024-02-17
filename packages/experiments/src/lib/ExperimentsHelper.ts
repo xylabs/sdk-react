@@ -13,7 +13,11 @@ let outcomes: OutcomesData = {} //prevent multi-outcome
 // TODO - some expire logic around experiments
 const ExperimentsHelper = {
   buildLocalStorageKey: (localStorageProp: boolean | string) => {
-    return localStorageProp === true ? defaultLocalStorageKey : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey : ''
+    return (
+      localStorageProp === true ? defaultLocalStorageKey
+      : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey
+      : ''
+    )
   },
   calcTotalWeight: (variants: VariantData[]) => {
     return variants.reduce((sum, variant) => {

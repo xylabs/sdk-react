@@ -52,21 +52,21 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll
   }
 
   return accepted ? null : (
-    <FlexRow justifyContent="space-between" {...props}>
-      <Typography variant="body2" margin={2}>
-        {'This site uses '}
-        <Link href="https://cookiesandyou.com/" rel="noopener noreferrer" target="_blank">
-          cookies
-        </Link>
-        {' and '}
-        <Link href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">
-          Google&nbsp;tools
-        </Link>
-        {' to analyze traffic and for ads measurement purposes.'}
-      </Typography>
-      <ButtonEx variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
-        Accept
-      </ButtonEx>
-    </FlexRow>
-  )
+      <FlexRow justifyContent="space-between" {...props}>
+        <Typography variant="body2" margin={2}>
+          {'This site uses '}
+          <Link href="https://cookiesandyou.com/" rel="noopener noreferrer" target="_blank">
+            cookies
+          </Link>
+          {' and '}
+          <Link href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">
+            Google&nbsp;tools
+          </Link>
+          {' to analyze traffic and for ads measurement purposes.'}
+        </Typography>
+        <ButtonEx variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
+          Accept
+        </ButtonEx>
+      </FlexRow>
+    )
 }

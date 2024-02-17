@@ -45,7 +45,14 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
             component={RouteLink}
             to={path}
           >
-            {index > 0 ? titles?.[index - 1] : <FlexRow>{typeof logo === 'string' ? <img src={logo} /> : logo}</FlexRow>}
+            {index > 0 ?
+              titles?.[index - 1]
+            : <FlexRow>
+                {typeof logo === 'string' ?
+                  <img src={logo} />
+                : logo}
+              </FlexRow>
+            }
           </Link>
         )
       })}

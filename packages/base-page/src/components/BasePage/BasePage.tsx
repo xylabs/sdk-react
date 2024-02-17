@@ -37,15 +37,21 @@ const BasePage: React.FC<BasePageProps> = ({
       {...props}
     >
       <ScrollToTop />
-      <Helmet title={title}>{noindex ? <meta content="noindex" name="robots" /> : null}</Helmet>
-      {scrollToTopButton ? <div id={scrollToTopAnchorId} /> : null}
+      <Helmet title={title}>
+        {noindex ?
+          <meta content="noindex" name="robots" />
+        : null}
+      </Helmet>
+      {scrollToTopButton ?
+        <div id={scrollToTopAnchorId} />
+      : null}
       {hideAppBar ? null : appBar}
-      {beta ? (
+      {beta ?
         <FlexRow margin={1} position="absolute" top={0} left={0} bgcolor="#cccccc88" paddingX={1} style={{ opacity: 0.5 }}>
           <Typography variant="body2">Important: This page is a Beta page. It is possible that some information may not be correct.</Typography>
         </FlexRow>
-      ) : null}
-      {container ? (
+      : null}
+      {container ?
         <Container
           style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
           maxWidth={container}
@@ -53,9 +59,7 @@ const BasePage: React.FC<BasePageProps> = ({
         >
           {children}
         </Container>
-      ) : (
-        children
-      )}
+      : children}
       {hideFooter ? null : <footer>{appFooter}</footer>}
       {cookieConsent ?? (
         <ScopedCssBaseline>
@@ -64,13 +68,13 @@ const BasePage: React.FC<BasePageProps> = ({
           </InvertibleThemeProvider>
         </ScopedCssBaseline>
       )}
-      {scrollToTopButton ? (
+      {scrollToTopButton ?
         <ScrollToTopButton anchorId={scrollToTopAnchorId}>
           <Fab aria-label="scroll to top" color="secondary" size="small">
             <KeyboardArrowUpIcon />
           </Fab>
         </ScrollToTopButton>
-      ) : null}
+      : null}
     </FlexCol>
   )
 }

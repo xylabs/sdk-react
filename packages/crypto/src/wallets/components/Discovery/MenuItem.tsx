@@ -18,11 +18,11 @@ export const WalletDiscoveryMenuItemInner: React.FC<WalletDiscoveryMenuItemInner
         <ConstrainedImage constrainedValue={theme.spacing(3)} src={icon} />
       </ListItemIcon>
       <ListItemText>{name}</ListItemText>
-      {approvedAccount ? (
+      {approvedAccount ?
         <StyledActiveIcon>
           <RadioButtonChecked color={'success'} />
         </StyledActiveIcon>
-      ) : null}
+      : null}
     </StyledMenuItem>
   )
 }

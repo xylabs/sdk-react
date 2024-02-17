@@ -38,22 +38,24 @@ const BusyBox = forwardRef<unknown, BusyBoxProps>(
         component={paper ? Paper : component}
         position="relative"
         style={
-          background
-            ? {
-                backgroundColor: theme.palette.background.default,
-                color: theme.palette.text.primary,
-                ...style,
-              }
-            : style
+          background ?
+            {
+              backgroundColor: theme.palette.background.default,
+              color: theme.palette.text.primary,
+              ...style,
+            }
+          : style
         }
         ref={ref}
         {...props}
       >
         {children}
-        {internalBusy && busyVariant === 'linear' ? <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} /> : null}
-        {internalBusy && busyVariant === 'circular' ? (
+        {internalBusy && busyVariant === 'linear' ?
+          <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} />
+        : null}
+        {internalBusy && busyVariant === 'circular' ?
           <BusyCircularProgress color={busyColor} opacity={busyOpacity} size={busySize} {...busyCircularProps} />
-        ) : null}
+        : null}
       </Box>
     )
   },
