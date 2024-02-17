@@ -1,3 +1,4 @@
+import { forget } from '@xylabs/forget'
 import { BrowserProvider } from 'ethers'
 
 import { EthWalletConnectorBase } from '../classes'
@@ -29,8 +30,8 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
       console.warn(`Attempting to use ${this.providerName} class when its not installed`)
     }
     if (this.installed) {
-      this.onAccountsChangedListener()
-      this.onChainChangedListener()
+      forget(this.onAccountsChangedListener())
+      forget(this.onChainChangedListener())
     }
   }
 }

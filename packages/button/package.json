@@ -21,8 +21,8 @@
     "@mui/material": "^5.15.10",
     "@storybook/react": "^7.6.16",
     "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/ts-scripts-yarn3": "^3.3.2",
-    "@xylabs/tsconfig-react": "^3.3.2",
+    "@xylabs/ts-scripts-yarn3": "^3.4.1",
+    "@xylabs/tsconfig-react": "^3.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3"

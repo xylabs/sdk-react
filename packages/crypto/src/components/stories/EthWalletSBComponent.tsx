@@ -1,6 +1,7 @@
 import { OpenInNewOutlined } from '@mui/icons-material'
 import { Alert, AlertTitle, Button, List, ListItem, Typography } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
+import { forget } from '@xylabs/forget'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { useEffect, useMemo, useState } from 'react'
 
@@ -30,10 +31,13 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
     setSignResponse(undefined)
   }, [provider])
 
-  const onSign = async () => {
-    const signResult = await signMessage?.('test')
-    setSignResponse(EthAddress.fromString(signResult))
-  }
+  const onSign = () =>
+    forget(
+      (async () => {
+        const signResult = await signMessage?.('test')
+        setSignResponse(EthAddress.fromString(signResult))
+      })(),
+    )
 
   const localAddress = useMemo(() => currentAccount?.toString(), [currentAccount])
   return (
@@ -50,7 +54,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
           <Alert>Found window.ethereum</Alert>
         : null}
         <FlexRow justifyContent="start" gap={2}>
-          <Button variant="contained" onClick={async () => await connectWallet?.()}>
+          <Button variant="contained" onClick={() => forget(connectWallet?.() ?? Promise.resolve())}>
             Connect
           </Button>
           <Button disabled={!currentAccount} variant="contained" onClick={onSign}>

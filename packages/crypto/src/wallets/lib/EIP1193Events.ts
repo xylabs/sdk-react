@@ -1,3 +1,4 @@
+import { forget } from '@xylabs/forget'
 import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
 import { EIP1193EventNames, EIP1193EventsCompatible } from './EIP1193'
@@ -47,18 +48,18 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
 
   removeEIP11193Listener(event: EIP1193EventNames, listener: Listener) {
     this.enabled(() => {
-      this.listeningProvider?.removeListener(event, listener)
+      forget(this.listeningProvider?.removeListener(event, listener) ?? Promise.resolve())
       this.eip1193Listeners = this.eip1193Listeners.filter(([, savedListener]) => listener !== savedListener)
     })
   }
 
   removeEIP11193Listeners() {
-    for (const [event, listener] of this.eip1193Listeners) this.listeningProvider?.removeListener(event, listener)
+    for (const [event, listener] of this.eip1193Listeners) forget(this.listeningProvider?.removeListener(event, listener) ?? Promise.resolve())
   }
 
   private addListener(event: EIP1193EventNames, listener: Listener) {
     this.enabled(() => {
-      this.listeningProvider?.on(event, listener)
+      forget(this.listeningProvider?.on(event, listener) ?? Promise.resolve())
       this.eip1193Listeners.push([event, listener])
     })
   }

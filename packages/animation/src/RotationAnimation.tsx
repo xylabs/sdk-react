@@ -20,6 +20,7 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, 
   }))
 
   const handleHover = () => {
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     api.start({
       from: {
         rotate: '0deg',
@@ -28,6 +29,7 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, 
         rotate: `${rotation}deg`,
       },
     })
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     api.start({
       from: {
         rotate: `${rotation}deg`,
