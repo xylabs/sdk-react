@@ -15,8 +15,8 @@
   "dependencies": {
     "@metamask/providers": "^14.0.2",
     "@wagmi/chains": "^1.8.0",
-    "@xylabs/assert": "^2.14.3",
-    "@xylabs/eth-address": "^2.14.3",
+    "@xylabs/assert": "^3.0.1",
+    "@xylabs/eth-address": "^3.0.1",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -87,6 +87,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.0.39",
+  "version": "3.1.0",
   "type": "module"
 }

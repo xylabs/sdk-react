@@ -78,7 +78,7 @@
     "storybook": "^7.6.16",
     "storybook-dark-mode": "^3.0.3",
     "typescript": "^5.3.3",
-    "webpack": "^5.90.2"
+    "webpack": "^5.90.3"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",
@@ -142,7 +142,7 @@
     "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
-  "version": "3.0.39",
+  "version": "3.1.0",
   "packageManager": "yarn@4.0.2",
   "volta": {
     "node": "18.17.1",
