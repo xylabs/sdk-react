@@ -13,15 +13,15 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^3.0.1",
-    "@xylabs/log": "^3.0.1",
+    "@xylabs/forget": "^3.0.3",
+    "@xylabs/log": "^3.0.3",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-pixel": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@storybook/react": "^7.6.16",
+    "@storybook/react": "^7.6.17",
     "@xylabs/pixel": "^1.4.14",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",

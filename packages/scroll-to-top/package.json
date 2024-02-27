@@ -14,7 +14,7 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "@mui/material": "^5.15.10",
+    "@mui/material": "^5.15.11",
     "react-router-dom": "^6.22.1"
   },
   "devDependencies": {

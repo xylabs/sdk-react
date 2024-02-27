@@ -13,15 +13,15 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/lodash": "^3.0.1",
+    "@xylabs/lodash": "^3.0.3",
     "@xylabs/react-animation": "workspace:~",
     "@xylabs/react-flexbox": "^3.1.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.15.10",
-    "@mui/material": "^5.15.10",
-    "@storybook/react": "^7.6.16",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/material": "^5.15.11",
+    "@storybook/react": "^7.6.17",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
     "react": "^18.2.0",

@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^3.0.1",
-    "@xylabs/delay": "^3.0.1",
+    "@xylabs/assert": "^3.0.3",
+    "@xylabs/delay": "^3.0.3",
     "query-string": "^8.2.0"
   },
   "description": "Common React library for all XY Labs projects that use React",

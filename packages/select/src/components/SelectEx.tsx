@@ -1,8 +1,8 @@
-import { PaletteMode, Select, SelectProps, useTheme } from '@mui/material'
+import { PaletteMode, Select, SelectProps, SelectVariants, useTheme } from '@mui/material'
 import { merge } from '@xylabs/lodash'
 import React from 'react'
 
-export interface SelectExProps<T> extends SelectProps<T> {
+export type SelectExProps<T, V extends SelectVariants = SelectVariants> = SelectProps<T, V> & {
   colorize?: 'primary' | 'secondary'
   mode?: PaletteMode
 }

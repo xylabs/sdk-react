@@ -13,11 +13,11 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/lodash": "^3.0.1"
+    "@xylabs/lodash": "^3.0.3"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.15.10",
+    "@mui/material": "^5.15.11",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
     "react": "^18.2.0",
