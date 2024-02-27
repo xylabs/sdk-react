@@ -2,10 +2,11 @@ import { PaletteMode, Select, SelectProps, SelectVariants, useTheme } from '@mui
 import { merge } from '@xylabs/lodash'
 import React from 'react'
 
-export type SelectExProps<T, V extends SelectVariants = SelectVariants> = SelectProps<T, V> & {
-  colorize?: 'primary' | 'secondary'
-  mode?: PaletteMode
-}
+export type SelectExProps<T, V extends SelectVariants = SelectVariants> = Omit<SelectProps<T, V>, 'variant'> &
+  Partial<SelectProps<T, V>> & {
+    colorize?: 'primary' | 'secondary'
+    mode?: PaletteMode
+  }
 
 export const SelectEx: <T>(props: SelectExProps<T>) => React.JSX.Element = ({ MenuProps, mode = 'light', colorize, ...props }) => {
   const theme = useTheme()
