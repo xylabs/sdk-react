@@ -14,17 +14,15 @@
   ],
   "dependencies": {
     "@react-spring/web": "^9.7.3",
-    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
     "typescript": "^5.3.3"
-  },
-  "peerDependencies": {
-    "react": "^18",
-    "react-dom": "^18"
   },
   "docs": "dist/docs.json",
   "exports": {

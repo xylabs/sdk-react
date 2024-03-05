@@ -13,33 +13,24 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^3.0.3",
-    "@xylabs/lodash": "^3.0.3",
+    "@mui/material": "^5.15.12",
+    "@xylabs/assert": "^3.0.6",
+    "@xylabs/lodash": "^3.0.6",
     "@xylabs/react-base-page": "workspace:~",
     "@xylabs/react-error": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-portal": "workspace:~",
     "@xylabs/react-select": "workspace:~",
-    "react-router-dom": "^6.22.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.2"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.15.11",
-    "@mui/material": "^5.15.11",
     "@storybook/react": "^7.6.17",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
-  },
-  "peerDependencies": {
-    "@mui/icons-material": "^5",
-    "@mui/material": "^5",
-    "@mui/styles": "^5",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-helmet": "^6"
   },
   "exports": {
     ".": {

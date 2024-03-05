@@ -14,9 +14,12 @@
   ],
   "dependencies": {
     "@metamask/providers": "^14.0.2",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
     "@wagmi/chains": "^1.8.0",
-    "@xylabs/assert": "^3.0.3",
-    "@xylabs/eth-address": "^3.0.3",
+    "@xylabs/assert": "^3.0.6",
+    "@xylabs/eth-address": "^3.0.6",
+    "@xylabs/forget": "^3.0.6",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -24,24 +27,20 @@
     "@xylabs/react-promise": "workspace:~",
     "ethers": "^6.11.1",
     "lru-cache": "^10.2.0",
-    "react-router-dom": "^6.22.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.2"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.15.11",
-    "@mui/material": "^5.15.11",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.15.12",
     "@storybook/react": "^7.6.17",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
-  },
-  "peerDependencies": {
-    "@mui/icons-material": "^5.15.5",
-    "@mui/material": "^5",
-    "react": "^18",
-    "react-dom": "^18"
   },
   "exports": {
     ".": {

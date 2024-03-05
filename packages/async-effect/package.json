@@ -14,21 +14,16 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "@xylabs/react-promise": "workspace:~"
+    "@xylabs/react-promise": "workspace:~",
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "@mui/material": "^5.15.11",
+    "@mui/material": "^5.15.12",
     "@storybook/react": "^7.6.17",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
-    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
-  },
-  "peerDependencies": {
-    "@mui/material": "^5",
-    "react": "^18",
-    "react-dom": "^18"
   },
   "exports": {
     ".": {
