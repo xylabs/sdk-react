@@ -1,12 +1,13 @@
 import { Button, CardActions, CardActionsProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import { forget } from '@xylabs/forget'
+import { Promisable } from '@xylabs/promise'
 import { useState } from 'react'
 
 export interface WalletOverviewCardActions extends CardActionsProps {
   connectWallet?: () => Promise<string[] | null | undefined>
   currentAccount?: EthAddress
-  onSign?: () => Promise<void>
+  onSign?: () => Promisable<void>
 }
 
 export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({ connectWallet, currentAccount, onSign }) => {
@@ -27,7 +28,7 @@ export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({
 
   return (
     <CardActions sx={{ justifyContent: 'center' }}>
-      <Button disabled={!currentAccount} variant="contained" onClick={onSign} size="small">
+      <Button disabled={!currentAccount} variant="contained" onClick={() => (onSign ? forget(Promise.resolve(onSign())) : undefined)} size="small">
         Sign Test Message
       </Button>
       <Button size="small" disabled={connecting || !!currentAccount} variant="contained" onClick={onConnect}>

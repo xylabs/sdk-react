@@ -6643,6 +6643,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xylabs/promise@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@xylabs/promise@npm:3.0.6"
+  checksum: 10/3b4a0588c18219924b4a256b7ebc7a3999d313201dd285c83d134387fe9da0ffc3dc99273a273934194e812d8e88f89ec320c454c07a71c38a4265ff526a9b27
+  languageName: node
+  linkType: hard
+
 "@xylabs/react-accordion@workspace:packages/accordion, @xylabs/react-accordion@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-accordion@workspace:packages/accordion"
@@ -6796,6 +6803,7 @@ __metadata:
     "@xylabs/assert": "npm:^3.0.6"
     "@xylabs/eth-address": "npm:^3.0.6"
     "@xylabs/forget": "npm:^3.0.6"
+    "@xylabs/promise": "npm:^3.0.6"
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -6866,7 +6874,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@npm:^3.1.2, @xylabs/react-flexbox@workspace:packages/flexbox, @xylabs/react-flexbox@workspace:~":
+"@xylabs/react-flexbox@npm:^3.1.3, @xylabs/react-flexbox@workspace:packages/flexbox, @xylabs/react-flexbox@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
@@ -6907,7 +6915,7 @@ __metadata:
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/lodash": "npm:^3.0.6"
     "@xylabs/react-animation": "workspace:~"
-    "@xylabs/react-flexbox": "npm:^3.1.2"
+    "@xylabs/react-flexbox": "npm:^3.1.3"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
     react: "npm:^18.2.0"
