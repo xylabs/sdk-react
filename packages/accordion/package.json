@@ -25,7 +25,7 @@
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "docs": "dist/docs.json",
   "exports": {

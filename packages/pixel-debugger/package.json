@@ -14,7 +14,7 @@
   ],
   "dependencies": {
     "@mui/material": "^5.15.12",
-    "@xylabs/pixel": "^1.4.14",
+    "@xylabs/pixel": "^1.5.0",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-pixel": "workspace:~",
@@ -27,12 +27,12 @@
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@storybook/react": "^7.6.17",
-    "@xylabs/pixel": "^1.4.14",
+    "@xylabs/pixel": "^1.5.0",
     "@xylabs/ts-scripts-yarn3": "^3.4.1",
     "@xylabs/tsconfig-react": "^3.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "exports": {
     ".": {
