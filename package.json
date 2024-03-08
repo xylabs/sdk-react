@@ -128,9 +128,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "resolutions": {
-    "typescript": "5.2.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/xylabs/sdk-react.git"
@@ -141,7 +138,7 @@
     "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
-  "version": "3.1.4",
+  "version": "3.1.5",
   "packageManager": "yarn@4.1.1",
   "volta": {
     "node": "18.17.1",

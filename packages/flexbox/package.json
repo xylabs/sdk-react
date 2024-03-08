@@ -13,13 +13,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@mui/material": "^5.15.12",
-    "@mui/system": "^5.15.12",
     "@xylabs/delay": "^3.0.8",
     "@xylabs/react-async-effect": "workspace:~",
-    "@xylabs/react-shared": "workspace:~",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@xylabs/react-shared": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
@@ -29,6 +25,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "@mui/material": "^5",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "exports": {
     ".": {
@@ -74,6 +75,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.1.4",
+  "version": "3.1.5",
   "type": "module"
 }

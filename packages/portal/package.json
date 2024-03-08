@@ -21,9 +21,9 @@
     "react-dom": "^18.2.0",
     "typescript": "^5.4.2"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
   },
   "exports": {
     ".": {
@@ -69,6 +69,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.1.4",
+  "version": "3.1.5",
   "type": "module"
 }

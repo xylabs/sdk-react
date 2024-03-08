@@ -6649,15 +6649,17 @@ __metadata:
   resolution: "@xylabs/react-accordion@workspace:packages/accordion"
   dependencies:
     "@mui/icons-material": "npm:^5.15.12"
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6669,9 +6671,11 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6680,14 +6684,15 @@ __metadata:
   resolution: "@xylabs/react-appbar@workspace:packages/appbar"
   dependencies:
     "@mui/icons-material": "npm:^5.15.12"
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6700,9 +6705,10 @@ __metadata:
     "@xylabs/react-promise": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -6711,7 +6717,6 @@ __metadata:
   resolution: "@xylabs/react-base-page@workspace:packages/base-page"
   dependencies:
     "@mui/icons-material": "npm:^5.15.12"
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@types/react-helmet": "npm:^6.1.11"
     "@xylabs/react-appbar": "workspace:~"
@@ -6721,11 +6726,14 @@ __metadata:
     "@xylabs/react-scroll-to-top": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     react-helmet: "npm:^6.1.0"
     react-router-dom: "npm:^6.22.2"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6733,16 +6741,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-button@workspace:packages/button"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.2"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6750,7 +6759,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-common@workspace:packages/common"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/assert": "npm:^3.0.8"
     "@xylabs/lodash": "npm:^3.0.8"
@@ -6761,10 +6769,13 @@ __metadata:
     "@xylabs/react-select": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.2"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6782,6 +6793,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6811,6 +6826,11 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.2"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6828,6 +6848,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6844,6 +6868,11 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6851,7 +6880,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/forget": "npm:^3.0.8"
     "@xylabs/log": "npm:^3.0.8"
@@ -6865,6 +6893,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6872,8 +6904,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
-    "@mui/system": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/delay": "npm:^3.0.8"
     "@xylabs/react-async-effect": "workspace:~"
@@ -6883,6 +6913,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6897,6 +6931,9 @@ __metadata:
     md5: "npm:^2.3.0"
     react: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -6915,6 +6952,11 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6922,13 +6964,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.2"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6947,6 +6992,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6954,7 +7003,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
     "@storybook/react": "npm:^7.6.17"
     "@xylabs/pixel": "npm:^1.5.0"
     "@xylabs/react-button": "workspace:~"
@@ -6968,6 +7016,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -6984,6 +7036,8 @@ __metadata:
     query-string: "npm:^8.2.0"
     react: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -6997,6 +7051,9 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -7013,6 +7070,8 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -7030,6 +7089,11 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/icons-material": ^5
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -7041,6 +7105,8 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:^3.4.1"
     react: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -7052,6 +7118,8 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:^3.4.1"
     react: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    react: ^18
   languageName: unknown
   linkType: soft
 
@@ -7059,13 +7127,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top"
   dependencies:
-    "@mui/material": "npm:^5.15.12"
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.22.2"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -7078,8 +7149,11 @@ __metadata:
     "@xylabs/ts-scripts-yarn3": "npm:^3.4.1"
     "@xylabs/tsconfig-react": "npm:^3.4.1"
     react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -7097,6 +7171,10 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.2"
+  peerDependencies:
+    "@mui/material": ^5
+    react: ^18
+    react-dom: ^18
   languageName: unknown
   linkType: soft
 
@@ -23223,23 +23301,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
+"typescript@npm:^5.3.3, typescript@npm:^5.4.2":
+  version: 5.4.2
+  resolution: "typescript@npm:5.4.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/d65e50eb849bd21ff8677e5b9447f9c6e74777e346afd67754934264dcbf4bd59e7d2473f6062d9a015d66bd573311166357e3eb07fea0b52859cf9bb2b58555
+  checksum: 10/f8cfdc630ab1672f004e9561eb2916935b2d267792d07ce93e97fc601c7a65191af32033d5e9c0169b7dc37da7db9bf320f7432bc84527cb7697effaa4e4559d
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
+"typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.2#optional!builtin<compat/typescript>":
+  version: 5.4.2
+  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
+  checksum: 10/f5f9a4133c2670761f0166eae5b3bafbc4a3fc24f0f42a93c9c893d9e9d6e66ea066969c5e7483fa66b4ae0e99125592553f3b92fd3599484de8be13b0615176
   languageName: node
   linkType: hard
 

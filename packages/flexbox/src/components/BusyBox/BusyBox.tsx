@@ -1,11 +1,10 @@
 import { Box, BoxProps, Paper, useTheme } from '@mui/material'
-import type { BoxTypeMap } from '@mui/system'
 import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
 import { forwardRef } from 'react'
 
 import { useBusyTiming } from '../../hooks'
 
-export interface BusyBoxProps extends BusyProps, Omit<BoxProps<BoxTypeMap['defaultComponent']>, 'ref'> {
+export interface BusyBoxProps extends BusyProps, Omit<BoxProps, 'ref'> {
   background?: boolean
   paper?: boolean
 }

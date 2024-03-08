@@ -13,14 +13,11 @@
     "packages/*"
   ],
   "dependencies": {
-    "@mui/icons-material": "^5.15.12",
-    "@mui/material": "^5.15.12",
-    "@xylabs/react-dialogs": "workspace:~",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@xylabs/react-dialogs": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
+    "@mui/icons-material": "^5.15.12",
     "@mui/material": "^5.15.12",
     "@storybook/react": "^7.6.17",
     "@xylabs/react-flexbox": "workspace:~",
@@ -29,6 +26,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "^5",
+    "@mui/material": "^5",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "exports": {
     ".": {
@@ -74,6 +77,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.1.4",
+  "version": "3.1.5",
   "type": "module"
 }

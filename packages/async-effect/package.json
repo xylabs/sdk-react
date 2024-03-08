@@ -14,8 +14,7 @@
   ],
   "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
-    "@xylabs/react-promise": "workspace:~",
-    "react": "^18.2.0"
+    "@xylabs/react-promise": "workspace:~"
   },
   "devDependencies": {
     "@mui/material": "^5.15.12",
@@ -24,6 +23,9 @@
     "@xylabs/tsconfig-react": "^3.4.1",
     "react-dom": "^18.2.0",
     "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "react": "^18"
   },
   "exports": {
     ".": {
@@ -69,6 +71,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.1.4",
+  "version": "3.1.5",
   "type": "module"
 }
