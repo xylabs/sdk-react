@@ -21,8 +21,8 @@
   "devDependencies": {
     "@mui/material": "^5.15.12",
     "@storybook/react": "^7.6.17",
-    "@xylabs/ts-scripts-yarn3": "^3.4.1",
-    "@xylabs/tsconfig-react": "^3.4.1",
+    "@xylabs/ts-scripts-yarn3": "^3.5.2",
+    "@xylabs/tsconfig-react": "^3.5.2",
     "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

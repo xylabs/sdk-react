@@ -13,15 +13,15 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^3.0.8",
+    "@xylabs/delay": "^3.0.12",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@storybook/react": "^7.6.17",
-    "@xylabs/ts-scripts-yarn3": "^3.4.1",
-    "@xylabs/tsconfig-react": "^3.4.1",
+    "@xylabs/ts-scripts-yarn3": "^3.5.2",
+    "@xylabs/tsconfig-react": "^3.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.4.2"

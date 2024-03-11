@@ -14,14 +14,14 @@
   ],
   "dependencies": {
     "@xylabs/react-shared": "workspace:~",
-    "react-router-dom": "^6.22.2"
+    "react-router-dom": "^6.22.3"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@storybook/react": "^7.6.17",
     "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/ts-scripts-yarn3": "^3.4.1",
-    "@xylabs/tsconfig-react": "^3.4.1",
+    "@xylabs/ts-scripts-yarn3": "^3.5.2",
+    "@xylabs/tsconfig-react": "^3.5.2",
     "typescript": "^5.4.2"
   },
   "peerDependencies": {
