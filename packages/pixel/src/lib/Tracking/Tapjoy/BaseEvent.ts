@@ -9,7 +9,7 @@ class TapjoyBaseEvent<T> {
 
   constructor(name: string) {
     this.name = name
-    this.ef = assertEx(EF.instance, 'Missing Tapjoy Eventflow')
+    this.ef = assertEx(EF.instance, () => 'Missing Tapjoy Eventflow')
   }
 
   async send(_data: T) {

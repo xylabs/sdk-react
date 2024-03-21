@@ -68,7 +68,7 @@ class Gtag {
   }
 
   static updatePagePath(page_path: string) {
-    const instance = assertEx(this.instance, 'Not initialized')
+    const instance = assertEx(this.instance, () => 'Not initialized')
     return instance.updatePagePath(page_path)
   }
 
@@ -101,7 +101,7 @@ class Gtag {
   }
 
   updatePagePath(page_path: string) {
-    const ga4id = assertEx(this.ga4id, 'Missing GA4ID')
+    const ga4id = assertEx(this.ga4id, () => 'Missing GA4ID')
     const pathOnly = page_path.split('?')[0]
     const search = Gtag.getInitialQuery()
     this.gtag('config', ga4id, { page_path: `${pathOnly}${search}` })

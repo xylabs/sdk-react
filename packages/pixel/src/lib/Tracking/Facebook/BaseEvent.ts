@@ -9,7 +9,7 @@ class FacebookBaseEvent<T> {
 
   constructor(name: string) {
     this.name = name
-    this.fbq = assertEx(Fbq.instance, 'Missing Fbq')
+    this.fbq = assertEx(Fbq.instance, () => 'Missing Fbq')
   }
 
   async send(_data: T) {

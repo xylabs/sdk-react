@@ -28,7 +28,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
 
   const isLocalAddress = address ? localAddress?.toString() === address.toString() : false
 
-  const addressToDisplay = assertEx(address ?? EthAddress.fromString('0x00'), 'Bad Eth Address')
+  const addressToDisplay = assertEx(address ?? EthAddress.fromString('0x00'), () => 'Bad Eth Address')
 
   const textToDisplay =
     address ?

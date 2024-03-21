@@ -8,7 +8,7 @@ export class TiktokBaseEvent<T> {
   ttq: Ttq
   constructor(name: string) {
     this.name = name
-    this.ttq = assertEx(Ttq.instance, 'Missing Ttq')
+    this.ttq = assertEx(Ttq.instance, () => 'Missing Ttq')
   }
 
   async send(_data: T) {

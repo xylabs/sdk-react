@@ -8,7 +8,7 @@ class RedditBaseEvent<T> {
   rdt: Rdt
   constructor(name: string) {
     this.name = name
-    this.rdt = assertEx(Rdt.instance, 'Missing Rdt')
+    this.rdt = assertEx(Rdt.instance, () => 'Missing Rdt')
   }
 
   async send(_data: T) {

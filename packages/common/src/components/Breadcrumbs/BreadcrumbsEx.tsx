@@ -32,7 +32,7 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
     pathParts.pop()
   }
 
-  assertEx(pathParts.length - 1 === titles?.length, `Path/Title length mismatch: ${JSON.stringify(titles)} with ${JSON.stringify(pathParts)}`)
+  assertEx(pathParts.length - 1 === titles?.length, () => `Path/Title length mismatch: ${JSON.stringify(titles)} with ${JSON.stringify(pathParts)}`)
   return (
     <Breadcrumbs separator={separator} {...props}>
       {pathParts.map((_pathPart, index) => {

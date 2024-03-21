@@ -12,11 +12,11 @@ export class GoogleBaseEvent<T extends Record<string, unknown>> {
   }
 
   gtag() {
-    return assertEx(Gtag.instance, 'Missing/uninitialized gtag')
+    return assertEx(Gtag.instance, () => 'Missing/uninitialized gtag')
   }
 
   gtm() {
-    return assertEx(Gtm.instance, 'Missing/uninitialized gtm')
+    return assertEx(Gtm.instance, () => 'Missing/uninitialized gtm')
   }
 
   async send(data: T) {
