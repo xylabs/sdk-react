@@ -39,13 +39,13 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/preset-env": "^7.24.0",
-    "@babel/preset-react": "^7.23.3",
-    "@babel/preset-typescript": "^7.23.3",
+    "@babel/core": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.12",
+    "@mui/material": "^5.15.14",
     "@storybook/addon-actions": "^7.6.17",
     "@storybook/addon-docs": "^7.6.17",
     "@storybook/addon-essentials": "^7.6.17",
@@ -65,7 +65,7 @@
     "@xylabs/pixel": "^1.5.0",
     "@xylabs/ts-scripts-yarn3": "^3.5.2",
     "@xylabs/tsconfig-react": "^3.5.2",
-    "axios": "^1.6.7",
+    "axios": "^1.6.8",
     "eslint": "^8.57.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-deprecation": "^2.0.0",
@@ -77,8 +77,8 @@
     "rimraf": "^5.0.5",
     "storybook": "^7.6.17",
     "storybook-dark-mode": "^3.0.3",
-    "typescript": "^5.4.2",
-    "webpack": "^5.90.3"
+    "typescript": "^5.4.3",
+    "webpack": "^5.91.0"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",

@@ -22,13 +22,13 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.15.12",
+    "@mui/icons-material": "^5.15.14",
     "@storybook/react": "^7.6.17",
     "@types/react-helmet": "^6.1.11",
     "@xylabs/ts-scripts-yarn3": "^3.5.2",
     "@xylabs/tsconfig-react": "^3.5.2",
     "react-router-dom": "^6.22.3",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",

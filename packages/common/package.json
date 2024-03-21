@@ -13,8 +13,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^3.0.12",
-    "@xylabs/lodash": "^3.0.12",
+    "@xylabs/assert": "^3.0.21",
+    "@xylabs/lodash": "^3.0.21",
     "@xylabs/react-base-page": "workspace:~",
     "@xylabs/react-error": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
@@ -27,7 +27,7 @@
     "@storybook/react": "^7.6.17",
     "@xylabs/ts-scripts-yarn3": "^3.5.2",
     "@xylabs/tsconfig-react": "^3.5.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",

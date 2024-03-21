@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^3.0.12",
+    "@xylabs/delay": "^3.0.21",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
   },
@@ -24,7 +24,7 @@
     "@xylabs/tsconfig-react": "^3.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "@mui/material": "^5",
