@@ -20,6 +20,7 @@
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@storybook/react": "^7.6.17",
+    "@types/react": "^18.2.79",
     "@xylabs/ts-scripts-yarn3": "^3.5.2",
     "@xylabs/tsconfig-react": "^3.5.2",
     "react": "^18.2.0",

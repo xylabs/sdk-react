@@ -17,7 +17,7 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
   private eip1193Listeners: [event: EIP1193EventNames, listener: Listener][] = []
 
   // opt-in to EIP-1193 events since not all wallets will support them
-  private eventsEnabled: boolean = false
+  private eventsEnabled = false
 
   private listeningProvider: BrowserProvider | undefined
 

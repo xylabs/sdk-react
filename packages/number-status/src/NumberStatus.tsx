@@ -1,4 +1,4 @@
-import { useTheme } from '@mui/material'
+import { PaletteColor, PaletteOptions, useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol, FlexGrowRow } from '@xylabs/react-flexbox'
 import numeral from 'numeral'
@@ -20,7 +20,7 @@ const NumberStatus: React.FC<NumberStatusProps> = ({
   ...props
 }) => {
   const theme = useTheme()
-  const palette = color === 'inherit' ? undefined : theme.palette[color]
+  const palette = color === 'inherit' ? undefined : (theme.palette[color as keyof PaletteOptions] as PaletteColor | undefined)
 
   const bgColorTop = palette?.dark ?? theme.palette.background.paper
   const bgColorBottom = palette?.main ?? theme.palette.background.default
