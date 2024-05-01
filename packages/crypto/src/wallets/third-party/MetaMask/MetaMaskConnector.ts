@@ -19,7 +19,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   get installed() {
     // Phantom camps on the isMetaMask method as well :(
-    return !!(this.ethereum && this.ethereum.isMetaMask && !window.phantom?.ethereum.isPhantom)
+    return !!(this.ethereum && this.ethereum.isMetaMask && !window.phantom?.ethereum?.isPhantom)
   }
 
   init(provider?: BrowserProvider) {
