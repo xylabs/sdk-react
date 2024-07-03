@@ -22,7 +22,7 @@
     "@xylabs/react-cookie-consent": "workspace:~",
     "@xylabs/react-crypto": "workspace:~",
     "@xylabs/react-dialogs": "workspace:~",
-    "@xylabs/react-experiments": "workspace:~",
+    "@xylabs/react-experiments": "2.12.13",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-identicon": "workspace:~",
     "@xylabs/react-invertible-theme": "workspace:~",
