@@ -1,4 +1,6 @@
 // eslint-disable-next-line import/no-internal-modules
-import chains from 'viem/chains'
+import { arbitrum, base, mainnet, optimism, polygon } from 'viem/chains'
 
-export const findChainName = (chainId: number) => Object.values(chains).find((chain) => chain.id === chainId)
+const chains = [mainnet, polygon, arbitrum, optimism, base]
+
+export const findChainName = (chainId: number) => chains.find((chain) => chain.id === chainId)
