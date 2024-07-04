@@ -13,17 +13,17 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-button": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.15.14",
+    "@mui/icons-material": "^5.15.21",
     "@storybook/react": "^7.6.17",
-    "@types/react": "^18.2.79",
-    "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/ts-scripts-yarn3": "^3.5.2",
-    "@xylabs/tsconfig-react": "^3.5.2",
-    "typescript": "^5.4.3"
+    "@types/react": "^18.3.3",
+    "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/ts-scripts-yarn3": "^3.11.12",
+    "@xylabs/tsconfig-react": "^3.11.12",
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",

@@ -13,16 +13,16 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/lodash": "^3.0.21"
+    "@xylabs/lodash": "^3.5.2"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.15.14",
-    "@types/react": "^18.2.79",
-    "@xylabs/ts-scripts-yarn3": "^3.5.2",
-    "@xylabs/tsconfig-react": "^3.5.2",
-    "react": "^18.2.0",
-    "typescript": "^5.4.3"
+    "@mui/material": "^5.15.21",
+    "@types/react": "^18.3.3",
+    "@xylabs/ts-scripts-yarn3": "^3.11.12",
+    "@xylabs/tsconfig-react": "^3.11.12",
+    "react": "^18.3.1",
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "@mui/material": "^5",
