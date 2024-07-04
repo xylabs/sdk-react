@@ -46,7 +46,7 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
             }
           } catch (ex) {
             if (mounted()) {
-              setError(Error(`localAddress: ${ex}`))
+              setError(new Error(`localAddress: ${ex}`))
             }
           }
         }

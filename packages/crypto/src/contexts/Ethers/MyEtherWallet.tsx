@@ -78,7 +78,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
           }
         } catch (ex) {
           if (isMounted()) {
-            setError(Error(`localAddress: ${ex}`))
+            setError(new Error(`localAddress: ${ex}`))
             setLocalAddress(undefined)
             setIsConnected(false)
           }

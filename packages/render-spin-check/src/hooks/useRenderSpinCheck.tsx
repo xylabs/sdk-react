@@ -29,7 +29,7 @@ export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: Rende
         const elapsedTime = Date.now() - startTime
         const refreshRate = elapsedTime / spinCount
         if (refreshRate < (config?.maxRate ?? 1000)) {
-          const error = Error(`Spinning [${bounce.name}] [Rate=${refreshRate.toFixed(2)}ms, Samples=${spinCount}]`)
+          const error = new Error(`Spinning [${bounce.name}] [Rate=${refreshRate.toFixed(2)}ms, Samples=${spinCount}]`)
           console.warn(error.message)
           setError(error)
           if (!config?.noThrow) {

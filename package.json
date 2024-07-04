@@ -91,6 +91,9 @@
     "react-dom": "^18",
     "react-helmet": "^6"
   },
+  "resolutions": {
+    "eslint": "^8"
+  },
   "exports": {
     ".": {
       "node": {
@@ -140,7 +143,7 @@
     "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook"
   },
   "sideEffects": false,
-  "version": "3.1.7",
+  "version": "3.2.0",
   "packageManager": "yarn@4.1.1",
   "volta": {
     "node": "18.17.1",

@@ -16,7 +16,7 @@ const toAxiosError = (error: Error) => {
 const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
   onAction,
   title = 'Oops. Something went wrong.',
-  error = Error('Unknown Error'),
+  error = new Error('Unknown Error'),
   ...props
 }) => {
   const onCloseClicked = () => {
