@@ -90,6 +90,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.2.1",
+  "version": "3.3.0",
   "type": "module"
 }
