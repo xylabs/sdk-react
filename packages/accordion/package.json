@@ -17,8 +17,8 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.15.21",
-    "@storybook/react": "^7.6.17",
+    "@mui/icons-material": "^5.16.0",
+    "@storybook/react": "^7.6.20",
     "@types/react": "^18.3.3",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^3.11.12",

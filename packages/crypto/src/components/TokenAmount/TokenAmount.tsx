@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material'
+import { assertEx } from '@xylabs/assert'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 
@@ -6,9 +7,17 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import xyoLogo from './img/xyo.svg'
 import { TokenAmountProps } from './TokenAmountProps'
 
-const base10Shift = (value: bigint, places: number): bigint => {
+const placesSplit = (value: bigint, places: number): [bigint, bigint] => {
+  assertEx(places >= 0, () => 'Places has to be >= 0')
   const factor = BigInt(10 ** Math.abs(places))
-  return places > 0 ? value * factor : value / factor
+  const remainder = value % factor
+  const wholeValue = value / factor
+  return [wholeValue, remainder]
+}
+
+const placesSplitString = (value: bigint, places: number): string => {
+  const [wholeValue, remainder] = placesSplit(value, places)
+  return `${wholeValue}.${remainder.toString().padStart(Math.abs(places), '0')}`
 }
 
 export const TokenAmount: React.FC<TokenAmountProps> = ({
@@ -23,10 +32,7 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
   onButtonClick,
   ...props
 }) => {
-  const amountBigInt = amount ? BigInt(amount) : undefined
-  const adjustedAmount = amountBigInt ? base10Shift(amountBigInt, places) : undefined
-
-  const amountString = adjustedAmount === undefined ? '-' : adjustedAmount.toString(10)
+  const amountString = amount ? placesSplitString(amount, places) : '-'
 
   return (
     <ButtonEx style={{ backgroundColor: statusColor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>

@@ -13,14 +13,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^3.5.2",
-    "@xylabs/log": "^3.5.2",
+    "@xylabs/api": "^3.5.3",
+    "@xylabs/log": "^3.5.3",
     "@xylabs/react-async-effect": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.15.21",
-    "@storybook/react": "^7.6.17",
+    "@mui/material": "^5.16.0",
+    "@storybook/react": "^7.6.20",
     "@types/react": "^18.3.3",
     "@xylabs/ts-scripts-yarn3": "^3.11.12",
     "@xylabs/tsconfig-react": "^3.11.12",
