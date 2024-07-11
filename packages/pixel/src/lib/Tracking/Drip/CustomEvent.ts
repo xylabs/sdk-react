@@ -1,4 +1,4 @@
-import { DripBaseEvent } from './BaseEvent'
+import { DripBaseEvent } from './BaseEvent.js'
 
 class DripCustomEvent<T extends Record<string, unknown>> extends DripBaseEvent<T> {}
 

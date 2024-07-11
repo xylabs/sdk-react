@@ -6,8 +6,8 @@ import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
 import { useContext } from 'react'
 
-import { EthersContext } from '../../contexts'
-import { EthAccountProps } from './EthAccountProps'
+import { EthersContext } from '../../contexts/index.js'
+import { EthAccountProps } from './EthAccountProps.jsx'
 
 export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
   address,

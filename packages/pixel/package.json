@@ -13,16 +13,16 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^3.5.3",
-    "@xylabs/delay": "^3.5.3",
-    "@xylabs/pixel": "^1.5.0",
+    "@xylabs/assert": "^3.5.9",
+    "@xylabs/delay": "^3.5.9",
+    "@xylabs/pixel": "^1.6.0",
     "axios": "^1.7.2",
     "query-string": "^8.2.0"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "@xylabs/pixel": "^1.5.0",
+    "@xylabs/pixel": "^1.6.0",
     "@xylabs/ts-scripts-yarn3": "^3.11.12",
     "@xylabs/tsconfig-react": "^3.11.12",
     "react": "^18.3.1",

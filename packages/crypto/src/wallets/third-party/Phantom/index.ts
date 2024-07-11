@@ -1,2 +1,2 @@
-export * from './PhantomConnector'
-export * from './use'
+export * from './PhantomConnector.js'
+export * from './use.jsx'

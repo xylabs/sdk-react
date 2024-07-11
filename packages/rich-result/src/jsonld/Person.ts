@@ -1,16 +1,16 @@
 /* eslint-disable import/no-cycle */
 
-import { Brand } from './Brand'
-import { ContactPoint } from './ContactPoint'
-import { Country } from './Country'
-import { CreativeWork } from './CreativeWork'
-import { Language } from './Language'
-import { Offer } from './Offer'
-import { Organization } from './Organization'
-import { Place } from './Place'
-import { PostalAddress } from './PostalAddress'
-import { Product } from './Product'
-import { Thing } from './Thing'
+import { Brand } from './Brand.js'
+import { ContactPoint } from './ContactPoint.js'
+import { Country } from './Country.js'
+import { CreativeWork } from './CreativeWork.js'
+import { Language } from './Language.js'
+import { Offer } from './Offer.js'
+import { Organization } from './Organization.js'
+import { Place } from './Place.js'
+import { PostalAddress } from './PostalAddress.js'
+import { Product } from './Product.js'
+import { Thing } from './Thing.js'
 
 interface Person extends Thing {
   additionalName?: string

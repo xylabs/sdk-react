@@ -1,6 +1,6 @@
-import { EthWallet } from '../../types'
-import { useEthWallet } from '../hooks'
-import { PhantomConnector } from './PhantomConnector'
+import { EthWallet } from '../../types/index.js'
+import { useEthWallet } from '../hooks/index.js'
+import { PhantomConnector } from './PhantomConnector.js'
 
 let phantomConnector: PhantomConnector | undefined
 

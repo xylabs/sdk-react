@@ -8,7 +8,7 @@ import {
   WithChildren,
 } from '@xylabs/react-shared'
 
-import { useBusyTiming } from '../hooks'
+import { useBusyTiming } from '../hooks/index.js'
 
 export interface BusyCardProps extends CardProps {
   busy?: boolean

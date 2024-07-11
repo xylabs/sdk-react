@@ -1,9 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { ButtonEx } from '@xylabs/react-button'
+import { CookieConsent, CookieConsentLoader, useCookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexRow } from '@xylabs/react-flexbox'
-
-import { CookieConsentLoader, useCookieConsent } from '../contexts'
-import { CookieConsent } from './CookieConsent'
 
 const TemplateWithContext: StoryFn<typeof CookieConsent> = (args) => {
   const Inner: React.FC = () => {

@@ -1,22 +1,22 @@
 /* eslint-disable import/no-cycle */
 
-import { AggregateRating } from './AggrigateRating'
-import { GeospatialGeometry } from './GeospatialGeometry'
-import { ImageObject } from './ImageObject'
-import { Integer } from './Integer'
-import { Map } from './Map'
-import { Photograph } from './Photograph'
-import { PostalAddress } from './PostalAddress'
-import { PropertyValue } from './PropertyValue'
-import { Review } from './Review'
-import { Text } from './Text'
-import { Thing } from './Thing'
-import { URL } from './URL'
+import { AggregateRating } from './AggregateRating.js'
+import { GeospatialGeometry } from './GeospatialGeometry.js'
+import { ImageObject } from './ImageObject.js'
+import { Integer } from './Integer.js'
+import { Map } from './Map.js'
+import { Photograph } from './Photograph.js'
+import { PostalAddress } from './PostalAddress.js'
+import { PropertyValue } from './PropertyValue.js'
+import { Review } from './Review.js'
+import { Text } from './Text.js'
+import { Thing } from './Thing.js'
+import { URL } from './URL.js'
 
 interface Place extends Thing, GeospatialGeometry {
   additionalProperty?: PropertyValue
   address?: PostalAddress | Text
-  aggrigateRating?: AggregateRating
+  aggregateRating?: AggregateRating
   amenityFeature?: unknown
   branchCode?: Text
   containedInPlace?: Place

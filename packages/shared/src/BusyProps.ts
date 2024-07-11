@@ -1,4 +1,4 @@
-import { BusyCircularProgressProps, BusyLinearProgressProps } from './components'
+import { BusyCircularProgressProps, BusyLinearProgressProps } from './components/index.js'
 
 export type MaterialUIThemeColor = 'inherit' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning'
 export type BusyVariant = 'circular' | 'linear'

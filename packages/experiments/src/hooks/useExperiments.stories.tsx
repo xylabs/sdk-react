@@ -1,8 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
+import { selectVariantForExperiment, useExperiments } from '@xylabs/react-experiments'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 import { ReactNode } from 'react'
-
-import { selectVariantForExperiment, useExperiments } from './useExperiment'
 
 const View: React.FC = () => {
   useExperiments<ReactNode>('Storybook Test 2', [

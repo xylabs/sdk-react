@@ -1,2 +1,2 @@
-export * from './useAtomicPromise'
-export * from './usePromise'
+export * from './useAtomicPromise.js'
+export * from './usePromise.js'

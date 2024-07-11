@@ -3,8 +3,8 @@ import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { useEffect } from 'react'
 
-import { useCookieConsent } from '../contexts'
-import { CookieConsentProps } from './CookieConsentProps'
+import { useCookieConsent } from '../contexts/index.js'
+import { CookieConsentProps } from './CookieConsentProps.jsx'
 
 export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll, acceptOnTimer = 0, onAccept, ...props }) => {
   const { accepted, setAccepted, storageName } = useCookieConsent()

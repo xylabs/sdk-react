@@ -1,4 +1,4 @@
-import { FacebookStandardEvent } from './StandardEvent'
+import { FacebookStandardEvent } from './StandardEvent.js'
 
 export interface FacebookContentsItem {
   currency?: string

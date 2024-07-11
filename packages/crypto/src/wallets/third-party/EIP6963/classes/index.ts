@@ -1,3 +1,3 @@
-export * from './EIP6963Connector'
-export * from './EthWalletConnections'
-export * from './types'
+export * from './EIP6963Connector.js'
+export * from './EthWalletConnections.js'
+export * from './types/index.js'

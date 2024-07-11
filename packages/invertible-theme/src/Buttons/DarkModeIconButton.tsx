@@ -4,7 +4,7 @@ import { RotationAnimation } from '@xylabs/react-animation'
 import { FlexCol } from '@xylabs/react-flexbox'
 import { useState } from 'react'
 
-import { useColorSchemeEx } from '../CssVarsProvider'
+import { useColorSchemeEx } from '../CssVarsProvider/index.js'
 
 type iconColor = IconButtonProps['color']
 

@@ -1,6 +1,6 @@
-import { SnapchatBaseEvent } from './BaseEvent'
-import { SnapTr } from './Snaptr'
-import { SnapchatStandardProperties } from './StandardProperties'
+import { SnapchatBaseEvent } from './BaseEvent.js'
+import { SnapTr } from './Snaptr.js'
+import { SnapchatStandardProperties } from './StandardProperties.js'
 
 export class SnapchatStandardEvent<T extends SnapchatStandardProperties> extends SnapchatBaseEvent<T> {
   override async send(data: T) {

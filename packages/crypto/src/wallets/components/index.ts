@@ -1,3 +1,3 @@
-export * from './Discovery'
-export * from './Overview'
-export * from './shared'
+export * from './Discovery/index.js'
+export * from './Overview/index.js'
+export * from './shared/index.js'

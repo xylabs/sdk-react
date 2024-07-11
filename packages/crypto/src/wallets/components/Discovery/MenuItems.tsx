@@ -1,8 +1,8 @@
 import { Alert, MenuItemProps } from '@mui/material'
 
-import { DiscoveredWallets } from '../../third-party'
-import { onWalletSelect } from './lib'
-import { WalletDiscoveryMenuItem } from './MenuItem'
+import { DiscoveredWallets } from '../../third-party/index.js'
+import { onWalletSelect } from './lib/index.js'
+import { WalletDiscoveryMenuItem } from './MenuItem.jsx'
 
 export interface WalletsDiscoveredMenuItemsProps extends MenuItemProps {
   discoveredWallets?: DiscoveredWallets

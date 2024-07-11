@@ -1,2 +1,2 @@
-export * from './EthWallet'
-export * from './SelectedWallet'
+export * from './EthWallet.js'
+export * from './SelectedWallet.js'

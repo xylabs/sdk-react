@@ -1,2 +1,2 @@
-export * from './ErrorDialog'
-export * from './MessageDialog'
+export * from './ErrorDialog.jsx'
+export * from './MessageDialog.jsx'

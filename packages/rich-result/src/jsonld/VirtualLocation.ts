@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 
-import { Thing } from './Thing'
+import { Thing } from './Thing.js'
 
 type VirtualLocation = Thing
 

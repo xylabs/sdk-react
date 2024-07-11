@@ -1,6 +1,6 @@
 import { FunnelStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
 
-import { FacebookCustomEvent } from './CustomEvent'
+import { FacebookCustomEvent } from './CustomEvent.js'
 
 class FacebookUserEventHandler<T extends Record<string, unknown>> implements UserEventHandler<T> {
   async funnelStarted(data: FunnelStartedFields | T) {

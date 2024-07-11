@@ -1,7 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { FlexCol } from './FlexCol'
-import { FlexRow } from './FlexRow'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 
 const StorybookEntry = {
   argTypes: {},

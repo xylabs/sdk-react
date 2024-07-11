@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
-import { Class } from './Class'
-import { Enumeration } from './Enumeration'
-import { Intangible } from './Intangible'
+import { Class } from './Class.js'
+import { Enumeration } from './Enumeration.js'
+import { Intangible } from './Intangible.js'
 
 interface Property extends Intangible {
   domainIncludes?: Class

@@ -26,3 +26,4 @@ docs
 .eslintcache
 
 storybook-static
+*storybook.log

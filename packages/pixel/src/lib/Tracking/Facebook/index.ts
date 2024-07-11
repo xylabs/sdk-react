@@ -1,9 +1,9 @@
-export * from './BaseEvent'
-export * from './CustomEvent'
-export * from './Fbq'
-export * from './StandardEvent'
-export * from './StandardEvents'
-export * from './UserEventHandler'
+export * from './BaseEvent.js'
+export * from './CustomEvent.js'
+export * from './Fbq.js'
+export * from './StandardEvent.js'
+export * from './StandardEvents.js'
+export * from './UserEventHandler.js'
 
 export interface FacebookUserClick {
   elementName: string

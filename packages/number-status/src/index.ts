@@ -1,2 +1,2 @@
-export * from './NumberStatus'
-export * from './NumberStatusProps'
+export * from './NumberStatus.jsx'
+export * from './NumberStatusProps.js'

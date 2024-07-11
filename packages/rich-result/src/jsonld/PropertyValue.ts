@@ -1,9 +1,9 @@
 /* eslint-disable import/no-cycle */
-import { Enumeration } from './Enumeration'
-import { QualitativeValue } from './QualitativeValue'
-import { QuantitativeValue } from './QuantitativeValue'
-import { StructuredValue } from './StructuredValue'
-import { URL } from './URL'
+import { Enumeration } from './Enumeration.js'
+import { QualitativeValue } from './QualitativeValue.js'
+import { QuantitativeValue } from './QuantitativeValue.js'
+import { StructuredValue } from './StructuredValue.js'
+import { URL } from './URL.js'
 
 interface PropertyValue extends StructuredValue {
   maxValue?: number

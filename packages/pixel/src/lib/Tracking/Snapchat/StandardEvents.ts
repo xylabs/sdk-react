@@ -1,5 +1,5 @@
-import { SnapchatStandardEvent } from './StandardEvent'
-import { SnapchatStandardProperties } from './StandardProperties'
+import { SnapchatStandardEvent } from './StandardEvent.js'
+import { SnapchatStandardProperties } from './StandardProperties.js'
 
 export class SnapchatStandardEvents<T extends SnapchatStandardProperties> {
   achievementUnlocked() {

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 
-import { BusyBox } from './BusyBox'
-import { FlexBoxProps } from './FlexBoxProps'
+import { BusyBox } from './BusyBox/index.js'
+import { FlexBoxProps } from './FlexBoxProps.js'
 
 const FlexRow = forwardRef<unknown, FlexBoxProps>((props, ref) => {
   return <BusyBox alignItems="center" display="flex" flexDirection="row" justifyContent="center" ref={ref} {...props} />

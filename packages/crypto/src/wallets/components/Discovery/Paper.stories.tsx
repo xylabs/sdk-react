@@ -1,13 +1,16 @@
 import { Alert, AlertTitle, List, ListItem, Snackbar } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
+import {
+  AccountsChangedEventName,
+  ChainChangedEventName,
+  EIP6963Connector,
+  onWalletSelect,
+  WalletDiscoveryPaper,
+  WalletDiscoveryPaperProps,
+  WalletOverviewCard,
+} from '@xylabs/react-crypto'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { useEffect, useState } from 'react'
-
-import { AccountsChangedEventName, ChainChangedEventName } from '../../events'
-import { EIP6963Connector } from '../../third-party'
-import { WalletOverviewCard } from '../Overview'
-import { onWalletSelect } from './lib'
-import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper'
 
 const StorybookEntry = {
   args: {
@@ -23,7 +26,7 @@ const StorybookEntry = {
   title: 'wallets/Discovery/Paper',
 } as Meta<typeof WalletDiscoveryPaper>
 
-const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
+const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaperProps) => {
   const [selectedWallet, setSelectedWallet] = useState<EIP6963Connector | undefined>()
   const [errorArray, setErrorArray] = useState<[string, Error][]>([])
 
@@ -66,10 +69,12 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
     <FlexCol alignItems="start" gap={2}>
       <FlexRow justifyContent="start" alignItems="start" gap={4}>
         <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
-        {selectedWallet?.rawProvider ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} /> : null}
+        {selectedWallet?.rawProvider ?
+          <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} />
+        : null}
       </FlexRow>
-      {selectedWallet ? (
-        errorArray.length ? (
+      {selectedWallet ?
+        errorArray.length > 0 ?
           <List>
             {errorArray.map(([walletName, error]) => (
               <ListItem key={walletName}>
@@ -77,10 +82,8 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args) => {
               </ListItem>
             ))}
           </List>
-        ) : null
-      ) : (
-        <Alert severity={'warning'}>Select a wallet to see its errors</Alert>
-      )}
+        : null
+      : <Alert severity={'warning'}>Select a wallet to see its errors</Alert>}
       <Snackbar anchorOrigin={{ horizontal: 'center', vertical: 'top' }} open={!!event} autoHideDuration={5000} onClose={() => setEvent(undefined)}>
         <Alert severity="success">
           <AlertTitle>New Event</AlertTitle>

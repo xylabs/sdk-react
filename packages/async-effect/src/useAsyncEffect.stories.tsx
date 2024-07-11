@@ -1,8 +1,7 @@
 import { Button } from '@mui/material'
 import { StoryFn } from '@storybook/react'
+import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { useState } from 'react'
-
-import { useAsyncEffect } from './useAsyncEffect'
 
 interface UseAsyncEffectTestProps {
   unmountCallback?: () => void
@@ -32,7 +31,7 @@ export default {
   title: 'hooks/useAsyncEffect',
 }
 
-const Template: StoryFn<typeof UseAsyncEffectTest> = (args) => {
+const Template: StoryFn<typeof UseAsyncEffectTest> = (args: UseAsyncEffectTestProps) => {
   const [unmounted, setUnmounted] = useState(false)
   return (
     <div>

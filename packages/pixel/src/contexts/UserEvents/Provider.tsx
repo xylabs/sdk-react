@@ -1,8 +1,8 @@
 import { UserEventHandler } from '@xylabs/pixel'
 import { PropsWithChildren } from 'react'
 
-import { XyoUserEventHandler } from '../../lib'
-import { UserEventsContext } from './Context'
+import { XyoUserEventHandler } from '../../lib/index.js'
+import { UserEventsContext } from './Context.js'
 
 export interface UserEventsProviderProps<T> {
   userEvents: UserEventHandler<T>

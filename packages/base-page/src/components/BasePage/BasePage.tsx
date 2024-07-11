@@ -6,7 +6,7 @@ import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
 import { Helmet } from 'react-helmet'
 
-import { BasePageProps } from './BasePageProps'
+import { BasePageProps } from './BasePageProps.js'
 
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,

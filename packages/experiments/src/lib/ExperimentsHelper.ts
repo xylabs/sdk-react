@@ -4,7 +4,7 @@ import { UserEventHandler } from '@xylabs/pixel'
 import { UserEventsProps } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 
-import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components/index.js'
 
 const defaultLocalStorageKey = 'testData'
 let experimentsTestData: { [index: string]: string } = {}

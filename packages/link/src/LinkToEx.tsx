@@ -2,7 +2,7 @@ import { Link } from '@mui/material'
 import { forwardRef } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 
-import { LinkExProps } from './LinkExProps'
+import { LinkExProps } from './LinkExProps.jsx'
 
 export const LinkToEx = forwardRef<HTMLAnchorElement, LinkExProps>((props, ref) => {
   return <Link ref={ref} rel="noopener noreferrer" component={RouterLink} {...props} />

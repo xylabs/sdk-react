@@ -4,7 +4,7 @@ import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, JsonRpcSigner } from 'ethers'
 import { PropsWithChildren, useMemo, useState } from 'react'
 
-import { EthersContext } from './Context'
+import { EthersContext } from './Context.js'
 
 interface Props {
   enabled?: boolean

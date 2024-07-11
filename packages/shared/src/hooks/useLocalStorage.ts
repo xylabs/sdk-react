@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 
-import { getLocalStorageObject, setLocalStorageObject } from '../lib'
+import { getLocalStorageObject, setLocalStorageObject } from '../lib/index.js'
 
 export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T) => void] => {
   const [storedValue, setStoredValue] = useState<T>(() => {

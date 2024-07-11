@@ -1,10 +1,11 @@
 import { Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-
-import { DarkModeIconButtonForColorScheme } from '../Buttons'
-import { InvertibleCssVarsProvider } from './InvertibleCssVarsProvider'
-import { useColorSchemeEx } from './useColorSchemeEx'
-
+import {
+  DarkModeIconButtonForColorScheme,
+  InvertibleCssVarsProvider,
+  InvertibleCssVarsProviderProps,
+  useColorSchemeEx,
+} from '@xylabs/react-invertible-theme'
 const StorybookEntry = {
   argTypes: {},
   component: InvertibleCssVarsProvider,
@@ -16,7 +17,7 @@ const StorybookEntry = {
   title: 'invertible-theme/InvertibleCssVarsProvider',
 } as Meta<typeof InvertibleCssVarsProvider>
 
-const Template: StoryFn<typeof InvertibleCssVarsProvider> = (args) => <InvertibleCssVarsProvider {...args} />
+const Template: StoryFn<typeof InvertibleCssVarsProvider> = (args: InvertibleCssVarsProviderProps) => <InvertibleCssVarsProvider {...args} />
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
@@ -38,7 +39,10 @@ const ThemeEnabledComponent = () => {
           </Button>
           <Button onClick={() => setMode('system')}>System</Button>
         </ButtonGroup>
-        <Stack direction={'row'} gap={1}><p>DarkModeIconButton:</p><DarkModeIconButtonForColorScheme defaultLightModeColor={'default'} /></Stack>
+        <Stack direction={'row'} gap={1}>
+          <p>DarkModeIconButton:</p>
+          <DarkModeIconButtonForColorScheme defaultLightModeColor={'default'} />
+        </Stack>
         <Box sx={{ backgroundColor: theme.palette.background.default }}>
           <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
             <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>

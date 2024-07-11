@@ -4,9 +4,9 @@ import { useUserEvents } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 import React, { ReactElement } from 'react'
 
-import { ExperimentProps } from './Experiment'
-import { ExperimentsProps } from './ExperimentsProps'
-import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models'
+import { ExperimentProps } from './Experiment.jsx'
+import { ExperimentsProps } from './ExperimentsProps.js'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models/index.js'
 
 const defaultLocalStorageKey = 'testData'
 

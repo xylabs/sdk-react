@@ -1,7 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { Experiment } from './Experiment'
-import { Experiments } from './Experiments'
+import { Experiment, Experiments } from '@xylabs/react-experiments'
 
 const StorybookEntry = {
   argTypes: {},

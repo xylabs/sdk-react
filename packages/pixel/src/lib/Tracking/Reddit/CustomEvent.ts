@@ -1,6 +1,6 @@
 import { delay } from '@xylabs/delay'
 
-import { RedditBaseEvent } from './BaseEvent'
+import { RedditBaseEvent } from './BaseEvent.js'
 
 class RedditCustomEvent<T extends Record<string, unknown>> extends RedditBaseEvent<T> {
   override async send(data: T) {

@@ -1,1 +1,1 @@
-export * from './CoinbaseProvider'
+export * from './CoinbaseProvider.js'

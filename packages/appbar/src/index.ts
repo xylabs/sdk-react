@@ -1,2 +1,2 @@
-export { AppBarEx } from './AppBarEx'
-export { type AppBarExProps } from './AppBarExProps'
+export { AppBarEx } from './AppBarEx.jsx'
+export { type AppBarExProps } from './AppBarExProps.jsx'

@@ -1,2 +1,2 @@
-export { NetworkSettingsContext } from './Context'
-export * from './Loader'
+export { NetworkSettingsContext } from './Context.js'
+export * from './Loader.jsx'

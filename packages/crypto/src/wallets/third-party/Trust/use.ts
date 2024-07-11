@@ -1,6 +1,6 @@
-import { EthWallet } from '../../types'
-import { useEthWallet } from '../hooks'
-import { TrustConnector } from './TrustConnector'
+import { EthWallet } from '../../types/index.js'
+import { useEthWallet } from '../hooks/index.js'
+import { TrustConnector } from './TrustConnector.js'
 
 let trustConnector: TrustConnector | undefined
 

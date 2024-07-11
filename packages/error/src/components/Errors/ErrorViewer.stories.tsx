@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { ErrorViewer } from './ErrorViewer'
+import { ErrorViewer } from '@xylabs/react-error'
 
 const StorybookEntry = {
   argTypes: {},

@@ -1,3 +1,3 @@
-export * from './EthAccountBox'
-export * from './EthAccountButton'
-export * from './EthAccountProps'
+export * from './EthAccountBox.jsx'
+export * from './EthAccountButton.jsx'
+export * from './EthAccountProps.jsx'

@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
     "typeRoots": []
   },
   "exclude": ["node_modules", "dist", "./node_modules", "./**/node_modules", "./dist", "./**/dist", "./**/docs", ".*", "storybook-static"],

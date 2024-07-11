@@ -1,7 +1,7 @@
 import { FunnelStartedFields, TestStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
 
-import { FacebookUserEventHandler } from './Facebook'
-import { GoogleUserEventHandler } from './Google'
+import { FacebookUserEventHandler } from './Facebook/index.js'
+import { GoogleUserEventHandler } from './Google/index.js'
 
 class XyoUserEventHandler<T extends Record<string, unknown>> extends UserEventHandler<T> {
   static instance: XyoUserEventHandler<Record<string, unknown>>

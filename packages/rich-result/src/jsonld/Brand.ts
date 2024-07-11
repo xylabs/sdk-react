@@ -1,8 +1,8 @@
 /* eslint-disable import/no-cycle */
-import { AggregateRating } from './AggrigateRating'
-import { ImageObject } from './ImageObject'
-import { Intangible } from './Intangible'
-import { Review } from './Review'
+import { AggregateRating } from './AggregateRating.js'
+import { ImageObject } from './ImageObject.js'
+import { Intangible } from './Intangible.js'
+import { Review } from './Review.js'
 
 export interface Brand extends Intangible {
   aggregateRating?: AggregateRating

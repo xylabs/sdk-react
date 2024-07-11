@@ -5,7 +5,7 @@ import { forget } from '@xylabs/forget'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { useEffect, useMemo, useState } from 'react'
 
-import { EthWallet } from '../../wallets'
+import { EthWallet } from '../../wallets/index.js'
 
 export interface EthWalletSBComponentProps extends EthWallet {
   noIFrames?: boolean

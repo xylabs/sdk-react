@@ -1,6 +1,6 @@
 import { delay } from '@xylabs/delay'
 
-import { FacebookBaseEvent } from './BaseEvent'
+import { FacebookBaseEvent } from './BaseEvent.js'
 
 class FacebookCustomEvent<T extends Record<string, unknown>> extends FacebookBaseEvent<T> {
   override async send(data: T, eventId?: string) {

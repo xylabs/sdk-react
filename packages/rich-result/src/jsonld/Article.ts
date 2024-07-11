@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
-import { CreativeWork } from './CreativeWork'
-import { Integer } from './Integer'
-import { Text } from './Text'
+import { CreativeWork } from './CreativeWork.js'
+import { Integer } from './Integer.js'
+import { Text } from './Text.js'
 
 interface Article extends CreativeWork {
   articleBody?: Text

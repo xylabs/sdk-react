@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { ErrorDialog } from './ErrorDialog'
+import { ErrorDialog, ErrorDialogProps } from '@xylabs/react-dialogs'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,11 +12,11 @@ const StorybookEntry = {
   title: 'Dialogs/ErrorDialog',
 } as Meta<typeof ErrorDialog>
 
-const Template: StoryFn<typeof ErrorDialog> = (args) => <ErrorDialog {...args}></ErrorDialog>
+const Template: StoryFn<typeof ErrorDialog> = (args: ErrorDialogProps) => <ErrorDialog {...args}></ErrorDialog>
 
 const Default = Template.bind({})
 Default.args = {
-  error: Error('Test Error'),
+  error: new Error('Test Error'),
   title: 'Test Error',
 }
 

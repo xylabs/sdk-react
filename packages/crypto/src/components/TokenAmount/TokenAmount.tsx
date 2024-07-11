@@ -5,7 +5,7 @@ import { FlexRow } from '@xylabs/react-flexbox'
 
 // eslint-disable-next-line import/no-internal-modules
 import xyoLogo from './img/xyo.svg'
-import { TokenAmountProps } from './TokenAmountProps'
+import { TokenAmountProps } from './TokenAmountProps.jsx'
 
 const placesSplit = (value: bigint, places: number): [bigint, bigint] => {
   assertEx(places >= 0, () => 'Places has to be >= 0')

@@ -1,2 +1,2 @@
-export { BasePage } from './BasePage'
-export { type BasePageProps } from './BasePageProps'
+export { BasePage } from './BasePage.jsx'
+export { type BasePageProps } from './BasePageProps.js'

@@ -2,7 +2,8 @@ import { Menu as MenuIcon } from '@mui/icons-material'
 import { Toolbar } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 
-import { AppBarEx } from './AppBarEx'
+import { AppBarEx } from '@xylabs/react-appbar'
+import { AppBarExProps } from '@xylabs/react-appbar'
 
 const StorybookEntry = {
   argTypes: {},
@@ -15,7 +16,7 @@ const StorybookEntry = {
   title: 'common/AppBarEx',
 } as Meta<typeof AppBarEx>
 
-const Template: StoryFn<typeof AppBarEx> = (args) => <AppBarEx {...args}></AppBarEx>
+const Template: StoryFn<typeof AppBarEx> = (args: AppBarExProps) => <AppBarEx {...args}></AppBarEx>
 
 const Empty = Template.bind({})
 Empty.args = {

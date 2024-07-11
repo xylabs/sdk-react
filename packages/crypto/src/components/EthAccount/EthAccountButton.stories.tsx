@@ -1,8 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
+import { EthAccountButton } from '@xylabs/react-crypto'
 import { FlexRow } from '@xylabs/react-flexbox'
-
-import { EthAccountButton } from './EthAccountButton'
 
 const StorybookEntry = {
   argTypes: {},

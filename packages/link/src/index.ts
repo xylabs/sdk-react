@@ -1,3 +1,3 @@
-export * from './LinkEx'
-export * from './LinkExProps'
-export * from './LinkToEx'
+export * from './LinkEx.jsx'
+export * from './LinkExProps.jsx'
+export * from './LinkToEx.jsx'

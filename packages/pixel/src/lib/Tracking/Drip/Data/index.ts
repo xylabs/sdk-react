@@ -1,2 +1,2 @@
-export * from './Identify'
-export * from './Result'
+export * from './Identify.js'
+export * from './Result.js'

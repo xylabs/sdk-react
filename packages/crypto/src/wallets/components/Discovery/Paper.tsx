@@ -1,8 +1,8 @@
 import { Paper, PaperProps } from '@mui/material'
 
-import { useWalletDiscovery } from './hooks'
-import { onWalletSelect } from './lib'
-import { WalletsDiscoveredMenuItems } from './MenuItems'
+import { useWalletDiscovery } from './hooks/index.js'
+import { onWalletSelect } from './lib/index.js'
+import { WalletsDiscoveredMenuItems } from './MenuItems.jsx'
 
 export interface WalletDiscoveryPaperProps extends PaperProps {
   onWalletSelect?: onWalletSelect

@@ -1,1 +1,1 @@
-export * from './EthWalletConnectorBase'
+export * from './EthWalletConnectorBase.js'

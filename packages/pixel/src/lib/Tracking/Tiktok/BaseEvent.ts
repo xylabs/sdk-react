@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { Ttq } from './Ttq'
+import { Ttq } from './Ttq.js'
 
 export class TiktokBaseEvent<T> {
   name: string

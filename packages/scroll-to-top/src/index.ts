@@ -1,2 +1,2 @@
-export * from './ScrollToTop'
-export * from './ScrollToTopButton'
+export * from './ScrollToTop.jsx'
+export * from './ScrollToTopButton.jsx'

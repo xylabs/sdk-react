@@ -1,7 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react'
+import { useLocalStorage } from '@xylabs/react-shared'
 import { useEffect } from 'react'
-
-import { useLocalStorage } from './useLocalStorage'
 
 const View: React.FC = () => {
   //eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -9,6 +8,7 @@ const View: React.FC = () => {
   //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [defaultObject, setDefaultObject] = useLocalStorage<object | undefined>('test_object', { bar: true, foo: false })
   //eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line unicorn/no-useless-undefined
   const [storedString, setStoredString] = useLocalStorage<string | undefined>('test_string', undefined)
   useEffect(() => {
     setStoredBoolean(true)
@@ -42,7 +42,7 @@ const StorybookEntry = {
   title: 'Hooks/useLocalStorage',
 } as Meta<typeof View>
 
-const Template: StoryFn<typeof View> = (args) => <View {...args} />
+const Template: StoryFn<typeof View> = (args: Record<string, never>) => <View {...args} />
 
 const Default = Template.bind({})
 Default.args = {}

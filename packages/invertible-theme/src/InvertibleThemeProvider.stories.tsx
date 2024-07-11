@@ -1,7 +1,6 @@
 import { Box, CssBaseline, Typography, useTheme } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-
-import { InvertibleThemeProvider } from './InvertibleThemeProvider'
+import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
 
 const StorybookEntry = {
   argTypes: {},

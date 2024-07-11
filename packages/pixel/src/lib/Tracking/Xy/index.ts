@@ -1,3 +1,3 @@
-export { XyBaseEvent } from './BaseEvent'
-export { XyCustomEvent } from './CustomEvent'
-export { XyUserEventHandler } from './UserEventHandler'
+export { XyBaseEvent } from './BaseEvent.js'
+export { XyCustomEvent } from './CustomEvent.js'
+export { XyUserEventHandler } from './UserEventHandler.js'

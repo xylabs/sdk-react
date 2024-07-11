@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { WalletsDiscoveredMenuItems, WalletsDiscoveredMenuItemsProps } from './MenuItems'
+import { WalletsDiscoveredMenuItems, WalletsDiscoveredMenuItemsProps } from '@xylabs/react-crypto'
 
 const StorybookEntry = {
   args: {

@@ -1,7 +1,5 @@
 import { Meta } from '@storybook/react'
-
-import { EthWalletSBComponent } from '../../../components'
-import { useMetaMask } from './use'
+import { EthWalletSBComponent, useMetaMask } from '@xylabs/react-crypto'
 
 const UseMetaMaskSBComponent = () => {
   const hookState = useMetaMask()

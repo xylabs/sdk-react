@@ -2,7 +2,7 @@ import { Box, BoxProps, Paper, useTheme } from '@mui/material'
 import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
 import { forwardRef } from 'react'
 
-import { useBusyTiming } from '../../hooks'
+import { useBusyTiming } from '../../hooks/index.js'
 
 export interface BusyBoxProps extends BusyProps, Omit<BoxProps, 'ref'> {
   background?: boolean

@@ -1,4 +1,4 @@
-import { WithDataLayer } from './DataLayer'
+import { WithDataLayer } from './DataLayer.js'
 
 class Gtm {
   static instance: Gtm

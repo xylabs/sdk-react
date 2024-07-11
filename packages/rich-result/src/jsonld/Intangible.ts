@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import { Thing } from './Thing'
+import { Thing } from './Thing.js'
 
 type Intangible = Thing
 

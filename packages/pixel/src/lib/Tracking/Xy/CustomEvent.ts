@@ -1,4 +1,4 @@
-import { XyBaseEvent } from './BaseEvent'
+import { XyBaseEvent } from './BaseEvent.js'
 
 class XyCustomEvent<T extends Record<string, unknown>> extends XyBaseEvent<T> {}
 

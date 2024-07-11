@@ -1,46 +1,68 @@
-// .storybook/main.ts
-
-// Replace your-framework with the framework you are using (e.g., react-webpack5, vue3-webpack5)
 import type { StorybookConfig } from '@storybook/react-webpack5';
+import path from 'path';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const config: StorybookConfig = {
-  stories: [
-    '../packages/*/src/**/*.stories.@(ts|tsx)'
-  ],
+  stories: ['../**/src/**/*.mdx', '../**/src/**/*.stories.@(ts|tsx|js|jsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    'storybook-dark-mode',
-    '@storybook/addon-interactions',
+    '@storybook/addon-docs'
   ],
-  typescript: {
-    check: true,
-    checkOptions: {},
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
-    },
-  },
-  features: { legacyMdx1: true },
   framework: {
     name: '@storybook/react-webpack5',
-    options: {
-      
-    },
+    options: {}
   },
   core: {
-    disableTelemetry: true,
+    builder: '@storybook/builder-webpack5'
   },
-  docs: {
-    autodocs: 'tag',
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
-  refs: {
-    'design-system': {
-      title: 'Storybook Design System',
-      url: 'https://5ccbc373887ca40020446347-yldsqjoxzb.chromatic.com',
-    },
-  },
+  webpackFinal: async (config) => {
+    config.module?.rules?.push({
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      ],
+    });
+    
+    config.module?.rules?.push({
+      test: /\.(ts|tsx)$/,
+      use: [
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+            configFile: path.resolve(__dirname, '../tsconfig.json')
+          }
+        }
+      ]
+    });
+
+    config.resolve = {
+      ...config.resolve,
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      plugins: [
+        new TsconfigPathsPlugin({
+          configFile: path.resolve(__dirname, '../tsconfig.json')
+        })
+      ],
+      alias: {
+        ...config.resolve?.alias,
+        '.js': '.ts', // Redirect .js imports to .ts files if necessary
+        '.jsx': '.tsx' // Redirect .jsx imports to .tsx files if necessary
+      }
+    };
+
+    return config;
+  }
 };
 
 export default config;

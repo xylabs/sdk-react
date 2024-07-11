@@ -1,1 +1,1 @@
-export * from './usePixelAltSendHandler'
+export * from './usePixelAltSendHandler.js'

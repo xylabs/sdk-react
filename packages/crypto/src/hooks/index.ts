@@ -1,1 +1,1 @@
-export * from './useNavigateToEthAddress'
+export * from './useNavigateToEthAddress.js'

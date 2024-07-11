@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { ErrorsViewer } from './ErrorsViewer'
+import { ErrorsViewer, ErrorsViewerProps } from '@xylabs/react-error'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,11 +12,11 @@ const StorybookEntry = {
   title: 'Components/ErrorsViewer',
 } as Meta<typeof ErrorsViewer>
 
-const Template: StoryFn<typeof ErrorsViewer> = (args) => <ErrorsViewer {...args}></ErrorsViewer>
+const Template: StoryFn<typeof ErrorsViewer> = (args: ErrorsViewerProps) => <ErrorsViewer {...args}></ErrorsViewer>
 
 const Default = Template.bind({})
 Default.args = {
-  errors: [Error('Error One'), Error('Error Two')],
+  errors: [new Error('Error One'), new Error('Error Two')],
   title: 'Default',
 }
 

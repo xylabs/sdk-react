@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
-import { CreativeWork } from './CreativeWork'
-import { Rating } from './Rating'
-import { Thing } from './Thing'
+import { CreativeWork } from './CreativeWork.js'
+import { Rating } from './Rating.js'
+import { Thing } from './Thing.js'
 
 interface Review extends CreativeWork {
   itemReviewed?: Thing

@@ -4,7 +4,7 @@ import { FlexCol, FlexGrowRow } from '@xylabs/react-flexbox'
 import numeral from 'numeral'
 import React from 'react'
 
-import { NumberStatusProps } from './NumberStatusProps'
+import { NumberStatusProps } from './NumberStatusProps.js'
 
 const NumberStatus: React.FC<NumberStatusProps> = ({
   error,

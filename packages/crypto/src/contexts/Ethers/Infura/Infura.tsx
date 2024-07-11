@@ -2,7 +2,7 @@
 import { BrowserProvider, InfuraProvider } from 'ethers'
 import React, { PropsWithChildren } from 'react'
 
-import { EthersContext } from '../Context'
+import { EthersContext } from '../Context.js'
 
 interface Props {
   enabled?: boolean

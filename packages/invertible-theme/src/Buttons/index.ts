@@ -1,1 +1,1 @@
-export * from './DarkModeIconButton'
+export * from './DarkModeIconButton.jsx'

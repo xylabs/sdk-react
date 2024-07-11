@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { Rdt } from './Rdt'
+import { Rdt } from './Rdt.js'
 
 class RedditBaseEvent<T> {
   name: string

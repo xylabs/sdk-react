@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
     "typeRoots": []
   },
+  "include": ["src"],
   "exclude": ["dist", "docs"],
   "extends": "@xylabs/tsconfig-react"
 }

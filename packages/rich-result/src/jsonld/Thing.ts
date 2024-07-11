@@ -1,11 +1,11 @@
 /* eslint-disable import/no-cycle */
-import { Action } from './Action'
-import { Base } from './Base'
-import { CreativeWork } from './CreativeWork'
-import { ImageObject } from './ImageObject'
-import { PropertyValue } from './PropertyValue'
-import { Text } from './Text'
-import { URL } from './URL'
+import { Action } from './Action.js'
+import { Base } from './Base.js'
+import { CreativeWork } from './CreativeWork.js'
+import { ImageObject } from './ImageObject.js'
+import { PropertyValue } from './PropertyValue.js'
+import { Text } from './Text.js'
+import { URL } from './URL.js'
 
 interface Thing extends Base {
   additionalType?: URL

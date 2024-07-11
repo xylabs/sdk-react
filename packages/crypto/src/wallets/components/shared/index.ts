@@ -1,1 +1,1 @@
-export * from './ConstrainedImage'
+export * from './ConstrainedImage.jsx'

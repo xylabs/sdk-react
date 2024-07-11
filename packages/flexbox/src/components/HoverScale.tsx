@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 
-import { FlexBoxProps } from './FlexBoxProps'
-import { FlexRow } from './FlexRow'
+import { FlexBoxProps } from './FlexBoxProps.jsx'
+import { FlexRow } from './FlexRow.jsx'
 
 export type HoverScaleProps = FlexBoxProps & {
   scale?: number

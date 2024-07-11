@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { NumberStatus } from './NumberStatus'
+import { NumberStatus, NumberStatusProps } from '@xylabs/react-number-status'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,7 +12,7 @@ const StorybookEntry = {
   title: 'Components/NumberStatus',
 } as Meta<typeof NumberStatus>
 
-const NumberStatusTemplate: StoryFn<typeof NumberStatus> = (args) => <NumberStatus {...args}></NumberStatus>
+const NumberStatusTemplate: StoryFn<typeof NumberStatus> = (args: NumberStatusProps) => <NumberStatus {...args}></NumberStatus>
 
 const Default = NumberStatusTemplate.bind({})
 Default.args = {
@@ -24,13 +23,13 @@ Default.args = {
 const Default6Digits = NumberStatusTemplate.bind({})
 Default6Digits.args = {
   title: 'Default-6',
-  value: 334455,
+  value: 334_455,
 }
 
 const Default10Digits = NumberStatusTemplate.bind({})
 Default10Digits.args = {
   title: 'Default-10',
-  value: 334455667788,
+  value: 334_455_667_788,
 }
 
 const Small = NumberStatusTemplate.bind({})
@@ -44,14 +43,14 @@ const Small6Digits = NumberStatusTemplate.bind({})
 Small6Digits.args = {
   size: 'small',
   title: 'Small-6',
-  value: 334455,
+  value: 334_455,
 }
 
 const Small10Digits = NumberStatusTemplate.bind({})
 Small10Digits.args = {
   size: 'small',
   title: 'Small-10',
-  value: 334455667788,
+  value: 334_455_667_788,
 }
 
 const Large = NumberStatusTemplate.bind({})
@@ -65,14 +64,14 @@ const Large6Digits = NumberStatusTemplate.bind({})
 Large6Digits.args = {
   size: 'large',
   title: 'Large-6',
-  value: 334455,
+  value: 334_455,
 }
 
 const Large10Digits = NumberStatusTemplate.bind({})
 Large10Digits.args = {
   size: 'large',
   title: 'Large-10',
-  value: 334455667788,
+  value: 334_455_667_788,
 }
 
 export { Default, Default6Digits, Default10Digits, Large, Large6Digits, Large10Digits, Small, Small6Digits, Small10Digits }

@@ -4,8 +4,8 @@ import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, InfuraProvider, JsonRpcSigner } from 'ethers'
 import React, { PropsWithChildren, useState } from 'react'
 
-import { EthersContext } from './Context'
-import { infuraKey } from './Infura'
+import { EthersContext } from './Context.js'
+import { infuraKey } from './Infura/index.js'
 
 interface Props {
   enabled?: boolean

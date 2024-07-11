@@ -1,2 +1,2 @@
-export * from './Ethers'
-export * from './NetworkSettings'
+export * from './Ethers/index.js'
+export * from './NetworkSettings/index.js'

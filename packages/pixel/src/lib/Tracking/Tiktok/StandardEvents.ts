@@ -1,4 +1,4 @@
-import { TiktokStandardEvent } from './StandardEvent'
+import { TiktokStandardEvent } from './StandardEvent.js'
 
 export class TiktokStandardEvents<T extends Record<string, unknown>> {
   addBilling() {

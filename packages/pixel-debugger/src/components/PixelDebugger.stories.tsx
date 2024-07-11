@@ -1,9 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { PixelApi, XyPixel } from '@xylabs/pixel'
+import { BusyBoxProps } from '@xylabs/react-flexbox'
+import { PixelDebugger, PixelDebuggerProvider, PixelDebuggerToggle } from '@xylabs/react-pixel-debugger'
 import { useEffect, useState } from 'react'
-
-import { PixelDebugger, PixelDebuggerToggle } from './index'
-import { PixelDebuggerProvider } from './PixelDebuggerProvider'
 
 const StorybookEntry = {
   argTypes: {},
@@ -16,20 +15,18 @@ const StorybookEntry = {
   title: 'pixel-debugger/PixelDebuggerToggle',
 } as Meta<typeof PixelDebuggerToggle>
 
-const Template: StoryFn<typeof PixelDebuggerToggle> = (args) => {
+const Template: StoryFn<typeof PixelDebuggerToggle> = (args: BusyBoxProps) => {
   const [pixel, setPixel] = useState<XyPixel>()
   useEffect(() => {
     XyPixel.selectApi(new PixelApi('local'))
     setPixel(XyPixel.init('storybookPixel'))
   }, [])
-  return pixel ? (
-    <PixelDebuggerProvider>
-      <PixelDebuggerToggle {...args} />
-      <PixelDebugger />
-    </PixelDebuggerProvider>
-  ) : (
-    <></>
-  )
+  return pixel ?
+      <PixelDebuggerProvider>
+        <PixelDebuggerToggle {...args} />
+        <PixelDebugger />
+      </PixelDebuggerProvider>
+    : <></>
 }
 
 const Default = Template.bind({})

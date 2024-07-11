@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Base, Thing } from './jsonld'
+import { Base, Thing } from './jsonld/index.js'
 
 type WithContext<T extends Base> = T & {
   '@context': 'https://schema.org'

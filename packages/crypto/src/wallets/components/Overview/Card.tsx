@@ -2,10 +2,10 @@ import { Card, CardProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import { useEffect, useState } from 'react'
 
-import { EIP6963Connector, useEthWallet } from '../../third-party'
-import { WalletOverviewCardActions } from './CardActions'
-import { WalletOverviewCardContent } from './CardContent'
-import { WalletOverviewCardHeader } from './CardHeader'
+import { EIP6963Connector, useEthWallet } from '../../third-party/index.js'
+import { WalletOverviewCardActions } from './CardActions.jsx'
+import { WalletOverviewCardContent } from './CardContent.jsx'
+import { WalletOverviewCardHeader } from './CardHeader.jsx'
 
 export interface WalletOverviewCardProps extends CardProps {
   ethWalletConnector: EIP6963Connector

@@ -1,14 +1,14 @@
 /* eslint-disable import/no-cycle */
-import { ActionStatusType } from './ActionStatusType'
-import { DateTime } from './DateTime'
-import { EntryPoint } from './EntryPoint'
-import { Organization } from './Organization'
-import { Person } from './Person'
-import { Place } from './Place'
-import { PostalAddress } from './PostalAddress'
-import { Thing } from './Thing'
-import { Time } from './Time'
-import { VirtualLocation } from './VirtualLocation'
+import { ActionStatusType } from './ActionStatusType.js'
+import { DateTime } from './DateTime.js'
+import { EntryPoint } from './EntryPoint.js'
+import { Organization } from './Organization.js'
+import { Person } from './Person.js'
+import { Place } from './Place.js'
+import { PostalAddress } from './PostalAddress.js'
+import { Thing } from './Thing.js'
+import { Time } from './Time.js'
+import { VirtualLocation } from './VirtualLocation.js'
 
 interface Action extends Thing {
   actionStatus?: ActionStatusType

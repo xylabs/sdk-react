@@ -1,12 +1,12 @@
 /* eslint-disable import/no-cycle */
-import { AdministrativeArea } from './AdministrativeArea'
-import { ContactPointOption } from './ContactPointOption'
-import { GeoShape } from './GeoShape'
-import { Language } from './Language'
-import { Place } from './Place'
-import { Product } from './Product'
-import { Text } from './Text'
-import { Thing } from './Thing'
+import { AdministrativeArea } from './AdministrativeArea.js'
+import { ContactPointOption } from './ContactPointOption.js'
+import { GeoShape } from './GeoShape.js'
+import { Language } from './Language.js'
+import { Place } from './Place.js'
+import { Product } from './Product.js'
+import { Text } from './Text.js'
+import { Thing } from './Thing.js'
 
 interface ContactPoint extends Thing {
   areaServed?: AdministrativeArea | GeoShape | Place | Text

@@ -2,7 +2,7 @@ import { CheckCircleOutline } from '@mui/icons-material'
 import { CardHeader, CardHeaderProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 
-import { ConstrainedImage } from '../shared'
+import { ConstrainedImage } from '../shared/index.js'
 
 export interface WalletOverviewCardHeaderProps extends CardHeaderProps {
   currentAccount?: EthAddress

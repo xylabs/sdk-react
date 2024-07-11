@@ -1,9 +1,9 @@
 import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
 import { cloneDeep, merge } from '@xylabs/lodash'
 
-import { InvertibleThemeContext } from './InvertibleThemeContext'
-import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps'
-import { useInvertibleThemeProvider } from './use'
+import { InvertibleThemeContext } from './InvertibleThemeContext.jsx'
+import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps.js'
+import { useInvertibleThemeProvider } from './use.js'
 
 export const resolveThemeColors = (options: ThemeOptions) => {
   const theme = createTheme(options)

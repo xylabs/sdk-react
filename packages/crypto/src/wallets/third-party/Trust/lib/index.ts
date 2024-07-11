@@ -1,1 +1,1 @@
-export * from './TrustProvider'
+export * from './TrustProvider.js'

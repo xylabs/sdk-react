@@ -1,1 +1,1 @@
-export * from './RotationAnimation'
+export * from './RotationAnimation.jsx'

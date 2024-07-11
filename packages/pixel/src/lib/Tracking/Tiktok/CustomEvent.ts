@@ -1,6 +1,6 @@
 import { delay } from '@xylabs/delay'
 
-import { TiktokBaseEvent } from './BaseEvent'
+import { TiktokBaseEvent } from './BaseEvent.js'
 
 class TiktokCustomEvent<T extends Record<string, unknown>> extends TiktokBaseEvent<T> {
   override async send(data: T) {

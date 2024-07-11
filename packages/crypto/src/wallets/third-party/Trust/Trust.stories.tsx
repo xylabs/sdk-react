@@ -1,7 +1,5 @@
 import { Meta } from '@storybook/react'
-
-import { EthWalletSBComponent } from '../../../components'
-import { useTrustWallet } from './use'
+import { EthWalletSBComponent, useTrustWallet } from '@xylabs/react-crypto'
 
 const UseTrustSBComponent = () => {
   const hookState = useTrustWallet()

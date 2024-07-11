@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { Fbq } from './Fbq'
+import { Fbq } from './Fbq.js'
 
 class FacebookBaseEvent<T> {
   fbq: Fbq

@@ -2,13 +2,13 @@ import { EthAddress } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
-import { EthWallet } from '../../types'
-import { EthWalletConnectorBase } from '../classes'
-import { useChainId } from './useChainId'
-import { useConnectWallet } from './useConnect'
-import { useCurrentAccount } from './useCurrentAccount'
-import { useProvider } from './useProvider'
-import { useSigner } from './useSigner'
+import { EthWallet } from '../../types/index.js'
+import { EthWalletConnectorBase } from '../classes/index.js'
+import { useChainId } from './useChainId.jsx'
+import { useConnectWallet } from './useConnect.jsx'
+import { useCurrentAccount } from './useCurrentAccount.jsx'
+import { useProvider } from './useProvider.jsx'
+import { useSigner } from './useSigner.jsx'
 
 /**
  * A hook that takes an instance of EthWalletConnectorBase and makes certain functionality reactive.

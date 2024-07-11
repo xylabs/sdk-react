@@ -1,1 +1,1 @@
-export * from './findChain'
+export * from './findChain.js'

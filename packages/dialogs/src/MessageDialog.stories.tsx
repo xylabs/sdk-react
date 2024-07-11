@@ -1,6 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react'
-
-import { MessageDialog } from './MessageDialog'
+import { MessageDialog } from '@xylabs/react-dialogs'
 
 const StorybookEntry = {
   argTypes: {},

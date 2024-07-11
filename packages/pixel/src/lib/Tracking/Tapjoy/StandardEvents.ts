@@ -1,4 +1,4 @@
-import { TapjoyStandardEvent } from './StandardEvent'
+import { TapjoyStandardEvent } from './StandardEvent.js'
 
 class TapjoyStandardEvents<T extends Record<string, unknown>> {
   accountCreated() {

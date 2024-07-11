@@ -1,4 +1,4 @@
-export * from './components'
+export * from './components/index.js'
 export * from '@xylabs/react-base-page'
 export * from '@xylabs/react-error'
 export * from '@xylabs/react-portal'

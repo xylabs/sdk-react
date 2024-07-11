@@ -3,7 +3,7 @@
 import { Mutex } from 'async-mutex'
 import { DependencyList } from 'react'
 
-import { State, usePromise } from './usePromise'
+import { State, usePromise } from './usePromise.js'
 
 const mutexDictionary: Record<string, Mutex> = {}
 

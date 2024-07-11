@@ -1,7 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react'
+import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-
-import { ButtonEx } from './ButtonEx'
 
 const StorybookEntry = {
   argTypes: {},

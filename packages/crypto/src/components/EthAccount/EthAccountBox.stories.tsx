@@ -1,8 +1,8 @@
 import { Paper } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
-
-import { EthAccountBox } from './EthAccountBox'
+import { EthAccountBox, EthAccountProps } from '@xylabs/react-crypto'
+import { FlexBoxProps } from '@xylabs/react-flexbox'
 
 const StorybookEntry = {
   argTypes: {},
@@ -15,7 +15,7 @@ const StorybookEntry = {
   title: 'crypto/EthAccount/Box',
 } as Meta<typeof EthAccountBox>
 
-const Template: StoryFn<typeof EthAccountBox> = (args) => (
+const Template: StoryFn<typeof EthAccountBox> = (args: EthAccountProps & FlexBoxProps) => (
   <Paper variant="outlined" style={{ overflow: 'hidden' }}>
     <EthAccountBox {...args}></EthAccountBox>
   </Paper>

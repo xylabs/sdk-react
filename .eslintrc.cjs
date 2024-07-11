@@ -1,5 +1,5 @@
 const finalConfig = {
-  "extends": ["@xylabs/react"],
+  "extends": ["@xylabs/react", "plugin:storybook/recommended"],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', project: './tsconfig.json', sourceType: 'module', tsconfigRootDir: null },
   "root": true,
@@ -11,7 +11,6 @@ const finalConfig = {
     "docker",
     "nftData",
     "testData.json",
-    "*.stories.*",
     "swagger.json",
     ".yarn",
     ".*"
@@ -47,14 +46,7 @@ const finalConfig = {
       }
     ],
     "import/no-internal-modules": [
-      "warn", {
-        "allow": [
-          "source-map-support/*",
-          "lodash/*",
-          "aws-sdk/**/*",
-          "types/*"
-        ]
-      }
+      "off"
     ]
   }
 }

@@ -1,7 +1,7 @@
 import { Theme } from '@mui/material'
 
-import { BoxlikeComponentProps } from './BoxlikeComponentProps'
-import { calcSpacing } from './calcSpacing'
+import { BoxlikeComponentProps } from './BoxlikeComponentProps.js'
+import { calcSpacing } from './calcSpacing.js'
 
 const mergeBoxlikeStyles = <T extends BoxlikeComponentProps>(theme: Theme, props: BoxlikeComponentProps, defaultProps?: BoxlikeComponentProps): T => {
   const {

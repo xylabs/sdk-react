@@ -1,6 +1,6 @@
-import { EthWallet } from '../../types'
-import { useEthWallet } from '../hooks'
-import { MetaMaskConnector } from './MetaMaskConnector'
+import { EthWallet } from '../../types/index.js'
+import { useEthWallet } from '../hooks/index.js'
+import { MetaMaskConnector } from './MetaMaskConnector.js'
 
 let metamaskConnector: MetaMaskConnector | undefined
 

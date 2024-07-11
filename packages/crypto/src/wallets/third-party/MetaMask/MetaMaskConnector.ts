@@ -2,7 +2,7 @@ import { MetaMaskInpageProvider } from '@metamask/providers'
 import { forget } from '@xylabs/forget'
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../classes'
+import { EthWalletConnectorBase } from '../classes/index.js'
 
 const PROVIDER_NAME = 'MetaMask'
 

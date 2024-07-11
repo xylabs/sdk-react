@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import { Intangible } from './Intangible'
+import { Intangible } from './Intangible.js'
 
 type StructuredValue = Intangible
 

@@ -3,7 +3,7 @@ import { Experimental_CssVarsProvider as CssVarsProvider, responsiveFontSizes, u
 import type {} from '@mui/material/themeCssVarsAugmentation'
 import { ReactNode, useEffect } from 'react'
 
-import { InvertibleCssVarsProviderInterface, Mode } from './InvertibleCssVars'
+import { InvertibleCssVarsProviderInterface, Mode } from './InvertibleCssVars.js'
 
 export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   const { setMode } = useColorScheme()

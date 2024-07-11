@@ -1,7 +1,7 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { PropsWithChildren } from 'react'
 
-import { NetworkSettingsContext } from './Context'
+import { NetworkSettingsContext } from './Context.js'
 
 export interface NetworkSettingsLoaderProps {
   enabled?: boolean

@@ -1,11 +1,11 @@
 /* eslint-disable import/no-deprecated */
 import { ReactNode } from 'react'
 
-import { InfuraEthersLoader } from './Infura'
-import { MetaMaskEthersLoader } from './MetaMask'
-import { MyEtherWalletEthersLoader } from './MyEtherWallet'
-import { OperaEthersLoader } from './Opera'
-import { TrustEthersLoader } from './Trust'
+import { InfuraEthersLoader } from './Infura/index.js'
+import { MetaMaskEthersLoader } from './MetaMask.jsx'
+import { MyEtherWalletEthersLoader } from './MyEtherWallet.jsx'
+import { OperaEthersLoader } from './Opera.jsx'
+import { TrustEthersLoader } from './Trust.jsx'
 
 export interface EthersLoaderProps {
   children?: ReactNode

@@ -1,2 +1,2 @@
-export * from './Portal'
-export * from './PortalProps'
+export * from './Portal.jsx'
+export * from './PortalProps.js'

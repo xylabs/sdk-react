@@ -4,8 +4,8 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
 import { MouseEvent } from 'react'
 
-import { EthAccountBox } from './EthAccountBox'
-import { EthAccountProps } from './EthAccountProps'
+import { EthAccountBox } from './EthAccountBox.jsx'
+import { EthAccountProps } from './EthAccountProps.jsx'
 
 export interface EthAccountButtonProps extends EthAccountProps {
   toEtherScan?: boolean

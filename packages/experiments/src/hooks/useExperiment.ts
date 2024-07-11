@@ -1,8 +1,8 @@
 import { useUserEvents } from '@xylabs/react-pixel'
 import { useState } from 'react'
 
-import { VariantData } from '../components'
-import { ExperimentsHelper } from '../lib'
+import { VariantData } from '../components/index.js'
+import { ExperimentsHelper } from '../lib/index.js'
 
 const selectVariant =
   <T>(current?: string) =>

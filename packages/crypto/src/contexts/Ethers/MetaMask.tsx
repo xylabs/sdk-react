@@ -1,8 +1,8 @@
 /* eslint-disable import/no-deprecated */
 import React, { PropsWithChildren } from 'react'
 
-import { useMetaMask } from '../../wallets'
-import { EthersContext } from './Context'
+import { useMetaMask } from '../../wallets/index.js'
+import { EthersContext } from './Context.js'
 
 export interface Props {
   /** @deprecated - wallet should determine this for you */

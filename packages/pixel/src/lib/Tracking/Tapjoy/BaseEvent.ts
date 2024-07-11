@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { EF } from './EF'
+import { EF } from './EF.js'
 
 class TapjoyBaseEvent<T> {
   ef: EF

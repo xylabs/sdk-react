@@ -1,8 +1,8 @@
 /* eslint-disable import/no-cycle */
-import { Country } from './Country'
-import { PostalAddress } from './PostalAddress'
-import { Text } from './Text'
-import { Thing } from './Thing'
+import { Country } from './Country.js'
+import { PostalAddress } from './PostalAddress.js'
+import { Text } from './Text.js'
+import { Thing } from './Thing.js'
 
 interface GeoShape extends Thing {
   address?: PostalAddress | Text
