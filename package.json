@@ -149,7 +149,7 @@
     "storybook": "storybook dev -p 6006"
   },
   "sideEffects": false,
-  "version": "3.3.0",
+  "version": "3.4.0",
   "packageManager": "yarn@4.3.1",
   "volta": {
     "node": "22.3.0",

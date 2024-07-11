@@ -1,9 +1,7 @@
 import { Menu as MenuIcon } from '@mui/icons-material'
 import { Toolbar } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-
-import { AppBarEx } from '@xylabs/react-appbar'
-import { AppBarExProps } from '@xylabs/react-appbar'
+import { AppBarEx, AppBarExProps } from '@xylabs/react-appbar'
 
 const StorybookEntry = {
   argTypes: {},

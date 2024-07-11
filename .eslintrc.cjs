@@ -16,6 +16,7 @@ const finalConfig = {
     ".*"
   ],
   "rules": {
+    "workspaces/no-absolute-imports": ["off"],
     "@typescript-eslint/explicit-member-accessibility": ["warn", { "accessibility": "no-public" }],
     "no-restricted-imports": [
       "warn",
