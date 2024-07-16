@@ -26,7 +26,7 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
   statusColor,
   style,
   amount,
-  places = -18,
+  places = 18,
   logo,
   label,
   onButtonClick,

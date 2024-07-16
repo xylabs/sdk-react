@@ -22,14 +22,14 @@
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.16.1",
-    "@storybook/react": "^8.2.1",
+    "@mui/icons-material": "^5.16.4",
+    "@storybook/react": "^8.2.4",
     "@types/react": "^18.3.3",
     "@types/react-helmet": "^6.1.11",
-    "@xylabs/ts-scripts-yarn3": "^3.11.12",
-    "@xylabs/tsconfig-react": "^3.11.12",
+    "@xylabs/ts-scripts-yarn3": "^3.12.1",
+    "@xylabs/tsconfig-react": "^3.12.1",
     "react": "^18.3.1",
-    "react-router-dom": "^6.24.1",
+    "react-router-dom": "^6.25.0",
     "typescript": "^5.5.3"
   },
   "peerDependencies": {
@@ -82,6 +82,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.4.0",
+  "version": "3.4.1",
   "type": "module"
 }
