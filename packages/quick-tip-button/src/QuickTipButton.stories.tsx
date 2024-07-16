@@ -2,8 +2,7 @@ import { NotListedLocation as NotListedLocationIcon } from '@mui/icons-material'
 import { Typography } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 import { FlexRow } from '@xylabs/react-flexbox'
-
-import { QuickTipButton } from './QuickTipButton'
+import { QuickTipButton } from '@xylabs/react-quick-tip-button'
 
 const StorybookEntry = {
   argTypes: {},

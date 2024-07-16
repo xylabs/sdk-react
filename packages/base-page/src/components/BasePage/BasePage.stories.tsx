@@ -1,7 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react'
+import { BasePage } from '@xylabs/react-base-page'
 import { BrowserRouter } from 'react-router-dom'
-
-import { BasePage } from './BasePage'
 
 const StorybookEntry = {
   argTypes: {},

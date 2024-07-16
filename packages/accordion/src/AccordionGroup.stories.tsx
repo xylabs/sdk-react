@@ -1,8 +1,7 @@
 import { Grid } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
+import { AccordionGroup } from '@xylabs/react-accordion'
 import { FlexCol } from '@xylabs/react-flexbox'
-
-import { AccordionGroup } from './AccordionGroup'
 
 const StorybookEntry: Meta<typeof AccordionGroup> = {
   argTypes: {},

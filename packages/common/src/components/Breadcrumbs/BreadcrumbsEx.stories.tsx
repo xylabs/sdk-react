@@ -1,7 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react'
+import { BreadcrumbsEx } from '@xylabs/react-common'
 import { BrowserRouter } from 'react-router-dom'
-
-import { BreadcrumbsEx } from './BreadcrumbsEx'
 
 const StorybookEntry = {
   argTypes: {},

@@ -1,9 +1,8 @@
 import { Button } from '@mui/material'
 import { StoryFn } from '@storybook/react'
 import { delay } from '@xylabs/delay'
+import { usePromise } from '@xylabs/react-promise'
 import { useState } from 'react'
-
-import { usePromise } from './usePromise'
 
 interface UseAsyncEffectTestProps {
   delayTicks?: number

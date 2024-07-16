@@ -31,6 +31,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
   const [errorArray, setErrorArray] = useState<[string, Error][]>([])
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const logErrorsInterval = setInterval(() => {
       const errorLogAsArray = selectedWallet ? [...selectedWallet.providerErrorLog] : []
       setErrorArray(errorLogAsArray as [string, Error][])
@@ -38,7 +39,8 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
     }, 1000)
 
     return () => {
-      clearInterval(logErrorsInterval)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      clearInterval(logErrorsInterval as any)
     }
   }, [selectedWallet])
 

@@ -67,6 +67,7 @@
     "@xylabs/pixel": "^1.6.0",
     "@xylabs/ts-scripts-yarn3": "^3.12.1",
     "@xylabs/tsconfig-react": "^3.12.1",
+    "@xyo-network/react-theme": "^2.81.2",
     "axios": "^1.7.2",
     "babel-loader": "^9.1.3",
     "buffer": "^6.0.3",
