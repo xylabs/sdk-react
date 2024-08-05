@@ -1,2 +1,2 @@
-export * from './MetaMaskConnector.js'
-export * from './use.jsx'
+export * from './MetaMaskConnector.ts'
+export * from './use.tsx'

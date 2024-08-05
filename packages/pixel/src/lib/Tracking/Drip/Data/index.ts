@@ -1,2 +1,2 @@
-export * from './Identify.js'
-export * from './Result.js'
+export * from './Identify.ts'
+export * from './Result.ts'

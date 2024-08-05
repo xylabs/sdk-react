@@ -32,7 +32,7 @@ class EF {
 
   private sendConversion(data?: Record<string, unknown>) {
     try {
-      //data: have session_id, tracking_id, order_id, amount
+      // data: have session_id, tracking_id, order_id, amount
       const ef = EF.getEF()
       ef.conversion({
         ...data,

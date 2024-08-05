@@ -1,8 +1,8 @@
 import { forget } from '@xylabs/forget'
 import { BrowserProvider } from 'ethers'
 
-import { EthWalletConnectorBase } from '../classes/index.js'
-import { CoinbaseProvider } from './lib/index.js'
+import { EthWalletConnectorBase } from '../classes/index.ts'
+import { CoinbaseProvider } from './lib/index.ts'
 
 const PROVIDER_NAME = 'Coinbase'
 

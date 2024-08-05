@@ -5,7 +5,6 @@ export const useMounted = () => {
   useEffect(() => {
     setMounted(true)
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       setMounted(false)
     }
   }, [])

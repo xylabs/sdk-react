@@ -4,14 +4,14 @@ import { useUserEvents } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 import React, { ReactElement } from 'react'
 
-import { ExperimentProps } from './Experiment.jsx'
-import { ExperimentsProps } from './ExperimentsProps.js'
-import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models/index.js'
+import { ExperimentProps } from './Experiment.tsx'
+import { ExperimentsProps } from './ExperimentsProps.ts'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models/index.ts'
 
 const defaultLocalStorageKey = 'testData'
 
 let experimentsTestData: { [index: string]: string } = {}
-let outcomes: OutcomesData = {} //prevent multi-outcome
+let outcomes: OutcomesData = {} // prevent multi-outcome
 
 const saveOutcomes = () => {
   setLocalStorageObject(OutcomesLocalStorageKey, outcomes)
@@ -33,8 +33,8 @@ const loadOutcomes = () => {
   outcomes = getLocalStorageObject(OutcomesLocalStorageKey)
 }
 const loadExperimentsTestData = (key: string) => {
-  experimentsTestData =
-    localStorage
+  experimentsTestData
+    = localStorage
       .getItem(key)
       ?.split('|')
       // eslint-disable-next-line unicorn/no-array-reduce
@@ -56,9 +56,11 @@ const makeChildrenArray = (children: ReactElement<ExperimentProps>[] | ReactElem
 
 const buildLocalStorageKey = (localStorageProp: boolean | string) => {
   return (
-    localStorageProp === true ? defaultLocalStorageKey
-    : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey
-    : ''
+    localStorageProp === true
+      ? defaultLocalStorageKey
+      : typeof localStorageProp === 'string'
+        ? localStorageProp ?? defaultLocalStorageKey
+        : ''
   )
 }
 
@@ -74,7 +76,7 @@ const saveExperimentDebugRanges = (name: string, totalWeight: number, childList:
   const experiments = getLocalStorageObject<ExperimentsData>(ExperimentsLocalStorageKey) || {}
   experiments[name] = {
     totalWeight,
-    variants: childList.map((child) => ({
+    variants: childList.map(child => ({
       name: child.key?.toString(),
       weight: child.props.weight,
     })),

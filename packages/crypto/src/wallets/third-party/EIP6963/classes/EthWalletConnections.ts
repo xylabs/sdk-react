@@ -1,8 +1,8 @@
 import { BrowserProvider } from 'ethers'
 
-import { isEIP6963AnnounceProviderEvent } from '../../../lib/index.js'
-import { EIP6963Connector } from './EIP6963Connector.js'
-import { DiscoveredWallets } from './types/index.js'
+import { isEIP6963AnnounceProviderEvent } from '../../../lib/index.ts'
+import { EIP6963Connector } from './EIP6963Connector.ts'
+import { DiscoveredWallets } from './types/index.ts'
 
 export type WalletListener = () => void
 
@@ -42,7 +42,7 @@ export class EthWalletConnections {
   subscribe(listener: WalletListener) {
     this.listeners = [...this.listeners, listener]
     return () => {
-      this.listeners = this.listeners.filter((existingListener) => existingListener !== listener)
+      this.listeners = this.listeners.filter(existingListener => existingListener !== listener)
     }
   }
 

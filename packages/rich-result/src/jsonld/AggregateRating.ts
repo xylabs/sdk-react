@@ -1,6 +1,5 @@
-/* eslint-disable import/no-cycle */
-import { Rating } from './Rating.js'
-import { Thing } from './Thing.js'
+import { Rating } from './Rating.ts'
+import { Thing } from './Thing.ts'
 
 interface AggregateRating extends Rating {
   itemReviewed?: Thing

@@ -1,7 +1,7 @@
 import { FunnelStartedFields, TestStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
 
-import { FacebookUserEventHandler } from './Facebook/index.js'
-import { GoogleUserEventHandler } from './Google/index.js'
+import { FacebookUserEventHandler } from './Facebook/index.ts'
+import { GoogleUserEventHandler } from './Google/index.ts'
 
 class XyoUserEventHandler<T extends Record<string, unknown>> extends UserEventHandler<T> {
   static instance: XyoUserEventHandler<Record<string, unknown>>
@@ -19,19 +19,19 @@ class XyoUserEventHandler<T extends Record<string, unknown>> extends UserEventHa
   }
 
   async funnelStarted(data: T | FunnelStartedFields) {
-    await Promise.allSettled(this.handlers.map((handler) => handler.funnelStarted(data)))
+    await Promise.allSettled(this.handlers.map(handler => handler.funnelStarted(data)))
   }
 
   async testStarted(data: T | TestStartedFields) {
-    await Promise.allSettled(this.handlers.map((handler) => handler.testStarted(data)))
+    await Promise.allSettled(this.handlers.map(handler => handler.testStarted(data)))
   }
 
   async userClick(data: T | UserClickFields) {
-    await Promise.allSettled(this.handlers.map((handler) => handler.userClick(data)))
+    await Promise.allSettled(this.handlers.map(handler => handler.userClick(data)))
   }
 
   async viewContent(data: T | ViewContentFields) {
-    await Promise.allSettled(this.handlers.map((handler) => handler.viewContent(data)))
+    await Promise.allSettled(this.handlers.map(handler => handler.viewContent(data)))
   }
 }
 

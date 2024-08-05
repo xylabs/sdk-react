@@ -1,8 +1,7 @@
-/* eslint-disable import/no-deprecated */
 import { BrowserProvider, InfuraProvider } from 'ethers'
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, useMemo } from 'react'
 
-import { EthersContext } from '../Context.js'
+import { EthersContext } from '../Context.ts'
 
 interface Props {
   enabled?: boolean
@@ -16,14 +15,11 @@ export const InfuraEthersLoader: React.FC<PropsWithChildren<Props>> = (props) =>
   const chainId = 1
   const provider = new InfuraProvider(1, infuraKey) as unknown as BrowserProvider
 
+  const value = useMemo(() => ({ busy: false, chainId, provider, isConnected: false }), [chainId, provider])
+
   return (
     <EthersContext.Provider
-      value={{
-        busy: false,
-        chainId,
-        isConnected: true,
-        provider,
-      }}
+      value={value}
     >
       {children}
     </EthersContext.Provider>

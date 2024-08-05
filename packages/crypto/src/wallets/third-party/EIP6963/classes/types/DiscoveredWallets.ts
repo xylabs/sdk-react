@@ -1,4 +1,4 @@
-import { EIP6963Connector } from '../EIP6963Connector.js'
+import { EIP6963Connector } from '../EIP6963Connector.ts'
 
 export interface DiscoveredWallets {
   [rdns: string]: EIP6963Connector

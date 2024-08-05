@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { MessageDialog } from '@xylabs/react-dialogs'
+import React from 'react'
+
+import { MessageDialog } from './MessageDialog.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -12,7 +14,7 @@ const StorybookEntry = {
   title: 'Dialogs/MessageDialog',
 } as Meta<typeof MessageDialog>
 
-const Template: StoryFn<typeof MessageDialog> = (args) => <MessageDialog {...args}>Test Message</MessageDialog>
+const Template: StoryFn<typeof MessageDialog> = args => <MessageDialog {...args}>Test Message</MessageDialog>
 
 const Default = Template.bind({})
 Default.args = {
@@ -22,5 +24,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

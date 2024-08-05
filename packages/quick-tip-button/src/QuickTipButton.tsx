@@ -1,7 +1,7 @@
 import { HelpOutline as HelpOutlineIcon } from '@mui/icons-material'
 import { DialogProps, IconButton, IconButtonProps, SvgIconProps, Tooltip } from '@mui/material'
 import { MessageDialog } from '@xylabs/react-dialogs'
-import { JSXElementConstructor, useState } from 'react'
+import React, { JSXElementConstructor, useState } from 'react'
 
 export interface QuickTipButtonProps extends IconButtonProps {
   Icon?: JSXElementConstructor<SvgIconProps>
@@ -31,24 +31,26 @@ export const QuickTipButton: React.FC<QuickTipButtonProps> = ({
     <>
       <IconButton onClick={() => setMessageOpen(true)} size="small" sx={{ cursor: disableDialog ? 'default' : 'pointer' }} {...props}>
         <Tooltip title={hoverText ?? title ?? ''}>
-          {Icon ?
-            <Icon fontSize={fontSize} />
-          : <HelpOutlineIcon fontSize={fontSize} />}
+          {Icon
+            ? <Icon fontSize={fontSize} />
+            : <HelpOutlineIcon fontSize={fontSize} />}
         </Tooltip>
       </IconButton>
 
-      {disableDialog ? null : (
-        <MessageDialog
-          onOk={() => setMessageOpen(false)}
-          onCancel={() => setMessageOpen(false)}
-          onClose={() => setMessageOpen(false)}
-          open={messageOpen}
-          title={title}
-          {...dialogProps}
-        >
-          {children}
-        </MessageDialog>
-      )}
+      {disableDialog
+        ? null
+        : (
+            <MessageDialog
+              onOk={() => setMessageOpen(false)}
+              onCancel={() => setMessageOpen(false)}
+              onClose={() => setMessageOpen(false)}
+              open={messageOpen}
+              title={title}
+              {...dialogProps}
+            >
+              {children}
+            </MessageDialog>
+          )}
     </>
   )
 }

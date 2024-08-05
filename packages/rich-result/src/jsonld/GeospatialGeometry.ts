@@ -1,7 +1,5 @@
-/* eslint-disable import/no-cycle */
-
-import { Intangible } from './Intangible.js'
-import { Place } from './Place.js'
+import { Intangible } from './Intangible.ts'
+import { Place } from './Place.ts'
 
 interface GeospatialGeometry extends Intangible {
   geoContains?: Place | GeospatialGeometry

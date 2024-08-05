@@ -1,6 +1,4 @@
-/* eslint-disable import/no-cycle */
-
-import { CreativeWork } from './CreativeWork.js'
+import { CreativeWork } from './CreativeWork.ts'
 
 type Photograph = CreativeWork
 

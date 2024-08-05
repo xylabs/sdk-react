@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { Rdt } from './Rdt.js'
+import { Rdt } from './Rdt.ts'
 
 class RedditBaseEvent<T> {
   name: string
@@ -12,7 +12,7 @@ class RedditBaseEvent<T> {
   }
 
   async send(_data: T) {
-    await delay(0) //force async to increase reporting odds
+    await delay(0) // force async to increase reporting odds
   }
 }
 

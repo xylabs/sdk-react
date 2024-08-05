@@ -1,3 +1,3 @@
-export * from './EF.js'
-export * from './StandardEvent.js'
-export * from './StandardEvents.js'
+export * from './EF.ts'
+export * from './StandardEvent.ts'
+export * from './StandardEvents.ts'

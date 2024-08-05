@@ -1,6 +1,6 @@
 import { FunnelStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
 
-import { GoogleCustomEvent } from './CustomEvent.js'
+import { GoogleCustomEvent } from './CustomEvent.ts'
 
 class GoogleUserEventHandler<T extends Record<string, unknown>> implements UserEventHandler<T> {
   async funnelStarted(data: FunnelStartedFields | T) {

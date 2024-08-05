@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { WalletsDiscoveredMenuItems, WalletsDiscoveredMenuItemsProps } from '@xylabs/react-crypto'
+import React from 'react'
+
+import { WalletsDiscoveredMenuItems, WalletsDiscoveredMenuItemsProps } from './MenuItems.tsx'
 
 const StorybookEntry = {
   args: {
@@ -15,11 +17,10 @@ const StorybookEntry = {
   title: 'wallets/Discovery/MenuItems',
 } as Meta<typeof WalletsDiscoveredMenuItems>
 
-const Template: StoryFn<WalletsDiscoveredMenuItemsProps> = (args) => <WalletsDiscoveredMenuItems {...args} />
+const Template: StoryFn<WalletsDiscoveredMenuItemsProps> = args => <WalletsDiscoveredMenuItems {...args} />
 
 const Default = Template.bind({})
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

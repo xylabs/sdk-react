@@ -1,4 +1,4 @@
-export { ErrorsViewer } from './ErrorsViewer.jsx'
-export * from './ErrorsViewerProps.js'
-export { ErrorViewer } from './ErrorViewer.jsx'
-export * from './ErrorViewerProps.js'
+export { ErrorsViewer } from './ErrorsViewer.tsx'
+export * from './ErrorsViewerProps.ts'
+export { ErrorViewer } from './ErrorViewer.tsx'
+export * from './ErrorViewerProps.ts'

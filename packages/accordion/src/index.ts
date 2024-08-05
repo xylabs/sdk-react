@@ -1,1 +1,1 @@
-export * from './AccordionGroup.jsx'
+export * from './AccordionGroup.tsx'

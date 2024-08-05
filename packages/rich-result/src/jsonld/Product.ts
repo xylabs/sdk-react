@@ -1,19 +1,18 @@
-/* eslint-disable import/no-cycle */
-import { AggregateRating } from './AggregateRating.js'
-import { Brand } from './Brand.js'
-import { DateTime } from './DateTime.js'
-import { ImageObject } from './ImageObject.js'
-import { Offer } from './Offer.js'
-import { Organization } from './Organization.js'
-import { PropertyValue } from './PropertyValue.js'
-import { QuantitativeValue } from './QuantitativeValue.js'
-import { Review } from './Review.js'
-import { Service } from './Service.js'
-import { Text } from './Text.js'
-import { Thing } from './Thing.js'
-import { URL } from './URL.js'
+import { AggregateRating } from './AggregateRating.ts'
+import { Brand } from './Brand.ts'
+import { DateTime } from './DateTime.ts'
+import { ImageObject } from './ImageObject.ts'
+import { Offer } from './Offer.ts'
+import { Organization } from './Organization.ts'
+import { PropertyValue } from './PropertyValue.ts'
+import { QuantitativeValue } from './QuantitativeValue.ts'
+import { Review } from './Review.ts'
+import { Service } from './Service.ts'
+import { Text } from './Text.ts'
+import { Thing } from './Thing.ts'
+import { URL } from './URL.ts'
 
-//TODO: Resolve Anys
+// TODO: Resolve Anys
 interface Product extends Thing {
   additionalProperty?: PropertyValue
   aggregateRating?: AggregateRating

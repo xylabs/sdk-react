@@ -8,11 +8,11 @@ export type EffectFunc = EffectFuncWithMounted | EffectFuncWithoutMounted
 export type EffectCallback = () => void | undefined
 
 export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList = []) {
-  //we use a mutex to make sure consecutive runs of the effect are serialized
+  // we use a mutex to make sure consecutive runs of the effect are serialized
   const mounted = useRef(true)
 
-  //this useEffect's return should only ever get called once
-  //since it has no dependencies
+  // this useEffect's return should only ever get called once
+  // since it has no dependencies
   useEffect(() => {
     // ensure mount is true during development mode when the
     // cleanup function is called after the initial render
@@ -24,6 +24,5 @@ export function useAsyncEffect(effect: EffectFunc, dependencies: DependencyList 
 
   usePromise(async () => {
     await effect(() => mounted.current)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies)
 }

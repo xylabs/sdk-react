@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
-import { PortalProps } from './PortalProps.js'
+import { PortalProps } from './PortalProps.ts'
 
 export const Portal: React.FC<PortalProps> = ({ children, className, el = 'div', target = 'body' }: PortalProps) => {
   const [container] = useState(document.createElement(el))

@@ -1,17 +1,15 @@
-/* eslint-disable import/no-cycle */
-
-import { AggregateRating } from './AggregateRating.js'
-import { GeospatialGeometry } from './GeospatialGeometry.js'
-import { ImageObject } from './ImageObject.js'
-import { Integer } from './Integer.js'
-import { Map } from './Map.js'
-import { Photograph } from './Photograph.js'
-import { PostalAddress } from './PostalAddress.js'
-import { PropertyValue } from './PropertyValue.js'
-import { Review } from './Review.js'
-import { Text } from './Text.js'
-import { Thing } from './Thing.js'
-import { URL } from './URL.js'
+import { AggregateRating } from './AggregateRating.ts'
+import { GeospatialGeometry } from './GeospatialGeometry.ts'
+import { ImageObject } from './ImageObject.ts'
+import { Integer } from './Integer.ts'
+import { Map } from './Map.ts'
+import { Photograph } from './Photograph.ts'
+import { PostalAddress } from './PostalAddress.ts'
+import { PropertyValue } from './PropertyValue.ts'
+import { Review } from './Review.ts'
+import { Text } from './Text.ts'
+import { Thing } from './Thing.ts'
+import { URL } from './URL.ts'
 
 interface Place extends Thing, GeospatialGeometry {
   additionalProperty?: PropertyValue

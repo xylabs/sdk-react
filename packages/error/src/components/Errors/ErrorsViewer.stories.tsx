@@ -1,5 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { ErrorsViewer, ErrorsViewerProps } from '@xylabs/react-error'
+import React from 'react'
+
+import { ErrorsViewer } from './ErrorsViewer.tsx'
+import { ErrorsViewerProps } from './ErrorsViewerProps.ts'
 
 const StorybookEntry = {
   argTypes: {},
@@ -22,5 +25,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

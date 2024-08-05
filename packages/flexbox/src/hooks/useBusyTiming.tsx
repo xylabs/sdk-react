@@ -16,7 +16,6 @@ export const useBusyTiming = (busy?: boolean, busyMinimum = 0) => {
   )
 
   const evaluateTimer = useCallback(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted: () => boolean) => {
       const busyDuration = Date.now() - busyStart
       if (busyDuration < busyMinimum) {
@@ -35,7 +34,6 @@ export const useBusyTiming = (busy?: boolean, busyMinimum = 0) => {
   )
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (mounted() && busyMinimum === 0) {
         // sync busy values if no minimum is set

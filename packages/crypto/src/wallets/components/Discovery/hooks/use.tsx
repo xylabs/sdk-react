@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react'
 
-import { EthWalletConnections } from '../../../third-party/index.js'
+import { EthWalletConnections } from '../../../third-party/index.ts'
 
 let ethWalletConnections: EthWalletConnections | undefined
 

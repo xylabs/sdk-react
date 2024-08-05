@@ -1,7 +1,8 @@
 import { Button, Typography } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import { BusyBox } from '@xylabs/react-flexbox'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+import { BusyBox } from './BusyBox.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -14,13 +15,18 @@ const StorybookEntry = {
   title: 'flexbox/BusyBox',
 } as Meta<typeof BusyBox>
 
-const BusyBoxTemplate: StoryFn<typeof BusyBox> = (args) => <BusyBox {...args}></BusyBox>
+const BusyBoxTemplate: StoryFn<typeof BusyBox> = args => <BusyBox {...args}></BusyBox>
 
 const BusyBoxMinimumTemplate: StoryFn<typeof BusyBox> = (args) => {
   const [busyToggle, setBusyToggle] = useState(false)
   return (
     <>
-      <Typography variant="body1">Busy mode should be at least {(args?.busyMinimum || 0) / 1000} seconds</Typography>
+      <Typography variant="body1">
+        Busy mode should be at least
+        {(args?.busyMinimum || 0) / 1000}
+        {' '}
+        seconds
+      </Typography>
       {`BusyToggle: ${busyToggle}`}
       <Button
         variant="contained"
@@ -116,5 +122,4 @@ BusyMinimum.args = {
 
 export { BusyMinimum, Circular, Linear, LinearBuffer, LinearDeterminate, LinearQuery }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

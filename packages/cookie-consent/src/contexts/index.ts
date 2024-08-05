@@ -1,3 +1,3 @@
-export { CookieConsentContext } from './Context.js'
-export { CookieConsentLoader } from './Loader.jsx'
-export { useCookieConsent } from './use.js'
+export { CookieConsentContext } from './Context.ts'
+export { CookieConsentLoader } from './Loader.tsx'
+export { useCookieConsent } from './use.ts'

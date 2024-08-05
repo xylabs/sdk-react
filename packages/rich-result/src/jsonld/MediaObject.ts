@@ -1,7 +1,6 @@
-/* eslint-disable import/no-cycle */
-import { CreativeWork } from './CreativeWork.js'
-import { Text } from './Text.js'
-import { URL } from './URL.js'
+import { CreativeWork } from './CreativeWork.ts'
+import { Text } from './Text.ts'
+import { URL } from './URL.ts'
 
 interface MediaObject extends CreativeWork {
   contentSize?: Text

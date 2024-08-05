@@ -1,6 +1,6 @@
 import { useMemo, useSyncExternalStore } from 'react'
 
-import { EthWalletConnectorBase } from '../classes/index.js'
+import { EthWalletConnectorBase } from '../classes/index.ts'
 
 /**
  * Subscribe to chainId changes from a given wallet

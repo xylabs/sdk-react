@@ -1,2 +1,2 @@
-export * from './Infura.jsx'
-export * from './use.jsx'
+export * from './Infura.tsx'
+export * from './use.tsx'

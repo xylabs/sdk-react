@@ -1,17 +1,17 @@
 import { useUserEvents } from '@xylabs/react-pixel'
 import { useState } from 'react'
 
-import { VariantData } from '../components/index.js'
-import { ExperimentsHelper } from '../lib/index.js'
+import { VariantData } from '../components/index.tsx'
+import { ExperimentsHelper } from '../lib/index.ts'
 
-const selectVariant =
-  <T>(current?: string) =>
-  (variants: Record<string, T>, defaultValue: T) => {
-    if (current && current in variants) {
-      return variants[current]
+const selectVariant
+  = <T>(current?: string) =>
+    (variants: Record<string, T>, defaultValue: T) => {
+      if (current && current in variants) {
+        return variants[current]
+      }
+      return defaultValue
     }
-    return defaultValue
-  }
 
 export const selectVariantForExperiment = <T>(name: string, variants: Record<string, T>, defaultValue: T): T => {
   const variant = ExperimentsHelper.getSelectedVariant(name)
@@ -22,6 +22,7 @@ export const selectVariantForExperiment = <T>(name: string, variants: Record<str
 }
 
 export const useExperiments = <T>(name: string, experiments: VariantData[]) => {
+  // eslint-disable-next-line @eslint-react/hooks-extra/prefer-use-state-lazy-initialization
   const [activeExperiment] = useState(ExperimentsHelper.calculateExperiment(name, true, experiments, useUserEvents()))
 
   return {

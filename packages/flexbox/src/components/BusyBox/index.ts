@@ -1,1 +1,1 @@
-export * from './BusyBox.jsx'
+export * from './BusyBox.tsx'

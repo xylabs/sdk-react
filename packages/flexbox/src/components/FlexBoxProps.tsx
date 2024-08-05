@@ -1,3 +1,3 @@
-import { BusyBoxProps } from './BusyBox/index.js'
+import { BusyBoxProps } from './BusyBox/index.ts'
 
 export type FlexBoxProps = BusyBoxProps

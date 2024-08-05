@@ -1,7 +1,7 @@
 import { ExpandMoreRounded } from '@mui/icons-material'
 import { Accordion, AccordionDetails, AccordionProps, AccordionSummary, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
-import { ReactNode, useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 
 type Override<T1, T2> = Omit<T1, keyof T2> & T2
 
@@ -18,7 +18,7 @@ interface SimpleAccordionCardAdditionalProps extends AccordionProps {
 interface OptionalChildren {
   children?: ReactNode
 }
-//this makes the requirement for children from AccordionProps go away
+// this makes the requirement for children from AccordionProps go away
 export type SimpleAccordionCardProps = Override<SimpleAccordionCardAdditionalProps, OptionalChildren>
 
 interface AccordionGroupProps {

@@ -1,11 +1,11 @@
 import { Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import {
-  DarkModeIconButtonForColorScheme,
-  InvertibleCssVarsProvider,
-  InvertibleCssVarsProviderProps,
-  useColorSchemeEx,
-} from '@xylabs/react-invertible-theme'
+import React from 'react'
+
+import { DarkModeIconButtonForColorScheme } from '../Buttons/index.ts'
+import { InvertibleCssVarsProvider, InvertibleCssVarsProviderProps } from './InvertibleCssVarsProvider.tsx'
+import { useColorSchemeEx } from './useColorSchemeEx.tsx'
+
 const StorybookEntry = {
   argTypes: {},
   component: InvertibleCssVarsProvider,
@@ -26,9 +26,11 @@ const ThemeEnabledComponent = () => {
   return (
     <>
       <CssBaseline />
-      <Stack direction={'column'} gap={2} alignItems="start">
-        <Stack direction={'row'} gap={2}>
-          Current Mode: <Chip label={mode} />
+      <Stack direction="column" gap={2} alignItems="start">
+        <Stack direction="row" gap={2}>
+          Current Mode:
+          {' '}
+          <Chip label={mode} />
         </Stack>
         <ButtonGroup>
           <Button variant={darkMode ? 'contained' : 'outlined'} onClick={() => setMode('dark')}>
@@ -39,18 +41,25 @@ const ThemeEnabledComponent = () => {
           </Button>
           <Button onClick={() => setMode('system')}>System</Button>
         </ButtonGroup>
-        <Stack direction={'row'} gap={1}>
+        <Stack direction="row" gap={1}>
           <p>DarkModeIconButton:</p>
-          <DarkModeIconButtonForColorScheme defaultLightModeColor={'default'} />
+          <DarkModeIconButtonForColorScheme defaultLightModeColor="default" />
         </Stack>
         <Box sx={{ backgroundColor: theme.palette.background.default }}>
           <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
-            <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>
+            <Typography variant="h3">
+              marginBottom of
+              {theme.spacing(4)}
+            </Typography>
             <Typography variant="h4" color={theme.palette.primary.main}>
-              Color: {theme.palette.primary.main}
+              Color:
+              {' '}
+              {theme.palette.primary.main}
             </Typography>
             <Typography variant="h4" color={theme.palette.secondary.main}>
-              Color: {theme.palette.secondary.main}
+              Color:
+              {' '}
+              {theme.palette.secondary.main}
             </Typography>
           </Box>
         </Box>
@@ -120,5 +129,4 @@ DefaultDark.args = {
 
 export { Default, DefaultDark, DefaultLight }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

@@ -1,6 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { BasePage } from '@xylabs/react-base-page'
+import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+
+import { BasePage } from './BasePage.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,7 +15,7 @@ const StorybookEntry = {
   title: 'Components/BasePage',
 } as Meta<typeof BasePage>
 
-const Template: StoryFn<typeof BasePage> = (args) => (
+const Template: StoryFn<typeof BasePage> = args => (
   <BrowserRouter>
     <BasePage {...args}></BasePage>
   </BrowserRouter>
@@ -29,5 +31,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

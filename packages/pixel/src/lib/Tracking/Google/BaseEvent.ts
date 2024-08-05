@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 
-import { Gtag } from './Gtag.js'
-import { Gtm } from './Gtm.js'
+import { Gtag } from './Gtag.ts'
+import { Gtm } from './Gtm.ts'
 
 export class GoogleBaseEvent<T extends Record<string, unknown>> {
   name: string

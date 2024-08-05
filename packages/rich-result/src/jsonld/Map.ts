@@ -1,6 +1,5 @@
-/* eslint-disable import/no-cycle */
-import { CreativeWork } from './CreativeWork.js'
-import { MapCategoryType } from './MapCategoryType.js'
+import { CreativeWork } from './CreativeWork.ts'
+import { MapCategoryType } from './MapCategoryType.ts'
 
 interface Map extends CreativeWork {
   mapType?: MapCategoryType

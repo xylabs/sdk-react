@@ -1,5 +1,4 @@
-/* eslint-disable import/no-cycle */
-import { Place } from './Place.js'
+import { Place } from './Place.ts'
 
 type AdministrativeArea = Place
 

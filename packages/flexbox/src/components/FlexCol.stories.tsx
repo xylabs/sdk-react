@@ -1,5 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import React from 'react'
+
+import { FlexCol } from './FlexCol.tsx'
+import { FlexRow } from './FlexRow.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -12,7 +15,7 @@ const StorybookEntry = {
   title: 'flexbox/FlexCol',
 } as Meta<typeof FlexCol>
 
-const Template: StoryFn<typeof FlexCol> = (args) => <FlexCol {...args}></FlexCol>
+const Template: StoryFn<typeof FlexCol> = args => <FlexCol {...args}></FlexCol>
 
 const testRows = {
   border: 'solid 1px gray',
@@ -54,5 +57,4 @@ FlexEndAlignedItems.args = {
 
 export { FlexEndAlignedItems, FlexStartAlignedItems, StretchAlignedItems }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

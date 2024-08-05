@@ -1,4 +1,4 @@
-import { WithDataLayer } from './DataLayer.js'
+import { WithDataLayer } from './DataLayer.ts'
 
 class Gtm {
   static instance: Gtm
@@ -9,7 +9,7 @@ class Gtm {
     this.containerId = containerId
     const global = window as WithDataLayer
     global.dataLayer = global.dataLayer || []
-    global.dataLayer.push({ event: 'gtm.js', 'gtm.start': Date.now() })
+    global.dataLayer.push({ 'event': 'gtm.ts', 'gtm.start': Date.now() })
   }
 
   static clearDataLayer() {

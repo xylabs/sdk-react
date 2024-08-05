@@ -1,8 +1,9 @@
 import { CheckCircleOutline } from '@mui/icons-material'
 import { CardHeader, CardHeaderProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
+import React from 'react'
 
-import { ConstrainedImage } from '../shared/index.js'
+import { ConstrainedImage } from '../shared/index.ts'
 
 export interface WalletOverviewCardHeaderProps extends CardHeaderProps {
   currentAccount?: EthAddress
@@ -13,7 +14,7 @@ export interface WalletOverviewCardHeaderProps extends CardHeaderProps {
 export const WalletOverviewCardHeader: React.FC<WalletOverviewCardHeaderProps> = ({ currentAccount, icon, walletName, ...props }) => {
   return (
     <CardHeader
-      avatar={<ConstrainedImage constrainedValue={'42px'} src={icon} />}
+      avatar={<ConstrainedImage constrainedValue="42px" src={icon} />}
       title={walletName}
       action={currentAccount ? <CheckCircleOutline color="success" /> : null}
       {...props}

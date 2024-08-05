@@ -1,1 +1,1 @@
-export * from './useBusyTiming.jsx'
+export * from './useBusyTiming.tsx'

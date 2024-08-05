@@ -1,13 +1,14 @@
 import { UserEventHandler } from '@xylabs/pixel'
-import { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, useMemo } from 'react'
 
-import { XyoUserEventHandler } from '../../lib/index.js'
-import { UserEventsContext } from './Context.js'
+import { XyoUserEventHandler } from '../../lib/index.ts'
+import { UserEventsContext } from './Context.ts'
 
 export interface UserEventsProviderProps<T> {
   userEvents: UserEventHandler<T>
 }
 
 export const UserEventsProvider: React.FC<PropsWithChildren<UserEventsProviderProps<unknown>>> = ({ userEvents, children }) => {
-  return <UserEventsContext.Provider value={{ userEvents: userEvents ?? XyoUserEventHandler.get() }}>{children}</UserEventsContext.Provider>
+  const value = useMemo(() => ({ userEvents: userEvents ?? XyoUserEventHandler.get() }), [userEvents])
+  return <UserEventsContext.Provider value={value}>{children}</UserEventsContext.Provider>
 }

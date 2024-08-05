@@ -1,1 +1,1 @@
-export * from './BasePage/index.js'
+export * from './BasePage/index.ts'

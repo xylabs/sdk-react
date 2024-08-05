@@ -2,9 +2,9 @@ import { DarkModeRounded, LightModeRounded } from '@mui/icons-material'
 import { IconButton, IconButtonProps } from '@mui/material'
 import { RotationAnimation } from '@xylabs/react-animation'
 import { FlexCol } from '@xylabs/react-flexbox'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
-import { useColorSchemeEx } from '../CssVarsProvider/index.js'
+import { useColorSchemeEx } from '../CssVarsProvider/index.ts'
 
 type iconColor = IconButtonProps['color']
 
@@ -49,9 +49,9 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
     <FlexCol>
       <RotationAnimation rotation={20}>
         <IconButton color={iconColor} onClick={handleDarkModeChange} onMouseEnter={() => handleHover()} onMouseLeave={() => handleHover()} {...props}>
-          {darkMode ?
-            <DarkModeRounded />
-          : <LightModeRounded />}
+          {darkMode
+            ? <DarkModeRounded />
+            : <LightModeRounded />}
         </IconButton>
       </RotationAnimation>
     </FlexCol>

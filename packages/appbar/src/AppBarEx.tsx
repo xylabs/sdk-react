@@ -1,7 +1,8 @@
 import { AppBar, Container, Toolbar, useMediaQuery, useTheme } from '@mui/material'
 import { FlexGrowRow, FlexRow } from '@xylabs/react-flexbox'
+import React from 'react'
 
-import { AppBarExProps } from './AppBarExProps.jsx'
+import { AppBarExProps } from './AppBarExProps.tsx'
 
 const AppBarExInner: React.FC<AppBarExProps> = ({ children, menu, contextToolbar, systemToolbar, responsive, ...props }) => {
   const { breakpoints } = useTheme()
@@ -14,9 +15,9 @@ const AppBarExInner: React.FC<AppBarExProps> = ({ children, menu, contextToolbar
         {systemToolbar ?? <Toolbar />}
         {menu}
       </FlexRow>
-      {belowSm && children && responsive ?
-        <Toolbar>{children}</Toolbar>
-      : null}
+      {belowSm && children && responsive
+        ? <Toolbar>{children}</Toolbar>
+        : null}
     </>
   )
 }
@@ -24,11 +25,13 @@ const AppBarExInner: React.FC<AppBarExProps> = ({ children, menu, contextToolbar
 export const AppBarEx: React.FC<AppBarExProps> = ({ container, children, menu, contextToolbar, systemToolbar, responsive, ...props }) => {
   return (
     <AppBar position="static" {...props}>
-      {container ?
-        <Container maxWidth={container}>
-          <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />
-        </Container>
-      : <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />}
+      {container
+        ? (
+            <Container maxWidth={container}>
+              <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />
+            </Container>
+          )
+        : <AppBarExInner {...{ children, contextToolbar, menu, responsive, systemToolbar }} />}
     </AppBar>
   )
 }

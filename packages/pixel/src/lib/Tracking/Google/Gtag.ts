@@ -17,18 +17,17 @@ class Gtag {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = window as any
     global.dataLayer = global.dataLayer ?? []
-    this.gtag =
-      global.gtag ??
-      function () {
-        // eslint-disable-next-line prefer-rest-params
+    this.gtag
+      = global.gtag
+      ?? function () {
         global.dataLayer.push(arguments)
       }
     global.gtag = this.gtag
     this.gtag('js', new Date())
     this.gtag('config', ga4id)
-    //this.gtag('config', awid) - this is configured in the Data Stream in Google Analytics
+    // this.gtag('config', awid) - this is configured in the Data Stream in Google Analytics
     const parsedQueryString = queryString.parse(document.location.search)
-    //we handle the utm_referrer here incase a referrer was forwarded (special.coinapp.co does this)
+    // we handle the utm_referrer here incase a referrer was forwarded (special.coinapp.co does this)
     sessionStorage.setItem('initialReferrer', decodeURIComponent(parsedQueryString['utm_referrer']?.toString() ?? document.referrer))
     delete parsedQueryString['utm_referrer']
     const remainingSearch = parsedQueryString ? queryString.stringify(parsedQueryString) : ''

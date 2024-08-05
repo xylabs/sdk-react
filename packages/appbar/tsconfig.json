@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "typeRoots": []
+    "declaration": true,
+    "declarationMap": true
   },
   "rootDir": "./src",
   "exclude": ["dist", "docs"],

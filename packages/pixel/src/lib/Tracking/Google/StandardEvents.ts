@@ -1,4 +1,4 @@
-import { GoogleStandardEvent } from './StandardEvent.js'
+import { GoogleStandardEvent } from './StandardEvent.ts'
 
 export interface GoogleBaseProperties extends Record<string, unknown> {
   lib: 'xyga'

@@ -1,8 +1,9 @@
 import { Button } from '@mui/material'
 import { StoryFn } from '@storybook/react'
 import { delay } from '@xylabs/delay'
-import { usePromise } from '@xylabs/react-promise'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+import { usePromise } from './usePromise.ts'
 
 interface UseAsyncEffectTestProps {
   delayTicks?: number
@@ -10,7 +11,7 @@ interface UseAsyncEffectTestProps {
 }
 const UsePromiseTest: React.FC<UseAsyncEffectTestProps> = ({ refresh, delayTicks }) => {
   const [refreshValue] = usePromise(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     async () => {
       console.log('UsePromiseTest')
       if (delayTicks) {
@@ -23,12 +24,13 @@ const UsePromiseTest: React.FC<UseAsyncEffectTestProps> = ({ refresh, delayTicks
 
   return (
     <div>
-      Hook Value: <strong>{refreshValue}</strong>
+      Hook Value:
+      {' '}
+      <strong>{refreshValue}</strong>
     </div>
   )
 }
 
-// eslint-disable-next-line import/no-default-export
 export default {
   component: UsePromiseTest,
   title: 'hooks/usePromise',

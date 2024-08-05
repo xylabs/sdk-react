@@ -1,7 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { selectVariantForExperiment, useExperiments } from '@xylabs/react-experiments'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
+
+import { selectVariantForExperiment, useExperiments } from './useExperiment.ts'
 
 const View: React.FC = () => {
   useExperiments<ReactNode>('Storybook Test 2', [
@@ -44,12 +45,11 @@ const StorybookEntry = {
   title: 'Hooks/useExperiments',
 } as Meta<typeof View>
 
-const Template: StoryFn<typeof View> = (args) => <WrappedView {...args} />
+const Template: StoryFn<typeof View> = args => <WrappedView {...args} />
 
 const Default = Template.bind({})
 Default.args = {}
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

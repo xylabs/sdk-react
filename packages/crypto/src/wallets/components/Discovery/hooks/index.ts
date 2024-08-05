@@ -1,1 +1,1 @@
-export * from './use.jsx'
+export * from './use.tsx'

@@ -1,2 +1,2 @@
-export * from './jsonld/index.js'
-export * from './RichResult.jsx'
+export * from './jsonld/index.ts'
+export * from './RichResult.tsx'

@@ -2,10 +2,10 @@ import { useTheme } from '@mui/material'
 import { ButtonEx, ButtonExProps } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
-import { MouseEvent } from 'react'
+import React, { MouseEvent } from 'react'
 
-import { EthAccountBox } from './EthAccountBox.jsx'
-import { EthAccountProps } from './EthAccountProps.jsx'
+import { EthAccountBox } from './EthAccountBox.tsx'
+import { EthAccountProps } from './EthAccountProps.tsx'
 
 export interface EthAccountButtonProps extends EthAccountProps {
   toEtherScan?: boolean
@@ -35,17 +35,19 @@ export const EthAccountButton: React.FC<EthAccountButtonProps & ButtonExProps> =
 
   return (
     <ButtonEx onClick={onClickLocal} title={`0x${address?.toHex()}`} {...props}>
-      {icon ?
-        <FlexRow position="absolute" top={0} left={0} bottom={0} paddingX={0.5} bgcolor={theme.palette.secondary.main}>
-          <Identicon
-            minHeight={theme.spacing(3)}
-            minWidth={theme.spacing(3)}
-            bgcolor={theme.palette.secondary.main}
-            size={iconSize}
-            value={address?.toHex()}
-          />
-        </FlexRow>
-      : null}
+      {icon
+        ? (
+            <FlexRow position="absolute" top={0} left={0} bottom={0} paddingX={0.5} bgcolor={theme.palette.secondary.main}>
+              <Identicon
+                minHeight={theme.spacing(3)}
+                minWidth={theme.spacing(3)}
+                bgcolor={theme.palette.secondary.main}
+                size={iconSize}
+                value={address?.toHex()}
+              />
+            </FlexRow>
+          )
+        : null}
       <EthAccountBox
         marginLeft={icon ? 3 : 0}
         address={address}

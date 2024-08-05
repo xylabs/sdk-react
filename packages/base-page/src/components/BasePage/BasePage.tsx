@@ -4,9 +4,10 @@ import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { BasePageProps } from './BasePageProps.js'
+import { BasePageProps } from './BasePageProps.ts'
 
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,
@@ -38,28 +39,32 @@ const BasePage: React.FC<BasePageProps> = ({
     >
       <ScrollToTop />
       <Helmet title={title}>
-        {noindex ?
-          <meta content="noindex" name="robots" />
-        : null}
+        {noindex
+          ? <meta content="noindex" name="robots" />
+          : null}
       </Helmet>
-      {scrollToTopButton ?
-        <div id={scrollToTopAnchorId} />
-      : null}
+      {scrollToTopButton
+        ? <div id={scrollToTopAnchorId} />
+        : null}
       {hideAppBar ? null : appBar}
-      {beta ?
-        <FlexRow margin={1} position="absolute" top={0} left={0} bgcolor="#cccccc88" paddingX={1} style={{ opacity: 0.5 }}>
-          <Typography variant="body2">Important: This page is a Beta page. It is possible that some information may not be correct.</Typography>
-        </FlexRow>
-      : null}
-      {container ?
-        <Container
-          style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
-          maxWidth={container}
-          disableGutters={disableGutters}
-        >
-          {children}
-        </Container>
-      : children}
+      {beta
+        ? (
+            <FlexRow margin={1} position="absolute" top={0} left={0} bgcolor="#cccccc88" paddingX={1} style={{ opacity: 0.5 }}>
+              <Typography variant="body2">Important: This page is a Beta page. It is possible that some information may not be correct.</Typography>
+            </FlexRow>
+          )
+        : null}
+      {container
+        ? (
+            <Container
+              style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+              maxWidth={container}
+              disableGutters={disableGutters}
+            >
+              {children}
+            </Container>
+          )
+        : children}
       {hideFooter ? null : <footer>{appFooter}</footer>}
       {cookieConsent ?? (
         <ScopedCssBaseline>
@@ -68,13 +73,15 @@ const BasePage: React.FC<BasePageProps> = ({
           </InvertibleThemeProvider>
         </ScopedCssBaseline>
       )}
-      {scrollToTopButton ?
-        <ScrollToTopButton anchorId={scrollToTopAnchorId}>
-          <Fab aria-label="scroll to top" color="secondary" size="small">
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ScrollToTopButton>
-      : null}
+      {scrollToTopButton
+        ? (
+            <ScrollToTopButton anchorId={scrollToTopAnchorId}>
+              <Fab aria-label="scroll to top" color="secondary" size="small">
+                <KeyboardArrowUpIcon />
+              </Fab>
+            </ScrollToTopButton>
+          )
+        : null}
     </FlexCol>
   )
 }

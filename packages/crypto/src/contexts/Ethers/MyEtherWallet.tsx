@@ -1,11 +1,10 @@
-/* eslint-disable import/no-deprecated */
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, InfuraProvider, JsonRpcSigner } from 'ethers'
-import React, { PropsWithChildren, useState } from 'react'
+import React, { PropsWithChildren, useMemo, useState } from 'react'
 
-import { EthersContext } from './Context.js'
-import { infuraKey } from './Infura/index.js'
+import { EthersContext } from './Context.ts'
+import { infuraKey } from './Infura/index.ts'
 
 interface Props {
   enabled?: boolean
@@ -36,7 +35,6 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
   const [signer, setSigner] = useState<JsonRpcSigner>()
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async () => {
       const walletProvider = ethereum ? new BrowserProvider(ethereum) : undefined
       let provider = null
@@ -67,7 +65,6 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
   )
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       if (signer) {
         try {
@@ -91,7 +88,6 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
   const [chainId, setChainId] = useState<number>()
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (isMounted) => {
       const chainId = (await provider?.getNetwork())?.chainId
       if (!isMounted()) return
@@ -100,20 +96,30 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
     [provider],
   )
 
+  const value = useMemo(() => ({ busy: false,
+    chainId,
+    connect,
+    error,
+    isConnected,
+    localAddress,
+    provider,
+    providerName,
+    signer: isConnected ? signer : undefined,
+    walletProvider }), [,
+    chainId,
+    connect,
+    error,
+    isConnected,
+    localAddress,
+    provider,
+    providerName,
+    isConnected,
+    signer,
+    walletProvider])
+
   return (
     <EthersContext.Provider
-      value={{
-        busy: false,
-        chainId,
-        connect,
-        error,
-        isConnected,
-        localAddress,
-        provider,
-        providerName,
-        signer: isConnected ? signer : undefined,
-        walletProvider,
-      }}
+      value={value}
     >
       {children}
     </EthersContext.Provider>

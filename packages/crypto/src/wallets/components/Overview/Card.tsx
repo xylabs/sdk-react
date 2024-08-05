@@ -1,19 +1,19 @@
 import { Card, CardProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { EIP6963Connector, useEthWallet } from '../../third-party/index.js'
-import { WalletOverviewCardActions } from './CardActions.jsx'
-import { WalletOverviewCardContent } from './CardContent.jsx'
-import { WalletOverviewCardHeader } from './CardHeader.jsx'
+import { EIP6963Connector, useEthWallet } from '../../third-party/index.ts'
+import { WalletOverviewCardActions } from './CardActions.tsx'
+import { WalletOverviewCardContent } from './CardContent.tsx'
+import { WalletOverviewCardHeader } from './CardHeader.tsx'
 
 export interface WalletOverviewCardProps extends CardProps {
   ethWalletConnector: EIP6963Connector
 }
 
 export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalletConnector, ...props }) => {
-  const { connectWallet, connectRefused, chainName, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress } =
-    useEthWallet(ethWalletConnector)
+  const { connectWallet, connectRefused, chainName, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress }
+    = useEthWallet(ethWalletConnector)
   const [signResponse, setSignResponse] = useState<EthAddress>()
 
   useEffect(() => {

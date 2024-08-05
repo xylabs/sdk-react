@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 
-import { getLocalStorageObject, setLocalStorageObject } from '../lib/index.js'
+import { getLocalStorageObject, setLocalStorageObject } from '../lib/index.ts'
 
 export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T) => void] => {
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -17,7 +17,7 @@ export const useLocalStorage = <T>(key: string, defaultValue: T): [T, (value: T)
         return defaultValue
       }
     } catch {
-      //Error is already logged
+      // Error is already logged
       return defaultValue
     }
   })

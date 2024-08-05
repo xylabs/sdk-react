@@ -4,7 +4,7 @@ import { FlexCol, FlexGrowRow } from '@xylabs/react-flexbox'
 import numeral from 'numeral'
 import React from 'react'
 
-import { NumberStatusProps } from './NumberStatusProps.js'
+import { NumberStatusProps } from './NumberStatusProps.ts'
 
 const NumberStatus: React.FC<NumberStatusProps> = ({
   error,
@@ -25,10 +25,12 @@ const NumberStatus: React.FC<NumberStatusProps> = ({
   const bgColorTop = palette?.dark ?? theme.palette.background.paper
   const bgColorBottom = palette?.main ?? theme.palette.background.default
 
-  const sizePixels =
-    size === 'large' ? 96
-    : size === 'small' ? 64
-    : 80
+  const sizePixels
+    = size === 'large'
+      ? 96
+      : size === 'small'
+        ? 64
+        : 80
 
   const calcFontSize = fontSize ?? sizePixels * 0.2
 

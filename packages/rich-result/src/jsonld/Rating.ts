@@ -1,6 +1,5 @@
-/* eslint-disable import/no-cycle */
-import { Intangible } from './Intangible.js'
-import { Text } from './Text.js'
+import { Intangible } from './Intangible.ts'
+import { Text } from './Text.ts'
 
 interface Rating extends Intangible {
   bestRating?: number

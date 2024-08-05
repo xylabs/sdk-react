@@ -1,7 +1,9 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
-import { EthAccountButton } from '@xylabs/react-crypto'
 import { FlexRow } from '@xylabs/react-flexbox'
+import React from 'react'
+
+import { EthAccountButton } from './EthAccountButton.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -14,7 +16,7 @@ const StorybookEntry = {
   title: 'crypto/EthAccount/Button',
 } as Meta<typeof EthAccountButton>
 
-const Template: StoryFn<typeof EthAccountButton> = (args) => (
+const Template: StoryFn<typeof EthAccountButton> = args => (
   <FlexRow>
     <EthAccountButton variant="outlined" {...args}></EthAccountButton>
   </FlexRow>
@@ -102,5 +104,4 @@ AutoEmpty.args = {
 
 export { Auto, AutoEmpty, Long, LongEmpty, LongLarge, Medium, MediumEmpty, Short, ShortEmpty }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

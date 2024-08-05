@@ -1,9 +1,10 @@
 import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
 import { cloneDeep, merge } from '@xylabs/lodash'
+import React, { useMemo } from 'react'
 
-import { InvertibleThemeContext } from './InvertibleThemeContext.jsx'
-import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps.js'
-import { useInvertibleThemeProvider } from './use.js'
+import { InvertibleThemeContext } from './InvertibleThemeContext.tsx'
+import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps.ts'
+import { useInvertibleThemeProvider } from './use.ts'
 
 export const resolveThemeColors = (options: ThemeOptions) => {
   const theme = createTheme(options)
@@ -54,17 +55,19 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
 
   const theme: Theme = noResponsiveFonts ? createTheme(themeOptions) : responsiveFontSizes(createTheme(themeOptions))
 
-  const Provider: React.FC = () => {
-    return (
-      <InvertibleThemeContext.Provider value={{ darkOptions: clonedDarkOptions, lightOptions: clonedLightOptions, options: clonedOptions }}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-      </InvertibleThemeContext.Provider>
-    )
-  }
+  const value = useMemo(() => ({ darkOptions: clonedDarkOptions, lightOptions: clonedLightOptions, options: clonedOptions }), [clonedDarkOptions, clonedLightOptions, clonedOptions])
 
-  return scoped ?
-      <ScopedCssBaseline>
-        <Provider />
-      </ScopedCssBaseline>
-    : <Provider />
+  return scoped
+    ? (
+        <ScopedCssBaseline>
+          <InvertibleThemeContext.Provider value={value}>
+            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          </InvertibleThemeContext.Provider>
+        </ScopedCssBaseline>
+      )
+    : (
+        <InvertibleThemeContext.Provider value={value}>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </InvertibleThemeContext.Provider>
+      )
 }

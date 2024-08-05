@@ -1,8 +1,9 @@
 import { RadioButtonChecked } from '@mui/icons-material'
 import { ListItemIcon, ListItemText, MenuItem, MenuItemProps, styled, useTheme } from '@mui/material'
+import React from 'react'
 
-import { EIP6963Connector, useEthWallet } from '../../third-party/index.js'
-import { ConstrainedImage } from '../shared/index.js'
+import { EIP6963Connector, useEthWallet } from '../../third-party/index.ts'
+import { ConstrainedImage } from '../shared/index.ts'
 
 export interface WalletDiscoveryMenuItemInnerProps extends MenuItemProps {
   approvedAccount?: boolean
@@ -18,11 +19,13 @@ export const WalletDiscoveryMenuItemInner: React.FC<WalletDiscoveryMenuItemInner
         <ConstrainedImage constrainedValue={theme.spacing(3)} src={icon} />
       </ListItemIcon>
       <ListItemText>{name}</ListItemText>
-      {approvedAccount ?
-        <StyledActiveIcon>
-          <RadioButtonChecked color={'success'} />
-        </StyledActiveIcon>
-      : null}
+      {approvedAccount
+        ? (
+            <StyledActiveIcon>
+              <RadioButtonChecked color="success" />
+            </StyledActiveIcon>
+          )
+        : null}
     </StyledMenuItem>
   )
 }
@@ -31,7 +34,7 @@ const StyledMenuItem = styled(MenuItem, { name: 'StyledMenuItem' })(({ theme }) 
   '&:not(:last-child)': {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
-  padding: `${theme.spacing(2)}`,
+  'padding': `${theme.spacing(2)}`,
 }))
 
 const StyledActiveIcon = styled(ListItemIcon, { name: 'StyledActiveIcon' })(({ theme }) => ({

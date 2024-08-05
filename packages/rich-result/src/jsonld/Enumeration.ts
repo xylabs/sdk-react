@@ -1,7 +1,6 @@
-/* eslint-disable import/no-cycle */
-import { Class } from './Class.js'
-import { Intangible } from './Intangible.js'
-import { Property } from './Property.js'
+import { Class } from './Class.ts'
+import { Intangible } from './Intangible.ts'
+import { Property } from './Property.ts'
 
 interface Enumeration extends Intangible {
   supersededBy?: Class | Enumeration | Property

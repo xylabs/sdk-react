@@ -1,5 +1,8 @@
 import { Meta } from '@storybook/react'
-import { EthWalletSBComponent, useMetaMask } from '@xylabs/react-crypto'
+import React from 'react'
+
+import { EthWalletSBComponent } from '../../../components/index.ts'
+import { useMetaMask } from './use.tsx'
 
 const UseMetaMaskSBComponent = () => {
   const hookState = useMetaMask()
@@ -23,5 +26,4 @@ const Default = Template.bind({})
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

@@ -1,2 +1,2 @@
-export { TokenAmount } from './TokenAmount.jsx'
-export { type TokenAmountProps } from './TokenAmountProps.jsx'
+export { TokenAmount } from './TokenAmount.tsx'
+export { type TokenAmountProps } from './TokenAmountProps.tsx'

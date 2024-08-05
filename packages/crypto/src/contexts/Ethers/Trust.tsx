@@ -1,10 +1,9 @@
-/* eslint-disable import/no-deprecated */
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, JsonRpcSigner } from 'ethers'
-import { PropsWithChildren, useMemo, useState } from 'react'
+import React, { PropsWithChildren, useMemo, useState } from 'react'
 
-import { EthersContext } from './Context.js'
+import { EthersContext } from './Context.ts'
 
 interface Props {
   enabled?: boolean
@@ -23,7 +22,6 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const provider = trustProvider
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (trustProvider) {
         const [existingAddress]: string[] = (await trustProvider.send('eth_accounts', [])) ?? []
@@ -49,16 +47,17 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     [localAddress, trustProvider],
   )
 
+  const value = useMemo(() => ({ busy: false, chainId, error, localAddress, provider, signer }), [
+    chainId,
+    error,
+    localAddress,
+    provider,
+    signer,
+  ])
+
   return (
     <EthersContext.Provider
-      value={{
-        busy: false,
-        chainId,
-        error,
-        localAddress,
-        provider,
-        signer,
-      }}
+      value={value}
     >
       {children}
     </EthersContext.Provider>

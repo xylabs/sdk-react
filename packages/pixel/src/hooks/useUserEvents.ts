@@ -1,7 +1,7 @@
 import { UserEventHandler } from '@xylabs/pixel'
 import { useContext } from 'react'
 
-import { UserEventsContext } from '../contexts/index.js'
+import { UserEventsContext } from '../contexts/index.ts'
 
 export const useUserEvents = <T>() => {
   const { userEvents } = useContext(UserEventsContext)

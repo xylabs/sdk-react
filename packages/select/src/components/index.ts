@@ -1,1 +1,1 @@
-export * from './SelectEx.jsx'
+export * from './SelectEx.tsx'

@@ -1,7 +1,6 @@
-/* eslint-disable import/no-cycle */
-import { ContactPoint } from './ContactPoint.js'
-import { Country } from './Country.js'
-import { Text } from './Text.js'
+import { ContactPoint } from './ContactPoint.ts'
+import { Country } from './Country.ts'
+import { Text } from './Text.ts'
 
 interface PostalAddress extends ContactPoint {
   addressCountry?: Country | Text

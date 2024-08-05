@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { Ttq } from './Ttq.js'
+import { Ttq } from './Ttq.ts'
 
 export class TiktokBaseEvent<T> {
   name: string
@@ -12,6 +12,6 @@ export class TiktokBaseEvent<T> {
   }
 
   async send(_data: T) {
-    await delay(0) //force async to increase reporting odds
+    await delay(0) // force async to increase reporting odds
   }
 }

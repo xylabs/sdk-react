@@ -1,7 +1,7 @@
 import { InfuraProvider } from 'ethers'
 import { useMemo } from 'react'
 
-import { infuraKey } from './Infura.jsx'
+import { infuraKey } from './Infura.tsx'
 
 export const useInfuraProvider = (chainId?: number) => {
   const { provider, providerName } = useMemo(() => {

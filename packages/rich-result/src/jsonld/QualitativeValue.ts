@@ -1,8 +1,7 @@
-/* eslint-disable import/no-cycle */
-import { Enumeration } from './Enumeration.js'
-import { PropertyValue } from './PropertyValue.js'
-import { QuantitativeValue } from './QuantitativeValue.js'
-import { StructuredValue } from './StructuredValue.js'
+import { Enumeration } from './Enumeration.ts'
+import { PropertyValue } from './PropertyValue.ts'
+import { QuantitativeValue } from './QuantitativeValue.ts'
+import { StructuredValue } from './StructuredValue.ts'
 
 interface QualitativeValue extends Enumeration {
   additionalProperty?: PropertyValue

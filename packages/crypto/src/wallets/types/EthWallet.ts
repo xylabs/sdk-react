@@ -1,7 +1,7 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { BrowserProvider, JsonRpcSigner } from 'ethers'
 
-import { EIP6963ProviderInfo } from '../lib/index.js'
+import { EIP6963ProviderInfo } from '../lib/index.ts'
 
 /**
  * Base interface for wallet state and interaction

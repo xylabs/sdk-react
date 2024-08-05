@@ -1,3 +1,3 @@
-export * from './Discovery/index.js'
-export * from './Overview/index.js'
-export * from './shared/index.js'
+export * from './Discovery/index.ts'
+export * from './Overview/index.ts'
+export * from './shared/index.ts'

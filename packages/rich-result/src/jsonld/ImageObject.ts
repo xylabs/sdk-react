@@ -1,6 +1,5 @@
-/* eslint-disable import/no-cycle */
-import { MediaObject } from './MediaObject.js'
-import { Text } from './Text.js'
+import { MediaObject } from './MediaObject.ts'
+import { Text } from './Text.ts'
 
 interface ImageObject extends MediaObject {
   caption?: Text

@@ -1,8 +1,8 @@
 import { Box, BoxProps, Paper, useTheme } from '@mui/material'
 import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
-import { forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 
-import { useBusyTiming } from '../../hooks/index.js'
+import { useBusyTiming } from '../../hooks/index.ts'
 
 export interface BusyBoxProps extends BusyProps, Omit<BoxProps, 'ref'> {
   background?: boolean
@@ -37,24 +37,24 @@ const BusyBox = forwardRef<unknown, BusyBoxProps>(
         component={paper ? Paper : component}
         position="relative"
         style={
-          background ?
-            {
-              backgroundColor: theme.palette.background.default,
-              color: theme.palette.text.primary,
-              ...style,
-            }
-          : style
+          background
+            ? {
+                backgroundColor: theme.palette.background.default,
+                color: theme.palette.text.primary,
+                ...style,
+              }
+            : style
         }
         ref={ref}
         {...props}
       >
         {children}
-        {internalBusy && busyVariant === 'linear' ?
-          <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} />
-        : null}
-        {internalBusy && busyVariant === 'circular' ?
-          <BusyCircularProgress color={busyColor} opacity={busyOpacity} size={busySize} {...busyCircularProps} />
-        : null}
+        {internalBusy && busyVariant === 'linear'
+          ? <BusyLinearProgress color={busyColor} opacity={busyOpacity} {...busyLinearProps} />
+          : null}
+        {internalBusy && busyVariant === 'circular'
+          ? <BusyCircularProgress color={busyColor} opacity={busyOpacity} size={busySize} {...busyCircularProps} />
+          : null}
       </Box>
     )
   },

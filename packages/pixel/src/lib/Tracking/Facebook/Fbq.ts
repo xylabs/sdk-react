@@ -10,7 +10,7 @@ class Fbq {
     this.pixelId = pixelId
 
     this.fbq = function () {
-      // eslint-disable-next-line prefer-rest-params,prefer-spread
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       this.fbq.callMethod ? this.fbq.callMethod.apply(this.fbq, arguments) : this.fbq.queue.push(arguments)
     }
 
@@ -19,7 +19,7 @@ class Fbq {
     this.fbq.version = '2.0'
     this.fbq.queue = []
 
-    //we have to set these to globals because that is where the facebook script looks for them
+    // we have to set these to globals because that is where the facebook script looks for them
     global.fbq = this.fbq
     global._fbq = this.fbq
 

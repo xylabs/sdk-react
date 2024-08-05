@@ -1,1 +1,1 @@
-export * from './QuickTipButton.jsx'
+export * from './QuickTipButton.tsx'

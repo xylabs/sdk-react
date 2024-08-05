@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-import { ExperimentProps } from './Experiment.jsx'
+import { ExperimentProps } from './Experiment.tsx'
 
 export type ExperimentsProps = {
   children: ReactElement<ExperimentProps>[] | ReactElement<ExperimentProps>

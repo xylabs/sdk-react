@@ -4,19 +4,21 @@ import { UserEventHandler } from '@xylabs/pixel'
 import { UserEventsProps } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 
-import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components/index.js'
+import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from '../components/index.tsx'
 
 const defaultLocalStorageKey = 'testData'
 let experimentsTestData: { [index: string]: string } = {}
-let outcomes: OutcomesData = {} //prevent multi-outcome
+let outcomes: OutcomesData = {} // prevent multi-outcome
 
 // TODO - some expire logic around experiments
 const ExperimentsHelper = {
   buildLocalStorageKey: (localStorageProp: boolean | string) => {
     return (
-      localStorageProp === true ? defaultLocalStorageKey
-      : typeof localStorageProp === 'string' ? localStorageProp ?? defaultLocalStorageKey
-      : ''
+      localStorageProp === true
+        ? defaultLocalStorageKey
+        : typeof localStorageProp === 'string'
+          ? localStorageProp ?? defaultLocalStorageKey
+          : ''
     )
   },
   calcTotalWeight: (variants: VariantData[]) => {
@@ -73,8 +75,8 @@ const ExperimentsHelper = {
     }
   },
   loadExperimentsTestData: (key: string) => {
-    experimentsTestData =
-      localStorage
+    experimentsTestData
+      = localStorage
         .getItem(key)
         ?.split('|')
         // eslint-disable-next-line unicorn/no-array-reduce

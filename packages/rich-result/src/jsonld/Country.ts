@@ -1,5 +1,4 @@
-/* eslint-disable import/no-cycle */
-import { AdministrativeArea } from './AdministrativeArea.js'
+import { AdministrativeArea } from './AdministrativeArea.ts'
 
 type Country = AdministrativeArea
 

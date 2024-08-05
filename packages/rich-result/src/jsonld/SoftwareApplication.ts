@@ -1,10 +1,9 @@
-/* eslint-disable import/no-cycle */
-import { CreativeWork } from './CreativeWork.js'
-import { ImageObject } from './ImageObject.js'
-import { Text } from './Text.js'
-import { URL } from './URL.js'
+import { CreativeWork } from './CreativeWork.ts'
+import { ImageObject } from './ImageObject.ts'
+import { Text } from './Text.ts'
+import { URL } from './URL.ts'
 
-//TODO: Resolve Anys
+// TODO: Resolve Anys
 interface SoftwareApplication extends CreativeWork {
   applicationCategory?: Text | URL
   applicationSubCategory?: Text | URL

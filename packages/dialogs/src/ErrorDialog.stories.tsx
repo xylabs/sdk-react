@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { ErrorDialog, ErrorDialogProps } from '@xylabs/react-dialogs'
+import React from 'react'
+
+import { ErrorDialog, ErrorDialogProps } from './ErrorDialog.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -22,5 +24,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

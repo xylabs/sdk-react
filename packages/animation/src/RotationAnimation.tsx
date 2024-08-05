@@ -1,8 +1,8 @@
 import { animated, useSpring } from '@react-spring/web'
 import { FlexBoxProps } from '@xylabs/react-flexbox'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-//Inspired by https://www.joshwcomeau.com/react/rotate/#bonus-that-star-animation-8
+// Inspired by https://www.joshwcomeau.com/react/rotate/#bonus-that-star-animation-8
 
 export interface RotationAnimationProps extends FlexBoxProps {
   rotation: number

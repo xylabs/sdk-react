@@ -1,7 +1,7 @@
 import { Breadcrumbs, BreadcrumbsProps, Link } from '@mui/material'
 import { assertEx } from '@xylabs/assert'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { ReactElement } from 'react'
+import React, { ReactElement } from 'react'
 import { Link as RouteLink } from 'react-router-dom'
 
 const getPartialPath = (pathParts: string[], index: number) => {
@@ -27,7 +27,7 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
   ...props
 }) => {
   const pathParts = path.split('/')
-  //if the url has a trailing '/', remove the last part
+  // if the url has a trailing '/', remove the last part
   if (pathParts.at(-1)?.length === 0) {
     pathParts.pop()
   }
@@ -45,14 +45,15 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
             component={RouteLink}
             to={path}
           >
-            {index > 0 ?
-              titles?.[index - 1]
-            : <FlexRow>
-                {typeof logo === 'string' ?
-                  <img src={logo} />
-                : logo}
-              </FlexRow>
-            }
+            {index > 0
+              ? titles?.[index - 1]
+              : (
+                  <FlexRow>
+                    {typeof logo === 'string'
+                      ? <img src={logo} />
+                      : logo}
+                  </FlexRow>
+                )}
           </Link>
         )
       })}

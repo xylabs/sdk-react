@@ -1,4 +1,4 @@
-import { RedditStandardEvent } from './StandardEvent.js'
+import { RedditStandardEvent } from './StandardEvent.ts'
 
 class RedditStandardEvents<T extends Record<string, unknown>> {
   addToCart() {

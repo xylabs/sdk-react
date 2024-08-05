@@ -1,6 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { BreadcrumbsEx } from '@xylabs/react-common'
+import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
+
+import { BreadcrumbsEx } from './BreadcrumbsEx.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,7 +15,7 @@ const StorybookEntry = {
   title: 'Components/BreadcrumbsEx',
 } as Meta<typeof BreadcrumbsEx>
 
-const Template: StoryFn<typeof BreadcrumbsEx> = (args) => (
+const Template: StoryFn<typeof BreadcrumbsEx> = args => (
   <BrowserRouter>
     <BreadcrumbsEx {...args}></BreadcrumbsEx>
   </BrowserRouter>
@@ -35,5 +37,4 @@ DoubleLevel.args = {
 
 export { DoubleLevel, SingleLevel }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

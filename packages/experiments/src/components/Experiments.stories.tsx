@@ -1,5 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { Experiment, Experiments } from '@xylabs/react-experiments'
+import React from 'react'
+
+import { Experiment } from './Experiment.tsx'
+import { Experiments } from './Experiments.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -12,15 +15,15 @@ const StorybookEntry = {
   title: 'experiments/Experiments',
 } as Meta<typeof Experiments>
 
-const Template: StoryFn<typeof Experiments> = (args) => <Experiments {...args}></Experiments>
+const Template: StoryFn<typeof Experiments> = args => <Experiments {...args}></Experiments>
 
 const Default = Template.bind({})
 Default.args = {
   children: [
-    <Experiment weight={50} key={'true'}>
+    <Experiment weight={50} key="true">
       True
     </Experiment>,
-    <Experiment weight={50} key={'false'}>
+    <Experiment weight={50} key="false">
       False
     </Experiment>,
   ],
@@ -29,5 +32,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

@@ -1,8 +1,11 @@
 import { Paper } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
-import { EthAccountBox, EthAccountProps } from '@xylabs/react-crypto'
 import { FlexBoxProps } from '@xylabs/react-flexbox'
+import React from 'react'
+
+import { EthAccountBox } from './EthAccountBox.tsx'
+import { EthAccountProps } from './EthAccountProps.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -119,5 +122,4 @@ IconOnly.args = {
 
 export { Auto, AutoEmpty, AutoEmptyIcon, AutoIcon, IconOnly, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

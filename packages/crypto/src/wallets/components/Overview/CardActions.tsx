@@ -2,7 +2,7 @@ import { Button, CardActions, CardActionsProps } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import { forget } from '@xylabs/forget'
 import { Promisable } from '@xylabs/promise'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export interface WalletOverviewCardActions extends CardActionsProps {
   connectWallet?: () => Promise<string[] | null | undefined>

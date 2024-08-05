@@ -1,1 +1,1 @@
-export * from './useRenderSpinCheck.jsx'
+export * from './useRenderSpinCheck.tsx'

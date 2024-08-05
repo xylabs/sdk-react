@@ -1,7 +1,9 @@
 import { Grid } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import { AccordionGroup } from '@xylabs/react-accordion'
 import { FlexCol } from '@xylabs/react-flexbox'
+import React from 'react'
+
+import { AccordionGroup } from './AccordionGroup.tsx'
 
 const StorybookEntry: Meta<typeof AccordionGroup> = {
   argTypes: {},
@@ -14,7 +16,7 @@ const StorybookEntry: Meta<typeof AccordionGroup> = {
   title: 'Components/AccordionGroup',
 } as Meta<typeof AccordionGroup>
 
-const Template: StoryFn<typeof AccordionGroup> = (args) => <AccordionGroup {...args}></AccordionGroup>
+const Template: StoryFn<typeof AccordionGroup> = args => <AccordionGroup {...args}></AccordionGroup>
 
 const Default: StoryFn<typeof AccordionGroup> = Template.bind({})
 Default.args = {
@@ -42,5 +44,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

@@ -1,8 +1,7 @@
-/* eslint-disable import/no-deprecated */
-import React, { PropsWithChildren } from 'react'
+import React, { PropsWithChildren, useMemo } from 'react'
 
-import { useMetaMask } from '../../wallets/index.js'
-import { EthersContext } from './Context.js'
+import { useMetaMask } from '../../wallets/index.ts'
+import { EthersContext } from './Context.ts'
 
 export interface Props {
   /** @deprecated - wallet should determine this for you */
@@ -26,23 +25,37 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
     signerAddress,
   } = useMetaMask()
 
+  const value = useMemo(() => ({
+    busy: false,
+    chainId,
+    connect,
+    connectRefused,
+    error: connectError,
+    isConnected: installed,
+    localAddress: currentAddress,
+    provider,
+    providerName,
+    signMessage,
+    signer,
+    signerAddress: signerAddress?.toString(),
+    walletProvider: provider,
+  }), [
+    chainId,
+    connect,
+    connectRefused,
+    connectError,
+    installed,
+    currentAddress,
+    provider,
+    providerName,
+    signMessage,
+    signer,
+    signerAddress,
+    provider])
+
   return (
     <EthersContext.Provider
-      value={{
-        busy: false,
-        chainId,
-        connect,
-        connectRefused,
-        error: connectError,
-        isConnected: installed,
-        localAddress: currentAddress,
-        provider,
-        providerName,
-        signMessage,
-        signer,
-        signerAddress: signerAddress?.toString(),
-        walletProvider: provider,
-      }}
+      value={value}
     >
       {children}
     </EthersContext.Provider>

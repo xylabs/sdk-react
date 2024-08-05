@@ -1,22 +1,21 @@
-/* eslint-disable import/no-cycle */
-import { AggregateRating } from './AggregateRating.js'
-import { DateTime } from './DateTime.js'
-import { Integer } from './Integer.js'
-import { Language } from './Language.js'
-import { MediaObject } from './MediaObject.js'
-import { Offer } from './Offer.js'
-import { Organization } from './Organization.js'
-import { Person } from './Person.js'
-import { Place } from './Place.js'
-import { Product } from './Product.js'
-import { QuantitativeValue } from './QuantitativeValue.js'
-import { Rating } from './Rating.js'
-import { Review } from './Review.js'
-import { Text } from './Text.js'
-import { Thing } from './Thing.js'
-import { URL } from './URL.js'
+import { AggregateRating } from './AggregateRating.ts'
+import { DateTime } from './DateTime.ts'
+import { Integer } from './Integer.ts'
+import { Language } from './Language.ts'
+import { MediaObject } from './MediaObject.ts'
+import { Offer } from './Offer.ts'
+import { Organization } from './Organization.ts'
+import { Person } from './Person.ts'
+import { Place } from './Place.ts'
+import { Product } from './Product.ts'
+import { QuantitativeValue } from './QuantitativeValue.ts'
+import { Rating } from './Rating.ts'
+import { Review } from './Review.ts'
+import { Text } from './Text.ts'
+import { Thing } from './Thing.ts'
+import { URL } from './URL.ts'
 
-//TODO: Resolve Anys
+// TODO: Resolve Anys
 interface CreativeWork extends Thing {
   about?: Thing
   abstract?: Text

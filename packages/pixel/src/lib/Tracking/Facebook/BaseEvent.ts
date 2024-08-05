@@ -1,7 +1,7 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 
-import { Fbq } from './Fbq.js'
+import { Fbq } from './Fbq.ts'
 
 class FacebookBaseEvent<T> {
   fbq: Fbq
@@ -13,7 +13,7 @@ class FacebookBaseEvent<T> {
   }
 
   async send(_data: T) {
-    await delay(0) //force async to increase reporting odds
+    await delay(0) // force async to increase reporting odds
   }
 }
 

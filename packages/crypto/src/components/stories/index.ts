@@ -1,1 +1,1 @@
-export * from './EthWalletSBComponent.jsx'
+export * from './EthWalletSBComponent.tsx'

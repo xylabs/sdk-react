@@ -2,7 +2,7 @@ import { Typography, useTheme } from '@mui/material'
 import { FlexCol } from '@xylabs/react-flexbox'
 import React from 'react'
 
-import { ErrorViewerProps } from './ErrorViewerProps.js'
+import { ErrorViewerProps } from './ErrorViewerProps.ts'
 
 const ErrorViewer: React.FC<ErrorViewerProps> = (props) => {
   const { error, ...boxProps } = props

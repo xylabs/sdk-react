@@ -1,1 +1,1 @@
-export * from './ExperimentsHelper.js'
+export * from './ExperimentsHelper.ts'

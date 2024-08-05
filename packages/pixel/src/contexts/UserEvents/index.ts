@@ -1,2 +1,2 @@
-export * from './Context.js'
-export * from './Provider.jsx'
+export * from './Context.ts'
+export * from './Provider.tsx'

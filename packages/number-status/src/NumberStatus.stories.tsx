@@ -1,5 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { NumberStatus, NumberStatusProps } from '@xylabs/react-number-status'
+import React from 'react'
+
+import { NumberStatus } from './NumberStatus.tsx'
+import { NumberStatusProps } from './NumberStatusProps.ts'
 
 const StorybookEntry = {
   argTypes: {},
@@ -76,5 +79,4 @@ Large10Digits.args = {
 
 export { Default, Default6Digits, Default10Digits, Large, Large6Digits, Large10Digits, Small, Small6Digits, Small10Digits }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

@@ -1,6 +1,8 @@
 import { Box, CssBaseline, Typography, useTheme } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
+import React from 'react'
+
+import { InvertibleThemeProvider } from './InvertibleThemeProvider.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,7 +15,7 @@ const StorybookEntry = {
   title: 'invertible-theme/InvertibleThemeProvider',
 } as Meta<typeof InvertibleThemeProvider>
 
-const Template: StoryFn<typeof InvertibleThemeProvider> = (args) => <InvertibleThemeProvider {...args}></InvertibleThemeProvider>
+const Template: StoryFn<typeof InvertibleThemeProvider> = args => <InvertibleThemeProvider {...args}></InvertibleThemeProvider>
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
@@ -22,12 +24,19 @@ const ThemeEnabledComponent = () => {
       <CssBaseline />
       <Box sx={{ backgroundColor: theme.palette.background.default }}>
         <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
-          <Typography variant="h3">marginBottom of {theme.spacing(4)}</Typography>
+          <Typography variant="h3">
+            marginBottom of
+            {theme.spacing(4)}
+          </Typography>
           <Typography variant="h4" color={theme.palette.primary.main}>
-            Color: {theme.palette.primary.main}
+            Color:
+            {' '}
+            {theme.palette.primary.main}
           </Typography>
           <Typography variant="h4" color={theme.palette.secondary.main}>
-            Color: {theme.palette.secondary.main}
+            Color:
+            {' '}
+            {theme.palette.secondary.main}
           </Typography>
         </Box>
       </Box>
@@ -66,5 +75,4 @@ DarkThemeEnabled.args = {
 
 export { DarkThemeEnabled, Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

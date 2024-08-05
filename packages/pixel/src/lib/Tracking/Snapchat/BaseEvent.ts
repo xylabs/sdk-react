@@ -7,7 +7,7 @@ class SnapchatBaseEvent<T> {
   }
 
   async send(_data: T) {
-    await delay(0) //force async to increase reporting odds
+    await delay(0) // force async to increase reporting odds
   }
 }
 

@@ -1,29 +1,33 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { ButtonEx } from '@xylabs/react-button'
-import { CookieConsent, CookieConsentLoader, useCookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexRow } from '@xylabs/react-flexbox'
+import React from 'react'
+
+import { CookieConsentLoader, useCookieConsent } from '../contexts/index.ts'
+import { CookieConsent } from './CookieConsent.tsx'
+import { CookieConsentProps } from './CookieConsentProps.tsx'
+
+const Inner: React.FC<CookieConsentProps> = (args) => {
+  const { clearAccepted } = useCookieConsent()
+  return (
+    <FlexRow>
+      <ButtonEx
+        variant="contained"
+        onClick={() => {
+          clearAccepted?.()
+        }}
+      >
+        Clear Local Storage
+      </ButtonEx>
+      <CookieConsent {...args}></CookieConsent>
+    </FlexRow>
+  )
+}
 
 const TemplateWithContext: StoryFn<typeof CookieConsent> = (args) => {
-  const Inner: React.FC = () => {
-    const { clearAccepted } = useCookieConsent()
-    return (
-      <FlexRow>
-        <ButtonEx
-          variant="contained"
-          onClick={() => {
-            clearAccepted?.()
-          }}
-        >
-          Clear Local Storage
-        </ButtonEx>
-        <CookieConsent {...args}></CookieConsent>
-      </FlexRow>
-    )
-  }
-
   return (
     <CookieConsentLoader>
-      <Inner />
+      <Inner {...args} />
     </CookieConsentLoader>
   )
 }
@@ -59,5 +63,4 @@ const StorybookEntry = {
 
 export { WithContext, WithoutContext }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

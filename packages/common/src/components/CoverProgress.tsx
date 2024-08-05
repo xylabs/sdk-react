@@ -25,9 +25,9 @@ export const CoverProgress: React.FC<CoverProgressProps> = (props) => {
         left={0}
         bgcolor={paper ? theme.palette.background.paper : theme.palette.background.default}
       >
-        {(errors?.length ?? 0) === 0 ?
-          <CircularProgress style={{ opacity }} />
-        : <ErrorsViewer margin={1} errors={errors} onRetry={onRetry} />}
+        {(errors?.length ?? 0) === 0
+          ? <CircularProgress style={{ opacity }} />
+          : <ErrorsViewer margin={1} errors={errors} onRetry={onRetry} />}
       </FlexGrowRow>
     )
   }

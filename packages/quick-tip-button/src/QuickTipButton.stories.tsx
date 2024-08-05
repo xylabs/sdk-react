@@ -2,7 +2,9 @@ import { NotListedLocation as NotListedLocationIcon } from '@mui/icons-material'
 import { Typography } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { QuickTipButton } from '@xylabs/react-quick-tip-button'
+import React from 'react'
+
+import { QuickTipButton } from './QuickTipButton.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -15,7 +17,7 @@ const StorybookEntry = {
   title: 'Components/QuickTipButton',
 } as Meta<typeof QuickTipButton>
 
-const Template: StoryFn<typeof QuickTipButton> = (args) => (
+const Template: StoryFn<typeof QuickTipButton> = args => (
   <FlexRow>
     <QuickTipButton {...args}></QuickTipButton>
   </FlexRow>
@@ -50,5 +52,4 @@ CustomIcon.args = {
 
 export { CustomIcon, Default, Hover, HoverAndMessage }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

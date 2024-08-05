@@ -1,6 +1,6 @@
-import { EthWallet } from '../../types/index.js'
-import { useEthWallet } from '../hooks/index.js'
-import { CoinbaseConnector } from './CoinbaseConnector.js'
+import { EthWallet } from '../../types/index.ts'
+import { useEthWallet } from '../hooks/index.ts'
+import { CoinbaseConnector } from './CoinbaseConnector.ts'
 
 let coinbaseConnector: CoinbaseConnector | undefined
 

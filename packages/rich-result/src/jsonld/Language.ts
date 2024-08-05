@@ -1,5 +1,4 @@
-/* eslint-disable import/no-cycle */
-import { Intangible } from './Intangible.js'
+import { Intangible } from './Intangible.ts'
 
 type Language = Intangible
 

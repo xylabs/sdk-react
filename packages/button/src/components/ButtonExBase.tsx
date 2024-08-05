@@ -1,8 +1,8 @@
 import { Button, useTheme } from '@mui/material'
 import { BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles } from '@xylabs/react-shared'
-import { forwardRef, MouseEvent } from 'react'
+import React, { forwardRef, MouseEvent } from 'react'
 
-import { ButtonExProps } from './ButtonExProps.jsx'
+import { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>((props, ref) => {
   const theme = useTheme()
@@ -16,12 +16,12 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>((props, ref) =
 
   return (
     <Button ref={ref} onClick={localOnClick} {...rootProps}>
-      {busy && busyVariant === 'linear' ?
-        <BusyLinearProgress rounded opacity={busyOpacity ?? 0} />
-      : null}
-      {busy && busyVariant === 'circular' ?
-        <BusyCircularProgress rounded size={24} opacity={busyOpacity ?? 0.5} />
-      : null}
+      {busy && busyVariant === 'linear'
+        ? <BusyLinearProgress rounded opacity={busyOpacity ?? 0} />
+        : null}
+      {busy && busyVariant === 'circular'
+        ? <BusyCircularProgress rounded size={24} opacity={busyOpacity ?? 0.5} />
+        : null}
       {children}
     </Button>
   )

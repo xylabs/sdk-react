@@ -1,7 +1,8 @@
 import { Button } from '@mui/material'
 import { StoryFn } from '@storybook/react'
-import { useAsyncEffect } from '@xylabs/react-async-effect'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+import { useAsyncEffect } from './useAsyncEffect.tsx'
 
 interface UseAsyncEffectTestProps {
   unmountCallback?: () => void
@@ -10,7 +11,6 @@ const UseAsyncEffectTest: React.FC<UseAsyncEffectTestProps> = ({ unmountCallback
   const [resolvedValue, setResolvedValue] = useState('')
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async () => {
       setResolvedValue(await Promise.resolve(JSON.stringify({ value: true })))
       return unmountCallback
@@ -20,12 +20,13 @@ const UseAsyncEffectTest: React.FC<UseAsyncEffectTestProps> = ({ unmountCallback
 
   return (
     <div>
-      Resolved Value: <strong>{resolvedValue}</strong>
+      Resolved Value:
+      {' '}
+      <strong>{resolvedValue}</strong>
     </div>
   )
 }
 
-// eslint-disable-next-line import/no-default-export
 export default {
   component: UseAsyncEffectTest,
   title: 'hooks/useAsyncEffect',

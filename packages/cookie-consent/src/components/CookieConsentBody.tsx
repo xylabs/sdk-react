@@ -1,16 +1,16 @@
 import { Link, Typography } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 
-import { useCookieConsent } from '../contexts/index.js'
-import { CookieConsentProps } from './CookieConsentProps.jsx'
+import { useCookieConsent } from '../contexts/index.ts'
+import { CookieConsentProps } from './CookieConsentProps.tsx'
 
 export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll, acceptOnTimer = 0, onAccept, ...props }) => {
   const { accepted, setAccepted, storageName } = useCookieConsent()
 
   const onScroll = () => {
-    //hide it one the user has scrolled at least one page
+    // hide it one the user has scrolled at least one page
     if (window.scrollY > window.innerHeight && !accepted) {
       onAcceptClick()
     }
@@ -51,22 +51,24 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll
     )
   }
 
-  return accepted ? null : (
-      <FlexRow justifyContent="space-between" {...props}>
-        <Typography variant="body2" margin={2}>
-          {'This site uses '}
-          <Link href="https://cookiesandyou.com/" rel="noopener noreferrer" target="_blank">
-            cookies
-          </Link>
-          {' and '}
-          <Link href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">
-            Google&nbsp;tools
-          </Link>
-          {' to analyze traffic and for ads measurement purposes.'}
-        </Typography>
-        <ButtonEx variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
-          Accept
-        </ButtonEx>
-      </FlexRow>
-    )
+  return accepted
+    ? null
+    : (
+        <FlexRow justifyContent="space-between" {...props}>
+          <Typography variant="body2" margin={2}>
+            {'This site uses '}
+            <Link href="https://cookiesandyou.com/" rel="noopener noreferrer" target="_blank">
+              cookies
+            </Link>
+            {' and '}
+            <Link href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">
+              Google&nbsp;tools
+            </Link>
+            {' to analyze traffic and for ads measurement purposes.'}
+          </Typography>
+          <ButtonEx variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
+            Accept
+          </ButtonEx>
+        </FlexRow>
+      )
 }

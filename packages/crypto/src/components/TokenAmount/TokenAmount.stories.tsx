@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { TokenAmount } from '@xylabs/react-crypto'
+import React from 'react'
+
+import { TokenAmount } from './TokenAmount.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -12,7 +14,7 @@ const StorybookEntry = {
   title: 'crypto/TokenAmount',
 } as Meta<typeof TokenAmount>
 
-const Template: StoryFn<typeof TokenAmount> = (args) => <TokenAmount {...args}></TokenAmount>
+const Template: StoryFn<typeof TokenAmount> = args => <TokenAmount {...args}></TokenAmount>
 
 const Default = Template.bind({})
 Default.args = {
@@ -65,5 +67,4 @@ WithLogoAndLabel.args = {
 
 export { Default, WithLabel, WithLogo, WithLogoAndColor, WithLogoAndColorLarge, WithLogoAndLabel, WithNull, WithUndefined }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

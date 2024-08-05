@@ -1,1 +1,1 @@
-export * from './onWalletSelect.js'
+export * from './onWalletSelect.ts'

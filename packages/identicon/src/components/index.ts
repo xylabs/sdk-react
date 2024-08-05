@@ -1,1 +1,1 @@
-export * from './Identicon.jsx'
+export * from './Identicon.tsx'

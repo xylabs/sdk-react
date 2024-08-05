@@ -13,22 +13,22 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^3.5.9",
-    "@xylabs/log": "^3.5.9",
+    "@xylabs/api": "^3.6.12",
+    "@xylabs/log": "^3.6.12",
     "@xylabs/react-async-effect": "workspace:^"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/material": "^5.16.4",
-    "@storybook/react": "^8.2.4",
+    "@mui/material": "^5.16.6",
+    "@storybook/react": "^8.2.7",
     "@types/react": "^18.3.3",
-    "@xylabs/ts-scripts-yarn3": "^3.12.1",
-    "@xylabs/tsconfig-react": "^3.12.1",
-    "eslint": "^9.7.0",
+    "@xylabs/ts-scripts-yarn3": "^3.15.16",
+    "@xylabs/tsconfig-react": "^3.15.16",
+    "eslint": "^9.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.2.4",
-    "typescript": "^5.5.3"
+    "storybook": "^8.2.7",
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "@mui/material": "^5",
@@ -40,7 +40,7 @@
       "node": {
         "import": {
           "types": "./dist/node/index.d.mts",
-          "default": "./dist/node/index.js"
+          "default": "./dist/node/index.mjs"
         },
         "require": {
           "types": "./dist/node/index.d.cts",
@@ -50,20 +50,20 @@
       "browser": {
         "import": {
           "types": "./dist/browser/index.d.mts",
-          "default": "./dist/browser/index.js"
+          "default": "./dist/browser/index.mjs"
         },
         "require": {
           "types": "./dist/browser/index.d.cts",
           "default": "./dist/browser/index.cjs"
         }
       },
-      "default": "./dist/browser/index.js"
+      "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "types": "dist/browser/index.d.ts",
   "main": "./dist/browser/index.cjs",
-  "module": "./dist/browser/index.js",
+  "module": "./dist/browser/index.mjs",
   "homepage": "https://xylabs.com",
   "keywords": [
     "utility",

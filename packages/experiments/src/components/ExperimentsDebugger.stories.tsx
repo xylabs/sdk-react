@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { ExperimentsDebugger } from '@xylabs/react-experiments'
+import React from 'react'
+
+import { ExperimentsDebugger } from './ExperimentsDebugger.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -12,12 +14,11 @@ const StorybookEntry = {
   title: 'experiments/ExperimentsDebugger',
 } as Meta<typeof ExperimentsDebugger>
 
-const Template: StoryFn<typeof ExperimentsDebugger> = (args) => <ExperimentsDebugger {...args} />
+const Template: StoryFn<typeof ExperimentsDebugger> = args => <ExperimentsDebugger {...args} />
 
 const Default = Template.bind({})
 Default.args = {}
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

@@ -1,4 +1,4 @@
-import { DripResult } from './Result.js'
+import { DripResult } from './Result.ts'
 
 interface DripBaseData extends Record<string, unknown> {
   failure?: (result?: DripResult) => void

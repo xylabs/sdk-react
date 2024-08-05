@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
-    "typeRoots": []
+    "declaration": true,
+    "declarationMap": true
   },
   "exclude": ["dist", "docs"],
   "extends": "@xylabs/tsconfig-react"

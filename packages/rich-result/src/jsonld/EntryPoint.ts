@@ -1,9 +1,7 @@
-/* eslint-disable import/no-cycle */
-
-import { Intangible } from './Intangible.js'
-import { SoftwareApplication } from './SoftwareApplication.js'
-import { Text } from './Text.js'
-import { URL } from './URL.js'
+import { Intangible } from './Intangible.ts'
+import { SoftwareApplication } from './SoftwareApplication.ts'
+import { Text } from './Text.ts'
+import { URL } from './URL.ts'
 
 interface EntryPoint extends Intangible {
   actionApplication?: SoftwareApplication

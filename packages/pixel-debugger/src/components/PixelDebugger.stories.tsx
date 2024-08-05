@@ -1,8 +1,11 @@
 import { Meta, StoryFn } from '@storybook/react'
 import { PixelApi, XyPixel } from '@xylabs/pixel'
 import { BusyBoxProps } from '@xylabs/react-flexbox'
-import { PixelDebugger, PixelDebuggerProvider, PixelDebuggerToggle } from '@xylabs/react-pixel-debugger'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { PixelDebugger } from './PixelDebugger.tsx'
+import { PixelDebuggerProvider } from './PixelDebuggerProvider.tsx'
+import { PixelDebuggerToggle } from './PixelDebuggerToggle.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -21,11 +24,13 @@ const Template: StoryFn<typeof PixelDebuggerToggle> = (args: BusyBoxProps) => {
     XyPixel.selectApi(new PixelApi('local'))
     setPixel(XyPixel.init('storybookPixel'))
   }, [])
-  return pixel ?
-      <PixelDebuggerProvider>
-        <PixelDebuggerToggle {...args} />
-        <PixelDebugger />
-      </PixelDebuggerProvider>
+  return pixel
+    ? (
+        <PixelDebuggerProvider>
+          <PixelDebuggerToggle {...args} />
+          <PixelDebugger />
+        </PixelDebuggerProvider>
+      )
     : <></>
 }
 
@@ -34,5 +39,4 @@ Default.args = {}
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

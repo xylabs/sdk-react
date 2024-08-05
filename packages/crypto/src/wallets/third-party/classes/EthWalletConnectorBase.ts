@@ -1,9 +1,9 @@
 import { BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener } from 'ethers'
 import { LRUCache } from 'lru-cache'
 
-import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.js'
-import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib/index.js'
-import { findChainName } from '../../utils/index.js'
+import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
+import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib/index.ts'
+import { findChainName } from '../../utils/index.ts'
 
 /**
  * Base class for connecting to an ethereum compatible wallet
@@ -113,7 +113,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   subscribeToAccountsChanges(listener: () => void) {
     this.accountChangeNotifiers = [listener, ...this.accountChangeNotifiers]
     return () => {
-      this.accountChangeNotifiers = this.accountChangeNotifiers.filter((l) => l !== listener)
+      this.accountChangeNotifiers = this.accountChangeNotifiers.filter(l => l !== listener)
     }
   }
 
@@ -127,7 +127,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   subscribeToChainChanges(listener: () => void) {
     this.chainChangedNotifiers = [listener, ...this.chainChangedNotifiers]
     return () => {
-      this.chainChangedNotifiers = this.chainChangedNotifiers.filter((l) => l !== listener)
+      this.chainChangedNotifiers = this.chainChangedNotifiers.filter(l => l !== listener)
     }
   }
 

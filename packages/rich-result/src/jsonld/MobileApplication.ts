@@ -1,5 +1,5 @@
-import { SoftwareApplication } from './SoftwareApplication.js'
-import { Text } from './Text.js'
+import { SoftwareApplication } from './SoftwareApplication.ts'
+import { Text } from './Text.ts'
 
 interface MobileApplication extends SoftwareApplication {
   carrierRequirements?: Text

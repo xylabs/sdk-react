@@ -13,32 +13,32 @@
     "packages/*"
   ],
   "dependencies": {
-    "@metamask/providers": "^17.1.1",
-    "@xylabs/assert": "^3.5.9",
-    "@xylabs/eth-address": "^3.5.9",
-    "@xylabs/forget": "^3.5.9",
-    "@xylabs/promise": "^3.5.9",
+    "@metamask/providers": "^17.1.2",
+    "@xylabs/assert": "^3.6.12",
+    "@xylabs/eth-address": "^3.6.12",
+    "@xylabs/forget": "^3.6.12",
+    "@xylabs/promise": "^3.6.12",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-identicon": "workspace:^",
     "@xylabs/react-promise": "workspace:^",
-    "ethers": "^6.13.1",
-    "lru-cache": "^10.4.3",
-    "react-router-dom": "^6.25.0",
-    "viem": "^2.17.4"
+    "ethers": "^6.13.2",
+    "lru-cache": "^11.0.0",
+    "react-router-dom": "^6.26.0",
+    "viem": "^2.18.8"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
-    "@mui/icons-material": "^5.16.4",
-    "@mui/material": "^5.16.4",
-    "@storybook/react": "^8.2.4",
+    "@mui/icons-material": "^5.16.6",
+    "@mui/material": "^5.16.6",
+    "@storybook/react": "^8.2.7",
     "@types/react": "^18.3.3",
-    "@xylabs/ts-scripts-yarn3": "^3.12.1",
-    "@xylabs/tsconfig-react": "^3.12.1",
+    "@xylabs/ts-scripts-yarn3": "^3.15.16",
+    "@xylabs/tsconfig-react": "^3.15.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "@mui/icons-material": "^5",
@@ -51,7 +51,7 @@
       "node": {
         "import": {
           "types": "./dist/node/index.d.mts",
-          "default": "./dist/node/index.js"
+          "default": "./dist/node/index.mjs"
         },
         "require": {
           "types": "./dist/node/index.d.cts",
@@ -61,20 +61,20 @@
       "browser": {
         "import": {
           "types": "./dist/browser/index.d.mts",
-          "default": "./dist/browser/index.js"
+          "default": "./dist/browser/index.mjs"
         },
         "require": {
           "types": "./dist/browser/index.d.cts",
           "default": "./dist/browser/index.cjs"
         }
       },
-      "default": "./dist/browser/index.js"
+      "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "types": "dist/browser/index.d.ts",
   "main": "./dist/browser/index.cjs",
-  "module": "./dist/browser/index.js",
+  "module": "./dist/browser/index.mjs",
   "homepage": "https://xylabs.com",
   "keywords": [
     "utility",

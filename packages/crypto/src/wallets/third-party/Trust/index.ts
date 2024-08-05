@@ -1,2 +1,2 @@
-export * from './TrustConnector.js'
-export * from './use.js'
+export * from './TrustConnector.ts'
+export * from './use.ts'

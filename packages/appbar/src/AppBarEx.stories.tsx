@@ -1,7 +1,10 @@
 import { Menu as MenuIcon } from '@mui/icons-material'
 import { Toolbar } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import { AppBarEx, AppBarExProps } from '@xylabs/react-appbar'
+import React from 'react'
+
+import { AppBarEx } from './AppBarEx.tsx'
+import { AppBarExProps } from './AppBarExProps.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -33,5 +36,4 @@ WithMenu.args = {
 
 export { Empty, WithMenu }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

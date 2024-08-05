@@ -1,8 +1,9 @@
 import { Alert, MenuItemProps } from '@mui/material'
+import React from 'react'
 
-import { DiscoveredWallets } from '../../third-party/index.js'
-import { onWalletSelect } from './lib/index.js'
-import { WalletDiscoveryMenuItem } from './MenuItem.jsx'
+import { DiscoveredWallets } from '../../third-party/index.ts'
+import { onWalletSelect } from './lib/index.ts'
+import { WalletDiscoveryMenuItem } from './MenuItem.tsx'
 
 export interface WalletsDiscoveredMenuItemsProps extends MenuItemProps {
   discoveredWallets?: DiscoveredWallets
@@ -17,11 +18,12 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
   ...props
 }) => {
   return (
-    discoveredWallets ?
-      Object.values(discoveredWallets).map((eip6963Connector, index) => (
+    discoveredWallets
+      ? Object.values(discoveredWallets).map((eip6963Connector, index) => (
         <WalletDiscoveryMenuItem key={index} ethWalletConnector={eip6963Connector} onClick={() => onWalletSelect?.(eip6963Connector)} {...props} />
       ))
-    : suppressNoWalletsWarning ? null
-    : <Alert severity={'warning'}>Unable to locate any installed wallets</Alert>
+      : suppressNoWalletsWarning
+        ? null
+        : <Alert severity="warning">Unable to locate any installed wallets</Alert>
   )
 }

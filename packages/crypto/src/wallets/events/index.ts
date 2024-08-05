@@ -1,2 +1,2 @@
-export * from './AccountsChanged.js'
-export * from './ChainChanged.js'
+export * from './AccountsChanged.ts'
+export * from './ChainChanged.ts'

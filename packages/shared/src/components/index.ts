@@ -1,2 +1,2 @@
-export * from './BusyCircularProgress.jsx'
-export * from './BusyLinearProgress.jsx'
+export * from './BusyCircularProgress.tsx'
+export * from './BusyLinearProgress.tsx'

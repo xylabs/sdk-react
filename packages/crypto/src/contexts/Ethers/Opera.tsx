@@ -1,10 +1,9 @@
-/* eslint-disable import/no-deprecated */
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import { BrowserProvider, JsonRpcSigner } from 'ethers'
-import { PropsWithChildren, useState } from 'react'
+import React, { PropsWithChildren, useMemo, useState } from 'react'
 
-import { EthersContext } from './Context.js'
+import { EthersContext } from './Context.ts'
 
 interface Props {
   enabled?: boolean
@@ -26,7 +25,6 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const isConnected = ethereum?.isConnected() ?? false
 
   useAsyncEffect(
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     async (mounted) => {
       if (ethereum) {
         ethereum.enable()
@@ -55,17 +53,11 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     [ethereum, localAddress],
   )
 
+  const value = useMemo(() => ({ busy: false, chainId, error, isConnected, localAddress, provider, signer }), [chainId, error, isConnected, localAddress, provider, signer])
+
   return (
     <EthersContext.Provider
-      value={{
-        busy: false,
-        chainId,
-        error,
-        isConnected,
-        localAddress,
-        provider,
-        signer,
-      }}
+      value={value}
     >
       {children}
     </EthersContext.Provider>

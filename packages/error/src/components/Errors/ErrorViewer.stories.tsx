@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { ErrorViewer } from '@xylabs/react-error'
+import React from 'react'
+
+import { ErrorViewer } from './ErrorViewer.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -12,7 +14,7 @@ const StorybookEntry = {
   title: 'Components/ErrorViewer',
 } as Meta<typeof ErrorViewer>
 
-const Template: StoryFn<typeof ErrorViewer> = (args) => <ErrorViewer {...args}></ErrorViewer>
+const Template: StoryFn<typeof ErrorViewer> = args => <ErrorViewer {...args}></ErrorViewer>
 
 const Default = Template.bind({})
 Default.args = {
@@ -21,5 +23,4 @@ Default.args = {
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

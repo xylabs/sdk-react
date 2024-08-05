@@ -1,8 +1,9 @@
 import { CardContent, CardHeader } from '@mui/material'
 import { StoryFn } from '@storybook/react'
-import { BusyCard, BusyCardProps } from '@xylabs/react-flexbox'
+import React from 'react'
 
-// eslint-disable-next-line import/no-default-export
+import { BusyCard, BusyCardProps } from './BusyCard.tsx'
+
 export default {
   component: BusyCard,
   title: 'busy/BusyCard',

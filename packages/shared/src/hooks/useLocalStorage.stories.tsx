@@ -1,13 +1,13 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { useLocalStorage } from '@xylabs/react-shared'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
+
+import { useLocalStorage } from './useLocalStorage.ts'
 
 const View: React.FC = () => {
-  //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [storedBoolean, setStoredBoolean] = useLocalStorage<boolean>('test_boolean', false)
-  //eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   const [defaultObject, setDefaultObject] = useLocalStorage<object | undefined>('test_object', { bar: true, foo: false })
-  //eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   // eslint-disable-next-line unicorn/no-useless-undefined
   const [storedString, setStoredString] = useLocalStorage<string | undefined>('test_string', undefined)
   useEffect(() => {
@@ -23,9 +23,18 @@ const View: React.FC = () => {
         <div>{storedString}</div>
       </div>
       <div>
-        <div>storedBoolean: {localStorage.getItem('test_boolean') ?? 'undefined'}</div>
-        <div>defaultObject: {localStorage.getItem('test_object') ?? 'undefined'}</div>
-        <div>storedString: {localStorage.getItem('test_string') ?? 'undefined'}</div>
+        <div>
+          storedBoolean:
+          {localStorage.getItem('test_boolean') ?? 'undefined'}
+        </div>
+        <div>
+          defaultObject:
+          {localStorage.getItem('test_object') ?? 'undefined'}
+        </div>
+        <div>
+          storedString:
+          {localStorage.getItem('test_string') ?? 'undefined'}
+        </div>
       </div>
     </>
   )
@@ -49,5 +58,4 @@ Default.args = {}
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

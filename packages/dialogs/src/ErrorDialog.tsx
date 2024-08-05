@@ -2,6 +2,7 @@ import { Dialog, DialogActions, DialogContent, DialogProps, DialogTitle, Typogra
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import type { AxiosError } from 'axios'
+import React from 'react'
 
 export interface ErrorDialogProps extends DialogProps {
   error?: Error
@@ -16,7 +17,7 @@ const toAxiosError = (error: Error) => {
 const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
   onAction,
   title = 'Oops. Something went wrong.',
-  error = new Error('Unknown Error'),
+  error,
   ...props
 }) => {
   const onCloseClicked = () => {
@@ -27,8 +28,9 @@ const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
     onAction?.(true)
   }
 
-  const axiosError = toAxiosError(error)
-  const message = error.message ?? error.toString()
+  const errorMemo = error ?? new Error('Unknown Error')
+  const axiosError = toAxiosError(errorMemo)
+  const message = errorMemo.message ?? errorMemo.toString()
 
   return (
     <Dialog {...props}>

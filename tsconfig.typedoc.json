@@ -1,5 +1,9 @@
 {
-  "exclude": ["**/spec/*", "**/*.spec.*", "dist", "docs", "packages"],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true
+  },
+  "exclude": ["**/spec/*", "**/*.spec.*", "dist", "docs", "packages", "storybook-static"],
   "extends": "./tsconfig.json"
 }
 

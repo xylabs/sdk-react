@@ -1,6 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react'
-import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import React from 'react'
+
+import { ButtonEx } from './ButtonEx.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -13,7 +15,7 @@ const StorybookEntry = {
   title: 'button/ButtonEx',
 } as Meta<typeof ButtonEx>
 
-const DefaultTemplate: StoryFn<typeof ButtonEx> = (args) => (
+const DefaultTemplate: StoryFn<typeof ButtonEx> = args => (
   <FlexRow justifyContent="flex-start">
     <FlexCol marginX={1}>
       <ButtonEx {...args}>Default</ButtonEx>
@@ -41,5 +43,5 @@ const BusyLinear = DefaultTemplate.bind({})
 BusyLinear.args = { busy: true, busyVariant: 'linear' }
 
 export { BusyCircular, BusyLinear, Default }
-// eslint-disable-next-line import/no-default-export
+
 export default StorybookEntry

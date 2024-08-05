@@ -1,1 +1,1 @@
-export * from './useUserEvents.js'
+export * from './useUserEvents.ts'

@@ -1,6 +1,7 @@
 import { Alert, AlertTitle, CardContent, CardContentProps, Chip, Divider, styled, Typography } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import React from 'react'
 
 export interface WalletOverviewCardContentProps extends CardContentProps {
   chainName?: string
@@ -19,11 +20,13 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
 }) => {
   return (
     <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-      {window.parent === window ? null : (
-        <Alert severity={'warning'}>
-          <AlertTitle>Avoid calling wallets inside of iFrames</AlertTitle>
-        </Alert>
-      )}
+      {window.parent === window
+        ? null
+        : (
+            <Alert severity="warning">
+              <AlertTitle>Avoid calling wallets inside of iFrames</AlertTitle>
+            </Alert>
+          )}
       <FlexRow justifyContent="space-between" alignItems="start" gap={2}>
         <FlexCol alignItems="start" justifyContent="start">
           <StyledTypographyHeading variant="overline">Approved Address:</StyledTypographyHeading>
@@ -36,18 +39,24 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
       </FlexRow>
       <Divider flexItem />
 
-      {connectRefused ?
-        <Alert severity={'error'}>
-          <AlertTitle>Connection Refused</AlertTitle>
-          Error: {connectError?.message}
-        </Alert>
-      : null}
-      {signResponse ?
-        <Alert severity={'success'}>
-          <AlertTitle>Sign Response</AlertTitle>
-          {signResponse.toShortString()}
-        </Alert>
-      : null}
+      {connectRefused
+        ? (
+            <Alert severity="error">
+              <AlertTitle>Connection Refused</AlertTitle>
+              Error:
+              {' '}
+              {connectError?.message}
+            </Alert>
+          )
+        : null}
+      {signResponse
+        ? (
+            <Alert severity="success">
+              <AlertTitle>Sign Response</AlertTitle>
+              {signResponse.toShortString()}
+            </Alert>
+          )
+        : null}
     </CardContent>
   )
 }

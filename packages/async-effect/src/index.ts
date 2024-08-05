@@ -1,1 +1,1 @@
-export * from './useAsyncEffect.jsx'
+export * from './useAsyncEffect.tsx'

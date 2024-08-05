@@ -1,16 +1,13 @@
 import { Alert, AlertTitle, List, ListItem, Snackbar } from '@mui/material'
 import { Meta, StoryFn } from '@storybook/react'
-import {
-  AccountsChangedEventName,
-  ChainChangedEventName,
-  EIP6963Connector,
-  onWalletSelect,
-  WalletDiscoveryPaper,
-  WalletDiscoveryPaperProps,
-  WalletOverviewCard,
-} from '@xylabs/react-crypto'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
+import { EIP6963Connector } from '../../third-party/index.ts'
+import { WalletOverviewCard } from '../Overview/index.ts'
+import { onWalletSelect } from './lib/index.ts'
+import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper.tsx'
 
 const StorybookEntry = {
   args: {
@@ -31,7 +28,6 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
   const [errorArray, setErrorArray] = useState<[string, Error][]>([])
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const logErrorsInterval = setInterval(() => {
       const errorLogAsArray = selectedWallet ? [...selectedWallet.providerErrorLog] : []
       setErrorArray(errorLogAsArray as [string, Error][])
@@ -71,21 +67,26 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
     <FlexCol alignItems="start" gap={2}>
       <FlexRow justifyContent="start" alignItems="start" gap={4}>
         <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
-        {selectedWallet?.rawProvider ?
-          <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} />
-        : null}
+        {selectedWallet?.rawProvider
+          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} />
+          : null}
       </FlexRow>
-      {selectedWallet ?
-        errorArray.length > 0 ?
-          <List>
-            {errorArray.map(([walletName, error]) => (
-              <ListItem key={walletName}>
-                {walletName} - {error.message}
-              </ListItem>
-            ))}
-          </List>
-        : null
-      : <Alert severity={'warning'}>Select a wallet to see its errors</Alert>}
+      {selectedWallet
+        ? errorArray.length > 0
+          ? (
+              <List>
+                {errorArray.map(([walletName, error]) => (
+                  <ListItem key={walletName}>
+                    {walletName}
+                    {' '}
+                    -
+                    {error.message}
+                  </ListItem>
+                ))}
+              </List>
+            )
+          : null
+        : <Alert severity="warning">Select a wallet to see its errors</Alert>}
       <Snackbar anchorOrigin={{ horizontal: 'center', vertical: 'top' }} open={!!event} autoHideDuration={5000} onClose={() => setEvent(undefined)}>
         <Alert severity="success">
           <AlertTitle>New Event</AlertTitle>
@@ -100,5 +101,4 @@ const Default = Template.bind({})
 
 export { Default }
 
-// eslint-disable-next-line import/no-default-export
 export default StorybookEntry

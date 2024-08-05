@@ -1,17 +1,20 @@
 import { WithChildren } from '@xylabs/react-shared'
-import { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
-import { CookieConsentContext } from './Context.js'
+import { CookieConsentContext } from './Context.ts'
 
 const CookiesAcceptedLocalStorageName = 'CookiesAccepted'
 
+const getAcceptedFromLocalStorage = () => {
+  return localStorage.getItem(CookiesAcceptedLocalStorageName) === 'true'
+}
+
+const setAcceptedToLocalStorage = (accepted: boolean) => {
+  localStorage.setItem(CookiesAcceptedLocalStorageName, accepted ? 'true' : 'false')
+}
+
 const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
-  const getAcceptedFromLocalStorage = () => {
-    return localStorage.getItem(CookiesAcceptedLocalStorageName) === 'true'
-  }
-  const setAcceptedToLocalStorage = (accepted: boolean) => {
-    localStorage.setItem(CookiesAcceptedLocalStorageName, accepted ? 'true' : 'false')
-  }
+  // eslint-disable-next-line @eslint-react/hooks-extra/prefer-use-state-lazy-initialization
   const [accepted, setAccepted] = useState(getAcceptedFromLocalStorage())
   const setAcceptedHandler = (accepted: boolean) => {
     setAcceptedToLocalStorage(accepted)
@@ -23,8 +26,10 @@ const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
     setAccepted(getAcceptedFromLocalStorage())
   }
 
+  const value = useMemo(() => ({ accepted, clearAccepted, setAccepted: setAcceptedHandler, storageName: CookiesAcceptedLocalStorageName }), [accepted, clearAccepted, setAcceptedHandler])
+
   return (
-    <CookieConsentContext.Provider value={{ accepted, clearAccepted, setAccepted: setAcceptedHandler, storageName: CookiesAcceptedLocalStorageName }}>
+    <CookieConsentContext.Provider value={value}>
       {children}
     </CookieConsentContext.Provider>
   )

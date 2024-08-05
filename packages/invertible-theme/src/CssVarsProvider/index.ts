@@ -1,3 +1,3 @@
-export * from './InvertibleCssVars.js'
-export * from './InvertibleCssVarsProvider.jsx'
-export * from './useColorSchemeEx.jsx'
+export * from './InvertibleCssVars.ts'
+export * from './InvertibleCssVarsProvider.tsx'
+export * from './useColorSchemeEx.tsx'

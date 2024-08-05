@@ -11,7 +11,7 @@ export interface RenderSpinCheckBounce {
   name: string
 }
 
-//this is external to prevent us from creating our own spin
+// this is external to prevent us from creating our own spin
 const spinCountMap = new Map<number, number>()
 
 export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: RenderSpinCheckConfig) => {

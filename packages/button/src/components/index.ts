@@ -1,2 +1,2 @@
-export * from './ButtonEx.jsx'
-export * from './ButtonExProps.jsx'
+export * from './ButtonEx.tsx'
+export * from './ButtonExProps.tsx'

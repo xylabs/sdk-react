@@ -1,1 +1,1 @@
-export * from './BreadcrumbsEx.js'
+export * from './BreadcrumbsEx.tsx'

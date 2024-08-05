@@ -1,3 +1,3 @@
-export * from './PixelDebugger.jsx'
-export * from './PixelDebuggerProvider.jsx'
-export * from './PixelDebuggerToggle.jsx'
+export * from './PixelDebugger.tsx'
+export * from './PixelDebuggerProvider.tsx'
+export * from './PixelDebuggerToggle.tsx'

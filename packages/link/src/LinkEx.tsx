@@ -1,8 +1,8 @@
 import { Link } from '@mui/material'
-import { forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 
-import { LinkExProps } from './LinkExProps.jsx'
-import { LinkToEx } from './LinkToEx.jsx'
+import { LinkExProps } from './LinkExProps.tsx'
+import { LinkToEx } from './LinkToEx.tsx'
 
 export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({ to, ...props }, ref) => {
   return to ? <LinkToEx ref={ref} to={to} {...props} /> : <Link ref={ref} {...props} />

@@ -14,7 +14,7 @@ export const usePixelAltSendHandler = (altHandler: (event: string, fields?: Reco
       }
     }
     return () => {
-      //restore send on unmount
+      // restore send on unmount
       if (pixelSend) {
         XyPixel.instance.send = pixelSend
       }
