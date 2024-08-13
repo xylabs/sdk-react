@@ -1,5 +1,5 @@
 import { Experimental_CssVarsProvider as CssVarsProvider, responsiveFontSizes, useColorScheme } from '@mui/material'
-// eslint-disable-next-line import/no-internal-modules
+// eslint-disable-next-line import-x/no-internal-modules
 import type {} from '@mui/material/themeCssVarsAugmentation'
 import React, { ReactNode, useEffect } from 'react'
 

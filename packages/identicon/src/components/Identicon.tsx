@@ -1,4 +1,5 @@
 import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
+// eslint-disable-next-line depend/ban-dependencies
 import md5 from 'md5'
 import React, { useEffect, useRef } from 'react'
 

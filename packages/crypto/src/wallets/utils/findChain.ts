@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-internal-modules
+// eslint-disable-next-line import-x/no-internal-modules
 import { arbitrum, base, mainnet, optimism, polygon } from 'viem/chains'
 
 const chains = [mainnet, polygon, arbitrum, optimism, base]

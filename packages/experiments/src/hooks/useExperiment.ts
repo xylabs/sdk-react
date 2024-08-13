@@ -22,7 +22,6 @@ export const selectVariantForExperiment = <T>(name: string, variants: Record<str
 }
 
 export const useExperiments = <T>(name: string, experiments: VariantData[]) => {
-  // eslint-disable-next-line @eslint-react/hooks-extra/prefer-use-state-lazy-initialization
   const [activeExperiment] = useState(ExperimentsHelper.calculateExperiment(name, true, experiments, useUserEvents()))
 
   return {

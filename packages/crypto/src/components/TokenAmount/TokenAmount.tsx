@@ -4,7 +4,7 @@ import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 
-// eslint-disable-next-line import/no-internal-modules
+// eslint-disable-next-line import-x/no-internal-modules
 import xyoLogo from './img/xyo.svg'
 import { TokenAmountProps } from './TokenAmountProps.tsx'
 

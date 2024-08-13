@@ -14,7 +14,6 @@ const setAcceptedToLocalStorage = (accepted: boolean) => {
 }
 
 const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
-  // eslint-disable-next-line @eslint-react/hooks-extra/prefer-use-state-lazy-initialization
   const [accepted, setAccepted] = useState(getAcceptedFromLocalStorage())
   const setAcceptedHandler = (accepted: boolean) => {
     setAcceptedToLocalStorage(accepted)
