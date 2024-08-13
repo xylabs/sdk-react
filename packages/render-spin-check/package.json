@@ -47,6 +47,6 @@
     "url": "https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
-  "version": "3.4.2",
+  "version": "4.0.0",
   "type": "module"
 }
