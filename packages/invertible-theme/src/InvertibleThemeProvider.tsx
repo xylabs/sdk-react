@@ -1,4 +1,5 @@
 import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
+import deepmerge from 'deepmerge'
 import React, { useMemo } from 'react'
 import rfdc from 'rfdc'
 
@@ -8,7 +9,8 @@ import { useInvertibleThemeProvider } from './use.ts'
 
 export const resolveThemeColors = (options: ThemeOptions) => {
   const theme = createTheme(options)
-  return { ...structuredClone(options),
+  const clone = rfdc()
+  return { ...clone(options),
     palette: {
       text: {
         primary: theme.palette?.getContrastText(theme.palette.primary.main),
@@ -18,6 +20,7 @@ export const resolveThemeColors = (options: ThemeOptions) => {
   }
 }
 
+// eslint-disable-next-line complexity
 export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = ({
   options,
   children,
@@ -46,9 +49,9 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
     clonedOptions.palette.mode = dark ? 'dark' : 'light'
   }
 
-  const modeOptions = clonedOptions.palette.mode === 'dark' ? clonedDarkOptions : clonedLightOptions
+  const modeOptions: ThemeOptions = ((clonedOptions.palette.mode === 'dark' ? clonedDarkOptions : clonedLightOptions)) ?? {}
 
-  let themeOptions = { ...clonedOptions, ...modeOptions }
+  let themeOptions: ThemeOptions = deepmerge(clonedOptions, modeOptions)
 
   if (resolve) {
     themeOptions = resolveThemeColors(themeOptions)
