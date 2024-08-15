@@ -12,9 +12,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "@xylabs/lodash": "^4.0.0"
-  },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {
     "@mui/icons-material": "^5.16.7",

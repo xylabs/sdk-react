@@ -1,6 +1,6 @@
 import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
-import { cloneDeep, merge } from '@xylabs/lodash'
 import React, { useMemo } from 'react'
+import rfdc from 'rfdc'
 
 import { InvertibleThemeContext } from './InvertibleThemeContext.tsx'
 import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps.ts'
@@ -8,14 +8,14 @@ import { useInvertibleThemeProvider } from './use.ts'
 
 export const resolveThemeColors = (options: ThemeOptions) => {
   const theme = createTheme(options)
-  return merge({}, cloneDeep(options), {
+  return { ...structuredClone(options),
     palette: {
       text: {
         primary: theme.palette?.getContrastText(theme.palette.primary.main),
         secondary: theme.palette?.getContrastText(theme.palette.secondary.main),
       },
     },
-  })
+  }
 }
 
 export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = ({
@@ -30,10 +30,11 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
   darkOptions,
   lightOptions,
 }) => {
+  const clone = rfdc()
   const parentContext = useInvertibleThemeProvider()
-  const clonedOptions = cloneDeep(options ?? parentContext.options ?? {})
-  const clonedDarkOptions = cloneDeep(darkOptions ?? darkTheme ?? parentContext.darkOptions)
-  const clonedLightOptions = cloneDeep(lightOptions ?? parentContext.lightOptions)
+  const clonedOptions = clone(options ?? parentContext.options ?? {})
+  const clonedDarkOptions = clone(darkOptions ?? darkTheme ?? parentContext.darkOptions)
+  const clonedLightOptions = clone(lightOptions ?? parentContext.lightOptions)
 
   clonedOptions.palette = clonedOptions.palette ?? {}
 
@@ -47,7 +48,7 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
 
   const modeOptions = clonedOptions.palette.mode === 'dark' ? clonedDarkOptions : clonedLightOptions
 
-  let themeOptions = merge({}, clonedOptions, modeOptions)
+  let themeOptions = { ...clonedOptions, ...modeOptions }
 
   if (resolve) {
     themeOptions = resolveThemeColors(themeOptions)

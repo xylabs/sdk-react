@@ -1,5 +1,4 @@
 import { PaletteMode, Select, SelectProps, useTheme } from '@mui/material'
-import { merge } from '@xylabs/lodash'
 import React from 'react'
 
 export type SelectExProps<T> = SelectProps<T> & {
@@ -11,5 +10,5 @@ export const SelectEx: <T>(props: SelectExProps<T>) => React.JSX.Element = ({ Me
   const theme = useTheme()
   const colorizeMenuProps = colorize ? { MenuListProps: { sx: { backgroundColor: theme.palette[colorize][mode] } } } : {}
 
-  return <Select MenuProps={merge(MenuProps, colorizeMenuProps)} {...props} />
+  return <Select MenuProps={{ ...MenuProps, ...colorizeMenuProps }} {...props} />
 }

@@ -13,13 +13,13 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/pixel": "^1.6.0",
+    "@xylabs/pixel": "^2.0.1",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-portal": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
-    "axios": "^1.7.3"
+    "axios": "^1.7.4"
   },
   "description": "Common React library for all XY Labs projects that use React",
   "devDependencies": {

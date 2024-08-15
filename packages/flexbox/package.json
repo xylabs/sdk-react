@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^4.0.0",
+    "@xylabs/delay": "^4.0.1",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-shared": "workspace:^"
   },

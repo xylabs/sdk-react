@@ -4358,7 +4358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:*, @types/lodash@npm:^4.14.167, @types/lodash@npm:^4.17.7":
+"@types/lodash@npm:*, @types/lodash@npm:^4.14.167":
   version: 4.17.7
   resolution: "@types/lodash@npm:4.17.7"
   checksum: 10c0/40c965b5ffdcf7ff5c9105307ee08b782da228c01b5c0529122c554c64f6b7168fc8f11dc79aa7bae4e67e17efafaba685dc3a47e294dbf52a65ed2b67100561
@@ -4878,35 +4878,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/api@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/api@npm:4.0.0"
+"@xylabs/api@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/api@npm:4.0.1"
   dependencies:
-    axios: "npm:^1.7.3"
-  checksum: 10c0/c97a4c9865e12e90e37a1c633622a6334e451840518686a489e2176919700fd69797f8ba6e39efadb6a9582d287c860683cbad4229232c0606cd6c1ca3b04116
+    axios: "npm:^1.7.4"
+  checksum: 10c0/74f3782f118bd29ce0b42613ed67010893b301ffaa0d1ddf979ff8811fda69e63931dc2d28fcb94504bac276e2d0da985f0983eae97d574c430dacefba5d4e38
   languageName: node
   linkType: hard
 
-"@xylabs/assert@npm:^3.5.9":
-  version: 3.6.12
-  resolution: "@xylabs/assert@npm:3.6.12"
-  checksum: 10c0/9579a75a0b5f676f13c7a64c91ace9d8fae490f85063b5f83b390892380ee63b8355964dadec83a78f0dfc62b1aa1c7243a1513c7037c8968881124024093c76
+"@xylabs/assert@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/assert@npm:4.0.1"
+  checksum: 10c0/9a8ad896b205cfdd6a6ab22c5df811584963642aec559bf54f46941a6ec3e65c5a97c4e35029ce2901061a0b5d586c2d77a95b5b1f1fd3b2f3d69347bab135dd
   languageName: node
   linkType: hard
 
-"@xylabs/assert@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/assert@npm:4.0.0"
-  checksum: 10c0/06166deead81a6ffa60502511e97af57b34504cbce587ac8a9ae2ae11210584f4d1eb0ebd0484c9a261cc56b8ea63ff5c1098cda9b6cd5605ce7df6e83d26fdc
-  languageName: node
-  linkType: hard
-
-"@xylabs/delay@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/delay@npm:4.0.0"
+"@xylabs/delay@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/delay@npm:4.0.1"
   dependencies:
-    "@xylabs/timer": "npm:^4.0.0"
-  checksum: 10c0/3ff5e363a49018f0233b60e416c6598379d8892d969c5498ccb3aee7b4b1a6e5e46a76ebae0450e7ef2b6afb5bd68e3a6e4f831309f129224c57db853c0c8aa0
+    "@xylabs/timer": "npm:^4.0.1"
+  checksum: 10c0/140441400eb08322f905250040e885ca9afd2f7ffc08160d88b939bfddb272dd220a1453e3b376a8ccb14851d503720510da047f90da738b78f0c86eb43624c4
   languageName: node
   linkType: hard
 
@@ -4952,87 +4945,66 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/eth-address@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/eth-address@npm:4.0.0"
+"@xylabs/eth-address@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/eth-address@npm:4.0.1"
   dependencies:
-    "@xylabs/assert": "npm:^4.0.0"
+    "@xylabs/assert": "npm:^4.0.1"
     ethers: "npm:^6.13.2"
-  checksum: 10c0/82d7aa3d154ba69c4dedb952af4ebd280a5769c21240889787545ca6bc0b79ecfc9c890ccf6961edef6d79526a5fb3abba6e79415812a5fd2541acc3fce1a513
+  checksum: 10c0/60c3f821208b25225fd537c21ecfb4291ca907e5b0a3648dacc90642f1f99c07ff955420fea76877b32cb183072bc6a841b0ac950e57a3dd28d63adf293c5894
   languageName: node
   linkType: hard
 
-"@xylabs/forget@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/forget@npm:4.0.0"
+"@xylabs/forget@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/forget@npm:4.0.1"
   dependencies:
-    "@xylabs/delay": "npm:^4.0.0"
-  checksum: 10c0/88f64de5033f5451de4499c0dbdc781a806ccbe48084a61e40fcffedc60afd4fc368b0081a73bb972c504d48248848652652c9a3898cee90704882a7df156aca
-  languageName: node
-  linkType: hard
-
-"@xylabs/lodash@npm:^3.5.9, @xylabs/lodash@npm:^3.6.12":
-  version: 3.6.12
-  resolution: "@xylabs/lodash@npm:3.6.12"
-  dependencies:
-    "@types/lodash": "npm:^4.17.7"
-    "@types/lodash-es": "npm:^4.17.12"
-  peerDependencies:
-    lodash: ^4.17.21
-    lodash-es: ^4.17.21
-  peerDependenciesMeta:
-    lodash:
-      optional: true
-    lodash-es:
-      optional: true
-  checksum: 10c0/121869c87f5ead7c8a939c44554e856898e7553dd7d37f0889f7ba967851113e4567dd0831003305bda1a4a0e2323455d45235db4d16066010d64c001469dfb0
+    "@xylabs/delay": "npm:^4.0.1"
+  checksum: 10c0/1bf7e34b6c08a4773dd2ef408271f179533db8a038474db12b6c66a6581bdcf450619dfc0f36e2ab5d72363647d8b4b91e35341ab36dddb3d58bb50224373874
   languageName: node
   linkType: hard
 
 "@xylabs/lodash@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/lodash@npm:4.0.0"
+  version: 4.0.1
+  resolution: "@xylabs/lodash@npm:4.0.1"
   dependencies:
     "@types/lodash-es": "npm:^4.17.12"
     lodash-es: "npm:^4.17.21"
-  checksum: 10c0/41bbe0797c5a721dc5034b5895add6b7c2dafd7eda74cd1c4b2f33ce673a2162c7f8d01e8425a21ca30667818c20ead6552709d4e997a3e3359044d13c82c7b5
+  checksum: 10c0/fd6f5dc875fd17cf183c31d5ec2b67d6eecd22c4f8256789aa5ce4981a19465886fc09f0fd9019b5bfd5cd4e7bfd28afbdf19e895f602e6fc9216fd5d763bb52
   languageName: node
   linkType: hard
 
-"@xylabs/log@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/log@npm:4.0.0"
+"@xylabs/log@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/log@npm:4.0.1"
   peerDependencies:
     rollbar: ^2.26.4
   peerDependenciesMeta:
     rollbar:
       optional: true
-  checksum: 10c0/848d41ad41b9086ac81c741b48b75d9f21a623dcdc772ab5947af3bba73cf5ef403c5161ae837e4a6e5bd29b13d9f41f9059bef1931e476857cb776612b04be7
+  checksum: 10c0/58c3d003eaebc52756b2944ecbce982390a66a7db6edff1317eff350fd7b3c92648ea1eceeadb3173407bf26d453fb4d95d47f576c147f277289f938744839c7
   languageName: node
   linkType: hard
 
-"@xylabs/pixel@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@xylabs/pixel@npm:1.6.0"
+"@xylabs/pixel@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@xylabs/pixel@npm:2.0.1"
   dependencies:
-    "@xylabs/assert": "npm:^3.5.9"
-    "@xylabs/lodash": "npm:^3.5.9"
+    "@xylabs/assert": "npm:^4.0.1"
     async-mutex: "npm:^0.5.0"
+    axios: "npm:^1.7.4"
     bowser: "npm:^2.11.0"
+    fast-deep-equal: "npm:^3.1.3"
     js-cookie: "npm:^3.0.5"
-    lodash-es: "npm:^4.17.21"
-    md5: "npm:^2.3.0"
-    randombytes: "npm:^2.1.0"
-  peerDependencies:
-    axios: ^1.2
-  checksum: 10c0/61fae3803d268bcbea633b92f1ab43af61759a4693996820dec5ad10153baa4af9903113a097cdfaca90a79d4e24512d3c212bc02e14f7d0732792a0cf63b6f1
+    spark-md5: "npm:^3.0.2"
+  checksum: 10c0/021bea1f99c4ddcbd1c1dc1d032080675de698e45643cc68b1cdec9c5b42229b8eb75af0f68625ed656e2d58ad48cedf69e2a7c6d20ae74990ef65bcccaf8662
   languageName: node
   linkType: hard
 
-"@xylabs/promise@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/promise@npm:4.0.0"
-  checksum: 10c0/2e856bfe713a4c89a29e9c0c3464b55520aeec07c411f621f951db2f34ffbf700118c57d4ae91d9c5fbf0856b354d0c9aabd8de8571e27d440eeab8060ff262d
+"@xylabs/promise@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/promise@npm:4.0.1"
+  checksum: 10c0/07a149e275a00efcd0a6c8ec627db38a6c1c2eef256ec7e9500d8988ba6f87fd1e0e120c90688dc616ce72400631d68e1bfccb74e81f39ce2e7e6564353e64fc
   languageName: node
   linkType: hard
 
@@ -5164,7 +5136,7 @@ __metadata:
   dependencies:
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/assert": "npm:^4.0.0"
+    "@xylabs/assert": "npm:^4.0.1"
     "@xylabs/react-base-page": "workspace:^"
     "@xylabs/react-error": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -5214,10 +5186,10 @@ __metadata:
     "@mui/material": "npm:^5.16.7"
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/assert": "npm:^4.0.0"
-    "@xylabs/eth-address": "npm:^4.0.0"
-    "@xylabs/forget": "npm:^4.0.0"
-    "@xylabs/promise": "npm:^4.0.0"
+    "@xylabs/assert": "npm:^4.0.1"
+    "@xylabs/eth-address": "npm:^4.0.1"
+    "@xylabs/forget": "npm:^4.0.1"
+    "@xylabs/promise": "npm:^4.0.1"
     "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -5251,7 +5223,7 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
-    axios: "npm:^1.7.3"
+    axios: "npm:^1.7.4"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
@@ -5289,15 +5261,15 @@ __metadata:
   dependencies:
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/forget": "npm:^4.0.0"
-    "@xylabs/log": "npm:^4.0.0"
-    "@xylabs/pixel": "npm:^1.6.0"
+    "@xylabs/forget": "npm:^4.0.1"
+    "@xylabs/log": "npm:^4.0.1"
+    "@xylabs/pixel": "npm:^2.0.1"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
-    axios: "npm:^1.7.3"
+    axios: "npm:^1.7.4"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
@@ -5314,7 +5286,7 @@ __metadata:
   dependencies:
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/delay": "npm:^4.0.0"
+    "@xylabs/delay": "npm:^4.0.1"
     "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
@@ -5356,13 +5328,13 @@ __metadata:
     "@mui/material": "npm:^5.16.7"
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/lodash": "npm:^4.0.0"
     "@xylabs/react-animation": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    rfdc: "npm:^1.4.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
     "@mui/icons-material": ^5
@@ -5419,7 +5391,7 @@ __metadata:
   dependencies:
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/pixel": "npm:^1.6.0"
+    "@xylabs/pixel": "npm:^2.0.1"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
@@ -5427,7 +5399,7 @@ __metadata:
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
-    axios: "npm:^1.7.3"
+    axios: "npm:^1.7.4"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
@@ -5443,12 +5415,12 @@ __metadata:
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
     "@types/react": "npm:^18.3.3"
-    "@xylabs/assert": "npm:^4.0.0"
-    "@xylabs/delay": "npm:^4.0.0"
-    "@xylabs/pixel": "npm:^1.6.0"
+    "@xylabs/assert": "npm:^4.0.1"
+    "@xylabs/delay": "npm:^4.0.1"
+    "@xylabs/pixel": "npm:^2.0.1"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
-    axios: "npm:^1.7.3"
+    axios: "npm:^1.7.4"
     query-string: "npm:^9.1.0"
     react: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
@@ -5481,7 +5453,7 @@ __metadata:
     "@mui/material": "npm:^5.16.7"
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/delay": "npm:^4.0.0"
+    "@xylabs/delay": "npm:^4.0.1"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
     async-mutex: "npm:^0.5.0"
@@ -5569,7 +5541,6 @@ __metadata:
     "@mui/icons-material": "npm:^5.16.7"
     "@mui/material": "npm:^5.16.7"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/lodash": "npm:^4.0.0"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
     react: "npm:^18.3.1"
@@ -5588,8 +5559,8 @@ __metadata:
     "@mui/material": "npm:^5.16.7"
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.3"
-    "@xylabs/api": "npm:^4.0.0"
-    "@xylabs/log": "npm:^4.0.0"
+    "@xylabs/api": "npm:^4.0.1"
+    "@xylabs/log": "npm:^4.0.1"
     "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
@@ -5636,7 +5607,7 @@ __metadata:
     "@stylistic/eslint-plugin": "npm:^2.6.2"
     "@typescript-eslint/eslint-plugin": "npm:^8.1.0"
     "@xylabs/eslint-config-react-flat": "npm:^4.0.0-rc.15"
-    "@xylabs/pixel": "npm:^1.6.0"
+    "@xylabs/pixel": "npm:^2.0.1"
     "@xylabs/react-accordion": "workspace:^"
     "@xylabs/react-animation": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"
@@ -5663,8 +5634,8 @@ __metadata:
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig": "npm:^4.0.0-rc.15"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.15"
-    "@xyo-network/react-theme": "npm:^2.83.2"
-    axios: "npm:^1.7.3"
+    "@xyo-network/react-theme": "npm:^3.0.0"
+    axios: "npm:^1.7.4"
     babel-loader: "npm:^9.1.3"
     buffer: "npm:^6.0.3"
     eslint: "npm:^9.9.0"
@@ -5679,7 +5650,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     remark-gfm: "npm:^4.0.0"
-    rimraf: "npm:^5.0.10"
+    rimraf: "npm:^6.0.1"
     storybook: "npm:^8.2.9"
     storybook-dark-mode: "npm:^4.0.2"
     ts-loader: "npm:^9.5.1"
@@ -5696,12 +5667,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/timer@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@xylabs/timer@npm:4.0.0"
+"@xylabs/timer@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@xylabs/timer@npm:4.0.1"
   dependencies:
-    "@xylabs/assert": "npm:^4.0.0"
-  checksum: 10c0/9c3f46ab1d8684702f8cf4d0d3b2c994a97b4beaa806d73a6002a0789d1e98e8978aad19e6a0efe4685e020d687a19a0776ac2679a28657b355befede106454b
+    "@xylabs/assert": "npm:^4.0.1"
+  checksum: 10c0/1ff8aa118ea3a049d578a123253329e9c11aeb43da204f622a627858046476e3e29033f5437fe5d9300bc904f044a662db755fe4ddddbca6524bba332eca9c31
   languageName: node
   linkType: hard
 
@@ -5829,16 +5800,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xyo-network/react-theme@npm:^2.83.2":
-  version: 2.83.2
-  resolution: "@xyo-network/react-theme@npm:2.83.2"
+"@xyo-network/react-theme@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@xyo-network/react-theme@npm:3.0.0"
   dependencies:
-    "@xylabs/lodash": "npm:^3.6.12"
+    "@xylabs/lodash": "npm:^4.0.0"
   peerDependencies:
     "@mui/material": ^5
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/cdabfcaf0e860506a85a2577c47f65f4b526dc041a2b90eed1d388283b81f44870174b868cca1513af002333c769d7fbb21400cecca9a19d6243e3805c0a80e3
+  checksum: 10c0/26031a756b2185b03000bee99723f45be786cd267df8ef94a9edcf8210cbde057ad5975de6c02e510109cb3457f1f8136fab9348df9158cb95d93eb325bb4f77
   languageName: node
   linkType: hard
 
@@ -6357,14 +6328,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.7.3":
-  version: 1.7.3
-  resolution: "axios@npm:1.7.3"
+"axios@npm:^1.7.4":
+  version: 1.7.4
+  resolution: "axios@npm:1.7.4"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/a18cbe559203efa05fb1fec2d1898e23bf6329bd2575784ee32aa11b5bbe1d54b9f472c49a261294125519cf62aa4fe5ef6e647bb7482eafc15bffe15ab314ce
+  checksum: 10c0/5ea1a93140ca1d49db25ef8e1bd8cfc59da6f9220159a944168860ad15a2743ea21c5df2967795acb15cbe81362f5b157fdebbea39d53117ca27658bab9f7f17
   languageName: node
   linkType: hard
 
@@ -6586,10 +6557,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bowser@npm:^1":
-  version: 1.9.4
-  resolution: "bowser@npm:1.9.4"
-  checksum: 10c0/72504ebb20eed2143ed22715e13bd48d51bde31de113beb500bd17e86009a28cd6b32436b5e001e4c7cdf89c8c06249275cc219ce82c1be28558b32ae61472a1
+"bowser@npm:^2":
+  version: 2.11.0
+  resolution: "bowser@npm:2.11.0"
+  checksum: 10c0/04efeecc7927a9ec33c667fa0965dea19f4ac60b3fea60793c2e6cf06c1dcd2f7ae1dbc656f450c5f50783b1c75cf9dc173ba6f3b7db2feee01f8c4b793e1bd3
   languageName: node
   linkType: hard
 
@@ -9736,7 +9707,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7, glob@npm:^10.4.1":
+"glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.4.1":
   version: 10.4.5
   resolution: "glob@npm:10.4.5"
   dependencies:
@@ -14054,15 +14025,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"randombytes@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "randombytes@npm:2.1.0"
-  dependencies:
-    safe-buffer: "npm:^5.1.0"
-  checksum: 10c0/50395efda7a8c94f5dffab564f9ff89736064d32addf0cc7e8bf5e4166f09f8ded7a0849ca6c2d2a59478f7d90f78f20d8048bca3cdf8be09d8e8a10790388f3
-  languageName: node
-  linkType: hard
-
 "range-parser@npm:~1.2.1":
   version: 1.2.1
   resolution: "range-parser@npm:1.2.1"
@@ -15379,6 +15341,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rfdc@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "rfdc@npm:1.4.1"
+  checksum: 10c0/4614e4292356cafade0b6031527eea9bc90f2372a22c012313be1dcc69a3b90c7338158b414539be863fa95bfcb2ddcd0587be696841af4e6679d85e62c060c7
+  languageName: node
+  linkType: hard
+
 "rimraf@npm:2.6.3, rimraf@npm:~2.6.2":
   version: 2.6.3
   resolution: "rimraf@npm:2.6.3"
@@ -15390,14 +15359,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rimraf@npm:^5.0.10":
-  version: 5.0.10
-  resolution: "rimraf@npm:5.0.10"
+"rimraf@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "rimraf@npm:6.0.1"
   dependencies:
-    glob: "npm:^10.3.7"
+    glob: "npm:^11.0.0"
+    package-json-from-dist: "npm:^1.0.0"
   bin:
     rimraf: dist/esm/bin.mjs
-  checksum: 10c0/7da4fd0e15118ee05b918359462cfa1e7fe4b1228c7765195a45b55576e8c15b95db513b8466ec89129666f4af45ad978a3057a02139afba1a63512a2d9644cc
+  checksum: 10c0/b30b6b072771f0d1e73b4ca5f37bb2944ee09375be9db5f558fcd3310000d29dfcfa93cf7734d75295ad5a7486dc8e40f63089ced1722a664539ffc0c3ece8c6
   languageName: node
   linkType: hard
 
@@ -15528,7 +15498,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:5.2.1, safe-buffer@npm:^5.1.0, safe-buffer@npm:~5.2.0":
+"safe-buffer@npm:5.2.1, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: 10c0/6501914237c0a86e9675d4e51d89ca3c21ffd6a31642efeba25ad65720bce6921c9e7e974e5be91a786b25aa058b5303285d3c15dbabf983a919f5f630d349f3
@@ -15896,6 +15866,13 @@ __metadata:
   version: 2.0.2
   resolution: "space-separated-tokens@npm:2.0.2"
   checksum: 10c0/6173e1d903dca41dcab6a2deed8b4caf61bd13b6d7af8374713500570aa929ff9414ae09a0519f4f8772df993300305a395d4871f35bc4ca72b6db57e1f30af8
+  languageName: node
+  linkType: hard
+
+"spark-md5@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "spark-md5@npm:3.0.2"
+  checksum: 10c0/3fd11735eac5e7d60d6006d99ac0a055f148a89e9baf5f0b51ac103022dec30556b44190b37f6737ca50f81e8e50dc13e724f9edf6290c412ff5ab2101ce7780
   languageName: node
   linkType: hard
 
