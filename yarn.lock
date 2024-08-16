@@ -5100,6 +5100,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-crypto@workspace:packages/crypto"
   dependencies:
+    "@emotion/react": "npm:^11.13.0"
+    "@emotion/styled": "npm:^11.13.0"
     "@metamask/providers": "npm:^17.1.2"
     "@mui/icons-material": "npm:^5.16.7"
     "@mui/material": "npm:^5.16.7"
@@ -5163,6 +5165,7 @@ __metadata:
     "@mui/icons-material": "npm:^5.16.7"
     "@mui/material": "npm:^5.16.7"
     "@storybook/react": "npm:^8.2.9"
+    "@types/react": "npm:^18.3.3"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.0-rc.20"
     "@xylabs/tsconfig-react": "npm:^4.0.0-rc.20"
