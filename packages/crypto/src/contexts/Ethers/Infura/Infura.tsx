@@ -1,5 +1,7 @@
-import { BrowserProvider, InfuraProvider } from 'ethers'
-import React, { PropsWithChildren, useMemo } from 'react'
+import type { BrowserProvider } from 'ethers'
+import { InfuraProvider } from 'ethers'
+import type { PropsWithChildren } from 'react'
+import React, { useMemo } from 'react'
 
 import { EthersContext } from '../Context.ts'
 

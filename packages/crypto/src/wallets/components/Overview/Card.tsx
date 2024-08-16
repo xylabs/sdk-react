@@ -1,8 +1,10 @@
-import { Card, CardProps } from '@mui/material'
+import type { CardProps } from '@mui/material'
+import { Card } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import React, { useEffect, useState } from 'react'
 
-import { EIP6963Connector, useEthWallet } from '../../third-party/index.ts'
+import type { EIP6963Connector } from '../../third-party/index.ts'
+import { useEthWallet } from '../../third-party/index.ts'
 import { WalletOverviewCardActions } from './CardActions.tsx'
 import { WalletOverviewCardContent } from './CardContent.tsx'
 import { WalletOverviewCardHeader } from './CardHeader.tsx'

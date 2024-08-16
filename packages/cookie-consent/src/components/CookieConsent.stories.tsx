@@ -1,11 +1,11 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 
 import { CookieConsentLoader, useCookieConsent } from '../contexts/index.ts'
 import { CookieConsent } from './CookieConsent.tsx'
-import { CookieConsentProps } from './CookieConsentProps.tsx'
+import type { CookieConsentProps } from './CookieConsentProps.tsx'
 
 const Inner: React.FC<CookieConsentProps> = (args) => {
   const { clearAccepted } = useCookieConsent()

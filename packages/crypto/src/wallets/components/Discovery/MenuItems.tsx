@@ -1,8 +1,9 @@
-import { Alert, MenuItemProps } from '@mui/material'
+import type { MenuItemProps } from '@mui/material'
+import { Alert } from '@mui/material'
 import React from 'react'
 
-import { DiscoveredWallets } from '../../third-party/index.ts'
-import { onWalletSelect } from './lib/index.ts'
+import type { DiscoveredWallets } from '../../third-party/index.ts'
+import type { onWalletSelect } from './lib/index.ts'
 import { WalletDiscoveryMenuItem } from './MenuItem.tsx'
 
 export interface WalletsDiscoveredMenuItemsProps extends MenuItemProps {

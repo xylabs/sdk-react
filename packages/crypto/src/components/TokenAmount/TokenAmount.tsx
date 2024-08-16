@@ -6,7 +6,7 @@ import React from 'react'
 
 // eslint-disable-next-line import-x/no-internal-modules
 import xyoLogo from './img/xyo.svg'
-import { TokenAmountProps } from './TokenAmountProps.tsx'
+import type { TokenAmountProps } from './TokenAmountProps.tsx'
 
 const placesSplit = (value: bigint, places: number): [bigint, bigint] => {
   assertEx(places >= 0, () => 'Places has to be >= 0')

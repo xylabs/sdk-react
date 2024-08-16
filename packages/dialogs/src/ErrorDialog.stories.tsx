@@ -1,7 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
-import { ErrorDialog, ErrorDialogProps } from './ErrorDialog.tsx'
+import type { ErrorDialogProps } from './ErrorDialog.tsx'
+import { ErrorDialog } from './ErrorDialog.tsx'
 
 const StorybookEntry = {
   argTypes: {},

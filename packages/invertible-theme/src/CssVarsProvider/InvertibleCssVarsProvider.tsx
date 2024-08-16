@@ -1,9 +1,10 @@
 import { Experimental_CssVarsProvider as CssVarsProvider, responsiveFontSizes, useColorScheme } from '@mui/material'
 // eslint-disable-next-line import-x/no-internal-modules
 import type {} from '@mui/material/themeCssVarsAugmentation'
-import React, { ReactNode, useEffect } from 'react'
+import type { ReactNode } from 'react'
+import React, { useEffect } from 'react'
 
-import { InvertibleCssVarsProviderInterface, Mode } from './InvertibleCssVars.ts'
+import type { InvertibleCssVarsProviderInterface, Mode } from './InvertibleCssVars.ts'
 
 export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   const { setMode } = useColorScheme()

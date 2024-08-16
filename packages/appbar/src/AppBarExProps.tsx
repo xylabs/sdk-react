@@ -1,5 +1,5 @@
-import { AppBarProps, ToolbarProps } from '@mui/material'
-import { ReactElement } from 'react'
+import type { AppBarProps, ToolbarProps } from '@mui/material'
+import type { ReactElement } from 'react'
 
 interface AppBarExProps extends AppBarProps {
   container?: 'xl' | 'lg' | 'md' | 'sm' | 'xs'

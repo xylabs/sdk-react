@@ -1,10 +1,10 @@
-import { Action } from './Action.ts'
-import { Base } from './Base.ts'
-import { CreativeWork } from './CreativeWork.ts'
-import { ImageObject } from './ImageObject.ts'
-import { PropertyValue } from './PropertyValue.ts'
-import { Text } from './Text.ts'
-import { URL } from './URL.ts'
+import type { Action } from './Action.ts'
+import type { Base } from './Base.ts'
+import type { CreativeWork } from './CreativeWork.ts'
+import type { ImageObject } from './ImageObject.ts'
+import type { PropertyValue } from './PropertyValue.ts'
+import type { Text } from './Text.ts'
+import type { URL } from './URL.ts'
 
 interface Thing extends Base {
   additionalType?: URL

@@ -1,7 +1,9 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
-import { BrowserProvider, InfuraProvider, JsonRpcSigner } from 'ethers'
-import React, { PropsWithChildren, useMemo, useState } from 'react'
+import type { JsonRpcSigner } from 'ethers'
+import { BrowserProvider, InfuraProvider } from 'ethers'
+import type { PropsWithChildren } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import { EthersContext } from './Context.ts'
 import { infuraKey } from './Infura/index.ts'

@@ -1,7 +1,9 @@
 import { ExpandMoreRounded } from '@mui/icons-material'
-import { Accordion, AccordionDetails, AccordionProps, AccordionSummary, Typography, useMediaQuery, useTheme } from '@mui/material'
+import type { AccordionProps } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
-import React, { ReactNode, useState } from 'react'
+import type { ReactNode } from 'react'
+import React, { useState } from 'react'
 
 type Override<T1, T2> = Omit<T1, keyof T2> & T2
 

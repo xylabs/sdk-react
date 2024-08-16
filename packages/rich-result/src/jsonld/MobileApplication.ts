@@ -1,5 +1,5 @@
-import { SoftwareApplication } from './SoftwareApplication.ts'
-import { Text } from './Text.ts'
+import type { SoftwareApplication } from './SoftwareApplication.ts'
+import type { Text } from './Text.ts'
 
 interface MobileApplication extends SoftwareApplication {
   carrierRequirements?: Text

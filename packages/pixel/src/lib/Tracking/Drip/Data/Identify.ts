@@ -1,6 +1,6 @@
-import { DripBaseData } from './Base.ts'
-import { DripCustomFieldsData } from './CustomFields.ts'
-import { DripStandardFieldsData } from './StandardFields.ts'
+import type { DripBaseData } from './Base.ts'
+import type { DripCustomFieldsData } from './CustomFields.ts'
+import type { DripStandardFieldsData } from './StandardFields.ts'
 
 interface DripIdentifyData extends DripBaseData, DripStandardFieldsData, DripCustomFieldsData {
   email: string

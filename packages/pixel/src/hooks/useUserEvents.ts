@@ -1,4 +1,4 @@
-import { UserEventHandler } from '@xylabs/pixel'
+import type { UserEventHandler } from '@xylabs/pixel'
 import { useContext } from 'react'
 
 import { UserEventsContext } from '../contexts/index.ts'

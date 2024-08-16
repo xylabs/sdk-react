@@ -1,4 +1,4 @@
-import { Listener } from 'ethers'
+import type { Listener } from 'ethers'
 
 export type EIP1193EventNames = 'connect' | 'disconnect' | 'accountsChanged' | 'chainChanged'
 

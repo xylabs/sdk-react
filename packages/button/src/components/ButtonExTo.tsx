@@ -1,8 +1,9 @@
-import React, { forwardRef, MouseEvent } from 'react'
+import type { MouseEvent } from 'react'
+import React, { forwardRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { ButtonExBase } from './ButtonExBase.tsx'
-import { ButtonExProps } from './ButtonExProps.tsx'
+import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonToEx = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, toOptions, onClick, ...props }, ref) => {
   const navigate = useNavigate()

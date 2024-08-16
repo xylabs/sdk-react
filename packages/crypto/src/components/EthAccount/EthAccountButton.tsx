@@ -1,11 +1,13 @@
 import { useTheme } from '@mui/material'
-import { ButtonEx, ButtonExProps } from '@xylabs/react-button'
+import type { ButtonExProps } from '@xylabs/react-button'
+import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
-import React, { MouseEvent } from 'react'
+import type { MouseEvent } from 'react'
+import React from 'react'
 
 import { EthAccountBox } from './EthAccountBox.tsx'
-import { EthAccountProps } from './EthAccountProps.tsx'
+import type { EthAccountProps } from './EthAccountProps.tsx'
 
 export interface EthAccountButtonProps extends EthAccountProps {
   toEtherScan?: boolean

@@ -1,4 +1,4 @@
-import { CreativeWork } from './CreativeWork.ts'
+import type { CreativeWork } from './CreativeWork.ts'
 
 type Photograph = CreativeWork
 

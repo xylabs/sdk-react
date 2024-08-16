@@ -7,7 +7,7 @@ import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
-import { BasePageProps } from './BasePageProps.ts'
+import type { BasePageProps } from './BasePageProps.ts'
 
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,

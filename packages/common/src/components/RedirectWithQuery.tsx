@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import { NavigateOptions, To, useLocation, useNavigate } from 'react-router-dom'
+import type { NavigateOptions, To } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export interface RedirectWithQueryProps {
   href?: string

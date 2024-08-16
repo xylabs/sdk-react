@@ -1,4 +1,5 @@
-import { RenderSpinCheckBounce, RenderSpinCheckConfig, useRenderSpinCheck } from '../hooks/index.ts'
+import type { RenderSpinCheckBounce, RenderSpinCheckConfig } from '../hooks/index.ts'
+import { useRenderSpinCheck } from '../hooks/index.ts'
 
 export type RenderSpinCheckProps = {
   bounce: RenderSpinCheckBounce

@@ -1,4 +1,4 @@
-import { AdministrativeArea } from './AdministrativeArea.ts'
+import type { AdministrativeArea } from './AdministrativeArea.ts'
 
 type Country = AdministrativeArea
 

@@ -1,8 +1,9 @@
 import { CardContent, CardHeader } from '@mui/material'
-import { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import React from 'react'
 
-import { BusyCard, BusyCardProps } from './BusyCard.tsx'
+import type { BusyCardProps } from './BusyCard.tsx'
+import { BusyCard } from './BusyCard.tsx'
 
 export default {
   component: BusyCard,

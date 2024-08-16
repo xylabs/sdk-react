@@ -1,7 +1,7 @@
-import { AggregateRating } from './AggregateRating.ts'
-import { ImageObject } from './ImageObject.ts'
-import { Intangible } from './Intangible.ts'
-import { Review } from './Review.ts'
+import type { AggregateRating } from './AggregateRating.ts'
+import type { ImageObject } from './ImageObject.ts'
+import type { Intangible } from './Intangible.ts'
+import type { Review } from './Review.ts'
 
 export interface Brand extends Intangible {
   aggregateRating?: AggregateRating

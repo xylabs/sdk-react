@@ -1,7 +1,7 @@
-import { Country } from './Country.ts'
-import { PostalAddress } from './PostalAddress.ts'
-import { Text } from './Text.ts'
-import { Thing } from './Thing.ts'
+import type { Country } from './Country.ts'
+import type { PostalAddress } from './PostalAddress.ts'
+import type { Text } from './Text.ts'
+import type { Thing } from './Thing.ts'
 
 interface GeoShape extends Thing {
   address?: PostalAddress | Text

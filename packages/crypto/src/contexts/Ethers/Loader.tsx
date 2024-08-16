@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import React from 'react'
 
 import { InfuraEthersLoader } from './Infura/index.ts'
 import { MetaMaskEthersLoader } from './MetaMask.tsx'

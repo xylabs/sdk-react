@@ -1,8 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { ErrorsViewer } from './ErrorsViewer.tsx'
-import { ErrorsViewerProps } from './ErrorsViewerProps.ts'
+import type { ErrorsViewerProps } from './ErrorsViewerProps.ts'
 
 const StorybookEntry = {
   argTypes: {},

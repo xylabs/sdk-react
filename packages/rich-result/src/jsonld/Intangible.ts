@@ -1,4 +1,4 @@
-import { Thing } from './Thing.ts'
+import type { Thing } from './Thing.ts'
 
 type Intangible = Thing
 

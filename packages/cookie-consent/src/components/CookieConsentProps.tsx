@@ -1,4 +1,4 @@
-import { FlexBoxProps } from '@xylabs/react-flexbox'
+import type { FlexBoxProps } from '@xylabs/react-flexbox'
 
 export interface CookieConsentProps extends FlexBoxProps {
   acceptOnScroll?: boolean

@@ -1,6 +1,6 @@
-import { CreativeWork } from './CreativeWork.ts'
-import { Rating } from './Rating.ts'
-import { Thing } from './Thing.ts'
+import type { CreativeWork } from './CreativeWork.ts'
+import type { Rating } from './Rating.ts'
+import type { Thing } from './Thing.ts'
 
 interface Review extends CreativeWork {
   itemReviewed?: Thing

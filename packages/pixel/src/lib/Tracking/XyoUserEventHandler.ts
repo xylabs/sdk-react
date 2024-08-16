@@ -1,4 +1,5 @@
-import { FunnelStartedFields, TestStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
+import type { FunnelStartedFields, TestStartedFields, UserClickFields, ViewContentFields } from '@xylabs/pixel'
+import { UserEventHandler } from '@xylabs/pixel'
 
 import { FacebookUserEventHandler } from './Facebook/index.ts'
 import { GoogleUserEventHandler } from './Google/index.ts'

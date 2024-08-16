@@ -1,4 +1,4 @@
-import { BoxProps, Theme } from '@mui/material'
+import type { BoxProps, Theme } from '@mui/material'
 
 export const calcSpacing = (theme: Theme, values: BoxProps['margin'][]) => {
   for (const value of values) {

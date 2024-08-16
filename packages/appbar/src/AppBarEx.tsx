@@ -2,7 +2,7 @@ import { AppBar, Container, Toolbar, useMediaQuery, useTheme } from '@mui/materi
 import { FlexGrowRow, FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 
-import { AppBarExProps } from './AppBarExProps.tsx'
+import type { AppBarExProps } from './AppBarExProps.tsx'
 
 const AppBarExInner: React.FC<AppBarExProps> = ({ children, menu, contextToolbar, systemToolbar, responsive, ...props }) => {
   const { breakpoints } = useTheme()

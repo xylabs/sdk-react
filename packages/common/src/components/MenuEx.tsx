@@ -1,4 +1,5 @@
-import { Menu, MenuProps, PaletteMode, useTheme } from '@mui/material'
+import type { MenuProps, PaletteMode } from '@mui/material'
+import { Menu, useTheme } from '@mui/material'
 import React from 'react'
 
 export interface MenuExProps extends MenuProps {

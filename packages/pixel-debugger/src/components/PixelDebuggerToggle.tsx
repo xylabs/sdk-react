@@ -1,5 +1,6 @@
 import { FormControl, FormLabel, Switch } from '@mui/material'
-import { BusyBoxProps, FlexRow } from '@xylabs/react-flexbox'
+import type { BusyBoxProps } from '@xylabs/react-flexbox'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { DebugUserEventsContext } from '@xylabs/react-pixel'
 import React, { useContext } from 'react'
 

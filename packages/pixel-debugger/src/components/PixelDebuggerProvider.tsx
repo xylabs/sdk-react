@@ -1,5 +1,6 @@
 import { DebugUserEventsContext } from '@xylabs/react-pixel'
-import { useLocalStorage, WithChildren } from '@xylabs/react-shared'
+import type { WithChildren } from '@xylabs/react-shared'
+import { useLocalStorage } from '@xylabs/react-shared'
 import React, { useMemo } from 'react'
 
 export const PixelDebuggerProvider: React.FC<WithChildren> = ({ children }) => {

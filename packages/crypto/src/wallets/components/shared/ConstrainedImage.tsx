@@ -1,4 +1,5 @@
-import React, { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
+import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
+import React from 'react'
 
 export interface ConstrainedImageProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> {
   /** use a CSS Height or Width value i.e. '42px' */

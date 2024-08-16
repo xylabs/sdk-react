@@ -6,7 +6,7 @@ import { Portal } from '@xylabs/react-portal'
 import React, { useContext, useState } from 'react'
 
 import { usePixelAltSendHandler } from '../hooks/index.ts'
-import { PixelEvent } from '../PixelEvent.ts'
+import type { PixelEvent } from '../PixelEvent.ts'
 
 export const PixelDebugger: React.FC = () => {
   const { isDebugging } = useContext(DebugUserEventsContext)

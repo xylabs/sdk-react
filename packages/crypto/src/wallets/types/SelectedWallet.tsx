@@ -1,6 +1,6 @@
-import { BrowserProvider, Eip1193Provider } from 'ethers'
+import type { BrowserProvider, Eip1193Provider } from 'ethers'
 
-import { EIP6963ProviderInfo } from '../lib/index.ts'
+import type { EIP6963ProviderInfo } from '../lib/index.ts'
 
 export interface SelectedWallet {
   info: EIP6963ProviderInfo

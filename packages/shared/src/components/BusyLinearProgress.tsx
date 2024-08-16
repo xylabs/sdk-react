@@ -1,4 +1,5 @@
-import { alpha, Box, LinearProgress, LinearProgressProps, useTheme } from '@mui/material'
+import type { LinearProgressProps } from '@mui/material'
+import { alpha, Box, LinearProgress, useTheme } from '@mui/material'
 import React from 'react'
 
 export interface BusyLinearProgressProps extends LinearProgressProps {

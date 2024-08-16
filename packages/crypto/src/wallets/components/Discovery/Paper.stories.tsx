@@ -1,13 +1,14 @@
 import { Alert, AlertTitle, List, ListItem, Snackbar } from '@mui/material'
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect, useState } from 'react'
 
 import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
-import { EIP6963Connector } from '../../third-party/index.ts'
+import type { EIP6963Connector } from '../../third-party/index.ts'
 import { WalletOverviewCard } from '../Overview/index.ts'
-import { onWalletSelect } from './lib/index.ts'
-import { WalletDiscoveryPaper, WalletDiscoveryPaperProps } from './Paper.tsx'
+import type { onWalletSelect } from './lib/index.ts'
+import type { WalletDiscoveryPaperProps } from './Paper.tsx'
+import { WalletDiscoveryPaper } from './Paper.tsx'
 
 const StorybookEntry = {
   args: {

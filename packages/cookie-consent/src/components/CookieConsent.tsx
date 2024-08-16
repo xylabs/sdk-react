@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CookieConsentLoader, useCookieConsent } from '../contexts/index.ts'
 import { CookieConsentBody } from './CookieConsentBody.tsx'
-import { CookieConsentProps } from './CookieConsentProps.tsx'
+import type { CookieConsentProps } from './CookieConsentProps.tsx'
 
 export const CookieConsent: React.FC<CookieConsentProps> = (props) => {
   const { storageName } = useCookieConsent()

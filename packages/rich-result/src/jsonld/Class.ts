@@ -1,6 +1,6 @@
-import { Enumeration } from './Enumeration.ts'
-import { Intangible } from './Intangible.ts'
-import { Property } from './Property.ts'
+import type { Enumeration } from './Enumeration.ts'
+import type { Intangible } from './Intangible.ts'
+import type { Property } from './Property.ts'
 
 interface Class extends Intangible {
   supersededBy?: Class | Enumeration | Property

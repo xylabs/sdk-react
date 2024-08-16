@@ -1,4 +1,5 @@
-import { Box, useScrollTrigger, useTheme, Zoom, ZoomProps } from '@mui/material'
+import type { ZoomProps } from '@mui/material'
+import { Box, useScrollTrigger, useTheme, Zoom } from '@mui/material'
 import React from 'react'
 
 export interface ScrollToTopButtonProps extends ZoomProps {

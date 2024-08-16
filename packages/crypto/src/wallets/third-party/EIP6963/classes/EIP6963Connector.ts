@@ -1,7 +1,7 @@
 import { forget } from '@xylabs/forget'
-import { BrowserProvider, Eip1193Provider } from 'ethers'
+import type { BrowserProvider, Eip1193Provider } from 'ethers'
 
-import { EIP6963ProviderInfo } from '../../../lib/index.ts'
+import type { EIP6963ProviderInfo } from '../../../lib/index.ts'
 import { EthWalletConnectorBase } from '../../classes/index.ts'
 
 /**

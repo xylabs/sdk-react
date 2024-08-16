@@ -1,5 +1,6 @@
-import { UserEventHandler } from '@xylabs/pixel'
-import React, { PropsWithChildren, useMemo } from 'react'
+import type { UserEventHandler } from '@xylabs/pixel'
+import type { PropsWithChildren } from 'react'
+import React, { useMemo } from 'react'
 
 import { XyoUserEventHandler } from '../../lib/index.ts'
 import { UserEventsContext } from './Context.ts'

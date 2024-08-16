@@ -1,4 +1,4 @@
-import { UserEventHandler } from '@xylabs/pixel'
+import type { UserEventHandler } from '@xylabs/pixel'
 import { createContext } from 'react'
 
 export interface UserEventsProps {

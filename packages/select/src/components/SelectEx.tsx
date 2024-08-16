@@ -1,4 +1,5 @@
-import { PaletteMode, Select, SelectProps, useTheme } from '@mui/material'
+import type { PaletteMode, SelectProps } from '@mui/material'
+import { Select, useTheme } from '@mui/material'
 import React from 'react'
 
 export type SelectExProps<T> = SelectProps<T> & {

@@ -1,8 +1,8 @@
 import { forget } from '@xylabs/forget'
-import { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
+import type { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
 
-import { EIP1193EventNames, EIP1193EventsCompatible } from './EIP1193.ts'
-import { SupportedEventProposals } from './SupportedEvents.ts'
+import type { EIP1193EventNames, EIP1193EventsCompatible } from './EIP1193.ts'
+import type { SupportedEventProposals } from './SupportedEvents.ts'
 
 /**
  * A zero dependency class that provides functionality for handling EIP1193 events

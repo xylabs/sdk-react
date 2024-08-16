@@ -1,6 +1,6 @@
-import { CreativeWork } from './CreativeWork.ts'
-import { Integer } from './Integer.ts'
-import { Text } from './Text.ts'
+import type { CreativeWork } from './CreativeWork.ts'
+import type { Integer } from './Integer.ts'
+import type { Text } from './Text.ts'
 
 interface Article extends CreativeWork {
   articleBody?: Text

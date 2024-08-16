@@ -1,12 +1,14 @@
 import { forget } from '@xylabs/forget'
-import { Log } from '@xylabs/log'
+import type { Log } from '@xylabs/log'
 import { useUserEvents } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
-import React, { ReactElement } from 'react'
+import type { ReactElement } from 'react'
+import type React from 'react'
 
-import { ExperimentProps } from './Experiment.tsx'
-import { ExperimentsProps } from './ExperimentsProps.ts'
-import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey } from './models/index.ts'
+import type { ExperimentProps } from './Experiment.tsx'
+import type { ExperimentsProps } from './ExperimentsProps.ts'
+import type { ExperimentsData, OutcomesData } from './models/index.ts'
+import { ExperimentsLocalStorageKey, OutcomesLocalStorageKey } from './models/index.ts'
 
 const defaultLocalStorageKey = 'testData'
 

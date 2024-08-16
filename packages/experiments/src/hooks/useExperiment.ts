@@ -1,7 +1,7 @@
 import { useUserEvents } from '@xylabs/react-pixel'
 import { useState } from 'react'
 
-import { VariantData } from '../components/index.tsx'
+import type { VariantData } from '../components/index.tsx'
 import { ExperimentsHelper } from '../lib/index.ts'
 
 const selectVariant

@@ -1,8 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { NumberStatus } from './NumberStatus.tsx'
-import { NumberStatusProps } from './NumberStatusProps.ts'
+import type { NumberStatusProps } from './NumberStatusProps.ts'
 
 const StorybookEntry = {
   argTypes: {},

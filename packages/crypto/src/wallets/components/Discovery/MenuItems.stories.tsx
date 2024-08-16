@@ -1,7 +1,8 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
-import { WalletsDiscoveredMenuItems, WalletsDiscoveredMenuItemsProps } from './MenuItems.tsx'
+import type { WalletsDiscoveredMenuItemsProps } from './MenuItems.tsx'
+import { WalletsDiscoveredMenuItems } from './MenuItems.tsx'
 
 const StorybookEntry = {
   args: {

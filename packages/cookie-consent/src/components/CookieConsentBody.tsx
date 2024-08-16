@@ -4,7 +4,7 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect } from 'react'
 
 import { useCookieConsent } from '../contexts/index.ts'
-import { CookieConsentProps } from './CookieConsentProps.tsx'
+import type { CookieConsentProps } from './CookieConsentProps.tsx'
 
 export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll, acceptOnTimer = 0, onAccept, ...props }) => {
   const { accepted, setAccepted, storageName } = useCookieConsent()

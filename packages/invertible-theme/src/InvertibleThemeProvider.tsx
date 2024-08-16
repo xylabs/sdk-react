@@ -1,10 +1,11 @@
-import { createTheme, responsiveFontSizes, ScopedCssBaseline, Theme, ThemeOptions, ThemeProvider } from '@mui/material'
+import type { Theme, ThemeOptions } from '@mui/material'
+import { createTheme, responsiveFontSizes, ScopedCssBaseline, ThemeProvider } from '@mui/material'
 import deepmerge from 'deepmerge'
 import React, { useMemo } from 'react'
 import rfdc from 'rfdc'
 
 import { InvertibleThemeContext } from './InvertibleThemeContext.tsx'
-import { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps.ts'
+import type { InvertibleThemeProviderProps } from './InvertibleThemeProviderProps.ts'
 import { useInvertibleThemeProvider } from './use.ts'
 
 export const resolveThemeColors = (options: ThemeOptions) => {

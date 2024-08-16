@@ -3,7 +3,8 @@ import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { useLocalStorage } from '@xylabs/react-shared'
 import React from 'react'
 
-import { ExperimentsData, ExperimentsLocalStorageKey, OutcomesData, OutcomesLocalStorageKey, VariantData } from './models/index.ts'
+import type { ExperimentsData, OutcomesData, VariantData } from './models/index.ts'
+import { ExperimentsLocalStorageKey, OutcomesLocalStorageKey } from './models/index.ts'
 
 const ExperimentsDebugger: React.FC = ({ ...props }) => {
   const [experiments] = useLocalStorage<ExperimentsData>(ExperimentsLocalStorageKey, {})

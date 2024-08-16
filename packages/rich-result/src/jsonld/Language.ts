@@ -1,4 +1,4 @@
-import { Intangible } from './Intangible.ts'
+import type { Intangible } from './Intangible.ts'
 
 type Language = Intangible
 

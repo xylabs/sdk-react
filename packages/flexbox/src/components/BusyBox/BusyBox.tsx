@@ -1,5 +1,7 @@
-import { Box, BoxProps, Paper, useTheme } from '@mui/material'
-import { BusyCircularProgress, BusyLinearProgress, BusyProps } from '@xylabs/react-shared'
+import type { BoxProps } from '@mui/material'
+import { Box, Paper, useTheme } from '@mui/material'
+import type { BusyProps } from '@xylabs/react-shared'
+import { BusyCircularProgress, BusyLinearProgress } from '@xylabs/react-shared'
 import React, { forwardRef } from 'react'
 
 import { useBusyTiming } from '../../hooks/index.ts'

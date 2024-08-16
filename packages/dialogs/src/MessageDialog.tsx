@@ -1,4 +1,5 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogProps, DialogTitle } from '@mui/material'
+import type { DialogProps } from '@mui/material'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 

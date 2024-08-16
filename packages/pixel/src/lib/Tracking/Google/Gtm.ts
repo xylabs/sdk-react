@@ -1,4 +1,4 @@
-import { WithDataLayer } from './DataLayer.ts'
+import type { WithDataLayer } from './DataLayer.ts'
 
 class Gtm {
   static instance: Gtm

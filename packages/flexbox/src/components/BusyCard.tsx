@@ -1,11 +1,13 @@
-import { Card, CardProps } from '@mui/material'
-import {
-  BusyCircularProgress,
+import type { CardProps } from '@mui/material'
+import { Card } from '@mui/material'
+import type {
   BusyCircularProgressProps,
-  BusyLinearProgress,
   BusyLinearProgressProps,
   BusyVariant,
-  WithChildren,
+  WithChildren } from '@xylabs/react-shared'
+import {
+  BusyCircularProgress,
+  BusyLinearProgress,
 } from '@xylabs/react-shared'
 import React from 'react'
 

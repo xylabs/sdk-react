@@ -1,6 +1,7 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
-import React, { ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import React from 'react'
 
 import { selectVariantForExperiment, useExperiments } from './useExperiment.ts'
 

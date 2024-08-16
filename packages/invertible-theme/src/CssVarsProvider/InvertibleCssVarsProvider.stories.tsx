@@ -1,9 +1,10 @@
 import { Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme } from '@mui/material'
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { DarkModeIconButtonForColorScheme } from '../Buttons/index.ts'
-import { InvertibleCssVarsProvider, InvertibleCssVarsProviderProps } from './InvertibleCssVarsProvider.tsx'
+import type { InvertibleCssVarsProviderProps } from './InvertibleCssVarsProvider.tsx'
+import { InvertibleCssVarsProvider } from './InvertibleCssVarsProvider.tsx'
 import { useColorSchemeEx } from './useColorSchemeEx.tsx'
 
 const StorybookEntry = {

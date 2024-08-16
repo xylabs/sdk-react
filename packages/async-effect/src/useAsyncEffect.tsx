@@ -1,5 +1,6 @@
 import { usePromise } from '@xylabs/react-promise'
-import { DependencyList, useEffect, useRef } from 'react'
+import type { DependencyList } from 'react'
+import { useEffect, useRef } from 'react'
 
 export type EffectFuncWithMounted = (isMounted: () => boolean) => Promise<(() => void) | void>
 export type EffectFuncWithoutMounted = () => Promise<(() => void) | void>

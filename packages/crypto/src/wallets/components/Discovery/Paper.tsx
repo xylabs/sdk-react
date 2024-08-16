@@ -1,8 +1,9 @@
-import { Paper, PaperProps } from '@mui/material'
+import type { PaperProps } from '@mui/material'
+import { Paper } from '@mui/material'
 import React from 'react'
 
 import { useWalletDiscovery } from './hooks/index.ts'
-import { onWalletSelect } from './lib/index.ts'
+import type { onWalletSelect } from './lib/index.ts'
 import { WalletsDiscoveredMenuItems } from './MenuItems.tsx'
 
 export interface WalletDiscoveryPaperProps extends PaperProps {

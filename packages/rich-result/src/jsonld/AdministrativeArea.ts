@@ -1,4 +1,4 @@
-import { Place } from './Place.ts'
+import type { Place } from './Place.ts'
 
 type AdministrativeArea = Place
 

@@ -7,7 +7,7 @@
   },
   "bugs": {
     "email": "support@xylabs.com",
-    "url": "https://github.com/xylabs/sdk-react/issues"
+    "url": "git+https://github.com/xylabs/sdk-react/issues"
   },
   "workspaces": [
     "packages/*"
@@ -20,10 +20,11 @@
     "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
     "@storybook/react": "^8.2.9",
-    "@xylabs/ts-scripts-yarn3": "^4.0.0-rc.15",
-    "@xylabs/tsconfig-react": "^4.0.0-rc.15",
+    "@xylabs/ts-scripts-yarn3": "^4.0.0-rc.20",
+    "@xylabs/tsconfig-react": "^4.0.0-rc.20",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "storybook": "^8.2.9",
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
@@ -53,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xylabs/sdk-react.git"
+    "url": "git+https://github.com/xylabs/sdk-react.git"
   },
   "sideEffects": false,
   "version": "4.0.2",

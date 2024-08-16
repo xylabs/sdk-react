@@ -1,6 +1,6 @@
-import { Class } from './Class.ts'
-import { Enumeration } from './Enumeration.ts'
-import { Intangible } from './Intangible.ts'
+import type { Class } from './Class.ts'
+import type { Enumeration } from './Enumeration.ts'
+import type { Intangible } from './Intangible.ts'
 
 interface Property extends Intangible {
   domainIncludes?: Class

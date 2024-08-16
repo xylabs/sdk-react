@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { delay } from '@xylabs/delay'
 import React, { useState } from 'react'
 

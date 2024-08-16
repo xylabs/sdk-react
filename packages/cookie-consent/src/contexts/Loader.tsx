@@ -1,4 +1,4 @@
-import { WithChildren } from '@xylabs/react-shared'
+import type { WithChildren } from '@xylabs/react-shared'
 import React, { useMemo, useState } from 'react'
 
 import { CookieConsentContext } from './Context.ts'

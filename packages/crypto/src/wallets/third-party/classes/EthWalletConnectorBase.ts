@@ -1,8 +1,9 @@
-import { BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener } from 'ethers'
+import type { BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener } from 'ethers'
 import { LRUCache } from 'lru-cache'
 
 import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
-import { EIP1193Events, EIP6963ProviderInfo, SupportedEventProposals } from '../../lib/index.ts'
+import type { EIP6963ProviderInfo, SupportedEventProposals } from '../../lib/index.ts'
+import { EIP1193Events } from '../../lib/index.ts'
 import { findChainName } from '../../utils/index.ts'
 
 /**

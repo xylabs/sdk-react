@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { EthWallet, SelectedWallet } from '../../types/index.ts'
+import type { EthWallet, SelectedWallet } from '../../types/index.ts'
 import { useEthWallet } from '../hooks/index.ts'
 import { EIP6963Connector } from './classes/index.ts'
 

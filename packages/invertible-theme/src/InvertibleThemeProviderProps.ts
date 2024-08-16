@@ -1,5 +1,5 @@
-import { ThemeOptions } from '@mui/material'
-import { ReactNode } from 'react'
+import type { ThemeOptions } from '@mui/material'
+import type { ReactNode } from 'react'
 
 interface InvertibleThemeProviderProps {
   children?: ReactNode

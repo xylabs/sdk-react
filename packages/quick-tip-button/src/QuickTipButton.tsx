@@ -1,7 +1,9 @@
 import { HelpOutline as HelpOutlineIcon } from '@mui/icons-material'
-import { DialogProps, IconButton, IconButtonProps, SvgIconProps, Tooltip } from '@mui/material'
+import type { DialogProps, IconButtonProps, SvgIconProps } from '@mui/material'
+import { IconButton, Tooltip } from '@mui/material'
 import { MessageDialog } from '@xylabs/react-dialogs'
-import React, { JSXElementConstructor, useState } from 'react'
+import type { JSXElementConstructor } from 'react'
+import React, { useState } from 'react'
 
 export interface QuickTipButtonProps extends IconButtonProps {
   Icon?: JSXElementConstructor<SvgIconProps>

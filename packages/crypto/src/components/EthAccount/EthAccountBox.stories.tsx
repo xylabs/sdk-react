@@ -1,11 +1,11 @@
 import { Paper } from '@mui/material'
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { EthAddress } from '@xylabs/eth-address'
-import { FlexBoxProps } from '@xylabs/react-flexbox'
+import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import React from 'react'
 
 import { EthAccountBox } from './EthAccountBox.tsx'
-import { EthAccountProps } from './EthAccountProps.tsx'
+import type { EthAccountProps } from './EthAccountProps.tsx'
 
 const StorybookEntry = {
   argTypes: {},

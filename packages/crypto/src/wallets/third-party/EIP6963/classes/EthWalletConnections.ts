@@ -2,7 +2,7 @@ import { BrowserProvider } from 'ethers'
 
 import { isEIP6963AnnounceProviderEvent } from '../../../lib/index.ts'
 import { EIP6963Connector } from './EIP6963Connector.ts'
-import { DiscoveredWallets } from './types/index.ts'
+import type { DiscoveredWallets } from './types/index.ts'
 
 export type WalletListener = () => void
 

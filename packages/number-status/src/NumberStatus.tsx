@@ -1,10 +1,11 @@
-import { PaletteColor, PaletteOptions, useTheme } from '@mui/material'
+import type { PaletteColor, PaletteOptions } from '@mui/material'
+import { useTheme } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol, FlexGrowRow } from '@xylabs/react-flexbox'
 import numeral from 'numeral'
 import React from 'react'
 
-import { NumberStatusProps } from './NumberStatusProps.ts'
+import type { NumberStatusProps } from './NumberStatusProps.ts'
 
 const NumberStatus: React.FC<NumberStatusProps> = ({
   error,

@@ -1,5 +1,6 @@
 import { DarkModeRounded, LightModeRounded } from '@mui/icons-material'
-import { IconButton, IconButtonProps } from '@mui/material'
+import type { IconButtonProps } from '@mui/material'
+import { IconButton } from '@mui/material'
 import { RotationAnimation } from '@xylabs/react-animation'
 import { FlexCol } from '@xylabs/react-flexbox'
 import React, { useState } from 'react'

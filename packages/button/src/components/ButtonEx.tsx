@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 
 import { ButtonExBase } from './ButtonExBase.tsx'
-import { ButtonExProps } from './ButtonExProps.tsx'
+import type { ButtonExProps } from './ButtonExProps.tsx'
 import { ButtonToEx } from './ButtonExTo.tsx'
 
 const ButtonEx = forwardRef<HTMLButtonElement, ButtonExProps>(({ to, ...props }, ref) => {

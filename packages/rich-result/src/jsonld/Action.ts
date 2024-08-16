@@ -1,13 +1,13 @@
-import { ActionStatusType } from './ActionStatusType.ts'
-import { DateTime } from './DateTime.ts'
-import { EntryPoint } from './EntryPoint.ts'
-import { Organization } from './Organization.ts'
-import { Person } from './Person.ts'
-import { Place } from './Place.ts'
-import { PostalAddress } from './PostalAddress.ts'
-import { Thing } from './Thing.ts'
-import { Time } from './Time.ts'
-import { VirtualLocation } from './VirtualLocation.ts'
+import type { ActionStatusType } from './ActionStatusType.ts'
+import type { DateTime } from './DateTime.ts'
+import type { EntryPoint } from './EntryPoint.ts'
+import type { Organization } from './Organization.ts'
+import type { Person } from './Person.ts'
+import type { Place } from './Place.ts'
+import type { PostalAddress } from './PostalAddress.ts'
+import type { Thing } from './Thing.ts'
+import type { Time } from './Time.ts'
+import type { VirtualLocation } from './VirtualLocation.ts'
 
 interface Action extends Thing {
   actionStatus?: ActionStatusType

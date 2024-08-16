@@ -1,5 +1,5 @@
 import { animated, useSpring } from '@react-spring/web'
-import { FlexBoxProps } from '@xylabs/react-flexbox'
+import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import React, { useEffect, useState } from 'react'
 
 // Inspired by https://www.joshwcomeau.com/react/rotate/#bonus-that-star-animation-8

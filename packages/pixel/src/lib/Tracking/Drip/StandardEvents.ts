@@ -1,5 +1,5 @@
 import { DripBaseEvent } from './BaseEvent.ts'
-import { DripIdentifyData } from './Data/index.ts'
+import type { DripIdentifyData } from './Data/index.ts'
 
 class DripStandardEvents<T extends Record<string, unknown>> {
   identify() {

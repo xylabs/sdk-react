@@ -1,5 +1,5 @@
-import { EthAddress } from '@xylabs/eth-address'
-import { BrowserProvider, JsonRpcSigner } from 'ethers'
+import type { EthAddress } from '@xylabs/eth-address'
+import type { BrowserProvider, JsonRpcSigner } from 'ethers'
 import { createContext } from 'react'
 
 export interface EthersData {

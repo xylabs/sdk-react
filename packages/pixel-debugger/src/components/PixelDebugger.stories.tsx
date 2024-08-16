@@ -1,6 +1,6 @@
-import { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { PixelApi, XyPixel } from '@xylabs/pixel'
-import { BusyBoxProps } from '@xylabs/react-flexbox'
+import type { BusyBoxProps } from '@xylabs/react-flexbox'
 import React, { useEffect, useState } from 'react'
 
 import { PixelDebugger } from './PixelDebugger.tsx'

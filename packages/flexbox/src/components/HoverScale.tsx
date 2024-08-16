@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 
-import { FlexBoxProps } from './FlexBoxProps.tsx'
+import type { FlexBoxProps } from './FlexBoxProps.tsx'
 import { FlexRow } from './FlexRow.tsx'
 
 export type HoverScaleProps = FlexBoxProps & {

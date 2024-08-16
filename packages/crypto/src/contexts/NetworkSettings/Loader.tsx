@@ -1,5 +1,6 @@
 import { EthAddress } from '@xylabs/eth-address'
-import React, { PropsWithChildren, useMemo } from 'react'
+import type { PropsWithChildren } from 'react'
+import React, { useMemo } from 'react'
 
 import { NetworkSettingsContext } from './Context.ts'
 

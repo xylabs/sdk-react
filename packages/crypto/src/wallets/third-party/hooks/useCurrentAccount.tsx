@@ -1,7 +1,7 @@
 import { EthAddress } from '@xylabs/eth-address'
 import { useMemo, useSyncExternalStore } from 'react'
 
-import { EthWalletConnectorBase } from '../classes/index.ts'
+import type { EthWalletConnectorBase } from '../classes/index.ts'
 
 /**
  * Subscribe to account changes from a given wallet

@@ -1,6 +1,6 @@
-import { ContactPoint } from './ContactPoint.ts'
-import { Country } from './Country.ts'
-import { Text } from './Text.ts'
+import type { ContactPoint } from './ContactPoint.ts'
+import type { Country } from './Country.ts'
+import type { Text } from './Text.ts'
 
 interface PostalAddress extends ContactPoint {
   addressCountry?: Country | Text

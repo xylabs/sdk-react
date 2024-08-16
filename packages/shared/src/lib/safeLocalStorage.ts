@@ -1,4 +1,4 @@
-import { Log } from '@xylabs/log'
+import type { Log } from '@xylabs/log'
 
 export const getLocalStorageObject = <T>(key: string, log?: Log): T => {
   let result = {} as T

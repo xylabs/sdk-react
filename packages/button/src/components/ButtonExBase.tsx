@@ -1,8 +1,9 @@
 import { Button, useTheme } from '@mui/material'
 import { BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles } from '@xylabs/react-shared'
-import React, { forwardRef, MouseEvent } from 'react'
+import type { MouseEvent } from 'react'
+import React, { forwardRef } from 'react'
 
-import { ButtonExProps } from './ButtonExProps.tsx'
+import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>((props, ref) => {
   const theme = useTheme()

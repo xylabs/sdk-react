@@ -1,8 +1,8 @@
-import { Enumeration } from './Enumeration.ts'
-import { PropertyValue } from './PropertyValue.ts'
-import { QualitativeValue } from './QualitativeValue.ts'
-import { StructuredValue } from './StructuredValue.ts'
-import { URL } from './URL.ts'
+import type { Enumeration } from './Enumeration.ts'
+import type { PropertyValue } from './PropertyValue.ts'
+import type { QualitativeValue } from './QualitativeValue.ts'
+import type { StructuredValue } from './StructuredValue.ts'
+import type { URL } from './URL.ts'
 
 interface QuantitativeValue extends Enumeration {
   additionalProperty?: PropertyValue

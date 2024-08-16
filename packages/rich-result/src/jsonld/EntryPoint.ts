@@ -1,7 +1,7 @@
-import { Intangible } from './Intangible.ts'
-import { SoftwareApplication } from './SoftwareApplication.ts'
-import { Text } from './Text.ts'
-import { URL } from './URL.ts'
+import type { Intangible } from './Intangible.ts'
+import type { SoftwareApplication } from './SoftwareApplication.ts'
+import type { Text } from './Text.ts'
+import type { URL } from './URL.ts'
 
 interface EntryPoint extends Intangible {
   actionApplication?: SoftwareApplication

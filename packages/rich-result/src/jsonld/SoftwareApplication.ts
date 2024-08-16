@@ -1,7 +1,7 @@
-import { CreativeWork } from './CreativeWork.ts'
-import { ImageObject } from './ImageObject.ts'
-import { Text } from './Text.ts'
-import { URL } from './URL.ts'
+import type { CreativeWork } from './CreativeWork.ts'
+import type { ImageObject } from './ImageObject.ts'
+import type { Text } from './Text.ts'
+import type { URL } from './URL.ts'
 
 // TODO: Resolve Anys
 interface SoftwareApplication extends CreativeWork {

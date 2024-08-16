@@ -1,5 +1,5 @@
-import { Intangible } from './Intangible.ts'
-import { Text } from './Text.ts'
+import type { Intangible } from './Intangible.ts'
+import type { Text } from './Text.ts'
 
 interface Rating extends Intangible {
   bestRating?: number

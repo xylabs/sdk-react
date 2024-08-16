@@ -1,12 +1,13 @@
 import { Typography, useMediaQuery, useTheme } from '@mui/material'
 import { assertEx } from '@xylabs/assert'
 import { EthAddress } from '@xylabs/eth-address'
-import { FlexBoxProps, FlexRow } from '@xylabs/react-flexbox'
+import type { FlexBoxProps } from '@xylabs/react-flexbox'
+import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
 import React, { useContext } from 'react'
 
 import { EthersContext } from '../../contexts/index.ts'
-import { EthAccountProps } from './EthAccountProps.tsx'
+import type { EthAccountProps } from './EthAccountProps.tsx'
 
 export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
   address,

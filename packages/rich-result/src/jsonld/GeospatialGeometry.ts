@@ -1,5 +1,5 @@
-import { Intangible } from './Intangible.ts'
-import { Place } from './Place.ts'
+import type { Intangible } from './Intangible.ts'
+import type { Place } from './Place.ts'
 
 interface GeospatialGeometry extends Intangible {
   geoContains?: Place | GeospatialGeometry

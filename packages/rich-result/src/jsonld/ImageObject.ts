@@ -1,5 +1,5 @@
-import { MediaObject } from './MediaObject.ts'
-import { Text } from './Text.ts'
+import type { MediaObject } from './MediaObject.ts'
+import type { Text } from './Text.ts'
 
 interface ImageObject extends MediaObject {
   caption?: Text

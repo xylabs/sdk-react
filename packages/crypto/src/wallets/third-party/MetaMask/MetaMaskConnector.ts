@@ -1,4 +1,4 @@
-import { MetaMaskInpageProvider } from '@metamask/providers'
+import type { MetaMaskInpageProvider } from '@metamask/providers'
 import { forget } from '@xylabs/forget'
 import { BrowserProvider } from 'ethers'
 

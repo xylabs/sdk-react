@@ -1,11 +1,11 @@
-import { AdministrativeArea } from './AdministrativeArea.ts'
-import { ContactPointOption } from './ContactPointOption.ts'
-import { GeoShape } from './GeoShape.ts'
-import { Language } from './Language.ts'
-import { Place } from './Place.ts'
-import { Product } from './Product.ts'
-import { Text } from './Text.ts'
-import { Thing } from './Thing.ts'
+import type { AdministrativeArea } from './AdministrativeArea.ts'
+import type { ContactPointOption } from './ContactPointOption.ts'
+import type { GeoShape } from './GeoShape.ts'
+import type { Language } from './Language.ts'
+import type { Place } from './Place.ts'
+import type { Product } from './Product.ts'
+import type { Text } from './Text.ts'
+import type { Thing } from './Thing.ts'
 
 interface ContactPoint extends Thing {
   areaServed?: AdministrativeArea | GeoShape | Place | Text

@@ -1,4 +1,5 @@
-import React, { PropsWithChildren, useMemo } from 'react'
+import type { PropsWithChildren } from 'react'
+import React, { useMemo } from 'react'
 
 import { useMetaMask } from '../../wallets/index.ts'
 import { EthersContext } from './Context.ts'

@@ -1,4 +1,4 @@
-import { FunnelStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
+import type { FunnelStartedFields, UserClickFields, UserEventHandler, ViewContentFields } from '@xylabs/pixel'
 
 import { GoogleCustomEvent } from './CustomEvent.ts'
 

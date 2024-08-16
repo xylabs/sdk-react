@@ -3,7 +3,7 @@ import { IconButton } from '@mui/material'
 import { FlexGrowCol } from '@xylabs/react-flexbox'
 import React from 'react'
 
-import { ErrorsViewerProps } from './ErrorsViewerProps.ts'
+import type { ErrorsViewerProps } from './ErrorsViewerProps.ts'
 import { ErrorViewer } from './ErrorViewer.tsx'
 
 const ErrorsViewer: React.FC<ErrorsViewerProps> = (props) => {

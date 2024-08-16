@@ -1,4 +1,4 @@
-import { CssVarsTheme, Theme } from '@mui/material'
+import type { CssVarsTheme, Theme } from '@mui/material'
 
 // Hopefully MUI will export these types
 export type CssVarsThemeObject = Omit<Theme, 'palette'> & CssVarsTheme
