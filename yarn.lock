@@ -5542,6 +5542,7 @@ __metadata:
     "@stylistic/eslint-plugin": "npm:^2.6.4"
     "@typescript-eslint/eslint-plugin": "npm:^8.1.0"
     "@typescript-eslint/parser": "npm:^8.1.0"
+    "@xylabs/eslint-config-flat": "npm:^4.0.0-rc.20"
     "@xylabs/eslint-config-react-flat": "npm:^4.0.0-rc.20"
     "@xylabs/pixel": "npm:^2.0.1"
     "@xylabs/react-accordion": "workspace:^"
