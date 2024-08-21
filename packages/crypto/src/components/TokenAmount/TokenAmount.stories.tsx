@@ -2,23 +2,36 @@ import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { TokenAmount } from './TokenAmount.tsx'
+import type { TokenAmountProps } from './TokenAmountProps.tsx'
+
+const TokenAmountWrapper: React.FC<Omit<TokenAmountProps, 'amount'> & { amount?: string | null }> = ({
+  amount,
+  ...props
+}) => {
+  return (
+    <TokenAmount
+      {...props}
+      amount={amount ? BigInt(amount) : undefined}
+    />
+  )
+}
 
 const StorybookEntry = {
   argTypes: {},
-  component: TokenAmount,
+  component: TokenAmountWrapper,
   parameters: {
     docs: {
       page: null,
     },
   },
   title: 'crypto/TokenAmount',
-} as Meta<typeof TokenAmount>
+} as Meta<typeof TokenAmountWrapper>
 
-const Template: StoryFn<typeof TokenAmount> = args => <TokenAmount {...args}></TokenAmount>
+const Template: StoryFn<typeof TokenAmountWrapper> = args => <TokenAmountWrapper {...args}></TokenAmountWrapper>
 
 const Default = Template.bind({})
 Default.args = {
-  amount: BigInt('0x1195c751dbcc90ab4200000'),
+  amount: '0x1195c751dbcc90ab4200000',
 }
 
 const WithNull = Template.bind({})
@@ -33,20 +46,20 @@ WithUndefined.args = {
 
 const WithLogo = Template.bind({})
 WithLogo.args = {
-  amount: BigInt('0x1195c751dbcc90ab4200000'),
+  amount: '0x1195c751dbcc90ab4200000',
   logo: true,
 }
 
 const WithLogoAndColor = Template.bind({})
 WithLogoAndColor.args = {
-  amount: BigInt('0x1195c751dbcc90ab4200000'),
+  amount: '0x1195c751dbcc90ab4200000',
   logo: true,
   statusColor: '#ff0',
 }
 
 const WithLogoAndColorLarge = Template.bind({})
 WithLogoAndColorLarge.args = {
-  amount: BigInt('0x1195c751dbcc90ab4200000'),
+  amount: '0x1195c751dbcc90ab4200000',
   logo: true,
   size: 'large',
   statusColor: '#ff0',
@@ -54,13 +67,13 @@ WithLogoAndColorLarge.args = {
 
 const WithLabel = Template.bind({})
 WithLabel.args = {
-  amount: BigInt('0x1195c751dbcc90ab4200000'),
+  amount: '0x1195c751dbcc90ab4200000',
   label: 'Balance',
 }
 
 const WithLogoAndLabel = Template.bind({})
 WithLogoAndLabel.args = {
-  amount: BigInt('0x1195c751dbcc90ab4200000'),
+  amount: '0x1195c751dbcc90ab4200000',
   label: 'Balance',
   logo: true,
 }
