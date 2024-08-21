@@ -1,6 +1,8 @@
 import { delay } from '@xylabs/delay'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
-import { useCallback, useMemo, useState } from 'react'
+import {
+  useCallback, useMemo, useState,
+} from 'react'
 
 export const useBusyTiming = (busy?: boolean, busyMinimum = 0) => {
   const [internalBusy, setInternalBusy] = useState(false)
@@ -42,7 +44,9 @@ export const useBusyTiming = (busy?: boolean, busyMinimum = 0) => {
       }
 
       if (busyMinimum) {
-        const { initialize, evaluate, terminated } = timer
+        const {
+          initialize, evaluate, terminated,
+        } = timer
         if (initialize && mounted()) {
           setBusyStart(Date.now())
           setInternalBusy(true)

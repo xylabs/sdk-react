@@ -12,7 +12,9 @@ export interface CoverProgressProps {
 }
 
 export const CoverProgress: React.FC<CoverProgressProps> = (props) => {
-  const { paper = true, open, opacity = 0.25, errors, onRetry } = props
+  const {
+    paper = true, open, opacity = 0.25, errors, onRetry,
+  } = props
   const theme = useTheme()
   if (open) {
     return (

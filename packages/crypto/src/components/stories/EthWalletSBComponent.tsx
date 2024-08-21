@@ -1,9 +1,13 @@
 import { OpenInNewOutlined } from '@mui/icons-material'
-import { Alert, AlertTitle, Button, List, ListItem, Typography } from '@mui/material'
+import {
+  Alert, AlertTitle, Button, List, ListItem, Typography,
+} from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
 import { forget } from '@xylabs/forget'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import React, { useEffect, useMemo, useState } from 'react'
+import React, {
+  useEffect, useMemo, useState,
+} from 'react'
 
 import type { EthWallet } from '../../wallets/index.ts'
 

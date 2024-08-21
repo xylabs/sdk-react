@@ -98,7 +98,8 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
     [provider],
   )
 
-  const value = useMemo(() => ({ busy: false,
+  const value = useMemo(() => ({
+    busy: false,
     chainId,
     connect,
     error,
@@ -107,7 +108,8 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
     provider,
     providerName,
     signer: isConnected ? signer : undefined,
-    walletProvider }), [,
+    walletProvider,
+  }), [,
     chainId,
     connect,
     error,

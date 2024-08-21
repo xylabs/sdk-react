@@ -21,8 +21,12 @@ const Template: StoryFn<typeof AccordionGroup> = args => <AccordionGroup {...arg
 const Default: StoryFn<typeof AccordionGroup> = Template.bind({})
 Default.args = {
   data: [
-    { description: 'lorem ipsum', name: 'Section 1' },
-    { description: 'lorem ipsum', name: 'Section 2' },
+    {
+      description: 'lorem ipsum', name: 'Section 1',
+    },
+    {
+      description: 'lorem ipsum', name: 'Section 2',
+    },
     {
       children: [
         <FlexCol key="container" alignItems="stretch">

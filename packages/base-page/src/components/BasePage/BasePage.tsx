@@ -1,5 +1,7 @@
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
-import { Container, Fab, ScopedCssBaseline, Typography, useTheme } from '@mui/material'
+import {
+  Container, Fab, ScopedCssBaseline, Typography, useTheme,
+} from '@mui/material'
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { InvertibleThemeProvider } from '@xylabs/react-invertible-theme'
@@ -57,7 +59,9 @@ const BasePage: React.FC<BasePageProps> = ({
       {container
         ? (
             <Container
-              style={{ alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+              style={{
+                alignItems: 'stretch', display: 'flex', flexDirection: 'column', flexGrow: 1,
+              }}
               maxWidth={container}
               disableGutters={disableGutters}
             >

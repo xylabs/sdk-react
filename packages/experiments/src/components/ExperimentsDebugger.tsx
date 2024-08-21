@@ -3,7 +3,9 @@ import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { useLocalStorage } from '@xylabs/react-shared'
 import React from 'react'
 
-import type { ExperimentsData, OutcomesData, VariantData } from './models/index.ts'
+import type {
+  ExperimentsData, OutcomesData, VariantData,
+} from './models/index.ts'
 import { ExperimentsLocalStorageKey, OutcomesLocalStorageKey } from './models/index.ts'
 
 const ExperimentsDebugger: React.FC = ({ ...props }) => {
@@ -29,7 +31,9 @@ const ExperimentsDebugger: React.FC = ({ ...props }) => {
         const outcome = (outcomes[name] || 0) as number
 
         const marks = [
-          { label: `${experiment.variants[0].name} | ${experiment.variants[0].weight}`, value: 0 },
+          {
+            label: `${experiment.variants[0].name} | ${experiment.variants[0].weight}`, value: 0,
+          },
           ...experiment.variants.map(({ weight }, index) => ({
             label: index === experiment.variants.length - 1 ? 'End' : `${experiment.variants[index + 1].name} | ${weight}`,
             value: index === 0 ? weight : sumUpVariants(experiment.variants.slice(0, index + 1)),

@@ -11,7 +11,9 @@ export interface WalletOverviewCardActions extends CardActionsProps {
   onSign?: () => Promisable<void>
 }
 
-export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({ connectWallet, currentAccount, onSign }) => {
+export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({
+  connectWallet, currentAccount, onSign,
+}) => {
   const [connecting, setConnecting] = useState(false)
 
   const onConnect = () =>

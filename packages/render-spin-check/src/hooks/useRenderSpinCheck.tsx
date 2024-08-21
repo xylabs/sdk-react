@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import {
+  useEffect, useMemo, useState,
+} from 'react'
 
 export interface RenderSpinCheckConfig {
   maxRate?: number

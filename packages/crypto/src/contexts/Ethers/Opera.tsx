@@ -55,7 +55,9 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     [ethereum, localAddress],
   )
 
-  const value = useMemo(() => ({ busy: false, chainId, error, isConnected, localAddress, provider, signer }), [chainId, error, isConnected, localAddress, provider, signer])
+  const value = useMemo(() => ({
+    busy: false, chainId, error, isConnected, localAddress, provider, signer,
+  }), [chainId, error, isConnected, localAddress, provider, signer])
 
   return (
     <EthersContext.Provider

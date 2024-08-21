@@ -1,6 +1,8 @@
 import { RadioButtonChecked } from '@mui/icons-material'
 import type { MenuItemProps } from '@mui/material'
-import { ListItemIcon, ListItemText, MenuItem, styled, useTheme } from '@mui/material'
+import {
+  ListItemIcon, ListItemText, MenuItem, styled, useTheme,
+} from '@mui/material'
 import React from 'react'
 
 import type { EIP6963Connector } from '../../third-party/index.ts'
@@ -13,7 +15,9 @@ export interface WalletDiscoveryMenuItemInnerProps extends MenuItemProps {
   name?: string
 }
 
-export const WalletDiscoveryMenuItemInner: React.FC<WalletDiscoveryMenuItemInnerProps> = ({ approvedAccount, icon, name, ...props }) => {
+export const WalletDiscoveryMenuItemInner: React.FC<WalletDiscoveryMenuItemInnerProps> = ({
+  approvedAccount, icon, name, ...props
+}) => {
   const theme = useTheme()
   return (
     <StyledMenuItem {...props}>
@@ -49,7 +53,11 @@ export interface WalletDiscoveryMenuItemProps extends WalletDiscoveryMenuItemInn
   ethWalletConnector: EIP6963Connector
 }
 
-export const WalletDiscoveryMenuItem: React.FC<WalletDiscoveryMenuItemProps> = ({ ethWalletConnector, ...props }) => {
-  const { currentAccount, providerInfo } = useEthWallet(ethWalletConnector)
+export const WalletDiscoveryMenuItem: React.FC<WalletDiscoveryMenuItemProps> = ({
+  ethWalletConnector, ...props
+}) => {
+  const {
+    currentAccount, providerInfo,
+  } = useEthWallet(ethWalletConnector)
   return <WalletDiscoveryMenuItemInner approvedAccount={!!currentAccount} icon={providerInfo?.icon} name={providerInfo?.name} {...props} />
 }

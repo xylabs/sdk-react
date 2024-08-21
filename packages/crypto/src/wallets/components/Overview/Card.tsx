@@ -13,8 +13,12 @@ export interface WalletOverviewCardProps extends CardProps {
   ethWalletConnector: EIP6963Connector
 }
 
-export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalletConnector, ...props }) => {
-  const { connectWallet, connectRefused, chainName, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress }
+export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({
+  ethWalletConnector, ...props
+}) => {
+  const {
+    connectWallet, connectRefused, chainName, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress,
+  }
     = useEthWallet(ethWalletConnector)
   const [signResponse, setSignResponse] = useState<EthAddress>()
 

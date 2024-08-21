@@ -8,7 +8,9 @@ export type HoverScaleProps = FlexBoxProps & {
   scale?: number
 }
 
-export const HoverScale: React.FC<HoverScaleProps> = ({ scale, children, ...props }) => {
+export const HoverScale: React.FC<HoverScaleProps> = ({
+  scale, children, ...props
+}) => {
   return (
     <FlexRow {...props}>
       <Box

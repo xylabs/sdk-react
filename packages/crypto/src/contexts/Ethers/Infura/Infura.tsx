@@ -17,7 +17,9 @@ export const InfuraEthersLoader: React.FC<PropsWithChildren<Props>> = (props) =>
   const chainId = 1
   const provider = new InfuraProvider(1, infuraKey) as unknown as BrowserProvider
 
-  const value = useMemo(() => ({ busy: false, chainId, provider, isConnected: false }), [chainId, provider])
+  const value = useMemo(() => ({
+    busy: false, chainId, provider, isConnected: false,
+  }), [chainId, provider])
 
   return (
     <EthersContext.Provider

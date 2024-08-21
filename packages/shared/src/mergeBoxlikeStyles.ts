@@ -40,7 +40,9 @@ const mergeBoxlikeStyles = <T extends BoxlikeComponentProps>(theme: Theme, props
     style,
     width,
     ...rootProps
-  } = { ...defaultProps, ...props }
+  } = {
+    ...defaultProps, ...props,
+  }
   const mergedStyle: React.CSSProperties = {
     alignContent,
     alignItems,

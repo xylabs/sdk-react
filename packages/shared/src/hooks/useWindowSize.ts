@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+import {
+  useCallback, useEffect, useState,
+} from 'react'
 
 export interface Size {
   height?: number
@@ -7,20 +9,21 @@ export interface Size {
 
 export function useWindowSize(): Size {
   const [windowSize, setWindowSize] = useState<Size>({
-    height: undefined,
-    width: undefined,
+    height: window.innerHeight,
+    width: window.innerWidth,
   })
+
+  const handleResize = useCallback(() => {
+    setWindowSize({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    })
+  }, [])
+
   useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        height: window.innerHeight,
-        width: window.innerWidth,
-      })
-    }
     window.addEventListener('resize', handleResize)
-    handleResize()
 
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [handleResize])
   return windowSize
 }

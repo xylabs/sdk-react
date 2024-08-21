@@ -78,6 +78,8 @@ WithLogoAndLabel.args = {
   logo: true,
 }
 
-export { Default, WithLabel, WithLogo, WithLogoAndColor, WithLogoAndColorLarge, WithLogoAndLabel, WithNull, WithUndefined }
+export {
+  Default, WithLabel, WithLogo, WithLogoAndColor, WithLogoAndColorLarge, WithLogoAndLabel, WithNull, WithUndefined,
+}
 
 export default StorybookEntry

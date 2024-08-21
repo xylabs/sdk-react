@@ -1,5 +1,7 @@
 import { forget } from '@xylabs/forget'
-import type { BrowserProvider, Eip1193Provider, Listener } from 'ethers'
+import type {
+  BrowserProvider, Eip1193Provider, Listener,
+} from 'ethers'
 
 import type { EIP1193EventNames, EIP1193EventsCompatible } from './EIP1193.ts'
 import type { SupportedEventProposals } from './SupportedEvents.ts'

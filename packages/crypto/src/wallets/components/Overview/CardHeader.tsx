@@ -12,7 +12,9 @@ export interface WalletOverviewCardHeaderProps extends CardHeaderProps {
   walletName?: string
 }
 
-export const WalletOverviewCardHeader: React.FC<WalletOverviewCardHeaderProps> = ({ currentAccount, icon, walletName, ...props }) => {
+export const WalletOverviewCardHeader: React.FC<WalletOverviewCardHeaderProps> = ({
+  currentAccount, icon, walletName, ...props
+}) => {
   return (
     <CardHeader
       avatar={<ConstrainedImage constrainedValue="42px" src={icon} />}

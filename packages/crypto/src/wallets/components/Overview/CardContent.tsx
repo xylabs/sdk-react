@@ -1,5 +1,7 @@
 import type { CardContentProps } from '@mui/material'
-import { Alert, AlertTitle, CardContent, Chip, Divider, styled, Typography } from '@mui/material'
+import {
+  Alert, AlertTitle, CardContent, Chip, Divider, styled, Typography,
+} from '@mui/material'
 import type { EthAddress } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
@@ -20,7 +22,10 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
   signResponse,
 }) => {
   return (
-    <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+    <CardContent sx={{
+      display: 'flex', flexDirection: 'column', gap: 2,
+    }}
+    >
       {window.parent === window
         ? null
         : (

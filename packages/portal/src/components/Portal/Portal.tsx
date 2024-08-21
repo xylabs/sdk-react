@@ -3,7 +3,9 @@ import { createPortal } from 'react-dom'
 
 import type { PortalProps } from './PortalProps.ts'
 
-export const Portal: React.FC<PortalProps> = ({ children, className, el = 'div', target = 'body' }: PortalProps) => {
+export const Portal: React.FC<PortalProps> = ({
+  children, className, el = 'div', target = 'body',
+}: PortalProps) => {
   const [container] = useState(document.createElement(el))
   if (className) {
     container.classList.add(className)

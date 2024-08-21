@@ -9,7 +9,9 @@ export interface UserEventsProviderProps<T> {
   userEvents: UserEventHandler<T>
 }
 
-export const UserEventsProvider: React.FC<PropsWithChildren<UserEventsProviderProps<unknown>>> = ({ userEvents, children }) => {
+export const UserEventsProvider: React.FC<PropsWithChildren<UserEventsProviderProps<unknown>>> = ({
+  userEvents, children,
+}) => {
   const value = useMemo(() => ({ userEvents: userEvents ?? XyoUserEventHandler.get() }), [userEvents])
   return <UserEventsContext.Provider value={value}>{children}</UserEventsContext.Provider>
 }

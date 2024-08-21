@@ -14,7 +14,7 @@ const setAcceptedToLocalStorage = (accepted: boolean) => {
 }
 
 const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
-  const [accepted, setAccepted] = useState(getAcceptedFromLocalStorage())
+  const [accepted, setAccepted] = useState(() => getAcceptedFromLocalStorage())
   const setAcceptedHandler = (accepted: boolean) => {
     setAcceptedToLocalStorage(accepted)
     setAccepted(accepted)
@@ -25,7 +25,9 @@ const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
     setAccepted(getAcceptedFromLocalStorage())
   }
 
-  const value = useMemo(() => ({ accepted, clearAccepted, setAccepted: setAcceptedHandler, storageName: CookiesAcceptedLocalStorageName }), [accepted, clearAccepted, setAcceptedHandler])
+  const value = useMemo(() => ({
+    accepted, clearAccepted, setAccepted: setAcceptedHandler, storageName: CookiesAcceptedLocalStorageName,
+  }), [accepted, clearAccepted, setAcceptedHandler])
 
   return (
     <CookieConsentContext.Provider value={value}>

@@ -62,7 +62,9 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
 export interface DarkModeIconButtonForColorSchemeProps extends DefaultModeColors, IconButtonProps {}
 
 export const DarkModeIconButtonForColorScheme: React.FC<DarkModeIconButtonForColorSchemeProps> = (props) => {
-  const { darkMode, setMode } = useColorSchemeEx()
+  const {
+    darkMode, setMode,
+  } = useColorSchemeEx()
   const toggleMode = () => setMode(darkMode ? 'light' : 'dark')
 
   return <DarkModeIconButton darkMode={darkMode} toggleMode={toggleMode} {...props} />

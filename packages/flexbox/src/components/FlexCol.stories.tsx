@@ -55,6 +55,8 @@ FlexEndAlignedItems.args = {
   title: 'FlexEndAlignedItems',
 }
 
-export { FlexEndAlignedItems, FlexStartAlignedItems, StretchAlignedItems }
+export {
+  FlexEndAlignedItems, FlexStartAlignedItems, StretchAlignedItems,
+}
 
 export default StorybookEntry

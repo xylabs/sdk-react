@@ -1,4 +1,6 @@
-import { Typography, useMediaQuery, useTheme } from '@mui/material'
+import {
+  Typography, useMediaQuery, useTheme,
+} from '@mui/material'
 import { assertEx } from '@xylabs/assert'
 import { EthAddress } from '@xylabs/eth-address'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'

@@ -120,6 +120,8 @@ BusyMinimum.args = {
   width: 360,
 }
 
-export { BusyMinimum, Circular, Linear, LinearBuffer, LinearDeterminate, LinearQuery }
+export {
+  BusyMinimum, Circular, Linear, LinearBuffer, LinearDeterminate, LinearQuery,
+}
 
 export default StorybookEntry

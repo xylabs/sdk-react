@@ -77,6 +77,8 @@ Large10Digits.args = {
   value: 334_455_667_788,
 }
 
-export { Default, Default6Digits, Default10Digits, Large, Large6Digits, Large10Digits, Small, Small6Digits, Small10Digits }
+export {
+  Default, Default6Digits, Default10Digits, Large, Large6Digits, Large10Digits, Small, Small6Digits, Small10Digits,
+}
 
 export default StorybookEntry

@@ -102,6 +102,8 @@ AutoEmpty.args = {
   toEtherScan: true,
 }
 
-export { Auto, AutoEmpty, Long, LongEmpty, LongLarge, Medium, MediumEmpty, Short, ShortEmpty }
+export {
+  Auto, AutoEmpty, Long, LongEmpty, LongLarge, Medium, MediumEmpty, Short, ShortEmpty,
+}
 
 export default StorybookEntry

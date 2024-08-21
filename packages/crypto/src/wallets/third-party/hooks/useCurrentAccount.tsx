@@ -9,7 +9,9 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
  * Note: Its easier for ethWalletConnector to be defined to avoid complex method signatures for subscribe function
  **/
 export const useCurrentAccountExternal = (ethWalletConnector: EthWalletConnectorBase) => {
-  const { getSnapShot, subscribe } = useMemo(() => {
+  const {
+    getSnapShot, subscribe,
+  } = useMemo(() => {
     return {
       getSnapShot: () => ethWalletConnector.allowedAccounts,
       subscribe: (notifier: () => void) => ethWalletConnector?.subscribeToAccountsChanges(notifier),

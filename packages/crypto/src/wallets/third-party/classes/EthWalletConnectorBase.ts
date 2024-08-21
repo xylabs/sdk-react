@@ -1,4 +1,6 @@
-import type { BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener } from 'ethers'
+import type {
+  BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener,
+} from 'ethers'
 import { LRUCache } from 'lru-cache'
 
 import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
@@ -179,7 +181,9 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     for (const listener of listeners) listener()
 
     const details = {
-      detail: { ...value, providerName: this.providerName },
+      detail: {
+        ...value, providerName: this.providerName,
+      },
     }
 
     // Allow anyone to listen for changes

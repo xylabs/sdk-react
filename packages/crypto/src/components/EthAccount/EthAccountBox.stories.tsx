@@ -120,6 +120,8 @@ IconOnly.args = {
   toEtherScan: true,
 }
 
-export { Auto, AutoEmpty, AutoEmptyIcon, AutoIcon, IconOnly, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty }
+export {
+  Auto, AutoEmpty, AutoEmptyIcon, AutoIcon, IconOnly, Long, LongEmpty, Medium, MediumEmpty, Short, ShortEmpty,
+}
 
 export default StorybookEntry

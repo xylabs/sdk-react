@@ -69,6 +69,8 @@ FlexEndJustifiedContent.args = {
   title: 'FlexEndJustifiedContent',
 }
 
-export { FlexEndJustifiedContent, FlexStartJustifiedContent, SpaceAroundJustifiedContent, SpaceBetweenJustifiedContent, SpaceEvenlyJustifiedContent }
+export {
+  FlexEndJustifiedContent, FlexStartJustifiedContent, SpaceAroundJustifiedContent, SpaceBetweenJustifiedContent, SpaceEvenlyJustifiedContent,
+}
 
 export default StorybookEntry

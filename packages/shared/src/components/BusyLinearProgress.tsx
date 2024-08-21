@@ -1,5 +1,7 @@
 import type { LinearProgressProps } from '@mui/material'
-import { alpha, Box, LinearProgress, useTheme } from '@mui/material'
+import {
+  alpha, Box, LinearProgress, useTheme,
+} from '@mui/material'
 import React from 'react'
 
 export interface BusyLinearProgressProps extends LinearProgressProps {
@@ -8,7 +10,9 @@ export interface BusyLinearProgressProps extends LinearProgressProps {
   rounded?: boolean
 }
 
-const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({ bgcolor, style, rounded, opacity = 0.85, ...props }) => {
+const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({
+  bgcolor, style, rounded, opacity = 0.85, ...props
+}) => {
   const theme = useTheme()
   return (
     <Box
@@ -23,7 +27,9 @@ const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({ bgcolor, style,
       justifyContent="flex-start"
       alignItems="stretch"
       overflow="hidden"
-      style={{ borderRadius: rounded ? theme.shape.borderRadius : 0, ...style }}
+      style={{
+        borderRadius: rounded ? theme.shape.borderRadius : 0, ...style,
+      }}
     >
       <LinearProgress {...props} />
     </Box>

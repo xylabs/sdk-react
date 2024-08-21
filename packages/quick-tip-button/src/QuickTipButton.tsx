@@ -1,5 +1,7 @@
 import { HelpOutline as HelpOutlineIcon } from '@mui/icons-material'
-import type { DialogProps, IconButtonProps, SvgIconProps } from '@mui/material'
+import type {
+  DialogProps, IconButtonProps, SvgIconProps,
+} from '@mui/material'
 import { IconButton, Tooltip } from '@mui/material'
 import { MessageDialog } from '@xylabs/react-dialogs'
 import type { JSXElementConstructor } from 'react'

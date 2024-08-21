@@ -6,8 +6,12 @@ import React, { useEffect } from 'react'
 import { useCookieConsent } from '../contexts/index.ts'
 import type { CookieConsentProps } from './CookieConsentProps.tsx'
 
-export const CookieConsentBody: React.FC<CookieConsentProps> = ({ acceptOnScroll, acceptOnTimer = 0, onAccept, ...props }) => {
-  const { accepted, setAccepted, storageName } = useCookieConsent()
+export const CookieConsentBody: React.FC<CookieConsentProps> = ({
+  acceptOnScroll, acceptOnTimer = 0, onAccept, ...props
+}) => {
+  const {
+    accepted, setAccepted, storageName,
+  } = useCookieConsent()
 
   const onScroll = () => {
     // hide it one the user has scrolled at least one page

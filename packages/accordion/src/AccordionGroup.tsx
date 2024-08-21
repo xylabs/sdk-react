@@ -1,6 +1,8 @@
 import { ExpandMoreRounded } from '@mui/icons-material'
 import type { AccordionProps } from '@mui/material'
-import { Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery, useTheme } from '@mui/material'
+import {
+  Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery, useTheme,
+} from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import type { ReactNode } from 'react'
 import React, { useState } from 'react'
@@ -28,7 +30,9 @@ interface AccordionGroupProps {
   defaultExpandedIndex?: number
 }
 
-export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedIndex, data }) => {
+export const AccordionGroup: React.FC<AccordionGroupProps> = ({
+  defaultExpandedIndex, data,
+}) => {
   const [expandedIndex, setExpandedIndex] = useState(defaultExpandedIndex ?? 0)
 
   return (
@@ -39,7 +43,9 @@ export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedI
     </>
   )
 }
-export const SimpleAccordion: React.FC<SimpleAccordionCardProps> = ({ name, linkText, to, href, description, expanded, onChange, children }) => {
+export const SimpleAccordion: React.FC<SimpleAccordionCardProps> = ({
+  name, linkText, to, href, description, expanded, onChange, children,
+}) => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   return (

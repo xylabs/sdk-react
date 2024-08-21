@@ -22,8 +22,10 @@ export const useWebP = (webp: string, alt: string) => {
 const getSupportsWebP = async () => {
   return await new Promise<boolean>((resolve) => {
     const image = new Image()
-    image.addEventListener('error', () => resolve(false))
-    image.addEventListener('load', () => resolve(image.width === 1))
+    const onError = () => resolve(false)
+    image.addEventListener('error', onError)
+    const onLoad = () => resolve(image.width === 1)
+    image.addEventListener('load', onLoad)
     image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA='
   }).catch(() => false)
 }

@@ -20,7 +20,9 @@ export interface IdenticonProps extends FlexBoxProps {
 }
 
 const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: IdenticonProps) => {
-  const { value = '', size = 400, bg = 'transparent', count = 5, palette, iconPadding = 0 } = props
+  const {
+    value = '', size = 400, bg = 'transparent', count = 5, palette, iconPadding = 0,
+  } = props
   let { fg } = props
   const hash = md5(value)
   const block = Math.floor(size / count)
@@ -83,13 +85,23 @@ export const Identicon: React.FC<IdenticonProps> = ({
   const canvas = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    updateCanvas(canvas, { bg, className, count, fg, iconPadding, palette, size, value })
+    updateCanvas(canvas, {
+      bg, className, count, fg, iconPadding, palette, size, value,
+    })
   })
 
   return (
     <FlexRow {...props}>
       {value
-        ? <canvas className={className} ref={canvas} style={{ height: size, width: size }} />
+        ? (
+            <canvas
+              className={className}
+              ref={canvas}
+              style={{
+                height: size, width: size,
+              }}
+            />
+          )
         : null}
     </FlexRow>
   )

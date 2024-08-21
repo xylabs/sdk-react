@@ -43,7 +43,9 @@ export const useConnectWallet = (ethWalletConnector: EthWalletConnectorBase) => 
   }, [ethWalletConnector])
 
   if (ethWalletConnector.installed) {
-    return { connectError, connectRefused, connectWallet }
+    return {
+      connectError, connectRefused, connectWallet,
+    }
   }
   return {}
 }

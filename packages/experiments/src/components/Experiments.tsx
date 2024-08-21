@@ -87,7 +87,9 @@ const saveExperimentDebugRanges = (name: string, totalWeight: number, childList:
 }
 
 const Experiments: React.FC<ExperimentsProps> = (props) => {
-  const { name, children, localStorageProp = true } = props
+  const {
+    name, children, localStorageProp = true,
+  } = props
   const userEvents = useUserEvents()
   const localStorageKey = buildLocalStorageKey(localStorageProp)
   const childList = makeChildrenArray(children)
@@ -114,7 +116,9 @@ const Experiments: React.FC<ExperimentsProps> = (props) => {
         saveExperimentsTestData(localStorageKey)
       }
       if (userEvents) {
-        forget(userEvents.testStarted({ name, variation: child.key }))
+        forget(userEvents.testStarted({
+          name, variation: child.key,
+        }))
       }
     }
 

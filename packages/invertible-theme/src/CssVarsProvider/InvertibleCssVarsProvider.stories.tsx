@@ -1,4 +1,6 @@
-import { Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme } from '@mui/material'
+import {
+  Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme,
+} from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
@@ -22,7 +24,9 @@ const Template: StoryFn<typeof InvertibleCssVarsProvider> = (args: InvertibleCss
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
-  const { darkMode, lightMode, mode, setMode } = useColorSchemeEx()
+  const {
+    darkMode, lightMode, mode, setMode,
+  } = useColorSchemeEx()
 
   return (
     <>
@@ -128,6 +132,8 @@ DefaultDark.args = {
   theme,
 }
 
-export { Default, DefaultDark, DefaultLight }
+export {
+  Default, DefaultDark, DefaultLight,
+}
 
 export default StorybookEntry

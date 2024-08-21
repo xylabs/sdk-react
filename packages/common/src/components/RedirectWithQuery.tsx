@@ -8,7 +8,9 @@ export interface RedirectWithQueryProps {
   toOptions?: NavigateOptions
 }
 
-export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({ href, to, toOptions }) => {
+export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({
+  href, to, toOptions,
+}) => {
   const newPath = `${to}${document.location.search}`
   const navigate = useNavigate()
   const { pathname } = useLocation()
@@ -18,7 +20,9 @@ export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({
       window.location.href = href
     } else {
       if (newPath !== pathname) {
-        navigate(newPath, { replace: true, ...toOptions })
+        navigate(newPath, {
+          replace: true, ...toOptions,
+        })
       }
     }
   })

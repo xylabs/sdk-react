@@ -9,7 +9,9 @@ interface UseAsyncEffectTestProps {
   delayTicks?: number
   refresh?: number
 }
-const UsePromiseTest: React.FC<UseAsyncEffectTestProps> = ({ refresh, delayTicks }) => {
+const UsePromiseTest: React.FC<UseAsyncEffectTestProps> = ({
+  refresh, delayTicks,
+}) => {
   const [refreshValue] = usePromise(
 
     async () => {

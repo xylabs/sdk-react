@@ -16,7 +16,9 @@ export const profileBlock = async (name: string, closure: () => Promise<unknown>
   const startTime = Date.now()
   await closure()
   const endTime = Date.now()
-  profileResults.push({ endTime, name, startTime })
+  profileResults.push({
+    endTime, name, startTime,
+  })
   if (logProfiling) {
     console.log(`Timed ${name} [${endTime - startTime}ms]`)
   }

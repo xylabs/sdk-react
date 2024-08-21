@@ -36,7 +36,14 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
   const amountString = amount ? placesSplitString(amount, places) : '-'
 
   return (
-    <ButtonEx style={{ backgroundColor: statusColor, ...style }} variant="outlined" onClick={onButtonClick} {...props}>
+    <ButtonEx
+      style={{
+        backgroundColor: statusColor, ...style,
+      }}
+      variant="outlined"
+      onClick={onButtonClick}
+      {...props}
+    >
       <FlexRow justifyContent="space-between" width="100%" busy={amount === undefined} busySize={16}>
         <FlexRow>
           {logo

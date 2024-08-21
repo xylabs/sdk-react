@@ -37,11 +37,17 @@ const Default = DefaultTemplate.bind({})
 Default.args = {}
 
 const BusyCircular = DefaultTemplate.bind({})
-BusyCircular.args = { busy: true, busyVariant: 'circular' }
+BusyCircular.args = {
+  busy: true, busyVariant: 'circular',
+}
 
 const BusyLinear = DefaultTemplate.bind({})
-BusyLinear.args = { busy: true, busyVariant: 'linear' }
+BusyLinear.args = {
+  busy: true, busyVariant: 'linear',
+}
 
-export { BusyCircular, BusyLinear, Default }
+export {
+  BusyCircular, BusyLinear, Default,
+}
 
 export default StorybookEntry

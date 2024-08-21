@@ -1,4 +1,6 @@
-import { Alert, AlertTitle, List, ListItem, Snackbar } from '@mui/material'
+import {
+  Alert, AlertTitle, List, ListItem, Snackbar,
+} from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect, useState } from 'react'
@@ -36,8 +38,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
     }, 1000)
 
     return () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      clearInterval(logErrorsInterval as any)
+      clearInterval(logErrorsInterval)
     }
   }, [selectedWallet])
 
@@ -88,7 +89,14 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
             )
           : null
         : <Alert severity="warning">Select a wallet to see its errors</Alert>}
-      <Snackbar anchorOrigin={{ horizontal: 'center', vertical: 'top' }} open={!!event} autoHideDuration={5000} onClose={() => setEvent(undefined)}>
+      <Snackbar
+        anchorOrigin={{
+          horizontal: 'center', vertical: 'top',
+        }}
+        open={!!event}
+        autoHideDuration={5000}
+        onClose={() => setEvent(undefined)}
+      >
         <Alert severity="success">
           <AlertTitle>New Event</AlertTitle>
           {JSON.stringify(event, null, 2)}

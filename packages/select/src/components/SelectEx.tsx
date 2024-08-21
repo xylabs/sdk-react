@@ -7,9 +7,18 @@ export type SelectExProps<T> = SelectProps<T> & {
   mode?: PaletteMode
 }
 
-export const SelectEx: <T>(props: SelectExProps<T>) => React.JSX.Element = ({ MenuProps, mode = 'light', colorize, ...props }) => {
+export const SelectEx: <T>(props: SelectExProps<T>) => React.JSX.Element = ({
+  MenuProps, mode = 'light', colorize, ...props
+}) => {
   const theme = useTheme()
   const colorizeMenuProps = colorize ? { MenuListProps: { sx: { backgroundColor: theme.palette[colorize][mode] } } } : {}
 
-  return <Select MenuProps={{ ...MenuProps, ...colorizeMenuProps }} {...props} />
+  return (
+    <Select
+      MenuProps={{
+        ...MenuProps, ...colorizeMenuProps,
+      }}
+      {...props}
+    />
+  )
 }

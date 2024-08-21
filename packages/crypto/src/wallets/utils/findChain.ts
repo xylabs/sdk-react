@@ -1,5 +1,7 @@
+import {
+  arbitrum, base, mainnet, optimism, polygon,
 // eslint-disable-next-line import-x/no-internal-modules
-import { arbitrum, base, mainnet, optimism, polygon } from 'viem/chains'
+} from 'viem/chains'
 
 const chains = [mainnet, polygon, arbitrum, optimism, base]
 

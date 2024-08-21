@@ -1,4 +1,6 @@
-import { Badge, Card, Divider, Typography, useTheme } from '@mui/material'
+import {
+  Badge, Card, Divider, Typography, useTheme,
+} from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol } from '@xylabs/react-flexbox'
 import { DebugUserEventsContext } from '@xylabs/react-pixel'
@@ -16,7 +18,9 @@ export const PixelDebugger: React.FC = () => {
   const [events, setEvents] = useState<PixelEvent[]>([])
 
   usePixelAltSendHandler((event: string, fields?: Record<string, unknown>) => {
-    setEvents(events => [{ event, fields }, ...events])
+    setEvents(events => [{
+      event, fields,
+    }, ...events])
   })
 
   if (!isDebugging) {
@@ -25,7 +29,10 @@ export const PixelDebugger: React.FC = () => {
 
   return (
     <Portal>
-      <div style={{ bottom: 0, left: 0, position: 'fixed', width: 350 }}>
+      <div style={{
+        bottom: 0, left: 0, position: 'fixed', width: 350,
+      }}
+      >
         <Badge badgeContent={events.length} color="primary" sx={{ width: '100%' }}>
           <Card
             variant="outlined"
@@ -37,7 +44,12 @@ export const PixelDebugger: React.FC = () => {
             }}
             color={theme.palette.primary.main}
           >
-            <FlexCol alignItems="stretch" sx={{ flexFlow: 'column', maxHeight: 400 }}>
+            <FlexCol
+              alignItems="stretch"
+              sx={{
+                flexFlow: 'column', maxHeight: 400,
+              }}
+            >
               <FlexCol alignItems="stretch" sx={{ flex: '0 1 auto' }}>
                 <ButtonEx variant="text" onClick={() => setDisplayEvents(!displayEvents)}>
                   XY Pixel Debugger
@@ -48,7 +60,9 @@ export const PixelDebugger: React.FC = () => {
                   alignItems="stretch"
                   alignContent="start"
                   padding={2}
-                  sx={{ cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none' }}
+                  sx={{
+                    cursor: 'pointer', flex: '1 1 auto', overflowY: 'auto', userSelect: 'none',
+                  }}
                 >
                   {events.map((e, index) => (
                     <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
@@ -64,7 +78,9 @@ export const PixelDebugger: React.FC = () => {
   )
 }
 
-const PixelEventDetails: React.FC<PixelEvent & { events: PixelEvent[]; index: number }> = ({ event, fields, index, events }) => {
+const PixelEventDetails: React.FC<PixelEvent & { events: PixelEvent[]; index: number }> = ({
+  event, fields, index, events,
+}) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <FlexCol alignItems="stretch" marginBottom={0.5} onClick={() => setIsOpen(!isOpen)}>

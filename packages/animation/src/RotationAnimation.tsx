@@ -7,7 +7,9 @@ import React, { useEffect, useState } from 'react'
 export interface RotationAnimationProps extends FlexBoxProps {
   rotation: number
 }
-export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, rotation }) => {
+export const RotationAnimation: React.FC<RotationAnimationProps> = ({
+  children, rotation,
+}) => {
   const [isRotated, setIsRotated] = useState(false)
   const [springs, api] = useSpring(() => ({
     backfaceVisibility: 'hidden',

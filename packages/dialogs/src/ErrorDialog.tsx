@@ -1,5 +1,7 @@
 import type { DialogProps } from '@mui/material'
-import { Dialog, DialogActions, DialogContent, DialogTitle, Typography } from '@mui/material'
+import {
+  Dialog, DialogActions, DialogContent, DialogTitle, Typography,
+} from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import type { AxiosError } from 'axios'
@@ -55,6 +57,8 @@ const ErrorDialogOpen: React.FC<ErrorDialogProps> = ({
   )
 }
 
-export const ErrorDialog: React.FC<ErrorDialogProps> = ({ open, error, ...props }) => {
+export const ErrorDialog: React.FC<ErrorDialogProps> = ({
+  open, error, ...props
+}) => {
   return error ? <ErrorDialogOpen open={!!error || open} error={error} {...props} /> : null
 }

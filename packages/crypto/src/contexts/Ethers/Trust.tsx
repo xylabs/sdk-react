@@ -49,7 +49,9 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     [localAddress, trustProvider],
   )
 
-  const value = useMemo(() => ({ busy: false, chainId, error, localAddress, provider, signer }), [
+  const value = useMemo(() => ({
+    busy: false, chainId, error, localAddress, provider, signer,
+  }), [
     chainId,
     error,
     localAddress,

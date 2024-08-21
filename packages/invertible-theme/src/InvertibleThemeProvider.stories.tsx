@@ -1,4 +1,6 @@
-import { Box, CssBaseline, Typography, useTheme } from '@mui/material'
+import {
+  Box, CssBaseline, Typography, useTheme,
+} from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 

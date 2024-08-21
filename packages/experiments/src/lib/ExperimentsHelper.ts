@@ -4,8 +4,10 @@ import type { UserEventHandler } from '@xylabs/pixel'
 import type { UserEventsProps } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 
-import type { ExperimentsData, OutcomesData, VariantData } from '../components/index.tsx'
-import { ExperimentsLocalStorageKey, OutcomesLocalStorageKey } from '../components/index.tsx'
+import { ExperimentsLocalStorageKey, OutcomesLocalStorageKey } from '../components/index.ts'
+import type {
+  ExperimentsData, OutcomesData, VariantData,
+} from '../components/index.tsx'
 
 const defaultLocalStorageKey = 'testData'
 let experimentsTestData: { [index: string]: string } = {}
@@ -50,7 +52,9 @@ const ExperimentsHelper = {
         ExperimentsHelper.saveExperimentsTestData(localStorageKey)
       }
       if (userEvents && firstTime) {
-        forget(userEvents.testStarted({ name, variation: variant.name }))
+        forget(userEvents.testStarted({
+          name, variation: variant.name,
+        }))
       }
       return variant
     }
