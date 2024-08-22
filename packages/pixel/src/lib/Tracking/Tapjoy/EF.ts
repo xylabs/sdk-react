@@ -34,9 +34,7 @@ class EF {
     try {
       // data: have session_id, tracking_id, order_id, amount
       const ef = EF.getEF()
-      ef.conversion({
-        ...data,
-      })
+      ef.conversion({ ...data })
     } catch (ex) {
       console.error(`EF.conversion: ${ex}`)
     }

@@ -38,9 +38,7 @@ class Fbq {
     this.fbq(
       'track',
       event,
-      {
-        ...data,
-      },
+      { ...data },
       { eventID },
     )
   }
@@ -49,9 +47,7 @@ class Fbq {
     this.fbq(
       'trackCustom',
       event,
-      {
-        ...data,
-      },
+      { ...data },
       { eventID },
     )
   }

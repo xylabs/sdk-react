@@ -19,30 +19,20 @@ const TokenAmountWrapper: React.FC<Omit<TokenAmountProps, 'amount'> & { amount?:
 const StorybookEntry = {
   argTypes: {},
   component: TokenAmountWrapper,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'crypto/TokenAmount',
 } as Meta<typeof TokenAmountWrapper>
 
 const Template: StoryFn<typeof TokenAmountWrapper> = args => <TokenAmountWrapper {...args}></TokenAmountWrapper>
 
 const Default = Template.bind({})
-Default.args = {
-  amount: '0x1195c751dbcc90ab4200000',
-}
+Default.args = { amount: '0x1195c751dbcc90ab4200000' }
 
 const WithNull = Template.bind({})
-WithNull.args = {
-  amount: null,
-}
+WithNull.args = { amount: null }
 
 const WithUndefined = Template.bind({})
-WithUndefined.args = {
-  amount: undefined,
-}
+WithUndefined.args = { amount: undefined }
 
 const WithLogo = Template.bind({})
 WithLogo.args = {

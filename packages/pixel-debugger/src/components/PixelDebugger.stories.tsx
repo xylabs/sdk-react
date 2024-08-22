@@ -10,11 +10,7 @@ import { PixelDebuggerToggle } from './PixelDebuggerToggle.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: PixelDebuggerToggle,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'pixel-debugger/PixelDebuggerToggle',
 } as Meta<typeof PixelDebuggerToggle>
 

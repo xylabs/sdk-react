@@ -7,11 +7,7 @@ import { BasePage } from './BasePage.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: BasePage,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Components/BasePage',
 } as Meta<typeof BasePage>
 

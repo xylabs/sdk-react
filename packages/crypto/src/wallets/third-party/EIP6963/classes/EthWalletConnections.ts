@@ -58,9 +58,7 @@ export class EthWalletConnections {
 
   private newWalletListener(event: Event) {
     if (isEIP6963AnnounceProviderEvent(event)) {
-      const {
-        info, provider,
-      } = event.detail
+      const { info, provider } = event.detail
       // capture installed wallets as they come in
       this.addWallet(new EIP6963Connector(new BrowserProvider(provider), provider, info))
     }

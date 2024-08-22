@@ -13,15 +13,11 @@ import type { WalletDiscoveryPaperProps } from './Paper.tsx'
 import { WalletDiscoveryPaper } from './Paper.tsx'
 
 const StorybookEntry = {
-  args: {
-    open: true,
-  },
+  args: { open: true },
   component: WalletDiscoveryPaper,
   parameters: {
     actions: { argTypesRegex: '!(^on.*)' },
-    docs: {
-      page: null,
-    },
+    docs: { page: null },
   },
   title: 'wallets/Discovery/Paper',
 } as Meta<typeof WalletDiscoveryPaper>
@@ -90,9 +86,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
           : null
         : <Alert severity="warning">Select a wallet to see its errors</Alert>}
       <Snackbar
-        anchorOrigin={{
-          horizontal: 'center', vertical: 'top',
-        }}
+        anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
         open={!!event}
         autoHideDuration={5000}
         onClose={() => setEvent(undefined)}

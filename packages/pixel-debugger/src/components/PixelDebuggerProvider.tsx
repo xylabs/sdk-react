@@ -5,8 +5,6 @@ import React, { useMemo } from 'react'
 
 export const PixelDebuggerProvider: React.FC<WithChildren> = ({ children }) => {
   const [isDebugging, setIsDebugging] = useLocalStorage<boolean>('isDebuggingPixel', false)
-  const value = useMemo(() => ({
-    isDebugging, setIsDebugging,
-  }), [isDebugging, setIsDebugging])
+  const value = useMemo(() => ({ isDebugging, setIsDebugging }), [isDebugging, setIsDebugging])
   return <DebugUserEventsContext.Provider value={value}>{children}</DebugUserEventsContext.Provider>
 }

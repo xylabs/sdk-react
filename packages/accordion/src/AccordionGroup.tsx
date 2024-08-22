@@ -30,9 +30,7 @@ interface AccordionGroupProps {
   defaultExpandedIndex?: number
 }
 
-export const AccordionGroup: React.FC<AccordionGroupProps> = ({
-  defaultExpandedIndex, data,
-}) => {
+export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedIndex, data }) => {
   const [expandedIndex, setExpandedIndex] = useState(defaultExpandedIndex ?? 0)
 
   return (

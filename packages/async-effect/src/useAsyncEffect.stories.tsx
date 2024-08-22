@@ -47,8 +47,6 @@ const Template: StoryFn<typeof UseAsyncEffectTest> = (args: UseAsyncEffectTestPr
 const Default = Template.bind({})
 
 const WithUnmountCallback = Template.bind({})
-WithUnmountCallback.args = {
-  unmountCallback: () => alert('unmounted useAsyncEffect'),
-}
+WithUnmountCallback.args = { unmountCallback: () => alert('unmounted useAsyncEffect') }
 
 export { Default, WithUnmountCallback }

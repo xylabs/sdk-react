@@ -8,9 +8,7 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
  * Note: Its easier for ethWalletConnector to be defined to avoid complex method signatures for subscribe function
  **/
 export const useChainId = (ethWalletConnector: EthWalletConnectorBase) => {
-  const {
-    getSnapShot, subscribe,
-  } = useMemo(() => {
+  const { getSnapShot, subscribe } = useMemo(() => {
     if (ethWalletConnector.installed) {
       return {
         getSnapShot: () => ethWalletConnector.chainId,

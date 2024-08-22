@@ -9,11 +9,7 @@ import { QuickTipButton } from './QuickTipButton.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: QuickTipButton,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Components/QuickTipButton',
 } as Meta<typeof QuickTipButton>
 
@@ -38,9 +34,7 @@ Hover.args = {
 const HoverAndMessage = Template.bind({})
 HoverAndMessage.args = {
   children: <Typography>This is a test quick tip. This message is supposed to explain something.</Typography>,
-  dialogProps: {
-    fullWidth: true, maxWidth: 'md',
-  },
+  dialogProps: { fullWidth: true, maxWidth: 'md' },
   hoverText: 'Hover is different than the title',
   title: 'Sample Quick Tip on Hover',
 }

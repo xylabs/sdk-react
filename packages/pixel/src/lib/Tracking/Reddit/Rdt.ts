@@ -29,9 +29,7 @@ class Rdt {
 
   track(event: string, data?: Record<string, unknown>) {
     try {
-      Rdt.getRdt()('track', event, {
-        ...data,
-      })
+      Rdt.getRdt()('track', event, { ...data })
     } catch (ex) {
       console.error(ex)
     }

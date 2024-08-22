@@ -30,9 +30,7 @@ class Ttq {
 
   track(event: string, data?: Record<string, unknown>) {
     try {
-      Ttq.getTtq().track(event, {
-        ...data,
-      })
+      Ttq.getTtq().track(event, { ...data })
     } catch (ex) {
       console.error(`Ttq.track: ${ex}`)
     }

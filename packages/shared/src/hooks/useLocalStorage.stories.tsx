@@ -6,18 +6,14 @@ import { useLocalStorage } from './useLocalStorage.ts'
 const View: React.FC = () => {
   const [storedBoolean, setStoredBoolean] = useLocalStorage<boolean>('test_boolean', false)
 
-  const [defaultObject, setDefaultObject] = useLocalStorage<object | undefined>('test_object', {
-    bar: true, foo: false,
-  })
+  const [defaultObject, setDefaultObject] = useLocalStorage<object | undefined>('test_object', { bar: true, foo: false })
 
   // eslint-disable-next-line unicorn/no-useless-undefined
   const [storedString, setStoredString] = useLocalStorage<string | undefined>('test_string', undefined)
   useEffect(() => {
     setStoredBoolean(true)
     setStoredString('Nachos')
-    setDefaultObject({
-      bar: true, foo: false,
-    })
+    setDefaultObject({ bar: true, foo: false })
   }, [setStoredBoolean, setStoredString, setDefaultObject])
   return (
     <>
@@ -47,11 +43,7 @@ const View: React.FC = () => {
 const StorybookEntry = {
   argTypes: {},
   component: View,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Hooks/useLocalStorage',
 } as Meta<typeof View>
 

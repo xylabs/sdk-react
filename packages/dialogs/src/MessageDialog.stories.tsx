@@ -6,11 +6,7 @@ import { MessageDialog } from './MessageDialog.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: MessageDialog,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Dialogs/MessageDialog',
 } as Meta<typeof MessageDialog>
 

@@ -37,9 +37,7 @@ export const WalletDiscoveryMenuItemInner: React.FC<WalletDiscoveryMenuItemInner
 }
 
 const StyledMenuItem = styled(MenuItem, { name: 'StyledMenuItem' })(({ theme }) => ({
-  '&:not(:last-child)': {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
+  '&:not(:last-child)': { borderBottom: `1px solid ${theme.palette.divider}` },
   'padding': `${theme.spacing(2)}`,
 }))
 
@@ -53,11 +51,7 @@ export interface WalletDiscoveryMenuItemProps extends WalletDiscoveryMenuItemInn
   ethWalletConnector: EIP6963Connector
 }
 
-export const WalletDiscoveryMenuItem: React.FC<WalletDiscoveryMenuItemProps> = ({
-  ethWalletConnector, ...props
-}) => {
-  const {
-    currentAccount, providerInfo,
-  } = useEthWallet(ethWalletConnector)
+export const WalletDiscoveryMenuItem: React.FC<WalletDiscoveryMenuItemProps> = ({ ethWalletConnector, ...props }) => {
+  const { currentAccount, providerInfo } = useEthWallet(ethWalletConnector)
   return <WalletDiscoveryMenuItemInner approvedAccount={!!currentAccount} icon={providerInfo?.icon} name={providerInfo?.name} {...props} />
 }

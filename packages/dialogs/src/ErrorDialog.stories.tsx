@@ -7,11 +7,7 @@ import { ErrorDialog } from './ErrorDialog.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: ErrorDialog,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Dialogs/ErrorDialog',
 } as Meta<typeof ErrorDialog>
 

@@ -12,11 +12,7 @@ const UsePhantomSBComponent = () => {
 const StorybookEntry = {
   argTypes: {},
   component: UsePhantomSBComponent,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'wallets/third-party/Phantom',
 } as Meta<typeof UsePhantomSBComponent>
 

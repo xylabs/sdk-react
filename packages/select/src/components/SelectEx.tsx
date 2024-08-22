@@ -15,9 +15,7 @@ export const SelectEx: <T>(props: SelectExProps<T>) => React.JSX.Element = ({
 
   return (
     <Select
-      MenuProps={{
-        ...MenuProps, ...colorizeMenuProps,
-      }}
+      MenuProps={{ ...MenuProps, ...colorizeMenuProps }}
       {...props}
     />
   )

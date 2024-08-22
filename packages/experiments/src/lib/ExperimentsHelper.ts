@@ -52,9 +52,7 @@ const ExperimentsHelper = {
         ExperimentsHelper.saveExperimentsTestData(localStorageKey)
       }
       if (userEvents && firstTime) {
-        forget(userEvents.testStarted({
-          name, variation: variant.name,
-        }))
+        forget(userEvents.testStarted({ name, variation: variant.name }))
       }
       return variant
     }

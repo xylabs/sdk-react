@@ -7,11 +7,7 @@ import type { NumberStatusProps } from './NumberStatusProps.ts'
 const StorybookEntry = {
   argTypes: {},
   component: NumberStatus,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Components/NumberStatus',
 } as Meta<typeof NumberStatus>
 

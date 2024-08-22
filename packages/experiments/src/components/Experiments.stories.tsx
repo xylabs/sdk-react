@@ -7,11 +7,7 @@ import { Experiments } from './Experiments.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: Experiments,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'experiments/Experiments',
 } as Meta<typeof Experiments>
 

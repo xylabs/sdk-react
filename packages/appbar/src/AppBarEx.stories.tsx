@@ -9,20 +9,14 @@ import type { AppBarExProps } from './AppBarExProps.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: AppBarEx,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'common/AppBarEx',
 } as Meta<typeof AppBarEx>
 
 const Template: StoryFn<typeof AppBarEx> = (args: AppBarExProps) => <AppBarEx {...args}></AppBarEx>
 
 const Empty = Template.bind({})
-Empty.args = {
-  title: 'Empty',
-}
+Empty.args = { title: 'Empty' }
 
 const WithMenu = Template.bind({})
 WithMenu.args = {

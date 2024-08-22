@@ -7,11 +7,7 @@ import { FlexRow } from './FlexRow.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: FlexRow,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'flexbox/FlexRow',
 } as Meta<typeof FlexRow>
 

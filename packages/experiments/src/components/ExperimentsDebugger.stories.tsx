@@ -6,11 +6,7 @@ import { ExperimentsDebugger } from './ExperimentsDebugger.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: ExperimentsDebugger,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'experiments/ExperimentsDebugger',
 } as Meta<typeof ExperimentsDebugger>
 

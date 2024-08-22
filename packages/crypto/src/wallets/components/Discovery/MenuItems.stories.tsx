@@ -5,15 +5,11 @@ import type { WalletsDiscoveredMenuItemsProps } from './MenuItems.tsx'
 import { WalletsDiscoveredMenuItems } from './MenuItems.tsx'
 
 const StorybookEntry = {
-  args: {
-    open: true,
-  },
+  args: { open: true },
   component: WalletsDiscoveredMenuItems,
   parameters: {
     actions: { argTypesRegex: '!(^on.*)' },
-    docs: {
-      page: null,
-    },
+    docs: { page: null },
   },
   title: 'wallets/Discovery/MenuItems',
 } as Meta<typeof WalletsDiscoveredMenuItems>

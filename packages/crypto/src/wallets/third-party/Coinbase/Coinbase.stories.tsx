@@ -12,11 +12,7 @@ const UseCoinbaseSBComponent = () => {
 const StorybookEntry = {
   argTypes: {},
   component: UseCoinbaseSBComponent,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'wallets/third-party/Coinbase',
 } as Meta<typeof UseCoinbaseSBComponent>
 

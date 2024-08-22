@@ -12,11 +12,7 @@ const UseTrustSBComponent = () => {
 const StorybookEntry = {
   argTypes: {},
   component: UseTrustSBComponent,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'wallets/third-party/Trust',
 } as Meta<typeof UseTrustSBComponent>
 

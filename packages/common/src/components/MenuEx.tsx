@@ -14,9 +14,7 @@ export const MenuEx: React.FC<MenuExProps> = ({
   const colorizeMenuListProps = colorize ? { sx: { backgroundColor: theme.palette[colorize][mode] } } : {}
   return (
     <Menu
-      MenuListProps={{
-        ...MenuListProps, ...colorizeMenuListProps,
-      }}
+      MenuListProps={{ ...MenuListProps, ...colorizeMenuListProps }}
       {...props}
     />
   )

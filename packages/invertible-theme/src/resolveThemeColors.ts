@@ -1,7 +1,5 @@
 import type { ThemeOptions } from '@mui/material'
-import {
-  createTheme,
-} from '@mui/material'
+import { createTheme } from '@mui/material'
 import rfdc from 'rfdc'
 
 export const resolveThemeColors = (options: ThemeOptions) => {

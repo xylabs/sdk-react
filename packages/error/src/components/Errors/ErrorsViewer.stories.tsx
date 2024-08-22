@@ -7,11 +7,7 @@ import type { ErrorsViewerProps } from './ErrorsViewerProps.ts'
 const StorybookEntry = {
   argTypes: {},
   component: ErrorsViewer,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Components/ErrorsViewer',
 } as Meta<typeof ErrorsViewer>
 

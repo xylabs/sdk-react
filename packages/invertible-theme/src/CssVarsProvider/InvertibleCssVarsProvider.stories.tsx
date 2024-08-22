@@ -12,11 +12,7 @@ import { useColorSchemeEx } from './useColorSchemeEx.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: InvertibleCssVarsProvider,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'invertible-theme/InvertibleCssVarsProvider',
 } as Meta<typeof InvertibleCssVarsProvider>
 
@@ -81,15 +77,9 @@ const theme = extendTheme({
           default: '#303030',
           paper: '#424242',
         },
-        primary: {
-          main: '#4287f5',
-        },
-        secondary: {
-          main: '#f59342',
-        },
-        text: {
-          primary: '#ebebfb',
-        },
+        primary: { main: '#4287f5' },
+        secondary: { main: '#f59342' },
+        text: { primary: '#ebebfb' },
       },
     },
     light: {
@@ -98,15 +88,9 @@ const theme = extendTheme({
           default: '#fff',
           paper: '#fff',
         },
-        primary: {
-          main: '#2c5ba8',
-        },
-        secondary: {
-          main: '#ffb300',
-        },
-        text: {
-          primary: '#111',
-        },
+        primary: { main: '#2c5ba8' },
+        secondary: { main: '#ffb300' },
+        text: { primary: '#111' },
       },
     },
   },

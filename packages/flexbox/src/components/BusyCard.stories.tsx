@@ -23,8 +23,6 @@ const Default = Template.bind({})
 Default.args = {}
 
 const WithBusy = Template.bind({})
-WithBusy.args = {
-  busy: true,
-}
+WithBusy.args = { busy: true }
 
 export { Default, WithBusy }

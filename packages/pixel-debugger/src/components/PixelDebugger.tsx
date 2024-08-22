@@ -18,9 +18,7 @@ export const PixelDebugger: React.FC = () => {
   const [events, setEvents] = useState<PixelEvent[]>([])
 
   usePixelAltSendHandler((event: string, fields?: Record<string, unknown>) => {
-    setEvents(events => [{
-      event, fields,
-    }, ...events])
+    setEvents(events => [{ event, fields }, ...events])
   })
 
   if (!isDebugging) {
@@ -46,9 +44,7 @@ export const PixelDebugger: React.FC = () => {
           >
             <FlexCol
               alignItems="stretch"
-              sx={{
-                flexFlow: 'column', maxHeight: 400,
-              }}
+              sx={{ flexFlow: 'column', maxHeight: 400 }}
             >
               <FlexCol alignItems="stretch" sx={{ flex: '0 1 auto' }}>
                 <ButtonEx variant="text" onClick={() => setDisplayEvents(!displayEvents)}>

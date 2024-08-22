@@ -10,14 +10,9 @@ export interface ConstrainedImageProps extends DetailedHTMLProps<ImgHTMLAttribut
  * Useful when you have various square-ish images and want to ensure they occupy the same height (but not necessarily
  * the same width) within a fixed container
  */
-export const ConstrainedImage: React.FC<ConstrainedImageProps> = ({
-  constrainedValue = '42px', ...props
-}) => {
+export const ConstrainedImage: React.FC<ConstrainedImageProps> = ({ constrainedValue = '42px', ...props }) => {
   return (
-    <span style={{
-      height: constrainedValue, width: constrainedValue,
-    }}
-    >
+    <span style={{ height: constrainedValue, width: constrainedValue }}>
       <img style={{ maxWidth: constrainedValue }} {...props} />
     </span>
   )

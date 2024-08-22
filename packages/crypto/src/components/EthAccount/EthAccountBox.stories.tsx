@@ -10,11 +10,7 @@ import type { EthAccountProps } from './EthAccountProps.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: EthAccountBox,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'crypto/EthAccount/Box',
 } as Meta<typeof EthAccountBox>
 

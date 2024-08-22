@@ -9,11 +9,7 @@ import { InvertibleThemeProvider } from './InvertibleThemeProvider.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: InvertibleThemeProvider,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'invertible-theme/InvertibleThemeProvider',
 } as Meta<typeof InvertibleThemeProvider>
 
@@ -47,9 +43,7 @@ const ThemeEnabledComponent = () => {
 }
 
 const Default = Template.bind({})
-Default.args = {
-  children: <ThemeEnabledComponent />,
-}
+Default.args = { children: <ThemeEnabledComponent /> }
 
 const DarkThemeEnabled = Template.bind({})
 DarkThemeEnabled.args = {
@@ -62,15 +56,9 @@ DarkThemeEnabled.args = {
         paper: '#424242',
       },
       mode: 'dark',
-      primary: {
-        main: '#ebebfb',
-      },
-      secondary: {
-        main: '#ffb300',
-      },
-      text: {
-        primary: '#ebebfb',
-      },
+      primary: { main: '#ebebfb' },
+      secondary: { main: '#ffb300' },
+      text: { primary: '#ebebfb' },
     },
   },
 }

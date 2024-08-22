@@ -180,11 +180,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   private notifySubscribers(listeners: Listener[], eventName: string, value: { [key: string]: unknown }) {
     for (const listener of listeners) listener()
 
-    const details = {
-      detail: {
-        ...value, providerName: this.providerName,
-      },
-    }
+    const details = { detail: { ...value, providerName: this.providerName } }
 
     // Allow anyone to listen for changes
     window.dispatchEvent(new CustomEvent(eventName, details))

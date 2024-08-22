@@ -8,11 +8,7 @@ import { EthAccountButton } from './EthAccountButton.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: EthAccountButton,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'crypto/EthAccount/Button',
 } as Meta<typeof EthAccountButton>
 

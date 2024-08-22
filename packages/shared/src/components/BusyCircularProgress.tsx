@@ -28,9 +28,7 @@ const BusyCircularProgress: React.FC<BusyCircularProgressProps> = ({
       justifyContent="center"
       alignItems="center"
       overflow="hidden"
-      style={{
-        borderRadius: rounded ? theme.shape.borderRadius : 0, ...style,
-      }}
+      style={{ borderRadius: rounded ? theme.shape.borderRadius : 0, ...style }}
     >
       <CircularProgress size={size} {...props} />
     </Box>

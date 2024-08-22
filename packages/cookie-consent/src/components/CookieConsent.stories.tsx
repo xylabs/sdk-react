@@ -41,23 +41,15 @@ const TemplateWithoutContext: StoryFn<typeof CookieConsent> = (args) => {
 }
 
 const WithContext = TemplateWithContext.bind({})
-WithContext.args = {
-  title: 'With Context',
-}
+WithContext.args = { title: 'With Context' }
 
 const WithoutContext = TemplateWithoutContext.bind({})
-WithoutContext.args = {
-  title: 'Without Context',
-}
+WithoutContext.args = { title: 'Without Context' }
 
 const StorybookEntry = {
   argTypes: {},
   component: CookieConsent,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'cookie-consent/CookieConsent',
 } as Meta<typeof CookieConsent>
 

@@ -20,9 +20,7 @@ export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({
       window.location.href = href
     } else {
       if (newPath !== pathname) {
-        navigate(newPath, {
-          replace: true, ...toOptions,
-        })
+        navigate(newPath, { replace: true, ...toOptions })
       }
     }
   })

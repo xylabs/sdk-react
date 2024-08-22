@@ -67,6 +67,4 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
   )
 }
 
-const StyledTypographyHeading = styled(Typography, { name: 'StyledTypographyHeading' })(() => ({
-  opacity: 0.7,
-}))
+const StyledTypographyHeading = styled(Typography, { name: 'StyledTypographyHeading' })(() => ({ opacity: 0.7 }))

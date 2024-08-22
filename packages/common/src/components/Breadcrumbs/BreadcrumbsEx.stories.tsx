@@ -7,11 +7,7 @@ import { BreadcrumbsEx } from './BreadcrumbsEx.tsx'
 const StorybookEntry = {
   argTypes: {},
   component: BreadcrumbsEx,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Components/BreadcrumbsEx',
 } as Meta<typeof BreadcrumbsEx>
 

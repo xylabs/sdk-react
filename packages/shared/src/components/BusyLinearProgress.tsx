@@ -27,9 +27,7 @@ const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({
       justifyContent="flex-start"
       alignItems="stretch"
       overflow="hidden"
-      style={{
-        borderRadius: rounded ? theme.shape.borderRadius : 0, ...style,
-      }}
+      style={{ borderRadius: rounded ? theme.shape.borderRadius : 0, ...style }}
     >
       <LinearProgress {...props} />
     </Box>

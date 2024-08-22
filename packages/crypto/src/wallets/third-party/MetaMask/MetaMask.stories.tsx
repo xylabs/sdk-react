@@ -12,11 +12,7 @@ const UseMetaMaskSBComponent = () => {
 const StorybookEntry = {
   argTypes: {},
   component: UseMetaMaskSBComponent,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'wallets/third-party/MetaMask',
 } as Meta<typeof UseMetaMaskSBComponent>
 

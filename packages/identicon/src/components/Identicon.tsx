@@ -97,9 +97,7 @@ export const Identicon: React.FC<IdenticonProps> = ({
             <canvas
               className={className}
               ref={canvas}
-              style={{
-                height: size, width: size,
-              }}
+              style={{ height: size, width: size }}
             />
           )
         : null}

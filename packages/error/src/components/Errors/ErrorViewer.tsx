@@ -5,9 +5,7 @@ import React from 'react'
 import type { ErrorViewerProps } from './ErrorViewerProps.ts'
 
 const ErrorViewer: React.FC<ErrorViewerProps> = (props) => {
-  const {
-    error, ...boxProps
-  } = props
+  const { error, ...boxProps } = props
   const theme = useTheme()
   return (
     <FlexCol color={theme.palette.error.main} {...boxProps}>

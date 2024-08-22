@@ -20,9 +20,7 @@ export const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({
     const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(`#${anchorId}`)
 
     if (anchor) {
-      anchor.scrollIntoView({
-        behavior: 'smooth', block: 'center',
-      })
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
   }
 

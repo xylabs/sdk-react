@@ -7,28 +7,14 @@ import { selectVariantForExperiment, useExperiments } from './useExperiment.ts'
 
 const View: React.FC = () => {
   useExperiments<ReactNode>('Storybook Test 2', [
-    {
-      name: 'a/legacy', weight: 33,
-    },
-    {
-      name: 'b/testing', weight: 33,
-    },
-    {
-      name: 'c/testing', weight: 33,
-    },
+    { name: 'a/legacy', weight: 33 },
+    { name: 'b/testing', weight: 33 },
+    { name: 'c/testing', weight: 33 },
   ])
-  const {
-    experimentName, selectVariant,
-  } = useExperiments<ReactNode>('Storybook Test 3', [
-    {
-      name: 'a/legacy', weight: 33,
-    },
-    {
-      name: 'b/testing', weight: 33,
-    },
-    {
-      name: 'c/testing', weight: 33,
-    },
+  const { experimentName, selectVariant } = useExperiments<ReactNode>('Storybook Test 3', [
+    { name: 'a/legacy', weight: 33 },
+    { name: 'b/testing', weight: 33 },
+    { name: 'c/testing', weight: 33 },
   ])
   const texts = {
     'a/legacy': <p>a</p>, 'b/testing': <p>b</p>, 'c/testing': <p>c</p>,
@@ -56,11 +42,7 @@ const WrappedView: React.FC = ({ ...props }) => (
 const StorybookEntry = {
   argTypes: {},
   component: WrappedView,
-  parameters: {
-    docs: {
-      page: null,
-    },
-  },
+  parameters: { docs: { page: null } },
   title: 'Hooks/useExperiments',
 } as Meta<typeof View>
 

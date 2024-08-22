@@ -7,9 +7,7 @@ import React, { useEffect, useState } from 'react'
 export interface RotationAnimationProps extends FlexBoxProps {
   rotation: number
 }
-export const RotationAnimation: React.FC<RotationAnimationProps> = ({
-  children, rotation,
-}) => {
+export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, rotation }) => {
   const [isRotated, setIsRotated] = useState(false)
   const [springs, api] = useSpring(() => ({
     backfaceVisibility: 'hidden',
@@ -24,21 +22,13 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({
   const handleHover = () => {
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     api.start({
-      from: {
-        rotate: '0deg',
-      },
-      to: {
-        rotate: `${rotation}deg`,
-      },
+      from: { rotate: '0deg' },
+      to: { rotate: `${rotation}deg` },
     })
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     api.start({
-      from: {
-        rotate: `${rotation}deg`,
-      },
-      to: {
-        rotate: '0deg',
-      },
+      from: { rotate: `${rotation}deg` },
+      to: { rotate: '0deg' },
     })
   }
 

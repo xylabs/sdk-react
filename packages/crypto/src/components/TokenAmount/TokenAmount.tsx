@@ -37,9 +37,7 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
 
   return (
     <ButtonEx
-      style={{
-        backgroundColor: statusColor, ...style,
-      }}
+      style={{ backgroundColor: statusColor, ...style }}
       variant="outlined"
       onClick={onButtonClick}
       {...props}

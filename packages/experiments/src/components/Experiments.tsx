@@ -116,9 +116,7 @@ const Experiments: React.FC<ExperimentsProps> = (props) => {
         saveExperimentsTestData(localStorageKey)
       }
       if (userEvents) {
-        forget(userEvents.testStarted({
-          name, variation: child.key,
-        }))
+        forget(userEvents.testStarted({ name, variation: child.key }))
       }
     }
 
