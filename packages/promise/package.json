@@ -1,18 +1,41 @@
 {
   "name": "@xylabs/react-promise",
+  "version": "4.0.3",
+  "description": "Common React library for all XY Labs projects that use React",
+  "keywords": [
+    "utility",
+    "typescript",
+    "react"
+  ],
+  "homepage": "https://xylabs.com",
+  "bugs": {
+    "url": "git+https://github.com/xylabs/sdk-react/issues",
+    "email": "support@xylabs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xylabs/sdk-react.git"
+  },
+  "license": "LGPL-3.0-only",
   "author": {
-    "email": "support@xylabs.com",
     "name": "XY Labs Development Team",
+    "email": "support@xylabs.com",
     "url": "https://xylabs.com"
   },
-  "bugs": {
-    "email": "support@xylabs.com",
-    "url": "git+https://github.com/xylabs/sdk-react/issues"
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/browser/index.d.ts",
+      "default": "./dist/browser/index.mjs"
+    },
+    "./package.json": "./package.json"
   },
+  "module": "./dist/browser/index.mjs",
+  "types": "dist/browser/index.d.ts",
   "workspaces": [
     "packages/*"
   ],
-  "description": "Common React library for all XY Labs projects that use React",
   "dependencies": {
     "async-mutex": "^0.5.0"
   },
@@ -20,9 +43,9 @@
     "@mui/material": "^5.16.7",
     "@storybook/react": "^8.2.9",
     "@types/react": "^18.3.4",
-    "@xylabs/delay": "^4.0.2",
-    "@xylabs/ts-scripts-yarn3": "^4.0.0-rc.30",
-    "@xylabs/tsconfig-react": "^4.0.0-rc.30",
+    "@xylabs/delay": "^4.0.9",
+    "@xylabs/ts-scripts-yarn3": "^4.0.7",
+    "@xylabs/tsconfig-react": "^4.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "storybook": "^8.2.9",
@@ -31,30 +54,7 @@
   "peerDependencies": {
     "react": "^18"
   },
-  "exports": {
-    ".": {
-      "types": "./dist/browser/index.d.ts",
-      "default": "./dist/browser/index.mjs"
-    },
-    "./package.json": "./package.json"
-  },
-  "types": "dist/browser/index.d.ts",
-  "module": "./dist/browser/index.mjs",
-  "homepage": "https://xylabs.com",
-  "keywords": [
-    "utility",
-    "typescript",
-    "react"
-  ],
-  "license": "LGPL-3.0-only",
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xylabs/sdk-react.git"
-  },
-  "sideEffects": false,
-  "version": "4.0.3",
-  "type": "module"
+  }
 }

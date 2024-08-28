@@ -11,6 +11,12 @@ import { Helmet } from 'react-helmet'
 
 import type { BasePageProps } from './BasePageProps.ts'
 
+const metaTagExists = (name: string) => {
+  return null !== document.querySelector(`meta[name="${name}"]`)
+}
+
+const xyoOgMetaName = 'xyo:og:image'
+
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,
   children,
@@ -21,13 +27,17 @@ const BasePage: React.FC<BasePageProps> = ({
   appBar,
   cookieConsent,
   hideAppBar,
+  metaServer,
   noindex = false,
   scrollToTopButton = false,
-  title,
+  title: titleProp,
   ...props
 }) => {
   const theme = useTheme()
   const scrollToTopAnchorId = 'scroll-to-top-anchor'
+  const {
+    pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage,
+  } = metaServer ?? {}
 
   return (
     <FlexCol
@@ -86,6 +96,18 @@ const BasePage: React.FC<BasePageProps> = ({
             </ScrollToTopButton>
           )
         : null}
+      <Helmet>
+        {/* Only write share image if one provided and not already set */}
+        {(metaTagExists('xyo:og:image'))
+          ? null
+          : (
+              shareImage ? <meta property={xyoOgMetaName} content={shareImage} /> : null
+            )}
+        {/* This is here to make sure we report that the page is done */}
+        {metaTagExists(pageCompleteMetaName)
+          ? null
+          : <meta property={pageCompleteMetaName} content="" />}
+      </Helmet>
     </FlexCol>
   )
 }

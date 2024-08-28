@@ -68,7 +68,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
           ? <Alert>Found window.ethereum</Alert>
           : null}
         <FlexRow justifyContent="start" gap={2}>
-          <Button variant="contained" onClick={() => forget(connectWallet?.() ?? Promise.resolve())}>
+          <Button variant="contained" onClick={() => forget(connectWallet?.() ?? Promise.resolve([]))}>
             Connect
           </Button>
           <Button disabled={!currentAccount} variant="contained" onClick={onSign}>
