@@ -39,6 +39,7 @@ const ExperimentsDebugger: React.FC = ({ ...props }) => {
         ]
 
         return (
+          // eslint-disable-next-line @eslint-react/no-duplicate-key
           <FlexCol key={`experiment-${name}`} alignItems="stretch" paddingX={4} marginBottom={4} {...props}>
             <FlexRow>
               {name}

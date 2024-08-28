@@ -52,7 +52,9 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
       setEvent(event.detail)
     }
 
+    // eslint-disable-next-line @eslint-react/web-api/no-leaked-event-listener
     window.addEventListener(AccountsChangedEventName, accountChangedListener)
+    // eslint-disable-next-line @eslint-react/web-api/no-leaked-event-listener
     window.addEventListener(ChainChangedEventName, chainChangedListener)
 
     return () => {
@@ -74,6 +76,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
           ? (
               <List>
                 {errorArray.map(([walletName, error]) => (
+                  // eslint-disable-next-line @eslint-react/no-duplicate-key
                   <ListItem key={walletName}>
                     {walletName}
                     {' '}

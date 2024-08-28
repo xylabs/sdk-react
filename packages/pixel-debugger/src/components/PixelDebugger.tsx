@@ -61,6 +61,7 @@ export const PixelDebugger: React.FC = () => {
                   }}
                 >
                   {events.map((e, index) => (
+                    // eslint-disable-next-line @eslint-react/no-duplicate-key
                     <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
                   ))}
                 </FlexCol>
