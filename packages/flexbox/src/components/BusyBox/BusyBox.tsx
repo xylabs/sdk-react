@@ -18,7 +18,6 @@ const BusyBox = forwardRef<unknown, BusyBoxProps>(
     {
       background,
       children,
-      component,
       busyVariant = 'circular',
       busySize,
       busyOpacity = 0.85,
@@ -38,7 +37,7 @@ const BusyBox = forwardRef<unknown, BusyBoxProps>(
 
     return (
       <Box
-        component={paper ? Paper : component}
+        component={paper ? Paper : 'div'}
         position="relative"
         style={
           background
