@@ -104,7 +104,7 @@ const BasePage: React.FC<BasePageProps> = ({
               shareImage ? <meta property={xyoOgMetaName} content={shareImage} /> : null
             )}
         {/* This is here to make sure we report that the page is done */}
-        {metaTagExists(pageCompleteMetaName)
+        {(pageCompleteMetaName !== 'xyo:og:image' && metaTagExists(pageCompleteMetaName))
           ? null
           : <meta property={pageCompleteMetaName} content="" />}
       </Helmet>
