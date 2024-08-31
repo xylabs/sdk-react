@@ -25,6 +25,13 @@ Default.args = {
   title: 'Default',
 }
 
-export { Default }
+const WithShareImage = Template.bind({})
+WithShareImage.args = {
+  appBar: <AppBar />,
+  title: 'WithShareImage',
+  metaServer: { shareImage: 'https://via.placeholder.com/1200x630' },
+}
+
+export { Default, WithShareImage }
 
 export default StorybookEntry

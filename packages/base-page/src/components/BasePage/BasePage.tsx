@@ -11,10 +11,6 @@ import { Helmet } from 'react-helmet'
 
 import type { BasePageProps } from './BasePageProps.ts'
 
-const metaTagExists = (name: string) => {
-  return null !== document.querySelector(`meta[name="${name}"]`)
-}
-
 const xyoOgMetaName = 'xyo:og:image'
 
 const BasePage: React.FC<BasePageProps> = ({
@@ -97,14 +93,11 @@ const BasePage: React.FC<BasePageProps> = ({
           )
         : null}
       <Helmet>
-        {/* Only write share image if one provided and not already set */}
-        {(metaTagExists('xyo:og:image'))
-          ? null
-          : (
-              shareImage ? <meta property={xyoOgMetaName} content={shareImage} /> : null
-            )}
+        {shareImage
+          ? <meta property={xyoOgMetaName} content={shareImage} />
+          : null}
         {/* This is here to make sure we report that the page is done */}
-        {(pageCompleteMetaName !== 'xyo:og:image' && metaTagExists(pageCompleteMetaName))
+        {((xyoOgMetaName === pageCompleteMetaName) && shareImage)
           ? null
           : <meta property={pageCompleteMetaName} content="" />}
       </Helmet>
