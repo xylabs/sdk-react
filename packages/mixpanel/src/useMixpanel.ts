@@ -3,10 +3,14 @@ import { useContext } from 'react'
 
 import { MixpanelContext } from './Context.ts'
 
-export const useMixpanel = (): Mixpanel | undefined => {
+export const useMixpanel = (required: boolean | 'warn' = 'warn'): Mixpanel | undefined => {
   const { mixpanel } = useContext(MixpanelContext) ?? {}
   if (!mixpanel) {
-    console.warn('No Mixpanel instance found in context')
+    if (required === 'warn') {
+      console.warn('No Mixpanel instance found in context')
+    } else if (required === true) {
+      throw new Error('No Mixpanel instance found in context')
+    }
   }
   return mixpanel
 }
