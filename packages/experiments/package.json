@@ -42,11 +42,10 @@
     "@xylabs/pixel": "^2.0.1",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
-    "@xylabs/react-shared": "workspace:^",
-    "axios": "^1.7.5"
+    "@xylabs/react-shared": "workspace:^"
   },
   "devDependencies": {
-    "@mui/material": "^6.0.1",
+    "@mui/material": "^6.0.2",
     "@storybook/react": "^8.2.9",
     "@types/react": "^18.3.5",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",

@@ -37,8 +37,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@mui/icons-material": "^6.0.1",
-    "@mui/material": "^6.0.1",
+    "@mui/material": "^6.0.2",
     "@types/react": "^18.3.5",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",

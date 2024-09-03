@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-button",
+  "name": "@xylabs/react-mixpanel",
   "version": "4.1.2",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
@@ -38,24 +38,18 @@
   ],
   "dependencies": {
     "@xylabs/react-shared": "workspace:^",
-    "react-router-dom": "^6.26.1"
+    "mixpanel-browser": "^2.55.1"
   },
   "devDependencies": {
-    "@mui/material": "^6.0.2",
-    "@storybook/react": "^8.2.9",
+    "@types/mixpanel-browser": "^2.50.0",
     "@types/react": "^18.3.5",
-    "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "storybook": "^8.2.9",
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "@mui/material": ">5",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18"
   },
   "publishConfig": {
     "access": "public"

@@ -41,7 +41,7 @@
     "md5": "^2.3.0"
   },
   "devDependencies": {
-    "@mui/material": "^6.0.1",
+    "@mui/material": "^6.0.2",
     "@types/md5": "^2.3.5",
     "@types/react": "^18.3.5",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
@@ -52,7 +52,8 @@
   },
   "peerDependencies": {
     "@mui/material": ">5",
-    "react": "^18"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "publishConfig": {
     "access": "public"
