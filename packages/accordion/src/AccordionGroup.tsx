@@ -36,7 +36,6 @@ export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedI
   return (
     <>
       {data?.map((item, index) => (
-        // eslint-disable-next-line @eslint-react/no-duplicate-key
         <SimpleAccordion key={index} {...item} expanded={index === expandedIndex} onChange={() => setExpandedIndex(index)} />
       ))}
     </>

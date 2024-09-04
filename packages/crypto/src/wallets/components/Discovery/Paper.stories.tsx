@@ -76,7 +76,6 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
           ? (
               <List>
                 {errorArray.map(([walletName, error]) => (
-                  // eslint-disable-next-line @eslint-react/no-duplicate-key
                   <ListItem key={walletName}>
                     {walletName}
                     {' '}

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 
 import { UserEventsContext } from '../contexts/index.ts'
 
-export function useUserEvents<T>(): UserEventHandler<T>
+export function useUserEvents<T>(): UserEventHandler<T> | undefined
 export function useUserEvents<T>(required: true): UserEventHandler<T>
 export function useUserEvents<T>(required?: false | 'warn'): UserEventHandler<T> | undefined
 export function useUserEvents<T>(required: boolean | 'warn' = 'warn'): UserEventHandler<T> | undefined {
@@ -15,5 +15,5 @@ export function useUserEvents<T>(required: boolean | 'warn' = 'warn'): UserEvent
       throw new Error('No UserEvents instance found in context')
     }
   }
-  return userEvents as UserEventHandler<T> | undefined
+  return userEvents
 }

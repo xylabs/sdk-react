@@ -43,7 +43,7 @@ export const BreadcrumbsEx: React.FC<BreadcrumbsExProps> = ({
           <Link
             title={index > 0 ? titles?.[index - 1] : 'COIN'}
             color={index === pathParts.length - 1 ? 'textPrimary' : 'inherit'}
-            // eslint-disable-next-line @eslint-react/no-duplicate-key
+
             key={path}
             component={RouteLink}
             to={path}

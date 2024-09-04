@@ -3,6 +3,7 @@ import { useContext } from 'react'
 
 import { MixpanelContext } from './Context.ts'
 
+export function useMixpanel(): Mixpanel | undefined
 export function useMixpanel(required: true): Mixpanel
 export function useMixpanel(required?: false | 'warn'): Mixpanel | undefined
 export function useMixpanel(required: boolean | 'warn' = 'warn'): Mixpanel | undefined {

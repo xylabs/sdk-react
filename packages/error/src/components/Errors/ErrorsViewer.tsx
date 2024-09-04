@@ -13,7 +13,6 @@ const ErrorsViewer: React.FC<ErrorsViewerProps> = (props) => {
   return (
     <FlexGrowCol padding={1} {...boxProps}>
       {errors?.map((error, index) => {
-        // eslint-disable-next-line @eslint-react/no-duplicate-key
         return <ErrorViewer error={error} key={index} />
       })}
       {onRetry

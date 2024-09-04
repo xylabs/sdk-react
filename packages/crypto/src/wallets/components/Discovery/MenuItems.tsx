@@ -21,7 +21,6 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
   return (
     discoveredWallets
       ? Object.values(discoveredWallets).map((eip6963Connector, index) => (
-        // eslint-disable-next-line @eslint-react/no-duplicate-key
         <WalletDiscoveryMenuItem key={index} ethWalletConnector={eip6963Connector} onClick={() => onWalletSelect?.(eip6963Connector)} {...props} />
       ))
       : suppressNoWalletsWarning

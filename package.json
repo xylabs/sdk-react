@@ -70,6 +70,7 @@
     "@xylabs/react-identicon": "workspace:^",
     "@xylabs/react-invertible-theme": "workspace:^",
     "@xylabs/react-link": "workspace:^",
+    "@xylabs/react-mixpanel": "workspace:^",
     "@xylabs/react-number-status": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-pixel-debugger": "workspace:^",
