@@ -51,7 +51,7 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
     }
   }
   return to
-    ? <LinkToEx ref={ref} to={to} target={target} onClick={localOnClick} {...props} />
+    ? <LinkToEx ref={ref} to={to} target={target} onClick={onClick} {...props} />
     : <Link ref={ref} href={href} target={target} onClick={localOnClick} {...props} />
 })
 
