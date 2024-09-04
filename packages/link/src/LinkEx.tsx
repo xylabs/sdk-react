@@ -22,14 +22,12 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   const userEvents = useUserEvents()
   const mixpanel = useMixpanel(false)
   const localOnClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    const callOnClickAndFollowHref = () => {
+    // we do this crazy navigate thing so that we can set it up outside the promise so that safari does not block it
+    const windowToNavigate = () => (target && href) ? window.open('', target) ?? window : window
+    const callOnClickAndFollowHref = (windowToNav = windowToNavigate()) => {
       onClick?.(event)
       if (href) {
-        if (target) {
-          window.open(href, target)
-        } else {
-          window.location.href = href
-        }
+        windowToNav.location.href = href
       }
     }
     if (!disableMixpanel && mixpanel) {
@@ -40,11 +38,12 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
     }
     if (!disableUserEvents && userEvents) {
       event.preventDefault()
+      const windowToNav = windowToNavigate()
       userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
-        callOnClickAndFollowHref()
+        callOnClickAndFollowHref(windowToNav)
       }).catch((ex) => {
         console.error('User event failed', eventName, ex)
-        callOnClickAndFollowHref()
+        callOnClickAndFollowHref(windowToNav)
       })
     } else {
       callOnClickAndFollowHref()
