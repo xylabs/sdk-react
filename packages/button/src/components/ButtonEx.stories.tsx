@@ -38,8 +38,19 @@ BusyCircular.args = { busy: true, busyVariant: 'circular' }
 const BusyLinear = DefaultTemplate.bind({})
 BusyLinear.args = { busy: true, busyVariant: 'linear' }
 
+const Href = DefaultTemplate.bind({})
+Href.args = { href: 'https://xylabs.com' }
+
+const HrefTarget = DefaultTemplate.bind({})
+HrefTarget.args = { href: 'https://xylabs.com', target: '_blank' }
+
+const HrefTargetOnClick = DefaultTemplate.bind({})
+HrefTargetOnClick.args = {
+  href: 'https://xylabs.com', target: '_blank', onClick: () => console.log('Clicked'),
+}
+
 export {
-  BusyCircular, BusyLinear, Default,
+  BusyCircular, BusyLinear, Default, Href, HrefTarget, HrefTargetOnClick,
 }
 
 export default StorybookEntry
