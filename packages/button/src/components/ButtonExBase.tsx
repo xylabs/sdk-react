@@ -10,13 +10,13 @@ import React, { forwardRef } from 'react'
 import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
-  eventName = 'Click', funnel, placement, disableUserEvents, href, disableMixpanel, ...props
+  eventName = 'Button Click', funnel, target, placement, disableUserEvents, href, disableMixpanel, ...props
 }, ref) => {
   const theme = useTheme()
   const userEvents = useUserEvents()
   const mixpanel = useMixpanel(false)
   const {
-    target, busy, busyVariant = 'linear', busyOpacity, onClick, children, ...rootProps
+    busy, busyVariant = 'linear', busyOpacity, onClick, children, ...rootProps
   } = mergeBoxlikeStyles<ButtonExProps>(theme, props)
 
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -27,7 +27,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
       if (!disableMixpanel && mixpanel) {
         mixpanel.track(eventName, {
           funnel,
-          placement,
+          placement: placement ?? rootProps['aria-label'] ?? event.currentTarget.textContent,
         })
       }
       if (!disableUserEvents && userEvents) {
@@ -53,7 +53,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
   }
 
   return (
-    <Button ref={ref} href={href} onClick={localOnClick} {...rootProps}>
+    <Button ref={ref} href={href} onClick={localOnClick} target={target} {...rootProps}>
       {busy && busyVariant === 'linear'
         ? <BusyLinearProgress rounded opacity={busyOpacity ?? 0} />
         : null}

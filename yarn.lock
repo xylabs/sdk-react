@@ -5270,6 +5270,8 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@types/react": "npm:^18.3.5"
+    "@xylabs/react-mixpanel": "workspace:^"
+    "@xylabs/react-pixel": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.7"
     "@xylabs/tsconfig-react": "npm:^4.0.7"
     react: "npm:^18.3.1"
