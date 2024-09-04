@@ -70,7 +70,7 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
             </Link>
             {' to analyze traffic and for ads measurement purposes.'}
           </Typography>
-          <ButtonEx variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
+          <ButtonEx disableMixpanel disableUserEvents variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
             Accept
           </ButtonEx>
         </FlexRow>
