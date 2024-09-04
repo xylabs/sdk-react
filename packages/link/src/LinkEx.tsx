@@ -22,6 +22,16 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   const userEvents = useUserEvents()
   const mixpanel = useMixpanel(false)
   const localOnClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    const callOnClickAndFollowHref = () => {
+      onClick?.(event)
+      if (href) {
+        if (target) {
+          window.open(href, target)
+        } else {
+          window.location.href = href
+        }
+      }
+    }
     if (!disableMixpanel && mixpanel) {
       mixpanel.track(eventName, {
         funnel,
@@ -29,16 +39,6 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
       })
     }
     if (!disableUserEvents && userEvents) {
-      const callOnClickAndFollowHref = () => {
-        onClick?.(event)
-        if (href) {
-          if (target) {
-            window.open(href, target)
-          } else {
-            window.location.href = href
-          }
-        }
-      }
       event.preventDefault()
       userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
         callOnClickAndFollowHref()
@@ -46,6 +46,8 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
         console.error('User event failed', eventName, ex)
         callOnClickAndFollowHref()
       })
+    } else {
+      callOnClickAndFollowHref()
     }
   }
   return to

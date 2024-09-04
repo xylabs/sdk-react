@@ -22,7 +22,7 @@ export const selectVariantForExperiment = <T>(name: string, variants: Record<str
 }
 
 export const useExperiments = <T>(name: string, experiments: VariantData[]) => {
-  const [activeExperiment] = useState(() => ExperimentsHelper.calculateExperiment(name, true, experiments, useUserEvents()))
+  const [activeExperiment] = useState(() => ExperimentsHelper.calculateExperiment(name, true, experiments, useUserEvents(true)))
 
   return {
     experimentName: name,

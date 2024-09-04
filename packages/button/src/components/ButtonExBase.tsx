@@ -24,6 +24,16 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
       // If it is busy, do not allow href clicks
       event.preventDefault()
     } else {
+      const callOnClickAndFollowHref = () => {
+        onClick?.(event)
+        if (href) {
+          if (target) {
+            window.open(href, target)
+          } else {
+            window.location.href = href
+          }
+        }
+      }
       if (!disableMixpanel && mixpanel) {
         mixpanel.track(eventName, {
           funnel,
@@ -31,16 +41,6 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
         })
       }
       if (!disableUserEvents && userEvents) {
-        const callOnClickAndFollowHref = () => {
-          onClick?.(event)
-          if (href) {
-            if (target) {
-              window.open(href, target)
-            } else {
-              window.location.href = href
-            }
-          }
-        }
         event.preventDefault()
         userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
           callOnClickAndFollowHref()
@@ -48,6 +48,8 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
           console.error('User event failed', eventName, ex)
           callOnClickAndFollowHref()
         })
+      } else {
+        callOnClickAndFollowHref()
       }
     }
   }
