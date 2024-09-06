@@ -37,20 +37,28 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.0.9",
-    "@xylabs/delay": "^4.0.9",
-    "@xylabs/pixel": "^2.0.1",
+    "@xylabs/assert": "^4.0.10",
+    "@xylabs/delay": "^4.0.10",
+    "@xylabs/object": "^4.0.10",
+    "@xylabs/pixel": "^2.0.4",
     "query-string": "^9.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.5",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
+    "mixpanel-browser": "^2.55.1",
     "react": "^18.3.1",
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
+    "mixpanel-browser": "^2.55.1",
     "react": "^18"
+  },
+  "peerDependenciesMeta": {
+    "mixpanel-browser": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"

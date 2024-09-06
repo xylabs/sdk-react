@@ -1,5 +1,7 @@
+import type { EmptyObject } from '@xylabs/object'
+
 import { XyBaseEvent } from './BaseEvent.ts'
 
-class XyCustomEvent<T extends Record<string, unknown>> extends XyBaseEvent<T> {}
+class XyCustomEvent<T extends EmptyObject> extends XyBaseEvent<T> {}
 
 export { XyCustomEvent }

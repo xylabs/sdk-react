@@ -1,17 +1,25 @@
+import { type EmptyObject } from '@xylabs/object'
 import type {
-  FunnelStartedFields, UserClickFields, UserEventHandler, ViewContentFields,
+  FunnelStartedFields, PurchaseFields,
+  TestStartedFields,
+  UserClickFields, UserEventHandler, ViewContentFields,
 } from '@xylabs/pixel'
 
 import { XyCustomEvent } from './CustomEvent.ts'
 
-class XyUserEventHandler<T extends Record<string, unknown>> implements UserEventHandler<T> {
+class XyUserEventHandler<T extends EmptyObject> implements UserEventHandler<T> {
   async funnelStarted(data: FunnelStartedFields | T) {
     const event = new XyCustomEvent<FunnelStartedFields | T>('FunnelStarted')
     return await event.send(data)
   }
 
-  async testStarted(data: T) {
-    const event = new XyCustomEvent<T>('TestStarted')
+  async purchase(data: PurchaseFields | T) {
+    const event = new XyCustomEvent<PurchaseFields | T>('TestStarted')
+    return await event.send(data)
+  }
+
+  async testStarted(data: TestStartedFields | T) {
+    const event = new XyCustomEvent<TestStartedFields | T>('TestStarted')
     return await event.send(data)
   }
 

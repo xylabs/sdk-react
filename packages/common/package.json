@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.0.9",
+    "@xylabs/assert": "^4.0.10",
     "@xylabs/react-base-page": "workspace:^",
     "@xylabs/react-error": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",

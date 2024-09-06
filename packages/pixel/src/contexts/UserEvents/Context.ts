@@ -1,8 +1,9 @@
+import type { EmptyObject } from '@xylabs/object'
 import type { UserEventHandler } from '@xylabs/pixel'
 import { createContext } from 'react'
 
-export interface UserEventsProps {
-  userEvents?: UserEventHandler<unknown>
+export interface UserEventsProps<T extends EmptyObject = EmptyObject> {
+  userEvents?: UserEventHandler<T>
 }
 export const UserEventsContext = createContext<UserEventsProps>({})
 

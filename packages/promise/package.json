@@ -43,7 +43,7 @@
     "@mui/material": "^6.0.2",
     "@storybook/react": "^8.2.9",
     "@types/react": "^18.3.5",
-    "@xylabs/delay": "^4.0.9",
+    "@xylabs/delay": "^4.0.10",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
     "react": "^18.3.1",

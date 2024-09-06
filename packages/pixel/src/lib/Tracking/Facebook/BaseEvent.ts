@@ -1,9 +1,10 @@
 import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
+import type { EmptyObject } from '@xylabs/object'
 
 import { Fbq } from './Fbq.ts'
 
-class FacebookBaseEvent<T> {
+class FacebookBaseEvent<TData extends EmptyObject = EmptyObject> {
   fbq: Fbq
   name: string
 
@@ -12,7 +13,7 @@ class FacebookBaseEvent<T> {
     this.fbq = assertEx(Fbq.instance, () => 'Missing Fbq')
   }
 
-  async send(_data: T) {
+  async send<T extends TData>(_data: T) {
     await delay(0) // force async to increase reporting odds
   }
 }

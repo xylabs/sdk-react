@@ -1,12 +1,13 @@
+import type { EmptyObject } from '@xylabs/object'
 import type { UserEventHandler } from '@xylabs/pixel'
 import { useContext } from 'react'
 
 import { UserEventsContext } from '../contexts/index.ts'
 
-export function useUserEvents<T>(): UserEventHandler<T> | undefined
-export function useUserEvents<T>(required: true): UserEventHandler<T>
-export function useUserEvents<T>(required?: false | 'warn'): UserEventHandler<T> | undefined
-export function useUserEvents<T>(required: boolean | 'warn' = 'warn'): UserEventHandler<T> | undefined {
+export function useUserEvents<T extends EmptyObject>(): UserEventHandler<T> | undefined
+export function useUserEvents<T extends EmptyObject>(required: true): UserEventHandler<T>
+export function useUserEvents<T extends EmptyObject>(required?: false | 'warn'): UserEventHandler<T> | undefined
+export function useUserEvents<T extends EmptyObject>(required: boolean | 'warn' = 'warn'): UserEventHandler<T> | undefined {
   const { userEvents } = useContext(UserEventsContext)
   if (!userEvents) {
     if (required === 'warn') {

@@ -1,6 +1,6 @@
 import { forget } from '@xylabs/forget'
 import type { Log } from '@xylabs/log'
-import type { UserEventHandler } from '@xylabs/pixel'
+import type { TestStartedFields, UserEventHandler } from '@xylabs/pixel'
 import type { UserEventsProps } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 
@@ -52,7 +52,7 @@ const ExperimentsHelper = {
         ExperimentsHelper.saveExperimentsTestData(localStorageKey)
       }
       if (userEvents && firstTime) {
-        forget(userEvents.testStarted({ name, variation: variant.name }))
+        forget(userEvents.testStarted({ name, variation: variant.name } as TestStartedFields))
       }
       return variant
     }

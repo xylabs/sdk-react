@@ -1,3 +1,4 @@
+import type { JsonObject } from '@xylabs/object'
 import { XyPixel } from '@xylabs/pixel'
 import { useEffect, useState } from 'react'
 
@@ -8,7 +9,7 @@ export const usePixelAltSendHandler = (altHandler: (event: string, fields?: Reco
       const oldHandler = XyPixel.instance.send.bind(XyPixel.instance)
       setPixelSend(oldHandler)
     } else {
-      XyPixel.instance.send = async (event: string, fields?: Record<string, unknown>, eventId?: string) => {
+      XyPixel.instance.send = async (event: string, fields?: JsonObject, eventId?: string) => {
         altHandler(event, fields)
         return await pixelSend?.(event, fields, eventId)
       }
