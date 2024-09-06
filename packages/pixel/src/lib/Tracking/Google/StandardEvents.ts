@@ -1,3 +1,5 @@
+import type { EmptyObject } from '@xylabs/object'
+
 import { GoogleStandardEvent } from './StandardEvent.ts'
 
 export interface GoogleBaseProperties extends Record<string, unknown> {
@@ -108,7 +110,7 @@ export interface GoogleRefundProperties extends GoogleValueProperties, GoogleIte
   transaction_id?: string
 }
 
-export class GoogleStandardEvents<T extends Record<string, unknown>> {
+export class GoogleStandardEvents<T extends EmptyObject> {
   addPaymentInfo() {
     return new GoogleStandardEvent<GoogleBaseProperties | GoogleAddPaymentInfoProperties | T>('add_paymennt_info')
   }

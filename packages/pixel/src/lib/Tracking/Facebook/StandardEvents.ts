@@ -1,3 +1,5 @@
+import type { EmptyObject } from '@xylabs/object'
+
 import { FacebookStandardEvent } from './StandardEvent.ts'
 
 export interface FacebookContentsItem {
@@ -59,7 +61,7 @@ export interface FacebookSubscribe extends FacebookValueProperties {
 
 export type FacebookViewContent = FacebookCartProperties
 
-export class FacebookStandardEvents<T extends Record<string, unknown>> {
+export class FacebookStandardEvents<T extends EmptyObject> {
   addPaymentInfo() {
     return new FacebookStandardEvent<FacebookAddPaymentInfo | T>('AddPaymentInfo')
   }
