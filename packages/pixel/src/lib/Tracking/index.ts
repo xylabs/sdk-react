@@ -1,6 +1,7 @@
 export * from './Drip/index.ts'
 export * from './Facebook/index.ts'
 export * from './Google/index.ts'
+export * from './Mixpanel/index.ts'
 export * from './Reddit/index.ts'
 export * from './Referrer.ts'
 export * from './Snapchat/index.ts'
