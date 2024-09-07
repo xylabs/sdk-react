@@ -41,12 +41,14 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
       if (!disableUserEvents && userEvents) {
         event.preventDefault()
         const windowToNav = windowToNavigate()
-        userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
-          callOnClickAndFollowHref(windowToNav)
-        }).catch((ex) => {
-          console.error('User event failed', eventName, ex)
-          callOnClickAndFollowHref(windowToNav)
-        })
+        if (href) {
+          userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
+            callOnClickAndFollowHref(windowToNav)
+          }).catch((ex) => {
+            console.error('User event failed', eventName, ex)
+            callOnClickAndFollowHref(windowToNav)
+          })
+        }
       } else {
         callOnClickAndFollowHref()
       }
