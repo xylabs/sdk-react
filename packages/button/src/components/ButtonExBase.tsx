@@ -48,7 +48,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
             console.error('User event failed', eventName, ex)
             callOnClickAndFollowHref(windowToNav)
           })
-        } 
+        }
         onClick?.(event)
       } else {
         callOnClickAndFollowHref()
