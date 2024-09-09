@@ -1,3 +1,4 @@
+import type { EmptyObject } from '@xylabs/object'
 import type {
   FunnelStartedFields, TestStartedFields, UserClickFields, ViewContentFields,
 } from '@xylabs/pixel'
@@ -6,8 +7,8 @@ import { UserEventHandler } from '@xylabs/pixel'
 import { FacebookUserEventHandler } from './Facebook/index.ts'
 import { GoogleUserEventHandler } from './Google/index.ts'
 
-class XyoUserEventHandler<T extends Record<string, unknown>> extends UserEventHandler<T> {
-  static instance: XyoUserEventHandler<Record<string, unknown>>
+class XyoUserEventHandler<T extends EmptyObject> extends UserEventHandler<T> {
+  static instance: XyoUserEventHandler<EmptyObject>
 
   protected handlers: UserEventHandler<T>[]
 
