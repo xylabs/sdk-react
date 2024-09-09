@@ -1,7 +1,7 @@
 import type { CardProps } from '@mui/material'
 import { Card } from '@mui/material'
 import { EthAddress } from '@xylabs/eth-address'
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import type { EIP6963Connector } from '../../third-party/index.ts'
 import { useEthWallet } from '../../third-party/index.ts'
@@ -20,7 +20,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
     = useEthWallet(ethWalletConnector)
   const [signResponse, setSignResponse] = useState<EthAddress>()
 
-  useEffect(() => {
+  useMemo(() => {
     setSignResponse(undefined)
   }, [signerAddress])
 

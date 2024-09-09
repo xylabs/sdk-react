@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from '@storybook/react'
 import { PixelApi, XyPixel } from '@xylabs/pixel'
 import type { BusyBoxProps } from '@xylabs/react-flexbox'
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import { PixelDebugger } from './PixelDebugger.tsx'
 import { PixelDebuggerProvider } from './PixelDebuggerProvider.tsx'
@@ -16,7 +16,7 @@ const StorybookEntry = {
 
 const Template: StoryFn<typeof PixelDebuggerToggle> = (args: BusyBoxProps) => {
   const [pixel, setPixel] = useState<XyPixel>()
-  useEffect(() => {
+  useMemo(() => {
     XyPixel.selectApi(new PixelApi('local'))
     setPixel(XyPixel.init('storybookPixel'))
   }, [])

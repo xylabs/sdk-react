@@ -5,9 +5,7 @@ import {
 import { EthAddress } from '@xylabs/eth-address'
 import { forget } from '@xylabs/forget'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import React, {
-  useEffect, useMemo, useState,
-} from 'react'
+import React, { useMemo, useState } from 'react'
 
 import type { EthWallet } from '../../wallets/index.ts'
 
@@ -31,7 +29,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
 }) => {
   const [signResponse, setSignResponse] = useState<EthAddress>()
 
-  useEffect(() => {
+  useMemo(() => {
     setSignResponse(undefined)
   }, [provider])
 
