@@ -10,6 +10,7 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   onClick,
   disableUserEvents,
   funnel,
+  intent,
   placement,
   target,
   href,
@@ -31,7 +32,7 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
       event.preventDefault()
       const windowToNav = windowToNavigate()
       userEvents.userClick({
-        elementName, funnel, placement,
+        elementName, funnel, intent, placement,
       }).then(() => {
         callOnClickAndFollowHref(windowToNav)
       }).catch((ex) => {

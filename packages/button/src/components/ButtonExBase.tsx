@@ -9,7 +9,7 @@ import React, { forwardRef } from 'react'
 import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
-  funnel, target, placement, disableUserEvents, href, ...props
+  funnel, intent, target, placement, disableUserEvents, href, ...props
 }, ref) => {
   const theme = useTheme()
   const userEvents = useUserEvents()
@@ -36,7 +36,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
         const windowToNav = windowToNavigate()
         if (href) {
           userEvents.userClick({
-            elementName, funnel, placement,
+            elementName, intent, funnel, placement,
           }).then(() => {
             callOnClickAndFollowHref(windowToNav)
           }).catch((ex) => {
