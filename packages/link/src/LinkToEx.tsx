@@ -1,5 +1,4 @@
 import { Link } from '@mui/material'
-import { useMixpanel } from '@xylabs/react-mixpanel'
 import { useUserEvents } from '@xylabs/react-pixel'
 import type { MouseEvent } from 'react'
 import React, { forwardRef } from 'react'
@@ -8,28 +7,23 @@ import { Link as RouterLink } from 'react-router-dom'
 import type { LinkExProps } from './LinkExProps.tsx'
 
 export const LinkToEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
-  eventName = 'Link Click',
+  intent,
   funnel,
   onClick,
   placement,
-  disableMixpanel,
   disableUserEvents,
   ...props
 }, ref) => {
   const userEvents = useUserEvents()
-  const mixpanel = useMixpanel(false)
   const localOnClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (!disableMixpanel && mixpanel) {
-      mixpanel.track(eventName, {
-        funnel,
-        placement: placement ?? props['aria-label'] ?? event.currentTarget.textContent,
-      })
-    }
     if (!disableUserEvents && userEvents) {
-      userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
+      const elementName = props['aria-label'] ?? event.currentTarget.textContent
+      userEvents.userClick({
+        elementName, funnel, intent, placement,
+      }).then(() => {
         onClick?.(event)
       }).catch((ex) => {
-        console.error('User event failed', eventName, ex)
+        console.error('User event failed', elementName, funnel, placement, ex)
         onClick?.(event)
       })
     } else {
