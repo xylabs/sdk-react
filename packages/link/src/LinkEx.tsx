@@ -1,5 +1,4 @@
 import { Link } from '@mui/material'
-import { useMixpanel } from '@xylabs/react-mixpanel'
 import { useUserEvents } from '@xylabs/react-pixel'
 import type { MouseEvent } from 'react'
 import React, { forwardRef } from 'react'
@@ -9,9 +8,7 @@ import { LinkToEx } from './LinkToEx.tsx'
 
 export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   onClick,
-  disableMixpanel,
   disableUserEvents,
-  eventName = 'Link Click',
   funnel,
   placement,
   target,
@@ -20,7 +17,6 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   ...props
 }, ref) => {
   const userEvents = useUserEvents()
-  const mixpanel = useMixpanel(false)
   const localOnClick = (event: MouseEvent<HTMLAnchorElement>) => {
     // we do this crazy navigate thing so that we can set it up outside the promise so that safari does not block it
     const windowToNavigate = () => (target && href) ? window.open('', target) ?? window : window
@@ -30,19 +26,16 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
         windowToNav.location.href = href
       }
     }
-    if (!disableMixpanel && mixpanel) {
-      mixpanel.track(eventName, {
-        funnel,
-        placement: placement ?? props['aria-label'] ?? event.currentTarget.textContent,
-      })
-    }
     if (!disableUserEvents && userEvents) {
+      const elementName = props['aria-label'] ?? event.currentTarget.textContent
       event.preventDefault()
       const windowToNav = windowToNavigate()
-      userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
+      userEvents.userClick({
+        elementName, funnel, placement,
+      }).then(() => {
         callOnClickAndFollowHref(windowToNav)
       }).catch((ex) => {
-        console.error('User event failed', eventName, ex)
+        console.error('User event failed', elementName, funnel, placement, ex)
         callOnClickAndFollowHref(windowToNav)
       })
     } else {

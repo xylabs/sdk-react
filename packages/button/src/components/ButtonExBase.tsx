@@ -1,5 +1,4 @@
 import { Button, useTheme } from '@mui/material'
-import { useMixpanel } from '@xylabs/react-mixpanel'
 import { useUserEvents } from '@xylabs/react-pixel'
 import {
   BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles,
@@ -10,11 +9,10 @@ import React, { forwardRef } from 'react'
 import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
-  eventName = 'Button Click', funnel, target, placement, disableUserEvents, href, disableMixpanel, ...props
+  funnel, target, placement, disableUserEvents, href, ...props
 }, ref) => {
   const theme = useTheme()
   const userEvents = useUserEvents()
-  const mixpanel = useMixpanel(false)
   const {
     busy, busyVariant = 'linear', busyOpacity, onClick, children, ...rootProps
   } = mergeBoxlikeStyles<ButtonExProps>(theme, props)
@@ -24,6 +22,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
       // If it is busy, do not allow href clicks
       event.preventDefault()
     } else {
+      const elementName = props['aria-label'] ?? event.currentTarget.textContent
       // we do this crazy navigate thing so that we can set it up outside the promise so that safari does not block it
       const windowToNavigate = () => (target && href) ? window.open('', target) ?? window : window
       const callOnClickAndFollowHref = (windowToNav = windowToNavigate()) => {
@@ -32,20 +31,16 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
           windowToNav.location.href = href
         }
       }
-      if (!disableMixpanel && mixpanel) {
-        mixpanel.track(eventName, {
-          funnel,
-          placement: placement ?? rootProps['aria-label'] ?? event.currentTarget.textContent,
-        })
-      }
       if (!disableUserEvents && userEvents) {
         event.preventDefault()
         const windowToNav = windowToNavigate()
         if (href) {
-          userEvents.userClick({ elementName: eventName, elementType: placement }).then(() => {
+          userEvents.userClick({
+            elementName, funnel, placement,
+          }).then(() => {
             callOnClickAndFollowHref(windowToNav)
           }).catch((ex) => {
-            console.error('User event failed', eventName, ex)
+            console.error('User event failed', elementName, funnel, placement, ex)
             callOnClickAndFollowHref(windowToNav)
           })
         }

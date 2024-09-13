@@ -3,9 +3,7 @@ import type { BoxlikeComponentProps, BusyProps } from '@xylabs/react-shared'
 import type { NavigateOptions, To } from 'react-router-dom'
 
 interface ButtonExProps extends Omit<ButtonProps, 'ref'>, BoxlikeComponentProps, BusyProps {
-  disableMixpanel?: boolean
   disableUserEvents?: boolean
-  eventName?: string
   funnel?: string
   placement?: string
   target?: string
