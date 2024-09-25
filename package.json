@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/sdk-react",
-  "version": "4.2.13",
+  "version": "5.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -55,7 +55,6 @@
     ]
   },
   "dependencies": {
-    "@xylabs/pixel": "^2.0.4",
     "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-animation": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
@@ -112,7 +111,7 @@
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
-    "@xyo-network/react-theme": "^3.0.15",
+    "@xyo-network/react-theme": "^4.0.0-rc.1",
     "axios": "^1.7.7",
     "buffer": "^6.0.3",
     "eslint": "^9.10.0",
@@ -129,8 +128,8 @@
     "vite": "^5.4.3"
   },
   "peerDependencies": {
-    "@mui/icons-material": ">5",
-    "@mui/material": ">5",
+    "@mui/icons-material": "^6",
+    "@mui/material": "^6",
     "axios": "^1",
     "react": "^18",
     "react-dom": "^18",

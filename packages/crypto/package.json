@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-crypto",
-  "version": "4.2.13",
+  "version": "5.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -68,8 +68,8 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "@mui/icons-material": ">5",
-    "@mui/material": ">5",
+    "@mui/icons-material": "^6",
+    "@mui/material": "^6",
     "react": "^18",
     "react-dom": "^18"
   },

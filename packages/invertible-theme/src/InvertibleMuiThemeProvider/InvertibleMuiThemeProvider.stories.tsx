@@ -1,22 +1,22 @@
 import {
-  Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme,
+  Box, Button, ButtonGroup, Chip, createTheme, CssBaseline, Stack, Typography, useTheme,
 } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { DarkModeIconButtonForColorScheme } from '../Buttons/index.ts'
-import type { InvertibleCssVarsProviderProps } from './InvertibleCssVarsProvider.tsx'
-import { InvertibleCssVarsProvider } from './InvertibleCssVarsProvider.tsx'
+import { InvertibleMuiThemeProvider } from './InvertibleMuiThemeProvider.tsx'
+import type { InvertibleMuiThemeProviderProps } from './InvertibleMuiThemeProviderProps.ts'
 import { useColorSchemeEx } from './useColorSchemeEx.tsx'
 
 const StorybookEntry = {
   argTypes: {},
-  component: InvertibleCssVarsProvider,
+  component: InvertibleMuiThemeProvider,
   parameters: { docs: { page: null } },
-  title: 'invertible-theme/InvertibleCssVarsProvider',
-} as Meta<typeof InvertibleCssVarsProvider>
+  title: 'invertible-theme/InvertibleMuiThemeProvider',
+} as Meta<typeof InvertibleMuiThemeProvider>
 
-const Template: StoryFn<typeof InvertibleCssVarsProvider> = (args: InvertibleCssVarsProviderProps) => <InvertibleCssVarsProvider {...args} />
+const Template: StoryFn<typeof InvertibleMuiThemeProvider> = (args: InvertibleMuiThemeProviderProps) => <InvertibleMuiThemeProvider {...args} />
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
@@ -48,9 +48,8 @@ const ThemeEnabledComponent = () => {
         </Stack>
         <Box sx={{ backgroundColor: theme.palette.background.default }}>
           <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
-            <Typography variant="h3">
-              marginBottom of
-              {theme.spacing(4)}
+            <Typography sx={{ mb: 4 }} variant="h3">
+              Typography h4
             </Typography>
             <Typography variant="h4" color={theme.palette.primary.main}>
               Color:
@@ -69,7 +68,7 @@ const ThemeEnabledComponent = () => {
   )
 }
 
-const theme = extendTheme({
+const theme = createTheme({
   colorSchemes: {
     dark: {
       palette: {
@@ -99,6 +98,7 @@ const theme = extendTheme({
 const Default = Template.bind({})
 Default.args = {
   children: <ThemeEnabledComponent />,
+  theme,
   // defaultMode is 'system' color scheme preference
 }
 

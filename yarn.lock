@@ -4964,8 +4964,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -4985,7 +4985,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5007,7 +5007,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5055,8 +5055,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5070,7 +5070,6 @@ __metadata:
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.5"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-mixpanel": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.7"
@@ -5081,7 +5080,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5108,8 +5107,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5132,7 +5131,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5170,8 +5169,8 @@ __metadata:
     viem: "npm:^2.21.3"
     webextension-polyfill: "npm:^0.12.0"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5194,7 +5193,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5216,8 +5215,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5243,7 +5242,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5266,7 +5265,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5286,8 +5285,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5308,7 +5307,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5333,8 +5332,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5345,7 +5344,6 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@types/react": "npm:^18.3.5"
-    "@xylabs/react-mixpanel": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.7"
     "@xylabs/tsconfig-react": "npm:^4.0.7"
@@ -5354,7 +5352,7 @@ __metadata:
     react-router-dom: "npm:^6.26.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5395,7 +5393,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5422,7 +5420,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5506,8 +5504,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5553,7 +5551,7 @@ __metadata:
     react-router-dom: "npm:^6.26.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5571,7 +5569,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5594,7 +5592,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5630,7 +5628,6 @@ __metadata:
     "@typescript-eslint/parser": "npm:^8.4.0"
     "@xylabs/eslint-config-flat": "npm:^4.0.7"
     "@xylabs/eslint-config-react-flat": "npm:^4.0.7"
-    "@xylabs/pixel": "npm:^2.0.4"
     "@xylabs/react-accordion": "workspace:^"
     "@xylabs/react-animation": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"
@@ -5659,7 +5656,7 @@ __metadata:
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.7"
     "@xylabs/tsconfig": "npm:^4.0.7"
     "@xylabs/tsconfig-react": "npm:^4.0.7"
-    "@xyo-network/react-theme": "npm:^3.0.15"
+    "@xyo-network/react-theme": "npm:^4.0.0-rc.1"
     axios: "npm:^1.7.7"
     buffer: "npm:^6.0.3"
     eslint: "npm:^9.10.0"
@@ -5675,8 +5672,8 @@ __metadata:
     typescript: "npm:^5.5.4"
     vite: "npm:^5.4.3"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     axios: ^1
     react: ^18
     react-dom: ^18
@@ -5820,14 +5817,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xyo-network/react-theme@npm:^3.0.15":
-  version: 3.0.15
-  resolution: "@xyo-network/react-theme@npm:3.0.15"
+"@xyo-network/react-theme@npm:^4.0.0-rc.1":
+  version: 4.0.0-rc.1
+  resolution: "@xyo-network/react-theme@npm:4.0.0-rc.1"
   peerDependencies:
-    "@mui/material": ^5
+    "@mui/material": ^6
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/cb600cfe56cc7f281e6551d05f3496bec428ea4d42af39c4238c5d32c04858bee4cdfd725d42758fa15adbeabfc8e851c2558d4c7551c88f2cafac64a85d8df8
+  checksum: 10c0/32cf950c7c624ad3a47f6e36209b57ffbbe7ab1382e547aa674001e87f9be86d4d58a9f90f63232d6ba3e0f75c12296161407e23777b08ff0a073073294e34c6
   languageName: node
   linkType: hard
 

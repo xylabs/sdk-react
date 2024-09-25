@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-button",
-  "version": "4.2.13",
+  "version": "5.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -37,7 +37,6 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-mixpanel": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
     "react-router-dom": "^6.26.1"
@@ -55,7 +54,7 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "@mui/material": ">5",
+    "@mui/material": "^6",
     "react": "^18",
     "react-dom": "^18"
   },
