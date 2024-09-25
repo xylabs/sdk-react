@@ -40,11 +40,11 @@
     "@xylabs/assert": "^4.0.10",
     "@xylabs/delay": "^4.0.10",
     "@xylabs/object": "^4.0.10",
-    "@xylabs/pixel": "^2.0.4",
+    "@xylabs/pixel": "^2.0.6",
     "query-string": "^9.1.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.5",
+    "@types/react": "^18.3.9",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
     "mixpanel-browser": "^2.55.1",

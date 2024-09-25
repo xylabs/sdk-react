@@ -41,9 +41,9 @@
     "md5": "^2.3.0"
   },
   "devDependencies": {
-    "@mui/material": "^6.0.2",
+    "@mui/material": "^6.1.1",
     "@types/md5": "^2.3.5",
-    "@types/react": "^18.3.5",
+    "@types/react": "^18.3.9",
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
     "react": "^18.3.1",
