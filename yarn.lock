@@ -4964,8 +4964,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -4985,7 +4985,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5007,7 +5007,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5055,8 +5055,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5081,7 +5081,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5108,8 +5108,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5132,7 +5132,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5170,8 +5170,8 @@ __metadata:
     viem: "npm:^2.21.3"
     webextension-polyfill: "npm:^0.12.0"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5194,7 +5194,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5216,8 +5216,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5243,7 +5243,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5266,7 +5266,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5286,8 +5286,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5308,7 +5308,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5333,8 +5333,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5354,7 +5354,7 @@ __metadata:
     react-router-dom: "npm:^6.26.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5395,7 +5395,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5422,7 +5422,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5506,8 +5506,8 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5553,7 +5553,7 @@ __metadata:
     react-router-dom: "npm:^6.26.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5571,7 +5571,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5594,7 +5594,7 @@ __metadata:
     storybook: "npm:^8.2.9"
     typescript: "npm:^5.5.4"
   peerDependencies:
-    "@mui/material": ">5"
+    "@mui/material": ^6
     react: ^18
     react-dom: ^18
   languageName: unknown
@@ -5675,8 +5675,8 @@ __metadata:
     typescript: "npm:^5.5.4"
     vite: "npm:^5.4.3"
   peerDependencies:
-    "@mui/icons-material": ">5"
-    "@mui/material": ">5"
+    "@mui/icons-material": ^6
+    "@mui/material": ^6
     axios: ^1
     react: ^18
     react-dom: ^18
