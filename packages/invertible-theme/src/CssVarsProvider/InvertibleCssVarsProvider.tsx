@@ -1,12 +1,11 @@
+import type { Theme } from '@mui/material'
 import {
-  Experimental_CssVarsProvider as CssVarsProvider, responsiveFontSizes, useColorScheme,
+  createTheme,
+  responsiveFontSizes, ThemeProvider, useColorScheme,
 } from '@mui/material'
-// eslint-disable-next-line import-x/no-internal-modules
-import type {} from '@mui/material/themeCssVarsAugmentation'
-import type { ReactNode } from 'react'
-import React, { useEffect } from 'react'
+import React, { useEffect, useMemo } from 'react'
 
-import type { InvertibleCssVarsProviderInterface, Mode } from './InvertibleCssVars.ts'
+import type { InvertibleCssVarsProviderProps, Mode } from './InvertibleCssVarsProviderProps.ts'
 
 export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   const { setMode } = useColorScheme()
@@ -18,27 +17,22 @@ export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   return <></>
 }
 
-export interface InvertibleCssVarsProviderProps extends InvertibleCssVarsProviderInterface {
-  children?: ReactNode | undefined
-}
-
 export const InvertibleCssVarsProvider: React.FC<InvertibleCssVarsProviderProps> = ({
   children,
   defaultMode = 'system',
   noResponsiveFontSizes,
   theme,
 }) => {
-  const updatedTheme
-    = theme
-      ? noResponsiveFontSizes
-        ? theme
-        : responsiveFontSizes(theme)
-      : theme
+  const updatedTheme: Theme = useMemo(() => theme
+    ? noResponsiveFontSizes
+      ? theme
+      : responsiveFontSizes(theme)
+    : createTheme(), [noResponsiveFontSizes, theme])
 
   return (
-    <CssVarsProvider theme={updatedTheme} defaultMode={defaultMode}>
+    <ThemeProvider theme={updatedTheme}>
       <SyncMode {...(defaultMode ? { defaultMode } : {})} />
       {children}
-    </CssVarsProvider>
+    </ThemeProvider>
   )
 }

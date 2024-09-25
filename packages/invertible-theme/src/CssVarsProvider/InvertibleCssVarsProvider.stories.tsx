@@ -1,12 +1,12 @@
 import {
-  Box, Button, ButtonGroup, Chip, CssBaseline, experimental_extendTheme as extendTheme, Stack, Typography, useTheme,
+  Box, Button, ButtonGroup, Chip, createTheme, CssBaseline, Stack, Typography, useTheme,
 } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { DarkModeIconButtonForColorScheme } from '../Buttons/index.ts'
-import type { InvertibleCssVarsProviderProps } from './InvertibleCssVarsProvider.tsx'
 import { InvertibleCssVarsProvider } from './InvertibleCssVarsProvider.tsx'
+import type { InvertibleCssVarsProviderProps } from './InvertibleCssVarsProviderProps.ts'
 import { useColorSchemeEx } from './useColorSchemeEx.tsx'
 
 const StorybookEntry = {
@@ -48,9 +48,8 @@ const ThemeEnabledComponent = () => {
         </Stack>
         <Box sx={{ backgroundColor: theme.palette.background.default }}>
           <Box padding={3} border={`1px dotted ${theme.palette.divider}`}>
-            <Typography variant="h3">
-              marginBottom of
-              {theme.spacing(4)}
+            <Typography sx={{ mb: 4 }} variant="h3">
+              Typography h4
             </Typography>
             <Typography variant="h4" color={theme.palette.primary.main}>
               Color:
@@ -69,7 +68,7 @@ const ThemeEnabledComponent = () => {
   )
 }
 
-const theme = extendTheme({
+const theme = createTheme({
   colorSchemes: {
     dark: {
       palette: {
@@ -99,6 +98,7 @@ const theme = extendTheme({
 const Default = Template.bind({})
 Default.args = {
   children: <ThemeEnabledComponent />,
+  theme,
   // defaultMode is 'system' color scheme preference
 }
 
