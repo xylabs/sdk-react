@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-accordion",
-  "version": "5.0.0-rc.1",
+  "version": "5.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -61,6 +61,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "docs": "dist/docs.json",
-  "stableVersion": "4.2.13"
+  "docs": "dist/docs.json"
 }

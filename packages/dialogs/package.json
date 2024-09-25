@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-dialogs",
-  "version": "5.0.0-rc.1",
+  "version": "5.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -60,6 +60,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "stableVersion": "4.2.13"
+  }
 }
