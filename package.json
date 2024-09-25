@@ -112,7 +112,7 @@
     "@xylabs/ts-scripts-yarn3": "^4.0.7",
     "@xylabs/tsconfig": "^4.0.7",
     "@xylabs/tsconfig-react": "^4.0.7",
-    "@xyo-network/react-theme": "^3.0.15",
+    "@xyo-network/react-theme": "^4.0.0-rc.1",
     "axios": "^1.7.7",
     "buffer": "^6.0.3",
     "eslint": "^9.10.0",
