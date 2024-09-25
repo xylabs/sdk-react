@@ -136,7 +136,7 @@
     "react-dom": "^18",
     "react-helmet": "^6"
   },
-  "packageManager": "yarn@4.4.1",
+  "packageManager": "yarn@4.5.0",
   "volta": {
     "node": "22.3.0",
     "yarn": "4.3.1"
