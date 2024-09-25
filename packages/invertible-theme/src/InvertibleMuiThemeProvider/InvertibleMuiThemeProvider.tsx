@@ -5,7 +5,7 @@ import {
 } from '@mui/material'
 import React, { useEffect, useMemo } from 'react'
 
-import type { InvertibleCssVarsProviderProps, Mode } from './InvertibleCssVarsProviderProps.ts'
+import type { InvertibleMuiThemeProviderProps, Mode } from './InvertibleMuiThemeProviderProps.ts'
 
 export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   const { setMode } = useColorScheme()
@@ -17,7 +17,10 @@ export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
   return <></>
 }
 
-export const InvertibleCssVarsProvider: React.FC<InvertibleCssVarsProviderProps> = ({
+/**
+ * @deprecated - use InvertibleMuiThemeProvider
+ */
+export const InvertibleCssVarsProvider: React.FC<InvertibleMuiThemeProviderProps> = ({
   children,
   defaultMode = 'system',
   noResponsiveFontSizes,
@@ -36,3 +39,5 @@ export const InvertibleCssVarsProvider: React.FC<InvertibleCssVarsProviderProps>
     </ThemeProvider>
   )
 }
+
+export const InvertibleMuiThemeProvider = InvertibleCssVarsProvider

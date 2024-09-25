@@ -5,18 +5,18 @@ import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { DarkModeIconButtonForColorScheme } from '../Buttons/index.ts'
-import { InvertibleCssVarsProvider } from './InvertibleCssVarsProvider.tsx'
-import type { InvertibleCssVarsProviderProps } from './InvertibleCssVarsProviderProps.ts'
+import { InvertibleMuiThemeProvider } from './InvertibleMuiThemeProvider.tsx'
+import type { InvertibleMuiThemeProviderProps } from './InvertibleMuiThemeProviderProps.ts'
 import { useColorSchemeEx } from './useColorSchemeEx.tsx'
 
 const StorybookEntry = {
   argTypes: {},
-  component: InvertibleCssVarsProvider,
+  component: InvertibleMuiThemeProvider,
   parameters: { docs: { page: null } },
-  title: 'invertible-theme/InvertibleCssVarsProvider',
-} as Meta<typeof InvertibleCssVarsProvider>
+  title: 'invertible-theme/InvertibleMuiThemeProvider',
+} as Meta<typeof InvertibleMuiThemeProvider>
 
-const Template: StoryFn<typeof InvertibleCssVarsProvider> = (args: InvertibleCssVarsProviderProps) => <InvertibleCssVarsProvider {...args} />
+const Template: StoryFn<typeof InvertibleMuiThemeProvider> = (args: InvertibleMuiThemeProviderProps) => <InvertibleMuiThemeProvider {...args} />
 
 const ThemeEnabledComponent = () => {
   const theme = useTheme()

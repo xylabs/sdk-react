@@ -4,7 +4,7 @@ import type { ReactNode } from 'react'
 // Hopefully MUI will export these types
 export type Mode = 'light' | 'dark' | 'system'
 
-export interface InvertibleCssVarsProviderProps {
+export interface InvertibleMuiThemeProviderProps {
   children?: ReactNode
   defaultMode?: Mode
   noResponsiveFontSizes?: boolean

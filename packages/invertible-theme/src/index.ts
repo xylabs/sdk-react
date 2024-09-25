@@ -1,5 +1,5 @@
 export * from './Buttons/index.ts'
-export * from './CssVarsProvider/index.ts'
+export * from './InvertibleMuiThemeProvider/index.ts'
 export * from './InvertibleTheme.tsx'
 export * from './InvertibleThemeContext.tsx'
 export * from './InvertibleThemeProvider.tsx'
