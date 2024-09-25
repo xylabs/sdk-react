@@ -5070,7 +5070,6 @@ __metadata:
     "@storybook/react": "npm:^8.2.9"
     "@types/react": "npm:^18.3.5"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-mixpanel": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.7"
@@ -5345,7 +5344,6 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@types/react": "npm:^18.3.5"
-    "@xylabs/react-mixpanel": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.0.7"
     "@xylabs/tsconfig-react": "npm:^4.0.7"
@@ -5630,7 +5628,6 @@ __metadata:
     "@typescript-eslint/parser": "npm:^8.4.0"
     "@xylabs/eslint-config-flat": "npm:^4.0.7"
     "@xylabs/eslint-config-react-flat": "npm:^4.0.7"
-    "@xylabs/pixel": "npm:^2.0.4"
     "@xylabs/react-accordion": "workspace:^"
     "@xylabs/react-animation": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"

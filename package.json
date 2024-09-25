@@ -55,7 +55,6 @@
     ]
   },
   "dependencies": {
-    "@xylabs/pixel": "^2.0.4",
     "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-animation": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
