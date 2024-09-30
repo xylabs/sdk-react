@@ -33,6 +33,7 @@ export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: Rende
         if (refreshRate < (config?.maxRate ?? 1000)) {
           const error = new Error(`Spinning [${bounce.name}] [Rate=${refreshRate.toFixed(2)}ms, Samples=${spinCount}]`)
           console.warn(error.message)
+          // eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
           setError(error)
           if (!config?.noThrow) {
             throw error

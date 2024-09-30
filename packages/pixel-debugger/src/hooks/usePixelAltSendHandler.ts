@@ -7,6 +7,7 @@ export const usePixelAltSendHandler = (altHandler: (event: string, fields?: Reco
   useEffect(() => {
     if (!pixelSend && XyPixel.instance.send) {
       const oldHandler = XyPixel.instance.send.bind(XyPixel.instance)
+      // eslint-disable-next-line @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
       setPixelSend(oldHandler)
     } else {
       XyPixel.instance.send = async (event: string, fields?: JsonObject, eventId?: string) => {
