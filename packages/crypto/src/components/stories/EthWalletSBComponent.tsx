@@ -44,7 +44,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
   const localAddress = useMemo(() => currentAccount?.toString(), [currentAccount])
   return (
     <FlexCol alignItems="start" gap={2}>
-      {noIFrames && window.parent !== window
+      {noIFrames && globalThis.parent !== (globalThis as unknown as Window)
         ? (
             <Alert severity="warning">
               <AlertTitle>Must test outside of iframe</AlertTitle>
@@ -62,7 +62,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
           )
         : null}
       <FlexCol alignItems="start" gap={2}>
-        {window.ethereum
+        {globalThis.ethereum
           ? <Alert>Found window.ethereum</Alert>
           : null}
         <FlexRow justifyContent="start" gap={2}>

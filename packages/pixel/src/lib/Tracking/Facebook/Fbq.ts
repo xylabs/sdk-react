@@ -6,7 +6,7 @@ class Fbq {
 
   private constructor(pixelId: string) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = window as any
+    const global = globalThis as any
     this.pixelId = pixelId
 
     this.fbq = function () {

@@ -10,7 +10,7 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
   // Name of the Provider
   providerName = PROVIDER_NAME
 
-  private ethereum = window.ethereum as CoinbaseProvider | undefined
+  private ethereum = globalThis.ethereum as CoinbaseProvider | undefined
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'], undefined, PROVIDER_NAME)
@@ -24,8 +24,8 @@ export class CoinbaseConnector extends EthWalletConnectorBase {
   init(provider?: BrowserProvider) {
     if (provider) {
       this.provider = provider
-    } else if (window.ethereum) {
-      this.provider = new BrowserProvider(window.ethereum)
+    } else if (globalThis.ethereum) {
+      this.provider = new BrowserProvider(globalThis.ethereum)
     } else {
       console.warn(`Attempting to use ${this.providerName} class when its not installed`)
     }

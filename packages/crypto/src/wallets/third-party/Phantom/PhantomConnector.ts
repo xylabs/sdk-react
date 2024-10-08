@@ -10,7 +10,7 @@ export class PhantomConnector extends EthWalletConnectorBase {
   // Name of the Provider
   providerName = PROVIDER_NAME
 
-  private ethereum = window.phantom?.ethereum
+  private ethereum = globalThis.phantom?.ethereum
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'], undefined, PROVIDER_NAME)
@@ -18,14 +18,14 @@ export class PhantomConnector extends EthWalletConnectorBase {
   }
 
   get installed() {
-    return !!(window.phantom && window.phantom.ethereum.isPhantom)
+    return !!(globalThis.phantom && globalThis.phantom.ethereum.isPhantom)
   }
 
   init(provider?: BrowserProvider) {
     if (provider) {
       this.provider = provider
     } else if (this.ethereum) {
-      this.provider = new BrowserProvider(window.ethereum as Eip1193Provider)
+      this.provider = new BrowserProvider(globalThis.ethereum as Eip1193Provider)
     } else {
       console.warn(`Attempting to use ${this.providerName} class when its not installed`)
     }

@@ -15,7 +15,7 @@ interface Props {
 export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => {
   const { children } = props
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const global = window as any
+  const global = globalThis as any
   const ethereum = global.ethereum
   const [error, setError] = useState<Error>()
   const [localAddress, setLocalAddress] = useState<EthAddress>()

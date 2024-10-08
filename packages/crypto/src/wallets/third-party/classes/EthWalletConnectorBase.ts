@@ -183,7 +183,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     const details = { detail: { ...value, providerName: this.providerName } }
 
     // Allow anyone to listen for changes
-    window.dispatchEvent(new CustomEvent(eventName, details))
+    globalThis.dispatchEvent(new CustomEvent(eventName, details))
   }
 
   private async tryRpcSendCall<TReturn = unknown>(method: string, params = []): Promise<TReturn | undefined> {

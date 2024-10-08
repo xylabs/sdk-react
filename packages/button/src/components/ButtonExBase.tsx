@@ -24,7 +24,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
     } else {
       const elementName = props['aria-label'] ?? event.currentTarget.textContent
       // we do this crazy navigate thing so that we can set it up outside the promise so that safari does not block it
-      const windowToNavigate = () => (target && href) ? window.open('', target) ?? window : window
+      const windowToNavigate = () => (target && href) ? window.open('', target) ?? globalThis : globalThis
       const callOnClickAndFollowHref = (windowToNav = windowToNavigate()) => {
         onClick?.(event)
         if (href) {

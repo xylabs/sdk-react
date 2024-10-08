@@ -27,7 +27,7 @@ export class EthWalletConnections {
 
   onDestroy() {
     // eslint-disable-next-line unicorn/no-invalid-remove-event-listener
-    window.removeEventListener('eip6963:announceProvider', this.newWalletListener.bind(this))
+    globalThis.removeEventListener('eip6963:announceProvider', this.newWalletListener.bind(this))
   }
 
   removeWallet(wallet: EIP6963Connector) {
@@ -66,9 +66,9 @@ export class EthWalletConnections {
 
   private setupListeners() {
     // listen when providers announce themselves
-    window.addEventListener('eip6963:announceProvider', this.newWalletListener.bind(this))
+    globalThis.addEventListener('eip6963:announceProvider', this.newWalletListener.bind(this))
 
     // dispatch an event to ask all installed providers to identify themselves
-    window.dispatchEvent(new Event('eip6963:requestProvider'))
+    globalThis.dispatchEvent(new Event('eip6963:requestProvider'))
   }
 }

@@ -3,7 +3,7 @@ class EF {
 
   static getEF() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = window as any
+    const global = globalThis as any
     if (global.EF) {
       return global.EF
     }

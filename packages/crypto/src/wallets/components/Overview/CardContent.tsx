@@ -26,7 +26,7 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
       display: 'flex', flexDirection: 'column', gap: 2,
     }}
     >
-      {window.parent === window
+      {window.parent === globalThis as unknown as Window
         ? null
         : (
             <Alert severity="warning">

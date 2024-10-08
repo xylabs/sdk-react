@@ -53,13 +53,13 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
     }
 
     // eslint-disable-next-line @eslint-react/web-api/no-leaked-event-listener
-    window.addEventListener(AccountsChangedEventName, accountChangedListener)
+    globalThis.addEventListener(AccountsChangedEventName, accountChangedListener)
     // eslint-disable-next-line @eslint-react/web-api/no-leaked-event-listener
-    window.addEventListener(ChainChangedEventName, chainChangedListener)
+    globalThis.addEventListener(ChainChangedEventName, chainChangedListener)
 
     return () => {
-      window.removeEventListener(AccountsChangedEventName, accountChangedListener)
-      window.removeEventListener(ChainChangedEventName, chainChangedListener)
+      globalThis.removeEventListener(AccountsChangedEventName, accountChangedListener)
+      globalThis.removeEventListener(ChainChangedEventName, chainChangedListener)
     }
   }, [])
 

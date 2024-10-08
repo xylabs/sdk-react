@@ -7,13 +7,13 @@ class Gtm {
 
   private constructor(containerId: string) {
     this.containerId = containerId
-    const global = window as WithDataLayer
+    const global = globalThis as WithDataLayer
     global.dataLayer = global.dataLayer || []
     global.dataLayer.push({ 'event': 'gtm.ts', 'gtm.start': Date.now() })
   }
 
   static clearDataLayer() {
-    const global = window as WithDataLayer
+    const global = globalThis as WithDataLayer
     const dataLayer = global.dataLayer as []
     dataLayer.length = 0
   }
@@ -31,7 +31,7 @@ class Gtm {
 
   send(event: string, data: Record<string, unknown>, eventTimeout = 500) {
     return new Promise<void>((resolve) => {
-      const global = window as WithDataLayer
+      const global = globalThis as WithDataLayer
       global.dataLayer?.push({
         event,
         ...data,

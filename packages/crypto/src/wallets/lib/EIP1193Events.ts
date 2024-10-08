@@ -26,10 +26,10 @@ export abstract class EIP1193Events implements EIP1193EventsCompatible {
   constructor(supportedEvents?: SupportedEventProposals[], provider?: Eip1193Provider, providerName?: string) {
     this._providerName = providerName
     this.eventsEnabled = !!supportedEvents?.includes('EIP-1193')
-    if (window.ethereum === undefined && provider === undefined) {
+    if (globalThis.ethereum === undefined && provider === undefined) {
       console.warn('attempting to subscribe to EIP1193 events but missing provider in arguments or at window.ethereum')
     }
-    this.listeningProvider = (provider ?? window.ethereum) as BrowserProvider | undefined
+    this.listeningProvider = (provider ?? globalThis.ethereum) as unknown as BrowserProvider | undefined
   }
 
   onAccountsChanged(listener: Listener) {

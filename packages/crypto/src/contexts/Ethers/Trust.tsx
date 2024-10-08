@@ -17,7 +17,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const [signer, setSigner] = useState<JsonRpcSigner>()
   const [localAddress, setLocalAddress] = useState<EthAddress>()
 
-  const trustProvider = useMemo(() => (window.ethereum ? new BrowserProvider(window.ethereum) : undefined), [])
+  const trustProvider = useMemo(() => (globalThis.ethereum ? new BrowserProvider(globalThis.ethereum) : undefined), [])
 
   const chainId = 1
 

@@ -28,7 +28,7 @@ export class DripBaseEvent<T extends Record<string, unknown>> {
 
   private getDcq() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = window as any
+    const global = globalThis as any
     if (!global._dcq) {
       throw new Error('DCQ not found')
     }
@@ -37,7 +37,7 @@ export class DripBaseEvent<T extends Record<string, unknown>> {
 
   private getDcs() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = window as any
+    const global = globalThis as any
     if (!global._dcs) {
       throw new Error('DCS not found')
     }

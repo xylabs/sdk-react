@@ -10,7 +10,7 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
   // Name of the Provider
   providerName = 'MetaMask'
 
-  private ethereum = window.ethereum as MetaMaskInpageProvider | undefined
+  private ethereum = globalThis.ethereum as MetaMaskInpageProvider | undefined
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'], undefined, PROVIDER_NAME)
@@ -19,14 +19,14 @@ export class MetaMaskConnector extends EthWalletConnectorBase {
 
   get installed() {
     // Phantom camps on the isMetaMask method as well :(
-    return !!(this.ethereum && this.ethereum.isMetaMask && !window.phantom?.ethereum?.isPhantom)
+    return !!(this.ethereum && this.ethereum.isMetaMask && !globalThis.phantom?.ethereum?.isPhantom)
   }
 
   init(provider?: BrowserProvider) {
     if (provider) {
       this.provider = provider
-    } else if (window.ethereum) {
-      this.provider = new BrowserProvider(window.ethereum)
+    } else if (globalThis.ethereum) {
+      this.provider = new BrowserProvider(globalThis.ethereum)
     } else {
       console.warn(`Attempting to use ${this.providerName} class when its not installed`)
     }

@@ -36,11 +36,11 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, 
     if (!isRotated) {
       return
     }
-    const timeoutId = window.setTimeout(() => {
+    const timeoutId = globalThis.setTimeout(() => {
       setIsRotated(false)
     }, 5)
     return () => {
-      window.clearTimeout(timeoutId)
+      globalThis.clearTimeout(timeoutId)
     }
   }, [isRotated])
 

@@ -9,7 +9,7 @@ export class TrustConnector extends EthWalletConnectorBase {
   providerName = 'Trust'
 
   // instance of provider with Trust specific methods
-  private ethereum = window.ethereum as TrustProvider | undefined
+  private ethereum = globalThis.ethereum as TrustProvider | undefined
 
   constructor(provider?: BrowserProvider) {
     super(['EIP-1193'])
@@ -23,8 +23,8 @@ export class TrustConnector extends EthWalletConnectorBase {
   init(provider?: BrowserProvider) {
     if (provider) {
       this.provider = provider
-    } else if (window.ethereum) {
-      this.provider = new BrowserProvider(window.ethereum)
+    } else if (globalThis.ethereum) {
+      this.provider = new BrowserProvider(globalThis.ethereum)
     } else {
       console.warn(`Attempting to use ${this.providerName} class when its not installed`)
     }

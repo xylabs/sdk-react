@@ -15,7 +15,7 @@ class Gtag {
     this.awid = awid
     this.domains = domains
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = window as any
+    const global = globalThis as any
     global.dataLayer = global.dataLayer ?? []
     this.gtag
       = global.gtag
@@ -37,7 +37,7 @@ class Gtag {
 
   static clearDataLayer() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = window as any
+    const global = globalThis as any
     const dataLayer = global.dataLayer as []
     dataLayer.length = 0
   }

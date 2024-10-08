@@ -14,7 +14,7 @@ export interface EthersLoaderProps {
 
 export const EthersLoader: React.FC<EthersLoaderProps> = (props) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const global = window as any
+  const global = globalThis as any
   const { children } = props
 
   if (global.ethereum?.isMetaMask) {
