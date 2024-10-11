@@ -49,13 +49,13 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
             : null}
           {label
             ? (
-                <Typography marginRight={1} marginLeft={logo ? 1 : 0} noWrap={true} fontFamily={textFontFamily} variant="caption">
+                <Typography marginRight={1} marginLeft={logo ? 1 : 0} noWrap fontFamily={textFontFamily} variant="caption">
                   {label}
                 </Typography>
               )
             : null}
         </FlexRow>
-        <Typography color={textColor} noWrap={true} fontFamily={textFontFamily} variant="body1" style={{ textTransform: 'none' }}>
+        <Typography color={textColor} noWrap fontFamily={textFontFamily} variant="body1" style={{ textTransform: 'none' }}>
           {amountString}
         </Typography>
       </FlexRow>

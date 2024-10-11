@@ -22,6 +22,7 @@ export default [
       '@eslint-react/no-array-index-key': ['warn'],
       '@eslint-react/no-prop-types': ['warn'],
       '@eslint-react/prefer-destructuring-assignment': ['warn'],
+      '@eslint-react/prefer-shorthand-boolean': ['warn'],
     },
   },
   {
