@@ -35,7 +35,7 @@ Default.args = {
       name: 'Section 3',
     },
   ],
-  defaultExpandedIndex: 1,
+  defaultExpandedName: 'Section 1',
 }
 
 export { Default }

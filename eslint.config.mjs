@@ -16,16 +16,19 @@ export default [
   workspacesConfig,
   rulesConfig,
   importConfig,
+  reactConfig,
   {
     rules: {
-      '@eslint-react/no-array-index-key': ['off']
+      '@eslint-react/no-array-index-key': ['warn'],
+      '@eslint-react/no-prop-types': ['warn'],
+      '@eslint-react/prefer-destructuring-assignment': ['warn'],
     },
   },
   {
     ...typescriptConfig,
     rules: {
       ...typescriptConfig.rules,
-      '@typescript-eslint/no-misused-promises': ['off'],
+      '@typescript-eslint/no-misused-promises': ['warn'],
       '@typescript-eslint/consistent-type-imports': ['warn']
     },
   }

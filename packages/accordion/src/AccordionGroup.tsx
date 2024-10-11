@@ -27,16 +27,16 @@ export type SimpleAccordionCardProps = Override<SimpleAccordionCardAdditionalPro
 
 interface AccordionGroupProps {
   data?: SimpleAccordionCardProps[]
-  defaultExpandedIndex?: number
+  defaultExpandedName?: string
 }
 
-export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedIndex, data }) => {
-  const [expandedIndex, setExpandedIndex] = useState(defaultExpandedIndex ?? 0)
+export const AccordionGroup: React.FC<AccordionGroupProps> = ({ defaultExpandedName, data }) => {
+  const [expandedName, setExpandedName] = useState(() => defaultExpandedName)
 
   return (
     <>
-      {data?.map((item, index) => (
-        <SimpleAccordion key={index} {...item} expanded={index === expandedIndex} onChange={() => setExpandedIndex(index)} />
+      {data?.map(item => (
+        <SimpleAccordion key={item.name} {...item} expanded={item.name === expandedName} onChange={() => setExpandedName(item.name)} />
       ))}
     </>
   )

@@ -40,7 +40,7 @@
     "@xylabs/react-promise": "workspace:^"
   },
   "devDependencies": {
-    "@mui/material": "^6.1.2",
+    "@mui/material": "^6.1.3",
     "@storybook/react": "^8.3.5",
     "@types/react": "^18.3.11",
     "@xylabs/ts-scripts-yarn3": "^4.1.0",
@@ -48,7 +48,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "storybook": "^8.3.5",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "peerDependencies": {
     "react": "^18"

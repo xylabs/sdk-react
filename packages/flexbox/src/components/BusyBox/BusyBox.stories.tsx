@@ -15,11 +15,12 @@ const BusyBoxTemplate: StoryFn<typeof BusyBox> = args => <BusyBox {...args}></Bu
 
 const BusyBoxMinimumTemplate: StoryFn<typeof BusyBox> = (args) => {
   const [busyToggle, setBusyToggle] = useState(false)
+  const { busyMinimum } = args
   return (
     <>
       <Typography variant="body1">
         Busy mode should be at least
-        {(args?.busyMinimum || 0) / 1000}
+        {(busyMinimum || 0) / 1000}
         {' '}
         seconds
       </Typography>

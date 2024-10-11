@@ -20,8 +20,13 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
 }) => {
   return (
     discoveredWallets
-      ? Object.values(discoveredWallets).map((eip6963Connector, index) => (
-        <WalletDiscoveryMenuItem key={index} ethWalletConnector={eip6963Connector} onClick={() => onWalletSelect?.(eip6963Connector)} {...props} />
+      ? Object.values(discoveredWallets).map(eip6963Connector => (
+        <WalletDiscoveryMenuItem
+          key={eip6963Connector.providerName}
+          ethWalletConnector={eip6963Connector}
+          onClick={() => onWalletSelect?.(eip6963Connector)}
+          {...props}
+        />
       ))
       : suppressNoWalletsWarning
         ? null
