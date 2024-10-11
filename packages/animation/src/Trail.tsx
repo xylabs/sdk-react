@@ -29,8 +29,12 @@ export const Trail: React.FC<TrailProps> = ({
   return (
     <Box width={resolvedWidth} {...props}>
       {trail.map(({ ...style }, index) => (
-        <a.div key={childArrayWithKey[index].key} style={{ ...style, width: resolvedWidth }}>
-          <a.div className={`trail-${index}`}>{childArrayWithKey[index].child}</a.div>
+        <a.div
+          className={`trail-${index}`}
+          key={childArrayWithKey[index].key}
+          style={{ ...style, display: 'flex' }}
+        >
+          {childArrayWithKey[index].child}
         </a.div>
       ))}
     </Box>
