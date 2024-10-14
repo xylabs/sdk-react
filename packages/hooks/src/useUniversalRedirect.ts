@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const DEFAULT_NAME = 'universalRedirect|to' as const
@@ -12,9 +13,11 @@ export const useSetUniversalRedirect = (name: string = DEFAULT_NAME) => {
 export const useCheckUniversalRedirect = (name: string = DEFAULT_NAME) => {
   const navigate = useNavigate()
 
-  const pendingTo = localStorage.getItem(name)
-  if (pendingTo !== null) {
-    localStorage.removeItem(name)
-    navigate(pendingTo)
-  }
+  useEffect(() => {
+    const pendingTo = localStorage.getItem(name)
+    if (pendingTo !== null) {
+      localStorage.removeItem(name)
+      navigate(pendingTo)
+    }
+  }, [navigate])
 }
