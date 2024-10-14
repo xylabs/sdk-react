@@ -2,9 +2,11 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 const DEFAULT_NAME = 'universalRedirect|to' as const
 
-export const useSetUniversalRedirect = (to?: string, name = DEFAULT_NAME) => {
+export const useSetUniversalRedirect = (name = DEFAULT_NAME) => {
   const location = useLocation()
-  localStorage.setItem(name, to ?? location.pathname)
+  return (to?: string) => {
+    localStorage.setItem(name, to ?? location.pathname)
+  }
 }
 
 export const useCheckUniversalRedirect = (name = DEFAULT_NAME) => {
