@@ -60,11 +60,23 @@ export const SimpleAccordion: React.FC<SimpleAccordionCardProps> = ({
           </Typography>
         )}
         {children}
-        {(href || to) && (
-          <ButtonEx href={href} to={to} target={href ?? '_blank'}>
-            {linkText ?? 'Learn More'}
-          </ButtonEx>
-        )}
+        {href
+          ? (
+              <ButtonEx href={href} target={href ?? '_blank'}>
+                {linkText ?? 'Learn More'}
+              </ButtonEx>
+            )
+          : to
+            ? (
+                <ButtonEx to={to} target={href ?? '_blank'}>
+                  {linkText ?? 'Learn More'}
+                </ButtonEx>
+              )
+            : (
+                <ButtonEx target={href ?? '_blank'}>
+                  {linkText ?? 'Learn More'}
+                </ButtonEx>
+              )}
       </AccordionDetails>
     </Accordion>
   )

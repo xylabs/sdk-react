@@ -1,6 +1,6 @@
 import type { ButtonExProps } from '@xylabs/react-button'
 
-interface NumberStatusProps extends ButtonExProps {
+type NumberStatusProps = ButtonExProps & {
   autoWidth?: boolean
   error?: Error
   fontSize?: number

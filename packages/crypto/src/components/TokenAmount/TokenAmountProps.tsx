@@ -1,7 +1,7 @@
 import type { ButtonExProps } from '@xylabs/react-button'
 import type { MouseEventHandler } from 'react'
 
-export interface TokenAmountProps extends ButtonExProps {
+export type TokenAmountProps = ButtonExProps & {
   amount?: bigint | null
   label?: string
   logo?: boolean
