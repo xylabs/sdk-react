@@ -1,4 +1,4 @@
 {
-  "exclude": ["node_modules", "dist", "./node_modules", "./**/node_modules", "./dist", "./**/dist", "./**/docs", ".*", "storybook-static"],
+  "exclude": ["node_modules", "dist", "**/node_modules", "dist", "**/dist", "storybook-static"],
   "extends": "@xylabs/tsconfig-react",
 }
