@@ -75,12 +75,10 @@ class Gtag {
     return new Promise<void>((resolve) => {
       this.gtag('event', 'conversion', {
         ...data,
-        event_callback: () => {
-          resolve()
-        },
         event_timeout: 2000,
         send_to: `${this.awid}/${event}`,
       })
+      resolve()
     })
   }
 
@@ -88,14 +86,12 @@ class Gtag {
     return new Promise<void>((resolve) => {
       this.gtag('event', event, {
         ...data,
-        event_callback: () => {
-          resolve()
-        },
         event_timeout: 2000,
         page_location: Gtag.getInitialPage(),
         page_referrer: Gtag.getInitialReferrer(),
         send_to: this.ga4id,
       })
+      resolve()
     })
   }
 
