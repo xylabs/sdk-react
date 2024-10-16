@@ -3,48 +3,28 @@ import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 import React from 'react'
 
-import { ButtonEx } from './ButtonEx.tsx'
+import { LinkEx } from './LinkEx.tsx'
 
 const StorybookEntry = {
   argTypes: {},
-  component: ButtonEx,
+  component: LinkEx,
   parameters: { docs: { page: null } },
-  title: 'button/ButtonEx',
-} as Meta<typeof ButtonEx>
+  title: 'link/LinkEx',
+} as Meta<typeof LinkEx>
 
-const DefaultTemplate: StoryFn<typeof ButtonEx> = args => (
+const DefaultTemplate: StoryFn<typeof LinkEx> = args => (
   <FlexRow justifyContent="flex-start">
     <FlexCol marginX={1}>
-      <ButtonEx {...args}>Default</ButtonEx>
-    </FlexCol>
-    <FlexCol marginX={1}>
-      <ButtonEx variant="outlined" {...args}>
-        Outlined
-      </ButtonEx>
-    </FlexCol>
-    <FlexCol marginX={1}>
-      <ButtonEx variant="contained" {...args}>
-        Contained
-      </ButtonEx>
+      <LinkEx {...args}>Default</LinkEx>
     </FlexCol>
   </FlexRow>
 )
 
-const UserEventTemplate: StoryFn<typeof ButtonEx> = args => (
+const UserEventTemplate: StoryFn<typeof LinkEx> = args => (
   <UserEventsProvider userEvents={XyoUserEventHandler.get()}>
     <FlexRow justifyContent="flex-start">
       <FlexCol marginX={1}>
-        <ButtonEx {...args}>Default</ButtonEx>
-      </FlexCol>
-      <FlexCol marginX={1}>
-        <ButtonEx variant="outlined" {...args}>
-          Outlined
-        </ButtonEx>
-      </FlexCol>
-      <FlexCol marginX={1}>
-        <ButtonEx variant="contained" {...args}>
-          Contained
-        </ButtonEx>
+        <LinkEx {...args}>Default</LinkEx>
       </FlexCol>
     </FlexRow>
   </UserEventsProvider>
@@ -52,12 +32,6 @@ const UserEventTemplate: StoryFn<typeof ButtonEx> = args => (
 
 const Default = DefaultTemplate.bind({})
 Default.args = {}
-
-const BusyCircular = DefaultTemplate.bind({})
-BusyCircular.args = { busy: true, busyVariant: 'circular' }
-
-const BusyLinear = DefaultTemplate.bind({})
-BusyLinear.args = { busy: true, busyVariant: 'linear' }
 
 const Href = DefaultTemplate.bind({})
 Href.args = { href: 'https://xylabs.com' }
@@ -79,7 +53,7 @@ HrefTargetOnClickWithEvents.args = {
 }
 
 export {
-  BusyCircular, BusyLinear, Default, Href, HrefTarget, HrefTargetOnClick, HrefTargetOnClickWithEvents,
+  Default, Href, HrefTarget, HrefTargetOnClick, HrefTargetOnClickWithEvents,
   HrefTargetWithEvents,
 }
 
