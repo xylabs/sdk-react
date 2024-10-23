@@ -5,10 +5,16 @@ import React, { useEffect, useState } from 'react'
 // Inspired by https://www.joshwcomeau.com/react/rotate/#bonus-that-star-animation-8
 
 export interface RotationAnimationProps extends FlexBoxProps {
+  activation?: 'hover' | 'timer'
   rotation: number
 }
-export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, rotation }) => {
+export const RotationAnimation: React.FC<RotationAnimationProps> = ({
+  children, activation = 'hover', rotation,
+}) => {
   const [isRotated, setIsRotated] = useState(false)
+  const activateOnHover = activation === 'hover'
+  const activateOnTimer = activation === 'timer'
+
   const [springs, api] = useSpring(() => ({
     backfaceVisibility: 'hidden',
     config: {
@@ -18,6 +24,20 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, 
     display: 'inline-block',
     from: { rotate: '0deg' },
   }))
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout
+    if (activateOnTimer) {
+      handleHover()
+      interval = setInterval(() => {
+        handleHover()
+      }, 5000)
+    }
+
+    return () => {
+      clearInterval(interval)
+    }
+  }, [activateOnTimer])
 
   const handleHover = () => {
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -45,7 +65,7 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({ children, 
   }, [isRotated])
 
   return (
-    <animated.div onMouseEnter={handleHover} style={{ ...springs }}>
+    <animated.div onMouseEnter={activateOnHover ? handleHover : undefined} style={{ ...springs }}>
       {children}
     </animated.div>
   )

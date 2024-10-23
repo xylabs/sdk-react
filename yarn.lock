@@ -5016,6 +5016,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-animation@workspace:packages/animation"
   dependencies:
+    "@mui/icons-material": "npm:^6.1.5"
     "@mui/material": "npm:^6.1.5"
     "@react-spring/web": "npm:^9.7.5"
     "@storybook/react": "npm:^8.3.6"
