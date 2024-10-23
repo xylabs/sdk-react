@@ -9,7 +9,7 @@ import { usePromise } from './usePromise.ts'
 const mutexDictionary: Record<string, Mutex> = {}
 
 /**
- * usePromise -
+ * useAtomicPromise - The same as usePromise, but ensures that only one promise is running at a time.
  */
 export const useAtomicPromise = <TResult>(
   name: string,

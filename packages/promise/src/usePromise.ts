@@ -6,6 +6,8 @@ import {
   useEffect, useMemo, useState,
 } from 'react'
 
+import { usePromiseSettings } from './context/index.ts'
+
 export enum State {
   pending = 'pending',
   rejected = 'rejected',
@@ -20,6 +22,7 @@ export const usePromise = <TResult>(
   dependencies: DependencyList,
   debug: string | undefined = undefined,
 ): [TResult | undefined, Error | undefined, State | undefined] => {
+  const { logErrors } = usePromiseSettings()
   const [result, setResult] = useState<TResult>()
   const [error, setError] = useState<Error>()
   const [state, setState] = useState<State>(State.pending)
@@ -34,10 +37,12 @@ export const usePromise = <TResult>(
       if (debug) console.log(`usePromise [${debug}]: re-memo [${typeof promise}]`)
       setState(State.pending)
       return promise?.()
-    } catch (e) {
+    } catch (ex) {
+      const error = ex as Error
+      if (logErrors) console.error(`usePromise-memo: ${error}`)
       if (debug) console.log(`usePromise [${debug}]: useMemo rejection [${typeof promise}]`)
       setResult(undefined)
-      setError(e as Error)
+      setError(error)
       setState(State.rejected)
     }
   }, dependencies)
@@ -66,9 +71,9 @@ export const usePromise = <TResult>(
             mutex?.release()
           })
       })
-      .catch((e) => {
-        const error = e as Error
-        console.error(`usePromise: ${error.message}`)
+      .catch((ex) => {
+        const error = ex as Error
+        if (logErrors) console.error(`usePromise-memo: ${error}`)
         setResult(undefined)
         setError(error)
         setState(State.rejected)
