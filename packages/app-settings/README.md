@@ -1,6 +1,6 @@
 [![logo][]](https://xylabs.com)
 
-# @xylabs/react-animation
+# @xylabs/react-app-settings
 
 [![npm-badge][]][npm-link]
 [![npm-downloads-badge][]][npm-link]
@@ -26,13 +26,13 @@ Common React code that is used throughout XYO projects that use React.
 Using npm:
 
 ```sh
-npm i --save @xylabs/react-animation
+npm i --save @xylabs/react-app-settings
 ```
 
 Using yarn:
 
 ```sh
-yarn add @xylabs/react-animation
+yarn add @xylabs/react-app-settings
 ```
 
 ## Documentation
@@ -57,11 +57,11 @@ See the [LICENSE](LICENSE) file for license details
 
 [logo]: https://cdn.xy.company/img/brand/XYPersistentCompany_Logo_Icon_Colored.svg
 
-[npm-badge]: https://img.shields.io/npm/v/@xylabs/react-animation.svg
-[npm-link]: https://www.npmjs.com/package/@xylabs/react-animation
+[npm-badge]: https://img.shields.io/npm/v/@xylabs/react-app-settings.svg
+[npm-link]: https://www.npmjs.com/package/@xylabs/react-app-settings
 
-[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/react-animation
-[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/react-animation
+[npm-downloads-badge]: https://img.shields.io/npm/dw/@xylabs/react-app-settings
+[npm-license-badge]: https://img.shields.io/npm/l/@xylabs/react-app-settings
 
-[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/react-animation/badge
-[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/react-animation
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/@xylabs/react-app-settings/badge
+[jsdelivr-link]: https://www.jsdelivr.com/package/npm/@xylabs/react-app-settings

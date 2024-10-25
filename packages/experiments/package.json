@@ -37,8 +37,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^4.3.2",
-    "@xylabs/log": "^4.3.2",
+    "@xylabs/forget": "^4.3.3",
+    "@xylabs/log": "^4.3.3",
     "@xylabs/pixel": "^2.0.6",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",

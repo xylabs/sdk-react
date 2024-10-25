@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/object": "^4.3.2",
+    "@xylabs/object": "^4.3.3",
     "@xylabs/pixel": "^2.0.6",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",

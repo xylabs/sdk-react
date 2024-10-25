@@ -37,8 +37,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^4.3.2",
-    "@xylabs/log": "^4.3.2",
+    "@xylabs/api": "^4.3.3",
+    "@xylabs/log": "^4.3.3",
     "@xylabs/react-async-effect": "workspace:^"
   },
   "devDependencies": {
