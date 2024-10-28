@@ -6,16 +6,18 @@ import type { To } from 'react-router-dom'
 import { LogoLinkEx } from './LogoLinkEx.tsx'
 
 export interface ContextToolbarProps extends ToolbarProps {
+  logo?: React.ReactNode
   logoTo?: To
   version?: boolean
 }
 
 export const ContextToolbar: React.FC<ContextToolbarProps> = ({
-  logoTo = '/', version = false, ...props
+  children, logo, logoTo = '/', version = false, ...props
 }) => {
   return (
     <Toolbar {...props}>
-      <LogoLinkEx version={version} to={logoTo} />
+      <LogoLinkEx logo={logo} version={version} to={logoTo} />
+      {children}
     </Toolbar>
   )
 }

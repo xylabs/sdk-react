@@ -3,26 +3,30 @@ import { assertEx } from '@xylabs/assert'
 import { FlexRow } from '@xylabs/react-flexbox'
 import type { LinkExProps } from '@xylabs/react-link'
 import { LinkEx } from '@xylabs/react-link'
+import type { ReactNode } from 'react'
 import React from 'react'
 
 import { Logo } from './Logo.tsx'
 
 export type LogoLinkExProps = LinkExProps & {
+  logo?: ReactNode
   version?: boolean | string
 }
 
 export const LogoLinkEx: React.FC<LogoLinkExProps> = ({
-  to = '/', href, version = false, ...props
+  logo, to = '/', href, version = false, ...props
 }) => {
   const theme = useTheme()
   assertEx(href === undefined, () => 'href is not supported')
   return (
     <LinkEx to={to} {...props}>
       <FlexRow paddingX="4px">
-        <Logo sx={{
-          color: theme.palette.primary.contrastText, height: '40px', width: '40px',
-        }}
-        />
+        {logo ?? (
+          <Logo sx={{
+            color: theme.palette.primary.contrastText, height: '40px', width: '40px',
+          }}
+          />
+        )}
         {version
           ? (
               <Typography

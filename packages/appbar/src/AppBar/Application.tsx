@@ -8,17 +8,18 @@ import { ContextToolbar, SystemToolbar } from '../Toolbar/index.ts'
 
 export interface ApplicationAppBarProps extends AppBarExProps {
   contextToolbar?: ReactElement<ToolbarProps>
+  logo?: React.ReactNode
   responsive?: boolean
   systemToolbar?: ReactElement<ToolbarProps>
 }
 
 export const ApplicationAppBar: React.FC<ApplicationAppBarProps> = ({
-  systemToolbar, contextToolbar, responsive = true, ...props
+  logo, systemToolbar, contextToolbar, responsive = true, ...props
 }) => {
   return (
     <AppBarEx
       systemToolbar={systemToolbar ?? <SystemToolbar />}
-      contextToolbar={contextToolbar ?? <ContextToolbar />}
+      contextToolbar={contextToolbar ?? <ContextToolbar logo={logo} />}
       position="sticky"
       responsive={responsive}
       {...props}
