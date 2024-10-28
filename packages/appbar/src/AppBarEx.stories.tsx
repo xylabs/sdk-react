@@ -10,7 +10,7 @@ const StorybookEntry = {
   argTypes: {},
   component: AppBarEx,
   parameters: { docs: { page: null } },
-  title: 'common/AppBarEx',
+  title: 'appbar/AppBarEx',
 } as Meta<typeof AppBarEx>
 
 const Template: StoryFn<typeof AppBarEx> = (args: AppBarExProps) => <AppBarEx {...args}></AppBarEx>

@@ -5116,7 +5116,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-app-settings@workspace:packages/app-settings":
+"@xylabs/react-app-settings@workspace:^, @xylabs/react-app-settings@workspace:packages/app-settings":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-app-settings@workspace:packages/app-settings"
   dependencies:
@@ -5145,17 +5145,24 @@ __metadata:
     "@mui/material": "npm:^6.1.5"
     "@storybook/react": "npm:^8.3.6"
     "@types/react": "npm:^18.3.12"
+    "@xylabs/assert": "npm:^4.3.3"
+    "@xylabs/react-app-settings": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-link": "workspace:^"
+    "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.2.3"
     "@xylabs/tsconfig-react": "npm:^4.2.3"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    react-router-dom: "npm:^6.27.0"
     storybook: "npm:^8.3.6"
     typescript: "npm:^5.6.3"
   peerDependencies:
+    "@mui/icons-material": ^6
     "@mui/material": ^6
     react: ^18
     react-dom: ^18
+    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -5205,6 +5212,7 @@ __metadata:
     "@mui/material": ^6
     react: ^18
     react-dom: ^18
+    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -5753,6 +5761,35 @@ __metadata:
     "@mui/material": ^6
     react: ^18
     react-dom: ^18
+  languageName: unknown
+  linkType: soft
+
+"@xylabs/react-webapp@workspace:packages/webapp":
+  version: 0.0.0-use.local
+  resolution: "@xylabs/react-webapp@workspace:packages/webapp"
+  dependencies:
+    "@mui/icons-material": "npm:^6.1.5"
+    "@mui/material": "npm:^6.1.5"
+    "@mui/styles": "npm:^6.1.5"
+    "@storybook/react": "npm:^8.3.6"
+    "@types/react-helmet": "npm:^6.1.11"
+    "@xylabs/react-app-settings": "workspace:^"
+    "@xylabs/react-appbar": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:^"
+    "@xylabs/react-button": "workspace:^"
+    "@xylabs/react-error": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-link": "workspace:^"
+    "@xylabs/react-pixel": "workspace:^"
+    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/ts-scripts-yarn3": "npm:^4.2.3"
+    "@xylabs/tsconfig-react": "npm:^4.2.3"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    react-helmet: "npm:^6.1.0"
+    react-router-dom: "npm:^6.27.0"
+    storybook: "npm:^8.3.6"
+    typescript: "npm:^5.6.3"
   languageName: unknown
   linkType: soft
 

@@ -1,5 +1,5 @@
 {
-  "name": "@xylabs/react-base-page",
+  "name": "@xylabs/react-webapp",
   "version": "5.2.7",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
@@ -26,46 +26,52 @@
   "type": "module",
   "exports": {
     ".": {
+      "browser": {
+        "types": "./dist/browser/index.d.ts",
+        "default": "./dist/browser/index.mjs"
+      },
       "types": "./dist/browser/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
-  "module": "./dist/browser/index.mjs",
+  "module": "dist/browser/index.mjs",
   "types": "dist/browser/index.d.ts",
-  "workspaces": [
-    "packages/*"
-  ],
-  "dependencies": {
-    "@xylabs/react-appbar": "workspace:^",
-    "@xylabs/react-cookie-consent": "workspace:^",
-    "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-invertible-theme": "workspace:^",
-    "@xylabs/react-scroll-to-top": "workspace:^",
-    "react-helmet": "^6.1.0"
+  "scripts": {
+    "license": "yarn license-checker --exclude \"MIT, ISC, Apache-2.0, BSD, BSD-2-Clause, CC-BY-4.0, Unlicense, CC-BY-3.0, CC0-1.0\"",
+    "lint-pkg": "npmPkgJsonLint ."
   },
-  "devDependencies": {
+  "dependencies": {
     "@mui/icons-material": "^6.1.5",
     "@mui/material": "^6.1.5",
-    "@storybook/react": "^8.3.6",
-    "@types/react": "^18.3.12",
-    "@types/react-helmet": "^6.1.11",
-    "@xylabs/ts-scripts-yarn3": "^4.2.3",
-    "@xylabs/tsconfig-react": "^4.2.3",
+    "@mui/styles": "^6.1.5",
+    "@xylabs/react-app-settings": "workspace:^",
+    "@xylabs/react-appbar": "workspace:^",
+    "@xylabs/react-async-effect": "workspace:^",
+    "@xylabs/react-button": "workspace:^",
+    "@xylabs/react-error": "workspace:^",
+    "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/react-pixel": "workspace:^",
+    "@xylabs/react-shared": "workspace:^",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^8.3.6",
+    "@types/react-helmet": "^6.1.11",
+    "@xylabs/react-button": "workspace:^",
+    "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/react-link": "workspace:^",
+    "@xylabs/react-pixel": "workspace:^",
+    "@xylabs/ts-scripts-yarn3": "^4.2.3",
+    "@xylabs/tsconfig-react": "^4.2.3",
     "storybook": "^8.3.6",
     "typescript": "^5.6.3"
   },
-  "peerDependencies": {
-    "@mui/icons-material": "^6",
-    "@mui/material": "^6",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-router-dom": "^6"
-  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "docs": "dist/docs.json"
 }

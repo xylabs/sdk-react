@@ -37,7 +37,11 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/assert": "^4.3.3",
+    "@xylabs/react-app-settings": "workspace:^",
+    "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/react-link": "workspace:^",
+    "@xylabs/react-shared": "workspace:^"
   },
   "devDependencies": {
     "@mui/icons-material": "^6.1.5",
@@ -48,13 +52,16 @@
     "@xylabs/tsconfig-react": "^4.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
     "storybook": "^8.3.6",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {
+    "@mui/icons-material": "^6",
     "@mui/material": "^6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-router-dom": "^6"
   },
   "publishConfig": {
     "access": "public"
