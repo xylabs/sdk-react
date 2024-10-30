@@ -50,6 +50,7 @@ export const usePromise = <TResult>(
   if (debug) console.log(`usePromise [${debug}] Main Function`)
 
   useEffect(() => {
+    let loaded = true
     if (debug) console.log(`usePromise [${debug}] useEffect`)
     mutex
       ?.acquire()
@@ -57,29 +58,36 @@ export const usePromise = <TResult>(
         promiseMemo
           ?.then((payload) => {
             if (debug) console.log(`usePromise [${debug}] then`)
-            setResult(payload)
-            setError(undefined)
-            setState(State.resolved)
+            if (loaded) {
+              setResult(payload)
+              setError(undefined)
+              setState(State.resolved)
+            }
             mutex?.release()
           })
           .catch((e) => {
             const error = e as Error
             console.error(`usePromise: ${error.message}`)
-            setResult(undefined)
-            setError(error)
-            setState(State.rejected)
+            if (loaded) {
+              setResult(undefined)
+              setError(error)
+              setState(State.rejected)
+            }
             mutex?.release()
           })
       })
       .catch((ex) => {
         const error = ex as Error
         if (logErrors) console.error(`usePromise-memo: ${error}`)
-        setResult(undefined)
-        setError(error)
-        setState(State.rejected)
+        if (loaded) {
+          setResult(undefined)
+          setError(error)
+          setState(State.rejected)
+        }
         mutex?.release()
       })
     return () => {
+      loaded = false
       if (debug) console.log(`usePromise [${debug}] useEffect callback`)
     }
   }, [...dependencies, promiseMemo])
