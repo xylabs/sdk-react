@@ -8,7 +8,7 @@ import { LogoLinkEx } from './LogoLinkEx.tsx'
 export interface ContextToolbarProps extends ToolbarProps {
   logo?: React.ReactNode
   logoTo?: To
-  version?: boolean
+  version?: boolean | string
 }
 
 export const ContextToolbar: React.FC<ContextToolbarProps> = ({

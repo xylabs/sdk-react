@@ -41,7 +41,7 @@ export const LogoLinkEx: React.FC<LogoLinkExProps> = ({
                 variant="caption"
                 border={`1px ${theme.palette.getContrastText(theme.palette.primary.main)} solid`}
               >
-                {typeof version === 'string' ? version : '2.1'}
+                {typeof version === 'string' ? version : '1.0'}
               </Typography>
             )
           : null}
