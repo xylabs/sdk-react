@@ -15,6 +15,7 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   target,
   href,
   to,
+  toOptions,
   ...props
 }, ref) => {
   const userEvents = useUserEvents()
@@ -44,7 +45,7 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
     }
   }
   return to
-    ? <LinkToEx ref={ref} to={to} target={target} onClick={onClick} {...props} />
+    ? <LinkToEx ref={ref} to={to} toOptions={toOptions} target={target} onClick={onClick} {...props} />
     : <Link ref={ref} href={href} target={target} onClick={localOnClick} {...props} />
 })
 
