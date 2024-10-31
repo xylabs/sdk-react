@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-pixel-debugger",
-  "version": "5.2.12",
+  "version": "5.2.13",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -46,7 +46,7 @@
     "@xylabs/react-shared": "workspace:^"
   },
   "devDependencies": {
-    "@mui/material": "^6.1.5",
+    "@mui/material": "^6.1.6",
     "@storybook/react": "^8.3.6",
     "@types/react": "^18.3.12",
     "@xylabs/ts-scripts-yarn3": "^4.2.3",

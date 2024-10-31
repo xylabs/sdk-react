@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-crypto",
-  "version": "5.2.12",
+  "version": "5.2.13",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -39,7 +39,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@metamask/providers": "^18.1.0",
+    "@metamask/providers": "^18.1.1",
     "@xylabs/assert": "^4.3.3",
     "@xylabs/eth-address": "^4.3.3",
     "@xylabs/forget": "^4.3.3",
@@ -52,12 +52,12 @@
     "ethers": "^6.13.4",
     "lru-cache": "^11.0.1",
     "react-router-dom": "^6.27.0",
-    "viem": "^2.21.35",
+    "viem": "^2.21.37",
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
-    "@mui/icons-material": "^6.1.5",
-    "@mui/material": "^6.1.5",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
     "@storybook/react": "^8.3.6",
     "@types/react": "^18.3.12",
     "@xylabs/ts-scripts-yarn3": "^4.2.3",

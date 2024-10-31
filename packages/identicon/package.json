@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-identicon",
-  "version": "5.2.12",
+  "version": "5.2.13",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,7 +41,7 @@
     "md5": "^2.3.0"
   },
   "devDependencies": {
-    "@mui/material": "^6.1.5",
+    "@mui/material": "^6.1.6",
     "@types/md5": "^2.3.5",
     "@types/react": "^18.3.12",
     "@xylabs/ts-scripts-yarn3": "^4.2.3",

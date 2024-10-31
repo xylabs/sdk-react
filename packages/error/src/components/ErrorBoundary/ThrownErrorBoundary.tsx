@@ -28,8 +28,8 @@ class ThrownErrorBoundaryInner<T> extends Component<ThrownErrorBoundaryProps<T>,
     return { hasError: true, xyoError: this.normalizeError<T>(error) } as ThrownErrorBoundaryState<T>
   }
 
-  static normalizeError<T>(_error: ErrorEx<T>): T {
-    throw new Error('Method not implemented.')
+  static normalizeError<T>(error: ErrorEx<T>): T {
+    return error as T
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
