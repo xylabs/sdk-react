@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/sdk-react",
-  "version": "5.2.14",
+  "version": "5.2.15",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -116,6 +116,7 @@
     "buffer": "^6.0.3",
     "eslint": "^9.13.0",
     "eslint-import-resolver-typescript": "^3.6.3",
+    "knip": "^5.34.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remark-gfm": "^4.0.0",

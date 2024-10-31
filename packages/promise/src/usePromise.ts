@@ -28,7 +28,7 @@ export const usePromise = <TResult>(
   dependencies: DependencyList,
   config?: UsePromiseConfig<TResult>,
 ): [TResult | undefined, Error | undefined, UsePromiseState | undefined] => {
-  const { logErrors } = usePromiseSettings()
+  const { logErrors = true } = usePromiseSettings()
   const [result, setResult] = useState<TResult | undefined>(config?.defaultValue)
   const [error, setError] = useState<Error>()
   const [state, setState] = useState<UsePromiseState>('pending')
@@ -45,7 +45,10 @@ export const usePromise = <TResult>(
       return promise?.()
     } catch (ex) {
       const error = ex as Error
-      if (logErrors) console.error(`usePromise-memo: ${error}`)
+      if (logErrors) {
+        console.error(`usePromise-memo: ${error}`)
+        rollbar?.error(error)
+      }
       if (config?.debug) console.log(`usePromise [${config?.debug}]: useMemo rejection [${typeof promise}]`)
       setResult(undefined)
       setError(error)
@@ -73,7 +76,10 @@ export const usePromise = <TResult>(
           })
           .catch((e) => {
             const error = e as Error
-            console.error(`usePromise: ${error.message}`)
+            if (logErrors) {
+              console.error(error)
+              rollbar?.error(error)
+            }
             if (loaded) {
               setResult(undefined)
               setError(error)
@@ -84,7 +90,10 @@ export const usePromise = <TResult>(
       })
       .catch((ex) => {
         const error = ex as Error
-        if (logErrors) console.error(`usePromise-memo: ${error}`)
+        if (logErrors) {
+          console.error(`usePromise-memo: ${error}`)
+          rollbar?.error(error)
+        }
         if (loaded) {
           setResult(undefined)
           setError(error)
