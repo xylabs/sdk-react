@@ -42,7 +42,7 @@ export const LinkToEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
     }
   }
 
-  return <Link ref={ref} rel="noopener noreferrer" to={toOptions ? to : undefined} component={RouterLink} onClick={localOnClick} {...props} />
+  return <Link ref={ref} rel="noopener noreferrer" to={toOptions ? undefined : to} component={RouterLink} onClick={localOnClick} {...props} />
 })
 
 LinkToEx.displayName = 'LinkToExXYLabs'

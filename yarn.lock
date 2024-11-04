@@ -5504,7 +5504,7 @@ __metadata:
     "@xylabs/ts-scripts-yarn3": "npm:^4.2.3"
     "@xylabs/tsconfig": "npm:^4.2.3"
     "@xylabs/tsconfig-react": "npm:^4.2.3"
-    "@xyo-network/react-theme": "npm:^4.1.17"
+    "@xyo-network/react-theme": "npm:^4.1.19"
     axios: "npm:^1.7.7"
     buffer: "npm:^6.0.3"
     eslint: "npm:^9.14.0"
@@ -5663,14 +5663,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xyo-network/react-theme@npm:^4.1.17":
-  version: 4.1.17
-  resolution: "@xyo-network/react-theme@npm:4.1.17"
+"@xyo-network/react-theme@npm:^4.1.19":
+  version: 4.1.19
+  resolution: "@xyo-network/react-theme@npm:4.1.19"
   peerDependencies:
     "@mui/material": ^6
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/74ce0dc509f652eeb97361bcde7c2bbc0f650e86357eb614aa84fa74dc64b1cf70fa195996addbaf96c01a0ad0f973b490a2ad46018b11b4fc98a922c7a05058
+  checksum: 10c0/dbae54aee82190a6cc5609d239319eeda51f686c1367df48e3094de3d9cf6f6dd6a36cc62ab9913c197fc08ddb0f403de2fb9f9d56b69a9c07dea41c994d8dcf
   languageName: node
   linkType: hard
 
