@@ -13,6 +13,7 @@ export interface ErrorAlertProps<T = void> extends AlertProps {
 }
 
 export function ErrorAlert<T = void>({
+  action,
   title = 'Whoops! Something went wrong',
   onCancel,
   error = 'An unknown error occurred',
@@ -20,7 +21,7 @@ export function ErrorAlert<T = void>({
   ...props
 }: ErrorAlertProps<T>): JSX.Element {
   return (
-    <Alert severity="error" {...props}>
+    <Alert action={action} severity="error" {...props}>
       <AlertTitle>{title}</AlertTitle>
       {scope
         ? (
@@ -45,7 +46,7 @@ export function ErrorAlert<T = void>({
               size="small"
               onClick={onCancel}
               position="absolute"
-              style={{ right: 8, top: 8 }}
+              style={{ right: 8, top: action ? 42 : 8 }}
             >
               <ExitIcon fontSize="small" />
             </ButtonEx>
