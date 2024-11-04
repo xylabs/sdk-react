@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-button",
-  "version": "5.2.16",
+  "version": "5.3.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@mui/material": "^6.1.6",
-    "@storybook/react": "^8.3.6",
+    "@storybook/react": "^8.4.1",
     "@types/react": "^18.3.12",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
@@ -51,7 +51,7 @@
     "@xylabs/tsconfig-react": "^4.2.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.3.6",
+    "storybook": "^8.4.1",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {

@@ -1,16 +1,16 @@
-import { assertEx } from '@xylabs/assert'
 import { delay } from '@xylabs/delay'
 import type { EmptyObject } from '@xylabs/object'
 
+import type { FbqCaller } from './Fbq.ts'
 import { Fbq } from './Fbq.ts'
 
-class FacebookBaseEvent<TData extends EmptyObject = EmptyObject> {
-  fbq: Fbq
-  name: string
+class FacebookBaseEvent<TData extends EmptyObject = EmptyObject, TName extends string = string> {
+  fbq: FbqCaller
+  name: TName
 
-  constructor(name: string) {
+  constructor(name: TName, fbq?: FbqCaller) {
     this.name = name
-    this.fbq = assertEx(Fbq.instance, () => 'Missing Fbq')
+    this.fbq = fbq ?? Fbq
   }
 
   async send<T extends TData>(_data: T) {
