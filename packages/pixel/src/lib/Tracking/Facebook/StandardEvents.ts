@@ -70,8 +70,8 @@ export class FacebookStandardEvents<T extends EmptyObject> {
     return new FacebookStandardEvent<FacebookAddToCart | T>('AddToCart')
   }
 
-  addToWishList() {
-    return new FacebookStandardEvent<FacebookAddToWishList | T>('AddToWishList')
+  addToWishlist() {
+    return new FacebookStandardEvent<FacebookAddToWishList | T>('AddToWishlist')
   }
 
   completedRegistration() {

@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-app-settings",
-  "version": "5.2.16",
+  "version": "5.3.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -38,7 +38,7 @@
   "module": "dist/browser/index.mjs",
   "types": "dist/browser/index.d.ts",
   "dependencies": {
-    "@xylabs/assert": "^4.3.3"
+    "@xylabs/assert": "^4.3.4"
   },
   "devDependencies": {
     "@mui/icons-material": "^6.1.6",
