@@ -54,6 +54,9 @@
       "last 1 safari version"
     ]
   },
+  "resolutions": {
+    "eslint": "9.14.0"
+  },
   "dependencies": {
     "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-animation": "workspace:^",
@@ -79,7 +82,8 @@
     "@xylabs/react-render-spin-check": "workspace:^",
     "@xylabs/react-rich-result": "workspace:^",
     "@xylabs/react-scroll-to-top": "workspace:^",
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-shared": "workspace:^",
+    "@xylabs/react-theme": "workspace:^"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",

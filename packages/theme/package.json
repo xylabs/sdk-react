@@ -1,0 +1,58 @@
+{
+  "name": "@xylabs/react-theme",
+  "version": "5.3.2",
+  "description": "Common React library for all XY Labs projects that use React",
+  "keywords": [
+    "utility",
+    "typescript",
+    "react"
+  ],
+  "homepage": "https://xylabs.com",
+  "bugs": {
+    "url": "git+https://github.com/xylabs/sdk-react/issues",
+    "email": "support@xylabs.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xylabs/sdk-react.git"
+  },
+  "license": "LGPL-3.0-only",
+  "author": {
+    "name": "XY Labs Development Team",
+    "email": "support@xylabs.com",
+    "url": "https://xylabs.com"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/browser/index.d.ts",
+      "default": "./dist/browser/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/browser/index.mjs",
+  "types": "dist/browser/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@mui/material": "^6.1.8"
+  },
+  "devDependencies": {
+    "@mui/material": "^6.1.8",
+    "@types/react": "^18.3.12",
+    "@xylabs/ts-scripts-yarn3": "^4.2.4",
+    "@xylabs/tsconfig-react": "^4.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

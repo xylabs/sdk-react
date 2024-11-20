@@ -1,6 +1,4 @@
-import {
-  alpha, lighten, type ThemeOptions,
-} from '@mui/material'
+import { type ThemeOptions } from '@mui/material'
 
 export const darkThemeOptions: ThemeOptions = {
   palette: {
@@ -16,4 +14,3 @@ export const darkThemeOptions: ThemeOptions = {
     },
   },
 }
-

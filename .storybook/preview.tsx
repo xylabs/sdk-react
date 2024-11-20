@@ -1,18 +1,19 @@
-import { Box, createTheme, CssBaseline, useTheme } from '@mui/material'
+import { Box, createTheme, CssBaseline, Theme, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react'
 import { InvertibleMuiThemeProvider } from '@xylabs/react-invertible-theme'
 import React from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
-import { XYOWebsiteTheme, DataismTheme, XyLabsTheme } from './Theme'
+import { XYOWebsiteTheme, DataismTheme } from './Theme'
+import { XyLabsTheme } from '@xylabs/react-theme'
 
-const themeNames = ['None', 'XYO Website', 'Dataism', 'XY Labs Website']
+const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs'] as const
+type ThemeName = typeof themeNames[number]
 
 export const globalTypes = {
   theme: {
     name: 'ThemeOptions',
     description: 'Global theme for components',
     toolbar: {
-      default: 'XYO Website',
       icon: 'eye',
       // Array of plain string values or MenuItem shape (see below)
       items: themeNames,
@@ -24,13 +25,13 @@ export const globalTypes = {
   },
 }
 
-const getTheme = (themeName) => {
+const getTheme = (themeName: ThemeName) => {
   const theme = useTheme()
-  const themes = {
+  const themes: Record<ThemeName, Theme> = {
     'None': theme,
-    'XYO Website': XYOWebsiteTheme(theme, false),
+    'XYO': XYOWebsiteTheme(theme, false),
     'Dataism': DataismTheme,
-    'XY Labs Website': XyLabsTheme,
+    'XYLabs': XyLabsTheme,
   }
   return themes[themeName] ?? {}
 }
