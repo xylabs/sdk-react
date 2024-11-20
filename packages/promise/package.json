@@ -40,16 +40,16 @@
     "async-mutex": "^0.5.0"
   },
   "devDependencies": {
-    "@mui/material": "^6.1.6",
-    "@storybook/react": "^8.4.1",
+    "@mui/material": "^6.1.8",
+    "@storybook/react": "^8.4.5",
     "@types/react": "^18.3.12",
-    "@xylabs/delay": "^4.3.4",
-    "@xylabs/ts-scripts-yarn3": "^4.2.3",
-    "@xylabs/tsconfig-react": "^4.2.3",
+    "@xylabs/delay": "^4.4.0",
+    "@xylabs/ts-scripts-yarn3": "^4.2.4",
+    "@xylabs/tsconfig-react": "^4.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollbar": "^2.26.4",
-    "storybook": "^8.4.1",
+    "storybook": "^8.4.5",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {

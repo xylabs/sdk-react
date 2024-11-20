@@ -1,30 +1,24 @@
 import { assertEx } from '@xylabs/assert'
 import queryString from 'query-string'
 
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  var gtag: any
+  var dataLayer: unknown[]
+}
+
 class Gtag {
   static instance: Gtag
   awid?: string
   domains?: string[]
   ga4id?: string
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  gtag?: any
-
   private constructor(ga4id: string, awid: string, domains?: string[]) {
-    this.ga4id = ga4id
-    this.awid = awid
-    this.domains = domains
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = globalThis as any
-    global.dataLayer = global.dataLayer ?? []
-    this.gtag
-      = global.gtag
-      ?? function () {
-        global.dataLayer.push(arguments)
-      }
-    global.gtag = this.gtag
-    this.gtag('js', new Date())
-    this.gtag('config', ga4id)
+    this.gtag('init', ga4id)
+    this.gtag('init', awid)
+    this.gtag('domains', domains)
+    this.gtag('event', 'page_view')
+
     // this.gtag('config', awid) - this is configured in the Data Stream in Google Analytics
     const parsedQueryString = queryString.parse(document.location.search)
     // we handle the utm_referrer here incase a referrer was forwarded (special.coinapp.co does this)
@@ -35,10 +29,21 @@ class Gtag {
     sessionStorage.setItem('initialPage', document.location.href)
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static get gtag(): any {
+    if (!globalThis.gtag) {
+      throw new Error('Gtag instance not initialized')
+    }
+    return globalThis.gtag
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  get gtag(): any {
+    return Gtag.gtag
+  }
+
   static clearDataLayer() {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const global = globalThis as any
-    const dataLayer = global.dataLayer as []
+    const dataLayer = globalThis.dataLayer
     dataLayer.length = 0
   }
 
