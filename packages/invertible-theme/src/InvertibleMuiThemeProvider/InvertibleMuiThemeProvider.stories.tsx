@@ -21,7 +21,7 @@ const Template: StoryFn<typeof InvertibleMuiThemeProvider> = (args: InvertibleMu
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
   const {
-    darkMode, lightMode, mode, setMode,
+    darkMode, lightMode, systemMode, mode, setMode,
   } = useColorSchemeEx()
 
   return (
@@ -40,7 +40,7 @@ const ThemeEnabledComponent = () => {
           <Button variant={lightMode ? 'contained' : 'outlined'} onClick={() => setMode('light')}>
             LightMode
           </Button>
-          <Button onClick={() => setMode('system')}>System</Button>
+          <Button variant={systemMode ? 'contained' : 'outlined'} onClick={() => setMode('system')}>System</Button>
         </ButtonGroup>
         <Stack direction="row" gap={1}>
           <p>DarkModeIconButton:</p>
@@ -93,6 +93,7 @@ const theme = createTheme({
       },
     },
   },
+  cssVariables: { colorSchemeSelector: 'class' },
 })
 
 const Default = Template.bind({})
