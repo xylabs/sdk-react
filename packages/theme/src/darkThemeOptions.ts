@@ -6,7 +6,6 @@ export const darkThemeOptions: ThemeOptions = {
       default: '#0b0f30',
       paper: '#101742',
     },
-    mode: 'dark',
     text: {
       disabled: '#a5acdb',
       primary: '#f7f8fc',
