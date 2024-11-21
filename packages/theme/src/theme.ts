@@ -8,6 +8,7 @@ export const XyLabsTheme: Theme = createTheme({
     light: lightThemeOptions,
     dark: darkThemeOptions,
   },
+  cssVariables: { colorSchemeSelector: 'class' },
   components: {
     MuiAlert: {
       styleOverrides: {

@@ -11,6 +11,7 @@ export const XYOWebsiteTheme = (theme: Theme, rtl = false): Theme => createTheme
     dark: darkThemeOptions,
     light:lightThemeOptions,
   },
+  cssVariables: { colorSchemeSelector: 'class' },
   direction: rtl ? 'rtl' : 'ltr',
   breakpoints: {
     values: {

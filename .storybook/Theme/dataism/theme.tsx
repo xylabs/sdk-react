@@ -11,6 +11,7 @@ export const DataismTheme: Theme = createTheme({
     dark: { palette: darkThemePalette },
     light: { palette: lightThemePalette },
   },
+  cssVariables: { colorSchemeSelector: 'class' },
   breakpoints: {
     values: {
       lg: 1350,
