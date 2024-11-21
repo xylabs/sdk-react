@@ -12,7 +12,7 @@ export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
 
   useEffect(() => {
     if (defaultMode) setMode(defaultMode)
-  }, [defaultMode, setMode])
+  }, [defaultMode])
 
   return <></>
 }
@@ -22,7 +22,7 @@ export const SyncMode: React.FC<{ defaultMode?: Mode }> = ({ defaultMode }) => {
  */
 export const InvertibleCssVarsProvider: React.FC<InvertibleMuiThemeProviderProps> = ({
   children,
-  defaultMode = 'system',
+  defaultMode,
   noResponsiveFontSizes,
   theme,
 }) => {

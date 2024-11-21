@@ -14,7 +14,7 @@ export const useColorSchemeEx = () => {
       setMode,
       systemMode: mode === 'system',
     }),
-    [mode, setMode, systemMode],
+    [mode, systemMode],
   )
 
   return state
