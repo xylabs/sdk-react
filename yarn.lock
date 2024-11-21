@@ -3453,7 +3453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/components@npm:8.4.5, @storybook/components@npm:^8.0.0, @storybook/components@npm:^8.4.5":
+"@storybook/components@npm:8.4.5, @storybook/components@npm:^8.4.5":
   version: 8.4.5
   resolution: "@storybook/components@npm:8.4.5"
   peerDependencies:
@@ -3462,7 +3462,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-events@npm:^8.0.0, @storybook/core-events@npm:^8.4.5":
+"@storybook/core-events@npm:^8.4.5":
   version: 8.4.5
   resolution: "@storybook/core-events@npm:8.4.5"
   peerDependencies:
@@ -3522,7 +3522,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/icons@npm:^1.2.12, @storybook/icons@npm:^1.2.5":
+"@storybook/icons@npm:^1.2.12":
   version: 1.2.12
   resolution: "@storybook/icons@npm:1.2.12"
   peerDependencies:
@@ -3544,7 +3544,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/manager-api@npm:8.4.5, @storybook/manager-api@npm:^8.0.0":
+"@storybook/manager-api@npm:8.4.5":
   version: 8.4.5
   resolution: "@storybook/manager-api@npm:8.4.5"
   peerDependencies:
@@ -3638,7 +3638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/theming@npm:8.4.5, @storybook/theming@npm:^8.0.0, @storybook/theming@npm:^8.4.5":
+"@storybook/theming@npm:8.4.5, @storybook/theming@npm:^8.4.5":
   version: 8.4.5
   resolution: "@storybook/theming@npm:8.4.5"
   peerDependencies:
@@ -5542,7 +5542,6 @@ __metadata:
     remark-gfm: "npm:^4.0.0"
     rimraf: "npm:^6.0.1"
     storybook: "npm:^8.4.5"
-    storybook-dark-mode: "npm:^4.0.2"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     typescript: "npm:^5.6.3"
     vite: "npm:^5.4.11"
@@ -14269,22 +14268,6 @@ __metadata:
   dependencies:
     internal-slot: "npm:^1.0.4"
   checksum: 10c0/c4158d6188aac510d9e92925b58709207bd94699e9c31186a040c80932a687f84a51356b5895e6dc72710aad83addb9411c22171832c9ae0e6e11b7d61b0dfb9
-  languageName: node
-  linkType: hard
-
-"storybook-dark-mode@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "storybook-dark-mode@npm:4.0.2"
-  dependencies:
-    "@storybook/components": "npm:^8.0.0"
-    "@storybook/core-events": "npm:^8.0.0"
-    "@storybook/global": "npm:^5.0.0"
-    "@storybook/icons": "npm:^1.2.5"
-    "@storybook/manager-api": "npm:^8.0.0"
-    "@storybook/theming": "npm:^8.0.0"
-    fast-deep-equal: "npm:^3.1.3"
-    memoizerific: "npm:^1.11.3"
-  checksum: 10c0/d4fc652ff080f6cc9f0effab0c989b66ead3372b267c2c328eef608f27c9822bf47aaa177405e42768b2de22f8a3e9a0280af50430efd0cf78bd6ed1f12c8b29
   languageName: node
   linkType: hard
 

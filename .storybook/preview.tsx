@@ -2,7 +2,6 @@ import { Box, createTheme, CssBaseline, Theme, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react'
 import { InvertibleMuiThemeProvider } from '@xylabs/react-invertible-theme'
 import React from 'react'
-import { useDarkMode } from 'storybook-dark-mode'
 import { XYOWebsiteTheme, DataismTheme } from './Theme'
 import { XyLabsTheme } from '@xylabs/react-theme'
 
@@ -55,12 +54,11 @@ const withThemeProvider: Decorator = (Story, context) => {
     context.globals.theme = 'None'
   }
 
-  const darkMode = useDarkMode()
   const themeOptions = getTheme(context.globals.theme)
-  const theme = createTheme(themeOptions)
+  const theme = themeOptions
 
   return (
-    <InvertibleMuiThemeProvider theme={theme} defaultMode={darkMode ? 'dark' : 'light'}>
+    <InvertibleMuiThemeProvider theme={theme}>
       <CssBaseline enableColorScheme />
         <Box>
           <Story {...context} />
