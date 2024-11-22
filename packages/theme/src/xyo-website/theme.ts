@@ -1,15 +1,15 @@
 import type { Theme } from '@mui/material'
 import {
-  alpha, createTheme, lighten, darken
+  alpha, createTheme, darken,
 } from '@mui/material'
 
-import { darkThemeOptions } from './darkThemeOptions'
-import { lightThemeOptions } from './lightThemeOptions'
+import { darkThemeOptions } from './darkThemeOptions.tsx'
+import { lightThemeOptions } from './lightThemeOptions.tsx'
 
 export const XYOWebsiteTheme = (theme: Theme, rtl = false): Theme => createTheme({
   colorSchemes: {
     dark: darkThemeOptions,
-    light:lightThemeOptions,
+    light: lightThemeOptions,
   },
   cssVariables: { colorSchemeSelector: 'class' },
   direction: rtl ? 'rtl' : 'ltr',

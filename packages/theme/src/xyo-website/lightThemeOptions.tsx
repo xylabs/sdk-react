@@ -1,10 +1,14 @@
-import { alpha, ThemeOptions } from '@mui/material'
+import type { ThemeOptions } from '@mui/material'
+import { alpha } from '@mui/material'
 
 export const lightThemeOptions: ThemeOptions = {
   palette: {
-    background: { paper: '#FAFAFA' },
+    background: {
+      paper: '#FAFAFA',
+      gradient: 'linear-gradient(to right, #72b4f4, #463dc6)',
+    },
     neutral: {
-      contrastText: '#fff', 
+      contrastText: '#fff',
       main: '#000',
     },
     info: { main: '#72b4f4' },

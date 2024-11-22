@@ -2,18 +2,21 @@ import {
   alpha, lighten, type ThemeOptions,
 } from '@mui/material'
 
-import { neutralButtonStylesContained, neutralButtonStylesOutlined } from './customThemeColors.ts'
+import { neutralButtonStylesContained, neutralButtonStylesOutlined } from '../ThemeExtensions/customThemeColors.ts'
+
 export const darkThemeOptions: ThemeOptions = {
   palette: {
     background: {
       default: '#020223',
       paper: '#16163D',
+      gradient: 'linear-gradient(to right, #66caf7, #5658F3)',
     },
     neutral: {
       main: '#fff',
       contrastText: '#000',
     },
     info: { main: '#72b4f4' },
+    mode: 'dark',
     primary: { main: '#5658F3' },
     secondary: {
       main: '#66caf7',
@@ -83,13 +86,6 @@ export const darkThemeOptions: ThemeOptions = {
         },
       },
     },
-    MuiTable: {
-      styleOverrides:{
-        root: {
-          background: '#20205A'
-        },
-      }
-    },
+    MuiTable: { styleOverrides: { root: { background: '#20205A' } } },
   },
 }
-

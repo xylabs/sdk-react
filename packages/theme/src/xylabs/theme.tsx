@@ -1,7 +1,7 @@
 import { createTheme, type Theme } from '@mui/material'
 
-import { darkThemeOptions } from './darkThemeOptions.ts'
-import { lightThemeOptions } from './lightThemeOptions.ts'
+import { darkThemeOptions } from './darkThemeOptions.tsx'
+import { lightThemeOptions } from './lightThemeOptions.tsx'
 
 export const XyLabsTheme: Theme = createTheme({
   colorSchemes: {

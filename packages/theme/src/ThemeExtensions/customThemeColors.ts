@@ -8,6 +8,10 @@ declare module '@mui/material/styles' {
   interface PaletteOptions {
     neutral?: PaletteOptions['primary']
   }
+
+  interface TypeBackground {
+    gradient?: string
+  }
 }
 
 declare module '@mui/material/Button' {
