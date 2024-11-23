@@ -3,9 +3,11 @@ import type { ColorSystemOptions } from '@mui/material'
 import { personaColorsLightMode } from './customThemeColors.tsx'
 
 export const lightThemePalette: ColorSystemOptions['palette'] = {
-  background: { paper: '#FAFAFA', gradient: 'linear-gradient(to right, #000, #186ecc)' },
+  background: {
+    paper: '#FAFAFA',
+    gradient: 'linear-gradient(to right, #000, #fff)',
+  },
   info: { main: '#72b4f4' },
-  mode: 'light',
   primary: { main: '#000' },
   secondary: { main: '#186ecc' },
   success: { main: '#48BA4B', contrastText: '#fff' },

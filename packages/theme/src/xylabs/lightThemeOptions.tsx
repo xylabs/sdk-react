@@ -2,9 +2,10 @@ import type { ThemeOptions } from '@mui/material'
 
 export const lightThemeOptions: ThemeOptions = {
   palette: {
-    background: { gradient: 'linear-gradient(to right, #384AFD, #FFC91D)' },
-    info: { main: '#2733B1' },
-    mode: 'light',
+    background: {
+      default: '#fafafa',
+      gradient: 'linear-gradient(to right, #384AFD, #010965)',
+    },
     primary: {
       dark: '#010965',
       light: '#EBECFF',
@@ -15,10 +16,10 @@ export const lightThemeOptions: ThemeOptions = {
       light: '#F9D549',
       main: '#FFC91D',
     },
-    success: {
-      contrastText: '#142B12',
-      main: '#76C46D',
-    },
+    error: { main: '#CC183C', contrastText: '#FDEDF0' },
+    info: { main: '#186ecc', contrastText: '#DAEAFB' },
+    success: { main: '#7efc81', contrastText: '#142B12' },
+    warning: { main: '#F4813E', contrastText: '#271002' },
     text: { primary: '#1F2025' },
   },
 }

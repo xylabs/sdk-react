@@ -6,13 +6,12 @@ import {
 import React from 'react'
 
 export interface ColorCardProps extends BoxProps {
-  color: string
   colorName: string
   subtype?: string
 }
 
 export const ColorCard: React.FC<ColorCardProps> = ({
-  color, colorName, subtype, ...props
+  colorName, subtype, ...props
 }) => {
   return (
     <Box
@@ -30,7 +29,7 @@ export const ColorCard: React.FC<ColorCardProps> = ({
         </Typography>
       </Box>
       <Typography alignSelf="flex-end" variant="caption">
-        {color}
+        {colorName}
       </Typography>
     </Box>
   )

@@ -33,16 +33,13 @@ export const XyLabsTheme: Theme = createTheme({
   shape: { borderRadius: 4 },
   spacing: 12,
   typography: {
-    body1: {
-      fontSize: '1.1rem',
-      fontWeight: 300,
-    },
+    fontFamily: '"Outfit", sans-serif',
+    body1: { fontSize: '1.1rem' },
     button: {
       fontSize: '1rem',
       fontWeight: 500,
       textTransform: 'capitalize',
     },
-
     fontWeightBold: 700,
     fontWeightLight: 300,
     fontWeightMedium: 400,
@@ -52,10 +49,7 @@ export const XyLabsTheme: Theme = createTheme({
     h3: { fontSize: '2.24rem' },
     h4: { fontSize: '2rem' },
     h5: { fontSize: '1.5rem' },
-    h6: {
-      fontSize: '1.25rem',
-      fontWeight: 300,
-    },
+    h6: { fontSize: '1.25rem' },
     subtitle1: {
       opacity: '50%',
       textTransform: 'uppercase',

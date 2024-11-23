@@ -3,9 +3,11 @@ import type { ColorSystemOptions } from '@mui/material'
 import { personaColorsDarkMode } from './customThemeColors.tsx'
 
 export const darkThemePalette: ColorSystemOptions['palette'] = {
-  background: { paper: '#1E1E1E', gradient: 'linear-gradient(to right, #fff, #66caf7)' },
+  background: {
+    paper: '#1E1E1E',
+    gradient: 'linear-gradient(to right, #fff, #000)',
+  },
   info: { main: '#72b4f4' },
-  mode: 'dark',
   primary: { main: '#fff' },
   secondary: {
     main: '#66caf7',

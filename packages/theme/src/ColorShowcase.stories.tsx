@@ -1,5 +1,6 @@
-import { Box } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
+import { ThemeModeButtonGroup } from '@xylabs/react-invertible-theme'
 import React from 'react'
 
 import { ColorShowcase } from './ColorShowcase.tsx'
@@ -12,9 +13,12 @@ const StorybookEntry = {
 } as Meta<typeof ColorShowcase>
 
 const Template: StoryFn<typeof ColorShowcase> = () => (
-  <Box display="flex" height="100vh" width="100vw">
-    <ColorShowcase></ColorShowcase>
-  </Box>
+  <Stack display="flex" flexDirection="column" gap={2} alignItems="stretch" height="100vh" width="100vw">
+    <Box alignSelf="center">
+      <ThemeModeButtonGroup />
+    </Box>
+    <ColorShowcase />
+  </Stack>
 )
 
 const Default = Template.bind({})

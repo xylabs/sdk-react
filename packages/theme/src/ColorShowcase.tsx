@@ -2,46 +2,72 @@ import {
   Box,
   useTheme,
 } from '@mui/material'
+import { DarkModeIconButtonForColorScheme } from '@xylabs/react-invertible-theme'
 import React from 'react'
 
 import { ColorCard } from './ColorCard.tsx'
-import { PaletteColorCard } from './PaletteColorCard.tsx'
 
 export const ColorShowcase: React.FC = () => {
   const theme = useTheme()
 
   return (
     <Box display="flex" flexDirection="column" flex="1 1 0px">
+      <DarkModeIconButtonForColorScheme defaultLightModeColor="default" />
       <Box display="flex" flex="1 1 0px" flexDirection="row" justifyContent="stretch">
         <ColorCard
-          bgcolor={theme.palette.background.default}
-          color={theme.palette.background.default as string}
+          style={{ background: theme.palette.background.gradient }}
+          color={theme.palette.background.gradient}
           colorName="Background"
-          subtype="default"
+          subtype="Gradient"
         />
         <ColorCard
-          bgcolor={theme.palette.background.paper}
-          color={theme.palette.background.paper as string}
+          bgcolor={theme.palette.text.primary}
+          color={theme.palette.background.default}
           colorName="Background"
-          subtype="paper"
+          subtype="Default"
         />
         <ColorCard
-          bgcolor={theme.palette.background.gradient}
-          color={theme.palette.background.gradient as string}
-          colorName="Gradient"
+          bgcolor={theme.palette.text.primary}
+          color={theme.palette.background.paper}
+          colorName="Background"
+          subtype="Paper"
         />
       </Box>
       <Box display="flex" flex="1 1 0px" flexDirection="row" justifyContent="stretch">
-        <PaletteColorCard color={theme.palette.primary} colorName="Primary" subtype="main" />
-        <PaletteColorCard color={theme.palette.secondary} colorName="Secondary" subtype="main" />
+        <ColorCard
+          color={theme.palette.primary.contrastText}
+          bgcolor={theme.palette.primary.main}
+          colorName="Primary"
+        />
+        <ColorCard
+          color={theme.palette.secondary.contrastText}
+          bgcolor={theme.palette.secondary.main}
+          colorName="Secondary"
+        />
         <Box display="flex" flex="1 1 0px" flexDirection="column">
           <Box display="flex" flex="1 1 0px" flexDirection="row">
-            <PaletteColorCard color={theme.palette.info} colorName="Info" subtype="main" />
-            <PaletteColorCard color={theme.palette.success} colorName="Success" subtype="main" />
+            <ColorCard
+              color={theme.palette.info.contrastText}
+              bgcolor={theme.palette.info.main}
+              colorName="Info"
+            />
+            <ColorCard
+              color={theme.palette.success.contrastText}
+              bgcolor={theme.palette.success.main}
+              colorName="Success"
+            />
           </Box>
           <Box display="flex" flex="1 1 0px" flexDirection="row">
-            <PaletteColorCard color={theme.palette.warning} colorName="Warning" subtype="main" />
-            <PaletteColorCard color={theme.palette.error} colorName="Error" subtype="main" />
+            <ColorCard
+              color={theme.palette.warning.contrastText}
+              bgcolor={theme.palette.warning.main}
+              colorName="Warning"
+            />
+            <ColorCard
+              color={theme.palette.error.contrastText}
+              bgcolor={theme.palette.error.main}
+              colorName="Error"
+            />
           </Box>
         </Box>
       </Box>

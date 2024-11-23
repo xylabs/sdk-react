@@ -5,9 +5,18 @@ export const darkThemeOptions: ThemeOptions = {
     background: {
       default: '#0b0f30',
       paper: '#101742',
-      gradient: 'linear-gradient(to right, #384AFD, #FFC91D)',
+      gradient: 'linear-gradient(to right, #384AFD, #0b0f30)',
     },
-    mode: 'dark',
+    primary: {
+      dark: '#010965',
+      light: '#EBECFF',
+      main: '#384AFD',
+    },
+    secondary: {
+      dark: '#AD8E13',
+      light: '#F9D549',
+      main: '#FFC91D',
+    },
     text: {
       disabled: '#a5acdb',
       primary: '#f7f8fc',

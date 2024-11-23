@@ -2,7 +2,7 @@ import {
   alpha, lighten, type ThemeOptions,
 } from '@mui/material'
 
-import { neutralButtonStylesContained, neutralButtonStylesOutlined } from '../ThemeExtensions/customThemeColors.ts'
+import { neutralButtonStylesContained, neutralButtonStylesOutlined } from '../ThemeExtensions/index.ts'
 
 export const darkThemeOptions: ThemeOptions = {
   palette: {
@@ -16,7 +16,6 @@ export const darkThemeOptions: ThemeOptions = {
       contrastText: '#000',
     },
     info: { main: '#72b4f4' },
-    mode: 'dark',
     primary: { main: '#5658F3' },
     secondary: {
       main: '#66caf7',

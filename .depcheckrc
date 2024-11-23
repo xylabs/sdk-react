@@ -30,6 +30,5 @@ ignores: [
   "react-dom",
   "remark-gfm",
   "rimraf",
-  "storybook-dark-mode",
   "webpack"
 ]
