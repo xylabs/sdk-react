@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 import type { Theme, ThemeOptions } from '@mui/material'
 import {
   createTheme, responsiveFontSizes, ScopedCssBaseline, ThemeProvider,
@@ -11,7 +12,7 @@ import type { InvertibleThemeProviderProps } from './InvertibleThemeProviderProp
 import { resolveThemeColors } from './resolveThemeColors.js'
 import { useInvertibleThemeProvider } from './use.ts'
 
-// eslint-disable-next-line complexity
+/** @deprecated use InvertibleMuiThemeProvider instead */
 export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = ({
   options,
   children,

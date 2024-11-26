@@ -1,7 +1,8 @@
 import type { ThemeOptions } from '@mui/material'
 import type { ReactNode } from 'react'
 
-interface InvertibleThemeProviderProps {
+/** @deprecated use InvertibleMuiThemeProviderProps instead */
+export interface InvertibleThemeProviderProps {
   children?: ReactNode
   dark?: boolean
 
@@ -18,5 +19,3 @@ interface InvertibleThemeProviderProps {
   resolve?: boolean
   scoped?: boolean
 }
-
-export type { InvertibleThemeProviderProps }

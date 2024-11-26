@@ -1,5 +1,6 @@
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
+import type { StoryFn } from '@storybook/react'
 import React from 'react'
 
 import { InvertibleMuiThemeProvider } from '../InvertibleMuiThemeProvider/index.ts'
@@ -19,11 +20,11 @@ const theme = createTheme({
   },
 })
 
-const Template = () => (
+const Template: StoryFn = () => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <InvertibleMuiThemeProvider>
-      <ThemeModeButtonGroup />
+      <ThemeModeButtonGroup sx={{ margin: 2 }} />
     </InvertibleMuiThemeProvider>
   </ThemeProvider>
 )

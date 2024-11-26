@@ -1,9 +1,8 @@
 import type { ThemeOptions } from '@mui/material'
 
-interface InvertibleTheme {
+/** @deprecated switch to InvertibleMuiThemeProvider which does not require this */
+export interface InvertibleTheme {
   darkOptions?: ThemeOptions
   lightOptions?: ThemeOptions
   options: ThemeOptions
 }
-
-export type { InvertibleTheme }

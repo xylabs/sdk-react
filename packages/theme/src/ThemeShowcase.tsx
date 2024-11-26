@@ -8,7 +8,7 @@ export const ThemeShowcase: React.FC = () => {
   return (
     <Stack gap={2}>
       <Typography variant="h4" gutterBottom>
-        XYO Website Theme Showcase
+        Theme Showcase
       </Typography>
       <Stack flexDirection="row" gap={2}>
         <Button color="primary" variant="contained">
