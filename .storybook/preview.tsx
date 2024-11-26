@@ -57,7 +57,7 @@ const withThemeProvider: Decorator = (Story, context) => {
   const theme = themeOptions
 
   return (
-    <InvertibleMuiThemeProvider theme={theme}>
+    <InvertibleMuiThemeProvider theme={theme} defaultMode={'dark'}>
       <CssBaseline enableColorScheme />
         <Box>
           <Story {...context} />
