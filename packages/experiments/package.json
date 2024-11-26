@@ -37,8 +37,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^4.4.0",
-    "@xylabs/log": "^4.4.0",
+    "@xylabs/forget": "^4.4.9",
+    "@xylabs/log": "^4.4.9",
     "@xylabs/pixel": "^2.0.6",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
@@ -53,7 +53,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "storybook": "^8.4.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "@mui/material": "^6",

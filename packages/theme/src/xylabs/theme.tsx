@@ -3,12 +3,13 @@ import { createTheme, type Theme } from '@mui/material'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyLabsTheme: Theme = createTheme({
+export const XyLabsTheme = (theme: Theme, rtl = false): Theme => createTheme({
   colorSchemes: {
     light: lightThemeOptions,
     dark: darkThemeOptions,
   },
   cssVariables: { colorSchemeSelector: 'class' },
+  direction: rtl ? 'rtl' : 'ltr',
   components: {
     MuiAlert: {
       styleOverrides: {

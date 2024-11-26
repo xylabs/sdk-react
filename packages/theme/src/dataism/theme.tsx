@@ -6,12 +6,13 @@ import {
 import { darkThemePalette } from './darkThemePalette.tsx'
 import { lightThemePalette } from './lightThemePalette.tsx'
 
-export const DataismTheme: Theme = createTheme({
+export const DataismTheme = (theme: Theme, rtl = false): Theme => createTheme({
   colorSchemes: {
     dark: { palette: darkThemePalette },
     light: { palette: lightThemePalette },
   },
   cssVariables: { colorSchemeSelector: 'class' },
+  direction: rtl ? 'rtl' : 'ltr',
   breakpoints: {
     values: {
       lg: 1350,

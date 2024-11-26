@@ -1,7 +1,7 @@
 import type { BoxProps } from '@mui/material'
 import {
   Box,
-  Typography, useTheme,
+  Typography,
 } from '@mui/material'
 import React from 'react'
 

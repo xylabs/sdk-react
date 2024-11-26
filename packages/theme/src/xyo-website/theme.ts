@@ -6,7 +6,7 @@ import {
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XYOWebsiteTheme = (theme: Theme, rtl = false): Theme => createTheme({
+export const XyoTheme = (theme: Theme, rtl = false): Theme => createTheme({
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,
