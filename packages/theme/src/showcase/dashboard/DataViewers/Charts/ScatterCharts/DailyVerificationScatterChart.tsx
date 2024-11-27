@@ -66,7 +66,7 @@ export const DailyVerificationScatterChart: React.FC<DailyVerificationChartProps
             unit=":00"
             domain={[8, 17]}
             tickCount={10}
-            tickLine={true}
+            tickLine
             tick={{ fontSize: theme.typography.body2.fontSize }}
           />
           <YAxis
@@ -74,7 +74,7 @@ export const DailyVerificationScatterChart: React.FC<DailyVerificationChartProps
             type="number"
             dataKey="verifications"
             name="Verifications"
-            tickLine={true}
+            tickLine
             tick={{ fontSize: theme.typography.body2.fontSize }}
             orientation="right"
             axisLine={false}
