@@ -1,38 +1,20 @@
 import { createTheme, type Theme } from '@mui/material'
 
+import {
+  componentFragment, shapeFragment, spacingFragment,
+} from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyLabsTheme = (theme: Theme, rtl = false): Theme => createTheme({
+export const XyLabsTheme = (theme: Theme): Theme => createTheme({
   colorSchemes: {
     light: lightThemeOptions,
     dark: darkThemeOptions,
   },
   cssVariables: { colorSchemeSelector: 'class' },
-  direction: rtl ? 'rtl' : 'ltr',
-  components: {
-    MuiAlert: {
-      styleOverrides: {
-        root: {
-          paddingBottom: 0.5,
-          paddingTop: 0.5,
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        outlined: { backgroundColor: 'inherit' },
-        root: { overflow: 'hidden' },
-      },
-    },
-    MuiLink: {
-      defaultProps: { underline: 'none' },
-      styleOverrides: { root: { '&:hover': { filter: 'brightness(75%)' } } },
-    },
-    MuiStepper: { styleOverrides: { root: { padding: '0px' } } },
-  },
-  shape: { borderRadius: 4 },
-  spacing: 12,
+  ...componentFragment,
+  ...spacingFragment,
+  ...shapeFragment,
   typography: {
     fontFamily: '"Outfit", sans-serif',
     body1: { fontSize: '1.1rem' },

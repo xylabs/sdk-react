@@ -3,26 +3,7 @@ import {
   alpha, createTheme, lighten,
 } from '@mui/material'
 
-import { shapeFragment } from '../../theme-fragments/shape.tsx'
-import { spacingFragment } from '../../theme-fragments/spacing.tsx'
-import { darkThemePalette } from './darkThemePalette.tsx'
-import { lightThemePalette } from './lightThemePalette.tsx'
-
-export const DataismTheme = (theme: Theme): Theme => createTheme({
-  colorSchemes: {
-    dark: { palette: darkThemePalette },
-    light: { palette: lightThemePalette },
-  },
-  cssVariables: { colorSchemeSelector: 'class' },
-  breakpoints: {
-    values: {
-      lg: 1350,
-      md: 900,
-      sm: 600,
-      xl: 1536,
-      xs: 0,
-    },
-  },
+export const componentFragment = (theme: Theme): Theme => createTheme({
   components: {
     MuiAlert: {
       styleOverrides: {
@@ -141,30 +122,5 @@ export const DataismTheme = (theme: Theme): Theme => createTheme({
       },
     },
     MuiLink: { styleOverrides: { root: { textDecoration: 'none' } } },
-  },
-  ...spacingFragment,
-  ...shapeFragment,
-  typography: {
-    body1: { fontSize: '1.1rem' },
-    button: {
-      fontSize: '1rem',
-      textTransform: 'inherit',
-    },
-    fontFamily: '"Fustat", sans-serif',
-    fontWeightBold: 700,
-    fontWeightLight: 300,
-    fontWeightMedium: 500,
-    fontWeightRegular: 400,
-    h1: { fontSize: '3.2rem' },
-    h2: { fontSize: '2.7rem' },
-    h3: { fontSize: '2.24rem' },
-    h4: { fontSize: '2rem' },
-    h5: { fontSize: '1.5rem' },
-    h6: { fontSize: '1.25rem' },
-    subtitle1: {
-      opacity: '50%',
-      textTransform: 'uppercase',
-    },
-    subtitle2: { opacity: '50%' },
   },
 })

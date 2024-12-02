@@ -3,6 +3,7 @@ import {
   alpha, createTheme, darken,
 } from '@mui/material'
 
+import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -109,8 +110,8 @@ export const XyoTheme = (theme: Theme, rtl = false): Theme => createTheme({
       },
     },
   },
-  shape: { borderRadius: 8 },
-  spacing: 12,
+  ...spacingFragment,
+  ...shapeFragment,
   typography: {
     fontFamily: '"Lexend Deca", sans-serif',
     body1: { fontSize: '1.1rem' },

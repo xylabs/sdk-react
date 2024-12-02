@@ -2,9 +2,9 @@ import { Box, CssBaseline, Theme, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react'
 import { InvertibleMuiThemeProvider } from '@xylabs/react-invertible-theme'
 import React from 'react'
-import { XyoTheme, DataismTheme, XyLabsTheme } from '@xylabs/react-theme'
+import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme } from '@xylabs/react-theme'
 
-const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs'] as const
+const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs', 'xyOS'] as const
 type ThemeName = typeof themeNames[number]
 
 export const globalTypes = {
@@ -28,8 +28,9 @@ const getTheme = (themeName: ThemeName) => {
   const themes: Record<ThemeName, Theme> = {
     'None': theme,
     'XYO': XyoTheme(theme, false),
-    'Dataism': DataismTheme(theme, false),
-    'XYLabs': XyLabsTheme(theme, false),
+    'xyOS': XyosTheme(theme),
+    'Dataism': DataismTheme(theme),
+    'XYLabs': XyLabsTheme(theme),
   }
   return themes[themeName] ?? {}
 }
