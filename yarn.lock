@@ -5340,23 +5340,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-theme@workspace:packages/theme"
   dependencies:
+    "@mui/icons-material": "npm:^6.1.8"
     "@mui/material": "npm:^6.1.8"
+    "@react-spring/web": "npm:^9.7.5"
     "@storybook/react": "npm:^8.4.5"
     "@types/react": "npm:^18.3.12"
+    "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-invertible-theme": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^4.2.4"
     "@xylabs/tsconfig-react": "npm:^4.2.4"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    react-router-dom: "npm:^6.28.0"
     recharts: "npm:^2.13.3"
-    typescript: "npm:^5.6.3"
+    typescript: "npm:^5.7.2"
   peerDependencies:
-    "@mui/icons-material": ^6
     "@mui/material": ^6
     react: ^18
     react-dom: ^18
-    react-router-dom: ^6
   languageName: unknown
   linkType: soft
 
@@ -15133,7 +15135,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.6.3, typescript@npm:^5.7.2":
+"typescript@npm:^5.7.2":
   version: 5.7.2
   resolution: "typescript@npm:5.7.2"
   bin:
@@ -15153,7 +15155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.6.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
   version: 5.7.2
   resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=5786d5"
   bin:
