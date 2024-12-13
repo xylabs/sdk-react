@@ -21,13 +21,13 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
   return (
     discoveredWallets
       ? Object.values(discoveredWallets).map(eip6963Connector => (
-        <WalletDiscoveryMenuItem
-          key={eip6963Connector.providerName}
-          ethWalletConnector={eip6963Connector}
-          onClick={() => onWalletSelect?.(eip6963Connector)}
-          {...props}
-        />
-      ))
+          <WalletDiscoveryMenuItem
+            key={eip6963Connector.providerName}
+            ethWalletConnector={eip6963Connector}
+            onClick={() => onWalletSelect?.(eip6963Connector)}
+            {...props}
+          />
+        ))
       : suppressNoWalletsWarning
         ? null
         : <Alert severity="warning">Unable to locate any installed wallets</Alert>
