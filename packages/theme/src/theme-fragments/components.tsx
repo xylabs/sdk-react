@@ -3,7 +3,7 @@ import {
   alpha, createTheme, lighten,
 } from '@mui/material'
 
-export const componentFragment = (theme: Theme): Theme => createTheme({
+export const componentFragment = (_theme?: Theme): Theme => createTheme({
   components: {
     MuiAlert: {
       styleOverrides: {

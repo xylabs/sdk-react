@@ -3,12 +3,11 @@ import {
   alpha, createTheme, lighten,
 } from '@mui/material'
 
-import { shapeFragment } from '../../theme-fragments/shape.tsx'
-import { spacingFragment } from '../../theme-fragments/spacing.tsx'
+import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
 import { darkThemePalette } from './darkThemePalette.tsx'
 import { lightThemePalette } from './lightThemePalette.tsx'
 
-export const DataismTheme = (theme: Theme): Theme => createTheme({
+export const DataismTheme = (_theme?: Theme): Theme => createTheme({
   colorSchemes: {
     dark: { palette: darkThemePalette },
     light: { palette: lightThemePalette },

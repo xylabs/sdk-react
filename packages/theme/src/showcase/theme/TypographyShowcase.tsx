@@ -70,7 +70,10 @@ export const TypographyShowcase: React.FC = () => {
               Body1
             </Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laudantium dolore magni esse nihil quasi ex maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit. Consequuntur tenetur adipisci natus eius?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur laudantium dolore magni esse nihil quasi ex
+              maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit.
+              Consequuntur tenetur adipisci natus eius?
             </Typography>
           </Stack>
           <Stack gap={0.25}>
@@ -78,7 +81,10 @@ export const TypographyShowcase: React.FC = () => {
               Body2
             </Typography>
             <Typography variant="body2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laudantium dolore magni esse nihil quasi ex maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit. Consequuntur tenetur adipisci natus eius?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur laudantium dolore magni esse nihil quasi ex
+              maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit.
+              Consequuntur tenetur adipisci natus eius?
             </Typography>
           </Stack>
           <Stack gap={0.25}>
@@ -86,7 +92,10 @@ export const TypographyShowcase: React.FC = () => {
               Subtitle1
             </Typography>
             <Typography variant="subtitle1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laudantium dolore magni esse nihil quasi ex maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit. Consequuntur tenetur adipisci natus eius?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur laudantium dolore magni esse nihil quasi ex
+              maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit.
+              Consequuntur tenetur adipisci natus eius?
             </Typography>
           </Stack>
           <Stack gap={0.25}>
@@ -94,7 +103,10 @@ export const TypographyShowcase: React.FC = () => {
               Subtitle2
             </Typography>
             <Typography variant="subtitle2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laudantium dolore magni esse nihil quasi ex maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit. Consequuntur tenetur adipisci natus eius?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur laudantium dolore magni esse nihil quasi ex
+              maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit.
+              Consequuntur tenetur adipisci natus eius?
             </Typography>
           </Stack>
           <Stack gap={0.25}>
@@ -102,7 +114,10 @@ export const TypographyShowcase: React.FC = () => {
               Caption
             </Typography>
             <Typography variant="caption">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur laudantium dolore magni esse nihil quasi ex maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit. Consequuntur tenetur adipisci natus eius?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur laudantium dolore magni esse nihil quasi ex
+              maiores sunt rem, dicta vitae reprehenderit animi, exercitationem fugit.
+              Consequuntur tenetur adipisci natus eius?
             </Typography>
           </Stack>
         </Stack>
