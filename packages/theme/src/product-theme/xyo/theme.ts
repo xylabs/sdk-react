@@ -7,7 +7,7 @@ import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyoTheme = (theme: Theme, rtl = false): Theme => createTheme({
+export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,
@@ -26,21 +26,20 @@ export const XyoTheme = (theme: Theme, rtl = false): Theme => createTheme({
   components: {
     MuiAlert: {
       styleOverrides: {
-        root: {
+        root: ({ theme }) => ({
           backgroundColor: alpha(theme.palette.background.paper, 0.3),
           color: 'inherit',
-        },
-        standardError: { backgroundColor: alpha(theme.palette.error.main, 0.3), color: theme.palette.error.light },
-        standardInfo: { backgroundColor: alpha(theme.palette.info.main, 0.3), color: theme.palette.info.light },
-        standardSuccess: { backgroundColor: alpha(theme.palette.success.main, 0.3), color: theme.palette.success.light },
-        standardWarning: { backgroundColor: alpha(theme.palette.warning.main, 0.3), color: theme.palette.warning.light },
+        }),
+        standardError: ({ theme }) => ({ backgroundColor: alpha(theme.palette.error.main, 0.3), color: theme.palette.error.light }),
+        standardInfo: ({ theme }) => ({ backgroundColor: alpha(theme.palette.info.main, 0.3), color: theme.palette.info.light }),
+        standardSuccess: ({ theme }) => ({ backgroundColor: alpha(theme.palette.success.main, 0.3), color: theme.palette.success.light }),
+        standardWarning: ({ theme }) => ({ backgroundColor: alpha(theme.palette.warning.main, 0.3), color: theme.palette.warning.light }),
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
           boxShadow: 'none',
-          // padding: `${theme.spacing(1)} ${theme.spacing(2)}`,
           borderWidth: '2px',
           borderColor: 'inherit',
         },
@@ -48,7 +47,7 @@ export const XyoTheme = (theme: Theme, rtl = false): Theme => createTheme({
       variants: [
         {
           props: { variant: 'outlined' },
-          style: {
+          style: ({ theme }) => ({
             'WebkitBackdropFilter': 'blur(2px)',
             'backdropFilter': 'blur(2px)',
             'border': `2px solid ${alpha(theme.palette.text.primary, 0.4)}`,
@@ -58,11 +57,11 @@ export const XyoTheme = (theme: Theme, rtl = false): Theme => createTheme({
               border: `2px solid ${alpha(theme.palette.text.primary, 0)}`,
               color: darken(theme.palette.primary.dark, 0.7),
             },
-          },
+          }),
         },
         {
           props: { size: 'small' },
-          style: { padding: `${theme.spacing(0.5)} ${theme.spacing(1)}` },
+          style: ({ theme }) => ({ padding: `${theme.spacing(0.5)} ${theme.spacing(1)}` }),
         },
       ],
     },

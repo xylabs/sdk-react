@@ -6,7 +6,7 @@ import {
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyLabsTheme = (theme: Theme): Theme => createTheme({
+export const XyLabsTheme = (_theme?: Theme): Theme => createTheme({
   colorSchemes: {
     light: lightThemeOptions,
     dark: darkThemeOptions,
