@@ -42,7 +42,7 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-invertible-theme": "workspace:^",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
+    "react-router-dom": "^7.0.2",
     "recharts": "^2.15.0"
   },
   "devDependencies": {
@@ -56,7 +56,7 @@
     "@xylabs/tsconfig-react": "^4.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
+    "react-router-dom": "^7.0.2",
     "recharts": "^2.15.0",
     "storybook": "^8.4.7",
     "typescript": "^5.7.2"

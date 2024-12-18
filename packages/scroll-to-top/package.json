@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "react-router-dom": "^6.28.0"
+    "react-router-dom": "^7.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.17",
