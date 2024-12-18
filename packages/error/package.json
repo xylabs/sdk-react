@@ -63,6 +63,11 @@
     "react-router-dom": "^6",
     "rollbar": "^2.26.4"
   },
+  "peerDependenciesMeta": {
+    "rollbar": {
+      "optional": true
+    }
+  },
   "publishConfig": {
     "access": "public"
   }
