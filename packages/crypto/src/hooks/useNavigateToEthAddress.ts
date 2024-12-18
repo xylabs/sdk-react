@@ -20,7 +20,7 @@ export const useNavigateToEthAddress = () => {
       if (event.metaKey || toEtherScan) {
         window.open(path, '_blank')
       } else {
-        navigate(to ?? path, toOptions)
+        void navigate(to ?? path, toOptions)
       }
     }
   }

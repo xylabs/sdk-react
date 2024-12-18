@@ -28,7 +28,7 @@ export const LinkToEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
           console.error('onClick threw', elementName, funnel, placement, ex)
         }
         if (to && toOptions) {
-          navigate(to, toOptions)
+          void navigate(to, toOptions)
         }
       }
       userEvents.userClick({

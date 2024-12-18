@@ -52,9 +52,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
       setEvent(event.detail)
     }
 
-    // eslint-disable-next-line @eslint-react/web-api/no-leaked-event-listener
     globalThis.addEventListener(AccountsChangedEventName, accountChangedListener)
-    // eslint-disable-next-line @eslint-react/web-api/no-leaked-event-listener
     globalThis.addEventListener(ChainChangedEventName, chainChangedListener)
 
     return () => {

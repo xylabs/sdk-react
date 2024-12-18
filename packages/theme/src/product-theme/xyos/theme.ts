@@ -5,7 +5,7 @@ import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyosTheme = (theme: Theme): Theme => createTheme({
+export const XyosTheme = (): Theme => createTheme({
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,

@@ -12,7 +12,7 @@ const ButtonToEx = forwardRef<HTMLButtonElement, ButtonExProps>(({
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event)
     if (to) {
-      navigate(to, toOptions)
+      void navigate(to, toOptions)
     }
   }
 
