@@ -40,8 +40,7 @@
     "@rollbar/react": "0.12.0-beta",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "prop-types": "^15.8.1",
-    "rollbar": "^2.26.4"
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
     "@mui/icons-material": "^6.2.0",
@@ -61,7 +60,8 @@
     "@mui/material": "^6",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "^6"
+    "react-router-dom": "^6",
+    "rollbar": "^2.26.4"
   },
   "publishConfig": {
     "access": "public"
