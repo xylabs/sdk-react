@@ -38,11 +38,11 @@
   ],
   "dependencies": {
     "@xylabs/react-shared": "workspace:^",
-    "mixpanel-browser": "^2.56.0"
+    "mixpanel-browser": "^2.57.1"
   },
   "devDependencies": {
     "@types/mixpanel-browser": "^2.50.2",
-    "@types/react": "^18.3.16",
+    "@types/react": "^18.3.17",
     "@xylabs/ts-scripts-yarn3": "^4.2.4",
     "@xylabs/tsconfig-react": "^4.2.4",
     "react": "^18.3.1",

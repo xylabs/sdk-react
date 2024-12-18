@@ -37,13 +37,13 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^4.4.13",
+    "@xylabs/delay": "^4.4.21",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-shared": "workspace:^"
   },
   "devDependencies": {
     "@storybook/react": "^8.4.7",
-    "@types/react": "^18.3.16",
+    "@types/react": "^18.3.17",
     "@xylabs/ts-scripts-yarn3": "^4.2.4",
     "@xylabs/tsconfig": "^4.2.4",
     "@xylabs/tsconfig-react": "^4.2.4",

@@ -40,10 +40,10 @@
     "@xylabs/react-button": "workspace:^"
   },
   "devDependencies": {
-    "@mui/icons-material": "^6.2.0",
-    "@mui/material": "^6.2.0",
+    "@mui/icons-material": "^6.2.1",
+    "@mui/material": "^6.2.1",
     "@storybook/react": "^8.4.7",
-    "@types/react": "^18.3.16",
+    "@types/react": "^18.3.17",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^4.2.4",
     "@xylabs/tsconfig-react": "^4.2.4",

@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@mui/icons-material": "^6.2.0",
+    "@mui/icons-material": "^6.2.1",
     "@react-spring/web": "^9.7.5",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-invertible-theme": "workspace:^",
@@ -46,10 +46,10 @@
     "recharts": "^2.15.0"
   },
   "devDependencies": {
-    "@mui/icons-material": "^6.2.0",
-    "@mui/material": "^6.2.0",
+    "@mui/icons-material": "^6.2.1",
+    "@mui/material": "^6.2.1",
     "@storybook/react": "^8.4.7",
-    "@types/react": "^18.3.16",
+    "@types/react": "^18.3.17",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^4.2.4",
