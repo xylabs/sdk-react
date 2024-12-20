@@ -1,8 +1,11 @@
-enum ActionStatusType {
-  ActiveActionStatus = 'ActiveActionStatus',
-  CompletedActionStatus = 'CompletedActionStatus',
-  FailedActionStatus = 'FailedActionStatus',
-  PotentialActionStatus = 'PotentialActionStatus',
-}
+import type { EnumValue } from '@xylabs/object'
+import { Enum } from '@xylabs/object'
 
-export { ActionStatusType }
+export const ActionStatusType = Enum({
+  ActiveActionStatus: 'ActiveActionStatus',
+  CompletedActionStatus: 'CompletedActionStatus',
+  FailedActionStatus: 'FailedActionStatus',
+  PotentialActionStatus: 'PotentialActionStatus',
+})
+
+export type ActionStatusType = EnumValue<typeof ActionStatusType>

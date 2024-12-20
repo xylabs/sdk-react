@@ -61,8 +61,8 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
-    "@xylabs/ts-scripts-yarn3": "^4.2.4",
-    "@xylabs/tsconfig-react": "^4.2.4",
+    "@xylabs/ts-scripts-yarn3": "^4.2.6",
+    "@xylabs/tsconfig-react": "^4.2.6",
     "storybook": "^8.4.7",
     "typescript": "^5.7.2"
   },

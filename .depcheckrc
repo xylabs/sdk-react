@@ -26,7 +26,6 @@ ignores: [
   "eslint-plugin-deprecation",
   "eslint-plugin-import",
   "eslint-plugin-unicorn",
-  "jest",
   "react-dom",
   "remark-gfm",
   "rimraf",

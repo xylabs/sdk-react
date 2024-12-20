@@ -47,6 +47,7 @@
     "awid",
     "bignumber",
     "bowser",
+    "darkmode",
     "Dataism",
     "deepmerge",
     "docgen",
@@ -73,7 +74,6 @@
     "wagmi",
     "webp",
     "xylabs",
-    "Xyos",
     "yarnpkg"
   ]
 }

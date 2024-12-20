@@ -1,8 +1,11 @@
-enum MapCategoryType {
-  ParkingMap = 'ParkingMap',
-  SeatingMap = 'SeatingMap',
-  TransitMap = 'TransitMap',
-  VenueMap = 'VenueMap',
-}
+import type { EnumValue } from '@xylabs/object'
+import { Enum } from '@xylabs/object'
 
-export { MapCategoryType }
+export const MapCategoryType = Enum({
+  ParkingMap: 'ParkingMap',
+  SeatingMap: 'SeatingMap',
+  TransitMap: 'TransitMap',
+  VenueMap: 'VenueMap',
+})
+
+export type MapCategoryType = EnumValue<typeof MapCategoryType>

@@ -44,8 +44,8 @@ const sampleMenuItems = [
   },
 ]
 
-const Template: StoryFn = (args) => {
-  const [isOpen, setIsOpen] = useState(args.open)
+const Template: StoryFn = ({ open, ...args }) => {
+  const [isOpen, setIsOpen] = useState(open)
 
   const handleToggle = () => setIsOpen(!isOpen)
 
