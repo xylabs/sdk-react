@@ -15,6 +15,27 @@ export const XyLabsTheme = (_theme?: Theme): Theme => createTheme({
   ...componentFragment,
   ...spacingFragment,
   ...shapeFragment,
+  components: {
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          paddingBottom: 0.5,
+          paddingTop: 0.5,
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        outlined: { backgroundColor: 'inherit' },
+        root: { overflow: 'hidden' },
+      },
+    },
+    MuiLink: {
+      defaultProps: { underline: 'none' },
+      styleOverrides: { root: { '&:hover': { filter: 'brightness(75%)' } } },
+    },
+    MuiStepper: { styleOverrides: { root: { padding: '0px' } } },
+  },
   typography: {
     fontFamily: '"Outfit", sans-serif',
     body1: { fontSize: '1.1rem' },
