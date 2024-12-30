@@ -18,14 +18,19 @@ export interface ThrownErrorBoundaryProps<T = void> {
 }
 
 export interface ThrownErrorBoundaryState<T = void> {
-  errorEx?: ErrorEx<T>
+  errorEx: ErrorEx<T> | undefined
+  hasError?: boolean
+  xyoError?: T
 }
 
 class ThrownErrorBoundaryInner<T> extends Component<ThrownErrorBoundaryProps<T>, ThrownErrorBoundaryState<T>> {
   override state: ThrownErrorBoundaryState<T> = { errorEx: undefined }
 
   static getDerivedStateFromError<T = void>(error: ErrorEx<T>) {
-    return { hasError: true, xyoError: ThrownErrorBoundaryInner.normalizeError<T>(error) } as ThrownErrorBoundaryState<T>
+    const thrownErrorBoundaryState: ThrownErrorBoundaryState<T> = {
+      hasError: true, errorEx: error, xyoError: ThrownErrorBoundaryInner.normalizeError<T>(error),
+    }
+    return thrownErrorBoundaryState
   }
 
   static normalizeError<T>(error: ErrorEx<T>): T {
@@ -49,9 +54,11 @@ class ThrownErrorBoundaryInner<T> extends Component<ThrownErrorBoundaryProps<T>,
     const {
       children, boundaryName, errorComponent, scope, title,
     } = this.props
+
+    // TODO - support custom error renderer for xyoErrors
     if (errorEx) {
       if (errorComponent) {
-        return errorComponent(errorEx)
+        return errorComponent(errorEx, boundaryName)
       }
       return <ErrorRender<T> error={errorEx} errorContext={`${boundaryName} Boundary`} scope={scope} title={title} />
     }
