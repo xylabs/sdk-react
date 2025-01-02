@@ -1,15 +1,17 @@
 import type { BoxProps } from '@mui/material'
 import { Box } from '@mui/material'
 import { a, useTrail } from '@react-spring/web'
+import type { CSSProperties } from 'react'
 import React, { isValidElement } from 'react'
 
 export interface TrailProps extends BoxProps {
   fullWidth?: boolean
   open: boolean
+  trailStyles?: CSSProperties
 }
 
 export const Trail: React.FC<TrailProps> = ({
-  fullWidth, open, children, ...props
+  fullWidth, open, trailStyles, children, ...props
 }) => {
   // Ensure children is an array for iteration
   const childArray = isValidElement(children) ? [children] : (children as React.ReactNode[])
@@ -32,7 +34,9 @@ export const Trail: React.FC<TrailProps> = ({
         <a.div
           className={`trail-${index}`}
           key={childArrayWithKey[index].key}
-          style={{ ...style, display: 'flex' }}
+          style={{
+            ...trailStyles, ...style, display: 'flex',
+          }}
         >
           {childArrayWithKey[index].child}
         </a.div>
