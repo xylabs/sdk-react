@@ -1,4 +1,3 @@
-/* eslint-disable @eslint-react/no-array-index-key */
 import type { ListItemProps } from '@mui/material'
 import { ListItemText, useTheme } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'

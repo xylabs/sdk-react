@@ -1,4 +1,3 @@
-import { useRollbar } from '@rollbar/react'
 import type { ErrorInfo, ReactNode } from 'react'
 import React, { Component } from 'react'
 import type Rollbar from 'rollbar'
@@ -70,10 +69,5 @@ class ThrownErrorBoundaryInner<T> extends Component<ThrownErrorBoundaryProps<T>,
 // calling the hook outside of the component since only can be called in functional component
 export function ThrownErrorBoundary<T = void>({ rollbar, ...props }: ThrownErrorBoundaryProps<T>): JSX.Element {
   const { rollbar: rollbarErrorReporter } = useErrorReporter()
-  let rollbarFromHook: Rollbar | undefined
-  // safely call the hook
-  try {
-    rollbarFromHook = useRollbar()
-  } catch {}
-  return <ThrownErrorBoundaryInner<T> rollbar={rollbar ?? rollbarErrorReporter ?? rollbarFromHook} {...props} />
+  return <ThrownErrorBoundaryInner<T> rollbar={rollbar ?? rollbarErrorReporter ?? globalThis.rollbar} {...props} />
 }

@@ -38,13 +38,13 @@
   "module": "dist/browser/index.mjs",
   "types": "dist/browser/index.d.ts",
   "dependencies": {
-    "@xylabs/assert": "^4.4.25",
-    "@xylabs/object": "^4.4.25"
+    "@xylabs/assert": "^4.4.34",
+    "@xylabs/object": "^4.4.34"
   },
   "devDependencies": {
-    "@mui/icons-material": "^6.2.1",
-    "@mui/material": "^6.2.1",
-    "@mui/styles": "^6.2.1",
+    "@mui/icons-material": "^6.3.0",
+    "@mui/material": "^6.3.0",
+    "@mui/styles": "^6.3.0",
     "@xylabs/ts-scripts-yarn3": "^4.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

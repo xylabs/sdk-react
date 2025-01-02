@@ -1,4 +1,3 @@
-/* eslint-disable @eslint-react/no-array-index-key */
 import { Collapse, ListSubheader } from '@mui/material'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexCol } from '@xylabs/react-flexbox'

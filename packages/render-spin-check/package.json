@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@types/react": "^18.3.17",
+    "@types/react": "^18.3.18",
     "@xylabs/ts-scripts-yarn3": "^4.2.6",
     "@xylabs/tsconfig-react": "^4.2.6",
     "react": "^18.3.1",

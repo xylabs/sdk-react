@@ -49,7 +49,7 @@ export const MiniDrawer: React.FC<MiniDrawerProps> = ({
             text={item.label}
             icon={item.icon}
             active={pathname === item.path}
-            onClick={() => navigate(item.path)}
+            onClick={() => void navigate(item.path)}
           />
         ))}
       </List>
