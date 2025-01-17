@@ -11,7 +11,7 @@ export interface EIP6963ProviderInfo {
 }
 
 /**
- * Detail of the CustomEvent emitted by as wallet
+ * Detail of the CustomEvent emitted by a wallet
  */
 export interface EIP6963ProviderDetail {
   info: EIP6963ProviderInfo
