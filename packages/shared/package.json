@@ -37,20 +37,20 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^4.4.34",
-    "@xylabs/log": "^4.4.34",
+    "@xylabs/api": "^4.5.1",
+    "@xylabs/log": "^4.5.1",
     "@xylabs/react-async-effect": "workspace:^"
   },
   "devDependencies": {
-    "@mui/material": "^6.3.0",
-    "@storybook/react": "^8.4.7",
+    "@mui/material": "^6.4.1",
+    "@storybook/react": "^8.5.1",
     "@types/react": "^18.3.18",
     "@xylabs/ts-scripts-yarn3": "^4.2.6",
     "@xylabs/tsconfig-react": "^4.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.4.7",
-    "typescript": "^5.7.2"
+    "storybook": "^8.5.1",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "@mui/material": "^6",

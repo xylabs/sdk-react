@@ -15,6 +15,7 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
   data01, data02, showLegend = false,
 }) => {
   const theme = useTheme()
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   const handleMouseEnter = (index: number) => {
