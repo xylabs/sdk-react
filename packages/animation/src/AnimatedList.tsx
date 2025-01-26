@@ -6,7 +6,7 @@ export type NodesWithKeys = { child: ReactNode; childHeight?: number; key: numbe
 
 export interface AnimatedListProps {
   fullWidth?: boolean
-  itemStyles: CSSProperties
+  itemStyles?: CSSProperties
   items?: NodesWithKeys[]
 }
 
