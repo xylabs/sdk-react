@@ -24,7 +24,7 @@ export const AnimatedList: React.FC<AnimatedListProps> = ({
       opacity: 1, height: childHeight ?? height, transform: 'translateY(0px)',
     }),
     leave: {
-      opacity: 0, height: 0, transform: 'translateY(20px)',
+      opacity: 0, height: 0, transform: 'translateY(-20px)',
     },
   })
 
