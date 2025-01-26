@@ -66,6 +66,17 @@ WithChildren.args = {
   ],
 }
 
+const WithChildrenStyled = Template.bind({})
+WithChildrenStyled.args = {
+  fullWidth: true,
+  items: [
+    { child: <TestCard title="key" key={3}>3</TestCard>, key: 3 },
+    { child: <TestCard title="key" key={2}>2</TestCard>, key: 2 },
+    { child: <TestCard title="1">1</TestCard>, key: 1 },
+  ],
+  itemStyles: { border: '3px dashed gray' },
+}
+
 const WithChildHeight = Template.bind({})
 WithChildHeight.args = {
   items:
@@ -83,5 +94,5 @@ WithChildHeight.args = {
 }
 
 export {
-  Default, WithChildHeight, WithChildren,
+  Default, WithChildHeight, WithChildren, WithChildrenStyled,
 }

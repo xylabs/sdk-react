@@ -1,14 +1,18 @@
 import { animated, useTransition } from '@react-spring/web'
-import type { ReactNode } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import React, { useMemo, useState } from 'react'
 
 export type NodesWithKeys = { child: ReactNode; childHeight?: number; key: number }
 
 export interface AnimatedListProps {
+  fullWidth?: boolean
+  itemStyles: CSSProperties
   items?: NodesWithKeys[]
 }
 
-export const AnimatedList: React.FC<AnimatedListProps> = ({ items }) => {
+export const AnimatedList: React.FC<AnimatedListProps> = ({
+  fullWidth, itemStyles, items,
+}) => {
   const [height, setHeight] = useState(0)
   const itemsWithHeight = useMemo(() => height ? (items ?? []) : [], [items, height])
 
@@ -52,7 +56,12 @@ export const AnimatedList: React.FC<AnimatedListProps> = ({ items }) => {
         {items?.[0]?.child}
       </div>
       {transitions((styles, item) => (
-        <animated.div style={styles} key={item?.key}>
+        <animated.div
+          style={{
+            ...itemStyles, ...(fullWidth ? { width: '100%' } : {}), ...styles,
+          }}
+          key={item?.key}
+        >
           {item?.child}
         </animated.div>
       ))}
