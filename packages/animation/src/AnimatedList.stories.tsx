@@ -21,12 +21,6 @@ const TestCard = (props: CardProps) => {
   )
 }
 
-const initialItems = [
-  { child: <TestCard title="key" key={3}>3</TestCard>, key: 3 },
-  { child: <TestCard title="key" key={2}>2</TestCard>, key: 2 },
-  { child: <TestCard title="1">1</TestCard>, key: 1 },
-]
-
 export default {
   title: 'animations/AnimatedList',
   component: AnimatedList,
@@ -64,6 +58,30 @@ const Default = Template.bind({})
 Default.args = {}
 
 const WithChildren = Template.bind({})
-WithChildren.args = { items: initialItems }
+WithChildren.args = {
+  items: [
+    { child: <TestCard title="key" key={3}>3</TestCard>, key: 3 },
+    { child: <TestCard title="key" key={2}>2</TestCard>, key: 2 },
+    { child: <TestCard title="1">1</TestCard>, key: 1 },
+  ],
+}
 
-export { Default, WithChildren }
+const WithChildHeight = Template.bind({})
+WithChildHeight.args = {
+  items:
+  [
+    {
+      child: <TestCard title="key" key={3}>3</TestCard>, childHeight: 200, key: 3,
+    },
+    {
+      child: <TestCard title="key" key={2}>2</TestCard>, childHeight: 100, key: 2,
+    },
+    {
+      child: <TestCard title="1">1</TestCard>, childHeight: 50, key: 1,
+    },
+  ],
+}
+
+export {
+  Default, WithChildHeight, WithChildren,
+}
