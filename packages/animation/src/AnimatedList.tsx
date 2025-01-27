@@ -2,7 +2,7 @@ import { animated, useTransition } from '@react-spring/web'
 import type { CSSProperties, ReactNode } from 'react'
 import React, { useMemo, useState } from 'react'
 
-export type NodesWithKeys = { child: ReactNode; childHeight?: number; key: number }
+export type NodesWithKeys = { child: ReactNode; childHeight?: number; key: string }
 
 export interface AnimatedListProps {
   fullWidth?: boolean

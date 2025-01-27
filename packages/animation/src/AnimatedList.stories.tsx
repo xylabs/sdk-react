@@ -36,7 +36,7 @@ const Template: StoryFn<typeof AnimatedList> = ({ items, ...args }) => {
   const addChild = () => {
     const newIndex = index + 1
     setIndex(newIndex)
-    setAdditionalItems([{ child: <TestCard title="key" key={newIndex}>{newIndex}</TestCard>, key: newIndex }, ...additionalItems ?? []])
+    setAdditionalItems([{ child: <TestCard title="key" key={newIndex}>{newIndex}</TestCard>, key: newIndex.toString() }, ...additionalItems ?? []])
   }
 
   // Function to remove the last item
@@ -60,9 +60,9 @@ Default.args = {}
 const WithChildren = Template.bind({})
 WithChildren.args = {
   items: [
-    { child: <TestCard title="key" key={3}>3</TestCard>, key: 3 },
-    { child: <TestCard title="key" key={2}>2</TestCard>, key: 2 },
-    { child: <TestCard title="1">1</TestCard>, key: 1 },
+    { child: <TestCard title="key" key={3}>3</TestCard>, key: '3' },
+    { child: <TestCard title="key" key={2}>2</TestCard>, key: '2' },
+    { child: <TestCard title="1">1</TestCard>, key: '1' },
   ],
 }
 
@@ -70,9 +70,9 @@ const WithChildrenStyled = Template.bind({})
 WithChildrenStyled.args = {
   fullWidth: true,
   items: [
-    { child: <TestCard title="key" key={3}>3</TestCard>, key: 3 },
-    { child: <TestCard title="key" key={2}>2</TestCard>, key: 2 },
-    { child: <TestCard title="1">1</TestCard>, key: 1 },
+    { child: <TestCard title="key" key={3}>3</TestCard>, key: '3' },
+    { child: <TestCard title="key" key={2}>2</TestCard>, key: '2' },
+    { child: <TestCard title="1">1</TestCard>, key: '1' },
   ],
   itemStyles: { border: '3px dashed gray' },
 }
@@ -82,13 +82,13 @@ WithChildHeight.args = {
   items:
   [
     {
-      child: <TestCard title="key" key={3}>3</TestCard>, childHeight: 200, key: 3,
+      child: <TestCard title="key" key={3}>3</TestCard>, childHeight: 200, key: '3',
     },
     {
-      child: <TestCard title="key" key={2}>2</TestCard>, childHeight: 100, key: 2,
+      child: <TestCard title="key" key={2}>2</TestCard>, childHeight: 100, key: '2',
     },
     {
-      child: <TestCard title="1">1</TestCard>, childHeight: 50, key: 1,
+      child: <TestCard title="1">1</TestCard>, childHeight: 50, key: '1',
     },
   ],
 }
