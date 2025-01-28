@@ -55,12 +55,15 @@ export const AnimatedList: React.FC<AnimatedListProps> = ({
       >
         {items?.[0]?.child}
       </div>
-      {transitions((styles, item) => (
+      {transitions((styles, item, _transition, index) => (
         <animated.div
           style={{
             ...itemStyles, ...(fullWidth ? { width: '100%' } : {}), ...styles,
           }}
           key={item?.key}
+          data-animated-list-item-key={item?.key}
+          data-animated-list-index={index}
+
         >
           {item?.child}
         </animated.div>
