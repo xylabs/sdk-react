@@ -45,6 +45,7 @@
     "@mui/icons-material": "^6.4.6",
     "@mui/material": "^6.4.6",
     "@mui/styles": "^6.4.6",
+    "@types/react": "^18.3.18",
     "@xylabs/ts-scripts-yarn3": "^5.0.36",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
