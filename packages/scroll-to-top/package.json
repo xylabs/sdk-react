@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-scroll-to-top",
-  "version": "5.3.23",
+  "version": "5.3.24",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",

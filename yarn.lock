@@ -3776,7 +3776,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@npm:^5.3.23, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
+"@xylabs/react-flexbox@npm:^5.3.24, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
@@ -3876,7 +3876,7 @@ __metadata:
     "@mui/material": "npm:^6.4.6"
     "@storybook/react": "npm:^8.6.2"
     "@types/react": "npm:^18.3.18"
-    "@xylabs/react-flexbox": "npm:^5.3.23"
+    "@xylabs/react-flexbox": "npm:^5.3.24"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.0.37"
     "@xylabs/tsconfig-react": "npm:^5.0.37"
