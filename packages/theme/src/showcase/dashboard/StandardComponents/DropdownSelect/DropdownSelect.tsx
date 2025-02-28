@@ -10,7 +10,7 @@ import {
   useTheme,
 } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 export interface DropdownItem {
   icon: React.ReactNode
@@ -34,7 +34,7 @@ export const DropdownSelect: React.FC<DropdownSelectProps> = ({
   const theme = useTheme()
   const [localSelectedValue, setLocalSelectedValue] = useState(selectedValue)
 
-  useEffect(() => {
+  useMemo(() => {
     setLocalSelectedValue(selectedValue)
   }, [selectedValue])
 

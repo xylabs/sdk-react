@@ -2,7 +2,7 @@ import { isLocalhost } from '@xylabs/react-shared'
 import type {
   Config, Mixpanel, OverridedMixpanel,
 } from 'mixpanel-browser'
-import { default as untypedMixpanel } from 'mixpanel-browser'
+import untypedMixpanel from 'mixpanel-browser'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'
 

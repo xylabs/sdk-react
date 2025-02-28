@@ -49,7 +49,7 @@ const Template: StoryFn<typeof UsePromiseTest> = (args) => {
 }
 
 const TemplateError: StoryFn<React.FC> = () => {
-  const [value, error] = usePromise(async () => {
+  const [, error] = usePromise(async () => {
     await delay(1000)
     throw new Error('Test Error')
   }, [])
