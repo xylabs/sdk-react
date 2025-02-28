@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Alert, Button } from '@mui/material'
 import type { StoryFn } from '@storybook/react'
 import { delay } from '@xylabs/delay'
 import React, { useState } from 'react'
@@ -48,8 +48,24 @@ const Template: StoryFn<typeof UsePromiseTest> = (args) => {
   )
 }
 
+const TemplateError: StoryFn<React.FC> = () => {
+  const [value, error] = usePromise(async () => {
+    await delay(1000)
+    throw new Error('Test Error')
+  }, [])
+
+  return (
+    <div>
+      {error && <Alert severity="error">{error?.message}</Alert>}
+    </div>
+  )
+}
+
 const Default = Template.bind({})
 const WithDelay = Template.bind({})
 WithDelay.args = { delayTicks: 1000 }
+const WithError = TemplateError.bind({})
 
-export { Default, WithDelay }
+export {
+  Default, WithDelay, WithError,
+}

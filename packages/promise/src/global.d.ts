@@ -1,5 +1,5 @@
 import type Rollbar from 'rollbar'
 
 declare global {
-  var rollbar: Rollbar
+  var rollbar: Rollbar | undefined
 }

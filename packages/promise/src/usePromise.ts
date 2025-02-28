@@ -47,7 +47,7 @@ export const usePromise = <TResult>(
       const error = ex as Error
       if (logErrors) {
         console.error(`usePromise-memo: ${error}`)
-        rollbar?.error(error)
+        globalThis?.rollbar?.error(error)
       }
       if (config?.debug) console.log(`usePromise [${config?.debug}]: useMemo rejection [${typeof promise}]`)
       setResult(undefined)
@@ -78,7 +78,7 @@ export const usePromise = <TResult>(
             const error = e as Error
             if (logErrors) {
               console.error(error)
-              rollbar?.error(error)
+              globalThis?.rollbar?.error(error)
             }
             if (loaded) {
               setResult(undefined)
@@ -92,7 +92,7 @@ export const usePromise = <TResult>(
         const error = ex as Error
         if (logErrors) {
           console.error(`usePromise-memo: ${error}`)
-          rollbar?.error(error)
+          globalThis?.rollbar?.error(error)
         }
         if (loaded) {
           setResult(undefined)
