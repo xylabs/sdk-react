@@ -42,15 +42,15 @@
     "@xylabs/react-async-effect": "workspace:^"
   },
   "devDependencies": {
-    "@mui/material": "^6.4.1",
-    "@storybook/react": "^8.5.1",
+    "@mui/material": "^6.4.6",
+    "@storybook/react": "^8.6.2",
     "@types/react": "^18.3.18",
-    "@xylabs/ts-scripts-yarn3": "^4.2.6",
-    "@xylabs/tsconfig-react": "^4.2.6",
+    "@xylabs/ts-scripts-yarn3": "^5.0.36",
+    "@xylabs/tsconfig-react": "^5.0.36",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.5.1",
-    "typescript": "^5.7.3"
+    "storybook": "^8.6.2",
+    "typescript": "^5.8.2"
   },
   "peerDependencies": {
     "@mui/material": "^6",

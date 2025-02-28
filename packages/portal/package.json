@@ -39,11 +39,11 @@
   "devDependencies": {
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
-    "@xylabs/ts-scripts-yarn3": "^4.2.6",
-    "@xylabs/tsconfig-react": "^4.2.6",
+    "@xylabs/ts-scripts-yarn3": "^5.0.36",
+    "@xylabs/tsconfig-react": "^5.0.36",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   },
   "peerDependencies": {
     "react": "^18",
