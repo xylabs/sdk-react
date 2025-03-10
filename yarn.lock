@@ -2884,12 +2884,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.3.5":
-  version: 18.3.5
-  resolution: "@types/react-dom@npm:18.3.5"
+"@types/react-dom@npm:^19.0.4":
+  version: 19.0.4
+  resolution: "@types/react-dom@npm:19.0.4"
   peerDependencies:
-    "@types/react": ^18.0.0
-  checksum: 10c0/b163d35a6b32a79f5782574a7aeb12a31a647e248792bf437e6d596e2676961c394c5e3c6e91d1ce44ae90441dbaf93158efb4f051c0d61e2612f1cb04ce4faa
+    "@types/react": ^19.0.0
+  checksum: 10c0/4e71853919b94df9e746a4bd73f8180e9ae13016333ce9c543dcba9f4f4c8fe6e28b038ca6ee61c24e291af8e03ca3bc5ded17c46dee938fcb32d71186fda7a3
   languageName: node
   linkType: hard
 
@@ -3446,13 +3446,13 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3471,12 +3471,12 @@ __metadata:
     "@mui/material": "npm:^6.4.7"
     "@react-spring/web": "npm:^9.7.5"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3493,12 +3493,12 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@mui/styles": "npm:^6.4.7"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/assert": "npm:^4.5.10"
     "@xylabs/enum": "npm:^4.5.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/icons-material": ^6
@@ -3516,7 +3516,7 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/assert": "npm:^4.5.10"
     "@xylabs/react-app-settings": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -3524,8 +3524,8 @@ __metadata:
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3544,12 +3544,12 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-promise": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3564,7 +3564,7 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@types/react-helmet": "npm:^6.1.11"
     "@xylabs/react-appbar": "workspace:^"
     "@xylabs/react-cookie-consent": "workspace:^"
@@ -3572,8 +3572,8 @@ __metadata:
     "@xylabs/react-scroll-to-top": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-helmet: "npm:^6.1.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
@@ -3593,14 +3593,14 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3617,7 +3617,7 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/assert": "npm:^4.5.10"
     "@xylabs/react-base-page": "workspace:^"
     "@xylabs/react-error": "workspace:^"
@@ -3626,8 +3626,8 @@ __metadata:
     "@xylabs/react-select": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3645,14 +3645,14 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3672,7 +3672,7 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/assert": "npm:^4.5.10"
     "@xylabs/eth-address": "npm:^4.5.10"
     "@xylabs/forget": "npm:^4.5.10"
@@ -3686,8 +3686,8 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     ethers: "npm:^6.13.5"
     lru-cache: "npm:^11.0.2"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3707,14 +3707,14 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     axios: "npm:^1.8.2"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3731,14 +3731,14 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     prop-types: "npm:^15.8.1"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     rollbar: "npm:^2.26.4"
     storybook: "npm:^8.6.4"
@@ -3762,7 +3762,7 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/forget": "npm:^4.5.10"
     "@xylabs/log": "npm:^4.5.10"
     "@xylabs/pixel": "npm:^2.0.6"
@@ -3771,8 +3771,8 @@ __metadata:
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3787,15 +3787,15 @@ __metadata:
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/delay": "npm:^4.5.10"
     "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3811,11 +3811,11 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3834,13 +3834,13 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@types/md5": "npm:^2.3.5"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     md5: "npm:^2.3.0"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
@@ -3856,14 +3856,14 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-animation": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     deepmerge: "npm:^4.3.1"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     rfdc: "npm:^1.4.1"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3881,13 +3881,13 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-flexbox": "npm:^5.3.25"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -3903,12 +3903,12 @@ __metadata:
   resolution: "@xylabs/react-mixpanel@workspace:packages/mixpanel"
   dependencies:
     "@types/mixpanel-browser": "npm:^2.51.0"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     mixpanel-browser: "npm:^2.61.0"
-    react: "npm:^18.3.1"
+    react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     react: ^18
@@ -3922,14 +3922,14 @@ __metadata:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
     "@types/numeral": "npm:^2.0.5"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     numeral: "npm:^2.0.6"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3945,7 +3945,7 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/object": "npm:^4.5.10"
     "@xylabs/pixel": "npm:^2.0.6"
     "@xylabs/react-button": "workspace:^"
@@ -3955,8 +3955,8 @@ __metadata:
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -3970,7 +3970,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/assert": "npm:^4.5.10"
     "@xylabs/delay": "npm:^4.5.10"
     "@xylabs/object": "npm:^4.5.10"
@@ -3979,7 +3979,7 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     mixpanel-browser: "npm:^2.61.0"
     query-string: "npm:^9.1.1"
-    react: "npm:^18.3.1"
+    react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     mixpanel-browser: ^2.55.1
@@ -3994,12 +3994,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-portal@workspace:packages/portal"
   dependencies:
-    "@types/react": "npm:^18.3.18"
-    "@types/react-dom": "npm:^18.3.5"
+    "@types/react": "npm:^19.0.10"
+    "@types/react-dom": "npm:^19.0.4"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     react: ^18
@@ -4013,13 +4013,13 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/delay": "npm:^4.5.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
     async-mutex: "npm:^0.5.0"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     rollbar: "npm:^2.26.4"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
@@ -4035,13 +4035,13 @@ __metadata:
     "@mui/icons-material": "npm:^6.4.7"
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-dialogs": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -4056,10 +4056,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-render-spin-check@workspace:packages/render-spin-check"
   dependencies:
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
+    react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     react: ^18
@@ -4070,11 +4070,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-rich-result@workspace:packages/rich-result"
   dependencies:
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/enum": "npm:^4.5.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
+    react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     react: ^18
@@ -4085,11 +4085,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top"
   dependencies:
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -4104,11 +4104,11 @@ __metadata:
   resolution: "@xylabs/react-select@workspace:packages/select"
   dependencies:
     "@mui/material": "npm:^6.4.7"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
@@ -4123,14 +4123,14 @@ __metadata:
   dependencies:
     "@mui/material": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/api": "npm:^4.5.10"
     "@xylabs/log": "npm:^4.5.10"
     "@xylabs/react-async-effect": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
@@ -4148,14 +4148,14 @@ __metadata:
     "@mui/material": "npm:^6.4.7"
     "@react-spring/web": "npm:^9.7.5"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-invertible-theme": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-router-dom: "npm:^7.3.0"
     recharts: "npm:^2.15.1"
     storybook: "npm:^8.6.4"
@@ -4175,7 +4175,7 @@ __metadata:
     "@mui/material": "npm:^6.4.7"
     "@mui/styles": "npm:^6.4.7"
     "@storybook/react": "npm:^8.6.4"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@types/react-helmet": "npm:^6.1.11"
     "@xylabs/react-app-settings": "workspace:^"
     "@xylabs/react-appbar": "workspace:^"
@@ -4188,8 +4188,8 @@ __metadata:
     "@xylabs/react-shared": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^5.1.14"
     "@xylabs/tsconfig-react": "npm:^5.1.14"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     react-helmet: "npm:^6.1.0"
     react-router-dom: "npm:^7.3.0"
     storybook: "npm:^8.6.4"
@@ -4224,7 +4224,7 @@ __metadata:
     "@storybook/theming": "npm:^8.6.4"
     "@stylistic/eslint-plugin": "npm:^4.2.0"
     "@types/node": "npm:^22.13.10"
-    "@types/react": "npm:^18.3.18"
+    "@types/react": "npm:^19.0.10"
     "@typescript-eslint/eslint-plugin": "npm:^8.26.0"
     "@typescript-eslint/parser": "npm:^8.26.0"
     "@xylabs/eslint-config-flat": "npm:^5.1.14"
@@ -4264,8 +4264,8 @@ __metadata:
     eslint: "npm:^9.22.0"
     eslint-import-resolver-typescript: "npm:^3.8.3"
     knip: "npm:^5.45.0"
-    react: "npm:^18.3.1"
-    react-dom: "npm:^18.3.1"
+    react: "npm:^19.0.0"
+    react-dom: "npm:^19.0.0"
     remark-gfm: "npm:^4.0.1"
     rimraf: "npm:^6.0.1"
     storybook: "npm:^8.6.4"
@@ -9256,7 +9256,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -11297,7 +11297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+"react-dom@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0, react-dom@npm:^19.0.0":
   version: 19.0.0
   resolution: "react-dom@npm:19.0.0"
   dependencies:
@@ -11305,18 +11305,6 @@ __metadata:
   peerDependencies:
     react: ^19.0.0
   checksum: 10c0/a36ce7ab507b237ae2759c984cdaad4af4096d8199fb65b3815c16825e5cfeb7293da790a3fc2184b52bfba7ba3ff31c058c01947aff6fd1a3701632aabaa6a9
-  languageName: node
-  linkType: hard
-
-"react-dom@npm:^18.3.1":
-  version: 18.3.1
-  resolution: "react-dom@npm:18.3.1"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-    scheduler: "npm:^0.23.2"
-  peerDependencies:
-    react: ^18.3.1
-  checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
   languageName: node
   linkType: hard
 
@@ -11437,19 +11425,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0":
+"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0, react@npm:^19.0.0":
   version: 19.0.0
   resolution: "react@npm:19.0.0"
   checksum: 10c0/9cad8f103e8e3a16d15cb18a0d8115d8bd9f9e1ce3420310aea381eb42aa0a4f812cf047bb5441349257a05fba8a291515691e3cb51267279b2d2c3253f38471
-  languageName: node
-  linkType: hard
-
-"react@npm:^18.3.1":
-  version: 18.3.1
-  resolution: "react@npm:18.3.1"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-  checksum: 10c0/283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3
   languageName: node
   linkType: hard
 
@@ -12821,15 +12800,6 @@ __metadata:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: 10c0/7e3c8b2e88a1841c9671094bbaeebd94448111dd90a81a1f606f3f67708a6ec57763b3b47f06da09fc6054193e0e6709e77325415dc8422b04497a8070fa02d4
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.23.2":
-  version: 0.23.2
-  resolution: "scheduler@npm:0.23.2"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-  checksum: 10c0/26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78
   languageName: node
   linkType: hard
 

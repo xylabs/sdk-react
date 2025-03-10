@@ -49,14 +49,14 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
     "@storybook/react": "^8.6.4",
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.0.10",
     "@types/react-helmet": "^6.1.11",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
