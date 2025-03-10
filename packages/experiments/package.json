@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-experiments",
-  "version": "5.3.25",
+  "version": "6.0.0-rc.1",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -62,5 +62,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "stableVersion": "5.3.25"
 }
