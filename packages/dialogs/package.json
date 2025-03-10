@@ -39,18 +39,18 @@
   "dependencies": {
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "axios": "^1.8.1"
+    "axios": "^1.8.2"
   },
   "devDependencies": {
-    "@mui/material": "^6.4.6",
-    "@storybook/react": "^8.6.2",
+    "@mui/material": "^6.4.7",
+    "@storybook/react": "^8.6.4",
     "@types/react": "^18.3.18",
-    "@xylabs/ts-scripts-yarn3": "^5.0.39",
-    "@xylabs/tsconfig-react": "^5.0.39",
-    "axios": "^1.8.1",
+    "@xylabs/ts-scripts-yarn3": "^5.1.14",
+    "@xylabs/tsconfig-react": "^5.1.14",
+    "axios": "^1.8.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.6.2",
+    "storybook": "^8.6.4",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {

@@ -42,17 +42,17 @@
     "prop-types": "^15.8.1"
   },
   "devDependencies": {
-    "@mui/icons-material": "^6.4.6",
-    "@mui/material": "^6.4.6",
-    "@storybook/react": "^8.6.2",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "@storybook/react": "^8.6.4",
     "@types/react": "^18.3.18",
-    "@xylabs/ts-scripts-yarn3": "^5.0.39",
-    "@xylabs/tsconfig-react": "^5.0.39",
+    "@xylabs/ts-scripts-yarn3": "^5.1.14",
+    "@xylabs/tsconfig-react": "^5.1.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.2.0",
+    "react-router-dom": "^7.3.0",
     "rollbar": "^2.26.4",
-    "storybook": "^8.6.2",
+    "storybook": "^8.6.4",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {

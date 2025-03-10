@@ -37,19 +37,19 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/delay": "^4.5.2",
+    "@xylabs/delay": "^4.5.10",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-shared": "workspace:^"
   },
   "devDependencies": {
-    "@storybook/react": "^8.6.2",
+    "@storybook/react": "^8.6.4",
     "@types/react": "^18.3.18",
-    "@xylabs/ts-scripts-yarn3": "^5.0.39",
-    "@xylabs/tsconfig": "^5.0.39",
-    "@xylabs/tsconfig-react": "^5.0.39",
+    "@xylabs/ts-scripts-yarn3": "^5.1.14",
+    "@xylabs/tsconfig": "^5.1.14",
+    "@xylabs/tsconfig-react": "^5.1.14",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^8.6.2",
+    "storybook": "^8.6.4",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {

@@ -38,9 +38,9 @@
   "module": "dist/browser/index.mjs",
   "types": "dist/browser/index.d.ts",
   "dependencies": {
-    "@mui/icons-material": "^6.4.6",
-    "@mui/material": "^6.4.6",
-    "@mui/styles": "^6.4.6",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "@mui/styles": "^6.4.7",
     "@xylabs/react-app-settings": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
     "@xylabs/react-async-effect": "workspace:^",
@@ -52,19 +52,19 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^7.2.0"
+    "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
-    "@storybook/react": "^8.6.2",
+    "@storybook/react": "^8.6.4",
     "@types/react": "^18.3.18",
     "@types/react-helmet": "^6.1.11",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
-    "@xylabs/ts-scripts-yarn3": "^5.0.39",
-    "@xylabs/tsconfig-react": "^5.0.39",
-    "storybook": "^8.6.2",
+    "@xylabs/ts-scripts-yarn3": "^5.1.14",
+    "@xylabs/tsconfig-react": "^5.1.14",
+    "storybook": "^8.6.4",
     "typescript": "^5.8.2"
   },
   "publishConfig": {
