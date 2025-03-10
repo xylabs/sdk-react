@@ -47,7 +47,7 @@
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "react": "^18"
+    "react": "^19"
   },
   "publishConfig": {
     "access": "public"

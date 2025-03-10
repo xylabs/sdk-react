@@ -2877,7 +2877,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*, @types/prop-types@npm:^15.7.14":
+"@types/prop-types@npm:^15.7.14":
   version: 15.7.14
   resolution: "@types/prop-types@npm:15.7.14"
   checksum: 10c0/1ec775160bfab90b67a782d735952158c7e702ca4502968aa82565bd8e452c2de8601c8dfe349733073c31179116cf7340710160d3836aa8a1ef76d1532893b1
@@ -2911,13 +2911,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.3.18":
-  version: 18.3.18
-  resolution: "@types/react@npm:18.3.18"
+"@types/react@npm:*, @types/react@npm:^19.0.10":
+  version: 19.0.10
+  resolution: "@types/react@npm:19.0.10"
   dependencies:
-    "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10c0/8fb2b00672072135d0858dc9db07873ea107cc238b6228aaa2a9afd1ef7a64a7074078250db38afbeb19064be8ea6af5eac32d404efdd5f45e093cc4829d87f8
+  checksum: 10c0/41884cca21850c8b2d6578b172ca0ca4fff6021251a68532b19f2031ac23dc5a9222470208065f8d9985d367376047df2f49ece8d927f7d04cdc94922b1eb34b
   languageName: node
   linkType: hard
 
@@ -3458,8 +3457,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3481,8 +3480,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3504,8 +3503,8 @@ __metadata:
     "@mui/icons-material": ^6
     "@mui/material": ^6
     "@mui/styles": ^6
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3532,8 +3531,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
     react-router-dom: ^7
   languageName: unknown
   linkType: soft
@@ -3553,7 +3552,7 @@ __metadata:
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    react: ^18
+    react: ^19
   languageName: unknown
   linkType: soft
 
@@ -3581,8 +3580,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
     react-router-dom: ^7
   languageName: unknown
   linkType: soft
@@ -3606,8 +3605,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3634,8 +3633,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3657,8 +3656,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3696,8 +3695,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3719,8 +3718,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3746,8 +3745,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
     react-router-dom: ^7
     rollbar: ^2.26.4
   peerDependenciesMeta:
@@ -3777,8 +3776,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3800,8 +3799,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3822,8 +3821,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
     react-router-dom: ^7
   languageName: unknown
   linkType: soft
@@ -3844,8 +3843,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3870,8 +3869,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3893,8 +3892,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3911,7 +3910,7 @@ __metadata:
     react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    react: ^18
+    react: ^19
   languageName: unknown
   linkType: soft
 
@@ -3934,8 +3933,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3961,8 +3960,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -3983,7 +3982,7 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     mixpanel-browser: ^2.55.1
-    react: ^18
+    react: ^19
   peerDependenciesMeta:
     mixpanel-browser:
       optional: true
@@ -4002,8 +4001,8 @@ __metadata:
     react-dom: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -4024,7 +4023,7 @@ __metadata:
     storybook: "npm:^8.6.4"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    react: ^18
+    react: ^19
   languageName: unknown
   linkType: soft
 
@@ -4047,8 +4046,8 @@ __metadata:
   peerDependencies:
     "@mui/icons-material": ^6
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -4062,7 +4061,7 @@ __metadata:
     react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    react: ^18
+    react: ^19
   languageName: unknown
   linkType: soft
 
@@ -4077,7 +4076,7 @@ __metadata:
     react: "npm:^19.0.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    react: ^18
+    react: ^19
   languageName: unknown
   linkType: soft
 
@@ -4094,8 +4093,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -4112,8 +4111,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -4135,8 +4134,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -4162,8 +4161,8 @@ __metadata:
     typescript: "npm:^5.8.2"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
   languageName: unknown
   linkType: soft
 
@@ -4277,8 +4276,8 @@ __metadata:
     "@mui/icons-material": ^6
     "@mui/material": ^6
     axios: ^1
-    react: ^18
-    react-dom: ^18
+    react: ^19
+    react-dom: ^19
     react-helmet: ^6
   languageName: unknown
   linkType: soft
@@ -11425,7 +11424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0, react@npm:^19.0.0":
+"react@npm:^19.0.0":
   version: 19.0.0
   resolution: "react@npm:19.0.0"
   checksum: 10c0/9cad8f103e8e3a16d15cb18a0d8115d8bd9f9e1ce3420310aea381eb42aa0a4f812cf047bb5441349257a05fba8a291515691e3cb51267279b2d2c3253f38471

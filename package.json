@@ -54,9 +54,6 @@
       "last 1 safari version"
     ]
   },
-  "resolutions": {
-    "@types/react": "^18.3.18"
-  },
   "dependencies": {
     "@xylabs/react-accordion": "workspace:^",
     "@xylabs/react-animation": "workspace:^",
@@ -137,8 +134,8 @@
     "@mui/icons-material": "^6",
     "@mui/material": "^6",
     "axios": "^1",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^19",
+    "react-dom": "^19",
     "react-helmet": "^6"
   },
   "packageManager": "yarn@4.6.0",
