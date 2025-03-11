@@ -6,7 +6,7 @@ import { EthAddress } from '@xylabs/eth-address'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
-import React, { useContext } from 'react'
+import React, { use } from 'react'
 
 import { EthersContext } from '../../contexts/index.ts'
 import type { EthAccountProps } from './EthAccountProps.tsx'
@@ -23,7 +23,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
   removeMargin,
   ...props
 }) => {
-  const { localAddress } = useContext(EthersContext)
+  const { localAddress } = use(EthersContext)
   const theme = useTheme()
 
   const large = useMediaQuery(theme.breakpoints.up('md'))

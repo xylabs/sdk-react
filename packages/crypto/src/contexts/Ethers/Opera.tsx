@@ -60,10 +60,10 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   }), [chainId, error, isConnected, localAddress, provider, signer])
 
   return (
-    <EthersContext.Provider
+    <EthersContext
       value={value}
     >
       {children}
-    </EthersContext.Provider>
+    </EthersContext>
   )
 }

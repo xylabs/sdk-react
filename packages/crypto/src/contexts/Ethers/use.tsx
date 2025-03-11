@@ -1,5 +1,5 @@
-import { useContext } from 'react'
+import { use } from 'react'
 
 import { EthersContext } from './Context.ts'
 
-export const useEthersContext = () => useContext(EthersContext)
+export const useEthersContext = () => use(EthersContext)

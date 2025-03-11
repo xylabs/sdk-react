@@ -55,10 +55,10 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
     provider])
 
   return (
-    <EthersContext.Provider
+    <EthersContext
       value={value}
     >
       {children}
-    </EthersContext.Provider>
+    </EthersContext>
   )
 }

@@ -1,21 +1,14 @@
 import { Link } from '@mui/material'
 import { useUserEvents } from '@xylabs/react-pixel'
 import type { MouseEvent } from 'react'
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { Link as RouterLink, useNavigate } from 'react-router-dom'
 
 import type { LinkExProps } from './LinkExProps.tsx'
 
-export const LinkToEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
-  intent,
-  funnel,
-  onClick,
-  to,
-  toOptions,
-  placement,
-  disableUserEvents,
-  ...props
-}, ref) => {
+export const LinkToEx = ({
+  ref, intent, funnel, onClick, to, toOptions, placement, disableUserEvents, ...props
+}: LinkExProps & { ref?: React.RefObject<HTMLAnchorElement | null> }) => {
   const userEvents = useUserEvents()
   const navigate = useNavigate()
   const localOnClick = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -43,6 +36,6 @@ export const LinkToEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   }
 
   return <Link ref={ref} rel="noopener noreferrer" to={toOptions ? undefined : to} component={RouterLink} onClick={localOnClick} {...props} />
-})
+}
 
 LinkToEx.displayName = 'LinkToExXYLabs'

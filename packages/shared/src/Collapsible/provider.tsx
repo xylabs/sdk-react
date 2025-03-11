@@ -16,11 +16,11 @@ export const CollapsibleProvider: React.FC<CollapsibleProviderProps> = ({
 
   return (
     // eslint-disable-next-line @eslint-react/no-unstable-context-value
-    <CollapsibleContext.Provider value={{
+    <CollapsibleContext value={{
       collapse, collapseEnd, provided: true, setCollapse, setCollapseEnd,
     }}
     >
       {children}
-    </CollapsibleContext.Provider>
+    </CollapsibleContext>
   )
 }

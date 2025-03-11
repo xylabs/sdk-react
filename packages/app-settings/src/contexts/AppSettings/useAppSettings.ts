@@ -1,7 +1,7 @@
-import { useContext } from 'react'
+import { use } from 'react'
 
 import { AppSettingsContext } from './Context.ts'
 
 export const useAppSettings = () => {
-  return useContext(AppSettingsContext)
+  return use(AppSettingsContext)
 }

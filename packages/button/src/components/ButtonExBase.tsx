@@ -4,13 +4,13 @@ import {
   BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles,
 } from '@xylabs/react-shared'
 import type { MouseEvent } from 'react'
-import React, { forwardRef } from 'react'
+import React from 'react'
 
 import type { ButtonExProps } from './ButtonExProps.tsx'
 
-const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
-  funnel, intent, target, placement, disableUserEvents, href, ...props
-}, ref) => {
+const ButtonExBase = ({
+  ref, funnel, intent, target, placement, disableUserEvents, href, ...props
+}: ButtonExProps & { ref?: React.RefObject<HTMLButtonElement | null> }) => {
   const theme = useTheme()
   const userEvents = useUserEvents()
   const {
@@ -62,7 +62,7 @@ const ButtonExBase = forwardRef<HTMLButtonElement, ButtonExProps>(({
       {children}
     </Button>
   )
-})
+}
 
 ButtonExBase.displayName = 'ButtonExBaseXYLabs'
 
