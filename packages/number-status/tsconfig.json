@@ -3,7 +3,7 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": ["src"],
+  "rootDir": "./src",
   "exclude": ["dist", "docs"],
   "extends": "@xylabs/tsconfig-react"
 }

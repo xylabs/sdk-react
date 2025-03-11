@@ -4,7 +4,7 @@
     "module": "NodeNext",
     "typeRoots": [],
   },
-  "exclude": ["dist", "docs", "packages", "node_modules"],
+  "rootDir": "./src",
+  "exclude": ["dist", "docs"],
   "extends": "@xylabs/tsconfig-react",
-  "include": ["src"]
 }
