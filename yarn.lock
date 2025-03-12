@@ -4082,7 +4082,7 @@ __metadata:
     "@xylabs/ts-scripts-yarn3": "npm:^6.0.5"
     "@xylabs/tsconfig": "npm:^6.0.5"
     "@xylabs/tsconfig-react": "npm:^6.0.5"
-    "@xyo-network/react-theme": "npm:^4.4.11"
+    "@xyo-network/react-theme": "npm:^5.0.0"
     axios: "npm:^1.8.3"
     buffer: "npm:^6.0.3"
     eslint: "npm:^9.22.0"
@@ -4218,14 +4218,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xyo-network/react-theme@npm:^4.4.11":
-  version: 4.4.11
-  resolution: "@xyo-network/react-theme@npm:4.4.11"
+"@xyo-network/react-theme@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@xyo-network/react-theme@npm:5.0.0"
   peerDependencies:
     "@mui/material": ^6
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  checksum: 10c0/3d699311424357528d7fdc40094611998845c48716ec796d64ce120b2a6013600a0b37f126d444f583cf0f51cb3955ab7a2d1e279542a2594caae91f0cdb3e2d
+    react: ^19
+    react-dom: ^19
+  checksum: 10c0/69beab2d223ce94dc69e1731886e1da35ab6bd743b2d332e5d92748077d8b24716aa6be55f361e2d219f1510c0805026c209cd7fd5a8bfefcdbbb226268872d5
   languageName: node
   linkType: hard
 
