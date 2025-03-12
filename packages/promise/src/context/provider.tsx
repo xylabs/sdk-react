@@ -12,8 +12,8 @@ export const PromiseSettingsProvider: React.FC<PromiseSettingsProviderProps> = (
 }) => {
   const value = useMemo(() => ({ logErrors, ...props }), [logErrors, props])
   return (
-    <PromiseSettingsContext.Provider value={value}>
+    <PromiseSettingsContext value={value}>
       {children}
-    </PromiseSettingsContext.Provider>
+    </PromiseSettingsContext>
   )
 }

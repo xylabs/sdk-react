@@ -30,8 +30,8 @@ export const MixpanelProvider: React.FC<PropsWithChildren<MixpanelProviderProps>
   const value = useMemo(() => ({ mixpanel }), [mixpanel])
 
   return (
-    <MixpanelContext.Provider value={value}>
+    <MixpanelContext value={value}>
       {children}
-    </MixpanelContext.Provider>
+    </MixpanelContext>
   )
 }

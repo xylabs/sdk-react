@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-pixel",
-  "version": "5.3.25",
+  "version": "6.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -26,7 +26,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/browser/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
@@ -37,23 +37,23 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.5.10",
-    "@xylabs/delay": "^4.5.10",
-    "@xylabs/object": "^4.5.10",
+    "@xylabs/assert": "^4.6.0",
+    "@xylabs/delay": "^4.6.0",
+    "@xylabs/object": "^4.6.0",
     "@xylabs/pixel": "^2.0.6",
     "query-string": "^9.1.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.18",
-    "@xylabs/ts-scripts-yarn3": "^5.1.14",
-    "@xylabs/tsconfig-react": "^5.1.14",
-    "mixpanel-browser": "^2.61.0",
-    "react": "^18.3.1",
+    "@types/react": "^19.0.10",
+    "@xylabs/ts-scripts-yarn3": "^6.0.5",
+    "@xylabs/tsconfig-react": "^6.0.5",
+    "mixpanel-browser": "^2.61.1",
+    "react": "^19.0.0",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
     "mixpanel-browser": "^2.55.1",
-    "react": "^18"
+    "react": "^19"
   },
   "peerDependenciesMeta": {
     "mixpanel-browser": {

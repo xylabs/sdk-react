@@ -60,10 +60,10 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   ])
 
   return (
-    <EthersContext.Provider
+    <EthersContext
       value={value}
     >
       {children}
-    </EthersContext.Provider>
+    </EthersContext>
   )
 }

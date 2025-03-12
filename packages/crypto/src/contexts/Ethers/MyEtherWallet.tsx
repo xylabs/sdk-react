@@ -122,10 +122,10 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
     walletProvider])
 
   return (
-    <EthersContext.Provider
+    <EthersContext
       value={value}
     >
       {children}
-    </EthersContext.Provider>
+    </EthersContext>
   )
 }

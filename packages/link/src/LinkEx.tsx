@@ -1,23 +1,14 @@
 import { Link } from '@mui/material'
 import { useUserEvents } from '@xylabs/react-pixel'
 import type { MouseEvent } from 'react'
-import React, { forwardRef } from 'react'
+import React from 'react'
 
 import type { LinkExProps } from './LinkExProps.tsx'
 import { LinkToEx } from './LinkToEx.tsx'
 
-export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
-  onClick,
-  disableUserEvents,
-  funnel,
-  intent,
-  placement,
-  target,
-  href,
-  to,
-  toOptions,
-  ...props
-}, ref) => {
+export const LinkEx = ({
+  ref, onClick, disableUserEvents, funnel, intent, placement, target, href, to, toOptions, ...props
+}: LinkExProps & { ref?: React.RefObject<HTMLAnchorElement | null> }) => {
   const userEvents = useUserEvents()
   const localOnClick = (event: MouseEvent<HTMLAnchorElement>) => {
     // we do this crazy navigate thing so that we can set it up outside the promise so that safari does not block it
@@ -47,6 +38,6 @@ export const LinkEx = forwardRef<HTMLAnchorElement, LinkExProps>(({
   return to
     ? <LinkToEx ref={ref} to={to} toOptions={toOptions} target={target} onClick={onClick} {...props} />
     : <Link ref={ref} href={href} target={target} onClick={localOnClick} {...props} />
-})
+}
 
 LinkEx.displayName = 'LinkExXYLabs'

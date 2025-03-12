@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-theme",
-  "version": "5.3.25",
+  "version": "6.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -26,7 +26,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/browser/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
@@ -41,7 +41,7 @@
     "@react-spring/web": "^9.7.5",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-invertible-theme": "workspace:^",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
     "recharts": "^2.15.1"
   },
@@ -49,13 +49,13 @@
     "@mui/icons-material": "^6.4.7",
     "@mui/material": "^6.4.7",
     "@storybook/react": "^8.6.4",
-    "@types/react": "^18.3.18",
+    "@types/react": "^19.0.10",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/ts-scripts-yarn3": "^5.1.14",
-    "@xylabs/tsconfig-react": "^5.1.14",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@xylabs/ts-scripts-yarn3": "^6.0.5",
+    "@xylabs/tsconfig-react": "^6.0.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0",
     "recharts": "^2.15.1",
     "storybook": "^8.6.4",
@@ -63,8 +63,8 @@
   },
   "peerDependencies": {
     "@mui/material": "^6",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "publishConfig": {
     "access": "public"

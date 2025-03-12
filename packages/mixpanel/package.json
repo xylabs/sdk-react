@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-mixpanel",
-  "version": "5.3.25",
+  "version": "6.0.0",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -26,7 +26,7 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/browser/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
@@ -38,18 +38,18 @@
   ],
   "dependencies": {
     "@xylabs/react-shared": "workspace:^",
-    "mixpanel-browser": "^2.61.0"
+    "mixpanel-browser": "^2.61.1"
   },
   "devDependencies": {
     "@types/mixpanel-browser": "^2.51.0",
-    "@types/react": "^18.3.18",
-    "@xylabs/ts-scripts-yarn3": "^5.1.14",
-    "@xylabs/tsconfig-react": "^5.1.14",
-    "react": "^18.3.1",
+    "@types/react": "^19.0.10",
+    "@xylabs/ts-scripts-yarn3": "^6.0.5",
+    "@xylabs/tsconfig-react": "^6.0.5",
+    "react": "^19.0.0",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "react": "^18"
+    "react": "^19"
   },
   "publishConfig": {
     "access": "public"

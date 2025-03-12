@@ -5,13 +5,13 @@ import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol } from '@xylabs/react-flexbox'
 import { DebugUserEventsContext } from '@xylabs/react-pixel'
 import { Portal } from '@xylabs/react-portal'
-import React, { useContext, useState } from 'react'
+import React, { use, useState } from 'react'
 
 import { usePixelAltSendHandler } from '../hooks/index.ts'
 import type { PixelEvent } from '../PixelEvent.ts'
 
 export const PixelDebugger: React.FC = () => {
-  const { isDebugging } = useContext(DebugUserEventsContext)
+  const { isDebugging } = use(DebugUserEventsContext)
   // TODO - when adding in the location hook to detect location change, was dropping the setEvents in usePixelAltSendHand
   const theme = useTheme()
   const [displayEvents, setDisplayEvents] = useState(false)

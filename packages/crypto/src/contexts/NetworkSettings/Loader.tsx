@@ -19,10 +19,10 @@ export const NetworkSettingsLoader: React.FC<PropsWithChildren<NetworkSettingsLo
   }), [])
 
   return (
-    <NetworkSettingsContext.Provider
+    <NetworkSettingsContext
       value={value}
     >
       {children}
-    </NetworkSettingsContext.Provider>
+    </NetworkSettingsContext>
   )
 }

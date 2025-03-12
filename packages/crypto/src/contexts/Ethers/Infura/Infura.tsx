@@ -22,10 +22,10 @@ export const InfuraEthersLoader: React.FC<PropsWithChildren<Props>> = (props) =>
   }), [chainId, provider])
 
   return (
-    <EthersContext.Provider
+    <EthersContext
       value={value}
     >
       {children}
-    </EthersContext.Provider>
+    </EthersContext>
   )
 }

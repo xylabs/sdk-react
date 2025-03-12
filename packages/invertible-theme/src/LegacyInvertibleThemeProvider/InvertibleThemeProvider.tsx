@@ -58,14 +58,14 @@ export const InvertibleThemeProvider: React.FC<InvertibleThemeProviderProps> = (
   return scoped
     ? (
         <ScopedCssBaseline>
-          <InvertibleThemeContext.Provider value={value}>
+          <InvertibleThemeContext value={value}>
             <ThemeProvider theme={theme}>{children}</ThemeProvider>
-          </InvertibleThemeContext.Provider>
+          </InvertibleThemeContext>
         </ScopedCssBaseline>
       )
     : (
-        <InvertibleThemeContext.Provider value={value}>
+        <InvertibleThemeContext value={value}>
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </InvertibleThemeContext.Provider>
+        </InvertibleThemeContext>
       )
 }
