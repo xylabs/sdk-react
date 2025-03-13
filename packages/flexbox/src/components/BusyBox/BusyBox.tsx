@@ -8,12 +8,12 @@ import React from 'react'
 
 import { useBusyTiming } from '../../hooks/index.ts'
 
-export interface BusyBoxProps extends BusyProps, Omit<BoxProps, 'ref'> {
+export interface BusyBoxProps extends BoxProps, BusyProps {
   background?: boolean
   paper?: boolean
 }
 
-const BusyBox = (
+const BusyBox: React.FC<BusyBoxProps> = (
   {
     ref,
     background,
@@ -29,7 +29,7 @@ const BusyBox = (
     paper,
     style,
     ...props
-  }: BusyBoxProps & { ref?: React.RefObject<unknown | null> },
+  },
 ) => {
   const theme = useTheme()
   const internalBusy = useBusyTiming(busy, busyMinimum)
