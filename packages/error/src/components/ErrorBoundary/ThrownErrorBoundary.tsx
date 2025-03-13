@@ -67,7 +67,7 @@ class ThrownErrorBoundaryInner<T> extends Component<ThrownErrorBoundaryProps<T>,
 }
 
 // calling the hook outside of the component since only can be called in functional component
-export function ThrownErrorBoundary<T = void>({ rollbar, ...props }: ThrownErrorBoundaryProps<T>): JSX.Element {
+export function ThrownErrorBoundary<T = void>({ rollbar, ...props }: ThrownErrorBoundaryProps<T>): React.JSX.Element {
   const { rollbar: rollbarErrorReporter } = useErrorReporter()
   return <ThrownErrorBoundaryInner<T> rollbar={rollbar ?? rollbarErrorReporter ?? globalThis.rollbar} {...props} />
 }

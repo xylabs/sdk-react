@@ -19,7 +19,7 @@ export function ErrorAlert<T = void>({
   error = 'An unknown error occurred',
   scope,
   ...props
-}: ErrorAlertProps<T>): JSX.Element {
+}: ErrorAlertProps<T>): React.JSX.Element {
   return (
     <Alert action={action} severity="error" {...props}>
       <AlertTitle>{title}</AlertTitle>

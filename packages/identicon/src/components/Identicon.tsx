@@ -19,7 +19,7 @@ export interface IdenticonProps extends FlexBoxProps {
   value?: string
 }
 
-const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: IdenticonProps) => {
+const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement | null>, props: IdenticonProps) => {
   const {
     value = '', size = 400, bg = 'transparent', count = 5, palette, iconPadding = 0,
   } = props
@@ -28,7 +28,7 @@ const updateCanvas = (canvas: React.RefObject<HTMLCanvasElement>, props: Identic
   const block = Math.floor(size / count)
   const hashColor = hash.slice(0, 6)
 
-  const current = canvas.current
+  const current = canvas?.current
 
   if (!current) {
     return

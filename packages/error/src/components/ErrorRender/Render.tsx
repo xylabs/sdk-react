@@ -13,7 +13,7 @@ export function ErrorRender<T = void>({
   scope,
   useLocation,
   ...props
-}: ErrorRenderProps<T>): JSX.Element {
+}: ErrorRenderProps<T>): React.JSX.Element {
   const location = useLocation?.()
   useEffect(() => {
     if (location) {
