@@ -36,7 +36,7 @@
     "./package.json": "./package.json"
   },
   "module": "dist/browser/index.mjs",
-  "types": "dist/browser/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "dependencies": {
     "@xylabs/assert": "^4.6.0",
     "@xylabs/enum": "^4.6.0"
