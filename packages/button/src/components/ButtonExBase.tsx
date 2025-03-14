@@ -10,7 +10,7 @@ import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonExBase = ({
   ref, funnel, intent, target, placement, disableUserEvents, href, ...props
-}: ButtonExProps & { ref?: React.RefObject<HTMLButtonElement | null> }) => {
+}: ButtonExProps) => {
   const theme = useTheme()
   const userEvents = useUserEvents()
   const {

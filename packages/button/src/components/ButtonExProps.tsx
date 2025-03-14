@@ -35,7 +35,7 @@ export const asButtonHrefOrToProps = (props: ButtonHrefAndToProps): ButtonHrefOr
   return props.href ? { href: props.href } : props.to ? { to: props.to, toOptions: props.toOptions } : {}
 }
 
-export interface ButtonBaseExProps extends Omit<ButtonProps, 'ref' | 'href'>, BoxlikeComponentProps, BusyProps {
+export interface ButtonBaseExProps extends Omit<ButtonProps, 'href'>, BoxlikeComponentProps, BusyProps {
   disableUserEvents?: boolean
   funnel?: string
   intent?: string

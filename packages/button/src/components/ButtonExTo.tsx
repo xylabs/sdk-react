@@ -7,7 +7,7 @@ import type { ButtonExProps } from './ButtonExProps.tsx'
 
 const ButtonToEx = ({
   ref, to, toOptions, onClick, ...props
-}: ButtonExProps & { ref?: React.RefObject<HTMLButtonElement | null> }) => {
+}: ButtonExProps) => {
   const navigate = useNavigate()
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event)

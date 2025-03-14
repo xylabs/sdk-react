@@ -4,7 +4,7 @@ import { ButtonExBase } from './ButtonExBase.tsx'
 import type { ButtonExProps } from './ButtonExProps.tsx'
 import { ButtonToEx } from './ButtonExTo.tsx'
 
-const ButtonEx = ({ ref, ...props }: ButtonExProps & { ref?: React.RefObject<HTMLButtonElement | null> }) => {
+const ButtonEx = ({ ref, ...props }: ButtonExProps) => {
   if (props.to) {
     const { to, ...additionalProps } = props
     return <ButtonToEx to={to} ref={ref} {...additionalProps} />
