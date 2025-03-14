@@ -25,7 +25,7 @@ export interface WebAppChromeProps extends FlexBoxProps {
 
 export const WebAppChrome = ({
   ref, appName, appbar, children, errorBoundary, errorPage, footer, footerElevation = 4, menuItems, navigationType = 'menu', ...props
-}: WebAppChromeProps & { ref?: React.RefObject<HTMLDivElement | null> }) => {
+}: WebAppChromeProps) => {
   return (
     <FlexCol id="web-chrome-flex" alignItems="stretch" overflow="hidden" height="100vh" ref={ref} {...props}>
       <Helmet defaultTitle={appName} titleTemplate={`%s | ${appName}`}>
