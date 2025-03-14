@@ -15,7 +15,6 @@ export interface BusyBoxProps extends BoxProps, BusyProps {
 
 const BusyBox: React.FC<BusyBoxProps> = (
   {
-    ref,
     background,
     children,
     busyVariant = 'circular',
@@ -47,7 +46,6 @@ const BusyBox: React.FC<BusyBoxProps> = (
             }
           : style
       }
-      ref={ref}
       {...props}
     >
       {children}
