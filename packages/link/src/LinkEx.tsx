@@ -1,4 +1,5 @@
 import { Link } from '@mui/material'
+import { toPromise } from '@xylabs/promise'
 import { useUserEvents } from '@xylabs/react-pixel'
 import type { MouseEvent } from 'react'
 import React from 'react'
@@ -23,9 +24,9 @@ export const LinkEx = ({
       const elementName = props['aria-label'] ?? event.currentTarget.textContent
       event.preventDefault()
       const windowToNav = windowToNavigate()
-      userEvents.userClick({
+      toPromise(userEvents.userClick({
         elementName, funnel, intent, placement,
-      }).then(() => {
+      })).then(() => {
         callOnClickAndFollowHref(windowToNav)
       }).catch((ex) => {
         console.error('User event failed', elementName, funnel, placement, ex)

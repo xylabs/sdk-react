@@ -1,4 +1,5 @@
 import { Button, useTheme } from '@mui/material'
+import { toPromise } from '@xylabs/promise'
 import { useUserEvents } from '@xylabs/react-pixel'
 import {
   BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles,
@@ -35,9 +36,9 @@ const ButtonExBase = ({
         event.preventDefault()
         const windowToNav = windowToNavigate()
         if (href) {
-          userEvents.userClick({
+          toPromise(userEvents.userClick({
             elementName, intent, funnel, placement,
-          }).then(() => {
+          })).then(() => {
             callOnClickAndFollowHref(windowToNav)
           }).catch((ex) => {
             console.error('User event failed', elementName, funnel, placement, ex)
