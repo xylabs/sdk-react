@@ -46,13 +46,13 @@
   },
   "devDependencies": {
     "@mui/material": "^6.4.7",
-    "@storybook/react": "^8.6.4",
+    "@storybook/react": "^8.6.7",
     "@types/react": "^19.0.10",
-    "@xylabs/ts-scripts-yarn3": "^6.0.8",
-    "@xylabs/tsconfig-react": "^6.0.8",
+    "@xylabs/ts-scripts-yarn3": "^6.1.2",
+    "@xylabs/tsconfig-react": "^6.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "storybook": "^8.6.4",
+    "storybook": "^8.6.7",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
