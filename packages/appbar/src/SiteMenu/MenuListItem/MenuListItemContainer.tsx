@@ -1,9 +1,9 @@
 import type { ListItemProps } from '@mui/material'
 import { ListItemText, useTheme } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { LinkEx } from '@xylabs/react-link'
 import { useCollapsible } from '@xylabs/react-shared'
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import type { MenuListItemBase, NavListItemProps } from '../lib/index.ts'
 import {
@@ -49,23 +49,33 @@ export const MenuListItemContainer: React.FC<MenuListItemProps> = ({
         style={{ whiteSpace: 'nowrap', ...style }}
         {...props}
       >
-        <LinkEx
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+
+        <NavLink
+          className="site-menu-nav-link"
+          onMouseEnter={(e) => {
+            const el = e.currentTarget
+            el.style.cursor = 'pointer'
+            el.style.textDecoration = 'underline'
+            el.style.filter = 'brightness(75%)'
+            setHovered(true)
+          }}
+          onMouseLeave={(e) => {
+            const el = e.currentTarget
+            el.style.cursor = 'default'
+            el.style.textDecoration = 'none'
+            el.style.filter = ''
+            setHovered(false)
+          }}
           color="inherit"
-          to={to}
-          sx={{
-            '& :hover': {
-              cursor: 'pointer',
-              textDecoration: 'underline',
-            },
+          to={to ?? ''}
+          viewTransition
+          style={{
+            color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center',
           }}
         >
-          <FlexRow>
-            <MenuIcon icon={icon} paddingRight={resolvedIconMenuTextSpacing} color={hovered ? 'secondary' : 'inherit'} />
-            <ListItemText primary={primary} />
-          </FlexRow>
-        </LinkEx>
+          <MenuIcon icon={icon} paddingRight={resolvedIconMenuTextSpacing} color={hovered ? 'secondary' : 'inherit'} />
+          <ListItemText primary={primary} />
+        </NavLink>
         <FlexRow style={{ marginLeft: theme.spacing(1) }}>
           {subNavListItems
             ? <SubNavToggleIconButton setOpenSubNav={setOpenSubNav} openSubNav={openSubNav} />
