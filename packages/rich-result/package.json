@@ -40,7 +40,7 @@
     "@xylabs/enum": "^4.6.4"
   },
   "devDependencies": {
-    "@types/react": "^19.0.10",
+    "@types/react": "^19.0.11",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
     "react": "^19.0.0",

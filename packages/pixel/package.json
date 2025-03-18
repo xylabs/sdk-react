@@ -44,7 +44,7 @@
     "query-string": "^9.1.1"
   },
   "devDependencies": {
-    "@types/react": "^19.0.10",
+    "@types/react": "^19.0.11",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
     "mixpanel-browser": "^2.61.2",

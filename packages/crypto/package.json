@@ -52,14 +52,14 @@
     "ethers": "^6.13.5",
     "lru-cache": "^11.0.2",
     "react-router-dom": "^7.3.0",
-    "viem": "^2.23.11",
+    "viem": "^2.23.12",
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.8",
     "@storybook/react": "^8.6.7",
-    "@types/react": "^19.0.10",
+    "@types/react": "^19.0.11",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
     "react": "^19.0.0",
