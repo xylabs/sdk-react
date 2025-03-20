@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-link",
-  "version": "6.0.8",
+  "version": "6.0.9",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -45,7 +45,7 @@
     "@mui/material": "^6.4.8",
     "@storybook/react": "^8.6.7",
     "@types/react": "^19.0.12",
-    "@xylabs/react-flexbox": "^6.0.8",
+    "@xylabs/react-flexbox": "^6.0.9",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
