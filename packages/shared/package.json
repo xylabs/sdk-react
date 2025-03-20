@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-shared",
-  "version": "6.0.7",
+  "version": "6.0.8",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -37,14 +37,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^4.6.4",
-    "@xylabs/log": "^4.6.4",
+    "@xylabs/api": "^4.7.2",
+    "@xylabs/log": "^4.7.2",
     "@xylabs/react-async-effect": "workspace:^"
   },
   "devDependencies": {
     "@mui/material": "^6.4.8",
     "@storybook/react": "^8.6.7",
-    "@types/react": "^19.0.11",
+    "@types/react": "^19.0.12",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
     "react": "^19.0.0",

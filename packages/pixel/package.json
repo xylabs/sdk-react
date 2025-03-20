@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-pixel",
-  "version": "6.0.7",
+  "version": "6.0.8",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -37,14 +37,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.6.4",
-    "@xylabs/delay": "^4.6.4",
-    "@xylabs/object": "^4.6.4",
-    "@xylabs/pixel": "^4.6.4",
+    "@xylabs/assert": "^4.7.2",
+    "@xylabs/delay": "^4.7.2",
+    "@xylabs/object": "^4.7.2",
+    "@xylabs/pixel": "^4.7.2",
     "query-string": "^9.1.1"
   },
   "devDependencies": {
-    "@types/react": "^19.0.11",
+    "@types/react": "^19.0.12",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
     "mixpanel-browser": "^2.61.2",

@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-quick-tip-button",
-  "version": "6.0.7",
+  "version": "6.0.8",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -43,7 +43,7 @@
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.8",
     "@storybook/react": "^8.6.7",
-    "@types/react": "^19.0.11",
+    "@types/react": "^19.0.12",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^6.1.4",
     "@xylabs/tsconfig-react": "^6.1.4",
