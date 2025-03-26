@@ -38,9 +38,9 @@
   "module": "dist/browser/index.mjs",
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@mui/icons-material": "^6.4.8",
-    "@mui/material": "^6.4.8",
-    "@mui/styles": "^6.4.8",
+    "@mui/icons-material": "^6.4.9",
+    "@mui/material": "^6.4.9",
+    "@mui/styles": "^6.4.9",
     "@xylabs/react-app-settings": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
     "@xylabs/react-async-effect": "workspace:^",
@@ -55,16 +55,16 @@
     "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
-    "@storybook/react": "^8.6.7",
+    "@storybook/react": "^8.6.10",
     "@types/react": "^19.0.12",
     "@types/react-helmet": "^6.1.11",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
-    "@xylabs/ts-scripts-yarn3": "^6.1.4",
-    "@xylabs/tsconfig-react": "^6.1.4",
-    "storybook": "^8.6.7",
+    "@xylabs/ts-scripts-yarn3": "^6.1.5",
+    "@xylabs/tsconfig-react": "^6.1.5",
+    "storybook": "^8.6.10",
     "typescript": "^5.8.2"
   },
   "publishConfig": {

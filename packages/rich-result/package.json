@@ -37,12 +37,12 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/enum": "^4.7.2"
+    "@xylabs/enum": "^4.7.11"
   },
   "devDependencies": {
     "@types/react": "^19.0.12",
-    "@xylabs/ts-scripts-yarn3": "^6.1.4",
-    "@xylabs/tsconfig-react": "^6.1.4",
+    "@xylabs/ts-scripts-yarn3": "^6.1.5",
+    "@xylabs/tsconfig-react": "^6.1.5",
     "react": "^19.0.0",
     "typescript": "^5.8.2"
   },
