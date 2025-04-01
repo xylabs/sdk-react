@@ -1,3 +1,5 @@
+import '../ThemeExtensions/index.ts'
+
 import type { ColorSystemOptions } from '@mui/material'
 
 import { personaColorsDarkMode } from './customThemeColors.tsx'

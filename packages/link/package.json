@@ -37,26 +37,26 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/promise": "^4.7.11",
+    "@xylabs/promise": "^4.7.15",
     "@xylabs/react-pixel": "workspace:^",
-    "react-router-dom": "^7.4.0"
+    "react-router-dom": "^7.4.1"
   },
   "devDependencies": {
-    "@mui/material": "^6.4.9",
-    "@storybook/react": "^8.6.10",
+    "@mui/material": "^7",
+    "@storybook/react": "^8.6.11",
     "@types/react": "^19.0.12",
     "@xylabs/react-flexbox": "^6.0.9",
     "@xylabs/react-pixel": "workspace:^",
-    "@xylabs/ts-scripts-yarn3": "^6.1.5",
-    "@xylabs/tsconfig-react": "^6.1.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.4.0",
-    "storybook": "^8.6.10",
+    "@xylabs/ts-scripts-yarn3": "^6.1.16",
+    "@xylabs/tsconfig-react": "^6.1.16",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.4.1",
+    "storybook": "^8.6.11",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "@mui/material": "^6",
+    "@mui/material": ">=6 <7",
     "react": "^19",
     "react-dom": "^19"
   },

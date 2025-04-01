@@ -38,23 +38,21 @@
   "module": "dist/browser/index.mjs",
   "types": "dist/types/index.d.ts",
   "dependencies": {
-    "@xylabs/assert": "^4.7.11",
-    "@xylabs/enum": "^4.7.11"
+    "@xylabs/assert": "^4.7.15",
+    "@xylabs/enum": "^4.7.15"
   },
   "devDependencies": {
-    "@mui/icons-material": "^6.4.9",
-    "@mui/material": "^6.4.9",
-    "@mui/styles": "^6.4.9",
+    "@mui/icons-material": "^7",
+    "@mui/material": "^7",
     "@types/react": "^19.0.12",
-    "@xylabs/ts-scripts-yarn3": "^6.1.5",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@xylabs/ts-scripts-yarn3": "^6.1.16",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "@mui/icons-material": "^6",
-    "@mui/material": "^6",
-    "@mui/styles": "^6",
+    "@mui/icons-material": ">=6 <7",
+    "@mui/material": ">=6 <7",
     "react": "^19",
     "react-dom": "^19"
   },

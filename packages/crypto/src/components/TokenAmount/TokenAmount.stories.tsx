@@ -4,7 +4,7 @@ import React from 'react'
 import { TokenAmount } from './TokenAmount.tsx'
 import type { TokenAmountProps } from './TokenAmountProps.tsx'
 
-const TokenAmountWrapper: React.FC<Omit<TokenAmountProps, 'amount'> & { amount?: string | null }> = ({
+const TokenAmountWrapper: React.FC<Omit<TokenAmountProps, 'amount' | 'href'> & { amount?: string | null }> = ({
   amount,
   ...props
 }) => {

@@ -23,10 +23,10 @@ Default.args = {
       children: [
         <FlexCol key="container" alignItems="stretch">
           <Grid container>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               Column 1
             </Grid>
-            <Grid item xs={6}>
+            <Grid size={{ xs: 6 }}>
               Column 2
             </Grid>
           </Grid>

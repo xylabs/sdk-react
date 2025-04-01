@@ -21,8 +21,11 @@ const Template: StoryFn<typeof InvertibleMuiThemeProvider> = (args: InvertibleMu
 const ThemeEnabledComponent = () => {
   const theme = useTheme()
   const {
-    darkMode, lightMode, systemMode, mode, setMode,
+    systemMode, mode, setMode,
   } = useColorSchemeEx()
+
+  const lightMode = mode === 'system' ? systemMode === 'light' : mode === 'light'
+  const darkMode = mode === 'system' ? systemMode === 'dark' : mode === 'dark'
 
   return (
     <>

@@ -1,6 +1,6 @@
 import {
   alpha, lighten, type ThemeOptions,
-} from '@mui/material'
+} from '@mui/material/styles'
 
 import { neutralButtonStylesContained, neutralButtonStylesOutlined } from '../ThemeExtensions/index.ts'
 

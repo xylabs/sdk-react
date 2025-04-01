@@ -1,5 +1,5 @@
 import {
-  Box, Grid2, Typography,
+  Box, Grid, Typography,
 } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
@@ -75,8 +75,8 @@ export const SampleDashboard1: React.FC<Dashboard1Props> = ({
   }
 
   return (
-    <Grid2 container spacing={2}>
-      <Grid2 size={{ xs: 12 }}>
+    <Grid container spacing={2}>
+      <Grid size={{ xs: 12 }}>
         <FlexRow justifyContent="space-between" flexWrap="wrap">
           <Typography variant="h3">Dashboard</Typography>
           <Box width="fit-content">
@@ -87,49 +87,49 @@ export const SampleDashboard1: React.FC<Dashboard1Props> = ({
             />
           </Box>
         </FlexRow>
-      </Grid2>
-      <Grid2 size={{
+      </Grid>
+      <Grid size={{
         xs: 12, md: 4, sm: 6,
       }}
       >
         <StatCard {...currentData.statCard1} />
-      </Grid2>
-      <Grid2 size={{
+      </Grid>
+      <Grid size={{
         xs: 12, md: 4, sm: 6,
       }}
       >
         <StatCard {...currentData.statCard2} />
-      </Grid2>
-      <Grid2 size={{
+      </Grid>
+      <Grid size={{
         xs: 12, md: 4, sm: 6,
       }}
       >
         <StatCard {...currentData.statCard3} />
-      </Grid2>
-      <Grid2 size={{
+      </Grid>
+      <Grid size={{
         xs: 12, md: 4, sm: 6,
       }}
       >
         <StatCard {...currentData.statCard4} />
-      </Grid2>
-      <Grid2 size={{
+      </Grid>
+      <Grid size={{
         xs: 12, md: 4, sm: 6,
       }}
       >
         <StatCard {...currentData.statCard5} />
-      </Grid2>
-      <Grid2 size={{
+      </Grid>
+      <Grid size={{
         xs: 12, md: 4, sm: 6,
       }}
       >
         <StatCard {...currentData.statCard6} />
-      </Grid2>
-      <Grid2 size={{ xs: 12, md: 6 }}>
+      </Grid>
+      <Grid size={{ xs: 12, md: 6 }}>
         <VerificationSummary {...currentData.verificationSummary} />
-      </Grid2>
-      <Grid2 size={{ xs: 12, md: 6 }}>
+      </Grid>
+      <Grid size={{ xs: 12, md: 6 }}>
         <DataCard {...currentData.dataCard} />
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   )
 }

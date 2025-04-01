@@ -9,16 +9,17 @@ import { reactConfig } from '@xylabs/eslint-config-react-flat'
 
 export default [
   {
-    ignores: ['.yarn', 'dist', 'storybook-static', 'eslint.config.mjs', '.storybook'],
+    ignores: ['.yarn', 'dist', '**/packages/*/dist', 'storybook-static', 'eslint.config.mjs', '.storybook'],
   },
   reactConfig,
   unicornConfig,
   workspacesConfig,
   rulesConfig,
   importConfig,
-  reactConfig,
   {
+    ...reactConfig,
     rules: {
+      ...reactConfig.rules,
       '@eslint-react/no-array-index-key': ['off'],
       '@eslint-react/no-prop-types': ['warn'],
       '@eslint-react/prefer-destructuring-assignment': ['warn'],

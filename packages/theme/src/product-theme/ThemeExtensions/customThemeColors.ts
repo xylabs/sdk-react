@@ -1,31 +1,5 @@
 import { alpha } from '@mui/material/styles'
 
-declare module '@mui/material/styles' {
-  interface Palette {
-    neutral: Palette['primary']
-  }
-
-  interface PaletteOptions {
-    neutral?: PaletteOptions['primary']
-  }
-
-  interface TypeBackground {
-    gradient?: string
-  }
-}
-
-declare module '@mui/material/Button' {
-  interface ButtonPropsColorOverrides {
-    neutral: true
-  }
-}
-
-declare module '@mui/material/Alert' {
-  interface AlertPropsColorOverrides {
-    neutral: true
-  }
-}
-
 export const neutralButtonStylesContained = {
   'color': '#000',
   'backgroundColor': '#fff',
