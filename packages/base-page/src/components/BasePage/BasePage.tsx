@@ -21,6 +21,7 @@ const BasePage: React.FC<BasePageProps> = ({
   appFooter,
   appBar,
   cookieConsent,
+  description,
   hideAppBar,
   metaServer,
   noindex = false,
@@ -49,6 +50,8 @@ const BasePage: React.FC<BasePageProps> = ({
         {noindex
           ? <meta content="noindex" name="robots" />
           : null}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description ?? title} />
       </Helmet>
       {scrollToTopButton
         ? <div id={scrollToTopAnchorId} />
