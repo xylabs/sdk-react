@@ -1,11 +1,11 @@
 import { DarkModeRounded, LightModeRounded } from '@mui/icons-material'
 import type { IconButtonProps } from '@mui/material'
-import { IconButton, useColorScheme } from '@mui/material'
+import { IconButton } from '@mui/material'
 import { RotationAnimation } from '@xylabs/react-animation'
 import { FlexCol } from '@xylabs/react-flexbox'
 import React, { useState } from 'react'
 
-type iconColor = IconButtonProps['color']
+type IconColor = IconButtonProps['color']
 
 interface DefaultModeColors {
   defaultDarkModeColor?: IconButtonProps['color']
@@ -24,7 +24,7 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
   toggleMode,
   ...props
 }) => {
-  const [iconColor, setIconColor] = useState<iconColor>(darkMode ? defaultDarkModeColor : defaultLightModeColor)
+  const [iconColor, setIconColor] = useState<IconColor>(darkMode ? defaultDarkModeColor : defaultLightModeColor)
   const [iconColorIsSet, setIconColorIsSet] = useState(false)
 
   const handleHover = () => {
@@ -55,21 +55,4 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
       </RotationAnimation>
     </FlexCol>
   )
-}
-
-export interface DarkModeIconButtonForColorSchemeProps extends DefaultModeColors, IconButtonProps {}
-
-export const DarkModeIconButtonForColorScheme: React.FC<DarkModeIconButtonForColorSchemeProps> = (props) => {
-  const { mode, setMode } = useColorScheme()
-  const toggleMode = () => {
-    if (mode === 'light') {
-      setMode('dark')
-    } else if (mode === 'dark') {
-      setMode('system')
-    } else {
-      setMode('light')
-    }
-  }
-
-  return <DarkModeIconButton darkMode={mode === 'dark'} toggleMode={toggleMode} {...props} />
 }
