@@ -1,11 +1,11 @@
 import type { ButtonGroupProps } from '@mui/material'
-import { Button, ButtonGroup } from '@mui/material'
+import {
+  Button, ButtonGroup, useColorScheme,
+} from '@mui/material'
 import React from 'react'
 
-import { useColorSchemeEx } from '../InvertibleMuiThemeProvider/index.ts'
-
 export const ThemeModeButtonGroup: React.FC<ButtonGroupProps> = (props) => {
-  const { mode, setMode } = useColorSchemeEx()
+  const { mode, setMode } = useColorScheme()
   const darkMode = mode === 'dark'
   const lightMode = mode === 'light'
   const systemMode = mode === 'system'

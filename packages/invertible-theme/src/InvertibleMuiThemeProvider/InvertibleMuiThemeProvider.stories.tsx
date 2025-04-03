@@ -1,5 +1,5 @@
 import {
-  Box, Button, ButtonGroup, Chip, createTheme, CssBaseline, Stack, Typography, useTheme,
+  Box, Button, ButtonGroup, Chip, createTheme, CssBaseline, Stack, Typography, useColorScheme, useTheme,
 } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
@@ -7,7 +7,6 @@ import React from 'react'
 import { DarkModeIconButtonForColorScheme } from '../Buttons/index.ts'
 import { InvertibleMuiThemeProvider } from './InvertibleMuiThemeProvider.tsx'
 import type { InvertibleMuiThemeProviderProps } from './InvertibleMuiThemeProviderProps.ts'
-import { useColorSchemeEx } from './useColorSchemeEx.tsx'
 
 const StorybookEntry = {
   argTypes: {},
@@ -22,7 +21,7 @@ const ThemeEnabledComponent = () => {
   const theme = useTheme()
   const {
     systemMode, mode, setMode,
-  } = useColorSchemeEx()
+  } = useColorScheme()
 
   const lightMode = mode === 'system' ? systemMode === 'light' : mode === 'light'
   const darkMode = mode === 'system' ? systemMode === 'dark' : mode === 'dark'

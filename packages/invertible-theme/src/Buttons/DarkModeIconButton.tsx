@@ -1,11 +1,9 @@
 import { DarkModeRounded, LightModeRounded } from '@mui/icons-material'
 import type { IconButtonProps } from '@mui/material'
-import { IconButton } from '@mui/material'
+import { IconButton, useColorScheme } from '@mui/material'
 import { RotationAnimation } from '@xylabs/react-animation'
 import { FlexCol } from '@xylabs/react-flexbox'
 import React, { useState } from 'react'
-
-import { useColorSchemeEx } from '../InvertibleMuiThemeProvider/index.ts'
 
 type iconColor = IconButtonProps['color']
 
@@ -62,7 +60,7 @@ export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
 export interface DarkModeIconButtonForColorSchemeProps extends DefaultModeColors, IconButtonProps {}
 
 export const DarkModeIconButtonForColorScheme: React.FC<DarkModeIconButtonForColorSchemeProps> = (props) => {
-  const { mode, setMode } = useColorSchemeEx()
+  const { mode, setMode } = useColorScheme()
   const toggleMode = () => setMode(mode ?? 'system')
 
   return <DarkModeIconButton darkMode={mode === 'dark'} toggleMode={toggleMode} {...props} />
