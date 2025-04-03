@@ -12,11 +12,13 @@ interface DefaultModeColors {
   defaultLightModeColor?: IconButtonProps['color']
 }
 
+/** @deprecated use ColorSchemeButton from @xylabs/theme instead */
 export interface DarkModeIconButtonProps extends IconButtonProps, DefaultModeColors {
   darkMode?: boolean
   toggleMode?: () => void
 }
 
+/** @deprecated use ColorSchemeButton from @xylabs/theme instead */
 export const DarkModeIconButton: React.FC<DarkModeIconButtonProps> = ({
   darkMode,
   defaultDarkModeColor,

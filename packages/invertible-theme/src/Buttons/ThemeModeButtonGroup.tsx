@@ -4,6 +4,7 @@ import {
 } from '@mui/material'
 import React from 'react'
 
+/** @deprecated use ColorSchemeButton from @xylabs/theme instead */
 export const ThemeModeButtonGroup: React.FC<ButtonGroupProps> = (props) => {
   const { mode, setMode } = useColorScheme()
   const darkMode = mode === 'dark'

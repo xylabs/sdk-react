@@ -5,26 +5,20 @@ import { RotationAnimation } from '@xylabs/react-animation'
 import { FlexCol } from '@xylabs/react-flexbox'
 import React, { useMemo, useState } from 'react'
 
-interface DefaultModeColors {
-  defaultDarkModeColor?: IconButtonProps['color']
-  defaultLightModeColor?: IconButtonProps['color']
+export interface ColorSchemeButtonProps extends IconButtonProps {
+  darkModeColor?: IconButtonProps['color']
+  lightModeColor?: IconButtonProps['color']
 }
 
-type IconColor = IconButtonProps['color']
-
-/** @deprecated use ColorSchemeButton from @xylabs/theme instead */
-export interface DarkModeIconButtonForColorSchemeProps extends DefaultModeColors, IconButtonProps {}
-
-/** @deprecated use ColorSchemeButton from @xylabs/theme instead */
-export const DarkModeIconButtonForColorScheme: React.FC<DarkModeIconButtonForColorSchemeProps> = ({
-  defaultDarkModeColor, defaultLightModeColor, ...props
+export const ColorSchemeButton: React.FC<ColorSchemeButtonProps> = ({
+  darkModeColor, lightModeColor, ...props
 }) => {
   const {
     mode, setMode, systemMode,
   } = useColorScheme()
   const resolvedMode = useMemo(() => (mode === 'system' ? systemMode : mode) ?? 'light', [mode, systemMode])
 
-  const [iconColor, setIconColor] = useState<IconColor>(() => resolvedMode === 'dark' ? defaultDarkModeColor : defaultLightModeColor)
+  const [iconColor, setIconColor] = useState<IconButtonProps['color']>(() => resolvedMode === 'dark' ? darkModeColor : lightModeColor)
   const [iconColorIsSet, setIconColorIsSet] = useState(false)
 
   const toggleMode = () => {
@@ -39,8 +33,8 @@ export const DarkModeIconButtonForColorScheme: React.FC<DarkModeIconButtonForCol
 
   const handleHover = () => {
     setIconColor(() => {
-      const darkModeIconColor = defaultDarkModeColor ?? 'inherit'
-      const lightModeIconColor = defaultLightModeColor ?? 'inherit'
+      const darkModeIconColor = darkModeColor ?? 'inherit'
+      const lightModeIconColor = lightModeColor ?? 'inherit'
       if (resolvedMode === 'dark') {
         return iconColorIsSet ? darkModeIconColor : 'info'
       } else {

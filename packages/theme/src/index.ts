@@ -1,3 +1,4 @@
+export * from './components/index.ts'
 export * from './product-theme/index.ts'
 export * from './showcase/index.ts'
 export * from './useIsDark.ts'
