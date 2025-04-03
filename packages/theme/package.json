@@ -43,7 +43,7 @@
     "@xylabs/react-invertible-theme": "workspace:^",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.4.1",
-    "recharts": "^2.15.1"
+    "recharts": "^2.15.2"
   },
   "devDependencies": {
     "@mui/icons-material": "^7.0.1",
@@ -57,7 +57,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.4.1",
-    "recharts": "^2.15.1",
+    "recharts": "^2.15.2",
     "storybook": "^8.6.12",
     "typescript": "^5.8.2"
   },

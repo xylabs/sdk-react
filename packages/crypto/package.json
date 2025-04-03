@@ -52,7 +52,7 @@
     "ethers": "^6.13.6",
     "lru-cache": "^11.1.0",
     "react-router-dom": "^7.4.1",
-    "viem": "^2.24.3",
+    "viem": "^2.25.0",
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
