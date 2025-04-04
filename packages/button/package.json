@@ -40,7 +40,7 @@
     "@xylabs/promise": "^4.7.15",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
-    "react-router-dom": "^7.4.1"
+    "react-router-dom": "^7.5.0"
   },
   "devDependencies": {
     "@mui/material": "^7.0.1",

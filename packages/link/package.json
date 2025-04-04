@@ -39,7 +39,7 @@
   "dependencies": {
     "@xylabs/promise": "^4.7.15",
     "@xylabs/react-pixel": "workspace:^",
-    "react-router-dom": "^7.4.1"
+    "react-router-dom": "^7.5.0"
   },
   "devDependencies": {
     "@mui/material": "^7.0.1",
@@ -51,7 +51,7 @@
     "@xylabs/tsconfig-react": "^6.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.4.1",
+    "react-router-dom": "^7.5.0",
     "storybook": "^8.6.12",
     "typescript": "^5.8.2"
   },
