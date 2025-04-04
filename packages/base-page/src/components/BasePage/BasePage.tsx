@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
 import {
   Container, Fab, Typography, useTheme,
@@ -11,6 +12,7 @@ import { Helmet } from 'react-helmet'
 import type { BasePageProps } from './BasePageProps.ts'
 
 const xyoOgMetaName = 'xyo:og:image'
+const scrollToTopAnchorId = 'scroll-to-top-anchor'
 
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,
@@ -30,24 +32,23 @@ const BasePage: React.FC<BasePageProps> = ({
   ...props
 }) => {
   const theme = useTheme()
-  const scrollToTopAnchorId = 'scroll-to-top-anchor'
   const {
     pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage,
   } = metaServer ?? {}
 
-
-  const [fallbackImage, setFallbackImage] = useState<string | undefined>();
+  const [fallbackImage, setFallbackImage] = useState<string | undefined>()
 
   useEffect(() => {
     if (!shareImage) {
-      const meta = document.querySelector('meta[property="og:image"]');
+      const meta = document.querySelector('meta[property="og:image"]')
       if (meta instanceof HTMLMetaElement) {
-        setFallbackImage(meta.content);
+        const content = meta.content
+        if (content) setFallbackImage(content)
       }
     }
-  }, [shareImage]);
+  }, [shareImage])
 
-  const ogContent = shareImage ?? fallbackImage;
+  const ogContent = shareImage ?? fallbackImage
 
   return (
     <FlexCol
