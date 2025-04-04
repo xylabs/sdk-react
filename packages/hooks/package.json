@@ -37,7 +37,6 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@mui/material": "^7.0.1",
     "@storybook/react": "^8.6.12",
     "@types/react": "^19.1.0",
     "@xylabs/ts-scripts-yarn3": "^6.2.1",

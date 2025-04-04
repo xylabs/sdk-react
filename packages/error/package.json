@@ -38,8 +38,7 @@
   ],
   "dependencies": {
     "@xylabs/react-button": "workspace:^",
-    "@xylabs/react-flexbox": "workspace:^",
-    "prop-types": "^15.8.1"
+    "@xylabs/react-flexbox": "workspace:^"
   },
   "devDependencies": {
     "@mui/icons-material": "^7.0.1",
