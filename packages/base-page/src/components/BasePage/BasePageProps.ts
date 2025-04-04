@@ -5,6 +5,7 @@ import type { ReactElement, ReactNode } from 'react'
 export interface MetaServerPageSettings {
   pageCompleteMetaName?: string
   shareImage?: string
+  shareMode?: 'static' | 'dynamic' | 'live' | 'permanent'
   title?: string
 }
 

@@ -35,10 +35,12 @@ const BasePage: React.FC<BasePageProps> = ({
   const { status, setStatus } = use(LoadStatusContext)
   const scrollToTopAnchorId = 'scroll-to-top-anchor'
   const {
-    pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage,
+    pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage, shareMode = 'static',
   } = metaServer ?? {}
 
-  if ((xyoOgMetaName === pageCompleteMetaName) && shareImage && status === 'loading') {
+  if (shareMode === 'static' && status !== 'done') {
+    setStatus('done')
+  } else if ((xyoOgMetaName === pageCompleteMetaName) && shareImage && status !== 'done') {
     setStatus('done')
   }
 
@@ -98,6 +100,7 @@ const BasePage: React.FC<BasePageProps> = ({
           )
         : null}
       <Helmet>
+        <meta property="xy:meta:share:mode" content={shareMode} />
         {shareImage
           ? <meta property={xyoOgMetaName} content={shareImage} />
           : null}
