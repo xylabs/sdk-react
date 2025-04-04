@@ -105,7 +105,7 @@ const BasePage: React.FC<BasePageProps> = ({
           )
         : null}
       <Helmet>
-        <meta property={xyoOgMetaName} content={ogContent} />
+        {ogContent && <meta property={xyoOgMetaName} content={ogContent} />}
         {/* This is here to make sure we report that the page is done */}
         {((xyoOgMetaName === pageCompleteMetaName) && shareImage)
           ? null
