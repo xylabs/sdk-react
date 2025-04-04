@@ -5,13 +5,15 @@ import {
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
-import React from 'react'
+import React, { use } from 'react'
 import { Helmet } from 'react-helmet'
 
+import { LoadStatusContext } from '../../contexts/index.ts'
 import type { BasePageProps } from './BasePageProps.ts'
 
 const xyoOgMetaName = 'xyo:og:image'
 
+// eslint-disable-next-line complexity
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,
   children,
@@ -30,10 +32,15 @@ const BasePage: React.FC<BasePageProps> = ({
   ...props
 }) => {
   const theme = useTheme()
+  const { status, setStatus } = use(LoadStatusContext)
   const scrollToTopAnchorId = 'scroll-to-top-anchor'
   const {
     pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage,
   } = metaServer ?? {}
+
+  if ((xyoOgMetaName === pageCompleteMetaName) && shareImage && status === 'loading') {
+    setStatus('done')
+  }
 
   return (
     <FlexCol
@@ -98,6 +105,7 @@ const BasePage: React.FC<BasePageProps> = ({
         {((xyoOgMetaName === pageCompleteMetaName) && shareImage)
           ? null
           : <meta property={pageCompleteMetaName} content="" />}
+        <meta property="xy:meta:status" content={status ?? 'done'} />
       </Helmet>
     </FlexCol>
   )
