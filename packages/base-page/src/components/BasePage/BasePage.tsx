@@ -5,7 +5,7 @@ import {
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 
 import type { BasePageProps } from './BasePageProps.ts'
@@ -34,6 +34,20 @@ const BasePage: React.FC<BasePageProps> = ({
   const {
     pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage,
   } = metaServer ?? {}
+
+
+  const [fallbackImage, setFallbackImage] = useState<string | undefined>();
+
+  useEffect(() => {
+    if (!shareImage) {
+      const meta = document.querySelector('meta[property="og:image"]');
+      if (meta instanceof HTMLMetaElement) {
+        setFallbackImage(meta.content);
+      }
+    }
+  }, [shareImage]);
+
+  const ogContent = shareImage ?? fallbackImage;
 
   return (
     <FlexCol
@@ -91,9 +105,7 @@ const BasePage: React.FC<BasePageProps> = ({
           )
         : null}
       <Helmet>
-        {shareImage
-          ? <meta property={xyoOgMetaName} content={shareImage} />
-          : null}
+        <meta property={xyoOgMetaName} content={ogContent} />
         {/* This is here to make sure we report that the page is done */}
         {((xyoOgMetaName === pageCompleteMetaName) && shareImage)
           ? null
