@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
 import {
   Container, Fab, Typography, useTheme,
@@ -6,7 +5,7 @@ import {
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
-import React, { useEffect, useState } from 'react'
+import React, { useMemo } from 'react'
 import { Helmet } from 'react-helmet'
 
 import type { BasePageProps } from './BasePageProps.ts'
@@ -36,19 +35,18 @@ const BasePage: React.FC<BasePageProps> = ({
     pageCompleteMetaName = xyoOgMetaName, title = titleProp, shareImage,
   } = metaServer ?? {}
 
-  const [fallbackImage, setFallbackImage] = useState<string | undefined>()
+  const ogContent = useMemo(() => {
+    if (shareImage) return shareImage
 
-  useEffect(() => {
-    if (!shareImage) {
+    if (typeof document !== 'undefined') {
       const meta = document.querySelector('meta[property="og:image"]')
       if (meta instanceof HTMLMetaElement) {
-        const content = meta.content
-        if (content) setFallbackImage(content)
+        return meta.content
       }
     }
-  }, [shareImage])
 
-  const ogContent = shareImage ?? fallbackImage
+    return
+  }, [shareImage])
 
   return (
     <FlexCol
