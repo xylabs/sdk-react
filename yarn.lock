@@ -1986,7 +1986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/blocks@npm:8.6.12":
+"@storybook/blocks@npm:8.6.12, @storybook/blocks@npm:^8.6.12":
   version: 8.6.12
   resolution: "@storybook/blocks@npm:8.6.12"
   dependencies:
@@ -4056,6 +4056,7 @@ __metadata:
     "@mui/material": "npm:^7.0.1"
     "@storybook/addon-essentials": "npm:^8.6.12"
     "@storybook/addon-links": "npm:^8.6.12"
+    "@storybook/blocks": "npm:^8.6.12"
     "@storybook/react": "npm:^8.6.12"
     "@storybook/react-vite": "npm:^8.6.12"
     "@storybook/test": "npm:^8.6.12"

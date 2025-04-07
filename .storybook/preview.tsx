@@ -4,6 +4,8 @@ import { InvertibleMuiThemeProvider } from '@xylabs/react-invertible-theme'
 import React from 'react'
 import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme } from '@xylabs/react-theme'
 
+import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks'
+
 const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs', 'xyOS'] as const
 type ThemeName = typeof themeNames[number]
 
@@ -28,7 +30,7 @@ const getTheme = (themeName: ThemeName) => {
   const themes: Record<ThemeName, Theme> = {
     'None': theme,
     'XYO': XyoTheme(theme, false),
-    'xyOS': XyosTheme(theme),
+    'xyOS': XyosTheme(),
     'Dataism': DataismTheme(theme),
     'XYLabs': XyLabsTheme(theme),
   }

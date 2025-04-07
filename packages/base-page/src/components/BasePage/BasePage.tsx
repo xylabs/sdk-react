@@ -1,6 +1,7 @@
+/* eslint-disable complexity */
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
 import {
-  Container, Fab, Typography, useTheme,
+  Container, Fab, Typography,
 } from '@mui/material'
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
@@ -13,7 +14,6 @@ import type { BasePageProps } from './BasePageProps.ts'
 
 const xyoOgMetaName = 'xyo:og:image'
 
-// eslint-disable-next-line complexity
 const BasePage: React.FC<BasePageProps> = ({
   disableGutters,
   children,
