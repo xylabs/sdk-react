@@ -52,13 +52,7 @@
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "mixpanel-browser": "^2.55.1",
     "react": "^19"
-  },
-  "peerDependenciesMeta": {
-    "mixpanel-browser": {
-      "optional": true
-    }
   },
   "publishConfig": {
     "access": "public"

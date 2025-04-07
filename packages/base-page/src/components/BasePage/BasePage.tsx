@@ -31,7 +31,6 @@ const BasePage: React.FC<BasePageProps> = ({
   title: titleProp,
   ...props
 }) => {
-  const theme = useTheme()
   const { status, setStatus } = use(LoadStatusContext)
   const scrollToTopAnchorId = 'scroll-to-top-anchor'
   const {
@@ -47,7 +46,6 @@ const BasePage: React.FC<BasePageProps> = ({
   return (
     <FlexCol
       justifyContent="flex-start"
-      color={theme.palette.text.primary}
       alignItems="stretch"
       width="100%"
       maxWidth="100vw"

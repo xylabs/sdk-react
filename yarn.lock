@@ -3830,11 +3830,7 @@ __metadata:
     react: "npm:^19.1.0"
     typescript: "npm:^5.8.2"
   peerDependencies:
-    mixpanel-browser: ^2.55.1
     react: ^19
-  peerDependenciesMeta:
-    mixpanel-browser:
-      optional: true
   languageName: unknown
   linkType: soft
 
