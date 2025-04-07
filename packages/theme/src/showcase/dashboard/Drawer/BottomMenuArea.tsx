@@ -5,8 +5,9 @@ import {
 } from '@mui/material'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexCol } from '@xylabs/react-flexbox'
-import { DarkModeIconButtonForColorScheme } from '@xylabs/react-invertible-theme'
 import React from 'react'
+
+import { DarkModeIconButtonForColorScheme } from '../../../components/index.ts'
 
 export interface BottomMenuAreaProps {
   backgroundColor?: string

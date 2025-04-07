@@ -39,6 +39,7 @@
   "dependencies": {
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
+    "@xylabs/react-theme": "workspace:^",
     "numeral": "^2.0.6"
   },
   "devDependencies": {

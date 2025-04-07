@@ -1,4 +1,4 @@
-import type { PaletteColorOptions } from '@mui/material/styles'
+import type { CssVarsPalette, PaletteColorOptions } from '@mui/material/styles'
 
 declare module '@mui/material/styles' {
   interface PaletteOptions {
@@ -6,6 +6,14 @@ declare module '@mui/material/styles' {
   }
   interface TypeBackground {
     gradient: string
+  }
+  interface Theme {
+    palette: Palette & CssVarsPalette & {
+      neutral: PaletteColorOptions
+    }
+  }
+  interface ThemeOptions {
+    palette?: PaletteOptions
   }
 }
 

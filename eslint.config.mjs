@@ -9,7 +9,7 @@ import { reactConfig } from '@xylabs/eslint-config-react-flat'
 
 export default [
   {
-    ignores: ['.yarn', 'dist', '**/packages/*/dist', 'storybook-static', 'eslint.config.mjs', '.storybook'],
+    ignores: ['.yarn', 'dist', 'docs', '**/packages/*/dist', 'storybook-static', 'eslint.config.mjs', '.storybook'],
   },
   reactConfig,
   unicornConfig,

@@ -40,7 +40,6 @@
     "@mui/icons-material": "^7.0.1",
     "@react-spring/web": "^9.7.5",
     "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-invertible-theme": "workspace:^",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0",
     "recharts": "^2.15.2"

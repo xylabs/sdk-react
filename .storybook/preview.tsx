@@ -1,6 +1,5 @@
-import { Box, CssBaseline, Theme, useTheme } from '@mui/material'
+import { Box, CssBaseline, Theme, ThemeProvider, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react'
-import { InvertibleMuiThemeProvider } from '@xylabs/react-invertible-theme'
 import React from 'react'
 import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme } from '@xylabs/react-theme'
 
@@ -60,12 +59,12 @@ const withThemeProvider: Decorator = (Story, context) => {
   const theme = themeOptions
 
   return (
-    <InvertibleMuiThemeProvider theme={theme} defaultMode={'dark'}>
+    <ThemeProvider theme={theme} defaultMode={'dark'}>
       <CssBaseline enableColorScheme />
         <Box>
           <Story {...context} />
         </Box>
-    </InvertibleMuiThemeProvider>
+    </ThemeProvider>
   )
 }
 

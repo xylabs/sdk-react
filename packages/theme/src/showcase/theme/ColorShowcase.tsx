@@ -2,9 +2,9 @@ import {
   Box,
   useTheme,
 } from '@mui/material'
-import { DarkModeIconButtonForColorScheme } from '@xylabs/react-invertible-theme'
 import React from 'react'
 
+import { DarkModeIconButtonForColorScheme } from '../../components/index.ts'
 import { ColorCard } from './ColorCard.tsx'
 
 export const ColorShowcase: React.FC = () => {

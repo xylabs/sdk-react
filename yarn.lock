@@ -846,7 +846,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gerrit0/mini-shiki@npm:^3.2.1":
+"@gerrit0/mini-shiki@npm:^3.2.1, @gerrit0/mini-shiki@npm:^3.2.2":
   version: 3.2.2
   resolution: "@gerrit0/mini-shiki@npm:3.2.2"
   dependencies:
@@ -3696,7 +3696,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-invertible-theme@workspace:^, @xylabs/react-invertible-theme@workspace:packages/invertible-theme":
+"@xylabs/react-invertible-theme@workspace:packages/invertible-theme":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-invertible-theme@workspace:packages/invertible-theme"
   dependencies:
@@ -3773,6 +3773,7 @@ __metadata:
     "@types/react": "npm:^19.1.0"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-theme": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.2.1"
     "@xylabs/tsconfig-react": "npm:^6.2.1"
     numeral: "npm:^2.0.6"
@@ -3995,7 +3996,6 @@ __metadata:
     "@types/react": "npm:^19.1.0"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-invertible-theme": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.2.1"
     "@xylabs/tsconfig-react": "npm:^6.2.1"
     react: "npm:^19.1.0"
@@ -4079,7 +4079,6 @@ __metadata:
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/react-hooks": "workspace:^"
     "@xylabs/react-identicon": "workspace:^"
-    "@xylabs/react-invertible-theme": "workspace:^"
     "@xylabs/react-link": "workspace:^"
     "@xylabs/react-mixpanel": "workspace:^"
     "@xylabs/react-number-status": "workspace:^"
@@ -4100,6 +4099,7 @@ __metadata:
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
     storybook: "npm:^8.6.12"
+    typedoc: "npm:^0.28.2"
     typescript: "npm:^5.8.2"
     vite: "npm:^6.2.5"
   peerDependencies:
@@ -10944,6 +10944,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typedoc@npm:^0.28.2":
+  version: 0.28.2
+  resolution: "typedoc@npm:0.28.2"
+  dependencies:
+    "@gerrit0/mini-shiki": "npm:^3.2.2"
+    lunr: "npm:^2.3.9"
+    markdown-it: "npm:^14.1.0"
+    minimatch: "npm:^9.0.5"
+    yaml: "npm:^2.7.1"
+  peerDependencies:
+    typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x || 5.8.x
+  bin:
+    typedoc: bin/typedoc
+  checksum: 10c0/5864419daf8e77423971cff48b94a4b0e9e3f4459a30b784508d59b6c7cb10ee9bc0a413a933c286c59c1a974137a0301daf72d30d0e6aefb7f53534e9369d5c
+  languageName: node
+  linkType: hard
+
 "types-package-json@npm:^2.0.39":
   version: 2.0.39
   resolution: "types-package-json@npm:2.0.39"
@@ -11604,7 +11621,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.3.4, yaml@npm:^2.7.0 ":
+"yaml@npm:^2.3.4, yaml@npm:^2.7.0 , yaml@npm:^2.7.1":
   version: 2.7.1
   resolution: "yaml@npm:2.7.1"
   bin:

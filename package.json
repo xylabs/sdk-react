@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build-storybook": "storybook build",
-    "build-typedoc-site": "xy gen-docs @xylabs/sdk-react && storybook build -o ./docs/storybook",
+    "build-typedoc-site": "typedoc && storybook build -o ./docs/storybook",
     "start": "NODE_OPTIONS=--max_old_space_size=8192 storybook dev -p 6006",
     "storybook": "storybook dev -p 6006"
   },
@@ -68,7 +68,6 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-hooks": "workspace:^",
     "@xylabs/react-identicon": "workspace:^",
-    "@xylabs/react-invertible-theme": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-mixpanel": "workspace:^",
     "@xylabs/react-number-status": "workspace:^",
@@ -107,6 +106,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "storybook": "^8.6.12",
+    "typedoc": "^0.28.2",
     "typescript": "^5.8.2",
     "vite": "^6.2.5"
   },
