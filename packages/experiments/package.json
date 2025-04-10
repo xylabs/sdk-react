@@ -37,15 +37,15 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^4.7.15",
-    "@xylabs/log": "^4.7.15",
-    "@xylabs/pixel": "^4.7.15",
+    "@xylabs/forget": "^4.8.1",
+    "@xylabs/log": "^4.8.1",
+    "@xylabs/pixel": "^4.8.1",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^"
   },
   "devDependencies": {
-    "@mui/material": "^7.0.1",
+    "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
     "@types/react": "^19.1.0",
     "@xylabs/ts-scripts-yarn3": "^6.2.1",
@@ -53,10 +53,10 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "storybook": "^8.6.12",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "@mui/material": ">=6 <7",
+    "@mui/material": ">=6 <8",
     "react": "^19",
     "react-dom": "^19"
   },

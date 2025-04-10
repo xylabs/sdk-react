@@ -40,10 +40,10 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@metamask/providers": "^21.0.0",
-    "@xylabs/assert": "^4.7.15",
-    "@xylabs/eth-address": "^4.7.15",
-    "@xylabs/forget": "^4.7.15",
-    "@xylabs/promise": "^4.7.15",
+    "@xylabs/assert": "^4.8.1",
+    "@xylabs/eth-address": "^4.8.1",
+    "@xylabs/forget": "^4.8.1",
+    "@xylabs/promise": "^4.8.1",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
@@ -52,12 +52,12 @@
     "ethers": "^6.13.6",
     "lru-cache": "^11.1.0",
     "react-router-dom": "^7.5.0",
-    "viem": "^2.25.0",
+    "viem": "^2.26.2",
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
-    "@mui/icons-material": "^7.0.1",
-    "@mui/material": "^7.0.1",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
     "@types/react": "^19.1.0",
     "@xylabs/ts-scripts-yarn3": "^6.2.1",
@@ -65,11 +65,11 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "storybook": "^8.6.12",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "@mui/icons-material": ">=6 <7",
-    "@mui/material": ">=6 <7",
+    "@mui/icons-material": ">=6 <8",
+    "@mui/material": ">=6 <8",
     "react": "^19",
     "react-dom": "^19"
   },

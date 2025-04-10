@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@mui/icons-material": "^7.0.1",
+    "@mui/icons-material": "^7.0.2",
     "@react-spring/web": "^9.7.5",
     "@xylabs/react-flexbox": "workspace:^",
     "react-dom": "^19.1.0",
@@ -45,8 +45,8 @@
     "recharts": "^2.15.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "^7.0.1",
-    "@mui/material": "^7.0.1",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
     "@types/react": "^19.1.0",
     "@xylabs/react-button": "workspace:^",
@@ -58,10 +58,10 @@
     "react-router-dom": "^7.5.0",
     "recharts": "^2.15.2",
     "storybook": "^8.6.12",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "@mui/material": ">=6 <7",
+    "@mui/material": ">=6 <8",
     "react": "^19",
     "react-dom": "^19"
   },
