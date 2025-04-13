@@ -37,14 +37,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/promise": "^4.8.1",
+    "@xylabs/promise": "^4.8.4",
     "@xylabs/react-pixel": "workspace:^",
     "react-router-dom": "^7.5.0"
   },
   "devDependencies": {
     "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
-    "@types/react": "^19.1.0",
+    "@types/react": "^19.1.1",
     "@xylabs/react-flexbox": "^6.1.14",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^6.2.1",

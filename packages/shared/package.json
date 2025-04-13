@@ -37,14 +37,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/api": "^4.8.1",
-    "@xylabs/log": "^4.8.1",
+    "@xylabs/api": "^4.8.4",
+    "@xylabs/log": "^4.8.4",
     "@xylabs/react-async-effect": "workspace:^"
   },
   "devDependencies": {
     "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
-    "@types/react": "^19.1.0",
+    "@types/react": "^19.1.1",
     "@xylabs/ts-scripts-yarn3": "^6.2.1",
     "@xylabs/tsconfig-react": "^6.2.1",
     "react": "^19.1.0",

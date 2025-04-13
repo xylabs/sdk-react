@@ -37,14 +37,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.8.1",
-    "@xylabs/delay": "^4.8.1",
-    "@xylabs/object": "^4.8.1",
-    "@xylabs/pixel": "^4.8.1",
+    "@xylabs/assert": "^4.8.4",
+    "@xylabs/delay": "^4.8.4",
+    "@xylabs/object": "^4.8.4",
+    "@xylabs/pixel": "^4.8.4",
     "query-string": "^9.1.1"
   },
   "devDependencies": {
-    "@types/react": "^19.1.0",
+    "@types/react": "^19.1.1",
     "@xylabs/ts-scripts-yarn3": "^6.2.1",
     "@xylabs/tsconfig-react": "^6.2.1",
     "mixpanel-browser": "^2.63.0",
