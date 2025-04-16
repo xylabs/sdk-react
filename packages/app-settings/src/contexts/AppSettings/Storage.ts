@@ -8,14 +8,6 @@ export class AppSettingsStorage extends AppSettingsStorageBase {
     super(prefix, { ...appSettingDefault(), ...defaults })
   }
 
-  get darkMode() {
-    return this.getBoolean(AppSettingSlug.DarkMode)
-  }
-
-  set darkMode(value: boolean) {
-    this.setBoolean(AppSettingSlug.DarkMode, value)
-  }
-
   get developerMode() {
     return this.getBoolean(AppSettingSlug.Developer)
   }

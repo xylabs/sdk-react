@@ -7,7 +7,7 @@ import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexCol } from '@xylabs/react-flexbox'
 import React from 'react'
 
-import { DarkModeIconButtonForColorScheme } from '../../../components/index.ts'
+import { ColorSchemeButton } from '../../../components/index.ts'
 
 export interface BottomMenuAreaProps {
   backgroundColor?: string
@@ -20,7 +20,7 @@ export const BottomMenuArea: React.FC<FlexBoxProps> = (props) => {
       <Toolbar sx={{ paddingX: 1.5 }}>
         <Tooltip title="Toggle Light/Dark Mode">
           <span>
-            <DarkModeIconButtonForColorScheme defaultLightModeColor="warning" />
+            <ColorSchemeButton />
           </span>
         </Tooltip>
       </Toolbar>

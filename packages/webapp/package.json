@@ -52,7 +52,7 @@
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
-    "@types/react": "^19.1.1",
+    "@types/react": "^19.1.2",
     "@types/react-helmet": "^6.1.11",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",

@@ -1,6 +1,6 @@
 import type { ToolbarProps } from '@mui/material'
 import { Toolbar } from '@mui/material'
-import { DarkModeIconButton } from '@xylabs/react-app-settings'
+import { ColorSchemeButton } from '@xylabs/react-theme'
 import type { ReactNode } from 'react'
 import React from 'react'
 
@@ -28,7 +28,7 @@ export const SystemToolbar: React.FC<SystemToolbarProps> = ({
       {precedingChildren}
       {children}
       {darkModeButton
-        ? <DarkModeIconButton color="inherit" />
+        ? <ColorSchemeButton />
         : null}
       {menuItems
         ? <SiteMenu onMenuToggle={onMenuToggle}>{menuItems}</SiteMenu>

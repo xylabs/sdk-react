@@ -18,7 +18,6 @@ export const AppSettingsProvider: React.FC<PropsWithChildren<AppSettingsProvider
 }) => {
   const storageMemo = useMemo(() => storage ?? new AppSettingsStorage(), [storage])
   const [developerMode, setDeveloperMode] = useState(storageMemo.developerMode)
-  const [darkMode, setDarkMode] = useState(storageMemo.darkMode)
   const [navigationType, setNavigationType] = useState(storageMemo.navigationType)
   const [navigationCollapsed, setNavigationCollapsed] = useState(storageMemo.navigationCollapsed)
   const [seedPhrase, setSeedPhrase] = useState(storageMemo.seedPhrase)
@@ -27,11 +26,6 @@ export const AppSettingsProvider: React.FC<PropsWithChildren<AppSettingsProvider
   const enableDeveloperMode = (value: boolean) => {
     storageMemo.developerMode = value
     setDeveloperMode(storageMemo.developerMode)
-  }
-
-  const enableDarkMode = (value: boolean) => {
-    storageMemo.darkMode = value
-    setDarkMode(storageMemo.darkMode)
   }
 
   const changeNavigationType = (value: WebAppNavigationType) => {
@@ -62,9 +56,7 @@ export const AppSettingsProvider: React.FC<PropsWithChildren<AppSettingsProvider
         changeNavigationCollapsed,
         changeNavigationType,
         changeSeedPhrase,
-        darkMode,
         developerMode,
-        enableDarkMode,
         enableDeveloperMode,
         maxAccounts,
         navigationCollapsed,

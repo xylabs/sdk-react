@@ -4,7 +4,7 @@ import {
 } from '@mui/material'
 import React from 'react'
 
-import { DarkModeIconButtonForColorScheme } from '../../components/index.ts'
+import { ColorSchemeButton } from '../../components/index.ts'
 import { ColorCard } from './ColorCard.tsx'
 
 export const ColorShowcase: React.FC = () => {
@@ -12,7 +12,7 @@ export const ColorShowcase: React.FC = () => {
 
   return (
     <Box display="flex" flexDirection="column" flex="1 1 0px">
-      <DarkModeIconButtonForColorScheme defaultLightModeColor="default" />
+      <ColorSchemeButton />
       <Box display="flex" flex="1 1 0px" flexDirection="row" justifyContent="stretch">
         <ColorCard
           style={{ background: theme.palette.background.gradient }}
