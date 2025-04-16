@@ -36,12 +36,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "@xylabs/react-animation": "workspace:^",
-    "@xylabs/react-flexbox": "workspace:^",
-    "deepmerge": "^4.3.1",
-    "rfdc": "^1.4.1"
-  },
   "devDependencies": {
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",

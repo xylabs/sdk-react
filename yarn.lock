@@ -3671,14 +3671,10 @@ __metadata:
     "@mui/material": "npm:^7.0.2"
     "@storybook/react": "npm:^8.6.12"
     "@types/react": "npm:^19.1.2"
-    "@xylabs/react-animation": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.2.1"
     "@xylabs/tsconfig-react": "npm:^6.2.1"
-    deepmerge: "npm:^4.3.1"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
-    rfdc: "npm:^1.4.1"
     storybook: "npm:^8.6.12"
     typescript: "npm:^5.8.3"
   peerDependencies:
@@ -9594,13 +9590,6 @@ __metadata:
   version: 1.1.0
   resolution: "reusify@npm:1.1.0"
   checksum: 10c0/4eff0d4a5f9383566c7d7ec437b671cc51b25963bd61bf127c3f3d3f68e44a026d99b8d2f1ad344afff8d278a8fe70a8ea092650a716d22287e8bef7126bb2fa
-  languageName: node
-  linkType: hard
-
-"rfdc@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "rfdc@npm:1.4.1"
-  checksum: 10c0/4614e4292356cafade0b6031527eea9bc90f2372a22c012313be1dcc69a3b90c7338158b414539be863fa95bfcb2ddcd0587be696841af4e6679d85e62c060c7
   languageName: node
   linkType: hard
 
