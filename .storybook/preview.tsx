@@ -1,11 +1,11 @@
 import { Box, CssBaseline, Theme, ThemeProvider, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react'
 import React from 'react'
-import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme } from '@xylabs/react-theme'
+import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme, Xl1Theme } from '@xylabs/react-theme'
 
 import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks'
 
-const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs', 'xyOS'] as const
+const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs', 'xyOS', 'XL1'] as const
 type ThemeName = typeof themeNames[number]
 
 export const globalTypes = {
@@ -32,6 +32,7 @@ const getTheme = (themeName: ThemeName) => {
     'xyOS': XyosTheme(),
     'Dataism': DataismTheme(theme),
     'XYLabs': XyLabsTheme(theme),
+    'XL1': Xl1Theme(theme),
   }
   return themes[themeName] ?? {}
 }

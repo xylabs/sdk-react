@@ -1,5 +1,5 @@
 import {
-  Button, Stack,
+  Button, Link, Stack,
   Typography,
 } from '@mui/material'
 import React from 'react'
@@ -86,6 +86,20 @@ export const ThemeShowcase: React.FC = () => {
         <Button color="neutral" variant="text">
           Neutral
         </Button>
+      </Stack>
+      <Stack flexDirection="row" gap={2}>
+        <Link href={top?.location.href}>
+          Default
+        </Link>
+        <Link color="neutral" href={top?.location.href}>
+          Neutral
+        </Link>
+        <Link color="primary" href={top?.location.href}>
+          Primary
+        </Link>
+        <Link color="secondary" href={top?.location.href}>
+          Secondary
+        </Link>
       </Stack>
     </Stack>
   )

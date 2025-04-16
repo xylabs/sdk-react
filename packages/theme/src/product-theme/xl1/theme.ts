@@ -5,7 +5,7 @@ import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const Xl1Theme = (): Theme => createTheme({
+export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,
@@ -92,8 +92,8 @@ export const Xl1Theme = (): Theme => createTheme({
       },
     },
     MuiLink: {
-      defaultProps: { underline: 'none' },
-      styleOverrides: { root: { '&:hover': { filter: 'brightness(75%)' } } },
+      defaultProps: { underline: 'none', color: 'secondary' },
+      styleOverrides: { root: { 'opacity': 0.75, '&:hover': { opacity: 1 } } },
     },
     MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
