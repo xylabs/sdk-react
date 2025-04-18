@@ -37,9 +37,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "^4.8.5",
-    "@xylabs/log": "^4.8.5",
-    "@xylabs/pixel": "^4.8.5",
+    "@xylabs/forget": "^4.8.7",
+    "@xylabs/log": "^4.8.7",
+    "@xylabs/pixel": "^4.8.7",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-shared": "workspace:^"
@@ -48,8 +48,8 @@
     "@mui/material": "^7.0.2",
     "@storybook/react": "^8.6.12",
     "@types/react": "^19.1.2",
-    "@xylabs/ts-scripts-yarn3": "^6.2.1",
-    "@xylabs/tsconfig-react": "^6.2.1",
+    "@xylabs/ts-scripts-yarn3": "^6.3.1",
+    "@xylabs/tsconfig-react": "^6.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "storybook": "^8.6.12",

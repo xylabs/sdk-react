@@ -39,7 +39,6 @@
   "dependencies": {
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
-    "@xylabs/react-theme": "workspace:^",
     "numeral": "^2.0.6"
   },
   "devDependencies": {
@@ -47,8 +46,8 @@
     "@storybook/react": "^8.6.12",
     "@types/numeral": "^2.0.5",
     "@types/react": "^19.1.2",
-    "@xylabs/ts-scripts-yarn3": "^6.2.1",
-    "@xylabs/tsconfig-react": "^6.2.1",
+    "@xylabs/ts-scripts-yarn3": "^6.3.1",
+    "@xylabs/tsconfig-react": "^6.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "storybook": "^8.6.12",
