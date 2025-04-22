@@ -111,11 +111,10 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
     MuiTooltip: {
       styleOverrides: {
         tooltip: ({ theme }) => ({
-          ...theme.typography.body1,
           color: 'inherit',
+          fontSize: '0.75rem',
           maxWidth: 250,
           border: `1px solid ${theme.palette.background.default}`,
-          backgroundColor: theme.palette.background.paper,
           padding: theme.spacing(1),
           boxShadow: 'rgba(17, 12, 46, 0.15) 0px 48px 100px 0px',
         }),

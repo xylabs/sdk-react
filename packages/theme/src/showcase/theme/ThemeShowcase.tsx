@@ -1,5 +1,7 @@
+import { Info } from '@mui/icons-material'
 import {
-  Button, Link, Stack,
+  Button, Chip, Link, Stack,
+  Tooltip,
   Typography,
 } from '@mui/material'
 import React from 'react'
@@ -100,6 +102,16 @@ export const ThemeShowcase: React.FC = () => {
         <Link color="secondary" href={top?.location.href}>
           Secondary
         </Link>
+      </Stack>
+      <Stack flexDirection="row" gap={2}>
+        <Tooltip
+          // uncomment to show it by default for easier debugging of the css in browser dev tools
+          // open
+          title="A really long tooltip that should wrap to a new line."
+          placement="top"
+        >
+          <Chip avatar={<Info />} label="Tooltip Demo" />
+        </Tooltip>
       </Stack>
     </Stack>
   )
