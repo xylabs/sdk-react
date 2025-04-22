@@ -11,21 +11,24 @@ export const darkThemeOptions: ThemeOptions = {
       paper: '#19193F',
     },
     error: { main: '#f6594e' },
-    success: {
-      main: '#7efc81',
-      contrastText: '#011e01',
+    neutral: {
+      main: '#fff', contrastText: '#111', dark: '#ccc',
     },
     primary: { main: '#5658F3', light: '#7c72ff' },
     secondary: {
       main: '#66caf7',
       contrastText: '#020223',
     },
-    warning: { main: '#f7d866' },
+    success: {
+      main: '#7efc81',
+      contrastText: '#011e01',
+    },
     text: {
       disabled: '#a5acdb',
       primary: '#E3E4EB',
       secondary: '#e3e4eba3',
     },
+    warning: { main: '#f7d866' },
   },
   typography: {
     body1: { color: '#ffffffa3' },
