@@ -45,8 +45,8 @@
   },
   "devDependencies": {
     "@types/react": "^19.1.2",
-    "@xylabs/ts-scripts-yarn3": "^6.3.1",
-    "@xylabs/tsconfig-react": "^6.3.1",
+    "@xylabs/ts-scripts-yarn3": "^6.3.4",
+    "@xylabs/tsconfig-react": "^6.3.4",
     "mixpanel-browser": "^2.64.0",
     "react": "^19.1.0",
     "typescript": "^5.8.3"
