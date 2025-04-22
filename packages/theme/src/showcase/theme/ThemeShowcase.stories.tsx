@@ -12,7 +12,8 @@ const StorybookEntry = {
 } as Meta<typeof ThemeShowcase>
 
 const Template: StoryFn<typeof ThemeShowcase> = () => (
-  <Box height="100vh" width="100vw">
+  // Accounts for extra padding added by storybook container
+  <Box height="96vh" width="96vw">
     <ThemeShowcase></ThemeShowcase>
   </Box>
 )
