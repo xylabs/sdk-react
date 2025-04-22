@@ -36,35 +36,6 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
         standardWarning: ({ theme }) => ({ backgroundColor: alpha(theme.palette.warning.main, 0.3), color: theme.palette.warning.light }),
       },
     },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          boxShadow: 'none',
-          borderWidth: '2px',
-          borderColor: 'inherit',
-        },
-      },
-      variants: [
-        {
-          props: { variant: 'outlined' },
-          style: ({ theme }) => ({
-            'WebkitBackdropFilter': 'blur(2px)',
-            'backdropFilter': 'blur(2px)',
-            'border': `2px solid ${alpha(theme.palette.text.primary, 0.4)}`,
-            'color': theme.palette.text.primary,
-            '&:hover': {
-              backgroundColor: theme.palette.background.default,
-              border: `2px solid ${alpha(theme.palette.text.primary, 0)}`,
-              color: darken(theme.palette.primary.dark, 0.7),
-            },
-          }),
-        },
-        {
-          props: { size: 'small' },
-          style: ({ theme }) => ({ padding: `${theme.spacing(0.5)} ${theme.spacing(1)}` }),
-        },
-      ],
-    },
     MuiCard: {
       defaultProps: { elevation: 0 },
       styleOverrides: {

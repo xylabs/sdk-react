@@ -2,8 +2,6 @@ import {
   alpha, lighten, type ThemeOptions,
 } from '@mui/material'
 
-import { neutralButtonStylesContained, neutralButtonStylesOutlined } from '../ThemeExtensions/index.ts'
-
 export const darkThemeOptions: ThemeOptions = {
   palette: {
     background: {
@@ -39,14 +37,6 @@ export const darkThemeOptions: ThemeOptions = {
     MuiButton: {
       defaultProps: { color: 'neutral' },
       variants: [
-        {
-          props: { variant: 'contained', color: 'neutral' },
-          style: neutralButtonStylesContained,
-        },
-        {
-          props: { variant: 'outlined', color: 'neutral' },
-          style: neutralButtonStylesOutlined,
-        },
         {
           props: { variant: 'text' },
           style: {

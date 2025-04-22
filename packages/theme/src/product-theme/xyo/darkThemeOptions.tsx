@@ -2,8 +2,6 @@ import {
   alpha, lighten, type ThemeOptions,
 } from '@mui/material/styles'
 
-import { neutralButtonStylesContained, neutralButtonStylesOutlined } from '../ThemeExtensions/index.ts'
-
 export const darkThemeOptions: ThemeOptions = {
   palette: {
     background: {
@@ -12,11 +10,10 @@ export const darkThemeOptions: ThemeOptions = {
       gradient: 'linear-gradient(45deg, #66CAF7, #020223)',
     },
     neutral: {
-      main: '#fff',
-      contrastText: '#000',
+      main: '#fff', contrastText: '#111', dark: '#ccc',
     },
     info: { main: '#72b4f4' },
-    primary: { main: '#5658F3' },
+    primary: { main: '#5658F3', light: '#7c72ff' },
     secondary: {
       main: '#66caf7',
       contrastText: '#020223',
@@ -40,16 +37,7 @@ export const darkThemeOptions: ThemeOptions = {
   },
   components: {
     MuiButton: {
-      defaultProps: { color: 'neutral' },
       variants: [
-        {
-          props: { variant: 'contained', color: 'neutral' },
-          style: neutralButtonStylesContained,
-        },
-        {
-          props: { variant: 'outlined', color: 'neutral' },
-          style: neutralButtonStylesOutlined,
-        },
         {
           props: { variant: 'text' },
           style: {

@@ -8,8 +8,7 @@ export const lightThemeOptions: ThemeOptions = {
       gradient: 'linear-gradient(45deg, #72b4f4, #fff)',
     },
     neutral: {
-      contrastText: '#fff',
-      main: '#000',
+      main: '#000', contrastText: '#fff', dark: '#333',
     },
     info: { main: '#72b4f4' },
     primary: { main: '#463dc6' },
