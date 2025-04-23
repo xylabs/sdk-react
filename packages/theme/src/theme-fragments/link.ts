@@ -1,6 +1,6 @@
 import type { Theme } from '@mui/material'
 
-export const MuiLinkEx: Theme['components'] = {
+export const MuiLinkFragment: Theme['components'] = {
   MuiLink: {
   // default color prop is required because Mui passes 'primary' as the default color prop and overrides
   // color: 'inherit' in their own css

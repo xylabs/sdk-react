@@ -1,8 +1,9 @@
 import type { Theme } from '@mui/material'
 import { alpha, createTheme } from '@mui/material'
 
-import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
-import { MuiLinkEx } from '../ThemeExtensions/index.ts'
+import {
+  MuiLinkFragment, shapeFragment, spacingFragment,
+} from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -67,7 +68,7 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
         },
       },
     },
-    ...MuiLinkEx,
+    ...MuiLinkFragment,
     MuiOutlinedInput: {
       styleOverrides: {
         input: {
@@ -84,12 +85,14 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
   ...shapeFragment,
   typography: {
     fontFamily: '"Lexend Deca", sans-serif',
-    body1: { fontSize: '1.1rem' },
+    body1: { color: '#ffffffa3', fontSize: '1.1rem' },
+    body2: { color: '#B3B3BD' },
     button: {
       fontSize: '1rem',
       fontWeight: 500,
       textTransform: 'capitalize',
     },
+    caption: { color: '#B3B3BD' },
     fontWeightBold: 600,
     fontWeightLight: 200,
     fontWeightMedium: 500,

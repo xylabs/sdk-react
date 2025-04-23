@@ -1,10 +1,9 @@
 import type { Theme } from '@mui/material'
-import {
-  alpha, createTheme, lighten,
-} from '@mui/material'
+import { alpha, createTheme } from '@mui/material'
 
-import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
-import { MuiLinkEx } from '../ThemeExtensions/index.ts'
+import {
+  MuiLinkFragment, shapeFragment, spacingFragment,
+} from '../../theme-fragments/index.ts'
 import { darkThemePalette } from './darkThemePalette.tsx'
 import { lightThemePalette } from './lightThemePalette.tsx'
 
@@ -82,20 +81,6 @@ export const DataismTheme = (_theme?: Theme): Theme => createTheme({
       },
     },
     MuiCardContent: { styleOverrides: { root: ({ theme }) => ({ '&:last-child': { paddingBottom: theme.spacing(1) } }) } },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          borderRadius: 4,
-          fontWeight: 400,
-        },
-        colorError: { backgroundColor: alpha('#f6594e', 0.2), color: lighten('#f6594e', 0.2) },
-        colorInfo: { backgroundColor: alpha('#72b4f4', 0.2), color: lighten('#72b4f4', 0.2) },
-        colorPrimary: { backgroundColor: alpha('#5658F3', 0.2), color: lighten('#5658F3', 0.2) },
-        colorSecondary: { backgroundColor: alpha('#66caf7', 0.2), color: lighten('#66caf7', 0.2) },
-        colorSuccess: { backgroundColor: alpha('#7efc81', 0.2), color: lighten('#7efc81', 0.2) },
-        colorWarning: { backgroundColor: alpha('#f7d866', 0.2), color: lighten('#f7d866', 0.2) },
-      },
-    },
     MuiContainer: { styleOverrides: { root: { maxWidth: 'xl' } }, defaultProps: { maxWidth: 'xl' } },
     MuiDialog: {
       styleOverrides: {
@@ -140,7 +125,7 @@ export const DataismTheme = (_theme?: Theme): Theme => createTheme({
         },
       },
     },
-    ...MuiLinkEx,
+    ...MuiLinkFragment,
   },
   ...spacingFragment,
   ...shapeFragment,

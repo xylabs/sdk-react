@@ -1,8 +1,11 @@
 import type { Theme } from '@mui/material'
-import { alpha, createTheme } from '@mui/material'
+import {
+  alpha, createTheme, lighten,
+} from '@mui/material'
 
-import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
-import { MuiLinkEx } from '../ThemeExtensions/index.ts'
+import {
+  MuiLinkFragment, shapeFragment, spacingFragment,
+} from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -64,15 +67,19 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
         },
       },
     },
-    MuiChip: {
+    MuiContainer: { styleOverrides: { root: { maxWidth: 'xl' } } },
+    MuiDialog: {
       styleOverrides: {
-        root: {
-          borderRadius: 4,
-          fontWeight: 400,
-        },
+        root: ({ theme }) => ({
+          '& .MuiDialog-paper': {
+            backgroundImage: 'none',
+            paddingLeft: 2,
+            paddingRight: 2,
+            border: `1px solid ${lighten(theme.palette.background.paper, 0.05)}`,
+          },
+        }),
       },
     },
-    MuiContainer: { styleOverrides: { root: { maxWidth: 'xl' } } },
     MuiDrawer: {
       styleOverrides: {
         root: ({ theme }) => ({
@@ -92,7 +99,7 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
         }),
       },
     },
-    ...MuiLinkEx,
+    ...MuiLinkFragment,
     MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
       styleOverrides: {

@@ -1,8 +1,9 @@
 import type { Theme } from '@mui/material'
 import { alpha, createTheme } from '@mui/material'
 
-import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
-import { MuiLinkEx } from '../ThemeExtensions/index.ts'
+import {
+  MuiLinkFragment, shapeFragment, spacingFragment,
+} from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -64,14 +65,6 @@ export const XyosTheme = (): Theme => createTheme({
         },
       },
     },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          borderRadius: 4,
-          fontWeight: 400,
-        },
-      },
-    },
     MuiContainer: { styleOverrides: { root: { maxWidth: 'xl' } } },
     MuiDrawer: {
       styleOverrides: {
@@ -92,7 +85,7 @@ export const XyosTheme = (): Theme => createTheme({
         }),
       },
     },
-    ...MuiLinkEx,
+    ...MuiLinkFragment,
     MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
       styleOverrides: {
