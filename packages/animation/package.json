@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-animation",
-  "version": "6.2.5",
+  "version": "6.2.6",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
