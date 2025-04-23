@@ -92,8 +92,18 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
       },
     },
     MuiLink: {
-      defaultProps: { underline: 'none', color: 'secondary' },
-      styleOverrides: { root: { 'opacity': 0.75, '&:hover': { opacity: 1 } } },
+      // default color prop is required because Mui passes 'primary' as the default color prop and overrides
+      // color: 'inherit' in their own css
+      defaultProps: {
+        color: 'inherit', underline: 'none', fontWeight: 600,
+      },
+      styleOverrides: {
+        root: ({ theme }) => ({
+          'opacity': 0.45,
+          '&:hover': { opacity: 0.8 },
+          ...theme.applyStyles('dark', { opacity: 0.6 }),
+        }),
+      },
     },
     MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
