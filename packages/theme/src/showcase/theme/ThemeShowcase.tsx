@@ -1,15 +1,16 @@
 import { Info } from '@mui/icons-material'
 import {
   AppBar,
-  Button, Chip, Link, Stack,
+  Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Stack,
   Tooltip,
   Typography,
 } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 
 import { ColorSchemeButton } from '../../components/index.ts'
 
 export const ThemeShowcase: React.FC = () => {
+  const [open, setOpen] = useState(false)
   return (
     <>
       <AppBar position="sticky" sx={{ mb: 2 }}>
@@ -119,6 +120,26 @@ export const ThemeShowcase: React.FC = () => {
           >
             <Chip avatar={<Info />} label="Tooltip Demo" />
           </Tooltip>
+        </Stack>
+        <Stack flexDirection="row" gap={2}>
+          <Dialog open={open} onClose={() => setOpen(false)}>
+            <DialogTitle>Dialog</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                This is a dialog. It can be used to display information or
+                prompt the user for input.
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button variant="outlined" onClick={() => setOpen(false)}>Cancel</Button>
+              <Button variant="contained" onClick={() => setOpen(false)} autoFocus>
+                Ok
+              </Button>
+            </DialogActions>
+          </Dialog>
+          <Button variant="outlined" onClick={() => setOpen(true)}>
+            Open Dialog
+          </Button>
         </Stack>
       </Stack>
     </>
