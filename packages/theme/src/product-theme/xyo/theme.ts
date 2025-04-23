@@ -1,7 +1,5 @@
 import type { Theme } from '@mui/material'
-import {
-  alpha, createTheme, darken,
-} from '@mui/material'
+import { alpha, createTheme } from '@mui/material'
 
 import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
