@@ -2,6 +2,7 @@ import type { Theme } from '@mui/material'
 import { alpha, createTheme } from '@mui/material'
 
 import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
+import { MuiLinkEx } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -91,10 +92,7 @@ export const XyosTheme = (): Theme => createTheme({
         }),
       },
     },
-    MuiLink: {
-      defaultProps: { underline: 'none' },
-      styleOverrides: { root: { '&:hover': { filter: 'brightness(75%)' } } },
-    },
+    ...MuiLinkEx,
     MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
       styleOverrides: {
