@@ -2,6 +2,7 @@ import type { Theme } from '@mui/material'
 import { alpha, createTheme } from '@mui/material'
 
 import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
+import { MuiLinkEx } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -91,10 +92,7 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
         }),
       },
     },
-    MuiLink: {
-      defaultProps: { underline: 'none', color: 'secondary' },
-      styleOverrides: { root: { 'opacity': 0.75, '&:hover': { opacity: 1 } } },
-    },
+    ...MuiLinkEx,
     MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
       styleOverrides: {

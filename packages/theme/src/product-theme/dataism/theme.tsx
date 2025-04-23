@@ -4,6 +4,7 @@ import {
 } from '@mui/material'
 
 import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
+import { MuiLinkEx } from '../ThemeExtensions/index.ts'
 import { darkThemePalette } from './darkThemePalette.tsx'
 import { lightThemePalette } from './lightThemePalette.tsx'
 
@@ -139,7 +140,7 @@ export const DataismTheme = (_theme?: Theme): Theme => createTheme({
         },
       },
     },
-    MuiLink: { styleOverrides: { root: { textDecoration: 'none' } } },
+    ...MuiLinkEx,
   },
   ...spacingFragment,
   ...shapeFragment,

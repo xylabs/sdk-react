@@ -1,9 +1,8 @@
 import type { Theme } from '@mui/material'
-import {
-  alpha, createTheme, darken,
-} from '@mui/material'
+import { alpha, createTheme } from '@mui/material'
 
 import { shapeFragment, spacingFragment } from '../../theme-fragments/index.ts'
+import { MuiLinkEx } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
@@ -68,6 +67,7 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
         },
       },
     },
+    ...MuiLinkEx,
     MuiOutlinedInput: {
       styleOverrides: {
         input: {

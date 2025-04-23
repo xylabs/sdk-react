@@ -1,8 +1,4 @@
-import type { Theme } from '@mui/material'
-import {
-  lighten, Link, Typography,
-} from '@mui/material'
-import { grey } from '@mui/material/colors'
+import { Link, Typography } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect } from 'react'
@@ -63,11 +59,7 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
     ? null
     : (
         <FlexRow
-          sx={{
-            boxShadow: 3,
-            bgcolor: 'white',
-            color: grey[900],
-          }}
+          paper
           justifyContent="space-between"
           {...props}
         >
@@ -77,7 +69,6 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
               href="https://cookiesandyou.com/"
               rel="noopener noreferrer"
               target="_blank"
-              sx={{ color: grey[900], textDecoration: 'underline' }}
             >
               cookies
             </Link>
@@ -86,7 +77,6 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
               href="https://policies.google.com/technologies/partner-sites"
               rel="noopener noreferrer"
               target="_blank"
-              sx={{ color: grey[900], textDecoration: 'underline' }}
             >
               Google&nbsp;tools
             </Link>
