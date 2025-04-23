@@ -14,9 +14,6 @@ declare module '@mui/material/styles' {
       neutral: PaletteColorOptions
     }
   }
-  interface ThemeOptions {
-    palette?: PaletteOptions
-  }
 }
 
 declare module '@mui/material/Button' {
