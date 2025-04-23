@@ -9,7 +9,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = (props) => {
 
   const Inner: React.FC = () => {
     const { accepted } = useCookieConsent()
-    return accepted ? null : <CookieConsentBody background paper position="fixed" bottom={0} maxWidth="100vw" width="100%" zIndex={1000} {...props} />
+    return accepted ? null : <CookieConsentBody position="fixed" bottom={0} maxWidth="100vw" width="100%" zIndex={1000} {...props} />
   }
 
   // if not inside a context, make a context

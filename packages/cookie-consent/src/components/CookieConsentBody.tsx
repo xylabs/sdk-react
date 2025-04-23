@@ -1,4 +1,8 @@
-import { Link, Typography } from '@mui/material'
+import type { Theme } from '@mui/material'
+import {
+  lighten, Link, Typography,
+} from '@mui/material'
+import { grey } from '@mui/material/colors'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect } from 'react'
@@ -58,19 +62,37 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
   return accepted
     ? null
     : (
-        <FlexRow justifyContent="space-between" {...props}>
+        <FlexRow
+          sx={{
+            boxShadow: 3,
+            bgcolor: 'white',
+            color: grey[900],
+          }}
+          justifyContent="space-between"
+          {...props}
+        >
           <Typography variant="body2" margin={2}>
             {'This site uses '}
-            <Link href="https://cookiesandyou.com/" rel="noopener noreferrer" target="_blank">
+            <Link
+              href="https://cookiesandyou.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+              sx={{ color: grey[900], textDecoration: 'underline' }}
+            >
               cookies
             </Link>
             {' and '}
-            <Link href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">
+            <Link
+              href="https://policies.google.com/technologies/partner-sites"
+              rel="noopener noreferrer"
+              target="_blank"
+              sx={{ color: grey[900], textDecoration: 'underline' }}
+            >
               Google&nbsp;tools
             </Link>
             {' to analyze traffic and for ads measurement purposes.'}
           </Typography>
-          <ButtonEx disableUserEvents variant="contained" color="secondary" onClick={onAcceptClick} margin={2}>
+          <ButtonEx disableUserEvents variant="contained" color="primary" onClick={onAcceptClick} margin={2}>
             Accept
           </ButtonEx>
         </FlexRow>
