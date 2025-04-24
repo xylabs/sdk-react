@@ -4,7 +4,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   AppBar,
-  Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Paper, Stack,
+  Button, Card, CardContent, CardHeader, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Paper, Stack,
   Tooltip,
   Typography,
 } from '@mui/material'
@@ -146,6 +146,16 @@ export const ThemeShowcase: React.FC = () => {
           <Button variant="outlined" onClick={() => setOpen(true)}>
             Open Dialog
           </Button>
+        </Stack>
+        <Stack flexDirection="row" gap={2}>
+          <Card>
+            <CardHeader title="Card Header" subheader="Card Subheader" />
+            <CardContent>
+              <Typography variant="body1">
+                This is a card. It can be used to display information or prompt the user for input.
+              </Typography>
+            </CardContent>
+          </Card>
         </Stack>
         <Stack flexDirection="column">
           <Accordion>

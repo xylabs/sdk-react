@@ -36,16 +36,12 @@ export const XyosTheme = (): Theme => createTheme({
       },
     },
     MuiCard: {
-      defaultProps: { elevation: 0 },
       styleOverrides: {
-        root: ({ theme }) => ({
-          WebkitBackdropFilter: 'blur(20px)',
-          backdropFilter: 'blur(20px)',
-          backgroundColor: alpha(theme.palette.background.paper, 0.7),
+        root: {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-        }),
+        },
       },
     },
     MuiCardContent: {
