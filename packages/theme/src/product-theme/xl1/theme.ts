@@ -1,7 +1,5 @@
 import type { Theme } from '@mui/material'
-import {
-  alpha, createTheme, lighten,
-} from '@mui/material'
+import { alpha, createTheme } from '@mui/material'
 
 import {
   MuiLinkFragment, shapeFragment, spacingFragment,
