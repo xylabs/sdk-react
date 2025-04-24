@@ -1,7 +1,7 @@
 import { Info } from '@mui/icons-material'
 import {
   AppBar,
-  Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Stack,
+  Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Paper, Stack,
   Tooltip,
   Typography,
 } from '@mui/material'
@@ -110,6 +110,9 @@ export const ThemeShowcase: React.FC = () => {
           <Link color="secondary" href={top?.location.href}>
             Secondary
           </Link>
+        </Stack>
+        <Stack flexDirection="row" gap={2}>
+          <Paper sx={{ padding: 2 }}>Paper with default elevation</Paper>
         </Stack>
         <Stack flexDirection="row" gap={2}>
           <Tooltip

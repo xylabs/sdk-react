@@ -70,14 +70,12 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
     MuiContainer: { styleOverrides: { root: { maxWidth: 'xl' } } },
     MuiDialog: {
       styleOverrides: {
-        root: ({ theme }) => ({
+        root: {
           '& .MuiDialog-paper': {
-            backgroundImage: 'none',
             paddingLeft: 2,
             paddingRight: 2,
-            border: `1px solid ${lighten(theme.palette.background.paper, 0.05)}`,
           },
-        }),
+        },
       },
     },
     MuiDrawer: {
@@ -100,7 +98,6 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
       },
     },
     ...MuiLinkFragment,
-    MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
       styleOverrides: {
         body: {
