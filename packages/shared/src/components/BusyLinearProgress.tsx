@@ -1,6 +1,7 @@
 import type { LinearProgressProps } from '@mui/material'
 import {
-  alpha, Box, LinearProgress, useTheme,
+  alpha,
+  Box, LinearProgress, useTheme,
 } from '@mui/material'
 import React from 'react'
 

@@ -1,6 +1,7 @@
 import type { CircularProgressProps } from '@mui/material'
 import {
-  alpha, Box, CircularProgress, useTheme,
+  alpha,
+  Box, CircularProgress, useTheme,
 } from '@mui/material'
 import React from 'react'
 

@@ -33,13 +33,13 @@ export const LogoLinkEx: React.FC<LogoLinkExProps> = ({
                 position="absolute"
                 borderRadius={1}
                 right={6}
-                color={theme.palette.primary.contrastText}
+                color={theme.vars.palette.primary.contrastText}
                 bottom={0}
                 bgcolor={theme.vars.palette.text.primary}
                 paddingX="2px"
                 lineHeight={1}
                 variant="caption"
-                border={`1px ${theme.palette.primary.contrastText} solid`}
+                border={`1px ${theme.vars.palette.primary.contrastText} solid`}
               >
                 {typeof version === 'string' ? version : '1.0'}
               </Typography>
