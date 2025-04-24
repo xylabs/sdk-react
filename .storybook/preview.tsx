@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Theme, ThemeProvider, useTheme } from '@mui/material'
+import { Box, createTheme, CssBaseline, Theme, ThemeProvider, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react'
 import React from 'react'
 import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme, Xl1Theme } from '@xylabs/react-theme'
@@ -27,7 +27,13 @@ export const globalTypes = {
 const getTheme = (themeName: ThemeName) => {
   const theme = useTheme()
   const themes: Record<ThemeName, Theme> = {
-    'None': theme,
+    'None': createTheme({
+      colorSchemes: {
+        dark: {},
+        light: {},
+      },
+      cssVariables: { colorSchemeSelector: 'class' },
+    }),
     'XYO': XyoTheme(theme, false),
     'xyOS': XyosTheme(),
     'Dataism': DataismTheme(theme),

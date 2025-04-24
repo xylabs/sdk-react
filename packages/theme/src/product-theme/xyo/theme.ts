@@ -30,10 +30,22 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
           backgroundColor: alpha(theme.palette.background.paper, 0.3),
           color: 'inherit',
         }),
-        standardError: ({ theme }) => ({ backgroundColor: alpha(theme.palette.error.main, 0.3), color: theme.palette.error.light }),
-        standardInfo: ({ theme }) => ({ backgroundColor: alpha(theme.palette.info.main, 0.3), color: theme.palette.info.light }),
-        standardSuccess: ({ theme }) => ({ backgroundColor: alpha(theme.palette.success.main, 0.3), color: theme.palette.success.light }),
-        standardWarning: ({ theme }) => ({ backgroundColor: alpha(theme.palette.warning.main, 0.3), color: theme.palette.warning.light }),
+        standardError: ({ theme }) => ({
+          backgroundColor: 'color-mix(in srgb, var(--mui-palette-error-main), transparent 30%)',
+          color: theme.palette.error.light,
+        }),
+        standardInfo: ({ theme }) => ({
+          backgroundColor: 'color-mix(in srgb, var(--mui-palette-info-main), transparent 30%)',
+          color: theme.palette.info.light,
+        }),
+        standardSuccess: ({ theme }) => ({
+          backgroundColor: 'color-mix(in srgb, var(--mui-palette-success-main), transparent 30%)',
+          color: theme.palette.success.light,
+        }),
+        standardWarning: ({ theme }) => ({
+          backgroundColor: 'color-mix(in srgb, var(--mui-palette-warning-main), transparent 30%)',
+          color: theme.palette.warning.light,
+        }),
       },
     },
     MuiCard: {
@@ -85,14 +97,12 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
   ...shapeFragment,
   typography: {
     fontFamily: '"Lexend Deca", sans-serif',
-    body1: { color: '#ffffffa3', fontSize: '1.1rem' },
-    body2: { color: '#B3B3BD' },
+    body1: { fontSize: '1.1rem' },
     button: {
       fontSize: '1rem',
       fontWeight: 500,
       textTransform: 'capitalize',
     },
-    caption: { color: '#B3B3BD' },
     fontWeightBold: 600,
     fontWeightLight: 200,
     fontWeightMedium: 500,

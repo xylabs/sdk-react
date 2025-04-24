@@ -1,12 +1,12 @@
 import { LogoutRounded } from '@mui/icons-material'
 import {
-  alpha,
   Button,
   Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, ListItem, ListItemIcon, type ListItemProps, ListItemText,
   useTheme,
 } from '@mui/material'
 import React, { useState } from 'react'
 
+import { alphaCss } from '../../../alphaCss.ts'
 import { StyledFlexRow, StyledListItemButton } from './StyledListItemButton.tsx'
 
 export const LogoutListItem: React.FC<ListItemProps> = (props) => {
@@ -36,12 +36,12 @@ export const LogoutListItem: React.FC<ListItemProps> = (props) => {
         >
           <StyledFlexRow>
             <ListItemIcon
-              sx={{ color: alpha(theme.palette.text.primary, 0.5), justifyContent: 'center' }}
+              sx={{ color: alphaCss(theme.vars.palette.text.primary, 0.5), justifyContent: 'center' }}
             >
               <LogoutRounded />
             </ListItemIcon>
             <ListItemText
-              sx={{ color: alpha(theme.palette.text.primary, 0.5) }}
+              sx={{ color: alphaCss(theme.vars.palette.text.primary, 0.5) }}
               primary="Logout"
             />
           </StyledFlexRow>

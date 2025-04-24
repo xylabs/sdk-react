@@ -1,4 +1,6 @@
+import { AppBar } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
+import { ColorSchemeButton } from '@xylabs/react-theme'
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
@@ -12,9 +14,14 @@ const StorybookEntry = {
 } as Meta<typeof ContextToolbar>
 
 const Template: StoryFn<typeof ContextToolbar> = args => (
-  <BrowserRouter>
-    <ContextToolbar {...args}></ContextToolbar>
-  </BrowserRouter>
+  <div>
+    <AppBar position="static">
+      <BrowserRouter>
+        <ContextToolbar {...args}></ContextToolbar>
+      </BrowserRouter>
+    </AppBar>
+    <ColorSchemeButton />
+  </div>
 )
 
 const Default = Template.bind({})

@@ -1,5 +1,7 @@
 import 'react'
 
+import type {} from '@mui/material/themeCssVarsAugmentation'
+
 // NOTE:  Because @react-spring/web is not updated to support React 19, it relies on the
 // deprecated global JSX namespace to declare the intrinsic elements. This is a workaround
 // to suppress the typescript errors that result of that reliance. This workaround is only

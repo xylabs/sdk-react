@@ -1,5 +1,4 @@
 import {
-  alpha,
   Box, Typography, useTheme,
 } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
@@ -8,6 +7,7 @@ import {
   Cell, Pie, PieChart, ResponsiveContainer, Tooltip,
 } from 'recharts'
 
+import { alphaCss } from '../../../../../alphaCss.ts'
 import type { PieChartProps } from '../Shared/index.ts'
 import { CustomDataTooltip } from '../Shared/index.ts'
 
@@ -27,11 +27,11 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
   }
 
   const colors = [
-    alpha(theme.palette.primary.main, 0.8),
-    alpha(theme.palette.secondary.main, 0.8),
-    alpha(theme.palette.error.main, 0.8),
-    alpha(theme.palette.warning.main, 0.8),
-    alpha(theme.palette.success.main, 0.8),
+    alphaCss(theme.vars.palette.primary.main, 0.8),
+    alphaCss(theme.vars.palette.secondary.main, 0.8),
+    alphaCss(theme.vars.palette.error.main, 0.8),
+    alphaCss(theme.vars.palette.warning.main, 0.8),
+    alphaCss(theme.vars.palette.success.main, 0.8),
   ]
 
   return (

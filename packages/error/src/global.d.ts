@@ -1,3 +1,4 @@
+import type {} from '@mui/material/themeCssVarsAugmentation'
 import type Rollbar from 'rollbar'
 
 declare global {

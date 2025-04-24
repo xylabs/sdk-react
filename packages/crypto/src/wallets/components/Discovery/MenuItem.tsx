@@ -37,7 +37,7 @@ export const WalletDiscoveryMenuItemInner: React.FC<WalletDiscoveryMenuItemInner
 }
 
 const StyledMenuItem = styled(MenuItem, { name: 'StyledMenuItem' })(({ theme }) => ({
-  '&:not(:last-child)': { borderBottom: `1px solid ${theme.palette.divider}` },
+  '&:not(:last-child)': { borderBottom: `1px solid ${theme.vars.palette.divider}` },
   'padding': `${theme.spacing(2)}`,
 }))
 

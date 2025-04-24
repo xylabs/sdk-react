@@ -3,18 +3,20 @@ import {
   alpha, createTheme, lighten,
 } from '@mui/material'
 
+import { alphaCss } from '../alphaCss.ts'
+
 export const componentFragment = (_theme?: Theme): Theme => createTheme({
   components: {
     MuiAlert: {
       styleOverrides: {
         root: ({ theme }) => ({
-          backgroundColor: alpha(theme.palette.background.paper, 0.3),
+          backgroundColor: alphaCss(theme.vars.palette.background.paper, 0.3),
           color: 'inherit',
         }),
-        standardError: ({ theme }) => ({ backgroundColor: alpha(theme.palette.error.main, 0.3), color: theme.palette.error.light }),
-        standardInfo: ({ theme }) => ({ backgroundColor: alpha(theme.palette.info.main, 0.3), color: theme.palette.info.light }),
-        standardSuccess: ({ theme }) => ({ backgroundColor: alpha(theme.palette.success.main, 0.3), color: theme.palette.success.light }),
-        standardWarning: ({ theme }) => ({ backgroundColor: alpha(theme.palette.warning.main, 0.3), color: theme.palette.warning.light }),
+        standardError: ({ theme }) => ({ backgroundColor: alphaCss(theme.vars.palette.error.main, 0.3), color: theme.vars.palette.error.light }),
+        standardInfo: ({ theme }) => ({ backgroundColor: alphaCss(theme.vars.palette.info.main, 0.3), color: theme.vars.palette.info.light }),
+        standardSuccess: ({ theme }) => ({ backgroundColor: alphaCss(theme.vars.palette.success.main, 0.3), color: theme.vars.palette.success.light }),
+        standardWarning: ({ theme }) => ({ backgroundColor: alphaCss(theme.vars.palette.warning.main, 0.3), color: theme.vars.palette.warning.light }),
       },
     },
     MuiButton: {

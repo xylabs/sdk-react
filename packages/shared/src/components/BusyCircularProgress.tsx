@@ -11,14 +11,17 @@ export interface BusyCircularProgressProps extends CircularProgressProps {
   size?: string | number
 }
 
+const percentBackground = (percent: number) => `color-mix(in srgb, var(--mui-palette-background-default), transparent ${percent}%)`
+
 const BusyCircularProgress: React.FC<BusyCircularProgressProps> = ({
   bgcolor, style, rounded, size, opacity = 0.85, ...props
 }) => {
   const theme = useTheme()
+  const opacityNumber = Number.parseFloat(`${opacity}`)
   return (
     <Box
       display="flex"
-      bgcolor={alpha(bgcolor ?? theme.palette.background.default, Number.parseFloat(`${opacity}`))}
+      bgcolor={(bgcolor === undefined) ? percentBackground(opacityNumber * 100) : alpha(bgcolor, opacityNumber)}
       flexGrow={1}
       position="absolute"
       left={0}

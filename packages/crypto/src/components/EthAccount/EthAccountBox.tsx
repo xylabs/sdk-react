@@ -51,7 +51,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
         ? (
             <Identicon
               minWidth={iconSize + Number.parseInt(theme.spacing(1))}
-              bgcolor={theme.palette.secondary.main}
+              bgcolor={theme.vars.palette.secondary.main}
               size={iconSize}
               value={address?.toHex()}
             />

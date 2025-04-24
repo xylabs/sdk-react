@@ -1,7 +1,6 @@
 import { KeyboardArrowDownRounded } from '@mui/icons-material'
 import type { SelectChangeEvent, SelectProps } from '@mui/material'
 import {
-  alpha,
   Box,
   FormControl,
   MenuItem,
@@ -11,6 +10,8 @@ import {
 } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React, { useMemo, useState } from 'react'
+
+import { alphaCss } from '../../../../alphaCss.ts'
 
 export interface DropdownItem {
   icon: React.ReactNode
@@ -55,14 +56,14 @@ export const DropdownSelect: React.FC<DropdownSelectProps> = ({
           value={localSelectedValue}
           onChange={handleChange}
           IconComponent={KeyboardArrowDownRounded}
-          inputProps={{ color: theme.palette.text.primary }}
+          inputProps={{ color: theme.vars.palette.text.primary }}
           MenuProps={{
             PaperProps: {
               sx: {
                 'marginTop': 1,
                 '& .Mui-selected': {
-                  backgroundColor: alpha(theme.palette.secondary.main, 0.1) + ' !important',
-                  color: theme.palette.secondary.main,
+                  backgroundColor: alphaCss(theme.vars.palette.secondary.main, 0.1) + ' !important',
+                  color: theme.vars.palette.secondary.main,
                 },
                 '& .MuiList-root': { padding: 0 },
                 '& .MuiMenuItem-root': {
@@ -73,11 +74,11 @@ export const DropdownSelect: React.FC<DropdownSelectProps> = ({
                   'marginY': size === 'small' ? 0.5 : 1,
                   'padding': size === 'small' ? 0.75 : 1,
                   'borderRadius': 1,
-                  'border': `${alpha(theme.palette.secondary.main, 0)} 2px solid`,
+                  'border': `${alphaCss(theme.vars.palette.secondary.main, 0)} 2px solid`,
                   '&:hover': {
-                    backgroundColor: alpha(theme.palette.secondary.main, 0),
-                    border: `${theme.palette.secondary.main} 2px solid`,
-                    color: theme.palette.secondary.main,
+                    backgroundColor: alphaCss(theme.vars.palette.secondary.main, 0),
+                    border: `${theme.vars.palette.secondary.main} 2px solid`,
+                    color: theme.vars.palette.secondary.main,
                   },
                 },
               },

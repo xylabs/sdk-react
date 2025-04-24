@@ -59,7 +59,7 @@ export const VerificationList: React.FC<VerificationListProps> = ({
               <TableCell>
                 <Typography
                   variant="body2"
-                  color={region.verified ? theme.palette.success.main : theme.palette.error.main}
+                  color={region.verified ? theme.vars.palette.success.main : theme.vars.palette.error.main}
                 >
                   {region.verified ? 'Verified' : 'Unverified'}
                 </Typography>

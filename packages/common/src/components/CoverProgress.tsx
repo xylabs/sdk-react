@@ -25,7 +25,7 @@ export const CoverProgress: React.FC<CoverProgressProps> = (props) => {
         bottom={0}
         right={0}
         left={0}
-        bgcolor={paper ? theme.palette.background.paper : theme.palette.background.default}
+        bgcolor={paper ? theme.vars.palette.background.paper : theme.vars.palette.background.default}
       >
         {(errors?.length ?? 0) === 0
           ? <CircularProgress style={{ opacity }} />

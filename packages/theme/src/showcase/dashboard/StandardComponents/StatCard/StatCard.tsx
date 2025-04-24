@@ -35,10 +35,10 @@ export const StatCard: React.FC<StatCardProps> = ({
 
   const isPositive = change >= 0
   const changeColor = isPositive && !reverseDirectionality
-    ? theme.palette.success.main
+    ? theme.vars.palette.success.main
     : isPositive && reverseDirectionality
-      ? theme.palette.error.main
-      : theme.palette.success.main
+      ? theme.vars.palette.error.main
+      : theme.vars.palette.success.main
   const formattedValue = formatNumber(value)
   const showTooltip = formattedValue !== value.toString()
 

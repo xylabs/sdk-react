@@ -39,11 +39,11 @@ export const EthAccountButton: React.FC<EthAccountButtonProps & ButtonExProps> =
     <ButtonEx onClick={onClickLocal} title={`0x${address?.toHex()}`} {...props}>
       {icon
         ? (
-            <FlexRow position="absolute" top={0} left={0} bottom={0} paddingX={0.5} bgcolor={theme.palette.secondary.main}>
+            <FlexRow position="absolute" top={0} left={0} bottom={0} paddingX={0.5} bgcolor={theme.vars.palette.secondary.main}>
               <Identicon
                 minHeight={theme.spacing(3)}
                 minWidth={theme.spacing(3)}
-                bgcolor={theme.palette.secondary.main}
+                bgcolor={theme.vars.palette.secondary.main}
                 size={iconSize}
                 value={address?.toHex()}
               />

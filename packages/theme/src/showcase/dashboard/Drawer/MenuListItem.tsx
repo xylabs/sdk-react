@@ -1,11 +1,11 @@
 import { LogoutRounded } from '@mui/icons-material'
 import {
-  alpha,
   ListItem, ListItemIcon, type ListItemProps, ListItemText,
   useTheme,
 } from '@mui/material'
 import React from 'react'
 
+import { alphaCss } from '../../../alphaCss.ts'
 import { StyledFlexRow, StyledListItemButton } from '../StyledListItemButton.tsx'
 
 export interface MenuListItemProps extends ListItemProps {
@@ -37,13 +37,13 @@ export const MenuListItem: React.FC<MenuListItemProps> = ({
       >
         <StyledFlexRow>
           <ListItemIcon
-            sx={{ color: alpha(theme.palette.text.primary, 0.5), justifyContent: 'center' }}
+            sx={{ color: alphaCss(theme.vars.palette.text.primary, 0.5), justifyContent: 'center' }}
           >
             {icon}
           </ListItemIcon>
           {mode === 'full-width' && (
             <ListItemText
-              sx={{ color: alpha(theme.palette.text.primary, 0.5) }}
+              sx={{ color: alphaCss(theme.vars.palette.text.primary, 0.5) }}
               primary={text}
             />
           )}

@@ -40,8 +40,8 @@ const BusyBox: React.FC<BusyBoxProps> = (
       style={
         background
           ? {
-              backgroundColor: theme.palette.background.default,
-              color: theme.palette.text.primary,
+              backgroundColor: theme.vars.palette.background.default,
+              color: theme.vars.palette.text.primary,
               ...style,
             }
           : style

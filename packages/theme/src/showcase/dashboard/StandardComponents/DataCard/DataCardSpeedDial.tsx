@@ -54,7 +54,7 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   'right': '0',
   '& .MuiSpeedDial-fab': {
     'backgroundColor': 'transparent',
-    'color': theme.palette.text.primary,
+    'color': theme.vars.palette.text.primary,
     'boxShadow': 'none',
     'minWidth': 'auto',
     'minHeight': 'auto',
@@ -92,9 +92,9 @@ export const DataCardSpeedDial: React.FC<DataCardSpeedDialProps> = ({ size }) =>
             icon={action.icon}
             tooltipTitle={action.name}
             sx={{
-              'backgroundColor': theme.palette.primary.main,
-              'color': theme.palette.primary.contrastText,
-              '&:hover': { backgroundColor: theme.palette.primary.light },
+              'backgroundColor': theme.vars.palette.primary.main,
+              'color': theme.vars.palette.primary.contrastText,
+              '&:hover': { backgroundColor: theme.vars.palette.primary.light },
             }}
           />
         ))}

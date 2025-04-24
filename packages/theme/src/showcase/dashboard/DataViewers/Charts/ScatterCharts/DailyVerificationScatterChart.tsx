@@ -1,7 +1,6 @@
 import {
   alpha,
   darken,
-  lighten,
   useTheme,
 } from '@mui/material'
 import React, { useState } from 'react'
@@ -9,6 +8,7 @@ import {
   CartesianGrid, Cell, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis,
 } from 'recharts'
 
+import { lightenCss } from '../../../../../lightenCss.ts'
 import type { DailyVerificationChartProps } from '../Shared/index.ts'
 import { CustomDataTooltip } from '../Shared/index.ts'
 
@@ -58,7 +58,7 @@ export const DailyVerificationScatterChart: React.FC<DailyVerificationChartProps
             top: 20, right: 20, bottom: 20, left: 20,
           }}
         >
-          <CartesianGrid vertical={false} stroke={lighten(theme.palette.background.paper, 0.2)} />
+          <CartesianGrid vertical={false} stroke={lightenCss(theme.vars.palette.background.paper, 0.2)} />
           <XAxis
             type="number"
             dataKey="time"

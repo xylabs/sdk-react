@@ -1,3 +1,4 @@
+import type {} from '@mui/material/themeCssVarsAugmentation'
 import type { Eip1193Provider } from 'ethers'
 
 declare global {

@@ -10,15 +10,18 @@ export interface BusyLinearProgressProps extends LinearProgressProps {
   rounded?: boolean
 }
 
+const percentBackground = (percent: number) => `color-mix(in srgb, var(--mui-palette-background-default), transparent ${percent}%)`
+
 const BusyLinearProgress: React.FC<BusyLinearProgressProps> = ({
   bgcolor, style, rounded, opacity = 0.85, ...props
 }) => {
   const theme = useTheme()
+  const opacityNumber = Number.parseFloat(`${opacity}`)
   return (
     <Box
       display="flex"
       flexDirection="column"
-      bgcolor={alpha(bgcolor ?? theme.palette.background.default, Number.parseFloat(`${opacity}`))}
+      bgcolor={(bgcolor === undefined) ? percentBackground(opacityNumber * 100) : alpha(bgcolor, opacityNumber)}
       position="absolute"
       left={0}
       right={0}

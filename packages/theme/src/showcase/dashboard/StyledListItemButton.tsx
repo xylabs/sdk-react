@@ -1,7 +1,7 @@
-import {
-  alpha, ListItemButton, styled,
-} from '@mui/material'
+import { ListItemButton, styled } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
+
+import { alphaCss } from '../../alphaCss.ts'
 
 // Styled span for wrapping menu icons
 export const StyledMenuIconWrapSpan = styled('span', { name: 'StyledMenuIconWrapSpan' })(() => ({
@@ -11,7 +11,7 @@ export const StyledMenuIconWrapSpan = styled('span', { name: 'StyledMenuIconWrap
 }))
 
 export const StyledFlexRow = styled(FlexRow, { name: 'StyledFlexRow' })(({ theme }) => ({
-  '&:hover': { backgroundColor: alpha(theme.palette.text.primary, 0.05) },
+  '&:hover': { backgroundColor: alphaCss(theme.vars.palette.text.primary, 0.05) },
   'borderRadius': '10px',
   'paddingLeft': theme.spacing(0.5),
   'padding': theme.spacing(0.5),
@@ -21,7 +21,7 @@ export const StyledFlexRow = styled(FlexRow, { name: 'StyledFlexRow' })(({ theme
 export const StyledListItemButton = styled(ListItemButton, { name: 'StyledListItemButton', shouldForwardProp: prop => prop !== 'active' })<{
   active?: boolean
 }>(({ theme, active }) => {
-  const activeOrHoverColor = theme.palette.primary.main
+  const activeOrHoverColor = theme.vars.palette.primary.main
 
   return {
     'position': 'relative',

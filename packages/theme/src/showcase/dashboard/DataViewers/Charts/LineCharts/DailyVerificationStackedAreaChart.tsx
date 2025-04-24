@@ -22,7 +22,7 @@ export const DailyVerificationStackedAreaChart: React.FC<DailyVerificationStacke
           bottom: 0,
         }}
       >
-        <CartesianGrid stroke={theme.palette.background.paper} />
+        <CartesianGrid stroke={theme.vars.palette.background.paper} />
         <XAxis dataKey="day" />
         <YAxis width={20} />
         <Tooltip
@@ -40,22 +40,22 @@ export const DailyVerificationStackedAreaChart: React.FC<DailyVerificationStacke
           type="monotone"
           dataKey="mobile"
           stackId="1"
-          stroke={theme.palette.primary.main}
-          fill={theme.palette.primary.main}
+          stroke={theme.vars.palette.primary.main}
+          fill={theme.vars.palette.primary.main}
         />
         <Area
           type="monotone"
           dataKey="web"
           stackId="1"
-          stroke={theme.palette.secondary.main}
-          fill={theme.palette.secondary.light}
+          stroke={theme.vars.palette.secondary.main}
+          fill={theme.vars.palette.secondary.light}
         />
         <Area
           type="monotone"
           dataKey="email"
           stackId="1"
-          stroke={theme.palette.success.main}
-          fill={theme.palette.success.light}
+          stroke={theme.vars.palette.success.main}
+          fill={theme.vars.palette.success.light}
         />
       </AreaChart>
     </ResponsiveContainer>

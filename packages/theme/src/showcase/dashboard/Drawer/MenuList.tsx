@@ -1,10 +1,11 @@
 import {
-  alpha, List, ListItem, ListItemIcon, ListItemText, type ListProps,
+  List, ListItem, ListItemIcon, ListItemText, type ListProps,
   useTheme,
 } from '@mui/material'
 import React, { useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 
+import { alphaCss } from '../../../alphaCss.ts'
 import type { MenuNavItem } from '../MenuNavItem.ts'
 import {
   StyledFlexRow, StyledListItemButton, StyledMenuIconWrapSpan,
@@ -20,7 +21,7 @@ export const BaseMenuList: React.FC<BaseMenuListProps> = (props) => {
   } = props
 
   const theme = useTheme()
-  const activeColor = theme.palette.primary.light
+  const activeColor = theme.vars.palette.primary.light
 
   const { pathname } = useLocation()
 
@@ -53,7 +54,7 @@ export const BaseMenuList: React.FC<BaseMenuListProps> = (props) => {
           >
             <StyledFlexRow>
               <ListItemIcon
-                sx={{ color: pathMatch(path, matchType) ? activeColor : alpha(theme.palette.text.primary, 0.5), justifyContent: 'center' }}
+                sx={{ color: pathMatch(path, matchType) ? activeColor : alphaCss(theme.vars.palette.text.primary, 0.5), justifyContent: 'center' }}
               >
                 <StyledMenuIconWrapSpan
                   ref={(ref: HTMLSpanElement) => {
@@ -66,7 +67,7 @@ export const BaseMenuList: React.FC<BaseMenuListProps> = (props) => {
               <ListItemText
                 primaryTypographyProps={{
                   fontWeight: pathMatch(path, matchType) ? 'bold' : 'inherit',
-                  color: pathMatch(path, matchType) ? 'inherit' : alpha(theme.palette.text.primary, 0.5),
+                  color: pathMatch(path, matchType) ? 'inherit' : alphaCss(theme.vars.palette.text.primary, 0.5),
                 }}
                 primary={primaryText}
               />

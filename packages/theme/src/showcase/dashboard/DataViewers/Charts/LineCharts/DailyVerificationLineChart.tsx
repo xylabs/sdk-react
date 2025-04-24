@@ -23,7 +23,7 @@ export const DailyVerificationLineChart: React.FC<DailyVerificationChartProps> =
           bottom: 0,
         }}
       >
-        <CartesianGrid stroke={theme.palette.background.paper} />
+        <CartesianGrid stroke={theme.vars.palette.background.paper} />
         <XAxis dataKey="day" />
         <YAxis width={20} />
         <Tooltip
@@ -41,8 +41,8 @@ export const DailyVerificationLineChart: React.FC<DailyVerificationChartProps> =
           type="monotone"
           dataKey="verifications"
           stackId="1"
-          stroke={theme.palette.primary.main}
-          fill={theme.palette.primary.light}
+          stroke={theme.vars.palette.primary.main}
+          fill={theme.vars.palette.primary.light}
         />
       </AreaChart>
     </ResponsiveContainer>

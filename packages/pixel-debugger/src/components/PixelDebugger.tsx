@@ -40,7 +40,7 @@ export const PixelDebugger: React.FC = () => {
               overflowY: 'auto',
               width: '100%',
             }}
-            color={theme.palette.primary.main}
+            color={theme.vars.palette.primary.main}
           >
             <FlexCol
               alignItems="stretch"

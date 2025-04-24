@@ -23,8 +23,8 @@ const NumberStatus: React.FC<NumberStatusProps> = ({
   const theme = useTheme()
   const palette = color === 'inherit' ? undefined : (theme.palette[color as keyof PaletteOptions] as PaletteColor | undefined)
 
-  const bgColorTop = palette?.dark ?? theme.palette.background.paper
-  const bgColorBottom = palette?.main ?? theme.palette.background.default
+  const bgColorTop = palette?.dark ?? theme.vars.palette.background.paper
+  const bgColorBottom = palette?.main ?? theme.vars.palette.background.default
 
   const sizePixels
     = size === 'large'

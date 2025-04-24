@@ -23,7 +23,7 @@ export const LogoLinkEx: React.FC<LogoLinkExProps> = ({
       <FlexRow paddingX="4px">
         {logo ?? (
           <Logo sx={{
-            color: theme.palette.primary.contrastText, height: '40px', width: '40px',
+            color: theme.vars.palette.primary.contrastText, height: '40px', width: '40px',
           }}
           />
         )}
@@ -33,13 +33,13 @@ export const LogoLinkEx: React.FC<LogoLinkExProps> = ({
                 position="absolute"
                 borderRadius={1}
                 right={6}
-                color={theme.palette.getContrastText(theme.palette.text.primary)}
+                color={theme.palette.primary.contrastText}
                 bottom={0}
-                bgcolor={theme.palette.text.primary}
+                bgcolor={theme.vars.palette.text.primary}
                 paddingX="2px"
                 lineHeight={1}
                 variant="caption"
-                border={`1px ${theme.palette.getContrastText(theme.palette.primary.main)} solid`}
+                border={`1px ${theme.palette.primary.contrastText} solid`}
               >
                 {typeof version === 'string' ? version : '1.0'}
               </Typography>
