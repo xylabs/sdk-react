@@ -1,6 +1,6 @@
-import type { FlexBoxProps } from '@xylabs/react-flexbox'
+import type { PaperProps } from '@mui/material'
 
-export interface CookieConsentProps extends FlexBoxProps {
+export interface CookieConsentProps extends PaperProps {
   acceptOnScroll?: boolean
   acceptOnTimer?: number
   onAccept?: (accepted: boolean) => void

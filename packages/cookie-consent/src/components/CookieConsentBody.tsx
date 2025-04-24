@@ -1,4 +1,6 @@
-import { Link, Typography } from '@mui/material'
+import {
+  Link, Paper, Typography,
+} from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect } from 'react'
@@ -58,9 +60,19 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
   return accepted
     ? null
     : (
-        <FlexRow
-          paper
-          justifyContent="space-between"
+        <Paper
+          elevation={24}
+          sx={{
+            borderRadius: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            position: 'fixed',
+            bottom: 0,
+            maxWidth: '100vw',
+            width: '100%',
+            zIndex: 1000,
+          }}
           {...props}
         >
           <Typography variant="body2" margin={2}>
@@ -85,6 +97,6 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
           <ButtonEx disableUserEvents variant="contained" color="primary" onClick={onAcceptClick} margin={2}>
             Accept
           </ButtonEx>
-        </FlexRow>
+        </Paper>
       )
 }

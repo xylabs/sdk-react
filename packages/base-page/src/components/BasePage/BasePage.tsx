@@ -86,7 +86,7 @@ const BasePage: React.FC<BasePageProps> = ({
         : children}
       {hideFooter ? null : <footer>{appFooter}</footer>}
       {cookieConsent ?? (
-        <CookieConsent borderRadius={0} />
+        <CookieConsent />
       )}
       {scrollToTopButton
         ? (
