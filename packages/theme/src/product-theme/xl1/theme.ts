@@ -66,16 +66,6 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
       },
     },
     MuiContainer: { styleOverrides: { root: { maxWidth: 'xl' } } },
-    MuiDialog: {
-      styleOverrides: {
-        root: {
-          '& .MuiDialog-paper': {
-            paddingLeft: 2,
-            paddingRight: 2,
-          },
-        },
-      },
-    },
     MuiDrawer: {
       styleOverrides: {
         root: ({ theme }) => ({
