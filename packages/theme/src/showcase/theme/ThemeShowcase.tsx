@@ -1,5 +1,8 @@
 import { Info } from '@mui/icons-material'
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   AppBar,
   Button, Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Paper, Stack,
   Tooltip,
@@ -143,6 +146,16 @@ export const ThemeShowcase: React.FC = () => {
           <Button variant="outlined" onClick={() => setOpen(true)}>
             Open Dialog
           </Button>
+        </Stack>
+        <Stack flexDirection="column">
+          <Accordion>
+            <AccordionSummary>Accordion Summary 1</AccordionSummary>
+            <AccordionDetails>Accordion Details</AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary>Accordion Summary 2</AccordionSummary>
+            <AccordionDetails>Accordion Details</AccordionDetails>
+          </Accordion>
         </Stack>
       </Stack>
     </>
