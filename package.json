@@ -120,8 +120,8 @@
   },
   "packageManager": "yarn@4.9.1",
   "volta": {
-    "node": "22.3.0",
-    "yarn": "4.3.1"
+    "node": "22.15.0",
+    "yarn": "4.9.1"
   },
   "publishConfig": {
     "access": "public"
