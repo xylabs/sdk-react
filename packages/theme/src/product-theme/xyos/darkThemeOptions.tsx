@@ -2,10 +2,7 @@ import type { ColorSystemOptions } from '@mui/material'
 
 export const darkThemeOptions: ColorSystemOptions = {
   palette: {
-    background: {
-      default: '#020223',
-      paper: '#19193F',
-    },
+    background: { default: '#020223', paper: '#020223' },
     error: { main: '#f6594e' },
     neutral: {
       main: '#fff', contrastText: '#111', dark: '#ccc',

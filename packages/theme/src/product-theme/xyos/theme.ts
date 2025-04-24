@@ -86,7 +86,6 @@ export const XyosTheme = (): Theme => createTheme({
       },
     },
     ...MuiLinkFragment,
-    MuiPaper: { defaultProps: { elevation: 0 } },
     MuiTableCell: {
       styleOverrides: {
         body: {
