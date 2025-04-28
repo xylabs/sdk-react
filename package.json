@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/sdk-react",
-  "version": "6.2.10",
+  "version": "6.2.11",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -39,6 +39,7 @@
   "scripts": {
     "build-storybook": "storybook build",
     "build-typedoc-site": "typedoc && storybook build -o ./docs/storybook",
+    "knip:unlisted": "echo ---Unlisted Dependencies--- && yarn workspaces foreach -Ap --exclude @xyo-network/sdk-js --no-interlaced run knip --include unlisted",
     "start": "NODE_OPTIONS=--max_old_space_size=8192 storybook dev -p 6006",
     "storybook": "storybook dev -p 6006"
   },

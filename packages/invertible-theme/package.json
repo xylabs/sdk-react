@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-invertible-theme",
-  "version": "6.2.10",
+  "version": "6.2.11",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -39,6 +39,7 @@
   "devDependencies": {
     "@xylabs/ts-scripts-yarn3": "^6.3.5",
     "@xylabs/tsconfig-react": "^6.3.5",
+    "knip": "^5.50.5",
     "typescript": "^5.8.3"
   },
   "publishConfig": {
