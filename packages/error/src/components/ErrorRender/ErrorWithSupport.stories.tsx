@@ -1,3 +1,4 @@
+import { SupportAgent } from '@mui/icons-material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
@@ -35,7 +36,8 @@ const WithErrorAndSlotsAndSupport = Template.bind({})
 WithErrorAndSlotsAndSupport.args = {
   error: new Error('An error occurred'),
   supportHref: 'https://google.com',
-  supportLinkText: 'Support',
+  supportIcon: <SupportAgent />,
+  supportLinkTitle: 'Get Help',
   slotProps: { alert: { additionalMessaging: 'Additional messaging' } },
 }
 
