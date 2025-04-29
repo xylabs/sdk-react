@@ -55,7 +55,7 @@ export function ErrorAlert<T = void>({
           <Typography variant="caption" fontWeight="bold">
             Details:
           </Typography>
-          {openDetails ? <ChevronRight sx={{ transform: 'rotate(90deg)' }} /> : <ChevronRight />}
+          {openDetails ? <ChevronRight sx={{ fontSize: '1.1rem', transform: 'rotate(90deg)' }} /> : <ChevronRight sx={{ fontSize: '1.1rem' }} />}
         </FlexRow>
         <Grow in={openDetails} unmountOnExit>
           <Stack>
