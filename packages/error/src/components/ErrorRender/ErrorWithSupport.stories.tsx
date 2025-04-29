@@ -31,8 +31,17 @@ WithErrorAndOnCancel.args = {
   onCancel: () => alert('Cancelled'),
 }
 
+const WithErrorAndSlotsAndSupport = Template.bind({})
+WithErrorAndSlotsAndSupport.args = {
+  error: new Error('An error occurred'),
+  supportHref: 'https://google.com',
+  supportLinkText: 'Support',
+  slotProps: { alert: { additionalMessaging: 'Additional messaging' } },
+}
+
 export {
   Default, WithError, WithErrorAndOnCancel,
+  WithErrorAndSlotsAndSupport,
   WithErrorAndSupport,
 }
 

@@ -17,12 +17,15 @@ export interface ErrorRenderWithSupportProps extends ErrorRenderProps {
 export const ErrorRenderWithSupport: React.FC<ErrorRenderWithSupportProps> = ({
   supportHref,
   supportLinkText,
+  slotProps,
   ...props
 }) => {
+  const { alert } = slotProps || {}
   return (
     <ErrorRender
       slotProps={{
         alert: {
+          ...alert,
           action: supportHref && supportLinkText && (
             <ButtonEx
               startIcon={<BugReport />}
