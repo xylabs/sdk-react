@@ -9,7 +9,7 @@ import { ErrorRender } from './Render.tsx'
 
 export interface ErrorRenderWithSupportProps extends ErrorRenderProps {
   /** @deprecated - use slotProps.alert.action */
-  action: AlertProps['action']
+  action?: AlertProps['action']
   supportHref?: ButtonExProps['href']
   supportLinkText?: string
 }
