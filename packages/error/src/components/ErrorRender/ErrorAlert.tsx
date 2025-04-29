@@ -1,7 +1,8 @@
 import { ChevronRight, ExitToApp as ExitIcon } from '@mui/icons-material'
 import type { AlertProps } from '@mui/material'
 import {
-  Alert, AlertTitle, Grow, Icon, IconButton, Stack, Typography,
+  Alert, AlertTitle, Grow,
+  Stack, Typography,
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
@@ -25,7 +26,28 @@ export function ErrorAlert<T = void>({
 }: ErrorAlertProps<T>): React.JSX.Element {
   const [openDetails, setOpenDetails] = useState(false)
   return (
-    <Alert action={action} severity="error" {...props}>
+    <Alert
+      action={(
+        <FlexRow gap={0.5}>
+          {action}
+          {onCancel
+            ? (
+                <ButtonEx
+                  color="error"
+
+                  variant="outlined"
+                  size="small"
+                  onClick={onCancel}
+                >
+                  <ExitIcon fontSize="small" />
+                </ButtonEx>
+              )
+            : null}
+        </FlexRow>
+      )}
+      severity="error"
+      {...props}
+    >
       <AlertTitle>{title}</AlertTitle>
       <FlexCol width="100%" alignItems="start" justifyContent="center" gap={1}>
         {additionalMessaging}
@@ -56,19 +78,6 @@ export function ErrorAlert<T = void>({
           </Stack>
         </Grow>
       </FlexCol>
-      {onCancel
-        ? (
-            <ButtonEx
-              variant="outlined"
-              size="small"
-              onClick={onCancel}
-              position="absolute"
-              style={{ right: 8, top: action ? 42 : 8 }}
-            >
-              <ExitIcon fontSize="small" />
-            </ButtonEx>
-          )
-        : null}
     </Alert>
   )
 }

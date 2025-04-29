@@ -1,13 +1,13 @@
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
-import { ErrorRenderWithSupport } from './ErrorWithSupport.tsx'
+import { ErrorRenderWithSupport } from './ErrorRenderWithSupport.tsx'
 
 const StorybookEntry: Meta = {
   argTypes: {},
   component: ErrorRenderWithSupport,
   parameters: { docs: { page: null } },
-  title: 'error/ErrorWithSupport',
+  title: 'error/ErrorRenderWithSupport',
 }
 
 const Template: StoryFn<typeof ErrorRenderWithSupport> = (props) => {
@@ -21,20 +21,19 @@ const WithError = Template.bind({})
 WithError.args = { error: new Error('An error occurred') }
 
 const WithErrorAndSupport = Template.bind({})
-WithError.args = {
-  error: new Error('An error occurred'), supportHref: 'https://google.com', supportLinkText: 'Test Link Text for google.com',
+WithErrorAndSupport.args = {
+  error: new Error('An error occurred'), supportHref: 'https://google.com', supportLinkText: 'Support',
 }
 
-const WithErrorAndSupportOnCancel = Template.bind({})
-WithError.args = {
+const WithErrorAndOnCancel = Template.bind({})
+WithErrorAndOnCancel.args = {
   error: new Error('An error occurred'),
-  supportHref: 'https://google.com',
-  supportLinkText: 'Test Link Text for google.com',
   onCancel: () => alert('Cancelled'),
 }
 
 export {
-  Default, WithError, WithErrorAndSupport, WithErrorAndSupportOnCancel,
+  Default, WithError, WithErrorAndOnCancel,
+  WithErrorAndSupport,
 }
 
 export default StorybookEntry

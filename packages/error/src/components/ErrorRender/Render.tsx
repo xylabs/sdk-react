@@ -12,7 +12,8 @@ export function ErrorRender<T = void>({
   children,
   scope,
   useLocation,
-  errorAlertProps,
+  slotProps,
+  sx,
   ...props
 }: ErrorRenderProps<T>): React.JSX.Element {
   const location = useLocation?.()
@@ -36,7 +37,7 @@ export function ErrorRender<T = void>({
             ? customError
             : (
                 <FlexCol alignItems="center" {...props}>
-                  <ErrorAlert error={error} onCancel={onCancel} scope={scope} {...errorAlertProps} />
+                  <ErrorAlert error={error} onCancel={onCancel} scope={scope} sx={{ position: 'relative', ...sx }} {...slotProps?.alert} />
                 </FlexCol>
               )}
         </FlexCol>
