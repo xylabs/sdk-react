@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react'
 import React from 'react'
 
@@ -34,8 +35,16 @@ WithErrorAndScopeAndTitle.args = {
   error: 'An error happened', scope: 'Storybook', title: 'Oh No!',
 }
 
+const WithErrorAndAdditionalMessaging = Template.bind({})
+WithErrorAndAdditionalMessaging.args = {
+  error: 'An error happened',
+  scope: 'Storybook',
+  title: 'Oh No!',
+  additionalMessaging: <Typography variant="caption">Please try your request again later.</Typography>,
+}
+
 export {
-  Default, WithError, WithErrorAndScope, WithErrorAndScopeAndTitle, WithScope, WithTitle,
+  Default, WithError, WithErrorAndAdditionalMessaging, WithErrorAndScope, WithErrorAndScopeAndTitle, WithScope, WithTitle,
 }
 
 export default StorybookEntry

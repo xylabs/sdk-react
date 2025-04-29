@@ -7,6 +7,7 @@ import { ButtonEx } from '@xylabs/react-button'
 import React from 'react'
 
 export interface ErrorAlertProps<T = void> extends AlertProps {
+  additionalMessaging?: React.ReactNode
   error?: T | Error | string
   onCancel?: () => void
   scope?: string
@@ -14,6 +15,7 @@ export interface ErrorAlertProps<T = void> extends AlertProps {
 
 export function ErrorAlert<T = void>({
   action,
+  additionalMessaging,
   title = 'Whoops! Something went wrong',
   onCancel,
   error = 'An unknown error occurred',
@@ -52,6 +54,7 @@ export function ErrorAlert<T = void>({
             </ButtonEx>
           )
         : null}
+      {additionalMessaging}
     </Alert>
   )
 }
