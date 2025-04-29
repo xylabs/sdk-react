@@ -1,10 +1,10 @@
 import { ChevronRight, ExitToApp as ExitIcon } from '@mui/icons-material'
 import type { AlertProps } from '@mui/material'
 import {
-  Alert, AlertTitle, Chip, Collapse, Grow, Stack, Typography,
+  Alert, AlertTitle, Grow, Icon, IconButton, Stack, Typography,
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
-import { FlexCol } from '@xylabs/react-flexbox'
+import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React, { useState } from 'react'
 
 export interface ErrorAlertProps<T = void> extends AlertProps {
@@ -27,20 +27,16 @@ export function ErrorAlert<T = void>({
   return (
     <Alert action={action} severity="error" {...props}>
       <AlertTitle>{title}</AlertTitle>
-      <FlexCol width="100%" alignItems="start" gap={1}>
+      <FlexCol width="100%" alignItems="start" justifyContent="center" gap={1}>
         {additionalMessaging}
-        <Chip
-          avatar={openDetails ? <ChevronRight sx={{ transform: 'rotate(90deg)' }} /> : <ChevronRight />}
-          label="Error Details"
-          onClick={() => setOpenDetails(!openDetails)}
-          sx={{ mt: 1 }}
-          variant="outlined"
-        />
+        <FlexRow gap={0.5} sx={{ cursor: 'pointer' }} onClick={() => setOpenDetails(!openDetails)}>
+          <Typography variant="caption" fontWeight="bold">
+            Details:
+          </Typography>
+          {openDetails ? <ChevronRight sx={{ transform: 'rotate(90deg)' }} /> : <ChevronRight />}
+        </FlexRow>
         <Grow in={openDetails} unmountOnExit>
-          <Stack sx={{
-            border: '1px solid', borderColor: 'divider', borderRadius: 1, padding: 1, mt: 1,
-          }}
-          >
+          <Stack>
             {scope
               ? (
                   <div>
