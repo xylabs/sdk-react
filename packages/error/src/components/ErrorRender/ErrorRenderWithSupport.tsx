@@ -2,7 +2,7 @@ import { BugReport } from '@mui/icons-material'
 import type { AlertProps } from '@mui/material'
 import type { ButtonExProps } from '@xylabs/react-button'
 import { ButtonEx } from '@xylabs/react-button'
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import type { ErrorRenderProps } from './Props.ts'
 import { ErrorRender } from './Render.tsx'
@@ -20,26 +20,28 @@ export const ErrorRenderWithSupport: React.FC<ErrorRenderWithSupportProps> = ({
   slotProps,
   ...props
 }) => {
-  const { alert } = slotProps || {}
+  const combinedSlotProps = useMemo(() => ({
+    ...slotProps,
+    alert: {
+      ...slotProps?.alert,
+      action: supportHref && supportLinkText && (
+        <ButtonEx
+          startIcon={<BugReport />}
+          color="error"
+          variant="outlined"
+          target="_blank"
+          size="small"
+          href={supportHref}
+        >
+          {supportLinkText}
+        </ButtonEx>
+      ),
+    },
+  }), [slotProps, supportHref, supportLinkText])
+
   return (
     <ErrorRender
-      slotProps={{
-        alert: {
-          ...alert,
-          action: supportHref && supportLinkText && (
-            <ButtonEx
-              startIcon={<BugReport />}
-              color="error"
-              variant="outlined"
-              target="_blank"
-              size="small"
-              href={supportHref}
-            >
-              {supportLinkText}
-            </ButtonEx>
-          ),
-        },
-      }}
+      slotProps={combinedSlotProps}
       {...props}
     />
   )
