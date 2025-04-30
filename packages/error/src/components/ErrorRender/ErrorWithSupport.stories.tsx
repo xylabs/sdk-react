@@ -19,11 +19,16 @@ const Default = Template.bind({})
 Default.args = {}
 
 const WithError = Template.bind({})
-WithError.args = { error: new Error('An error occurred') }
+WithError.args = {
+  error: new Error('An error occurred. We cannot control how long the message goes so wrapping might be the best option'),
+  scope: 'A:long:scope:that:might:get:cut:off',
+}
 
 const WithErrorAndSupport = Template.bind({})
 WithErrorAndSupport.args = {
-  error: new Error('An error occurred'), supportHref: 'https://google.com', supportLinkText: 'Support',
+  error: new Error('An error occurred'),
+  supportHref: 'https://google.com',
+  supportLinkText: 'Support',
 }
 
 const WithErrorAndOnCancel = Template.bind({})

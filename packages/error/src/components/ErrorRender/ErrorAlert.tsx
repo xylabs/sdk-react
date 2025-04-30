@@ -22,6 +22,7 @@ export function ErrorAlert<T = void>({
   onCancel,
   error = 'An unknown error occurred',
   scope,
+  sx,
   ...props
 }: ErrorAlertProps<T>): React.JSX.Element {
   const [openDetails, setOpenDetails] = useState(false)
@@ -46,6 +47,7 @@ export function ErrorAlert<T = void>({
         </FlexRow>
       )}
       severity="error"
+      sx={{ maxWidth: '100%', ...sx }}
       {...props}
     >
       <AlertTitle>{title}</AlertTitle>
@@ -58,15 +60,15 @@ export function ErrorAlert<T = void>({
           {openDetails ? <ChevronRight sx={{ fontSize: '1.1rem', transform: 'rotate(90deg)' }} /> : <ChevronRight sx={{ fontSize: '1.1rem' }} />}
         </FlexRow>
         <Grow in={openDetails} unmountOnExit>
-          <Stack sx={{ wordBreak: 'break-word', maxWidth: '100%' }}>
+          <Stack sx={{ hyphens: 'auto', maxWidth: '100%' }}>
             {scope
               ? (
-                  <div>
+                  <Stack direction="row" gap={0.25} sx={{ maxWidth: '100%' }}>
                     <Typography variant="caption" mr={0.5} fontWeight="bold">
                       Scope:
                     </Typography>
                     <Typography variant="caption">{scope}</Typography>
-                  </div>
+                  </Stack>
                 )
               : null}
             <div>
