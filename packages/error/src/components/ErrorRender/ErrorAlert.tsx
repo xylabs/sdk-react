@@ -58,7 +58,7 @@ export function ErrorAlert<T = void>({
           {openDetails ? <ChevronRight sx={{ fontSize: '1.1rem', transform: 'rotate(90deg)' }} /> : <ChevronRight sx={{ fontSize: '1.1rem' }} />}
         </FlexRow>
         <Grow in={openDetails} unmountOnExit>
-          <Stack>
+          <Stack sx={{ wordBreak: 'break-word', maxWidth: '100%' }}>
             {scope
               ? (
                   <div>
