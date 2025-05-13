@@ -7,7 +7,7 @@ import type { ContextExState } from './State.ts'
 export const useContextEx = <T extends EmptyObject>(context: Context<ContextExState<T>>, contextName: string, required = true) => {
   const { provided, ...props } = use(context)
   if (!provided && required) {
-    throw new Error(`use${contextName} can not be used outside of a ${contextName}Context when required=true`)
+    throw new Error(`use${contextName} can not be used outside of a ${contextName} Context when required=true`)
   }
   return props
 }
