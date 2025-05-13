@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-shared",
-  "version": "6.3.0",
+  "version": "6.3.1",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
