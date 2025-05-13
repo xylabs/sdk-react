@@ -41,11 +41,11 @@
     "mixpanel-browser": "^2.64.0"
   },
   "devDependencies": {
-    "@types/mixpanel-browser": "^2.54.0",
-    "@types/react": "^19.1.2",
+    "@types/mixpanel-browser": "^2.60.0",
+    "@types/react": "^19.1.4",
     "@xylabs/ts-scripts-yarn3": "^6.5.5",
     "@xylabs/tsconfig-react": "^6.5.5",
-    "knip": "^5.53.0",
+    "knip": "^5.55.1",
     "react": "^19.1.0",
     "typescript": "^5.8.3"
   },

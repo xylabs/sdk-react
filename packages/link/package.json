@@ -37,23 +37,23 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/promise": "^4.8.9",
+    "@xylabs/promise": "^4.9.15",
     "@xylabs/react-pixel": "workspace:^",
-    "react-router-dom": "^7.5.3"
+    "react-router-dom": "^7.6.0"
   },
   "devDependencies": {
-    "@mui/material": "^7.0.2",
+    "@mui/material": "^7.1.0",
     "@storybook/react": "^8.6.12",
-    "@types/react": "^19.1.2",
+    "@types/react": "^19.1.4",
     "@xylabs/react-flexbox": "^6.2.19",
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/react-theme": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^6.5.5",
     "@xylabs/tsconfig-react": "^6.5.5",
-    "knip": "^5.53.0",
+    "knip": "^5.55.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.5.3",
+    "react-router-dom": "^7.6.0",
     "storybook": "^8.6.12",
     "typescript": "^5.8.3"
   },

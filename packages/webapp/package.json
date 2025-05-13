@@ -49,10 +49,10 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@mui/icons-material": "^7.0.2",
-    "@mui/material": "^7.0.2",
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
     "@storybook/react": "^8.6.12",
-    "@types/react": "^19.1.2",
+    "@types/react": "^19.1.4",
     "@types/react-helmet": "^6.1.11",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
@@ -60,10 +60,10 @@
     "@xylabs/react-pixel": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^6.5.5",
     "@xylabs/tsconfig-react": "^6.5.5",
-    "knip": "^5.53.0",
+    "knip": "^5.55.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.5.3",
+    "react-router-dom": "^7.6.0",
     "storybook": "^8.6.12",
     "typescript": "^5.8.3"
   },
