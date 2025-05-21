@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "@mui/icons-material": "^7.1.0",
-    "@react-spring/web": "^9.7.5",
+    "@react-spring/web": "^10.0.1",
     "@xylabs/react-animation": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
     "react-router-dom": "^7.6.0",

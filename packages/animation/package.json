@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@react-spring/web": "^9.7.5",
+    "@react-spring/web": "^10.0.1",
     "@xylabs/react-flexbox": "workspace:^"
   },
   "devDependencies": {
