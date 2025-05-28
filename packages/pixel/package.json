@@ -37,18 +37,18 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.10.0",
-    "@xylabs/delay": "^4.10.0",
-    "@xylabs/object": "^4.10.0",
-    "@xylabs/pixel": "^4.10.0",
+    "@xylabs/assert": "^4.11.2",
+    "@xylabs/delay": "^4.11.2",
+    "@xylabs/object": "^4.11.2",
+    "@xylabs/pixel": "^4.11.2",
     "mixpanel-browser": "^2.65.0",
     "query-string": "^9.2.0"
   },
   "devDependencies": {
-    "@types/react": "^19.1.5",
+    "@types/react": "^19.1.6",
     "@xylabs/ts-scripts-yarn3": "^6.5.7",
     "@xylabs/tsconfig-react": "^6.5.7",
-    "knip": "^5.57.0",
+    "knip": "^5.59.0",
     "react": "^19.1.0",
     "typescript": "^5.8.3"
   },
