@@ -116,7 +116,7 @@
     "react-dom": "^19",
     "react-helmet": "^7"
   },
-  "packageManager": "yarn@4.9.1",
+  "packageManager": "yarn@4.9.2",
   "volta": {
     "node": "22.15.0",
     "yarn": "4.9.1"
