@@ -1,5 +1,5 @@
 import { Box, createTheme, CssBaseline, Theme, ThemeProvider, useTheme } from '@mui/material'
-import type { Decorator } from '@storybook/react'
+import type { Decorator } from '@storybook/react-vite'
 import React from 'react'
 import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme, Xl1Theme } from '@xylabs/react-theme'
 

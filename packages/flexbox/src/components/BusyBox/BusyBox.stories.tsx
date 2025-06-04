@@ -1,5 +1,5 @@
 import { Button, Typography } from '@mui/material'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import React, { useState } from 'react'
 
 import { BusyBox } from './BusyBox.tsx'

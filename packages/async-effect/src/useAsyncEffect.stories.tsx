@@ -1,5 +1,5 @@
 import { Button } from '@mui/material'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import React, { useState } from 'react'
 
 import { useAsyncEffect } from './useAsyncEffect.tsx'

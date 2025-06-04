@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import React from 'react'
 
 import { TypographyShowcase } from './TypographyShowcase.tsx'

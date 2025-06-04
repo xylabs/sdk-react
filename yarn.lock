@@ -1885,7 +1885,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:9.0.4, @storybook/react@npm:^9.0.4":
+"@storybook/react@npm:9.0.4":
   version: 9.0.4
   resolution: "@storybook/react@npm:9.0.4"
   dependencies:
@@ -2344,7 +2344,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.33.1, @typescript-eslint/utils@npm:^8.23.0, @typescript-eslint/utils@npm:^8.31.0, @typescript-eslint/utils@npm:^8.31.1":
+"@typescript-eslint/utils@npm:8.33.1, @typescript-eslint/utils@npm:^8.23.0, @typescript-eslint/utils@npm:^8.31.0, @typescript-eslint/utils@npm:^8.31.1, @typescript-eslint/utils@npm:^8.8.1":
   version: 8.33.1
   resolution: "@typescript-eslint/utils@npm:8.33.1"
   dependencies:
@@ -2706,7 +2706,6 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -2732,7 +2731,6 @@ __metadata:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
     "@react-spring/web": "npm:^10.0.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-flexbox": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.7"
@@ -2777,7 +2775,6 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/assert": "npm:^4.11.10"
     "@xylabs/react-flexbox": "workspace:^"
@@ -2806,7 +2803,6 @@ __metadata:
   resolution: "@xylabs/react-async-effect@workspace:packages/async-effect"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-promise": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.7"
@@ -2827,7 +2823,6 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@types/react-helmet": "npm:^6.1.11"
     "@xylabs/react-appbar": "workspace:^"
@@ -2857,7 +2852,6 @@ __metadata:
   resolution: "@xylabs/react-button@workspace:packages/button"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/promise": "npm:^4.11.10"
     "@xylabs/react-flexbox": "workspace:^"
@@ -2883,7 +2877,6 @@ __metadata:
   resolution: "@xylabs/react-common@workspace:packages/common"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/assert": "npm:^4.11.10"
     "@xylabs/react-base-page": "workspace:^"
@@ -2912,7 +2905,6 @@ __metadata:
   resolution: "@xylabs/react-cookie-consent@workspace:packages/cookie-consent"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -2940,7 +2932,6 @@ __metadata:
     "@metamask/providers": "npm:^22.1.0"
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/assert": "npm:^4.11.10"
     "@xylabs/eth-address": "npm:^4.11.10"
@@ -2975,7 +2966,6 @@ __metadata:
   resolution: "@xylabs/react-dialogs@workspace:packages/dialogs"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -3000,7 +2990,6 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -3031,7 +3020,6 @@ __metadata:
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/forget": "npm:^4.11.10"
     "@xylabs/log": "npm:^4.11.10"
@@ -3057,7 +3045,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/delay": "npm:^4.11.10"
     "@xylabs/react-async-effect": "workspace:^"
@@ -3080,7 +3067,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-hooks@workspace:packages/hooks"
   dependencies:
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.7"
     "@xylabs/tsconfig-react": "npm:^6.5.7"
@@ -3137,7 +3123,6 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/promise": "npm:^4.11.10"
     "@xylabs/react-flexbox": "npm:^6.3.4"
@@ -3181,7 +3166,6 @@ __metadata:
   resolution: "@xylabs/react-number-status@workspace:packages/number-status"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/numeral": "npm:^2.0.5"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-button": "workspace:^"
@@ -3206,7 +3190,6 @@ __metadata:
   resolution: "@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/object": "npm:^4.11.10"
     "@xylabs/pixel": "npm:^4.11.10"
@@ -3273,7 +3256,6 @@ __metadata:
   resolution: "@xylabs/react-promise@workspace:packages/promise"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/delay": "npm:^4.11.10"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.7"
@@ -3296,7 +3278,6 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-dialogs": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
@@ -3389,7 +3370,6 @@ __metadata:
   resolution: "@xylabs/react-shared@workspace:packages/shared"
   dependencies:
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/api": "npm:^4.11.10"
     "@xylabs/log": "npm:^4.11.10"
@@ -3415,7 +3395,6 @@ __metadata:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
     "@react-spring/web": "npm:^10.0.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@xylabs/react-animation": "workspace:^"
     "@xylabs/react-button": "workspace:^"
@@ -3441,7 +3420,6 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
-    "@storybook/react": "npm:^9.0.4"
     "@types/react": "npm:^19.1.6"
     "@types/react-helmet": "npm:^6.1.11"
     "@xylabs/react-app-settings": "workspace:^"
@@ -3480,7 +3458,6 @@ __metadata:
     "@mui/icons-material": "npm:^7.1.1"
     "@mui/material": "npm:^7.1.1"
     "@storybook/addon-links": "npm:^9.0.4"
-    "@storybook/react": "npm:^9.0.4"
     "@storybook/react-vite": "npm:^9.0.4"
     "@types/node": "npm:^22.15.29"
     "@types/react": "npm:^19.1.6"
@@ -3517,6 +3494,7 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:^6.5.7"
     eslint: "npm:^9.28.0"
     eslint-import-resolver-typescript: "npm:^4.4.2"
+    eslint-plugin-storybook: "npm:9.0.4"
     knip: "npm:^5.60.0"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
@@ -5576,6 +5554,18 @@ __metadata:
   peerDependencies:
     eslint: ^8.0.0 || ^9.0.0
   checksum: 10c0/a06fbf0a5994782901d5078bf9cb5735b3ec5d146f303b53e22f7b499e49b7f193966a23a3b830e00c827cb79a79f9dd8b12e5ebcfd42ee9536303a734696be6
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-storybook@npm:9.0.4":
+  version: 9.0.4
+  resolution: "eslint-plugin-storybook@npm:9.0.4"
+  dependencies:
+    "@typescript-eslint/utils": "npm:^8.8.1"
+  peerDependencies:
+    eslint: ">=8"
+    storybook: ^9.0.4
+  checksum: 10c0/b5dbcd15feab63d71f4bd5da26306043339620ddf64bb623de3a7542ee81828b4137af93e199c3e49fb0e5a76d582a21fb580626011ae2340dd6fc684f438358
   languageName: node
   linkType: hard
 

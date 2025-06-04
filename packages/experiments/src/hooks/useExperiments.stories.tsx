@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 import type { ReactNode } from 'react'
 import React from 'react'

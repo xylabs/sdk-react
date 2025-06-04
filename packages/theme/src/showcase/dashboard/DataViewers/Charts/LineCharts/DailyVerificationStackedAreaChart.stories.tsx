@@ -1,6 +1,6 @@
 // DailyVerificationStackedAreaChart.stories.tsx
 
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import React from 'react'
 
 import { DailyVerificationStackedAreaChart } from './DailyVerificationStackedAreaChart.tsx'

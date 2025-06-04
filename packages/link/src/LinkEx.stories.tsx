@@ -1,4 +1,4 @@
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { UserEventsProvider, XyoUserEventHandler } from '@xylabs/react-pixel'
 import { ColorSchemeButton } from '@xylabs/react-theme'

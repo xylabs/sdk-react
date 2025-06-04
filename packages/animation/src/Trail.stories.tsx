@@ -1,5 +1,5 @@
 import { Card } from '@mui/material'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import React from 'react'
 
 import type { TrailProps } from './Trail.tsx'

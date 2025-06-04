@@ -1,5 +1,5 @@
 import { AppBar } from '@mui/material'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { ColorSchemeButton } from '@xylabs/react-theme'
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'

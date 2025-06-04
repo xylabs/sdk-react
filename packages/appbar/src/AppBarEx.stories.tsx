@@ -1,6 +1,6 @@
 import { Menu as MenuIcon } from '@mui/icons-material'
 import { Toolbar } from '@mui/material'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import React from 'react'
 
 import { AppBarEx } from './AppBarEx.tsx'

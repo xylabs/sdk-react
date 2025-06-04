@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // DailyVerificationLineChart.stories.tsx
 
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import React from 'react'
 
 import { DailyVerificationLineChart } from './DailyVerificationLineChart.tsx'

@@ -1,7 +1,7 @@
 import {
   Alert, AlertTitle, List, ListItem, Snackbar,
 } from '@mui/material'
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react-vite'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React, { useEffect, useState } from 'react'
 

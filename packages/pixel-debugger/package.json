@@ -46,7 +46,6 @@
   },
   "devDependencies": {
     "@mui/material": "^7.1.1",
-    "@storybook/react": "^9.0.4",
     "@types/react": "^19.1.6",
     "@xylabs/object": "^4.11.10",
     "@xylabs/ts-scripts-yarn3": "^6.5.7",

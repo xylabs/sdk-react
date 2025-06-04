@@ -1,5 +1,5 @@
 import { CardContent, CardHeader } from '@mui/material'
-import type { StoryFn } from '@storybook/react'
+import type { StoryFn } from '@storybook/react-vite'
 import React from 'react'
 
 import type { BusyCardProps } from './BusyCard.tsx'
