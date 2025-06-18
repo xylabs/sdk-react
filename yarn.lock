@@ -3009,8 +3009,10 @@ __metadata:
     "@types/react": "npm:^19.1.8"
     "@xylabs/react-button": "workspace:^"
     "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-quick-tip-button": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.8"
     "@xylabs/tsconfig-react": "npm:^6.5.8"
+    "@xylabs/typeof": "npm:^4.12.1"
     knip: "npm:^5.61.2"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
@@ -3613,6 +3615,13 @@ __metadata:
   version: 4.12.0
   resolution: "@xylabs/typeof@npm:4.12.0"
   checksum: 10c0/fdcf1f93a32221c0997aac90e6b1824612023046e7ccc8992abf445fac82d1647ae2132ed1449bf34656b18640f02d35ec04db18394d59f93ead8e9a9574896c
+  languageName: node
+  linkType: hard
+
+"@xylabs/typeof@npm:^4.12.1":
+  version: 4.12.1
+  resolution: "@xylabs/typeof@npm:4.12.1"
+  checksum: 10c0/ed37bad75c1eb2344933d52b065673949d6ddb1091f2e85b01649d9e3a47fd9d3672d3f9ea662c731d4bd59b2e9bc69538bd4a4f9504881561bcd1194da73c9a
   languageName: node
   linkType: hard
 
