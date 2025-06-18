@@ -20,7 +20,7 @@ export const MessageDialog: React.FC<MessageDialogProps> = ({
         <FlexCol alignItems="stretch">{children}</FlexCol>
       </DialogContent>
       <DialogActions>
-        <FlexRow justifyContent="space-between" width="100%">
+        <FlexRow justifyContent="space-between" width="100%" gap={1}>
           <Button onClick={onCancel} variant="outlined">
             Cancel
           </Button>
