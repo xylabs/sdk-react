@@ -37,7 +37,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/promise": "^4.11.21",
+    "@xylabs/promise": "^4.12.0",
     "@xylabs/react-pixel": "workspace:^",
     "react-router-dom": "^7.6.2"
   },
