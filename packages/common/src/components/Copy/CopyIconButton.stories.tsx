@@ -15,7 +15,7 @@ const StorybookEntry: Meta = {
   argTypes: {},
   component: CopyIconButton,
   parameters: { docs: { page: null } },
-  title: 'IconButton/Copy',
+  title: 'Copy/IconButton',
 }
 
 const Template: StoryFn<typeof CopyIconButton> = (props) => {
