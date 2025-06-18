@@ -3059,7 +3059,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@npm:^6.3.6, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
+"@xylabs/react-flexbox@npm:^6.3.7, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
@@ -3143,7 +3143,7 @@ __metadata:
     "@mui/material": "npm:^7.1.1"
     "@types/react": "npm:^19.1.8"
     "@xylabs/promise": "npm:^4.12.0"
-    "@xylabs/react-flexbox": "npm:^6.3.6"
+    "@xylabs/react-flexbox": "npm:^6.3.7"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-theme": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.8"
