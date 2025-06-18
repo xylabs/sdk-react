@@ -21,10 +21,10 @@ export const MessageDialog: React.FC<MessageDialogProps> = ({
       </DialogContent>
       <DialogActions>
         <FlexRow justifyContent="space-between" width="100%">
-          <Button onClick={onCancel} variant="text">
+          <Button onClick={onCancel} variant="outlined">
             Cancel
           </Button>
-          <Button onClick={onOk} variant="text">
+          <Button onClick={onOk} variant="contained">
             Ok
           </Button>
         </FlexRow>
