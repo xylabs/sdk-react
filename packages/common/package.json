@@ -43,6 +43,7 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-portal": "workspace:^",
     "@xylabs/react-select": "workspace:^",
+    "@xylabs/typeof": "^4.11.21",
     "react-router-dom": "^7.6.2"
   },
   "devDependencies": {

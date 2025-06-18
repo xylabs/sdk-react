@@ -1,5 +1,6 @@
 export * from './Background.tsx'
 export * from './Breadcrumbs/index.ts'
+export * from './Copy/index.ts'
 export * from './CoverProgress.tsx'
 export * from './MenuEx.tsx'
 export * from './RedirectWithQuery.tsx'

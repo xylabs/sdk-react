@@ -2886,6 +2886,7 @@ __metadata:
     "@xylabs/react-select": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^6.5.7"
     "@xylabs/tsconfig-react": "npm:^6.5.7"
+    "@xylabs/typeof": "npm:^4.11.21"
     knip: "npm:^5.60.0"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
@@ -3597,6 +3598,13 @@ __metadata:
   version: 4.11.10
   resolution: "@xylabs/typeof@npm:4.11.10"
   checksum: 10c0/fac704be2dd1048de0df66dd4eb12639b2bd5767e05487120ce6d99c6216f8265c4e70c8e091afbfc990eb53ae6e55c2fdab21f6ebc74c3845d42c484e33ca09
+  languageName: node
+  linkType: hard
+
+"@xylabs/typeof@npm:^4.11.21":
+  version: 4.11.21
+  resolution: "@xylabs/typeof@npm:4.11.21"
+  checksum: 10c0/0ac32daeb8b56b7ba91b447bcf42510c46fef4d0711af7bf93635108d8d397b4cc4386568a9c084c57be3be42ecc43204cb47cb2b44611875f4e7fbfa28e5bd4
   languageName: node
   linkType: hard
 
