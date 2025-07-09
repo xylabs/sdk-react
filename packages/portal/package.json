@@ -39,9 +39,9 @@
   "devDependencies": {
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "@xylabs/ts-scripts-yarn3": "^6.5.8",
-    "@xylabs/tsconfig-react": "^6.5.8",
-    "knip": "^5.61.2",
+    "@xylabs/ts-scripts-yarn3": "^6.5.13",
+    "@xylabs/tsconfig-react": "^6.5.13",
+    "knip": "^5.61.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "typescript": "^5.8.3"

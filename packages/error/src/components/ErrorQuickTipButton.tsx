@@ -8,8 +8,8 @@ import React from 'react'
 
 import { ErrorRender } from './ErrorRender/index.ts'
 
-const InvalidIcon = ({ ref, ...props }: SvgIconProps &
-  { ref?: React.Ref<SVGSVGElement | null> }) => <CancelRoundedIcon color="error" ref={ref} {...props} />
+const InvalidIcon = ({ ref, ...props }: SvgIconProps
+  & { ref?: React.Ref<SVGSVGElement | null> }) => <CancelRoundedIcon color="error" ref={ref} {...props} />
 InvalidIcon.displayName = 'InvalidIcon'
 
 export interface ErrorQuickTipButtonProps extends QuickTipButtonProps {
