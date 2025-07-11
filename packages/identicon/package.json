@@ -26,13 +26,13 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/browser/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "module": "./dist/browser/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/browser/index.d.ts",
   "workspaces": [
     "packages/*"
   ],
@@ -44,8 +44,8 @@
     "@mui/material": "^7.2.0",
     "@types/md5": "^2.3.5",
     "@types/react": "^19.1.8",
-    "@xylabs/ts-scripts-yarn3": "^6.5.18",
-    "@xylabs/tsconfig-react": "^6.5.18",
+    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.8",
+    "@xylabs/tsconfig-react": "^7.0.0-rc.8",
     "knip": "^5.61.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

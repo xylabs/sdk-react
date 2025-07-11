@@ -26,19 +26,19 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/browser/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "module": "./dist/browser/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/browser/index.d.ts",
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "@xylabs/ts-scripts-yarn3": "^6.5.18",
-    "@xylabs/tsconfig-react": "^6.5.18",
+    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.8",
+    "@xylabs/tsconfig-react": "^7.0.0-rc.8",
     "knip": "^5.61.3",
     "typescript": "^5.8.3"
   },

@@ -27,16 +27,16 @@
   "exports": {
     ".": {
       "browser": {
-        "types": "./dist/types/index.d.ts",
+        "types": "./dist/browser/index.d.ts",
         "default": "./dist/browser/index.mjs"
       },
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/browser/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "module": "dist/browser/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/browser/index.d.ts",
   "dependencies": {
     "@xylabs/react-app-settings": "workspace:^",
     "@xylabs/react-appbar": "workspace:^",
@@ -58,8 +58,8 @@
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-pixel": "workspace:^",
-    "@xylabs/ts-scripts-yarn3": "^6.5.18",
-    "@xylabs/tsconfig-react": "^6.5.18",
+    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.8",
+    "@xylabs/tsconfig-react": "^7.0.0-rc.8",
     "knip": "^5.61.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

@@ -26,13 +26,13 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/browser/index.d.ts",
       "default": "./dist/browser/index.mjs"
     },
     "./package.json": "./package.json"
   },
   "module": "./dist/browser/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/browser/index.d.ts",
   "workspaces": [
     "packages/*"
   ],
@@ -93,10 +93,10 @@
     "@types/react": "^19.1.8",
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
-    "@xylabs/eslint-config-flat": "^6.5.18",
-    "@xylabs/eslint-config-react-flat": "^6.5.18",
-    "@xylabs/ts-scripts-yarn3": "^6.5.18",
-    "@xylabs/tsconfig-react": "^6.5.18",
+    "@xylabs/eslint-config-flat": "^7.0.0-rc.8",
+    "@xylabs/eslint-config-react-flat": "^7.0.0-rc.8",
+    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.8",
+    "@xylabs/tsconfig-react": "^7.0.0-rc.8",
     "eslint": "^9.30.1",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-storybook": "9.0.16",
