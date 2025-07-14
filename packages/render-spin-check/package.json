@@ -38,8 +38,8 @@
   ],
   "devDependencies": {
     "@types/react": "^19.1.8",
-    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.8",
-    "@xylabs/tsconfig-react": "^7.0.0-rc.8",
+    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.24",
+    "@xylabs/tsconfig-react": "^7.0.0-rc.24",
     "knip": "^5.61.3",
     "react": "^19.1.0",
     "typescript": "^5.8.3"
