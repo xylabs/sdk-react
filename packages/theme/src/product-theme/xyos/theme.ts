@@ -107,7 +107,7 @@ export const XyosTheme = (): Theme => createTheme({
       },
     },
   },
-  ...spacingFragment,
+  spacing: 12,
   ...shapeFragment,
   typography: {
     allVariants: { fontFamily: ['Manrope', 'san-serif'].join(',') },
