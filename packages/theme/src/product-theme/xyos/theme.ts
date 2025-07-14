@@ -1,9 +1,7 @@
 import type { Theme } from '@mui/material'
 import { alpha, createTheme } from '@mui/material'
 
-import {
-  MuiLinkFragment, shapeFragment, spacingFragment,
-} from '../../theme-fragments/index.ts'
+import { MuiLinkFragment, shapeFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
