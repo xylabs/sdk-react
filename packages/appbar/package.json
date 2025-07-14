@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-appbar",
-  "version": "6.3.7",
+  "version": "6.3.8",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
