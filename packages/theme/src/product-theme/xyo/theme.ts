@@ -93,7 +93,7 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
       },
     },
   },
-  spacing: 8,
+  spacing: 12,
   ...shapeFragment,
   typography: {
     fontFamily: '"Lexend Deca", sans-serif',
