@@ -1,6 +1,6 @@
 import { Box, createTheme, CssBaseline, Theme, ThemeProvider, useColorScheme, useTheme } from '@mui/material'
 import type { Decorator } from '@storybook/react-vite'
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { XyoTheme, DataismTheme, XyLabsTheme, XyosTheme, Xl1Theme } from '@xylabs/react-theme'
 
 const themeNames = ['None', 'XYO', 'Dataism', 'XYLabs', 'xyOS', 'XL1'] as const
@@ -74,6 +74,14 @@ const withThemeProvider: Decorator = (Story, context) => {
 
   const themeOptions = getTheme(context.globals.theme)
   const theme = themeOptions
+
+  // SB does not adjust the background color based off the color scheme, so we need to do it manually
+  useLayoutEffect(() => {
+    const body = document.getElementsByTagName('body')[0]
+    if (body) {
+      body.style.backgroundColor = themeOptions.vars?.palette?.background?.paper || 'transparent'
+    }
+  }, [themeOptions])
 
   return (
     <ThemeProvider theme={theme} defaultMode={'dark'}>
