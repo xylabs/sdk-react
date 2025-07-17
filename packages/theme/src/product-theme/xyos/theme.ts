@@ -1,7 +1,6 @@
 import type { Theme } from '@mui/material'
 import { createTheme } from '@mui/material'
 
-import { alphaCss } from '../../alphaCss.ts'
 import { MuiLinkFragment, shapeFragment } from '../../theme-fragments/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
@@ -27,7 +26,6 @@ export const XyosTheme = (): Theme => createTheme({
         root: ({ theme }) => ({
           WebkitBackdropFilter: 'blur(20px)',
           backdropFilter: 'blur(20px)',
-          backgroundColor: alphaCss(theme.vars.palette.background.paper, 0.2),
           boxShadow: 'none',
           color: '#16163D',
           ...theme.applyStyles('dark', { color: '#CBC4CE' }),
