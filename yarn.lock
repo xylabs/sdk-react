@@ -3118,7 +3118,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@npm:^6.3.11, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
+"@xylabs/react-flexbox@npm:^6.3.12, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
@@ -3205,7 +3205,7 @@ __metadata:
     "@storybook/react-vite": "npm:^9.0.16"
     "@types/react": "npm:^19.1.8"
     "@xylabs/promise": "npm:^4.13.15"
-    "@xylabs/react-flexbox": "npm:^6.3.11"
+    "@xylabs/react-flexbox": "npm:^6.3.12"
     "@xylabs/react-pixel": "workspace:^"
     "@xylabs/react-theme": "workspace:^"
     "@xylabs/ts-scripts-yarn3": "npm:^7.0.0-rc.24"
