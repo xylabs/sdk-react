@@ -37,9 +37,9 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@xylabs/ts-scripts-yarn3": "^7.0.0-rc.24",
-    "@xylabs/tsconfig-react": "^7.0.0-rc.24",
-    "knip": "^5.61.3",
+    "@xylabs/ts-scripts-yarn3": "^7.0.0",
+    "@xylabs/tsconfig-react": "^7.0.0",
+    "knip": "^5.62.0",
     "typescript": "^5.8.3"
   },
   "publishConfig": {
