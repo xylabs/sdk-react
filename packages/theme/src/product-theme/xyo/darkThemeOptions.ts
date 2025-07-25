@@ -1,19 +1,19 @@
 import type { ColorSystemOptions } from '@mui/material/styles'
 
-export const darkThemeOptions: ColorSystemOptions = {
+export const XyoThemeDarkThemeOptions: ColorSystemOptions = {
   palette: {
     background: {
-      default: '#020223',
-      paper: '#16163D',
-      gradient: 'linear-gradient(45deg, #66CAF7, #020223)',
+      default: '#000',
+      paper: '#111111',
     },
     neutral: {
-      main: '#fff', contrastText: '#111', dark: '#ccc',
+      main: '#fff',
+      contrastText: '#000',
     },
     info: { main: '#72b4f4' },
-    primary: { main: '#5658F3', light: '#7c72ff' },
+    primary: { main: '#5658F3' },
     secondary: {
-      main: '#66caf7',
+      main: '#37CEFF',
       contrastText: '#020223',
     },
     success: {

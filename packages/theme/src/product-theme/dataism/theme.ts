@@ -4,10 +4,11 @@ import { alpha, createTheme } from '@mui/material'
 import {
   MuiLinkFragment, shapeFragment, spacingFragment,
 } from '../../theme-fragments/index.ts'
+import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 import { darkThemePalette } from './darkThemePalette.tsx'
 import { lightThemePalette } from './lightThemePalette.tsx'
 
-export const DataismTheme = (_theme?: Theme): Theme => createTheme({
+export const DataismThemeOptions: CreateThemeOptions = {
   colorSchemes: {
     dark: { palette: darkThemePalette },
     light: { palette: lightThemePalette },
@@ -152,4 +153,6 @@ export const DataismTheme = (_theme?: Theme): Theme => createTheme({
     },
     subtitle2: { opacity: '50%' },
   },
-})
+}
+
+export const DataismTheme = (_theme?: Theme): Theme => createTheme(DataismThemeOptions)
