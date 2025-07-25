@@ -2,23 +2,23 @@ import type { Theme } from '@mui/material'
 import { createTheme } from '@mui/material'
 
 import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
-import { breakpoints } from './breakpoints.ts'
-import { components } from './components.ts'
-import { darkThemeOptions } from './darkThemeOptions.ts'
-import { lightThemeOptions } from './lightThemeOptions.ts'
-import { typography } from './typography.ts'
+import { XyoThemeBreakpoints } from './breakpoints.ts'
+import { XyoThemeComponents } from './components.ts'
+import { XyoThemeDarkThemeOptions } from './darkThemeOptions.ts'
+import { XyoThemeLightThemeOptions } from './lightThemeOptions.ts'
+import { XyoThemeTypography } from './typography.ts'
 
 export const XyoThemeOptions: CreateThemeOptions = {
   colorSchemes: {
-    dark: { ...darkThemeOptions },
-    light: { ...lightThemeOptions },
+    dark: { ...XyoThemeDarkThemeOptions },
+    light: { ...XyoThemeLightThemeOptions },
   },
   cssVariables: { colorSchemeSelector: 'class' },
-  ...breakpoints,
-  ...components,
+  ...XyoThemeBreakpoints,
+  ...XyoThemeComponents,
   shape: { borderRadius: 8 },
   spacing: 12,
-  ...typography,
+  ...XyoThemeTypography,
 }
 
 export const XyoTheme = (_theme?: Theme): Theme => createTheme(XyoThemeOptions)

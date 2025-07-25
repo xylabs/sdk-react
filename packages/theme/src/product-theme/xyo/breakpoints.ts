@@ -1,6 +1,6 @@
 import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 
-export const breakpoints: CreateThemeOptions = {
+export const XyoThemeBreakpoints: CreateThemeOptions = {
   breakpoints: {
     values: {
       lg: 1350,

@@ -4,7 +4,7 @@ import { alphaCss } from '../../alphaCss.ts'
 import { darkenCss } from '../../darkenCss.ts'
 import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 
-export const components: CreateThemeOptions = {
+export const XyoThemeComponents: CreateThemeOptions = {
   components: {
     MuiAlert: {
       styleOverrides: {

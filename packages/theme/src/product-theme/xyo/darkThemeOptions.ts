@@ -1,6 +1,6 @@
 import type { ColorSystemOptions } from '@mui/material/styles'
 
-export const darkThemeOptions: ColorSystemOptions = {
+export const XyoThemeDarkThemeOptions: ColorSystemOptions = {
   palette: {
     background: {
       default: '#000',

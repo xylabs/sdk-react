@@ -1,8 +1,7 @@
 import type { ColorSystemOptions } from '@mui/material'
 import { alpha } from '@mui/material'
 
-export const lightThemeOptions: ColorSystemOptions = {
-
+export const XyoThemeLightThemeOptions: ColorSystemOptions = {
   palette: {
     background: {
       paper: '#FAFAFA',

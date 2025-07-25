@@ -1,6 +1,6 @@
 import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 
-export const typography: CreateThemeOptions = {
+export const XyoThemeTypography: CreateThemeOptions = {
   typography: {
     fontFamily: '"Lexend Deca", sans-serif',
     body1: { fontSize: '1.1rem' },
