@@ -4,16 +4,16 @@ import { alpha, createTheme } from '@mui/material'
 import {
   MuiLinkFragment, shapeFragment, spacingFragment,
 } from '../../theme-fragments/index.ts'
+import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
+export const XyoThemeOptions: CreateThemeOptions = {
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,
   },
   cssVariables: { colorSchemeSelector: 'class' },
-  direction: rtl ? 'rtl' : 'ltr',
   breakpoints: {
     values: {
       lg: 1350,
@@ -137,4 +137,6 @@ export const XyoTheme = (_theme?: Theme, rtl = false): Theme => createTheme({
     },
     subtitle2: { opacity: '50%' },
   },
-})
+}
+
+export const XyoTheme = (_theme?: Theme): Theme => createTheme(XyoThemeOptions)
