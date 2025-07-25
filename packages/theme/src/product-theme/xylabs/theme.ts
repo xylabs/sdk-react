@@ -4,10 +4,11 @@ import {
   componentFragment, MuiLinkFragment,
   shapeFragment, spacingFragment,
 } from '../../theme-fragments/index.ts'
+import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyLabsTheme = (_theme?: Theme): Theme => createTheme({
+export const XyLabsThemeOptions: CreateThemeOptions = {
   colorSchemes: {
     light: lightThemeOptions,
     dark: darkThemeOptions,
@@ -58,4 +59,6 @@ export const XyLabsTheme = (_theme?: Theme): Theme => createTheme({
     },
     subtitle2: { opacity: '50%' },
   },
-})
+}
+
+export const XyLabsTheme = (_theme?: Theme): Theme => createTheme(XyLabsThemeOptions)
