@@ -1,1 +1,1 @@
-export * from './theme.tsx'
+export * from './theme.ts'
