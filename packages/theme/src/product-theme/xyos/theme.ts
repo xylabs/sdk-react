@@ -2,10 +2,11 @@ import type { Theme } from '@mui/material'
 import { createTheme } from '@mui/material'
 
 import { MuiLinkFragment, shapeFragment } from '../../theme-fragments/index.ts'
+import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const XyosTheme = (): Theme => createTheme({
+export const XyOSThemeOptions: CreateThemeOptions = {
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,
@@ -130,4 +131,6 @@ export const XyosTheme = (): Theme => createTheme({
     },
     subtitle2: { opacity: '50%' },
   },
-})
+}
+
+export const XyosTheme = (): Theme => createTheme(XyOSThemeOptions)
