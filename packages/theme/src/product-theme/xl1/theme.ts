@@ -4,10 +4,11 @@ import { alpha, createTheme } from '@mui/material'
 import {
   MuiLinkFragment, shapeFragment, spacingFragment,
 } from '../../theme-fragments/index.ts'
+import type { CreateThemeOptions } from '../ThemeExtensions/index.ts'
 import { darkThemeOptions } from './darkThemeOptions.tsx'
 import { lightThemeOptions } from './lightThemeOptions.tsx'
 
-export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
+export const Xl1ThemeOptions: CreateThemeOptions = {
   colorSchemes: {
     dark: darkThemeOptions,
     light: lightThemeOptions,
@@ -132,4 +133,6 @@ export const Xl1Theme = (_theme?: Theme): Theme => createTheme({
     },
     subtitle2: { opacity: '50%' },
   },
-})
+}
+
+export const Xl1Theme = (_theme?: Theme): Theme => createTheme(Xl1ThemeOptions)
