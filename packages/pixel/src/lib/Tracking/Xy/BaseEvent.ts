@@ -1,4 +1,4 @@
-import { type EmptyObject, toJsonObject } from '@xylabs/object'
+import { type EmptyObject, toSafeJsonObject } from '@xylabs/object'
 import { XyPixel } from '@xylabs/pixel'
 
 class XyBaseEvent<T extends EmptyObject> {
@@ -8,7 +8,7 @@ class XyBaseEvent<T extends EmptyObject> {
   }
 
   async send(fields: T, eventId?: string) {
-    await XyPixel.instance.send(this.name, toJsonObject(fields, undefined, 10), eventId)
+    await XyPixel.instance.send(this.name, toSafeJsonObject(fields, undefined, 10), eventId)
   }
 }
 

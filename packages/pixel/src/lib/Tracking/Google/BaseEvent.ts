@@ -1,5 +1,5 @@
 import { assertEx } from '@xylabs/assert'
-import { type EmptyObject, toJsonObject } from '@xylabs/object'
+import { type EmptyObject, toSafeJsonObject } from '@xylabs/object'
 
 import { Gtag } from './Gtag.ts'
 import { Gtm } from './Gtm.ts'
@@ -25,7 +25,7 @@ export class GoogleBaseEvent<TData extends EmptyObject = EmptyObject> {
   }
 
   async sendGtag<T extends TData>(data: T) {
-    const dataJson = toJsonObject(data, undefined, 10)
+    const dataJson = toSafeJsonObject(data, undefined, 10)
     await this.gtag().sendAnalytics(this.name, dataJson)
     if (this.adwordConversionId) {
       await this.gtag().sendAdwords(this.adwordConversionId, dataJson)
@@ -33,6 +33,6 @@ export class GoogleBaseEvent<TData extends EmptyObject = EmptyObject> {
   }
 
   async sendGtm<T extends TData>(data: T) {
-    await this.gtm().send(this.name, toJsonObject(data, undefined, 10))
+    await this.gtm().send(this.name, toSafeJsonObject(data, undefined, 10))
   }
 }

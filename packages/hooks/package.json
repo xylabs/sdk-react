@@ -39,12 +39,12 @@
   "devDependencies": {
     "@storybook/react-vite": "^9.0.18",
     "@types/react": "^19.1.8",
-    "@xylabs/ts-scripts-yarn3": "^7.0.0",
-    "@xylabs/tsconfig-react": "^7.0.0",
+    "@xylabs/ts-scripts-yarn3": "^7.0.1",
+    "@xylabs/tsconfig-react": "^7.0.1",
     "knip": "^5.62.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.7.1",
     "storybook": "^9.0.18",
     "typescript": "^5.8.3"
   },
