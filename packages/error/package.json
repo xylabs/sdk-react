@@ -53,6 +53,8 @@
     "@types/react": "^19.1.9",
     "@xylabs/react-quick-tip-button": "workspace:^",
     "@xylabs/ts-scripts-yarn3": "^7.0.2",
+    "@xylabs/tsconfig": "^7.0.2",
+    "@xylabs/tsconfig-dom": "^7.0.2",
     "@xylabs/tsconfig-react": "^7.0.2",
     "@xylabs/typeof": "^5.0.0",
     "react": "^19.1.1",
