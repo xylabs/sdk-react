@@ -2,7 +2,7 @@ import { OpenInNewOutlined } from '@mui/icons-material'
 import {
   Alert, AlertTitle, Button, List, ListItem, Typography,
 } from '@mui/material'
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { forget } from '@xylabs/forget'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React, { useMemo, useState } from 'react'
@@ -27,7 +27,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
   signer,
   signerAddress,
 }) => {
-  const [signResponse, setSignResponse] = useState<EthAddress>()
+  const [signResponse, setSignResponse] = useState<EthAddressWrapper>()
 
   useMemo(() => {
     setSignResponse(undefined)
@@ -37,7 +37,7 @@ export const EthWalletSBComponent: React.FC<EthWalletSBComponentProps> = ({
     forget(
       (async () => {
         const signResult = await signMessage?.('test')
-        setSignResponse(EthAddress.fromString(signResult))
+        setSignResponse(EthAddressWrapper.fromString(signResult))
       })(),
     )
 

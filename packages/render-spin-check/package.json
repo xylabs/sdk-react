@@ -33,14 +33,17 @@
   },
   "module": "./dist/browser/index.mjs",
   "types": "dist/browser/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "@types/react": "^19.1.8",
-    "@xylabs/ts-scripts-yarn3": "^7.0.1",
-    "@xylabs/tsconfig-react": "^7.0.1",
-    "knip": "^5.62.0",
+    "@types/react": "^19.1.9",
+    "@xylabs/ts-scripts-yarn3": "^7.0.2",
+    "@xylabs/tsconfig-react": "^7.0.2",
     "react": "^19.1.1",
     "typescript": "^5.8.3"
   },

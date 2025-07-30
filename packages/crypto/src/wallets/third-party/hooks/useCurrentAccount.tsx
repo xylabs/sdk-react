@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { useMemo, useSyncExternalStore } from 'react'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'
@@ -19,7 +19,7 @@ export const useCurrentAccountExternal = (ethWalletConnector: EthWalletConnector
   return useSyncExternalStore(subscribe, getSnapShot)
 }
 
-export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [EthAddress | undefined, string[]] => {
+export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [EthAddressWrapper | undefined, string[]] => {
   const addresses = useCurrentAccountExternal(ethWalletConnector)
 
   /**
@@ -28,7 +28,7 @@ export const useCurrentAccount = (ethWalletConnector: EthWalletConnectorBase): [
    * see - https://docs.metamask.io/wallet/how-to/connect/access-accounts/#handle-accounts
    */
   const [currentAddress, additionalAddresses] = useMemo(() => {
-    return addresses && addresses.length > 0 ? [EthAddress.fromString(addresses[0]), addresses.slice(1)] : [undefined, []]
+    return addresses && addresses.length > 0 ? [EthAddressWrapper.fromString(addresses[0]), addresses.slice(1)] : [undefined, []]
   }, [addresses])
 
   if (ethWalletConnector.installed) {

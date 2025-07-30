@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite'
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 
@@ -20,7 +20,7 @@ const Template: StoryFn<typeof EthAccountButton> = args => (
 
 const Long = Template.bind({})
 Long.args = {
-  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  address: EthAddressWrapper.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
   addressLength: 'long',
   icon: true,
   title: 'Sample EthAccount',
@@ -29,7 +29,7 @@ Long.args = {
 
 const LongLarge = Template.bind({})
 LongLarge.args = {
-  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  address: EthAddressWrapper.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
   addressLength: 'long',
   icon: true,
   size: 'large',
@@ -47,7 +47,7 @@ LongEmpty.args = {
 
 const Medium = Template.bind({})
 Medium.args = {
-  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  address: EthAddressWrapper.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
   addressLength: 'short',
   icon: true,
   shortenedLength: 8,
@@ -66,7 +66,7 @@ MediumEmpty.args = {
 
 const Short = Template.bind({})
 Short.args = {
-  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  address: EthAddressWrapper.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
   addressLength: 'short',
   icon: true,
   title: 'Sample EthAccount',
@@ -83,7 +83,7 @@ ShortEmpty.args = {
 
 const Auto = Template.bind({})
 Auto.args = {
-  address: EthAddress.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
+  address: EthAddressWrapper.fromString('0x6792b02f88b32c4fe8e31cfa41ae5af44865f930'),
   addressLength: 'auto',
   icon: true,
   title: 'Sample EthAccount',

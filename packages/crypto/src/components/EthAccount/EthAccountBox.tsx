@@ -2,7 +2,7 @@ import {
   Typography, useMediaQuery, useTheme,
 } from '@mui/material'
 import { assertEx } from '@xylabs/assert'
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
@@ -30,7 +30,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
 
   const isLocalAddress = address ? localAddress?.toString() === address.toString() : false
 
-  const addressToDisplay = assertEx(address ?? EthAddress.fromString('0x00'), () => 'Bad Eth Address')
+  const addressToDisplay = assertEx(address ?? EthAddressWrapper.fromString('0x00'), () => 'Bad Eth Address')
 
   const textToDisplay
     = address

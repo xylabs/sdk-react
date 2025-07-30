@@ -1,4 +1,4 @@
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import type { BrowserProvider, JsonRpcSigner } from 'ethers'
 import { createContext } from 'react'
 
@@ -10,7 +10,7 @@ export interface EthersData {
   connectRefused?: boolean
   error?: Error
   isConnected?: boolean
-  localAddress?: EthAddress
+  localAddress?: EthAddressWrapper
   provider?: BrowserProvider
   providerName?: string
   showConnectWalletDialog?: () => void

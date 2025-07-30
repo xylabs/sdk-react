@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import { useMemo } from 'react'
 
@@ -28,7 +28,7 @@ export const useEthWallet = (connector: EthWalletConnectorBase): EthWallet => {
 
   const signer = useSigner(connector, currentAccount)
 
-  const [signerAddress] = usePromise(async () => EthAddress.fromString(await signer?.getAddress()), [signer])
+  const [signerAddress] = usePromise(async () => EthAddressWrapper.fromString(await signer?.getAddress()), [signer])
 
   const signMessage = useMemo(() => connector.signMessage.bind(connector), [connector])
 

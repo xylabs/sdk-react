@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import type { JsonRpcSigner } from 'ethers'
 import { BrowserProvider } from 'ethers'
@@ -15,7 +15,7 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const { children } = props
   const [error, setError] = useState<Error>()
   const [signer, setSigner] = useState<JsonRpcSigner>()
-  const [localAddress, setLocalAddress] = useState<EthAddress>()
+  const [localAddress, setLocalAddress] = useState<EthAddressWrapper>()
 
   const trustProvider = useMemo(() => (globalThis.ethereum ? new BrowserProvider(globalThis.ethereum) : undefined), [])
 
@@ -27,13 +27,13 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
     async (mounted) => {
       if (trustProvider) {
         const [existingAddress]: string[] = (await trustProvider.send('eth_accounts', [])) ?? []
-        if (existingAddress !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(existingAddress))
+        if (existingAddress !== localAddress?.toString()) setLocalAddress(EthAddressWrapper.fromString(existingAddress))
         if (localAddress) {
           const localSigner = await trustProvider.getSigner()
           setSigner(localSigner)
           if (localSigner) {
             try {
-              const localAddress = EthAddress.fromString(await localSigner.getAddress())
+              const localAddress = EthAddressWrapper.fromString(await localSigner.getAddress())
               if (mounted()) {
                 setLocalAddress(localAddress)
               }

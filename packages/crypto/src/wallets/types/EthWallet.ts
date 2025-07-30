@@ -1,4 +1,4 @@
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import type { BrowserProvider, JsonRpcSigner } from 'ethers'
 
 import type { EIP6963ProviderInfo } from '../lib/index.ts'
@@ -13,13 +13,13 @@ export interface EthWallet {
   connectError?: Error
   connectRefused?: boolean
   connectWallet?: () => Promise<string[] | null | undefined>
-  currentAccount?: EthAddress
+  currentAccount?: EthAddressWrapper
   installed?: boolean
   provider?: BrowserProvider
   providerInfo?: EIP6963ProviderInfo
   providerName?: string
   signMessage?: (message: string, address?: string) => Promise<string | undefined>
   signer?: JsonRpcSigner
-  signerAddress?: EthAddress
+  signerAddress?: EthAddressWrapper
   // TODO - transactions
 }

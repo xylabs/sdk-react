@@ -1,13 +1,13 @@
 import { CheckCircleOutline } from '@mui/icons-material'
 import type { CardHeaderProps } from '@mui/material'
 import { CardHeader } from '@mui/material'
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import React from 'react'
 
 import { ConstrainedImage } from '../shared/index.ts'
 
 export interface WalletOverviewCardHeaderProps extends CardHeaderProps {
-  currentAccount?: EthAddress
+  currentAccount?: EthAddressWrapper
   icon?: string
   walletName?: string
 }

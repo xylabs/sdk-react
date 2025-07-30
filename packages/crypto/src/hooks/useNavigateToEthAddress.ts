@@ -1,11 +1,11 @@
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import type { NavigateOptions, To } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 export const useNavigateToEthAddress = () => {
   const navigate = useNavigate()
   const navigateToEthAddress = (
-    address: EthAddress,
+    address: EthAddressWrapper,
     event: React.MouseEvent,
     page?: string,
     to?: To,

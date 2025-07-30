@@ -33,14 +33,18 @@
   },
   "module": "./dist/browser/index.mjs",
   "types": "dist/browser/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^4.15.0",
-    "@xylabs/eth-address": "^4.15.0",
-    "@xylabs/forget": "^4.15.0",
-    "@xylabs/promise": "^4.15.0",
+    "@xylabs/assert": "^5.0.0",
+    "@xylabs/eth-address": "^5.0.0",
+    "@xylabs/forget": "^5.0.0",
+    "@xylabs/promise": "^5.0.0",
     "@xylabs/react-async-effect": "workspace:^",
     "@xylabs/react-button": "workspace:^",
     "@xylabs/react-flexbox": "workspace:^",
@@ -58,14 +62,15 @@
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
     "@storybook/react-vite": "^9.0.18",
-    "@types/react": "^19.1.8",
-    "@xylabs/ts-scripts-yarn3": "^7.0.1",
-    "@xylabs/tsconfig-react": "^7.0.1",
-    "knip": "^5.62.0",
+    "@types/react": "^19.1.9",
+    "@xylabs/ts-scripts-yarn3": "^7.0.2",
+    "@xylabs/tsconfig-react": "^7.0.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "storybook": "^9.0.18",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.6",
+    "webextension-polyfill": "^0.12.0"
   },
   "peerDependencies": {
     "@mui/icons-material": ">=6 <8",

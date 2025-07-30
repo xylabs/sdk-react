@@ -1,11 +1,11 @@
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
 import type { JsonRpcSigner } from 'ethers'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'
 
 /** Locate the signer on the passed wallet for a given address */
-export const useSigner = (ethWalletConnector: EthWalletConnectorBase, localAddress?: EthAddress): JsonRpcSigner | undefined => {
+export const useSigner = (ethWalletConnector: EthWalletConnectorBase, localAddress?: EthAddressWrapper): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {
     if (ethWalletConnector.installed) {
       try {

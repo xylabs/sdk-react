@@ -2,7 +2,7 @@ import type { CardContentProps } from '@mui/material'
 import {
   Alert, AlertTitle, CardContent, Chip, Divider, styled, Typography,
 } from '@mui/material'
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import React from 'react'
 
@@ -10,8 +10,8 @@ export interface WalletOverviewCardContentProps extends CardContentProps {
   chainName?: string
   connectError?: Error
   connectRefused?: boolean
-  currentAccount?: EthAddress
-  signResponse?: EthAddress
+  currentAccount?: EthAddressWrapper
+  signResponse?: EthAddressWrapper
 }
 
 export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps> = ({

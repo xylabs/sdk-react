@@ -1,7 +1,7 @@
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 
 interface EthAccountProps {
-  address?: EthAddress | null
+  address?: EthAddressWrapper | null
   addressLength?: 'auto' | 'short' | 'long'
   fontFamily?: string
   full?: boolean

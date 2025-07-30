@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import type { JsonRpcSigner } from 'ethers'
 import { BrowserProvider, InfuraProvider } from 'ethers'
@@ -18,7 +18,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
   const global = globalThis as any
   const ethereum = global.ethereum
   const [error, setError] = useState<Error>()
-  const [localAddress, setLocalAddress] = useState<EthAddress>()
+  const [localAddress, setLocalAddress] = useState<EthAddressWrapper>()
   const [providerName, setProviderName] = useState<string>()
 
   if (ethereum) {
@@ -54,7 +54,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
       let signer: JsonRpcSigner | undefined
       try {
         const [existingAddress]: string[] = (await provider.send('eth_accounts', [])) ?? []
-        setLocalAddress(EthAddress.fromString(existingAddress[0]))
+        setLocalAddress(EthAddressWrapper.fromString(existingAddress[0]))
         if (localAddress) {
           signer = await walletProvider?.getSigner()
         }
@@ -70,7 +70,7 @@ export const MyEtherWalletEthersLoader: React.FC<PropsWithChildren<Props>> = (pr
     async (isMounted) => {
       if (signer) {
         try {
-          const localAddress = EthAddress.fromString(await signer.getAddress())
+          const localAddress = EthAddressWrapper.fromString(await signer.getAddress())
           if (isMounted()) {
             setLocalAddress(localAddress)
             setIsConnected(true)

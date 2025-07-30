@@ -1,4 +1,4 @@
-import { EthAddress } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
 import type { JsonRpcSigner } from 'ethers'
 import { BrowserProvider } from 'ethers'
@@ -19,8 +19,8 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
   const [error, setError] = useState<Error>()
   const [signer, setSigner] = useState<JsonRpcSigner>()
   const [provider, setProvider] = useState<BrowserProvider>()
-  const [localAddress, setLocalAddress] = useState<EthAddress | undefined>(
-    (global.ethereum?.addresses?.length ?? 0) > 0 ? EthAddress.fromString(global.ethereum?.addresses?.[0]) : undefined,
+  const [localAddress, setLocalAddress] = useState<EthAddressWrapper | undefined>(
+    (global.ethereum?.addresses?.length ?? 0) > 0 ? EthAddressWrapper.fromString(global.ethereum?.addresses?.[0]) : undefined,
   )
 
   const chainId = ethereum?.chainId ? Number.parseInt(ethereum?.chainId) : 1
@@ -33,11 +33,11 @@ export const OperaEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
         const operaProvider = new BrowserProvider(ethereum)
         const provider = operaProvider
         const [existingAddress]: string[] = (await provider.send('eth_accounts', [])) ?? []
-        if (existingAddress !== localAddress?.toString()) setLocalAddress(EthAddress.fromString(existingAddress))
+        if (existingAddress !== localAddress?.toString()) setLocalAddress(EthAddressWrapper.fromString(existingAddress))
         if (localAddress) {
           const signer = await operaProvider.getSigner()
           try {
-            const localAddress = EthAddress.fromString(await signer.getAddress())
+            const localAddress = EthAddressWrapper.fromString(await signer.getAddress())
             ethereum.autoRefreshOnNetworkChange = false
             if (mounted()) {
               setSigner(signer)

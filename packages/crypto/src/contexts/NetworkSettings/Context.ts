@@ -1,10 +1,10 @@
-import type { EthAddress } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { createContext } from 'react'
 
 const NetworkSettingsContext = createContext<{
-  xyBondAddress?: EthAddress
-  xyFhrMerkleSendAddress?: EthAddress
-  xyGovernanceAddress?: EthAddress
-  xyStakingConsensusAddress?: EthAddress
+  xyBondAddress?: EthAddressWrapper
+  xyFhrMerkleSendAddress?: EthAddressWrapper
+  xyGovernanceAddress?: EthAddressWrapper
+  xyStakingConsensusAddress?: EthAddressWrapper
 }>({})
 export { NetworkSettingsContext }
