@@ -4,6 +4,7 @@ import {
   Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery, useTheme,
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
+import { isString } from '@xylabs/typeof'
 import type { ReactNode } from 'react'
 import React, { useState } from 'react'
 
@@ -54,19 +55,19 @@ export const SimpleAccordion: React.FC<SimpleAccordionCardProps> = ({
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        {description && (
+        {isString(description) && (
           <Typography variant="body1" fontWeight={400} textAlign="left">
             {description}
           </Typography>
         )}
         {children}
-        {href
+        {isString(href)
           ? (
               <ButtonEx href={href} target={href ?? '_blank'}>
                 {linkText ?? 'Learn More'}
               </ButtonEx>
             )
-          : to
+          : isString(to)
             ? (
                 <ButtonEx to={to} target={href ?? '_blank'}>
                   {linkText ?? 'Learn More'}

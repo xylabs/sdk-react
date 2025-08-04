@@ -3,6 +3,7 @@ import { assertEx } from '@xylabs/assert'
 import { FlexRow } from '@xylabs/react-flexbox'
 import type { LinkExProps } from '@xylabs/react-link'
 import { LinkEx } from '@xylabs/react-link'
+import { isString } from '@xylabs/typeof'
 import type { ReactNode } from 'react'
 import React from 'react'
 
@@ -27,7 +28,7 @@ export const LogoLinkEx: React.FC<LogoLinkExProps> = ({
           }}
           />
         )}
-        {version
+        {(isString(version) || (version === true))
           ? (
               <Typography
                 position="absolute"

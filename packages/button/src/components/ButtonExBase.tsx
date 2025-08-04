@@ -4,6 +4,7 @@ import { useUserEvents } from '@xylabs/react-pixel'
 import {
   BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles,
 } from '@xylabs/react-shared'
+import { isString } from '@xylabs/typeof'
 import type { MouseEvent } from 'react'
 import React from 'react'
 
@@ -25,17 +26,17 @@ const ButtonExBase = ({
     } else {
       const elementName = props['aria-label'] ?? event.currentTarget.textContent
       // we do this crazy navigate thing so that we can set it up outside the promise so that safari does not block it
-      const windowToNavigate = () => (target && href) ? window.open('', target) ?? globalThis : globalThis
+      const windowToNavigate = () => (isString(target) && isString(href)) ? window.open('', target) ?? globalThis : globalThis
       const callOnClickAndFollowHref = (windowToNav = windowToNavigate()) => {
         onClick?.(event)
-        if (href) {
+        if (isString(href)) {
           windowToNav.location.href = href
         }
       }
       if (!disableUserEvents && userEvents) {
         event.preventDefault()
         const windowToNav = windowToNavigate()
-        if (href) {
+        if (isString(href)) {
           toPromise(userEvents.userClick({
             elementName, intent, funnel, placement,
           })).then(() => {

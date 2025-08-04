@@ -2,6 +2,7 @@ import {
   AppBar, Container, Toolbar, useMediaQuery, useTheme,
 } from '@mui/material'
 import { FlexGrowRow, FlexRow } from '@xylabs/react-flexbox'
+import { isDefinedNotNull, isString } from '@xylabs/typeof'
 import React from 'react'
 
 import type { AppBarExProps } from './AppBarExProps.tsx'
@@ -19,7 +20,7 @@ const AppBarExInner: React.FC<AppBarExProps> = ({
         {systemToolbar ?? <Toolbar />}
         {menu}
       </FlexRow>
-      {belowSm && children && responsive
+      {belowSm && isDefinedNotNull(children) && responsive
         ? <Toolbar>{children}</Toolbar>
         : null}
     </>
@@ -31,7 +32,7 @@ export const AppBarEx: React.FC<AppBarExProps> = ({
 }) => {
   return (
     <AppBar position="static" {...props}>
-      {container
+      {isString(container)
         ? (
             <Container maxWidth={container}>
               <AppBarExInner {...{

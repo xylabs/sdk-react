@@ -45,13 +45,13 @@
   },
   "devDependencies": {
     "@types/react": "^19.1.9",
-    "@xylabs/ts-scripts-yarn3": "^7.0.2",
-    "@xylabs/tsconfig": "^7.0.2",
-    "@xylabs/tsconfig-dom": "^7.0.2",
-    "@xylabs/tsconfig-react": "^7.0.2",
+    "@xylabs/ts-scripts-yarn3": "^7.0.3",
+    "@xylabs/tsconfig": "^7.0.3",
+    "@xylabs/tsconfig-dom": "^7.0.3",
+    "@xylabs/tsconfig-react": "^7.0.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",

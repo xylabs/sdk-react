@@ -6,6 +6,7 @@ import {
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
+import { isString } from '@xylabs/typeof'
 import React, { use } from 'react'
 import { Helmet } from 'react-helmet'
 
@@ -39,7 +40,7 @@ const BasePage: React.FC<BasePageProps> = ({
 
   if (shareMode === 'static' && status !== 'done') {
     setStatus('done')
-  } else if ((xyoOgMetaName === pageCompleteMetaName) && shareImage && status !== 'done') {
+  } else if ((xyoOgMetaName === pageCompleteMetaName) && isString(shareImage) && status !== 'done') {
     setStatus('done')
   }
 
@@ -77,7 +78,7 @@ const BasePage: React.FC<BasePageProps> = ({
             </FlexRow>
           )
         : null}
-      {container
+      {isString(container)
         ? (
             <Container
               style={{
@@ -105,11 +106,11 @@ const BasePage: React.FC<BasePageProps> = ({
         : null}
       <Helmet>
         <meta property="xy:meta:share:mode" content={shareMode} />
-        {shareImage
+        {isString(shareImage)
           ? <meta property={xyoOgMetaName} content={shareImage} />
           : null}
         {/* This is here to make sure we report that the page is done */}
-        {((xyoOgMetaName === pageCompleteMetaName) && shareImage)
+        {((xyoOgMetaName === pageCompleteMetaName) && isString(shareImage))
           ? null
           : <meta property={pageCompleteMetaName} content="" />}
         <meta property="xy:meta:status" content={status ?? 'done'} />

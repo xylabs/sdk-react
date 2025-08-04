@@ -2,6 +2,7 @@ import type { ListItemProps } from '@mui/material'
 import { ListItemText, useTheme } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { useCollapsible } from '@xylabs/react-shared'
+import { isString } from '@xylabs/typeof'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -80,7 +81,7 @@ export const MenuListItemContainer: React.FC<MenuListItemProps> = ({
           {subNavListItems
             ? <SubNavToggleIconButton setOpenSubNav={setOpenSubNav} openSubNav={openSubNav} />
             : null}
-          {tooltip
+          {isString(tooltip)
             ? <ListItemTooltip title={tooltip} />
             : null}
         </FlexRow>

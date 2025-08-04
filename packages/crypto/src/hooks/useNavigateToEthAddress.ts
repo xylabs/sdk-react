@@ -1,4 +1,5 @@
 import type { EthAddressWrapper } from '@xylabs/eth-address'
+import { isDefined, isString } from '@xylabs/typeof'
 import type { NavigateOptions, To } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
@@ -12,7 +13,7 @@ export const useNavigateToEthAddress = () => {
     toOptions?: NavigateOptions,
     toEtherScan?: boolean,
   ) => {
-    const openInEtherScan = toEtherScan || (!to && !page)
+    const openInEtherScan = toEtherScan || (!isDefined(to) && !isString(page))
     if (openInEtherScan) {
       window.open(`https://etherscan.io/address/${address.toString()}`, '_blank')
     } else {

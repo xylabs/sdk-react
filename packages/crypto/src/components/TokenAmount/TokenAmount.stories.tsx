@@ -1,4 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite'
+import { isString } from '@xylabs/typeof'
 import React from 'react'
 
 import { TokenAmount } from './TokenAmount.tsx'
@@ -11,7 +12,7 @@ const TokenAmountWrapper: React.FC<Omit<TokenAmountProps, 'amount' | 'href'> & {
   return (
     <TokenAmount
       {...props}
-      amount={amount ? BigInt(amount) : undefined}
+      amount={isString(amount) ? BigInt(amount) : undefined}
     />
   )
 }

@@ -1,3 +1,4 @@
+import { isDefined } from '@xylabs/typeof'
 import type { MouseEvent } from 'react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -11,7 +12,7 @@ const ButtonToEx = ({
   const navigate = useNavigate()
   const localOnClick = (event: MouseEvent<HTMLButtonElement>) => {
     onClick?.(event)
-    if (to) {
+    if (isDefined(to)) {
       void navigate(to, toOptions)
     }
   }

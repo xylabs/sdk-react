@@ -1,5 +1,6 @@
 import type { MenuItemProps } from '@mui/material'
 import { Alert } from '@mui/material'
+import { exists } from '@xylabs/exists'
 import React from 'react'
 
 import type { DiscoveredWallets } from '../../third-party/index.ts'
@@ -20,7 +21,7 @@ export const WalletsDiscoveredMenuItems: React.FC<WalletsDiscoveredMenuItemsProp
 }) => {
   return (
     discoveredWallets
-      ? Object.values(discoveredWallets).map(eip6963Connector => (
+      ? Object.values(discoveredWallets).filter(exists).map(eip6963Connector => (
           <WalletDiscoveryMenuItem
             key={eip6963Connector.providerName}
             ethWalletConnector={eip6963Connector}

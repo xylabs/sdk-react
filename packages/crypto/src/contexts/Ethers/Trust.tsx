@@ -31,16 +31,14 @@ export const TrustEthersLoader: React.FC<PropsWithChildren<Props>> = (props) => 
         if (localAddress) {
           const localSigner = await trustProvider.getSigner()
           setSigner(localSigner)
-          if (localSigner) {
-            try {
-              const localAddress = EthAddressWrapper.fromString(await localSigner.getAddress())
-              if (mounted()) {
-                setLocalAddress(localAddress)
-              }
-            } catch (ex) {
-              if (mounted()) {
-                setError(new Error(`localAddress: ${ex}`))
-              }
+          try {
+            const localAddress = EthAddressWrapper.fromString(await localSigner.getAddress())
+            if (mounted()) {
+              setLocalAddress(localAddress)
+            }
+          } catch (ex) {
+            if (mounted()) {
+              setError(new Error(`localAddress: ${ex}`))
             }
           }
         }

@@ -1,3 +1,4 @@
+import { isString } from '@xylabs/typeof'
 import React, { useEffect } from 'react'
 import type { NavigateOptions, To } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -16,7 +17,7 @@ export const RedirectWithQuery: React.ComponentType<RedirectWithQueryProps> = ({
   const { pathname } = useLocation()
 
   useEffect(() => {
-    if (href) {
+    if (isString(href)) {
       globalThis.location.href = href
     } else {
       if (newPath !== pathname) {

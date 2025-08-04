@@ -41,26 +41,27 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "^5.0.0",
+    "@xylabs/assert": "^5.0.2",
     "@xylabs/react-flexbox": "workspace:^",
     "@xylabs/react-link": "workspace:^",
     "@xylabs/react-shared": "workspace:^",
-    "@xylabs/react-theme": "workspace:^"
+    "@xylabs/react-theme": "workspace:^",
+    "@xylabs/typeof": "^5.0.2"
   },
   "devDependencies": {
     "@mui/icons-material": "^7.2.0",
     "@mui/material": "^7.2.0",
-    "@storybook/react-vite": "^9.0.18",
+    "@storybook/react-vite": "^9.1.1",
     "@types/react": "^19.1.9",
-    "@xylabs/ts-scripts-yarn3": "^7.0.2",
-    "@xylabs/tsconfig": "^7.0.2",
-    "@xylabs/tsconfig-dom": "^7.0.2",
-    "@xylabs/tsconfig-react": "^7.0.2",
+    "@xylabs/ts-scripts-yarn3": "^7.0.3",
+    "@xylabs/tsconfig": "^7.0.3",
+    "@xylabs/tsconfig-dom": "^7.0.3",
+    "@xylabs/tsconfig-react": "^7.0.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.7.1",
-    "storybook": "^9.0.18",
-    "typescript": "^5.8.3",
+    "storybook": "^9.1.1",
+    "typescript": "^5.9.2",
     "vite": "^7.0.6"
   },
   "peerDependencies": {

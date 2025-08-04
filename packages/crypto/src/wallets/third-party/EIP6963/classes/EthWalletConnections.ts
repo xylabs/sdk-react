@@ -1,3 +1,4 @@
+import { isString } from '@xylabs/typeof'
 import { BrowserProvider } from 'ethers'
 
 import { isEIP6963AnnounceProviderEvent } from '../../../lib/index.ts'
@@ -16,7 +17,7 @@ export class EthWalletConnections {
 
   addWallet(wallet: EIP6963Connector) {
     const walletName = wallet.providerInfo?.rdns
-    if (walletName && !this.discoveredWallets[walletName]) {
+    if (isString(walletName) && !this.discoveredWallets[walletName]) {
       this.discoveredWallets = {
         [walletName]: wallet,
         ...this.discoveredWallets,
@@ -32,7 +33,7 @@ export class EthWalletConnections {
 
   removeWallet(wallet: EIP6963Connector) {
     const walletName = wallet.providerInfo?.rdns
-    if (walletName && this.discoveredWallets[walletName]) {
+    if (isString(walletName) && this.discoveredWallets[walletName]) {
       delete this.discoveredWallets[walletName]
       this.discoveredWallets = { ...this.discoveredWallets }
       this.emitChange()

@@ -1,6 +1,7 @@
 import type { ToolbarProps } from '@mui/material'
 import { Toolbar } from '@mui/material'
 import { ColorSchemeButton } from '@xylabs/react-theme'
+import { isDefinedNotNull } from '@xylabs/typeof'
 import type { ReactNode } from 'react'
 import React from 'react'
 
@@ -30,7 +31,7 @@ export const SystemToolbar: React.FC<SystemToolbarProps> = ({
       {darkModeButton
         ? <ColorSchemeButton />
         : null}
-      {menuItems
+      {isDefinedNotNull(menuItems)
         ? <SiteMenu onMenuToggle={onMenuToggle}>{menuItems}</SiteMenu>
         : null}
     </Toolbar>

@@ -3,6 +3,7 @@ import {
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
+import { isString } from '@xylabs/typeof'
 import React, { useEffect } from 'react'
 
 import { useCookieConsent } from '../contexts/index.ts'
@@ -47,7 +48,7 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
     }, acceptOnTimer)
   }
 
-  if (!storageName) {
+  if (isString(storageName)) {
     return (
       <FlexRow justifyContent="center" paddingY={2} {...props}>
         <Typography color="error" variant="body1">

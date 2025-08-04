@@ -1,3 +1,4 @@
+import { isString } from '@xylabs/typeof'
 import React from 'react'
 
 import { CookieConsentLoader, useCookieConsent } from '../contexts/index.ts'
@@ -13,7 +14,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = (props) => {
   }
 
   // if not inside a context, make a context
-  if (!storageName) {
+  if (!isString(storageName)) {
     return (
       <CookieConsentLoader>
         <Inner />

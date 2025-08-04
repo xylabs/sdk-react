@@ -1,4 +1,5 @@
 import { assertDefinedEx, assertEx } from '@xylabs/assert'
+import { isString } from '@xylabs/typeof'
 
 export class AppSettingsStorageBase {
   private defaults: Record<string, unknown>
@@ -10,7 +11,7 @@ export class AppSettingsStorageBase {
 
   getBoolean(name: string): boolean {
     const storedValue = localStorage.getItem(`${this.prefix}|${name}`)
-    if (!storedValue) {
+    if (!isString(storedValue)) {
       assertEx(typeof this.defaults[name] === 'boolean', () => 'Default value is not boolean')
       const defaultValue = this.defaults[name] as boolean
       assertEx(defaultValue !== undefined, () => `Missing Default for ${name}`)
@@ -21,7 +22,7 @@ export class AppSettingsStorageBase {
 
   getNumber(name: string): number {
     const storedValue = localStorage.getItem(`${this.prefix}|${name}`)
-    if (!storedValue) {
+    if (!isString(storedValue)) {
       assertEx(typeof this.defaults[name] === 'number', () => 'Default value is not a number')
       const defaultValue = this.defaults[name] as number
       assertEx(defaultValue !== undefined, () => `Missing Default for ${name}`)
@@ -32,7 +33,7 @@ export class AppSettingsStorageBase {
 
   getObject<T>(name: string): T {
     const storedValue = localStorage.getItem(`${this.prefix}|${name}`)
-    const parsedStoredValue = storedValue ? JSON.parse(storedValue) : null
+    const parsedStoredValue = isString(storedValue) ? JSON.parse(storedValue) : null
     if (!parsedStoredValue) {
       assertEx(typeof this.defaults[name] === 'object', () => 'Default value is not object')
       return assertEx(this.defaults[name] as T, () => `Missing Default for ${name}`)
@@ -42,7 +43,7 @@ export class AppSettingsStorageBase {
 
   getString(name: string) {
     const storedValue = localStorage.getItem(`${this.prefix}|${name}`)
-    if (!storedValue) {
+    if (!isString(storedValue)) {
       assertDefinedEx(typeof this.defaults[name] === 'string', () => 'Default value is not string')
       const defaultValue = this.defaults[name] as string
       assertEx(defaultValue !== undefined, () => `Missing Default for ${name}`)

@@ -1,5 +1,6 @@
 import type { ButtonProps } from '@mui/material'
 import type { BoxlikeComponentProps, BusyProps } from '@xylabs/react-shared'
+import { isDefined, isString } from '@xylabs/typeof'
 import type { NavigateOptions, To } from 'react-router-dom'
 
 export interface ButtonOnlyHrefProps {
@@ -28,11 +29,13 @@ export interface ButtonHrefAndToProps {
   toOptions?: NavigateOptions
 }
 
-export const asButtonHrefOrToProps = (props: ButtonHrefAndToProps): ButtonHrefOrToOrNoProps => {
-  if (props.href && (props.to || props.toOptions)) {
+export const asButtonHrefOrToProps = ({
+  href, to, toOptions,
+}: ButtonHrefAndToProps): ButtonHrefOrToOrNoProps => {
+  if (isString(href) && (isDefined(to) || isDefined(toOptions))) {
     throw new Error('ButtonExProps: cannot have both href and to')
   }
-  return props.href ? { href: props.href } : props.to ? { to: props.to, toOptions: props.toOptions } : {}
+  return isString(href) ? { href } : isDefined(to) ? { to, toOptions } : {}
 }
 
 export interface ButtonBaseExProps extends Omit<ButtonProps, 'href'>, BoxlikeComponentProps, BusyProps {

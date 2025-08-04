@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import { assertEx } from '@xylabs/assert'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
+import { isBigInt, isString } from '@xylabs/typeof'
 import React from 'react'
 
 // eslint-disable-next-line import-x/no-internal-modules
@@ -33,7 +34,7 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
   onButtonClick,
   ...props
 }) => {
-  const amountString = amount ? placesSplitString(amount, places) : '-'
+  const amountString = isBigInt(amount) ? placesSplitString(amount, places) : '-'
 
   return (
     <ButtonEx
@@ -47,7 +48,7 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
           {logo
             ? <img src={xyoLogo} height={24} />
             : null}
-          {label
+          {isString(label)
             ? (
                 <Typography marginRight={1} marginLeft={logo ? 1 : 0} noWrap fontFamily={textFontFamily} variant="caption">
                   {label}
