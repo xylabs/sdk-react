@@ -1,3 +1,4 @@
+import { isString } from '@xylabs/typeof'
 import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener,
 } from 'ethers'
@@ -43,11 +44,11 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
   }
 
   get chainId() {
-    return this.chainIdHex ? Number(this.chainIdHex) : undefined
+    return isString(this.chainIdHex) ? Number(this.chainIdHex) : undefined
   }
 
   get chainName() {
-    return this.chainId ? findChainName(this.chainId)?.name : undefined
+    return isString(this.chainId) ? findChainName(this.chainId)?.name : undefined
   }
 
   abstract get installed(): boolean
