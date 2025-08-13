@@ -2876,7 +2876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/react-accordion@workspace:^, @xylabs/react-accordion@workspace:packages/accordion":
+"@xylabs/react-accordion@workspace:packages/accordion, @xylabs/react-accordion@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-accordion@workspace:packages/accordion"
   dependencies:
@@ -2884,8 +2884,8 @@ __metadata:
     "@mui/material": "npm:~7.3.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -2904,7 +2904,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-animation@workspace:^, @xylabs/react-animation@workspace:packages/animation":
+"@xylabs/react-animation@workspace:packages/animation, @xylabs/react-animation@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-animation@workspace:packages/animation"
   dependencies:
@@ -2913,7 +2913,7 @@ __metadata:
     "@react-spring/web": "npm:~10.0.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -2931,7 +2931,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-app-settings@workspace:^, @xylabs/react-app-settings@workspace:packages/app-settings":
+"@xylabs/react-app-settings@workspace:packages/app-settings, @xylabs/react-app-settings@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-app-settings@workspace:packages/app-settings"
   dependencies:
@@ -2956,7 +2956,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-appbar@workspace:^, @xylabs/react-appbar@workspace:packages/appbar":
+"@xylabs/react-appbar@workspace:packages/appbar, @xylabs/react-appbar@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-appbar@workspace:packages/appbar"
   dependencies:
@@ -2965,10 +2965,10 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@xylabs/assert": "npm:~5.0.8"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-link": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
-    "@xylabs/react-theme": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-link": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
+    "@xylabs/react-theme": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -2989,14 +2989,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-async-effect@workspace:^, @xylabs/react-async-effect@workspace:packages/async-effect":
+"@xylabs/react-async-effect@workspace:packages/async-effect, @xylabs/react-async-effect@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-async-effect@workspace:packages/async-effect"
   dependencies:
     "@mui/material": "npm:~7.3.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-promise": "workspace:^"
+    "@xylabs/react-promise": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3011,7 +3011,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-base-page@workspace:^, @xylabs/react-base-page@workspace:packages/base-page":
+"@xylabs/react-base-page@workspace:packages/base-page, @xylabs/react-base-page@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-base-page@workspace:packages/base-page"
   dependencies:
@@ -3020,10 +3020,10 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@types/react-helmet": "npm:~6.1.11"
-    "@xylabs/react-appbar": "workspace:^"
-    "@xylabs/react-cookie-consent": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-scroll-to-top": "workspace:^"
+    "@xylabs/react-appbar": "workspace:~"
+    "@xylabs/react-cookie-consent": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-scroll-to-top": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3045,7 +3045,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-button@workspace:^, @xylabs/react-button@workspace:packages/button":
+"@xylabs/react-button@workspace:packages/button, @xylabs/react-button@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-button@workspace:packages/button"
   dependencies:
@@ -3053,9 +3053,9 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@xylabs/promise": "npm:~5.0.8"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3074,7 +3074,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-common@workspace:^, @xylabs/react-common@workspace:packages/common":
+"@xylabs/react-common@workspace:packages/common, @xylabs/react-common@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-common@workspace:packages/common"
   dependencies:
@@ -3082,11 +3082,11 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@xylabs/assert": "npm:~5.0.8"
-    "@xylabs/react-base-page": "workspace:^"
-    "@xylabs/react-error": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-portal": "workspace:^"
-    "@xylabs/react-select": "workspace:^"
+    "@xylabs/react-base-page": "workspace:~"
+    "@xylabs/react-error": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-portal": "workspace:~"
+    "@xylabs/react-select": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3106,16 +3106,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-cookie-consent@workspace:^, @xylabs/react-cookie-consent@workspace:packages/cookie-consent":
+"@xylabs/react-cookie-consent@workspace:packages/cookie-consent, @xylabs/react-cookie-consent@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-cookie-consent@workspace:packages/cookie-consent"
   dependencies:
     "@mui/material": "npm:~7.3.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3133,7 +3133,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-crypto@workspace:^, @xylabs/react-crypto@workspace:packages/crypto":
+"@xylabs/react-crypto@workspace:packages/crypto, @xylabs/react-crypto@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-crypto@workspace:packages/crypto"
   dependencies:
@@ -3149,11 +3149,11 @@ __metadata:
     "@xylabs/exists": "npm:~5.0.8"
     "@xylabs/forget": "npm:~5.0.8"
     "@xylabs/promise": "npm:~5.0.8"
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-identicon": "workspace:^"
-    "@xylabs/react-promise": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-identicon": "workspace:~"
+    "@xylabs/react-promise": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3177,15 +3177,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-dialogs@workspace:^, @xylabs/react-dialogs@workspace:packages/dialogs":
+"@xylabs/react-dialogs@workspace:packages/dialogs, @xylabs/react-dialogs@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-dialogs@workspace:packages/dialogs"
   dependencies:
     "@mui/material": "npm:~7.3.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3203,7 +3203,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-error@workspace:^, @xylabs/react-error@workspace:packages/error":
+"@xylabs/react-error@workspace:packages/error, @xylabs/react-error@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-error@workspace:packages/error"
   dependencies:
@@ -3211,9 +3211,9 @@ __metadata:
     "@mui/material": "npm:~7.3.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-quick-tip-button": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-quick-tip-button": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3239,7 +3239,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-experiments@workspace:^, @xylabs/react-experiments@workspace:packages/experiments":
+"@xylabs/react-experiments@workspace:packages/experiments, @xylabs/react-experiments@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
@@ -3249,9 +3249,9 @@ __metadata:
     "@xylabs/forget": "npm:~5.0.8"
     "@xylabs/log": "npm:~5.0.8"
     "@xylabs/pixel": "npm:~5.0.8"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3268,15 +3268,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-flexbox@npm:~7.0.0, @xylabs/react-flexbox@workspace:^, @xylabs/react-flexbox@workspace:packages/flexbox":
+"@xylabs/react-flexbox@npm:~7.0.1, @xylabs/react-flexbox@workspace:packages/flexbox, @xylabs/react-flexbox@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@xylabs/delay": "npm:~5.0.8"
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3293,7 +3293,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-hooks@workspace:^, @xylabs/react-hooks@workspace:packages/hooks":
+"@xylabs/react-hooks@workspace:packages/hooks, @xylabs/react-hooks@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-hooks@workspace:packages/hooks"
   dependencies:
@@ -3318,14 +3318,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-identicon@workspace:^, @xylabs/react-identicon@workspace:packages/identicon":
+"@xylabs/react-identicon@workspace:packages/identicon, @xylabs/react-identicon@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-identicon@workspace:packages/identicon"
   dependencies:
     "@mui/material": "npm:~7.3.1"
     "@types/md5": "npm:~2.3.5"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3353,7 +3353,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-link@workspace:^, @xylabs/react-link@workspace:packages/link":
+"@xylabs/react-link@workspace:packages/link, @xylabs/react-link@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
@@ -3361,9 +3361,9 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@xylabs/promise": "npm:~5.0.8"
-    "@xylabs/react-flexbox": "npm:~7.0.0"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-theme": "workspace:^"
+    "@xylabs/react-flexbox": "npm:~7.0.1"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-theme": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3381,13 +3381,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-mixpanel@workspace:^, @xylabs/react-mixpanel@workspace:packages/mixpanel":
+"@xylabs/react-mixpanel@workspace:packages/mixpanel, @xylabs/react-mixpanel@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-mixpanel@workspace:packages/mixpanel"
   dependencies:
     "@types/mixpanel-browser": "npm:~2.66.0"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3400,7 +3400,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-number-status@workspace:^, @xylabs/react-number-status@workspace:packages/number-status":
+"@xylabs/react-number-status@workspace:packages/number-status, @xylabs/react-number-status@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-number-status@workspace:packages/number-status"
   dependencies:
@@ -3408,8 +3408,8 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/numeral": "npm:~2.0.5"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3427,7 +3427,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-pixel-debugger@workspace:^, @xylabs/react-pixel-debugger@workspace:packages/pixel-debugger":
+"@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger, @xylabs/react-pixel-debugger@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger"
   dependencies:
@@ -3436,11 +3436,11 @@ __metadata:
     "@types/react": "npm:~19.1.10"
     "@xylabs/object": "npm:~5.0.8"
     "@xylabs/pixel": "npm:~5.0.8"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-portal": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-portal": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3457,7 +3457,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-pixel@workspace:^, @xylabs/react-pixel@workspace:packages/pixel":
+"@xylabs/react-pixel@workspace:packages/pixel, @xylabs/react-pixel@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
@@ -3479,7 +3479,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-portal@workspace:^, @xylabs/react-portal@workspace:packages/portal":
+"@xylabs/react-portal@workspace:packages/portal, @xylabs/react-portal@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-portal@workspace:packages/portal"
   dependencies:
@@ -3498,7 +3498,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-promise@workspace:^, @xylabs/react-promise@workspace:packages/promise":
+"@xylabs/react-promise@workspace:packages/promise, @xylabs/react-promise@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-promise@workspace:packages/promise"
   dependencies:
@@ -3522,7 +3522,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-quick-tip-button@workspace:^, @xylabs/react-quick-tip-button@workspace:packages/quick-tip-button":
+"@xylabs/react-quick-tip-button@workspace:packages/quick-tip-button, @xylabs/react-quick-tip-button@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-quick-tip-button@workspace:packages/quick-tip-button"
   dependencies:
@@ -3530,8 +3530,8 @@ __metadata:
     "@mui/material": "npm:~7.3.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-dialogs": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-dialogs": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3549,7 +3549,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-render-spin-check@workspace:^, @xylabs/react-render-spin-check@workspace:packages/render-spin-check":
+"@xylabs/react-render-spin-check@workspace:packages/render-spin-check, @xylabs/react-render-spin-check@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-render-spin-check@workspace:packages/render-spin-check"
   dependencies:
@@ -3565,7 +3565,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-rich-result@workspace:^, @xylabs/react-rich-result@workspace:packages/rich-result":
+"@xylabs/react-rich-result@workspace:packages/rich-result, @xylabs/react-rich-result@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-rich-result@workspace:packages/rich-result"
   dependencies:
@@ -3582,7 +3582,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-scroll-to-top@workspace:^, @xylabs/react-scroll-to-top@workspace:packages/scroll-to-top":
+"@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top, @xylabs/react-scroll-to-top@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-scroll-to-top@workspace:packages/scroll-to-top"
   dependencies:
@@ -3602,7 +3602,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-select@workspace:^, @xylabs/react-select@workspace:packages/select":
+"@xylabs/react-select@workspace:packages/select, @xylabs/react-select@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-select@workspace:packages/select"
   dependencies:
@@ -3622,7 +3622,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-shared@workspace:^, @xylabs/react-shared@workspace:packages/shared":
+"@xylabs/react-shared@workspace:packages/shared, @xylabs/react-shared@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-shared@workspace:packages/shared"
   dependencies:
@@ -3631,7 +3631,7 @@ __metadata:
     "@types/react": "npm:~19.1.10"
     "@xylabs/api": "npm:~5.0.8"
     "@xylabs/log": "npm:~5.0.8"
-    "@xylabs/react-async-effect": "workspace:^"
+    "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3648,7 +3648,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-theme@workspace:^, @xylabs/react-theme@workspace:packages/theme":
+"@xylabs/react-theme@workspace:packages/theme, @xylabs/react-theme@workspace:~":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-theme@workspace:packages/theme"
   dependencies:
@@ -3657,9 +3657,9 @@ __metadata:
     "@react-spring/web": "npm:~10.0.1"
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
-    "@xylabs/react-animation": "workspace:^"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
+    "@xylabs/react-animation": "workspace:~"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3687,15 +3687,15 @@ __metadata:
     "@storybook/react-vite": "npm:~9.1.2"
     "@types/react": "npm:~19.1.10"
     "@types/react-helmet": "npm:~6.1.11"
-    "@xylabs/react-app-settings": "workspace:^"
-    "@xylabs/react-appbar": "workspace:^"
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-error": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-link": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
+    "@xylabs/react-app-settings": "workspace:~"
+    "@xylabs/react-appbar": "workspace:~"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-error": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-link": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
@@ -3733,31 +3733,31 @@ __metadata:
     "@typescript-eslint/utils": "npm:~8.39.1"
     "@xylabs/eslint-config-flat": "npm:~7.1.1"
     "@xylabs/eslint-config-react-flat": "npm:~7.1.1"
-    "@xylabs/react-accordion": "workspace:^"
-    "@xylabs/react-animation": "workspace:^"
-    "@xylabs/react-appbar": "workspace:^"
-    "@xylabs/react-async-effect": "workspace:^"
-    "@xylabs/react-button": "workspace:^"
-    "@xylabs/react-common": "workspace:^"
-    "@xylabs/react-cookie-consent": "workspace:^"
-    "@xylabs/react-crypto": "workspace:^"
-    "@xylabs/react-dialogs": "workspace:^"
-    "@xylabs/react-experiments": "workspace:^"
-    "@xylabs/react-flexbox": "workspace:^"
-    "@xylabs/react-hooks": "workspace:^"
-    "@xylabs/react-identicon": "workspace:^"
-    "@xylabs/react-link": "workspace:^"
-    "@xylabs/react-mixpanel": "workspace:^"
-    "@xylabs/react-number-status": "workspace:^"
-    "@xylabs/react-pixel": "workspace:^"
-    "@xylabs/react-pixel-debugger": "workspace:^"
-    "@xylabs/react-promise": "workspace:^"
-    "@xylabs/react-quick-tip-button": "workspace:^"
-    "@xylabs/react-render-spin-check": "workspace:^"
-    "@xylabs/react-rich-result": "workspace:^"
-    "@xylabs/react-scroll-to-top": "workspace:^"
-    "@xylabs/react-shared": "workspace:^"
-    "@xylabs/react-theme": "workspace:^"
+    "@xylabs/react-accordion": "workspace:~"
+    "@xylabs/react-animation": "workspace:~"
+    "@xylabs/react-appbar": "workspace:~"
+    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-button": "workspace:~"
+    "@xylabs/react-common": "workspace:~"
+    "@xylabs/react-cookie-consent": "workspace:~"
+    "@xylabs/react-crypto": "workspace:~"
+    "@xylabs/react-dialogs": "workspace:~"
+    "@xylabs/react-experiments": "workspace:~"
+    "@xylabs/react-flexbox": "workspace:~"
+    "@xylabs/react-hooks": "workspace:~"
+    "@xylabs/react-identicon": "workspace:~"
+    "@xylabs/react-link": "workspace:~"
+    "@xylabs/react-mixpanel": "workspace:~"
+    "@xylabs/react-number-status": "workspace:~"
+    "@xylabs/react-pixel": "workspace:~"
+    "@xylabs/react-pixel-debugger": "workspace:~"
+    "@xylabs/react-promise": "workspace:~"
+    "@xylabs/react-quick-tip-button": "workspace:~"
+    "@xylabs/react-render-spin-check": "workspace:~"
+    "@xylabs/react-rich-result": "workspace:~"
+    "@xylabs/react-scroll-to-top": "workspace:~"
+    "@xylabs/react-shared": "workspace:~"
+    "@xylabs/react-theme": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.1"
     "@xylabs/tsconfig": "npm:~7.1.1"
     "@xylabs/tsconfig-dom": "npm:~7.1.1"
