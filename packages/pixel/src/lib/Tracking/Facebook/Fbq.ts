@@ -52,7 +52,10 @@ export interface FbqCaller {
 }
 
 export class Fbq implements FbqCaller {
-  private constructor(protected pixelId: string) {
+  protected pixelId: string
+
+  private constructor(pixelId: string) {
+    this.pixelId = pixelId
     this.fbq('init', pixelId)
     this.track('PageView')
   }

@@ -9,7 +9,10 @@ import type { Mixpanel } from 'mixpanel-browser'
 import { MixpanelCustomEvent } from './CustomEvent.ts'
 
 export class MixpanelUserEventHandler<T extends EmptyObject> implements UserEventHandler<T> {
-  constructor(private mixpanel: Mixpanel) {}
+  private mixpanel: Mixpanel
+  constructor(mixpanel: Mixpanel) {
+    this.mixpanel = mixpanel
+  }
 
   async funnelStarted(data: FunnelStartedFields | T) {
     const event = new MixpanelCustomEvent<FunnelStartedFields | T>('FunnelStarted', this.mixpanel)

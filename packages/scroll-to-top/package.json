@@ -41,22 +41,22 @@
     "packages/*"
   ],
   "dependencies": {
-    "react-router-dom": "^7.7.1"
+    "react-router-dom": "~7.8.0"
   },
   "devDependencies": {
-    "@types/react": "^19.1.9",
-    "@xylabs/ts-scripts-yarn3": "^7.0.3",
-    "@xylabs/tsconfig": "^7.0.3",
-    "@xylabs/tsconfig-dom": "^7.0.3",
-    "@xylabs/tsconfig-react": "^7.0.3",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "typescript": "^5.9.2"
+    "@types/react": "~19.1.10",
+    "@xylabs/ts-scripts-yarn3": "~7.1.1",
+    "@xylabs/tsconfig": "~7.1.1",
+    "@xylabs/tsconfig-dom": "~7.1.1",
+    "@xylabs/tsconfig-react": "~7.1.1",
+    "react": "~19.1.1",
+    "react-dom": "~19.1.1",
+    "typescript": "~5.9.2"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",
-    "react": "^19",
-    "react-dom": "^19"
+    "react": "~19",
+    "react-dom": "~19"
   },
   "publishConfig": {
     "access": "public"
