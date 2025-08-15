@@ -35,6 +35,9 @@ Default.args = { children: [], ...DefaultProps }
 const WithChildren = Template.bind({})
 WithChildren.args = { children: testCards, ...DefaultProps }
 
+const WithEmptyChildren = Template.bind({})
+WithEmptyChildren.args = { children: [null, ...testCards], ...DefaultProps }
+
 const WithChildrenProps = Template.bind({})
 WithChildrenProps.args = {
   children: testCards, ...DefaultProps, flexDirection: 'column', fullWidth: false,
@@ -42,4 +45,5 @@ WithChildrenProps.args = {
 
 export {
   Default, WithChildren, WithChildrenProps,
+  WithEmptyChildren,
 }
