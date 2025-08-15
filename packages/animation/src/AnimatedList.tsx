@@ -1,5 +1,4 @@
 import { animated, useTransition } from '@react-spring/web'
-import { isNumber } from '@xylabs/typeof'
 import type { CSSProperties, ReactNode } from 'react'
 import React, { useMemo, useState } from 'react'
 
@@ -15,7 +14,7 @@ export const AnimatedList: React.FC<AnimatedListProps> = ({
   fullWidth, itemStyles, items,
 }) => {
   const [height, setHeight] = useState(0)
-  const itemsWithHeight = useMemo(() => isNumber(height) ? (items ?? []) : [], [items, height])
+  const itemsWithHeight = useMemo(() => height > 0 ? (items ?? []) : [], [items, height])
 
   const transitions = useTransition(itemsWithHeight, {
     from: {
