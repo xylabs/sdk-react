@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-number-status",
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
