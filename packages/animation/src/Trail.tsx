@@ -36,7 +36,7 @@ export const Trail: React.FC<TrailProps> = ({
           className={`trail-${index}`}
           key={childArrayWithKey[index].key}
           style={{
-            ...trailStyles, ...style, display: 'flex',
+            display: 'flex', ...trailStyles, ...style,
           }}
         >
           {childArrayWithKey[index].child}
