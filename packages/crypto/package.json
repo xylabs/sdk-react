@@ -45,6 +45,7 @@
     "@xylabs/eth-address": "~5.0.11",
     "@xylabs/exists": "~5.0.11",
     "@xylabs/forget": "~5.0.11",
+    "@xylabs/hex": "~5.0.8",
     "@xylabs/promise": "~5.0.11",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
