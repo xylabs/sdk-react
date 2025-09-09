@@ -6,19 +6,19 @@ import type { EthWalletConnectorBase } from '../third-party/index.ts'
 import type { EthWalletApi } from '../types/index.ts'
 
 export class EthWalletInstance implements EthWalletApi {
-  private ethWalletConnector: EthWalletConnectorBase
+  private _ethWalletConnector: EthWalletConnectorBase
   private onError?: (error: Error) => void
 
   constructor(
     ethWalletConnector: EthWalletConnectorBase,
     onError?: (error: Error) => void,
   ) {
-    this.ethWalletConnector = ethWalletConnector
+    this._ethWalletConnector = ethWalletConnector
     this.onError = onError
   }
 
-  getEthWalletConnector() {
-    return this.ethWalletConnector
+  get ethWalletConnector() {
+    return this._ethWalletConnector
   }
 
   async switchEthereumChain(chainId?: Hex) {
