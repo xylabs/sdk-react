@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 
 import { EthWalletInstance } from '../../lib/index.ts'
 import type { EthWalletConnectorBase } from '../classes/index.ts'
@@ -14,12 +14,7 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
  * @returns
  */
 export const useEthWalletInstance = (connector: EthWalletConnectorBase) => {
-  const [error, setError] = useState<Error>()
+  const ethWalletInstance = useMemo(() => new EthWalletInstance(connector), [connector])
 
-  const ethWalletInstance = useMemo(() => new EthWalletInstance(connector, setError), [connector])
-
-  return [
-    ethWalletInstance,
-    error,
-  ]
+  return ethWalletInstance
 }
