@@ -4,7 +4,7 @@ import type { Hex } from '@xylabs/hex'
 import type { EthWalletConnectorBase } from '../third-party/index.ts'
 import type { EthWalletApi } from '../types/index.ts'
 
-export class EthWalletInstance implements EthWalletApi {
+export class EthWalletApiInstance implements EthWalletApi {
   private _ethWalletConnector: EthWalletConnectorBase
 
   constructor(ethWalletConnector: EthWalletConnectorBase) {
