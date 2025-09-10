@@ -3,11 +3,13 @@ import storybook from "eslint-plugin-storybook";
 
 // eslint.config.mjs
 
-import {   typescriptConfig,
+import {
+  typescriptConfig,
   unicornConfig,
   workspacesConfig,
   rulesConfig,
-  importConfig } from '@xylabs/eslint-config-flat'
+  importConfig
+} from '@xylabs/eslint-config-flat'
 import { reactConfig } from '@xylabs/eslint-config-react-flat'
 
 export default [{
