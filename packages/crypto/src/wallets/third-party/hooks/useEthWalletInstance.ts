@@ -1,4 +1,4 @@
-import type { EthWalletConnectorBase } from '../classes/index.ts'
+import type { EthWalletConnectorBase } from '../../classes/index.ts'
 import { useEthWallet } from './useEthWallet.tsx'
 import { useEthWalletApiInstance } from './useEthWalletApiInstance.ts'
 

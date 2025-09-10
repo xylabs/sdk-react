@@ -1,8 +1,8 @@
 import { forget } from '@xylabs/forget'
 import type { BrowserProvider, Eip1193Provider } from 'ethers'
 
+import { EthWalletConnectorBase } from '../../../classes/index.ts'
 import type { EIP6963ProviderInfo } from '../../../lib/index.ts'
-import { EthWalletConnectorBase } from '../../classes/index.ts'
 
 /**
  * A generic connector for EIP-6963 compatible wallets

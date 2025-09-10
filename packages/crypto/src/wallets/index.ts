@@ -1,3 +1,4 @@
+export * from './classes/index.ts'
 export * from './components/index.ts'
 export * from './events/index.ts'
 export * from './lib/index.ts'

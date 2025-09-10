@@ -2,7 +2,7 @@ import { assertEx } from '@xylabs/assert'
 import type { Hex } from '@xylabs/hex'
 import type { EIP1193Provider } from 'viem'
 
-import type { EthWalletConnectorBase } from '../third-party/index.ts'
+import type { EthWalletConnectorBase } from '../classes/index.ts'
 import type { EthWalletApi } from '../types/index.ts'
 
 /**
