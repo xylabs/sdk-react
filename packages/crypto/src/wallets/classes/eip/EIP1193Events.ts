@@ -4,7 +4,7 @@ import type { Listener } from 'ethers/utils'
 
 import type {
   EIP1193EventNames, EIP1193EventsCompatible, SupportedEventProposals,
-} from '../eip/index.ts'
+} from '../../eip/index.ts'
 
 /**
  * A zero dependency class that provides functionality for handling EIP1193 events
