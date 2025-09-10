@@ -1,6 +1,5 @@
 export * from './Coinbase/index.ts'
 export * from './EIP6963/index.ts'
-export * from './hooks/index.ts'
 export * from './MetaMask/index.ts'
 export * from './Phantom/index.ts'
 export * from './Trust/index.ts'

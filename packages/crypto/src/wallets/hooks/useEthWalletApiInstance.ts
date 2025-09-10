@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 
-import { useTryMethodCalls } from '../../../hooks/index.ts'
-import type { EthWalletConnectorBase } from '../../classes/index.ts'
-import { EthWalletApiInstance } from '../../classes/index.ts'
+import { useTryMethodCalls } from '../../hooks/index.ts'
+import type { EthWalletConnectorBase } from '../classes/index.ts'
+import { EthWalletApiInstance } from '../classes/index.ts'
 
 /**
  * A wrapper for the Ethereum wallet connection that adds functionality that is not
