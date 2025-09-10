@@ -1,7 +1,7 @@
 import type { EthAddressWrapper } from '@xylabs/eth-address'
 import type { BrowserProvider, JsonRpcSigner } from 'ethers'
 
-import type { EIP6963ProviderInfo } from '../lib/index.ts'
+import type { EIP6963ProviderInfo } from '../eip/index.ts'
 
 /**
  * Base interface for wallet state and interaction

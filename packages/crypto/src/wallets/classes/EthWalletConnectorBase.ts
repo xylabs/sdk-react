@@ -4,9 +4,9 @@ import type {
 } from 'ethers'
 import { LRUCache } from 'lru-cache'
 
+import type { EIP6963ProviderInfo, SupportedEventProposals } from '../eip/index.ts'
+import { EIP1193Events } from '../eip/index.ts'
 import { AccountsChangedEventName, ChainChangedEventName } from '../events/index.ts'
-import type { EIP6963ProviderInfo, SupportedEventProposals } from '../lib/index.ts'
-import { EIP1193Events } from '../lib/index.ts'
 import { findChainName } from '../utils/index.ts'
 
 /**
