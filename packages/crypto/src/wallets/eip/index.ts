@@ -1,4 +1,3 @@
-export * from './EIP1193.ts'
-export * from './EIP1193Events.ts'
-export * from './EIP6963.ts'
+export * from './1193/index.ts'
+export * from './6963/index.ts'
 export * from './SupportedEvents.ts'

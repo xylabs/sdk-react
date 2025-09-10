@@ -1,3 +1,5 @@
+export * from './DiscoveredWallets.ts'
 export * from './EthWallet.ts'
 export * from './EthWalletApi.ts'
+export * from './events/index.ts'
 export * from './SelectedWallet.tsx'
