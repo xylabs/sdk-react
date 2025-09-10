@@ -6,7 +6,7 @@ import { LRUCache } from 'lru-cache'
 
 import type { EIP6963ProviderInfo, SupportedEventProposals } from '../eip/index.ts'
 import { EIP1193Events } from '../eip/index.ts'
-import { AccountsChangedEventName, ChainChangedEventName } from '../events/index.ts'
+import { AccountsChangedEventName, ChainChangedEventName } from '../types/events/index.ts'
 import { findChainName } from '../utils/index.ts'
 
 /**

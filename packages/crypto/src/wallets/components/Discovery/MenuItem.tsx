@@ -5,8 +5,8 @@ import {
 } from '@mui/material'
 import React from 'react'
 
+import type { EIP6963Connector } from '../../classes/index.ts'
 import { useEthWallet } from '../../hooks/index.ts'
-import type { EIP6963Connector } from '../../third-party/index.ts'
 import { ConstrainedImage } from '../shared/index.ts'
 
 export interface WalletDiscoveryMenuItemInnerProps extends MenuItemProps {
