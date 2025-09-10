@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 
+import { useTryMethodCalls } from '../../../hooks/index.ts'
 import { EthWalletApiInstance } from '../../lib/index.ts'
 import type { EthWalletConnectorBase } from '../classes/index.ts'
 
@@ -14,5 +15,10 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
  * @returns
  */
 export const useEthWalletApiInstance = (connector: EthWalletConnectorBase) => {
-  return useMemo(() => new EthWalletApiInstance(connector), [connector])
+  const { instance, error } = useMemo(() => useTryMethodCalls<EthWalletApiInstance>(new EthWalletApiInstance(connector)), [connector])
+
+  return {
+    ethWalletApiInstance: instance,
+    error,
+  }
 }
