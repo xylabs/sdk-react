@@ -1,7 +1,7 @@
 import { isDefined } from '@xylabs/typeof'
 import { useMemo, useSyncExternalStore } from 'react'
 
-import type { EthWalletConnectorBase } from '../../classes/index.ts'
+import type { EthWalletConnectorBase } from '../classes/index.ts'
 
 /**
  * Subscribe to chainId changes from a given wallet
