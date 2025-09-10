@@ -1,3 +1,4 @@
+export * from './EIP1193Events.ts'
 export * from './EIP6963Connector.ts'
 export * from './EthWalletApiInstance.ts'
 export * from './EthWalletConnections.ts'
