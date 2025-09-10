@@ -7,7 +7,7 @@ export const useEthWalletInstance = (connector: EthWalletConnectorBase) => {
   const ethWallet = useEthWallet(connector)
 
   return {
-    ethWalletApiInstance,
-    ethWallet,
+    ...ethWalletApiInstance,
+    ...ethWallet,
   }
 }
