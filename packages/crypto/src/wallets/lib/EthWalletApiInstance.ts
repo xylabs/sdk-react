@@ -11,7 +11,7 @@ export class EthWalletApiInstance implements EthWalletApi {
     this._ethWalletConnector = ethWalletConnector
   }
 
-  get ethWalletConnector() {
+  private get ethWalletConnector() {
     return this._ethWalletConnector
   }
 
