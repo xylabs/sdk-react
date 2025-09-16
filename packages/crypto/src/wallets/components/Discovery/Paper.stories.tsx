@@ -3,7 +3,7 @@ import {
 } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react-vite'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { isString } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/typeof'
 import React, { useEffect, useState } from 'react'
 
 import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
@@ -88,7 +88,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
         : <Alert severity="warning">Select a wallet to see its errors</Alert>}
       <Snackbar
         anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
-        open={isString(event)}
+        open={isDefined(event)}
         autoHideDuration={5000}
         onClose={() => setEvent(undefined)}
       >
