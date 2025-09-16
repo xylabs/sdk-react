@@ -1,5 +1,4 @@
 import { EthAddressWrapper } from '@xylabs/eth-address'
-import { isArray } from '@xylabs/typeof'
 import { useMemo, useSyncExternalStore } from 'react'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'
