@@ -1,5 +1,6 @@
 import { EthAddressWrapper } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
+import { isDefined } from '@xylabs/typeof'
 import { useMemo } from 'react'
 
 import type { EthWallet } from '../../types/index.ts'
@@ -13,12 +14,12 @@ import { useSigner } from './useSigner.tsx'
 /**
  * A hook that takes an instance of EthWalletConnectorBase and makes certain functionality reactive.
  */
-export const useEthWallet = (connector: EthWalletConnectorBase): EthWallet => {
+export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
   const [currentAccount, additionalAccounts] = useCurrentAccount(connector)
 
   const chainId = useChainId(connector)
 
-  const chainName = useMemo(() => (chainId ? connector.chainName : undefined), [chainId, connector])
+  const chainName = useMemo(() => (isDefined(chainId) && isDefined(connector?.chainName) ? connector.chainName : undefined), [chainId, connector])
 
   const { provider, providerName } = useProvider(connector)
 
@@ -30,11 +31,11 @@ export const useEthWallet = (connector: EthWalletConnectorBase): EthWallet => {
 
   const [signerAddress] = usePromise(async () => EthAddressWrapper.fromString(await signer?.getAddress()), [signer])
 
-  const signMessage = useMemo(() => connector.signMessage.bind(connector), [connector])
+  const signMessage = useMemo(() => connector?.signMessage.bind(connector), [connector])
 
-  const installed = useMemo(() => connector.installed, [connector.installed])
+  const installed = useMemo(() => connector?.installed, [connector?.installed])
 
-  const providerInfo = useMemo(() => connector.providerInfo, [connector.providerInfo])
+  const providerInfo = useMemo(() => connector?.providerInfo, [connector?.providerInfo])
 
   return {
     additionalAccounts,

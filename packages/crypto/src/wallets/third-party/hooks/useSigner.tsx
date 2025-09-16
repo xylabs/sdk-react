@@ -5,9 +5,9 @@ import type { JsonRpcSigner } from 'ethers'
 import type { EthWalletConnectorBase } from '../classes/index.ts'
 
 /** Locate the signer on the passed wallet for a given address */
-export const useSigner = (ethWalletConnector: EthWalletConnectorBase, localAddress?: EthAddressWrapper): JsonRpcSigner | undefined => {
+export const useSigner = (ethWalletConnector?: EthWalletConnectorBase, localAddress?: EthAddressWrapper): JsonRpcSigner | undefined => {
   const [signer] = usePromise(async () => {
-    if (ethWalletConnector.installed) {
+    if (ethWalletConnector?.installed) {
       try {
         // In a browser context, we should never build a signer without first having an allowed address
         if (localAddress) {

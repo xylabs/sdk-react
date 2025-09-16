@@ -1,3 +1,4 @@
+import { isDefined } from '@xylabs/typeof'
 import { useMemo, useSyncExternalStore } from 'react'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'
@@ -7,12 +8,12 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
  *
  * Note: Its easier for ethWalletConnector to be defined to avoid complex method signatures for subscribe function
  **/
-export const useChainId = (ethWalletConnector: EthWalletConnectorBase) => {
+export const useChainId = (ethWalletConnector?: EthWalletConnectorBase) => {
   const { getSnapShot, subscribe } = useMemo(() => {
-    if (ethWalletConnector.installed) {
+    if (ethWalletConnector?.installed) {
       return {
-        getSnapShot: () => ethWalletConnector.chainId,
-        subscribe: (onStoreChange: () => void) => ethWalletConnector.subscribeToChainChanges(onStoreChange),
+        getSnapShot: () => isDefined(ethWalletConnector) ? ethWalletConnector.chainId : undefined,
+        subscribe: (onStoreChange: () => void) => ethWalletConnector?.subscribeToChainChanges(onStoreChange),
       }
     }
     return {

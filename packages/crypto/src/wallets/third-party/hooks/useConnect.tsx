@@ -24,13 +24,14 @@ const handleActionRejected = (e: unknown, rejectCallback: (e: JsonRpcError['erro
 }
 
 /** Initiate a connection to the passed in wallet */
-export const useConnectWallet = (ethWalletConnector: EthWalletConnectorBase) => {
+export const useConnectWallet = (ethWalletConnector?: EthWalletConnectorBase) => {
   const [connectRefused, setConnectRefused] = useState(false)
   const [connectError, setConnectError] = useState<Error>()
 
   const connectWallet = useCallback(async () => {
+    if (!ethWalletConnector) return
     try {
-      const accounts = await ethWalletConnector.connectWallet()
+      const accounts = await ethWalletConnector?.connectWallet()
       setConnectRefused(false)
       setConnectError(undefined)
       return checkAccounts(accounts)
@@ -42,7 +43,7 @@ export const useConnectWallet = (ethWalletConnector: EthWalletConnectorBase) => 
     }
   }, [ethWalletConnector])
 
-  if (ethWalletConnector.installed) {
+  if (ethWalletConnector?.installed) {
     return {
       connectError, connectRefused, connectWallet,
     }
