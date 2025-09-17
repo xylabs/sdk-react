@@ -2802,6 +2802,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xylabs/hex@npm:~5.0.8":
+  version: 5.0.11
+  resolution: "@xylabs/hex@npm:5.0.11"
+  dependencies:
+    "@xylabs/typeof": "npm:~5.0.11"
+    zod: "npm:~4.1.3"
+  checksum: 10c0/d5d8919db262b474c1aa711fd02b8536818c18330442254806daf0349a9e635abb67dda39cb0f81cc4d36c79107639fa1af0debdfb9e8392a4753baa39f7d1e4
+  languageName: node
+  linkType: hard
+
 "@xylabs/log@npm:~5.0.8":
   version: 5.0.8
   resolution: "@xylabs/log@npm:5.0.8"
@@ -3148,6 +3158,7 @@ __metadata:
     "@xylabs/eth-address": "npm:~5.0.8"
     "@xylabs/exists": "npm:~5.0.8"
     "@xylabs/forget": "npm:~5.0.8"
+    "@xylabs/hex": "npm:~5.0.8"
     "@xylabs/promise": "npm:~5.0.8"
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-button": "workspace:~"
@@ -3864,6 +3875,13 @@ __metadata:
   version: 7.1.1
   resolution: "@xylabs/tsconfig@npm:7.1.1"
   checksum: 10c0/3ac1c1232a96fd7e2038a337569d38792293ad993d220d6ff92d0adac16505003f829088a4d6e803fc262491eadd0f546e5e34c9ddd22ef4bd4078ac35591a51
+  languageName: node
+  linkType: hard
+
+"@xylabs/typeof@npm:~5.0.11":
+  version: 5.0.11
+  resolution: "@xylabs/typeof@npm:5.0.11"
+  checksum: 10c0/782dda44af6fc764bb2cf776224e5ccfef03b56b32094fd0d064e9bda8ad91b8c422c11cb583909453045d42cb94f6b1a4ec74d6bc585706f6df0ad605d1eac5
   languageName: node
   linkType: hard
 
@@ -11044,5 +11062,12 @@ __metadata:
   version: 4.0.17
   resolution: "zod@npm:4.0.17"
   checksum: 10c0/c56ef4cc02f8f52be8724c5a8b338266202d68477c7606bee9b7299818b75c9adc27f16f4b6704a372f3e7578bd016f389de19bfec766564b7c39d0d327c540a
+  languageName: node
+  linkType: hard
+
+"zod@npm:~4.1.3":
+  version: 4.1.5
+  resolution: "zod@npm:4.1.5"
+  checksum: 10c0/7826fb931bc71d4d0fff2fbb72f1a1cf30a6672cf9dbe6933a216bbb60242ef1c3bdfbcd3c5b27e806235a35efaad7a4a9897ff4d3621452f9ea278bce6fd42a
   languageName: node
   linkType: hard

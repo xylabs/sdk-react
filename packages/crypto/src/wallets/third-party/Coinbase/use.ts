@@ -1,5 +1,5 @@
+import { useEthWallet } from '../../hooks/index.ts'
 import type { EthWallet } from '../../types/index.ts'
-import { useEthWallet } from '../hooks/index.ts'
 import { CoinbaseConnector } from './CoinbaseConnector.ts'
 
 let coinbaseConnector: CoinbaseConnector | undefined
