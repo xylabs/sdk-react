@@ -44,8 +44,7 @@
     "@xylabs/promise": "~5.0.11",
     "@xylabs/react-pixel": "workspace:~",
     "@xylabs/react-shared": "workspace:~",
-    "@xylabs/typeof": "~5.0.11",
-    "react-router-dom": "~7.9.1"
+    "@xylabs/typeof": "~5.0.11"
   },
   "devDependencies": {
     "@mui/material": "~7.3.2",
@@ -59,7 +58,7 @@
     "@xylabs/tsconfig-react": "~7.1.7",
     "react": "~19.1.1",
     "react-dom": "~19.1.1",
-    "react-router-dom": "~7.9.1",
+    "react-router-dom": "^7.9.1",
     "storybook": "~9.1.7",
     "typescript": "~5.9.2",
     "vite": "~7.1.7"
@@ -67,7 +66,8 @@
   "peerDependencies": {
     "@mui/material": ">=6 <8",
     "react": "~19",
-    "react-dom": "~19"
+    "react-dom": "~19",
+    "react-router-dom": "^7"
   },
   "publishConfig": {
     "access": "public"
