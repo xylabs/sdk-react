@@ -45,7 +45,6 @@
     "@react-spring/web": "~10.0.1",
     "@xylabs/react-animation": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
-    "react-router-dom": "~7.8.0",
     "recharts": "~3.1.2"
   },
   "devDependencies": {
@@ -62,7 +61,7 @@
     "react": "~19.1.1",
     "react-dom": "~19.1.1",
     "react-is": "~19.1.1",
-    "react-router-dom": "~7.8.0",
+    "react-router-dom": "~7",
     "recharts": "~3.1.2",
     "storybook": "~9.1.2",
     "typescript": "~5.9.2",
@@ -70,7 +69,9 @@
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",
-    "react": "~19"
+    "react": "~19",
+    "react-dom": "~19",
+    "react-router-dom": "~7"
   },
   "publishConfig": {
     "access": "public"
