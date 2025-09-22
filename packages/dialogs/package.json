@@ -45,19 +45,19 @@
     "@xylabs/react-flexbox": "workspace:~"
   },
   "devDependencies": {
-    "@mui/material": "~7.3.1",
-    "@storybook/react-vite": "~9.1.2",
-    "@types/react": "~19.1.10",
-    "@xylabs/ts-scripts-yarn3": "~7.1.1",
-    "@xylabs/tsconfig": "~7.1.1",
-    "@xylabs/tsconfig-dom": "~7.1.1",
-    "@xylabs/tsconfig-react": "~7.1.1",
-    "axios": "~1.11.0",
+    "@mui/material": "~7.3.2",
+    "@storybook/react-vite": "~9.1.7",
+    "@types/react": "~19.1.13",
+    "@xylabs/ts-scripts-yarn3": "~7.1.7",
+    "@xylabs/tsconfig": "~7.1.7",
+    "@xylabs/tsconfig-dom": "~7.1.7",
+    "@xylabs/tsconfig-react": "~7.1.7",
+    "axios": "~1.12.2",
     "react": "~19.1.1",
     "react-dom": "~19.1.1",
-    "storybook": "~9.1.2",
+    "storybook": "~9.1.7",
     "typescript": "~5.9.2",
-    "vite": "~7.1.2"
+    "vite": "~7.1.7"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",

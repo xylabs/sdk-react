@@ -42,15 +42,15 @@
   ],
   "dependencies": {
     "@xylabs/react-shared": "workspace:~",
-    "mixpanel-browser": "~2.68.0"
+    "mixpanel-browser": "~2.70.0"
   },
   "devDependencies": {
     "@types/mixpanel-browser": "~2.66.0",
-    "@types/react": "~19.1.10",
-    "@xylabs/ts-scripts-yarn3": "~7.1.1",
-    "@xylabs/tsconfig": "~7.1.1",
-    "@xylabs/tsconfig-dom": "~7.1.1",
-    "@xylabs/tsconfig-react": "~7.1.1",
+    "@types/react": "~19.1.13",
+    "@xylabs/ts-scripts-yarn3": "~7.1.7",
+    "@xylabs/tsconfig": "~7.1.7",
+    "@xylabs/tsconfig-dom": "~7.1.7",
+    "@xylabs/tsconfig-react": "~7.1.7",
     "react": "~19.1.1",
     "typescript": "~5.9.2"
   },
