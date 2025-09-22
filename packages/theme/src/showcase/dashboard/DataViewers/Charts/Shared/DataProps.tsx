@@ -73,6 +73,7 @@ export interface DailyVerificationStackedChartProps {
 }
 
 export interface PieChartDataPoint {
+  [key: string]: unknown
   name: string
   value: number
 }
