@@ -5,6 +5,7 @@ import {
   Typography,
 } from '@mui/material'
 import { FlexCol } from '@xylabs/react-flexbox'
+import { isDefined } from '@xylabs/typeof'
 import type { ReactNode } from 'react'
 import React from 'react'
 
@@ -44,7 +45,7 @@ export const DataCard: React.FC<DataCardProps> = ({
           <DataCardSpeedDial size={size} />
         )}
       />
-      {dataDescription
+      {isDefined(dataDescription)
         ? (
             <CardContent sx={{ paddingY: 0 }}>
               <FlexCol alignItems="stretch">

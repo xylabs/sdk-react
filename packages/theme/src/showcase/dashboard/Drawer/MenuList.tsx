@@ -2,6 +2,7 @@ import {
   List, ListItem, ListItemIcon, ListItemText, type ListProps,
   useTheme,
 } from '@mui/material'
+import { isDefined } from '@xylabs/typeof'
 import React, { useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 
@@ -58,16 +59,18 @@ export const BaseMenuList: React.FC<BaseMenuListProps> = (props) => {
               >
                 <StyledMenuIconWrapSpan
                   ref={(ref: HTMLSpanElement) => {
-                    if (ref) {
+                    if (isDefined(ref)) {
                       ref.innerHTML = icon ?? ''
                     }
                   }}
                 />
               </ListItemIcon>
               <ListItemText
-                primaryTypographyProps={{
-                  fontWeight: pathMatch(path, matchType) ? 'bold' : 'inherit',
-                  color: pathMatch(path, matchType) ? 'inherit' : alphaCss(theme.vars.palette.text.primary, 0.5),
+                slotProps={{
+                  primary: {
+                    fontWeight: pathMatch(path, matchType) ? 'bold' : 'inherit',
+                    color: pathMatch(path, matchType) ? 'inherit' : alphaCss(theme.vars.palette.text.primary, 0.5),
+                  },
                 }}
                 primary={primaryText}
               />

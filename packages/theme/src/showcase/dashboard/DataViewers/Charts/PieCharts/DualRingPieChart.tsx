@@ -2,6 +2,7 @@ import {
   Box, Typography, useTheme,
 } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
+import { isDefined } from '@xylabs/typeof'
 import React, { useState } from 'react'
 import {
   Cell, Pie, PieChart, ResponsiveContainer, Tooltip,
@@ -92,7 +93,7 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
             ))}
           </Pie>
           {/* Outer Ring */}
-          {data02 && (
+          {isDefined(data02) && (
             <Pie
               data={data02}
               dataKey="value"

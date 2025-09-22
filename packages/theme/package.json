@@ -45,6 +45,7 @@
     "@react-spring/web": "~10.0.3",
     "@xylabs/react-animation": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
+    "@xylabs/typeof": "~5.0.11",
     "recharts": "~3.2.1"
   },
   "devDependencies": {

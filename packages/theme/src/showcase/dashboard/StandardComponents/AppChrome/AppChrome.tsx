@@ -60,7 +60,7 @@ export const AppChrome: React.FC<AppChromeProps> = ({ items }) => {
   // Get the path of the first item to use as the default route
   const defaultPath = menuItems[0].path
 
-  const dockedDrawerWidth = (theme.components?.MuiDrawer?.styleOverrides?.docked as CSSObject)?.width || '96px'
+  const dockedDrawerWidth = (theme.components?.MuiDrawer?.styleOverrides?.docked as CSSObject)?.width ?? '96px'
 
   return (
     <Box sx={{ display: 'flex' }}>

@@ -5,6 +5,7 @@ import {
   useTheme,
 } from '@mui/material'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import { isDefined } from '@xylabs/typeof'
 import React from 'react'
 
 import type { DataCardProps } from '../DataCard/index.ts'
@@ -80,7 +81,7 @@ export const StatCard: React.FC<StatCardProps> = ({
               </Typography>
             </FlexRow>
           </FlexRow>
-          {description && (
+          {isDefined(description) && (
             <Typography variant="body2" sx={{ color: changeColor }}>
               {description}
             </Typography>

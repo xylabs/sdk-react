@@ -7,6 +7,7 @@ import {
 } from '@mui/material'
 import type { Theme } from '@mui/material/styles'
 import { useTheme } from '@mui/material/styles'
+import { isTruthy } from '@xylabs/typeof'
 import React from 'react'
 
 interface RecursiveAccordionProps {
@@ -21,7 +22,7 @@ const RecursiveAccordion: React.FC<RecursiveAccordionProps> = ({
   return (
     <>
       {Object.entries(data).map(([key, value]) => {
-        const currentPath = path ? `${path}.${key}` : key
+        const currentPath = isTruthy(path) ? `${path}.${key}` : key
         const isObject = typeof value === 'object' && value !== null
 
         return (
