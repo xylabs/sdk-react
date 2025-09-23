@@ -48,7 +48,7 @@ export const CookieConsentBody: React.FC<CookieConsentProps> = ({
     }, acceptOnTimer)
   }
 
-  if (isString(storageName)) {
+  if (!isString(storageName)) {
     return (
       <FlexRow justifyContent="center" paddingY={2} {...props}>
         <Typography color="error" variant="body1">
