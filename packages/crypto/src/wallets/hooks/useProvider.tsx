@@ -5,7 +5,7 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
 
 export const useProvider = (ethWalletConnector?: EthWalletConnectorBase) => {
   if (isUndefined(ethWalletConnector) || !ethWalletConnector.installed) return {
-    provider: undefined, providerName: undefined, rawProvider: undefineds,
+    provider: undefined, providerName: undefined, rawProvider: undefined,
   }
 
   return useMemo(() => {
