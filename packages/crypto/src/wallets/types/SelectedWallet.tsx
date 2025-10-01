@@ -1,4 +1,4 @@
-import type { BrowserProvider, Eip1193Provider } from 'ethers'
+import type { BrowserProvider, Eip1193Provider } from 'ethers/providers'
 
 import type { EIP6963ProviderInfo } from '../eip/index.ts'
 
