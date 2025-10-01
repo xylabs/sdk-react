@@ -1,10 +1,11 @@
 import type { CardProps } from '@mui/material'
 import { Card } from '@mui/material'
 import { EthAddressWrapper } from '@xylabs/eth-address'
+import type { Hex } from '@xylabs/hex'
 import React, { useMemo, useState } from 'react'
 
 import type { EIP6963Connector } from '../../classes/index.ts'
-import { useEthWallet } from '../../hooks/index.ts'
+import { useEthWalletInstance } from '../../hooks/index.ts'
 import { WalletOverviewCardActions } from './CardActions.tsx'
 import { WalletOverviewCardContent } from './CardContent.tsx'
 import { WalletOverviewCardHeader } from './CardHeader.tsx'
@@ -15,9 +16,18 @@ export interface WalletOverviewCardProps extends CardProps {
 
 export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalletConnector, ...props }) => {
   const {
-    connectWallet, connectRefused, chainName, connectError, currentAccount, providerInfo, providerName, signMessage, signerAddress,
-  }
-    = useEthWallet(ethWalletConnector)
+    chainId,
+    connectWallet,
+    connectRefused,
+    chainName,
+    connectError,
+    currentAccount,
+    providerInfo,
+    providerName,
+    ethWalletApiInstance,
+    signMessage,
+    signerAddress,
+  } = useEthWalletInstance(ethWalletConnector)
   const [signResponse, setSignResponse] = useState<EthAddressWrapper>()
 
   useMemo(() => {
@@ -27,6 +37,12 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
   const onSign = async () => {
     const signResult = await signMessage?.('test')
     setSignResponse(EthAddressWrapper.fromString(signResult))
+  }
+
+  const onSwitchChain = async () => {
+    const mainnet = '0x1' as Hex
+    const sepolia = '0xaa36a7' as Hex
+    await (chainId === 1 ? ethWalletApiInstance.switchEthereumChain(sepolia) : ethWalletApiInstance.switchEthereumChain(mainnet))
   }
 
   return (
@@ -39,7 +55,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
         currentAccount={currentAccount}
         signResponse={signResponse}
       />
-      <WalletOverviewCardActions connectWallet={connectWallet} currentAccount={currentAccount} onSign={onSign} />
+      <WalletOverviewCardActions connectWallet={connectWallet} currentAccount={currentAccount} onSign={onSign} onSwitchChain={onSwitchChain} />
     </Card>
   )
 }

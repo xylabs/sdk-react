@@ -67,7 +67,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
       <FlexRow justifyContent="start" alignItems="start" gap={4}>
         <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
         {selectedWallet?.rawProvider
-          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} />
+          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '436px' }} />
           : null}
       </FlexRow>
       {selectedWallet

@@ -1,8 +1,7 @@
 import {
-  arbitrum, base, mainnet, optimism, polygon,
-// eslint-disable-next-line import-x/no-internal-modules
+  arbitrum, base, mainnet, optimism, polygon, sepolia,
 } from 'viem/chains'
 
-const chains = [mainnet, polygon, arbitrum, optimism, base]
+const chains = [mainnet, polygon, arbitrum, optimism, base, sepolia]
 
 export const findChainName = (chainId: number) => chains.find(chain => chain.id === chainId)
