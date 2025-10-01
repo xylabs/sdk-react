@@ -6,7 +6,7 @@ import { EthWalletApiInstance } from '../classes/index.ts'
 
 /**
  * A wrapper for the Ethereum wallet connection that adds functionality that is not
- * supported by the provider interface directly.
+ * supported by the BrowserProvider class directly.
  *
  * Metamask in particular supports many `wallet_*` rpc calls have their own EIP-* proposal.
  * See - https://docs.metamask.io/wallet/reference/json-rpc-methods/
