@@ -1,7 +1,7 @@
 import type { Hex } from '@xylabs/hex'
 
 /**
- * An interface that includes methods to support other EIP proposals that are wallet
+ * An interface that includes methods defined in other EIP proposals that are wallet
  * specific and not supported by an Ethereum Provider (i.e. BrowserProvider) directly.
  */
 export interface EthWalletApi {
