@@ -15,7 +15,8 @@ import { EthWalletApiInstance } from '../classes/index.ts'
  * @returns
  */
 export const useEthWalletApiInstance = (connector: EthWalletConnectorBase) => {
-  const { instance, error } = useMemo(() => useTryMethodCalls<EthWalletApiInstance>(new EthWalletApiInstance(connector)), [connector])
+  const apiInstance = useMemo(() => new EthWalletApiInstance(connector), [connector])
+  const { instance, error } = useTryMethodCalls<EthWalletApiInstance>(apiInstance)
 
   return {
     ethWalletApiInstance: instance,
