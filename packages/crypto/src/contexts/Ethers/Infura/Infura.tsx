@@ -1,5 +1,5 @@
-import type { BrowserProvider } from 'ethers'
-import { InfuraProvider } from 'ethers'
+import type { BrowserProvider } from 'ethers/providers'
+import { InfuraProvider } from 'ethers/providers'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'
 

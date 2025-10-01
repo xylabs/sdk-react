@@ -1,7 +1,7 @@
 import { forget } from '@xylabs/forget'
-import { BrowserProvider } from 'ethers'
+import { BrowserProvider } from 'ethers/providers'
 
-import { EthWalletConnectorBase } from '../classes/index.ts'
+import { EthWalletConnectorBase } from '../../classes/index.ts'
 import type { TrustProvider } from './lib/index.ts'
 
 export class TrustConnector extends EthWalletConnectorBase {

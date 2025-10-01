@@ -5,7 +5,6 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import { isBigInt, isString } from '@xylabs/typeof'
 import React from 'react'
 
-// eslint-disable-next-line import-x/no-internal-modules
 import xyoLogo from './img/xyo.svg'
 import type { TokenAmountProps } from './TokenAmountProps.tsx'
 

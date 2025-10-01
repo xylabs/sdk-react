@@ -6,8 +6,8 @@ import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { isDefined } from '@xylabs/typeof'
 import React, { useEffect, useState } from 'react'
 
-import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
-import type { EIP6963Connector } from '../../third-party/index.ts'
+import type { EIP6963Connector } from '../../classes/index.ts'
+import { AccountsChangedEventName, ChainChangedEventName } from '../../types/events/index.ts'
 import { WalletOverviewCard } from '../Overview/index.ts'
 import type { onWalletSelect } from './lib/index.ts'
 import type { WalletDiscoveryPaperProps } from './Paper.tsx'
@@ -67,7 +67,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
       <FlexRow justifyContent="start" alignItems="start" gap={4}>
         <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
         {selectedWallet?.rawProvider
-          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '300px' }} />
+          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '436px' }} />
           : null}
       </FlexRow>
       {selectedWallet

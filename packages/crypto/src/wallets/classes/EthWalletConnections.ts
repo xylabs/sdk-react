@@ -1,9 +1,9 @@
 import { isString } from '@xylabs/typeof'
-import { BrowserProvider } from 'ethers'
+import { BrowserProvider } from 'ethers/providers'
 
-import { isEIP6963AnnounceProviderEvent } from '../../../lib/index.ts'
-import { EIP6963Connector } from './EIP6963Connector.ts'
-import type { DiscoveredWallets } from './types/index.ts'
+import { isEIP6963AnnounceProviderEvent } from '../eip/index.ts'
+import type { DiscoveredWallets } from '../types/index.ts'
+import { EIP6963Connector, type EIP6963Connector as EIP6963ConnectorInterface } from './eip/index.ts'
 
 export type WalletListener = () => void
 
@@ -15,7 +15,7 @@ export class EthWalletConnections {
     this.setupListeners()
   }
 
-  addWallet(wallet: EIP6963Connector) {
+  addWallet(wallet: EIP6963ConnectorInterface) {
     const walletName = wallet.providerInfo?.rdns
     if (isString(walletName) && !this.discoveredWallets[walletName]) {
       this.discoveredWallets = {
@@ -31,7 +31,7 @@ export class EthWalletConnections {
     globalThis.removeEventListener('eip6963:announceProvider', this.newWalletListener.bind(this))
   }
 
-  removeWallet(wallet: EIP6963Connector) {
+  removeWallet(wallet: EIP6963ConnectorInterface) {
     const walletName = wallet.providerInfo?.rdns
     if (isString(walletName) && this.discoveredWallets[walletName]) {
       delete this.discoveredWallets[walletName]

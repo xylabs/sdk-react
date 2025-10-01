@@ -3,8 +3,8 @@ import { usePromise } from '@xylabs/react-promise'
 import { isDefined } from '@xylabs/typeof'
 import { useMemo } from 'react'
 
-import type { EthWallet } from '../../types/index.ts'
 import type { EthWalletConnectorBase } from '../classes/index.ts'
+import type { EthWallet } from '../types/index.ts'
 import { useChainId } from './useChainId.tsx'
 import { useConnectWallet } from './useConnect.tsx'
 import { useCurrentAccount } from './useCurrentAccount.tsx'
@@ -21,7 +21,9 @@ export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
 
   const chainName = useMemo(() => (isDefined(chainId) && isDefined(connector?.chainName) ? connector.chainName : undefined), [chainId, connector])
 
-  const { provider, providerName } = useProvider(connector)
+  const {
+    provider, providerName, rawProvider,
+  } = useProvider(connector)
 
   const {
     connectWallet, connectRefused, connectError,
@@ -48,6 +50,7 @@ export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
     installed,
     provider,
     providerInfo,
+    rawProvider,
     providerName,
     signMessage,
     signer,

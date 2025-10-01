@@ -1,8 +1,8 @@
 import { forget } from '@xylabs/forget'
-import type { Eip1193Provider } from 'ethers'
-import { BrowserProvider } from 'ethers'
+import type { Eip1193Provider } from 'ethers/providers'
+import { BrowserProvider } from 'ethers/providers'
 
-import { EthWalletConnectorBase } from '../classes/index.ts'
+import { EthWalletConnectorBase } from '../../classes/index.ts'
 
 const PROVIDER_NAME = 'Phantom'
 

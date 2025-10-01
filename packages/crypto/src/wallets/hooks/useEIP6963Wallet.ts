@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 
-import type { EthWallet, SelectedWallet } from '../../types/index.ts'
-import { useEthWallet } from '../hooks/index.ts'
-import { EIP6963Connector } from './classes/index.ts'
+import { EIP6963Connector } from '../classes/index.ts'
+import type { EthWallet, SelectedWallet } from '../types/index.ts'
+import { useEthWallet } from './useEthWallet.tsx'
 
 export const useEIP6963Wallet = (selectedWallet: SelectedWallet | undefined): EthWallet => {
   const {

@@ -1,4 +1,5 @@
-import type { Eip1193Provider } from 'ethers'
+import { isDefined } from '@xylabs/typeof'
+import type { Eip1193Provider } from 'ethers/providers'
 
 /**
  * Assets needed to display a wallet
@@ -33,5 +34,5 @@ export interface EIP6963AnnounceProviderEvent extends CustomEvent {
  */
 export const isEIP6963AnnounceProviderEvent = (event: Event): event is EIP6963AnnounceProviderEvent => {
   const castEvent = event as EIP6963AnnounceProviderEvent
-  return !!castEvent.detail && !!castEvent.detail.info && !!castEvent.detail.provider
+  return isDefined(castEvent.detail) && isDefined(castEvent.detail.info) && isDefined(castEvent.detail.provider)
 }

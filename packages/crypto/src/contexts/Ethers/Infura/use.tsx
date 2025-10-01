@@ -1,4 +1,4 @@
-import { InfuraProvider } from 'ethers'
+import { InfuraProvider } from 'ethers/providers'
 import { useMemo } from 'react'
 
 import { infuraKey } from './Infura.tsx'

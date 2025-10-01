@@ -3,7 +3,7 @@ import { Alert } from '@mui/material'
 import { exists } from '@xylabs/exists'
 import React from 'react'
 
-import type { DiscoveredWallets } from '../../third-party/index.ts'
+import type { DiscoveredWallets } from '../../types/index.ts'
 import type { onWalletSelect } from './lib/index.ts'
 import { WalletDiscoveryMenuItem } from './MenuItem.tsx'
 

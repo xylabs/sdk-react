@@ -9,10 +9,11 @@ export interface WalletOverviewCardActions extends CardActionsProps {
   connectWallet?: () => Promise<string[] | null | undefined>
   currentAccount?: EthAddressWrapper
   onSign?: () => Promisable<void>
+  onSwitchChain?: () => Promisable<void>
 }
 
 export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({
-  connectWallet, currentAccount, onSign,
+  connectWallet, currentAccount, onSign, onSwitchChain, sx, ...props
 }) => {
   const [connecting, setConnecting] = useState(false)
 
@@ -30,12 +31,15 @@ export const WalletOverviewCardActions: React.FC<WalletOverviewCardActions> = ({
     )
 
   return (
-    <CardActions sx={{ justifyContent: 'center' }}>
+    <CardActions sx={{ justifyContent: 'center', ...sx }} {...props}>
       <Button disabled={!currentAccount} variant="contained" onClick={() => (onSign ? forget(Promise.resolve(onSign())) : undefined)} size="small">
         Sign Test Message
       </Button>
       <Button size="small" disabled={connecting || !!currentAccount} variant="contained" onClick={onConnect}>
         {currentAccount ? 'Connected' : 'Connect'}
+      </Button>
+      <Button size="small" variant="contained" onClick={() => void onSwitchChain?.()}>
+        Switch Chain
       </Button>
     </CardActions>
   )

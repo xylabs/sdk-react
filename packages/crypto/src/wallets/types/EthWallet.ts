@@ -1,7 +1,9 @@
 import type { EthAddressWrapper } from '@xylabs/eth-address'
-import type { BrowserProvider, JsonRpcSigner } from 'ethers'
+import type {
+  BrowserProvider, Eip1193Provider, JsonRpcSigner,
+} from 'ethers/providers'
 
-import type { EIP6963ProviderInfo } from '../lib/index.ts'
+import type { EIP6963ProviderInfo } from '../eip/index.ts'
 
 /**
  * Base interface for wallet state and interaction
@@ -18,6 +20,7 @@ export interface EthWallet {
   provider?: BrowserProvider
   providerInfo?: EIP6963ProviderInfo
   providerName?: string
+  rawProvider?: Eip1193Provider
   signMessage?: (message: string, address?: string) => Promise<string | undefined>
   signer?: JsonRpcSigner
   signerAddress?: EthAddressWrapper

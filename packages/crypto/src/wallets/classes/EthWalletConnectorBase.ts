@@ -1,13 +1,14 @@
 import { isDefined, isString } from '@xylabs/typeof'
 import type {
-  BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener,
-} from 'ethers'
+  BrowserProvider, Eip1193Provider, JsonRpcSigner,
+} from 'ethers/providers'
+import type { Listener } from 'ethers/utils'
 import { LRUCache } from 'lru-cache'
 
-import { AccountsChangedEventName, ChainChangedEventName } from '../../events/index.ts'
-import type { EIP6963ProviderInfo, SupportedEventProposals } from '../../lib/index.ts'
-import { EIP1193Events } from '../../lib/index.ts'
-import { findChainName } from '../../utils/index.ts'
+import type { EIP6963ProviderInfo, SupportedEventProposals } from '../eip/index.ts'
+import { AccountsChangedEventName, ChainChangedEventName } from '../types/events/index.ts'
+import { findChainName } from '../utils/index.ts'
+import { EIP1193Events } from './eip/index.ts'
 
 /**
  * Base class for connecting to an ethereum compatible wallet
