@@ -1,6 +1,6 @@
 import { assertEx } from '@xylabs/assert'
 import type { Hex } from '@xylabs/hex'
-import type { EIP1193Provider } from 'viem'
+import type { Eip1193Provider } from 'ethers/providers'
 
 import type { EthWalletApi } from '../types/index.ts'
 import type { EthWalletConnectorBase } from './EthWalletConnectorBase.ts'
@@ -21,9 +21,9 @@ export class EthWalletApiInstance implements EthWalletApi {
     this._ethWalletConnector = ethWalletConnector
   }
 
-  private get eip1193Provider(): EIP1193Provider {
+  private get eip1193Provider(): Eip1193Provider {
     return assertEx('request' in (this.ethWalletConnector.provider || {})
-      ? this.ethWalletConnector.provider as unknown as EIP1193Provider
+      ? this.ethWalletConnector.provider as unknown as Eip1193Provider
       : null, () => 'Provider does not support request method')
   }
 
