@@ -4,12 +4,17 @@ import { useMemo } from 'react'
 import type { EthWalletConnectorBase } from '../classes/index.ts'
 
 export const useProvider = (ethWalletConnector?: EthWalletConnectorBase) => {
-  if (isUndefined(ethWalletConnector) || !ethWalletConnector.installed) return { provider: undefined, providerName: undefined }
+  if (isUndefined(ethWalletConnector) || !ethWalletConnector.installed) return {
+    provider: undefined, providerName: undefined, rawProvider: undefineds,
+  }
 
   return useMemo(() => {
     const provider = ethWalletConnector.provider
     const providerName = ethWalletConnector.providerName
+    const rawProvider = ethWalletConnector.rawProvider
 
-    return { provider, providerName }
+    return {
+      provider, providerName, rawProvider,
+    }
   }, [ethWalletConnector])
 }

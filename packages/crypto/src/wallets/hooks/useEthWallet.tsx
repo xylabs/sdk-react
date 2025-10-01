@@ -21,7 +21,9 @@ export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
 
   const chainName = useMemo(() => (isDefined(chainId) && isDefined(connector?.chainName) ? connector.chainName : undefined), [chainId, connector])
 
-  const { provider, providerName } = useProvider(connector)
+  const {
+    provider, providerName, rawProvider,
+  } = useProvider(connector)
 
   const {
     connectWallet, connectRefused, connectError,
@@ -48,6 +50,7 @@ export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
     installed,
     provider,
     providerInfo,
+    rawProvider,
     providerName,
     signMessage,
     signer,

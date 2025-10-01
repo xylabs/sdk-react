@@ -22,8 +22,8 @@ export class EthWalletApiInstance implements EthWalletApi {
   }
 
   private get eip1193Provider(): Eip1193Provider {
-    return assertEx('request' in (this.ethWalletConnector.provider || {})
-      ? this.ethWalletConnector.provider as unknown as Eip1193Provider
+    return assertEx('request' in (this.ethWalletConnector.rawProvider || {})
+      ? this.ethWalletConnector.rawProvider
       : null, () => 'Provider does not support request method')
   }
 
