@@ -1,6 +1,6 @@
 import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
-import type { JsonRpcSigner } from 'ethers'
+import type { JsonRpcSigner } from 'ethers/providers'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'
 

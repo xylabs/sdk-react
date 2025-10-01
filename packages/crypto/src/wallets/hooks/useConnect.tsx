@@ -1,5 +1,5 @@
-import type { JsonRpcError } from 'ethers'
-import { isError } from 'ethers'
+import type { JsonRpcError } from 'ethers/providers'
+import { isError } from 'ethers/utils'
 import { useCallback, useState } from 'react'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'

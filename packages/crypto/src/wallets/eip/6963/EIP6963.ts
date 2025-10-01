@@ -1,5 +1,5 @@
 import { isDefined } from '@xylabs/typeof'
-import type { Eip1193Provider } from 'ethers'
+import type { Eip1193Provider } from 'ethers/providers'
 
 /**
  * Assets needed to display a wallet

@@ -1,7 +1,7 @@
 import { EthAddressWrapper } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
-import type { JsonRpcSigner } from 'ethers'
-import { BrowserProvider, InfuraProvider } from 'ethers'
+import type { JsonRpcSigner } from 'ethers/providers'
+import { BrowserProvider, InfuraProvider } from 'ethers/providers'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo, useState } from 'react'
 

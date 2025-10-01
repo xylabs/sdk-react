@@ -1,7 +1,8 @@
 import { isDefined, isString } from '@xylabs/typeof'
 import type {
-  BrowserProvider, Eip1193Provider, JsonRpcSigner, Listener,
-} from 'ethers'
+  BrowserProvider, Eip1193Provider, JsonRpcSigner,
+} from 'ethers/providers'
+import type { Listener } from 'ethers/utils'
 import { LRUCache } from 'lru-cache'
 
 import type { EIP6963ProviderInfo, SupportedEventProposals } from '../eip/index.ts'

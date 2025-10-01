@@ -1,5 +1,5 @@
 import { isString } from '@xylabs/typeof'
-import { BrowserProvider } from 'ethers'
+import { BrowserProvider } from 'ethers/providers'
 
 import { isEIP6963AnnounceProviderEvent } from '../eip/index.ts'
 import type { DiscoveredWallets } from '../types/index.ts'
