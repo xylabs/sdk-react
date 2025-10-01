@@ -45,16 +45,16 @@
     "md5": "~2.3.0"
   },
   "devDependencies": {
-    "@mui/material": "~7.3.2",
+    "@mui/material": "~7.3.3",
     "@types/md5": "~2.3.5",
-    "@types/react": "~19.1.13",
-    "@xylabs/ts-scripts-yarn3": "~7.1.7",
-    "@xylabs/tsconfig": "~7.1.7",
-    "@xylabs/tsconfig-dom": "~7.1.7",
-    "@xylabs/tsconfig-react": "~7.1.7",
+    "@types/react": "~19.1.17",
+    "@xylabs/ts-scripts-yarn3": "~7.1.8",
+    "@xylabs/tsconfig": "~7.1.8",
+    "@xylabs/tsconfig-dom": "~7.1.8",
+    "@xylabs/tsconfig-react": "~7.1.8",
     "react": "~19.1.1",
     "react-dom": "~19.1.1",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.3"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",
