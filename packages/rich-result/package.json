@@ -41,15 +41,15 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/enum": "~5.0.11"
+    "@xylabs/enum": "~5.0.12"
   },
   "devDependencies": {
-    "@types/react": "~19.1.17",
+    "@types/react": "~19.2.2",
     "@xylabs/ts-scripts-yarn3": "~7.1.8",
     "@xylabs/tsconfig": "~7.1.8",
     "@xylabs/tsconfig-dom": "~7.1.8",
     "@xylabs/tsconfig-react": "~7.1.8",
-    "react": "~19.1.1",
+    "react": "~19.2.0",
     "typescript": "~5.9.3"
   },
   "peerDependencies": {
