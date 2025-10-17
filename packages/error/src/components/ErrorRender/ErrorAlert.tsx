@@ -3,6 +3,7 @@ import type { AlertProps } from '@mui/material'
 import {
   Alert, AlertTitle, Grow,
   Stack, Typography,
+  useTheme,
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
@@ -25,6 +26,7 @@ export function ErrorAlert<T = void>({
   sx,
   ...props
 }: ErrorAlertProps<T>): React.JSX.Element {
+  const theme = useTheme()
   const [openDetails, setOpenDetails] = useState(false)
   return (
     <Alert
@@ -47,7 +49,7 @@ export function ErrorAlert<T = void>({
         </FlexRow>
       )}
       severity="error"
-      sx={{ maxWidth: '100%', ...sx }}
+      sx={{ maxWidth: theme.breakpoints.values.sm, ...sx }}
       {...props}
     >
       <AlertTitle>{title}</AlertTitle>
