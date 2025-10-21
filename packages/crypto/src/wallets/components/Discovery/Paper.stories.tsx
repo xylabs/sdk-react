@@ -31,7 +31,6 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
     const logErrorsInterval = setInterval(() => {
       const errorLogAsArray = selectedWallet ? [...selectedWallet.providerErrorLog] : []
       setErrorArray(errorLogAsArray as [string, Error][])
-      console.log(errorLogAsArray)
     }, 1000)
 
     return () => {
@@ -67,7 +66,7 @@ const Template: StoryFn<WalletDiscoveryPaperProps> = (args: WalletDiscoveryPaper
       <FlexRow justifyContent="start" alignItems="start" gap={4}>
         <WalletDiscoveryPaper onWalletSelect={onWalletSelect} {...args} />
         {selectedWallet?.rawProvider
-          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: '436px' }} />
+          ? <WalletOverviewCard ethWalletConnector={selectedWallet} sx={{ width: 400 }} />
           : null}
       </FlexRow>
       {selectedWallet
