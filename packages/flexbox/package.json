@@ -46,7 +46,7 @@
     "@xylabs/react-shared": "workspace:~"
   },
   "devDependencies": {
-    "@storybook/react-vite": "~9.1.10",
+    "@storybook/react-vite": "~9.1.13",
     "@types/react": "~19.2.2",
     "@xylabs/ts-scripts-yarn3": "~7.1.8",
     "@xylabs/tsconfig": "~7.1.8",
@@ -54,9 +54,9 @@
     "@xylabs/tsconfig-react": "~7.1.8",
     "react": "~19.2.0",
     "react-dom": "~19.2.0",
-    "storybook": "~9.1.10",
+    "storybook": "~9.1.13",
     "typescript": "~5.9.3",
-    "vite": "~7.1.9"
+    "vite": "~7.1.11"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",
