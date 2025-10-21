@@ -1,17 +1,29 @@
+import { Cancel, Check } from '@mui/icons-material'
 import type { CardContentProps } from '@mui/material'
 import {
   Alert, AlertTitle, CardContent, Chip, Divider, styled, Typography,
 } from '@mui/material'
 import type { EthAddressWrapper } from '@xylabs/eth-address'
+import { toAddress } from '@xylabs/hex'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import React from 'react'
+import { usePromise } from '@xylabs/react-promise'
+import { isDefined } from '@xylabs/typeof'
+import type { TypedDataDomain } from 'ethers/hash'
+import { verifyTypedData } from 'ethers/hash'
+import type { Signer } from 'ethers/providers'
+import React, { useMemo } from 'react'
+import { Type } from 'typescript'
 
 export interface WalletOverviewCardContentProps extends CardContentProps {
   chainName?: string
   connectError?: Error
   connectRefused?: boolean
   currentAccount?: EthAddressWrapper
-  signResponse?: EthAddressWrapper
+  domain: TypedDataDomain
+  signResponse?: string
+  types?: Parameters<Signer['signTypedData']>[1]
+  validateTypedDataSignature?: boolean
+  values?: Parameters<Signer['signTypedData']>[2]
 }
 
 export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps> = ({
@@ -20,11 +32,25 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
   connectRefused,
   currentAccount,
   signResponse,
+  domain,
+  types,
+  values,
+  validateTypedDataSignature,
+  sx,
+  ...props
 }) => {
+  const recoveredAccount = useMemo(() => {
+    if (isDefined(signResponse) && isDefined(types) && isDefined(values) && validateTypedDataSignature) {
+      return verifyTypedData(domain, types, values, signResponse)
+    }
+  }, [signResponse, validateTypedDataSignature, domain, types, values])
+
   return (
-    <CardContent sx={{
-      display: 'flex', flexDirection: 'column', gap: 2,
-    }}
+    <CardContent
+      sx={{
+        display: 'flex', flexDirection: 'column', gap: 2, ...sx,
+      }}
+      {...props}
     >
       {window.parent === globalThis as unknown as Window
         ? null
@@ -55,11 +81,36 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
             </Alert>
           )
         : null}
-      {signResponse
+      {isDefined(signResponse)
         ? (
             <Alert severity="success">
               <AlertTitle>Sign Response</AlertTitle>
-              {signResponse.toShortString()}
+              {signResponse}
+              {isDefined(recoveredAccount)
+                ? isDefined(currentAccount) && (recoveredAccount.localeCompare(currentAccount.toString()) !== 0)
+                  ? (
+                      <span>
+                        <Check />
+                        {' '}
+                        Verified Signature
+                        <br />
+                        Recovered Address:
+                        {' '}
+                        {recoveredAccount}
+                        <br />
+                        Current Address:
+                        {' '}
+                        {currentAccount.toString()}
+                      </span>
+                    )
+                  : (
+                      <span>
+                        <Cancel color="error" />
+                        {' '}
+                        Could not verify signature
+                      </span>
+                    )
+                : null}
             </Alert>
           )
         : null}
