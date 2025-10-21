@@ -1,6 +1,8 @@
 import { isDefined, isString } from '@xylabs/typeof'
+import type { TypedDataDomain, TypedDataField } from 'ethers/hash'
 import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner,
+  Signer,
 } from 'ethers/providers'
 import type { Listener } from 'ethers/utils'
 import { LRUCache } from 'lru-cache'
@@ -99,6 +101,32 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
     const signer = await this.signerFromAddress(allowedAccount)
     const signature = await signer?.signMessage(message)
+    return signature
+  }
+
+  /**
+   * Sign a typed message with a specific account enabled in the wallet according to EIP-712
+   * @param domain eip712Domain
+   * @param types A specific field of a structured eip-712 type.
+   * @param value The contents of the message to sign
+   * @param allowedAccount Account being used to sign the message
+   * @returns
+   *
+   * see - https://eips.ethereum.org/EIPS/eip-712
+   */
+  async signTypedMessage(
+    domain: Parameters<Signer['signTypedData']>[0],
+    types: Parameters<Signer['signTypedData']>[1],
+    value: Parameters<Signer['signTypedData']>[2],
+    allowedAccount?: string,
+  ) {
+    if (!this.provider) {
+      this.logProviderMissing()
+      return
+    }
+
+    const signer = await this.signerFromAddress(allowedAccount)
+    const signature = await signer?.signTypedData(domain, types, value)
     return signature
   }
 

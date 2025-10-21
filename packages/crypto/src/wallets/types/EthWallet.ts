@@ -3,6 +3,7 @@ import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner,
 } from 'ethers/providers'
 
+import type { EthWalletConnectorBase } from '../classes/index.ts'
 import type { EIP6963ProviderInfo } from '../eip/index.ts'
 
 /**
@@ -22,6 +23,7 @@ export interface EthWallet {
   providerName?: string
   rawProvider?: Eip1193Provider
   signMessage?: (message: string, address?: string) => Promise<string | undefined>
+  signTypedMessage?: EthWalletConnectorBase['signTypedMessage']
   signer?: JsonRpcSigner
   signerAddress?: EthAddressWrapper
   // TODO - transactions
