@@ -1,14 +1,17 @@
+import { toAddress } from '@xylabs/hex'
 import { isDefined, isString } from '@xylabs/typeof'
-import type { TypedDataDomain, TypedDataField } from 'ethers/hash'
+import { verifyTypedData } from 'ethers/hash'
 import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner,
-  Signer,
 } from 'ethers/providers'
 import type { Listener } from 'ethers/utils'
 import { LRUCache } from 'lru-cache'
 
 import type { EIP6963ProviderInfo, SupportedEventProposals } from '../eip/index.ts'
 import { AccountsChangedEventName, ChainChangedEventName } from '../types/events/index.ts'
+import type {
+  TypedDataDomain, TypedDataTypes, TypedDataValues,
+} from '../types/index.ts'
 import { findChainName } from '../utils/index.ts'
 import { EIP1193Events } from './eip/index.ts'
 
@@ -115,9 +118,9 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
    * see - https://eips.ethereum.org/EIPS/eip-712
    */
   async signTypedMessage(
-    domain: Parameters<Signer['signTypedData']>[0],
-    types: Parameters<Signer['signTypedData']>[1],
-    value: Parameters<Signer['signTypedData']>[2],
+    domain: TypedDataDomain,
+    types: TypedDataTypes,
+    value: TypedDataValues,
     allowedAccount?: string,
   ) {
     if (!this.provider) {
@@ -165,6 +168,30 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
     return () => {
       this.chainChangedNotifiers = this.chainChangedNotifiers.filter(l => l !== listener)
     }
+  }
+
+  /**
+   * Verify a typed data signature according to EIP-712
+   * @param domain eip712Domain
+   * @param types A specific field of a structured eip-712 type.
+   * @param value The contents of the message to sign
+   * @param signature Signature produced by signTypedMessage
+   * @param expectedSignerAddress Expected signer address to verify against
+   * @returns boolean indicating if the signature is valid
+   */
+  verifyTypedDataSignature(
+    domain: TypedDataDomain,
+    types: TypedDataTypes,
+    value: TypedDataValues,
+    signature: string,
+    expectedSignerAddress: string,
+  ): boolean {
+    if (!this.provider) {
+      this.logProviderMissing()
+      return false
+    }
+    const recoveredAddress = verifyTypedData(domain, types, value, signature)
+    return toAddress(recoveredAddress.toLowerCase()) === toAddress(expectedSignerAddress.toLowerCase())
   }
 
   /**

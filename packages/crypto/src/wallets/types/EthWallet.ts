@@ -5,6 +5,9 @@ import type {
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'
 import type { EIP6963ProviderInfo } from '../eip/index.ts'
+import type {
+  TypedDataDomain, TypedDataTypes, TypedDataValues,
+} from './TypedData.ts'
 
 /**
  * Base interface for wallet state and interaction
@@ -26,5 +29,12 @@ export interface EthWallet {
   signTypedMessage?: EthWalletConnectorBase['signTypedMessage']
   signer?: JsonRpcSigner
   signerAddress?: EthAddressWrapper
+  verifyTypedDataSignature?: (
+    domain: TypedDataDomain,
+    types: TypedDataTypes,
+    value: TypedDataValues,
+    signature: string,
+    expectedSignerAddress: string,
+  ) => boolean
   // TODO - transactions
 }

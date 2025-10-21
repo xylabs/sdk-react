@@ -37,6 +37,8 @@ export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
 
   const signTypedMessage = useMemo(() => connector?.signTypedMessage.bind(connector), [connector])
 
+  const verifyTypedDataSignature = useMemo(() => connector?.verifyTypedDataSignature?.bind(connector), [connector])
+
   const installed = useMemo(() => connector?.installed, [connector?.installed])
 
   const providerInfo = useMemo(() => connector?.providerInfo, [connector?.providerInfo])
@@ -58,5 +60,7 @@ export const useEthWallet = (connector?: EthWalletConnectorBase): EthWallet => {
     signTypedMessage,
     signer,
     signerAddress,
+    verifyTypedDataSignature,
+
   }
 }
