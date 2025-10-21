@@ -31,6 +31,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
     signMessage,
     signTypedMessage,
     signerAddress,
+    verifyTypedDataSignature,
   } = useEthWalletInstance(ethWalletConnector)
 
   const domain = useMemo(() => buildDomain(chainId), [chainId])
@@ -82,6 +83,7 @@ export const WalletOverviewCard: React.FC<WalletOverviewCardProps> = ({ ethWalle
         values={values}
         validateTypedDataSignature={validateTypedDataSignature}
         signResponse={signResponse}
+        verifyTypedDataSignature={verifyTypedDataSignature}
       />
       <WalletOverviewCardActions
         connectWallet={connectWallet}

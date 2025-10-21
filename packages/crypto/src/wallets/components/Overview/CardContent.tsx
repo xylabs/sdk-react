@@ -4,15 +4,15 @@ import {
   Alert, AlertTitle, CardContent, Chip, Divider, styled, Typography,
 } from '@mui/material'
 import type { EthAddressWrapper } from '@xylabs/eth-address'
-import { toAddress } from '@xylabs/hex'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { usePromise } from '@xylabs/react-promise'
 import { isDefined } from '@xylabs/typeof'
 import type { TypedDataDomain } from 'ethers/hash'
 import { verifyTypedData } from 'ethers/hash'
-import type { Signer } from 'ethers/providers'
 import React, { useMemo } from 'react'
-import { Type } from 'typescript'
+
+import type {
+  EthWallet, TypedDataTypes, TypedDataValues,
+} from '../../types/index.ts'
 
 export interface WalletOverviewCardContentProps extends CardContentProps {
   chainName?: string
@@ -21,9 +21,10 @@ export interface WalletOverviewCardContentProps extends CardContentProps {
   currentAccount?: EthAddressWrapper
   domain: TypedDataDomain
   signResponse?: string
-  types?: Parameters<Signer['signTypedData']>[1]
+  types?: TypedDataTypes
   validateTypedDataSignature?: boolean
-  values?: Parameters<Signer['signTypedData']>[2]
+  values?: TypedDataValues
+  verifyTypedDataSignature?: EthWallet['verifyTypedDataSignature']
 }
 
 export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps> = ({
@@ -36,14 +37,15 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
   types,
   values,
   validateTypedDataSignature,
+  verifyTypedDataSignature,
   sx,
   ...props
 }) => {
-  const recoveredAccount = useMemo(() => {
-    if (isDefined(signResponse) && isDefined(types) && isDefined(values) && validateTypedDataSignature) {
-      return verifyTypedData(domain, types, values, signResponse)
+  const validSignature = useMemo(() => {
+    if (isDefined(signResponse) && isDefined(types) && isDefined(values) && isDefined(currentAccount) && validateTypedDataSignature) {
+      return verifyTypedDataSignature?.(domain, types, values, signResponse, currentAccount.toString())
     }
-  }, [signResponse, validateTypedDataSignature, domain, types, values])
+  }, [signResponse, validateTypedDataSignature, domain, types, values, currentAccount, verifyTypedDataSignature])
 
   return (
     <CardContent
@@ -86,21 +88,13 @@ export const WalletOverviewCardContent: React.FC<WalletOverviewCardContentProps>
             <Alert severity="success">
               <AlertTitle>Sign Response</AlertTitle>
               {signResponse}
-              {isDefined(recoveredAccount)
-                ? isDefined(currentAccount) && (recoveredAccount.localeCompare(currentAccount.toString()) !== 0)
+              {validateTypedDataSignature
+                ? validSignature
                   ? (
                       <span>
                         <Check />
                         {' '}
                         Verified Signature
-                        <br />
-                        Recovered Address:
-                        {' '}
-                        {recoveredAccount}
-                        <br />
-                        Current Address:
-                        {' '}
-                        {currentAccount.toString()}
                       </span>
                     )
                   : (
