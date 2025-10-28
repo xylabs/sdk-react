@@ -45,7 +45,7 @@
     "@xylabs/react-cookie-consent": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-scroll-to-top": "workspace:~",
-    "@xylabs/typeof": "~5.0.12",
+    "@xylabs/typeof": "~5.0.14",
     "react-helmet": "~6.1.0"
   },
   "devDependencies": {
@@ -61,9 +61,9 @@
     "react": "~19.2.0",
     "react-dom": "~19.2.0",
     "react-router-dom": "^7.9.4",
-    "storybook": "~9.1.13",
+    "storybook": "~9.1.16",
     "typescript": "~5.9.3",
-    "vite": "~7.1.11"
+    "vite": "~7.1.12"
   },
   "peerDependencies": {
     "@mui/icons-material": ">=6 <8",

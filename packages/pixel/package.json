@@ -41,10 +41,10 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "~5.0.12",
-    "@xylabs/delay": "~5.0.12",
-    "@xylabs/object": "~5.0.12",
-    "@xylabs/pixel": "~5.0.12",
+    "@xylabs/assert": "~5.0.14",
+    "@xylabs/delay": "~5.0.14",
+    "@xylabs/object": "~5.0.14",
+    "@xylabs/pixel": "~5.0.14",
     "mixpanel-browser": "~2.71.0",
     "query-string": "~9.3.1"
   },

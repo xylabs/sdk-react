@@ -44,7 +44,7 @@
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-quick-tip-button": "workspace:~",
-    "@xylabs/typeof": "~5.0.12"
+    "@xylabs/typeof": "~5.0.14"
   },
   "devDependencies": {
     "@mui/icons-material": "~7.3.4",
@@ -56,14 +56,14 @@
     "@xylabs/tsconfig": "~7.1.8",
     "@xylabs/tsconfig-dom": "~7.1.8",
     "@xylabs/tsconfig-react": "~7.1.8",
-    "@xylabs/typeof": "~5.0.12",
+    "@xylabs/typeof": "~5.0.14",
     "react": "~19.2.0",
     "react-dom": "~19.2.0",
     "react-router-dom": "^7.9.4",
     "rollbar": "~2.26.5",
-    "storybook": "~9.1.13",
+    "storybook": "~9.1.16",
     "typescript": "~5.9.3",
-    "vite": "~7.1.11"
+    "vite": "~7.1.12"
   },
   "peerDependencies": {
     "@mui/icons-material": ">=6 <8",

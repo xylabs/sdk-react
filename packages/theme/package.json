@@ -45,7 +45,7 @@
     "@react-spring/web": "~10.0.3",
     "@xylabs/react-animation": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/typeof": "~5.0.12",
+    "@xylabs/typeof": "~5.0.14",
     "recharts": "~3.3.0"
   },
   "devDependencies": {
@@ -64,9 +64,9 @@
     "react-is": "~19.2.0",
     "react-router-dom": "^7.9.4",
     "recharts": "~3.3.0",
-    "storybook": "~9.1.13",
+    "storybook": "~9.1.16",
     "typescript": "~5.9.3",
-    "vite": "~7.1.11"
+    "vite": "~7.1.12"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",
