@@ -41,7 +41,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@storybook/react-vite": "~9.1.13",
+    "@storybook/react-vite": "~9.1.16",
     "@types/react": "~19.2.2",
     "@xylabs/ts-scripts-yarn3": "~7.1.8",
     "@xylabs/tsconfig": "~7.1.8",

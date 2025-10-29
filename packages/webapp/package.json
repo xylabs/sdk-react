@@ -55,7 +55,7 @@
   "devDependencies": {
     "@mui/icons-material": "~7.3.4",
     "@mui/material": "~7.3.4",
-    "@storybook/react-vite": "~9.1.13",
+    "@storybook/react-vite": "~9.1.16",
     "@types/react": "~19.2.2",
     "@types/react-helmet": "~6.1.11",
     "@xylabs/react-button": "workspace:~",

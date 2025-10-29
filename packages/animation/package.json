@@ -43,12 +43,12 @@
   "dependencies": {
     "@react-spring/web": "~10.0.3",
     "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/typeof": "~5.0.14"
+    "@xylabs/typeof": "~5.0.17"
   },
   "devDependencies": {
     "@mui/icons-material": "~7.3.4",
     "@mui/material": "~7.3.4",
-    "@storybook/react-vite": "~9.1.13",
+    "@storybook/react-vite": "~9.1.16",
     "@types/react": "~19.2.2",
     "@xylabs/ts-scripts-yarn3": "~7.1.8",
     "@xylabs/tsconfig": "~7.1.8",

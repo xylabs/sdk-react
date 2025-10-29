@@ -41,7 +41,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/enum": "~5.0.14"
+    "@xylabs/enum": "~5.0.17"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",

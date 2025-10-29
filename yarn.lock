@@ -1973,42 +1973,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:~9.1.13":
-  version: 9.1.13
-  resolution: "@storybook/addon-links@npm:9.1.13"
+"@storybook/addon-links@npm:~9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/addon-links@npm:9.1.16"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-    storybook: ^9.1.13
+    storybook: ^9.1.16
   peerDependenciesMeta:
     react:
       optional: true
-  checksum: 10c0/e6a2091b1a0d6f6a7929e6bc6d3ba8d6fa7b8da1d04f91a567083edf99d3ac34af8a0f2bced0a60caac45c67fb32a2b2d1402766ede3d4adc215d3bc78b2f8ff
+  checksum: 10c0/bc1c22501d25f40a5c2ab56e80ba7a5cdcaa1b4ef847565eeedc0451893b4a68a2f1c9004068284e4391cf9f5cb9b15b18357d44767f2c66b30ce747a5caab2e
   languageName: node
   linkType: hard
 
-"@storybook/builder-vite@npm:9.1.13":
-  version: 9.1.13
-  resolution: "@storybook/builder-vite@npm:9.1.13"
+"@storybook/builder-vite@npm:9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/builder-vite@npm:9.1.16"
   dependencies:
-    "@storybook/csf-plugin": "npm:9.1.13"
+    "@storybook/csf-plugin": "npm:9.1.16"
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
-    storybook: ^9.1.13
+    storybook: ^9.1.16
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0
-  checksum: 10c0/299d9c7c3ea3e46e679384d3e828d314061ded229654292d0c03c3d0d9f2d429522bbd24a143c671d3567b9589ed989425532ed0ae4ec402d95278eb32e42113
+  checksum: 10c0/e84a4cec4722a902d59d008ec87bebf9306af27e4b61dadaade2e3befb6c723d2eaebe7eeada533c1c39e38717554bdae9306dabe19c5a228454b10048c921b0
   languageName: node
   linkType: hard
 
-"@storybook/csf-plugin@npm:9.1.13":
-  version: 9.1.13
-  resolution: "@storybook/csf-plugin@npm:9.1.13"
+"@storybook/csf-plugin@npm:9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/csf-plugin@npm:9.1.16"
   dependencies:
     unplugin: "npm:^1.3.1"
   peerDependencies:
-    storybook: ^9.1.13
-  checksum: 10c0/7ebb7b8456b7f9cfbfaf63a1addf3dd29a7209ae8f3fca00254939c0b5e30492374cca8f32822831a43eb730db4e8cab26a954a322add81396d37bb980a98a51
+    storybook: ^9.1.16
+  checksum: 10c0/23499c1eec9fbf75a2f6a4ce14fc0ca18b4242695c029c6bc6a8159a44446da47dac453b8e01a6a824355a4be6134f3c174aa8d519a7d9f3216df2643f3860f9
   languageName: node
   linkType: hard
 
@@ -2019,25 +2019,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-dom-shim@npm:9.1.13":
-  version: 9.1.13
-  resolution: "@storybook/react-dom-shim@npm:9.1.13"
+"@storybook/react-dom-shim@npm:9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/react-dom-shim@npm:9.1.16"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-    storybook: ^9.1.13
-  checksum: 10c0/88150aaf79b543e83ac0f1602544a1aa6e58d869cf262e008cbe100f36d9c6f0c033316486c836533a283b49bca62ee18cd8e36ed8bba4fb7298a479928b2172
+    storybook: ^9.1.16
+  checksum: 10c0/c46f540e9d9f905d1475daf73eee49b62ae4034c6911b175d6b8c51d622edbb302ec5156a91a5f807b6546e1965f02ef4e193a8f787c9de955d2691af31966f8
   languageName: node
   linkType: hard
 
-"@storybook/react-vite@npm:~9.1.13":
-  version: 9.1.13
-  resolution: "@storybook/react-vite@npm:9.1.13"
+"@storybook/react-vite@npm:~9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/react-vite@npm:9.1.16"
   dependencies:
     "@joshwooding/vite-plugin-react-docgen-typescript": "npm:0.6.1"
     "@rollup/pluginutils": "npm:^5.0.2"
-    "@storybook/builder-vite": "npm:9.1.13"
-    "@storybook/react": "npm:9.1.13"
+    "@storybook/builder-vite": "npm:9.1.16"
+    "@storybook/react": "npm:9.1.16"
     find-up: "npm:^7.0.0"
     magic-string: "npm:^0.30.0"
     react-docgen: "npm:^8.0.0"
@@ -2046,27 +2046,27 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-    storybook: ^9.1.13
+    storybook: ^9.1.16
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0
-  checksum: 10c0/b4c4395d5ece6448f8023c61eb9aec65acf8898b3b8b588ada3805645bcab50b20f5426c84db2d1e7b2eda1446243387f70ac84b15c17f9f7dcba8e7443e6f8b
+  checksum: 10c0/f4f618a09f0541e1fb7e37dd72101055d3aa24e62d8cff32a9226b7c1de67697957e7c49b4aef154d321591311bf5244ddb7f7e9a248c6d8708dbe2fdf76b36c
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:9.1.13":
-  version: 9.1.13
-  resolution: "@storybook/react@npm:9.1.13"
+"@storybook/react@npm:9.1.16":
+  version: 9.1.16
+  resolution: "@storybook/react@npm:9.1.16"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
-    "@storybook/react-dom-shim": "npm:9.1.13"
+    "@storybook/react-dom-shim": "npm:9.1.16"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-    storybook: ^9.1.13
+    storybook: ^9.1.16
     typescript: ">= 4.9.x"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/d260e4bdde860fba6ef2dac0147a58aa8e3d9a35d65d8b9ea2cdc864cabe6da8a56fa595a270b2bd8efe672f26765628e26df39b9c4da2af9aee2cf7614ae748
+  checksum: 10c0/45c02a726d91b80574c81277266230b818ae03aa34e29c832200c44f49f6e7d91991a859ec803accc404c5b06ab3f70a786075d02437eb7f336145e5c4cda2a8
   languageName: node
   linkType: hard
 
@@ -2332,12 +2332,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:~24.9.1":
-  version: 24.9.1
-  resolution: "@types/node@npm:24.9.1"
+"@types/node@npm:~24.9.2":
+  version: 24.9.2
+  resolution: "@types/node@npm:24.9.2"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/c52f8168080ef9a7c3dc23d8ac6061fab5371aad89231a0f6f4c075869bc3de7e89b075b1f3e3171d9e5143d0dda1807c3dab8e32eac6d68f02e7480e7e78576
+  checksum: 10c0/7905d43f65cee72ef475fe76316e10bbf6ac5d08a7f0f6c38f2b6285d7ca3009e8fcafc8f8a1d2bf3f55889c9c278dbb203a9081fd0cf2d6d62161703924c6fa
   languageName: node
   linkType: hard
 
@@ -2903,46 +2903,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/api@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/api@npm:5.0.14"
+"@xylabs/api@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/api@npm:5.0.17"
   dependencies:
-    "@xylabs/enum": "npm:~5.0.14"
-    "@xylabs/typeof": "npm:~5.0.14"
-    axios: "npm:~1.13.0"
-  checksum: 10c0/fc24ae41ab98aba98abd09234f8fc04218e3329860b4ea9a778deac57d94a777ab3d0fb1c8a1a133bafa69a454c682b6e633d528272ddea15d3c02871b9afc97
+    "@xylabs/enum": "npm:~5.0.17"
+    "@xylabs/typeof": "npm:~5.0.17"
+    axios: "npm:~1.13.1"
+  checksum: 10c0/24641f49eea47dec192f3525c48421e3b0f3f84adbb85063da6aa08836372ed676468cc7199400bda1e076e5ffe8ad116b426786827dc3495bd6752da10cf233
   languageName: node
   linkType: hard
 
-"@xylabs/assert@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/assert@npm:5.0.14"
-  checksum: 10c0/250c679a15ee1aaa34611f567d10cc2f4452bf5aa80c25589f4adc31758a756a58a808adaf03db42886957c1d289d829e1687dd640e1a28c5da3e7d84d655ef4
+"@xylabs/assert@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/assert@npm:5.0.17"
+  checksum: 10c0/42571ab6fce55a4f681bb0a7b3b10a1900303bd0ef4e8c9bd2a10266d4d65017abdd8e0b63ecb4f645754b2619522c4137d319ac52ac0b65806b53f96c915b8b
   languageName: node
   linkType: hard
 
-"@xylabs/delay@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/delay@npm:5.0.14"
+"@xylabs/delay@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/delay@npm:5.0.17"
   dependencies:
-    "@xylabs/timer": "npm:~5.0.14"
-  checksum: 10c0/ce7ddefba54c45dab44faedb792b85757b63d9ba068d029485f6c40bf8e243c580cad5648c159e9177f5bcc7da9bf675ecbb4fac8b7d403a683e9e5046bfd984
+    "@xylabs/timer": "npm:~5.0.17"
+  checksum: 10c0/e6ee5725f85ddd3b5c4026b3308fc258316673054d05e24f9a3da56522a6b4843ee725d40225d3d707205c002284f7c49dc4a8779b794d0cdea3fbd560f8c7cf
   languageName: node
   linkType: hard
 
-"@xylabs/enum@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/enum@npm:5.0.14"
-  checksum: 10c0/26c2a8b666cf27cc90a357b0b84837aa806fe046f55f661d04a690d70913cb6e36a382ec2441660c28ac0bb6f29a16c5a51880c1161d5ca8f9ac8ff827a5f758
+"@xylabs/enum@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/enum@npm:5.0.17"
+  checksum: 10c0/a0bec990b60e2bcd501f11c3b823b27e3b219d4ad673f65b5749787867c8bda9e558cb540add8ca5ce83b5402e33faed71446b647335791e8476e73cafabe5c3
   languageName: node
   linkType: hard
 
-"@xylabs/error@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/error@npm:5.0.14"
+"@xylabs/error@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/error@npm:5.0.17"
   dependencies:
-    "@xylabs/typeof": "npm:~5.0.14"
-  checksum: 10c0/2680e1d25fae6c71d4df783e8747bf6a2395b495c69d526f0c632b71902cc4db798fe92ccb38032b61f6bb3002dc64e64d18fb8edcd21bd414c15bd03a88c45e
+    "@xylabs/typeof": "npm:~5.0.17"
+  checksum: 10c0/a9980b4b9e7acfd4f14bb0984bb6e9c0c01ca0884bc284547ed0c4ebdf2ecca8108bff73dc61ee57fceadd3511c05c9d639337c8a076685db5a67e597064bfa5
   languageName: node
   linkType: hard
 
@@ -2984,116 +2984,116 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/eth-address@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/eth-address@npm:5.0.14"
+"@xylabs/eth-address@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/eth-address@npm:5.0.17"
   dependencies:
-    "@xylabs/assert": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
     ethers: "npm:~6.15.0"
-  checksum: 10c0/7204a39f54b1fa94e6dc18121ca60f44bef4eb4977d4686c10c9c6537887988f46c81a4159452b1ea40507fbc1d74de6b30009157fc9d9835437a58748b3ae33
+  checksum: 10c0/50b4a32b043832e030c3796331ba3ae36fd0a58741c266bf3573817101538ee052a8add2765d58a85f2ffb7fdeb1fe942afc5c4033445c21aadf83d34f395c7e
   languageName: node
   linkType: hard
 
-"@xylabs/exists@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/exists@npm:5.0.14"
-  checksum: 10c0/8c931ad85687fe23f7d55176b57bd7a962fb56d8762882949c2b3ad4a389bbf78ba2c5e8ceba3818eea89d2d7a9ceec17b41490125dd8d3610790c22ff4793c2
+"@xylabs/exists@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/exists@npm:5.0.17"
+  checksum: 10c0/430878d30d90503368ca13acbc68c6e3a634a8373e75b330e05ccea88f753c829309ebee165440dd6ed3951237a12b789db45368ed608161e8ca218c427a8ad6
   languageName: node
   linkType: hard
 
-"@xylabs/forget@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/forget@npm:5.0.14"
+"@xylabs/forget@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/forget@npm:5.0.17"
   dependencies:
-    "@xylabs/delay": "npm:~5.0.14"
-    "@xylabs/logger": "npm:~5.0.14"
-    "@xylabs/promise": "npm:~5.0.14"
-    "@xylabs/typeof": "npm:~5.0.14"
-  checksum: 10c0/872b1f7d02c7f3ace7b2e1f0c9cdbc086676ad62bd6b847843154a01b2d8f8cd9d3a826daefd12ab006eba31c88e29066bd6b9bc3dc1bc4a7006cdc4d91f8279
+    "@xylabs/delay": "npm:~5.0.17"
+    "@xylabs/logger": "npm:~5.0.17"
+    "@xylabs/promise": "npm:~5.0.17"
+    "@xylabs/typeof": "npm:~5.0.17"
+  checksum: 10c0/d58eb0e5964ce1532d98e8f1d7678ead822fd1f4d84770eebeb1bc0b8c6c88247eb33e7936b47aba8be676fc15de840ab18856073615d36e02874c919abdc38e
   languageName: node
   linkType: hard
 
-"@xylabs/hex@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/hex@npm:5.0.14"
+"@xylabs/hex@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/hex@npm:5.0.17"
   dependencies:
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     zod: "npm:^4.1.12"
-  checksum: 10c0/635298d20d07ad5c7c589017b677bef293796669de98b8ded5a558aa5eb29cd61661c1901c53298ef7de769e55bc0242eeccc22d5e769efc44d2ac5f7dd537c7
+  checksum: 10c0/98663d0ee7abbe15b32a4331cb2c66e687fdb76f6dd8ac727e848e92071fa30332a957e57d252c532a697a4bfc17ad9b8e01f1a37648d9454ca7ebd9d60ff729
   languageName: node
   linkType: hard
 
-"@xylabs/log@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/log@npm:5.0.14"
+"@xylabs/log@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/log@npm:5.0.17"
   peerDependencies:
     rollbar: ~2
   peerDependenciesMeta:
     rollbar:
       optional: true
-  checksum: 10c0/159739343a167ac4608caa23d2976cec87689de653e517abd723fe7f76ca767d735937688eb9f4529c19f1b0402dcc466cc8b0c219a689004279778531978729
+  checksum: 10c0/1c507518b8b7d48a38ac8bc49e7ab82f687f85c3190289292a6d1639d3c446afad8fe59bfdb7ad691e3a069db7c095224795de32348af68ab5a07850f8d5d406
   languageName: node
   linkType: hard
 
-"@xylabs/logger@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/logger@npm:5.0.14"
+"@xylabs/logger@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/logger@npm:5.0.17"
   dependencies:
-    "@xylabs/enum": "npm:~5.0.14"
-    "@xylabs/error": "npm:~5.0.14"
-    "@xylabs/typeof": "npm:~5.0.14"
-  checksum: 10c0/573d23f9560fc3d7373c2e41ffbf9ae4df20d56a2f0c1ac8853f2a05ba6f64ba2950b9d690fcc3c2e0cbe5f40d5f603266d138aa972b77f406b24f3b3269f3a6
+    "@xylabs/enum": "npm:~5.0.17"
+    "@xylabs/error": "npm:~5.0.17"
+    "@xylabs/typeof": "npm:~5.0.17"
+  checksum: 10c0/dc77ba2fb1e1785764929184b2d5ce807bce55a4c2397a6ba37ade967ef708fcc277585785f0572e564dab206cede1a3bc95ae8715f35c996905f20a9a74eeb4
   languageName: node
   linkType: hard
 
-"@xylabs/object-model@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/object-model@npm:5.0.14"
+"@xylabs/object-model@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/object-model@npm:5.0.17"
   dependencies:
-    "@xylabs/assert": "npm:~5.0.14"
-    "@xylabs/logger": "npm:~5.0.14"
-    "@xylabs/promise": "npm:~5.0.14"
-    "@xylabs/typeof": "npm:~5.0.14"
-  checksum: 10c0/bade66dd5416001d07c0066794d2e7dc6f9fe4f18a9f88087814af2e1daf553ef77a010e3d70095c320e13c0da0e15e96d614bba0a79bbd962b2e28d5cb6bfb2
+    "@xylabs/assert": "npm:~5.0.17"
+    "@xylabs/logger": "npm:~5.0.17"
+    "@xylabs/promise": "npm:~5.0.17"
+    "@xylabs/typeof": "npm:~5.0.17"
+  checksum: 10c0/d0050b715e695ed1e82b79859fbff43c63e2fa4041169b8f732745fae446e4eee9b0f9cc618dc3db0fe317f266a3b5b8371e0a1b505e1b8699a9949e6ad6d6a7
   languageName: node
   linkType: hard
 
-"@xylabs/object@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/object@npm:5.0.14"
+"@xylabs/object@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/object@npm:5.0.17"
   dependencies:
-    "@xylabs/assert": "npm:~5.0.14"
-    "@xylabs/object-model": "npm:~5.0.14"
-    "@xylabs/promise": "npm:~5.0.14"
-    "@xylabs/typeof": "npm:~5.0.14"
-  checksum: 10c0/8677d2a0f1158f19f7ded8919cf22f80b0b3b7b711442593e230ce08bee36bb1820005a718497d06a66397351fc421be29996a404a80aa9370bb5e483e9f40cf
+    "@xylabs/assert": "npm:~5.0.17"
+    "@xylabs/object-model": "npm:~5.0.17"
+    "@xylabs/promise": "npm:~5.0.17"
+    "@xylabs/typeof": "npm:~5.0.17"
+  checksum: 10c0/59ef9780c50242bbc661d588a994ed30646a7ab9299a38ee433418d4694caa96126c7fcd2d0cdb669ffe7134d80b31ed790d99049b14a7ffc98d5c97f715d348
   languageName: node
   linkType: hard
 
-"@xylabs/pixel@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/pixel@npm:5.0.14"
+"@xylabs/pixel@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/pixel@npm:5.0.17"
   dependencies:
-    "@xylabs/assert": "npm:~5.0.14"
-    "@xylabs/object": "npm:~5.0.14"
-    "@xylabs/promise": "npm:~5.0.14"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
+    "@xylabs/object": "npm:~5.0.17"
+    "@xylabs/promise": "npm:~5.0.17"
+    "@xylabs/typeof": "npm:~5.0.17"
     async-mutex: "npm:~0.5.0"
-    axios: "npm:~1.13.0"
+    axios: "npm:~1.13.1"
     bowser: "npm:2.12.1"
     fast-deep-equal: "npm:~3.1.3"
     js-cookie: "npm:~3.0.5"
     spark-md5: "npm:~3.0.2"
-  checksum: 10c0/115f33fed5760eeaf8f72c4b2fe2e64a3a779f0f4b26cdf6f55c28f1a1b563ec4ec53319af8e21aada1d0794d00e95696e838a5a44586c80171ea72a1de9007e
+  checksum: 10c0/a78b123c27667143e514729039f47c1ab9822079bd67a5cce834756668c87d26ceeab96bea4b0fb67479049475bc16231774417c6133d23d5bda504e892e798f
   languageName: node
   linkType: hard
 
-"@xylabs/promise@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/promise@npm:5.0.14"
+"@xylabs/promise@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/promise@npm:5.0.17"
   dependencies:
-    "@xylabs/typeof": "npm:~5.0.14"
-  checksum: 10c0/76ae6d175d6b2f28d7d411e4caa3e2410ced7d509ad008692947d04ea01d96f3de13154bd88196d4d835325034bb2b4c5d0a3c9c899d02aa6f14c1552e488211
+    "@xylabs/typeof": "npm:~5.0.17"
+  checksum: 10c0/c1ac1c393d1fdd188f6dd333a597fb23affe5d4b389154798fc6989acfdc47992bc327a304047f00b9885b517d53b306ee6d612b2f680a9bef52901be4474583
   languageName: node
   linkType: hard
 
@@ -3103,7 +3103,7 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -3111,7 +3111,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     storybook: "npm:~9.1.16"
@@ -3132,14 +3132,14 @@ __metadata:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
     "@react-spring/web": "npm:~10.0.3"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     storybook: "npm:~9.1.16"
@@ -3159,13 +3159,13 @@ __metadata:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/assert": "npm:~5.0.14"
-    "@xylabs/enum": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
+    "@xylabs/enum": "npm:~5.0.17"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     typescript: "npm:~5.9.3"
@@ -3183,9 +3183,9 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/assert": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-link": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
@@ -3194,7 +3194,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     react-router-dom: "npm:^7.9.4"
@@ -3215,7 +3215,7 @@ __metadata:
   resolution: "@xylabs/react-async-effect@workspace:packages/async-effect"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-promise": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
@@ -3238,7 +3238,7 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@types/react-helmet": "npm:~6.1.11"
     "@xylabs/react-appbar": "workspace:~"
@@ -3249,7 +3249,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     react-helmet: "npm:~6.1.0"
@@ -3271,9 +3271,9 @@ __metadata:
   resolution: "@xylabs/react-button@workspace:packages/button"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/promise": "npm:~5.0.14"
+    "@xylabs/promise": "npm:~5.0.17"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-pixel": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
@@ -3281,7 +3281,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     react-router-dom: "npm:^7.9.4"
@@ -3301,9 +3301,9 @@ __metadata:
   resolution: "@xylabs/react-common@workspace:packages/common"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/assert": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
     "@xylabs/react-base-page": "workspace:~"
     "@xylabs/react-error": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -3313,7 +3313,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     react-router-dom: "npm:^7.9.4"
@@ -3334,7 +3334,7 @@ __metadata:
   resolution: "@xylabs/react-cookie-consent@workspace:packages/cookie-consent"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -3343,7 +3343,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     storybook: "npm:~9.1.16"
@@ -3365,14 +3365,14 @@ __metadata:
     "@metamask/providers": "npm:~22.1.1"
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/assert": "npm:~5.0.14"
-    "@xylabs/eth-address": "npm:~5.0.14"
-    "@xylabs/exists": "npm:~5.0.14"
-    "@xylabs/forget": "npm:~5.0.14"
-    "@xylabs/hex": "npm:~5.0.14"
-    "@xylabs/promise": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
+    "@xylabs/eth-address": "npm:~5.0.17"
+    "@xylabs/exists": "npm:~5.0.17"
+    "@xylabs/forget": "npm:~5.0.17"
+    "@xylabs/hex": "npm:~5.0.17"
+    "@xylabs/promise": "npm:~5.0.17"
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-error": "workspace:^"
@@ -3383,7 +3383,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     ethers: "npm:~6.15.0"
     lru-cache: "npm:~11.2.2"
     react: "npm:~19.2.0"
@@ -3408,7 +3408,7 @@ __metadata:
   resolution: "@xylabs/react-dialogs@workspace:packages/dialogs"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -3416,7 +3416,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    axios: "npm:~1.13.0"
+    axios: "npm:~1.13.1"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     storybook: "npm:~9.1.16"
@@ -3435,7 +3435,7 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -3444,7 +3444,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     react-router-dom: "npm:^7.9.4"
@@ -3470,11 +3470,11 @@ __metadata:
   resolution: "@xylabs/react-experiments@workspace:packages/experiments"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/forget": "npm:~5.0.14"
-    "@xylabs/log": "npm:~5.0.14"
-    "@xylabs/pixel": "npm:~5.0.14"
+    "@xylabs/forget": "npm:~5.0.17"
+    "@xylabs/log": "npm:~5.0.17"
+    "@xylabs/pixel": "npm:~5.0.17"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-pixel": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
@@ -3498,9 +3498,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-flexbox@workspace:packages/flexbox"
   dependencies:
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/delay": "npm:~5.0.14"
+    "@xylabs/delay": "npm:~5.0.17"
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/react-shared": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
@@ -3523,7 +3523,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xylabs/react-hooks@workspace:packages/hooks"
   dependencies:
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
@@ -3584,9 +3584,9 @@ __metadata:
   resolution: "@xylabs/react-link@workspace:packages/link"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/promise": "npm:~5.0.14"
+    "@xylabs/promise": "npm:~5.0.17"
     "@xylabs/react-flexbox": "npm:~7.1.7"
     "@xylabs/react-pixel": "workspace:~"
     "@xylabs/react-theme": "workspace:~"
@@ -3632,7 +3632,7 @@ __metadata:
   resolution: "@xylabs/react-number-status@workspace:packages/number-status"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/numeral": "npm:~2.0.5"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-button": "workspace:~"
@@ -3659,10 +3659,10 @@ __metadata:
   resolution: "@xylabs/react-pixel-debugger@workspace:packages/pixel-debugger"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/object": "npm:~5.0.14"
-    "@xylabs/pixel": "npm:~5.0.14"
+    "@xylabs/object": "npm:~5.0.17"
+    "@xylabs/pixel": "npm:~5.0.17"
     "@xylabs/react-button": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
     "@xylabs/react-pixel": "workspace:~"
@@ -3689,10 +3689,10 @@ __metadata:
   resolution: "@xylabs/react-pixel@workspace:packages/pixel"
   dependencies:
     "@types/react": "npm:~19.2.2"
-    "@xylabs/assert": "npm:~5.0.14"
-    "@xylabs/delay": "npm:~5.0.14"
-    "@xylabs/object": "npm:~5.0.14"
-    "@xylabs/pixel": "npm:~5.0.14"
+    "@xylabs/assert": "npm:~5.0.17"
+    "@xylabs/delay": "npm:~5.0.17"
+    "@xylabs/object": "npm:~5.0.17"
+    "@xylabs/pixel": "npm:~5.0.17"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
@@ -3730,9 +3730,9 @@ __metadata:
   resolution: "@xylabs/react-promise@workspace:packages/promise"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/delay": "npm:~5.0.14"
+    "@xylabs/delay": "npm:~5.0.17"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
@@ -3755,7 +3755,7 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-dialogs": "workspace:~"
     "@xylabs/react-flexbox": "workspace:~"
@@ -3797,7 +3797,7 @@ __metadata:
   resolution: "@xylabs/react-rich-result@workspace:packages/rich-result"
   dependencies:
     "@types/react": "npm:~19.2.2"
-    "@xylabs/enum": "npm:~5.0.14"
+    "@xylabs/enum": "npm:~5.0.17"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
@@ -3855,10 +3855,10 @@ __metadata:
   resolution: "@xylabs/react-shared@workspace:packages/shared"
   dependencies:
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
-    "@xylabs/api": "npm:~5.0.14"
-    "@xylabs/log": "npm:~5.0.14"
+    "@xylabs/api": "npm:~5.0.17"
+    "@xylabs/log": "npm:~5.0.17"
     "@xylabs/react-async-effect": "workspace:~"
     "@xylabs/ts-scripts-yarn3": "npm:~7.1.8"
     "@xylabs/tsconfig": "npm:~7.1.8"
@@ -3883,7 +3883,7 @@ __metadata:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
     "@react-spring/web": "npm:~10.0.3"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@xylabs/react-animation": "workspace:~"
     "@xylabs/react-button": "workspace:~"
@@ -3892,7 +3892,7 @@ __metadata:
     "@xylabs/tsconfig": "npm:~7.1.8"
     "@xylabs/tsconfig-dom": "npm:~7.1.8"
     "@xylabs/tsconfig-react": "npm:~7.1.8"
-    "@xylabs/typeof": "npm:~5.0.14"
+    "@xylabs/typeof": "npm:~5.0.17"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
     react-is: "npm:~19.2.0"
@@ -3915,7 +3915,7 @@ __metadata:
   dependencies:
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/react-vite": "npm:~9.1.13"
+    "@storybook/react-vite": "npm:~9.1.16"
     "@types/react": "npm:~19.2.2"
     "@types/react-helmet": "npm:~6.1.11"
     "@xylabs/react-app-settings": "workspace:~"
@@ -3955,9 +3955,9 @@ __metadata:
     "@emotion/styled": "npm:~11.14.1"
     "@mui/icons-material": "npm:~7.3.4"
     "@mui/material": "npm:~7.3.4"
-    "@storybook/addon-links": "npm:~9.1.13"
-    "@storybook/react-vite": "npm:~9.1.13"
-    "@types/node": "npm:~24.9.1"
+    "@storybook/addon-links": "npm:~9.1.16"
+    "@storybook/react-vite": "npm:~9.1.16"
+    "@types/node": "npm:~24.9.2"
     "@types/react": "npm:~19.2.2"
     "@typescript-eslint/eslint-plugin": "npm:~8.46.2"
     "@typescript-eslint/parser": "npm:~8.46.2"
@@ -3995,7 +3995,7 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:~7.1.8"
     eslint: "npm:~9.38.0"
     eslint-import-resolver-typescript: "npm:~4.4.4"
-    eslint-plugin-storybook: "npm:9.1.13"
+    eslint-plugin-storybook: "npm:9.1.16"
     knip: "npm:~5.66.4"
     react: "npm:~19.2.0"
     react-dom: "npm:~19.2.0"
@@ -4015,12 +4015,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/timer@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/timer@npm:5.0.14"
+"@xylabs/timer@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/timer@npm:5.0.17"
   dependencies:
-    "@xylabs/assert": "npm:~5.0.14"
-  checksum: 10c0/2f76775a491f59192cdc58749b886af7927ca72bdf4555be8bf1d149a7bbe06c0ada410207d71f322fbe590be3aafffb27aa55693bb8881648021ff108656f09
+    "@xylabs/assert": "npm:~5.0.17"
+  checksum: 10c0/fcd9bf4de01c9fbdd4e107c8cd39c395adc2cc7043e15e7299af9999dd93c8ad3a9cacdc751b1353fa636c155361a3f6aba4c50a027002ee02c3f014fa4ecfb8
   languageName: node
   linkType: hard
 
@@ -4100,10 +4100,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/typeof@npm:~5.0.14":
-  version: 5.0.14
-  resolution: "@xylabs/typeof@npm:5.0.14"
-  checksum: 10c0/7857251307abd9e9776d9c274a75557d003a591823bd8fb15a4ebe37fab53936c984337f24416536227a411fd95d49a4a4a6bfdbafb3a2a3d7bc69d7f3a35892
+"@xylabs/typeof@npm:~5.0.17":
+  version: 5.0.17
+  resolution: "@xylabs/typeof@npm:5.0.17"
+  checksum: 10c0/28f9fd071f311a79a0e58f7c44bc8b921e563dda2db55eba8c41bf6b85f7dd677dff2451ffbffb19b8c82ed9657f299770d15d755ba56e492673317886597a76
   languageName: node
   linkType: hard
 
@@ -4462,14 +4462,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:~1.13.0":
-  version: 1.13.0
-  resolution: "axios@npm:1.13.0"
+"axios@npm:~1.13.1":
+  version: 1.13.1
+  resolution: "axios@npm:1.13.1"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.4"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/2af09f8ad9db9565bf97055eb0ddd2fd4abd9a03d23157b409348c9589370a88c3ede02e11fd1268becb780a77b62bdf9488650dd7208eda57edceca1d65622e
+  checksum: 10c0/de9c3c6de43d3ee1146d3afe78645f19450cac6a5d7235bef8b8e8eeb705c2e47e2d231dea99cecaec4dae1897c521118ca9413b9d474063c719c4d94c5b9adc
   languageName: node
   linkType: hard
 
@@ -6039,15 +6039,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:9.1.13":
-  version: 9.1.13
-  resolution: "eslint-plugin-storybook@npm:9.1.13"
+"eslint-plugin-storybook@npm:9.1.16":
+  version: 9.1.16
+  resolution: "eslint-plugin-storybook@npm:9.1.16"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.8.1"
   peerDependencies:
     eslint: ">=8"
-    storybook: ^9.1.13
-  checksum: 10c0/770cc4f4f99d8fd173d45750ad5553b8a097902bebc6d072b9fd49f569996667b183be3eba959e877b980a2e7d8bb7997f5996fe4185e32b75e134a24242c23f
+    storybook: ^9.1.16
+  checksum: 10c0/b5637962434ae777449ca9804452bf5c42cf5dcb1b62cc3c9d5e37e10f5728dd3d965b0aff780ef112844bd2f086ef81e8c5903106797334829e521a186a0937
   languageName: node
   linkType: hard
 

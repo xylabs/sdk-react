@@ -41,17 +41,17 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/forget": "~5.0.14",
-    "@xylabs/pixel": "~5.0.14",
+    "@xylabs/forget": "~5.0.17",
+    "@xylabs/pixel": "~5.0.17",
     "@xylabs/react-flexbox": "workspace:~",
     "@xylabs/react-pixel": "workspace:~",
     "@xylabs/react-shared": "workspace:~"
   },
   "devDependencies": {
     "@mui/material": "~7.3.4",
-    "@storybook/react-vite": "~9.1.13",
+    "@storybook/react-vite": "~9.1.16",
     "@types/react": "~19.2.2",
-    "@xylabs/log": "~5.0.14",
+    "@xylabs/log": "~5.0.17",
     "@xylabs/ts-scripts-yarn3": "~7.1.8",
     "@xylabs/tsconfig": "~7.1.8",
     "@xylabs/tsconfig-dom": "~7.1.8",

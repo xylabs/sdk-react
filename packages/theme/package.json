@@ -45,13 +45,13 @@
     "@react-spring/web": "~10.0.3",
     "@xylabs/react-animation": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/typeof": "~5.0.14",
+    "@xylabs/typeof": "~5.0.17",
     "recharts": "~3.3.0"
   },
   "devDependencies": {
     "@mui/icons-material": "~7.3.4",
     "@mui/material": "~7.3.4",
-    "@storybook/react-vite": "~9.1.13",
+    "@storybook/react-vite": "~9.1.16",
     "@types/react": "~19.2.2",
     "@xylabs/react-button": "workspace:~",
     "@xylabs/react-flexbox": "workspace:~",

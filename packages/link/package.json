@@ -41,12 +41,12 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/promise": "~5.0.14",
+    "@xylabs/promise": "~5.0.17",
     "@xylabs/react-pixel": "workspace:~"
   },
   "devDependencies": {
     "@mui/material": "~7.3.4",
-    "@storybook/react-vite": "~9.1.13",
+    "@storybook/react-vite": "~9.1.16",
     "@types/react": "~19.2.2",
     "@xylabs/react-flexbox": "~7.1.7",
     "@xylabs/react-pixel": "workspace:~",
