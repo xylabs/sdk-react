@@ -15,7 +15,6 @@ export const CollapsibleProvider: React.FC<CollapsibleProviderProps> = ({
   const [collapseEnd, setCollapseEnd] = useState(() => defaultCollapseEnd)
 
   return (
-    // eslint-disable-next-line @eslint-react/no-unstable-context-value
     <CollapsibleContext value={{
       collapse, collapseEnd, provided: true, setCollapse, setCollapseEnd,
     }}

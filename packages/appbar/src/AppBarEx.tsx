@@ -36,16 +36,20 @@ export const AppBarEx: React.FC<AppBarExProps> = ({
         ? (
             <Container maxWidth={container}>
               <AppBarExInner {...{
-                children, contextToolbar, menu, responsive, systemToolbar,
+                contextToolbar, menu, responsive, systemToolbar,
               }}
-              />
+              >
+                {children}
+              </AppBarExInner>
             </Container>
           )
         : (
             <AppBarExInner {...{
-              children, contextToolbar, menu, responsive, systemToolbar,
+              contextToolbar, menu, responsive, systemToolbar,
             }}
-            />
+            >
+              {children}
+            </AppBarExInner>
           )}
     </AppBar>
   )

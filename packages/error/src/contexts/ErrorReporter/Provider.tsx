@@ -15,7 +15,6 @@ const ErrorReporterProvider: React.FC<PropsWithChildren<ErrorReporterProviderPro
     throw new Error('ErrorReporterProvider unable to find a Rollbar instance either passed as prop or from Provider')
   }
 
-  // eslint-disable-next-line @eslint-react/no-unstable-context-value
   return <ErrorReporterContext value={{ rollbar }}>{children}</ErrorReporterContext>
 }
 
