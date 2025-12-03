@@ -41,19 +41,19 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@types/react": "~19.2.2",
-    "@types/react-dom": "~19.2.2",
-    "@xylabs/ts-scripts-yarn3": "~7.1.8",
-    "@xylabs/tsconfig": "~7.1.8",
-    "@xylabs/tsconfig-dom": "~7.1.8",
-    "@xylabs/tsconfig-react": "~7.1.8",
-    "react": "~19.2.0",
-    "react-dom": "~19.2.0",
-    "typescript": "~5.9.3"
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "~19.2.3",
+    "@xylabs/ts-scripts-yarn3": "~7.2.8",
+    "@xylabs/tsconfig": "~7.2.8",
+    "@xylabs/tsconfig-dom": "~7.2.8",
+    "@xylabs/tsconfig-react": "~7.2.8",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "react": "~19",
-    "react-dom": "~19"
+    "react": "^19",
+    "react-dom": "^19"
   },
   "publishConfig": {
     "access": "public"
