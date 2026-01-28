@@ -49,7 +49,7 @@
     "@xylabs/promise": "~5.0.64",
     "@xylabs/react-async-effect": "~7.1.10",
     "@xylabs/react-button": "~7.1.10",
-    "@xylabs/react-error": "workspace:^",
+    "@xylabs/react-error": "~7.1.10",
     "@xylabs/react-flexbox": "~7.1.10",
     "@xylabs/react-identicon": "~7.1.10",
     "@xylabs/react-promise": "~7.1.10",

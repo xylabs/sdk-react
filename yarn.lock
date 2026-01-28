@@ -3543,7 +3543,7 @@ __metadata:
     "@xylabs/promise": "npm:~5.0.64"
     "@xylabs/react-async-effect": "npm:~7.1.10"
     "@xylabs/react-button": "npm:~7.1.10"
-    "@xylabs/react-error": "workspace:^"
+    "@xylabs/react-error": "npm:~7.1.10"
     "@xylabs/react-flexbox": "npm:~7.1.10"
     "@xylabs/react-identicon": "npm:~7.1.10"
     "@xylabs/react-promise": "npm:~7.1.10"
@@ -3597,7 +3597,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xylabs/react-error@npm:~7.1.10, @xylabs/react-error@workspace:^, @xylabs/react-error@workspace:packages/error":
+"@xylabs/react-error@npm:~7.1.10, @xylabs/react-error@workspace:packages/error":
   version: 0.0.0-use.local
   resolution: "@xylabs/react-error@workspace:packages/error"
   dependencies:
