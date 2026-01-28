@@ -37,9 +37,6 @@
     "dist",
     "src"
   ],
-  "dependencies": {
-    "@xylabs/sdk-js": "~5.0.64"
-  },
   "devDependencies": {
     "@types/react": "^19.2.10",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",

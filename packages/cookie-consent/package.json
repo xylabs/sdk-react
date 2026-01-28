@@ -43,7 +43,6 @@
   "dependencies": {
     "@xylabs/react-button": "~7.1.10",
     "@xylabs/react-flexbox": "~7.1.10",
-    "@xylabs/react-shared": "~7.1.10",
     "@xylabs/typeof": "~5.0.64"
   },
   "devDependencies": {
