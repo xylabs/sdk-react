@@ -1,0 +1,4 @@
+{
+  "exclude": ["dist", "docs", "storybook-static"],
+  "extends": "@xylabs/tsconfig-react",
+}

@@ -1,7 +1,6 @@
 {
-  "name": "@xylabs/sdk-react-build",
+  "name": "@xylabs/sdk-react",
   "version": "7.1.9",
-  "private": true,
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -38,28 +37,6 @@
     "dist",
     "src"
   ],
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "build-storybook": "storybook build",
-    "build-typedoc-site": "typedoc && storybook build -o ./docs/storybook",
-    "knip:unlisted": "echo ---Unlisted Dependencies--- && yarn workspaces foreach -Ap --exclude @xyo-network/sdk-js --no-interlaced run knip --include unlisted",
-    "start": "NODE_OPTIONS=--max_old_space_size=8192 storybook dev -p 6006",
-    "storybook": "storybook dev -p 6006"
-  },
-  "browserslist": {
-    "production": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "dependencies": {
     "@xylabs/react-accordion": "~7.1.9",
     "@xylabs/react-animation": "~7.1.9",
@@ -88,35 +65,16 @@
     "@xylabs/react-theme": "~7.1.9"
   },
   "devDependencies": {
-    "@emotion/react": "~11.14.0",
-    "@emotion/styled": "~11.14.1",
     "@mui/icons-material": "~7.3.6",
     "@mui/material": "~7.3.6",
-    "@storybook/addon-links": "~10.1.4",
-    "@storybook/react-vite": "~10.1.4",
-    "@types/node": "~24.10.1",
     "@types/react": "^19.2.7",
-    "@typescript-eslint/eslint-plugin": "~8.48.1",
-    "@typescript-eslint/parser": "~8.48.1",
-    "@typescript-eslint/utils": "~8.48.1",
-    "@xylabs/eslint-config-flat": "~7.2.8",
-    "@xylabs/eslint-config-react-flat": "~7.2.8",
     "@xylabs/ts-scripts-yarn3": "~7.2.8",
     "@xylabs/tsconfig": "~7.2.8",
     "@xylabs/tsconfig-dom": "~7.2.8",
     "@xylabs/tsconfig-react": "~7.2.8",
-    "eslint": "~9.39.1",
-    "eslint-import-resolver-typescript": "~4.4.4",
-    "eslint-plugin-storybook": "10.1.4",
-    "knip": "~5.71.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "storybook": "~10.1.4",
-    "ts-api-utils": "~2.1.0",
-    "typedoc": "~0.28.15",
-    "typescript": "^5.9.3",
-    "vite": "~7.2.6",
-    "zod": "~4.1.13"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "@mui/icons-material": ">=6 <8",
@@ -125,8 +83,7 @@
     "react": "^19",
     "react-dom": "^19",
     "react-helmet": "^7",
-    "react-router-dom": "^7",
-    "zod": "^4"
+    "react-router-dom": "^7"
   },
   "packageManager": "yarn@4.12.0",
   "volta": {
@@ -134,6 +91,6 @@
     "yarn": "4.9.1"
   },
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   }
 }

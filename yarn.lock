@@ -4477,9 +4477,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xylabs/sdk-react@workspace:.":
+"@xylabs/sdk-react-build@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@xylabs/sdk-react@workspace:."
+  resolution: "@xylabs/sdk-react-build@workspace:."
   dependencies:
     "@emotion/react": "npm:~11.14.0"
     "@emotion/styled": "npm:~11.14.1"
@@ -4534,6 +4534,58 @@ __metadata:
     typedoc: "npm:~0.28.15"
     typescript: "npm:^5.9.3"
     vite: "npm:~7.2.6"
+    zod: "npm:~4.1.13"
+  peerDependencies:
+    "@mui/icons-material": ">=6 <8"
+    "@mui/material": ">=6 <8"
+    axios: ^1
+    react: ^19
+    react-dom: ^19
+    react-helmet: ^7
+    react-router-dom: ^7
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@xylabs/sdk-react@workspace:packages/sdk":
+  version: 0.0.0-use.local
+  resolution: "@xylabs/sdk-react@workspace:packages/sdk"
+  dependencies:
+    "@mui/icons-material": "npm:~7.3.6"
+    "@mui/material": "npm:~7.3.6"
+    "@types/react": "npm:^19.2.7"
+    "@xylabs/react-accordion": "npm:~7.1.9"
+    "@xylabs/react-animation": "npm:~7.1.9"
+    "@xylabs/react-appbar": "npm:~7.1.9"
+    "@xylabs/react-async-effect": "npm:~7.1.9"
+    "@xylabs/react-button": "npm:~7.1.9"
+    "@xylabs/react-common": "npm:~7.1.9"
+    "@xylabs/react-cookie-consent": "npm:~7.1.9"
+    "@xylabs/react-crypto": "npm:~7.1.9"
+    "@xylabs/react-dialogs": "npm:~7.1.9"
+    "@xylabs/react-experiments": "npm:~7.1.9"
+    "@xylabs/react-flexbox": "npm:~7.1.9"
+    "@xylabs/react-hooks": "npm:~7.1.9"
+    "@xylabs/react-identicon": "npm:~7.1.9"
+    "@xylabs/react-link": "npm:~7.1.9"
+    "@xylabs/react-mixpanel": "npm:~7.1.9"
+    "@xylabs/react-number-status": "npm:~7.1.9"
+    "@xylabs/react-pixel": "npm:~7.1.9"
+    "@xylabs/react-pixel-debugger": "npm:~7.1.9"
+    "@xylabs/react-promise": "npm:~7.1.9"
+    "@xylabs/react-quick-tip-button": "npm:~7.1.9"
+    "@xylabs/react-render-spin-check": "npm:~7.1.9"
+    "@xylabs/react-rich-result": "npm:~7.1.9"
+    "@xylabs/react-scroll-to-top": "npm:~7.1.9"
+    "@xylabs/react-shared": "npm:~7.1.9"
+    "@xylabs/react-theme": "npm:~7.1.9"
+    "@xylabs/ts-scripts-yarn3": "npm:~7.2.8"
+    "@xylabs/tsconfig": "npm:~7.2.8"
+    "@xylabs/tsconfig-dom": "npm:~7.2.8"
+    "@xylabs/tsconfig-react": "npm:~7.2.8"
+    react: "npm:^19.2.1"
+    react-dom: "npm:^19.2.1"
+    typescript: "npm:^5.9.3"
   peerDependencies:
     "@mui/icons-material": ">=6 <8"
     "@mui/material": ">=6 <8"
@@ -10708,7 +10760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^4.1.11, zod@npm:^4.1.13":
+"zod@npm:^4.1.11, zod@npm:^4.1.13, zod@npm:~4.1.13":
   version: 4.1.13
   resolution: "zod@npm:4.1.13"
   checksum: 10c0/d7e74e82dba81a91ffc3239cd85bc034abe193a28f7087a94ab258a3e48e9a7ca4141920cac979a0d781495b48fc547777394149f26be04c3dc642f58bbc3941
