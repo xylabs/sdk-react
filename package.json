@@ -45,6 +45,7 @@
     "build-storybook": "storybook build",
     "build-typedoc-site": "typedoc && storybook build -o ./docs/storybook",
     "knip:unlisted": "echo ---Unlisted Dependencies--- && yarn workspaces foreach -Ap --exclude @xyo-network/sdk-js --no-interlaced run knip --include unlisted",
+    "publish-all": "npm publish --workspaces",
     "start": "NODE_OPTIONS=--max_old_space_size=8192 storybook dev -p 6006",
     "storybook": "storybook dev -p 6006"
   },
