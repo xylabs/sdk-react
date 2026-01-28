@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-base-page",
-  "version": "7.1.10",
+  "version": "7.1.11",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,10 +41,10 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-appbar": "~7.1.10",
-    "@xylabs/react-cookie-consent": "~7.1.10",
-    "@xylabs/react-flexbox": "~7.1.10",
-    "@xylabs/react-scroll-to-top": "~7.1.10",
+    "@xylabs/react-appbar": "~7.1.11",
+    "@xylabs/react-cookie-consent": "~7.1.11",
+    "@xylabs/react-flexbox": "~7.1.11",
+    "@xylabs/react-scroll-to-top": "~7.1.11",
     "@xylabs/typeof": "~5.0.64",
     "react-helmet": "~6.1.0"
   },
