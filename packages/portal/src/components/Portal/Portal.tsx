@@ -6,7 +6,6 @@ import type { PortalProps } from './PortalProps.ts'
 export const Portal: React.FC<PortalProps> = ({
   children, className, el = 'div', target = 'body',
 }: PortalProps) => {
-  // eslint-disable-next-line react-naming-convention/use-state
   const [container] = useState(document.createElement(el))
   if (className) {
     container.classList.add(className)

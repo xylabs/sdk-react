@@ -81,10 +81,10 @@ export const Identicon: React.FC<IdenticonProps> = ({
   value,
   ...props
 }) => {
-  const canvas = useRef<HTMLCanvasElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    updateCanvas(canvas, {
+    updateCanvas(canvasRef, {
       bg, className, count, fg, iconPadding, palette, size, value,
     })
   })
@@ -95,7 +95,7 @@ export const Identicon: React.FC<IdenticonProps> = ({
         ? (
             <canvas
               className={className}
-              ref={canvas}
+              ref={canvasRef}
               style={{ height: size, width: size }}
             />
           )

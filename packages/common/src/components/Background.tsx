@@ -9,4 +9,5 @@ const Background: React.FC<FlexBoxProps> = (props) => {
   return <FlexRow {...props} />
 }
 
+// eslint-disable-next-line @typescript-eslint/no-deprecated
 export { Background }

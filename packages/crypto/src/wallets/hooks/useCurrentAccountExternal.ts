@@ -1,4 +1,3 @@
-import { EthAddressWrapper } from '@xylabs/eth-address'
 import { isDefined } from '@xylabs/typeof'
 import { useMemo, useSyncExternalStore } from 'react'
 
@@ -19,22 +18,4 @@ export const useCurrentAccountExternal = (ethWalletConnector?: EthWalletConnecto
   }, [ethWalletConnector])
 
   return useSyncExternalStore(subscribe, getSnapShot)
-}
-
-export const useCurrentAccount = (ethWalletConnector?: EthWalletConnectorBase): [EthAddressWrapper | undefined, string[]] => {
-  const addresses = useCurrentAccountExternal(ethWalletConnector)
-
-  /**
-   * According to the metamask docs, the first account is considered their 'selected account'
-   *
-   * see - https://docs.metamask.io/wallet/how-to/connect/access-accounts/#handle-accounts
-   */
-  const [currentAddress, additionalAddresses] = useMemo(() => {
-    return addresses?.length > 0 ? [EthAddressWrapper.fromString(addresses[0]), addresses.slice(1)] : [undefined, []]
-  }, [addresses])
-
-  if (ethWalletConnector?.installed) {
-    return [currentAddress, additionalAddresses]
-  }
-  return [undefined, []]
 }
