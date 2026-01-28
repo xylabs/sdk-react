@@ -5,7 +5,7 @@ import { XL1ColorLogoIcon } from './XL1ColorLogoIcon.tsx'
 import { XYOColorLogoIcon } from './XYOColorLogoIcon.tsx'
 
 export default {
-  title: 'Token/XL1ColorLogoIcon/local',
+  title: 'crypto/Token/XL1ColorLogoIcon',
   component: XL1ColorLogoIcon,
 } as Meta
 
