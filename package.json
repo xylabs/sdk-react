@@ -65,7 +65,7 @@
     "@xylabs/react-appbar": "workspace:~",
     "@xylabs/react-async-effect": "workspace:~",
     "@xylabs/react-button": "workspace:~",
-    "@xylabs/react-common": "workspace:~",
+    "@xylabs/react-common": "2.12.13",
     "@xylabs/react-cookie-consent": "workspace:~",
     "@xylabs/react-crypto": "workspace:~",
     "@xylabs/react-dialogs": "workspace:~",
