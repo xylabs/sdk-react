@@ -55,10 +55,12 @@
     "@xylabs/tsconfig-dom": "~7.3.2",
     "@xylabs/tsconfig-react": "~7.3.2",
     "react": "^19.2.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
   },
   "peerDependencies": {
-    "react": "^19"
+    "react": "^19",
+    "zod": "^4"
   },
   "publishConfig": {
     "access": "public"

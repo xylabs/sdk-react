@@ -22,14 +22,14 @@ export const StyledDrawer = styled(Drawer, { shouldForwardProp: prop => prop !==
     boxSizing: 'border-box',
     variants: [
       {
-        props: ({ open }) => open,
+        props: ({ open }: { open: boolean }) => open,
         style: {
           ...openedDrawerMixin(theme),
           '& .MuiDrawer-paper': openedDrawerMixin(theme),
         },
       },
       {
-        props: ({ open }) => !open,
+        props: ({ open }: { open: boolean }) => !open,
         style: {
           ...closedDrawerMixin(theme),
           '& .MuiDrawer-paper': closedDrawerMixin(theme),
