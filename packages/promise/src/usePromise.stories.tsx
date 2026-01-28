@@ -1,6 +1,7 @@
 import { Alert, Button } from '@mui/material'
 import type { StoryFn } from '@storybook/react-vite'
 import { delay } from '@xylabs/delay'
+import { isDefined } from '@xylabs/sdk-js'
 import React, { useState } from 'react'
 
 import { usePromise } from './usePromise.ts'
@@ -14,7 +15,7 @@ const UsePromiseTest: React.FC<UseAsyncEffectTestProps> = ({ refresh, delayTicks
 
     async () => {
       console.log('UsePromiseTest')
-      if (delayTicks) {
+      if (isDefined(delayTicks)) {
         await delay(delayTicks)
       }
       return refresh

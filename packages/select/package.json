@@ -37,9 +37,9 @@
     "dist",
     "src"
   ],
-  "workspaces": [
-    "packages/*"
-  ],
+  "dependencies": {
+    "@xylabs/sdk-js": "~5.0.64"
+  },
   "devDependencies": {
     "@mui/material": "~7.3.6",
     "@types/react": "^19.2.7",

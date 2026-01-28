@@ -37,9 +37,9 @@
     "dist",
     "src"
   ],
-  "workspaces": [
-    "packages/*"
-  ],
+  "dependencies": {
+    "@xylabs/sdk-js": "~5.0.64"
+  },
   "devDependencies": {
     "@types/react": "^19.2.7",
     "@xylabs/ts-scripts-yarn3": "~7.2.8",

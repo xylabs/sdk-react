@@ -1,5 +1,6 @@
 import type { PaletteMode, SelectProps } from '@mui/material'
 import { Select, useTheme } from '@mui/material'
+import { isDefined } from '@xylabs/sdk-js'
 import React from 'react'
 
 export type SelectExProps<T> = SelectProps<T> & {
@@ -11,7 +12,7 @@ export const SelectEx: <T>(props: SelectExProps<T>) => React.JSX.Element = ({
   MenuProps, mode = 'light', colorize, ...props
 }) => {
   const theme = useTheme()
-  const colorizeMenuProps = colorize ? { MenuListProps: { sx: { backgroundColor: theme.palette[colorize][mode] } } } : {}
+  const colorizeMenuProps = isDefined(colorize) ? { MenuListProps: { sx: { backgroundColor: theme.palette[colorize][mode] } } } : {}
 
   return (
     <Select

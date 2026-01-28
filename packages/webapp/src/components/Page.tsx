@@ -4,6 +4,7 @@ import { useAsyncEffect } from '@xylabs/react-async-effect'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexGrowCol } from '@xylabs/react-flexbox'
 import { useUserEvents } from '@xylabs/react-pixel'
+import { isDefined } from '@xylabs/sdk-js'
 import type { PropsWithChildren } from 'react'
 import React from 'react'
 import { Helmet } from 'react-helmet'
@@ -62,7 +63,7 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
   return (
     <WebAppPageRoot mobileScrollingBreakpoint={mobileScrollingBreakpoint} variant={variant} {...props}>
       <Helmet title={title} />
-      {container && container !== 'none'
+      {isDefined(container) && container !== 'none'
         ? (
             <Container
               disableGutters={disableGutters}

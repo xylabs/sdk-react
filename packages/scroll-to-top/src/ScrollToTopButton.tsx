@@ -17,7 +17,8 @@ export const ScrollToTopButton: React.FC<ScrollToTopButtonProps> = ({
   })
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(`#${anchorId}`)
+    const divElement = event.target as HTMLElement
+    const anchor = (divElement.ownerDocument ?? document).querySelector(`#${anchorId}`)
 
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'center' })
