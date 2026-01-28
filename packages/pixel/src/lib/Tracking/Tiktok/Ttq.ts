@@ -1,4 +1,6 @@
 class Ttq {
+  // disabling sonarjs rule because we want to have a singleton
+  // eslint-disable-next-line sonarjs/public-static-readonly
   static instance: Ttq
 
   static getTtq() {

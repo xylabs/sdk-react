@@ -1,7 +1,9 @@
 import type { PropsWithChildren } from 'react'
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
+import type { ProvidedContextExState } from '../contextEx/index.ts'
 import { CollapsibleContext } from './context.ts'
+import type { CollapsibleState } from './State.ts'
 
 export interface CollapsibleProviderProps extends PropsWithChildren {
   defaultCollapse?: boolean
@@ -14,11 +16,15 @@ export const CollapsibleProvider: React.FC<CollapsibleProviderProps> = ({
   const [collapse, setCollapse] = useState(() => defaultCollapse)
   const [collapseEnd, setCollapseEnd] = useState(() => defaultCollapseEnd)
 
-  return (
-    <CollapsibleContext value={{
+  const value = useMemo(() => {
+    const value: ProvidedContextExState<CollapsibleState> = {
       collapse, collapseEnd, provided: true, setCollapse, setCollapseEnd,
-    }}
-    >
+    }
+    return value
+  }, [collapse, collapseEnd])
+
+  return (
+    <CollapsibleContext value={value}>
       {children}
     </CollapsibleContext>
   )

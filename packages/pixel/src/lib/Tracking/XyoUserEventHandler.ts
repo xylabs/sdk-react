@@ -8,6 +8,8 @@ import { FacebookUserEventHandler } from './Facebook/index.ts'
 import { GoogleUserEventHandler } from './Google/index.ts'
 
 class XyoUserEventHandler<T extends EmptyObject> extends UserEventHandler<T> {
+  // disabling since we are using singleton pattern
+  // eslint-disable-next-line sonarjs/public-static-readonly
   static instance: XyoUserEventHandler<EmptyObject>
 
   protected handlers: UserEventHandler<T>[]

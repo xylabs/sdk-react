@@ -4,12 +4,12 @@ import type {
   BusyCircularProgressProps,
   BusyLinearProgressProps,
   BusyVariant,
-  WithChildren,
 } from '@xylabs/react-shared'
 import {
   BusyCircularProgress,
   BusyLinearProgress,
 } from '@xylabs/react-shared'
+import type { PropsWithChildren } from 'react'
 import React from 'react'
 
 import { useBusyTiming } from '../hooks/index.ts'
@@ -21,7 +21,7 @@ export interface BusyCardProps extends CardProps {
   busyVariantProps?: BusyCircularProgressProps | BusyLinearProgressProps
 }
 
-export const BusyCard: React.FC<WithChildren<BusyCardProps>> = ({
+export const BusyCard: React.FC<PropsWithChildren<BusyCardProps>> = ({
   busy,
   busyMinimum = 500,
   busyVariant = 'circular',

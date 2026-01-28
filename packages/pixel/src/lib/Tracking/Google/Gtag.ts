@@ -8,6 +8,8 @@ declare global {
 }
 
 class Gtag {
+  // disabling since this is a singleton
+  // eslint-disable-next-line sonarjs/public-static-readonly
   static instance: Gtag
   awid?: string
   domains?: string[]

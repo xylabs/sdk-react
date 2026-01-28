@@ -1,8 +1,7 @@
 import { delay } from '@xylabs/delay'
 
-// eslint-disable-next-line unicorn/no-static-only-class
 class SnapTr {
-  static instance: SnapTr
+  static readonly instance: SnapTr
   static getSnapTr() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const global = globalThis as any

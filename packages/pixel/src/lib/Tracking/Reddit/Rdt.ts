@@ -1,4 +1,6 @@
 class Rdt {
+  // disabling sonarjs rule since this is a singleton
+  // eslint-disable-next-line sonarjs/public-static-readonly
   static instance: Rdt
   static init(pixelId: string) {
     try {

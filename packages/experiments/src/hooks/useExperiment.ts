@@ -22,6 +22,7 @@ export const selectVariantForExperiment = <T>(name: string, variants: Record<str
 }
 
 export const useExperiments = <T>(name: string, experiments: VariantData[]) => {
+  // eslint-disable-next-line react-naming-convention/use-state
   const [activeExperiment] = useState(() => ExperimentsHelper.calculateExperiment(name, true, experiments, useUserEvents(true)))
 
   return {

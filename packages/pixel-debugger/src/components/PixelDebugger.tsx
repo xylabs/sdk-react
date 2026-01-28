@@ -62,7 +62,7 @@ export const PixelDebugger: React.FC = () => {
                 >
                   {events.map((e, index) => (
 
-                    <PixelEventDetails key={`${e.event}-${index}`} events={events} index={index} {...e} />
+                    <PixelEventDetails key={`${e.event}`} events={events} index={index} {...e} />
                   ))}
                 </FlexCol>
               )}

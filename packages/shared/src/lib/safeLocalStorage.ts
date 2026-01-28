@@ -1,6 +1,6 @@
-import type { Log } from '@xylabs/log'
+import type { Logger } from '@xylabs/logger'
 
-export const getLocalStorageObject = <T>(key: string, log?: Log): T => {
+export const getLocalStorageObject = <T>(key: string, log?: Logger): T => {
   let result = {} as T
   try {
     result = JSON.parse(localStorage.getItem(key) ?? '{}') as T
@@ -10,7 +10,7 @@ export const getLocalStorageObject = <T>(key: string, log?: Log): T => {
   return result
 }
 
-export const setLocalStorageObject = <T>(key: string, value: T, log?: Log) => {
+export const setLocalStorageObject = <T>(key: string, value: T, log?: Logger) => {
   try {
     localStorage.setItem(key, JSON.stringify(value))
   } catch (e) {

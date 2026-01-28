@@ -22,10 +22,10 @@ export const CustomDataTooltip: React.FC<CustomDataTooltipProps> = ({
 
   return (
     <Card variant="outlined" sx={{ p: 1 }}>
-      {tooltipData.map(({ label, dataKey }, index) => {
+      {tooltipData.map(({ label, dataKey }) => {
         const value = payload[0].payload[dataKey] ?? 'N/A'
         return (
-          <Typography key={index} variant="body2">
+          <Typography key={dataKey} variant="body2">
             <strong>
               {label}
               :

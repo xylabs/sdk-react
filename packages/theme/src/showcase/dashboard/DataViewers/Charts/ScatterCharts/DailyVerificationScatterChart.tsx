@@ -110,8 +110,8 @@ export const DailyVerificationScatterChart: React.FC<DailyVerificationChartProps
             shape="circle"
             isAnimationActive={false}
           >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={getVerificationColor(entry.verifications)} />
+            {data.map(entry => (
+              <Cell key={`cell-${entry.time}-${entry.verifications}`} fill={getVerificationColor(entry.verifications)} />
             ))}
           </Scatter>
         </ScatterChart>

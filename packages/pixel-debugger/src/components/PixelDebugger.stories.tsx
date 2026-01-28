@@ -27,7 +27,7 @@ const Template: StoryFn<typeof PixelDebuggerToggle> = (args: BusyBoxProps) => {
           <PixelDebugger />
         </PixelDebuggerProvider>
       )
-    : <></>
+    : <div>Loading Pixel...</div>
 }
 
 const Default = Template.bind({})

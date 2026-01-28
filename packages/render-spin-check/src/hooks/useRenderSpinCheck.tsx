@@ -1,5 +1,5 @@
 import {
-  useEffect, useMemo, useState,
+  useEffect, useRef, useState,
 } from 'react'
 
 export interface RenderSpinCheckConfig {
@@ -17,7 +17,7 @@ export interface RenderSpinCheckBounce {
 const spinCountMap = new Map<number, number>()
 
 export const useRenderSpinCheck = (bounce: RenderSpinCheckBounce, config?: RenderSpinCheckConfig) => {
-  const startTime = useMemo(() => Date.now(), [])
+  const startTime = useRef(Date.now()).current
   const [error, setError] = useState<Error>()
 
   useEffect(() => {

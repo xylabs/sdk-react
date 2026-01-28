@@ -16,7 +16,7 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
   data01, data02, showLegend = false,
 }) => {
   const theme = useTheme()
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, sonarjs/no-dead-store
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   const handleMouseEnter = (index: number) => {
@@ -40,7 +40,7 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
       {showLegend && (
         <Box display="flex" flexDirection="column" mb={2}>
           {data01.map((entry, index) => (
-            <FlexRow key={index} gap={1} alignItems="center">
+            <FlexRow key={entry.name} gap={1} alignItems="center">
               <Box
                 sx={{
                   backgroundColor: colors[index % colors.length],

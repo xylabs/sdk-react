@@ -90,7 +90,7 @@ export const DataCardSpeedDial: React.FC<DataCardSpeedDialProps> = ({ size }) =>
           <SpeedDialAction
             key={action.name}
             icon={action.icon}
-            tooltipTitle={action.name}
+            slotProps={{ tooltip: { title: action.name } }}
             sx={{
               'backgroundColor': theme.vars.palette.primary.main,
               'color': theme.vars.palette.primary.contrastText,

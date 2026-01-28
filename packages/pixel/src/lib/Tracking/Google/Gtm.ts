@@ -1,6 +1,8 @@
 import type { WithDataLayer } from './DataLayer.ts'
 
 class Gtm {
+  // disabling sonarjs rule since this is a singleton
+  // eslint-disable-next-line sonarjs/public-static-readonly
   static instance: Gtm
 
   containerId?: string

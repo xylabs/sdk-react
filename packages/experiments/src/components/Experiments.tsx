@@ -1,5 +1,5 @@
 import { forget } from '@xylabs/forget'
-import type { Log } from '@xylabs/log'
+import type { Logger } from '@xylabs/logger'
 import { useUserEvents } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
 import type { ReactElement } from 'react'
@@ -20,7 +20,7 @@ const saveOutcomes = () => {
 }
 
 const saveExperimentsTestData = (key: string) => {
-  const mergeData = (data: { [index: string]: string }, log?: Log): string => {
+  const mergeData = (data: { [index: string]: string }, log?: Logger): string => {
     const dataArray: string[] = []
     for (const key in data) {
       dataArray.push(`${key}-${data[key]}`)

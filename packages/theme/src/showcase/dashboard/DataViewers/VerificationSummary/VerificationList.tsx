@@ -49,7 +49,7 @@ export const VerificationList: React.FC<VerificationListProps> = ({
         </TableHead>
         <TableBody>
           {regions.map((region, index) => (
-            <TableRow key={index} sx={{ borderBottom: index === regions.length - 1 ? 'none' : 'inherit' }}>
+            <TableRow key={region.name} sx={{ borderBottom: index === regions.length - 1 ? 'none' : 'inherit' }}>
               <TableCell>
                 <Typography variant="body2">{region.name}</Typography>
               </TableCell>

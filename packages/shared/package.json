@@ -42,7 +42,7 @@
   ],
   "dependencies": {
     "@xylabs/api": "~5.0.50",
-    "@xylabs/log": "~5.0.50",
+    "@xylabs/logger": "~5.0.64",
     "@xylabs/react-async-effect": "~7.1.9"
   },
   "devDependencies": {

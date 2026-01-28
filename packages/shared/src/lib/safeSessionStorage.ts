@@ -1,6 +1,6 @@
-import type { Log } from '@xylabs/log'
+import type { Logger } from '@xylabs/logger'
 
-export const getSessionStorageObject = <T>(key: string, log?: Log): T => {
+export const getSessionStorageObject = <T>(key: string, log?: Logger): T => {
   let result = {} as T
   try {
     result = JSON.parse(sessionStorage.getItem(key) ?? '{}') as T
@@ -10,7 +10,7 @@ export const getSessionStorageObject = <T>(key: string, log?: Log): T => {
   return result
 }
 
-export const setSessionStorageObject = <T>(key: string, value: T, log?: Log) => {
+export const setSessionStorageObject = <T>(key: string, value: T, log?: Logger) => {
   try {
     sessionStorage.setItem(key, JSON.stringify(value))
   } catch (e) {
