@@ -50,6 +50,7 @@ export default [
         'ethers/*',
         'vitest/*',
         'yargs/*',
+        'viem/*',
         '@mui/material/*',
         ...importConfig.rules['import-x/no-internal-modules'][1].allow,
       ],
