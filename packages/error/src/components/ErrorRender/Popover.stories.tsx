@@ -45,6 +45,7 @@ const Template: StoryFn<typeof PopoverErrorRender> = (args) => {
 }
 
 const Default = Template.bind({})
+// eslint-disable-next-line @stylistic/max-len
 Default.args = { error: new Error('This is a test error with a really long message. This is a test error with a really long message. This is a test error with a really long message. This is a test error with a really long message. ') }
 
 export { Default }

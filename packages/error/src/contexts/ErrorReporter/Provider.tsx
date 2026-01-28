@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react'
-import React from 'react'
+import React, { useMemo } from 'react'
 import type Rollbar from 'rollbar'
 
 import { ErrorReporterContext } from './Context.ts'
@@ -15,7 +15,9 @@ const ErrorReporterProvider: React.FC<PropsWithChildren<ErrorReporterProviderPro
     throw new Error('ErrorReporterProvider unable to find a Rollbar instance either passed as prop or from Provider')
   }
 
-  return <ErrorReporterContext value={{ rollbar }}>{children}</ErrorReporterContext>
+  const value = useMemo(() => ({ rollbar }), [rollbar])
+
+  return <ErrorReporterContext value={value}>{children}</ErrorReporterContext>
 }
 
 export { ErrorReporterProvider }

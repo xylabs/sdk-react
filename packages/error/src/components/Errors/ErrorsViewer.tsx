@@ -12,8 +12,8 @@ const ErrorsViewer: React.FC<ErrorsViewerProps> = (props) => {
   } = props
   return (
     <FlexGrowCol padding={1} {...boxProps}>
-      {errors?.map((error, index) => {
-        return <ErrorViewer error={error} key={index} />
+      {errors?.map((error) => {
+        return <ErrorViewer error={error} key={error.message} />
       })}
       {onRetry
         ? (

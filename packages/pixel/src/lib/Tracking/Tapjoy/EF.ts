@@ -1,4 +1,6 @@
 class EF {
+  // disable since we want a singleton
+  // eslint-disable-next-line sonarjs/public-static-readonly
   static instance: EF
 
   static getEF() {
