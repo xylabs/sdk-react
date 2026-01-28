@@ -22,8 +22,8 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
         <ListSubheader>{title}</ListSubheader>
       </Collapse>
 
-      {listItems.map((item, index) => (
-        <MenuListItemContainer key={index} iconMenuTextSpacing={iconMenuTextSpacing} {...item}></MenuListItemContainer>
+      {listItems.map(item => (
+        <MenuListItemContainer key={item.href} iconMenuTextSpacing={iconMenuTextSpacing} {...item}></MenuListItemContainer>
       ))}
     </FlexCol>
   )

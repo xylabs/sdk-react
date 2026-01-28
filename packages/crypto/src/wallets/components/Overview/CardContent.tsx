@@ -7,7 +7,6 @@ import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { isDefined } from '@xylabs/typeof'
 import type { TypedDataDomain } from 'ethers/hash'
-import { verifyTypedData } from 'ethers/hash'
 import React, { useMemo } from 'react'
 
 import type {

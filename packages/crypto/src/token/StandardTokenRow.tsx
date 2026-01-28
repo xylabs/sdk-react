@@ -26,7 +26,6 @@ export const StandardTokenRow: React.FC<StandardTokenRowProps> = ({
   textVariant,
   textWeight = 300,
   children,
-  showLabel = true,
   sx,
   ...avatarProps
 }) => {

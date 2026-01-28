@@ -48,22 +48,35 @@ export const AppSettingsProvider: React.FC<PropsWithChildren<AppSettingsProvider
     setMaxAccounts(value)
   }
 
+  const providerValue = useMemo(() => {
+    return {
+      changeMaxAccounts,
+      changeNavigationCollapsed,
+      changeNavigationType,
+      changeSeedPhrase,
+      developerMode,
+      enableDeveloperMode,
+      maxAccounts,
+      navigationCollapsed,
+      navigationType,
+      seedPhrase,
+      ...value,
+    }
+  }, [changeMaxAccounts,
+    changeNavigationCollapsed,
+    changeNavigationType,
+    changeSeedPhrase,
+    developerMode,
+    enableDeveloperMode,
+    maxAccounts,
+    navigationCollapsed,
+    navigationType,
+    seedPhrase,
+    value])
+
   return (
     <AppSettingsContext
-      value={{
-        changeMaxAccounts,
-        changeNavigationCollapsed,
-        changeNavigationType,
-        changeSeedPhrase,
-        developerMode,
-        enableDeveloperMode,
-        maxAccounts,
-        navigationCollapsed,
-        navigationType,
-        seedPhrase,
-
-        ...value,
-      }}
+      value={providerValue}
       {...props}
     >
       {children}

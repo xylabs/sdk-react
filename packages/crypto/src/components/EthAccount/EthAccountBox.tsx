@@ -43,7 +43,7 @@ export const EthAccountBox: React.FC<EthAccountProps & FlexBoxProps> = ({
             : addressToDisplay.toShortString()
       : '-- --'
 
-  // Note: We use the all zero address for spacing in case it is
+  // We use the all zero address for spacing in case it is
 
   return (
     <FlexRow height={height} justifyContent="space-between" alignItems="stretch" {...props}>

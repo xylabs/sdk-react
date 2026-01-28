@@ -64,7 +64,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   /**
    * Request to enable accounts in the wallet
-   * Note: This call is not wrapped in a try/catch by design.  Errors from connecting to a wallet can be intentional behavior
+   * This call is not wrapped in a try/catch by design.  Errors from connecting to a wallet can be intentional behavior
    * (i.e. the user rejected the request to connect).  Handle errors in the calling code.
    */
   async connectWallet(): Promise<string[] | null | undefined> {
@@ -144,7 +144,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   /**
    * Pass a callback to be notified when accounts are changed
-   * Note: This is a notifier so it does not return updated values so check the allowed accounts
+   * This is a notifier so it does not return updated values so check the allowed accounts
    * after the passed listener is invoked
    *
    * @param listener A notify function that will be called when allowed accounts change
@@ -158,7 +158,7 @@ export abstract class EthWalletConnectorBase extends EIP1193Events {
 
   /**
    * Pass a callback to be notified when chainId is changed
-   * Note: This is a notifier so it does not return updated values so check the chainId
+   * This is a notifier so it does not return updated values so check the chainId
    * after the passed listener is invoked
    *
    * @param listener A notify function that will be called when chainId changes

@@ -85,7 +85,7 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
           >
             {data01.map((entry, index) => (
               <Cell
-                key={`cell-${index}`}
+                key={`cell-${entry.name}`}
                 fill={colors[index % colors.length]}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}

@@ -10,7 +10,7 @@ import { AnimatedList } from './AnimatedList.tsx'
 const colors = ['red', 'green', 'blue', 'yellow', 'purple']
 
 const TestCard = (props: CardProps) => {
-  const bgcolor = useMemo(() => colors[Math.floor(Math.random() * colors.length)], [])
+  const bgcolor = colors[Math.floor(Math.random() * colors.length)]
   return (
     <Card
       sx={{

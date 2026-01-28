@@ -5,7 +5,7 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import { isBigInt, isString } from '@xylabs/typeof'
 import React from 'react'
 
-import xyoLogo from './img/xyo.svg'
+import { XyoLogoIconSvg } from './img/index.ts'
 import type { TokenAmountProps } from './TokenAmountProps.tsx'
 
 const placesSplit = (value: bigint, places: number): [bigint, bigint] => {
@@ -45,7 +45,7 @@ export const TokenAmount: React.FC<TokenAmountProps> = ({
       <FlexRow justifyContent="space-between" width="100%" busy={amount === undefined} busySize={16}>
         <FlexRow>
           {logo
-            ? <img src={xyoLogo} height={24} />
+            ? <img src={XyoLogoIconSvg} height={24} />
             : null}
           {isString(label)
             ? (

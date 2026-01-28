@@ -6,7 +6,7 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
 /**
  * Subscribe to chainId changes from a given wallet
  *
- * Note: Its easier for ethWalletConnector to be defined to avoid complex method signatures for subscribe function
+ * Its easier for ethWalletConnector to be defined to avoid complex method signatures for subscribe function
  **/
 export const useChainId = (ethWalletConnector?: EthWalletConnectorBase) => {
   const { getSnapShot, subscribe } = useMemo(() => {

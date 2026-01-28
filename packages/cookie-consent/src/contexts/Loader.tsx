@@ -1,4 +1,4 @@
-import type { WithChildren } from '@xylabs/react-shared'
+import type { PropsWithChildren } from 'react'
 import React, { useMemo, useState } from 'react'
 
 import { CookieConsentContext } from './Context.ts'
@@ -13,7 +13,7 @@ const setAcceptedToLocalStorage = (accepted: boolean) => {
   localStorage.setItem(CookiesAcceptedLocalStorageName, accepted ? 'true' : 'false')
 }
 
-const CookieConsentLoader: React.FC<WithChildren> = ({ children }) => {
+const CookieConsentLoader: React.FC<PropsWithChildren> = ({ children }) => {
   const [accepted, setAccepted] = useState(() => getAcceptedFromLocalStorage())
   const setAcceptedHandler = (accepted: boolean) => {
     setAcceptedToLocalStorage(accepted)

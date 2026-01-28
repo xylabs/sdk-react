@@ -9,13 +9,14 @@ export interface MenuExProps extends MenuProps {
 }
 
 export const MenuEx: React.FC<MenuExProps> = ({
-  MenuListProps, mode = 'light', colorize, ...props
+  MenuListProps, slotProps, mode = 'light', colorize, ...props
 }) => {
+  const menuListProps = MenuListProps || slotProps?.list || {}
   const theme = useTheme()
   const colorizeMenuListProps = isString(colorize) ? { sx: { backgroundColor: theme.palette[colorize][mode] } } : {}
   return (
     <Menu
-      MenuListProps={{ ...MenuListProps, ...colorizeMenuListProps }}
+      slotProps={{ list: { ...menuListProps, ...colorizeMenuListProps } }}
       {...props}
     />
   )
