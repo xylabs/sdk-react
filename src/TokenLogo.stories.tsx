@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite'
-import { XL1ColorLogoIcon } from '@xylabs/react-crypto'
+import { XL1ColorLogoIcon, XYOColorLogoIcon } from '@xylabs/react-crypto'
 import React from 'react'
 
 export default {
@@ -7,9 +7,12 @@ export default {
   component: XL1ColorLogoIcon
 } as Meta
 
-const Template: StoryFn<typeof XL1ColorLogoIcon> = (args) => <XL1ColorLogoIcon {...args} />
+const TemplateXL1: StoryFn<typeof XL1ColorLogoIcon> = (args) => <XL1ColorLogoIcon {...args} />
+const TemplateXYO: StoryFn<typeof XYOColorLogoIcon> = (args) => <XYOColorLogoIcon {...args} />
 
-const Default = Template.bind({})
-Default.args = {}
+const XL1 = TemplateXL1.bind({})
+XL1.args = {}
+const XYO = TemplateXYO.bind({})
+XYO.args = {}
 
-export { Default }
+export { XL1, XYO }
