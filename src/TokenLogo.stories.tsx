@@ -4,11 +4,11 @@ import React from 'react'
 
 export default {
   title: 'Token/XL1ColorLogoIcon/exported',
-  component: XL1ColorLogoIcon
+  component: XL1ColorLogoIcon,
 } as Meta
 
-const TemplateXL1: StoryFn<typeof XL1ColorLogoIcon> = (args) => <XL1ColorLogoIcon {...args} />
-const TemplateXYO: StoryFn<typeof XYOColorLogoIcon> = (args) => <XYOColorLogoIcon {...args} />
+const TemplateXL1: StoryFn<typeof XL1ColorLogoIcon> = args => <XL1ColorLogoIcon {...args} />
+const TemplateXYO: StoryFn<typeof XYOColorLogoIcon> = args => <XYOColorLogoIcon {...args} />
 
 const XL1 = TemplateXL1.bind({})
 XL1.args = {}
