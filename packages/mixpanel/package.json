@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-mixpanel",
-  "version": "7.1.11",
+  "version": "7.1.12",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,7 +41,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-shared": "~7.1.11",
+    "@xylabs/react-shared": "~7.1.12",
     "mixpanel-browser": "~2.74.0"
   },
   "devDependencies": {

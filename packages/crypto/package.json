@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-crypto",
-  "version": "7.1.11",
+  "version": "7.1.12",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -42,12 +42,12 @@
   ],
   "dependencies": {
     "@xylabs/eth-address": "~5.0.64",
-    "@xylabs/react-async-effect": "~7.1.11",
-    "@xylabs/react-button": "~7.1.11",
-    "@xylabs/react-error": "~7.1.11",
-    "@xylabs/react-flexbox": "~7.1.11",
-    "@xylabs/react-identicon": "~7.1.11",
-    "@xylabs/react-promise": "~7.1.11",
+    "@xylabs/react-async-effect": "~7.1.12",
+    "@xylabs/react-button": "~7.1.12",
+    "@xylabs/react-error": "~7.1.12",
+    "@xylabs/react-flexbox": "~7.1.12",
+    "@xylabs/react-identicon": "~7.1.12",
+    "@xylabs/react-promise": "~7.1.12",
     "@xylabs/sdk-js": "~5.0.64",
     "ethers": "^6.16.0",
     "lru-cache": "~11.2.5",

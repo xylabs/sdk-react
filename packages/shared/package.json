@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-shared",
-  "version": "7.1.11",
+  "version": "7.1.12",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,7 +41,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-async-effect": "~7.1.11",
+    "@xylabs/react-async-effect": "~7.1.12",
     "@xylabs/sdk-js": "~5.0.64"
   },
   "devDependencies": {
