@@ -18,7 +18,6 @@ export default [
   workspacesConfig,
   rulesConfig,
   sonarConfig,
-  importConfig,
   reactConfig,
   {
     rules: {
@@ -29,5 +28,33 @@ export default [
       '@typescript-eslint/no-misused-promises': ['off'],
     },
   },
+  {
+  ...typescriptConfig,
+  rules: {
+    ...typescriptConfig.rules,
+    // '@typescript-eslint/no-unsafe-assignment': ['warn'],
+    // '@typescript-eslint/no-unsafe-return': ['warn'],
+    // '@typescript-eslint/no-unsafe-member-access': ['warn'],
+    // '@typescript-eslint/no-unsafe-call': ['warn'],
+  },
+},
+{
+  ...importConfig,
+  rules: {
+    ...importConfig.rules,
+    'import-x/no-unresolved': ['off'],
+    'import-x/no-internal-modules': ['warn', {
+      allow: [
+        'react-icons/*',
+        'react-dom/*',
+        'ethers/*',
+        'vitest/*',
+        'yargs/*',
+        '@mui/material/*',
+        ...importConfig.rules['import-x/no-internal-modules'][1].allow,
+      ],
+    }],
+  },
+},
   ...storybook.configs["flat/recommended"]
 ];
