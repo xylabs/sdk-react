@@ -41,7 +41,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-shared": "workspace:~",
+    "@xylabs/react-shared": "~7.1.9",
     "mixpanel-browser": "~2.72.0"
   },
   "devDependencies": {

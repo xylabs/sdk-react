@@ -42,16 +42,16 @@
   ],
   "dependencies": {
     "@xylabs/promise": "~5.0.50",
-    "@xylabs/react-pixel": "workspace:~",
-    "@xylabs/react-shared": "workspace:~",
+    "@xylabs/react-pixel": "~7.1.9",
+    "@xylabs/react-shared": "~7.1.9",
     "@xylabs/typeof": "~5.0.50"
   },
   "devDependencies": {
     "@mui/material": "~7.3.6",
     "@storybook/react-vite": "~10.1.4",
     "@types/react": "^19.2.7",
-    "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/react-pixel": "workspace:~",
+    "@xylabs/react-flexbox": "~7.1.9",
+    "@xylabs/react-pixel": "~7.1.9",
     "@xylabs/ts-scripts-yarn3": "~7.2.8",
     "@xylabs/tsconfig": "~7.2.8",
     "@xylabs/tsconfig-dom": "~7.2.8",

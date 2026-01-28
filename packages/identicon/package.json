@@ -41,7 +41,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-flexbox": "workspace:~",
+    "@xylabs/react-flexbox": "~7.1.9",
     "md5": "~2.3.0"
   },
   "devDependencies": {

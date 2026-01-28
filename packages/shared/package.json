@@ -43,7 +43,7 @@
   "dependencies": {
     "@xylabs/api": "~5.0.50",
     "@xylabs/log": "~5.0.50",
-    "@xylabs/react-async-effect": "workspace:~"
+    "@xylabs/react-async-effect": "~7.1.9"
   },
   "devDependencies": {
     "@mui/material": "~7.3.6",

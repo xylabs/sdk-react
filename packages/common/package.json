@@ -42,11 +42,11 @@
   ],
   "dependencies": {
     "@xylabs/assert": "~5.0.50",
-    "@xylabs/react-base-page": "workspace:~",
-    "@xylabs/react-error": "workspace:~",
-    "@xylabs/react-flexbox": "workspace:~",
-    "@xylabs/react-portal": "workspace:~",
-    "@xylabs/react-select": "workspace:~",
+    "@xylabs/react-base-page": "~7.1.9",
+    "@xylabs/react-error": "~7.1.9",
+    "@xylabs/react-flexbox": "~7.1.9",
+    "@xylabs/react-portal": "~7.1.9",
+    "@xylabs/react-select": "~7.1.9",
     "@xylabs/typeof": "~5.0.50"
   },
   "devDependencies": {
