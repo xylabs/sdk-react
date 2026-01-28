@@ -7,7 +7,7 @@ import type { EthWalletConnectorBase } from '../classes/index.ts'
 import type { EthWallet } from '../types/index.ts'
 import { useChainId } from './useChainId.tsx'
 import { useConnectWallet } from './useConnect.tsx'
-import { useCurrentAccount } from './useCurrentAccount.tsx'
+import { useCurrentAccount } from './useCurrentAccount.ts'
 import { useProvider } from './useProvider.tsx'
 import { useSigner } from './useSigner.tsx'
 
