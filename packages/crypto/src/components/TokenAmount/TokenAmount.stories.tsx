@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite'
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import React from 'react'
 
 import { TokenAmount } from './TokenAmount.tsx'

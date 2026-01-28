@@ -3,7 +3,7 @@ import { type SvgIconProps, Typography } from '@mui/material'
 import { FlexCol } from '@xylabs/react-flexbox'
 import type { QuickTipButtonProps } from '@xylabs/react-quick-tip-button'
 import { QuickTipButton } from '@xylabs/react-quick-tip-button'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import React from 'react'
 
 import { ErrorRender } from './ErrorRender/index.ts'

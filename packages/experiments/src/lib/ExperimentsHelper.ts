@@ -1,8 +1,8 @@
-import { forget } from '@xylabs/forget'
-import type { Logger } from '@xylabs/logger'
 import type { TestStartedFields, UserEventHandler } from '@xylabs/pixel'
 import type { UserEventsProps } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
+import type { Logger } from '@xylabs/sdk-js'
+import { forget } from '@xylabs/sdk-js'
 
 import { ExperimentsLocalStorageKey, OutcomesLocalStorageKey } from '../components/index.ts'
 import type {

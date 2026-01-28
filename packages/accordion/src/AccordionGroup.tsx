@@ -4,7 +4,7 @@ import {
   Accordion, AccordionDetails, AccordionSummary, Typography, useMediaQuery, useTheme,
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import type { ReactNode } from 'react'
 import React, { useState } from 'react'
 

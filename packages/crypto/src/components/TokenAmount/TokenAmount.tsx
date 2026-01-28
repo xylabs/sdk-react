@@ -1,8 +1,9 @@
 import { Typography } from '@mui/material'
-import { assertEx } from '@xylabs/assert'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { isBigInt, isString } from '@xylabs/typeof'
+import {
+  assertEx, isBigInt, isString,
+} from '@xylabs/sdk-js'
 import React from 'react'
 
 import { XyoLogoIconSvg } from './img/index.ts'

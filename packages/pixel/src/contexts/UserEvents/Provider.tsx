@@ -1,5 +1,5 @@
-import type { EmptyObject } from '@xylabs/object'
 import type { UserEventHandler } from '@xylabs/pixel'
+import type { EmptyObject } from '@xylabs/sdk-js'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'
 

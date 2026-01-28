@@ -2,7 +2,7 @@ import {
   AppBar, Container, Toolbar, useMediaQuery, useTheme,
 } from '@mui/material'
 import { FlexGrowRow, FlexRow } from '@xylabs/react-flexbox'
-import { isDefinedNotNull, isString } from '@xylabs/typeof'
+import { isDefinedNotNull, isString } from '@xylabs/sdk-js'
 import React from 'react'
 
 import type { AppBarExProps } from './AppBarExProps.tsx'

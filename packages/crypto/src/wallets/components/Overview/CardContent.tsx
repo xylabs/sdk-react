@@ -5,7 +5,7 @@ import {
 } from '@mui/material'
 import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import type { TypedDataDomain } from 'ethers/hash'
 import React, { useMemo } from 'react'
 

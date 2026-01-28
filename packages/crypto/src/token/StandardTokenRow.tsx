@@ -3,7 +3,7 @@ import {
   Typography,
   type TypographyProps,
 } from '@mui/material'
-import { isUndefinedOrNull } from '@xylabs/typeof'
+import { isUndefinedOrNull } from '@xylabs/sdk-js'
 import * as React from 'react'
 
 import { XL1ColorLogoIconSvg, XYOColorLogoIconSvg } from './img/index.ts'

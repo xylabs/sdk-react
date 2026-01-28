@@ -1,7 +1,7 @@
 import type { ToolbarProps } from '@mui/material'
 import { Toolbar } from '@mui/material'
 import { ColorSchemeButton } from '@xylabs/react-theme'
-import { isDefinedNotNull } from '@xylabs/typeof'
+import { isDefinedNotNull } from '@xylabs/sdk-js'
 import type { ReactNode } from 'react'
 import React from 'react'
 

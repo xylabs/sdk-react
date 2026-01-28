@@ -1,5 +1,5 @@
-import { type EmptyObject, toSafeJsonObject } from '@xylabs/object'
 import { XyPixel } from '@xylabs/pixel'
+import { type EmptyObject, toSafeJsonObject } from '@xylabs/sdk-js'
 
 class XyBaseEvent<T extends EmptyObject> {
   private name: string

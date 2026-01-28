@@ -1,4 +1,4 @@
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import type { Eip1193Provider } from 'ethers/providers'
 
 /**

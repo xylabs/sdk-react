@@ -1,4 +1,4 @@
-import type { Logger } from '@xylabs/logger'
+import type { Logger } from '@xylabs/sdk-js'
 
 export const getSessionStorageObject = <T>(key: string, log?: Logger): T => {
   let result = {} as T

@@ -6,7 +6,7 @@ import {
 import { CookieConsent } from '@xylabs/react-cookie-consent'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import React, { use } from 'react'
 import { Helmet } from 'react-helmet'
 

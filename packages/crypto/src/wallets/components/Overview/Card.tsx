@@ -1,7 +1,7 @@
 import type { CardProps } from '@mui/material'
 import { Card } from '@mui/material'
-import type { Hex } from '@xylabs/hex'
 import { ErrorRender } from '@xylabs/react-error'
+import type { Hex } from '@xylabs/sdk-js'
 import React, { useMemo, useState } from 'react'
 
 import type { EIP6963Connector } from '../../classes/index.ts'

@@ -2,7 +2,7 @@ import {
   Box, Typography, useTheme,
 } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import React, { useState } from 'react'
 import {
   Cell, Pie, PieChart, ResponsiveContainer, Tooltip,

@@ -1,4 +1,4 @@
-import { delay } from '@xylabs/delay'
+import { delay } from '@xylabs/sdk-js'
 
 class SnapTr {
   static readonly instance: SnapTr

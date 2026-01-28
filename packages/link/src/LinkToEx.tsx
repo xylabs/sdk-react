@@ -1,6 +1,6 @@
 import { Link } from '@mui/material'
-import { toPromise } from '@xylabs/promise'
 import { useUserEvents } from '@xylabs/react-pixel'
+import { toPromise } from '@xylabs/sdk-js'
 import type { MouseEvent } from 'react'
 import React from 'react'
 import { Link as RouterLink, useNavigate } from 'react-router-dom'

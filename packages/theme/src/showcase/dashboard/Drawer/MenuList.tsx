@@ -2,7 +2,7 @@ import {
   List, ListItem, ListItemIcon, ListItemText, type ListProps,
   useTheme,
 } from '@mui/material'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import React, { useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 

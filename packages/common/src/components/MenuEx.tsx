@@ -1,6 +1,6 @@
 import type { MenuProps, PaletteMode } from '@mui/material'
 import { Menu, useTheme } from '@mui/material'
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import React from 'react'
 
 export interface MenuExProps extends MenuProps {

@@ -1,4 +1,4 @@
-import { isUndefined } from '@xylabs/typeof'
+import { isUndefined } from '@xylabs/sdk-js'
 import { useMemo } from 'react'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'

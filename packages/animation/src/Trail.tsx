@@ -1,7 +1,7 @@
 import type { BoxProps } from '@mui/material'
 import { Box } from '@mui/material'
 import { a, useTrail } from '@react-spring/web'
-import { isDefinedNotNull } from '@xylabs/typeof'
+import { isDefinedNotNull } from '@xylabs/sdk-js'
 import type { CSSProperties } from 'react'
 import React, { isValidElement } from 'react'
 

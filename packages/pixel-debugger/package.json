@@ -52,7 +52,7 @@
     "@mui/material": "~7.3.7",
     "@storybook/react-vite": "~10.2.1",
     "@types/react": "^19.2.10",
-    "@xylabs/object": "~5.0.64",
+    "@xylabs/sdk-js": "~5.0.64",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",
     "@xylabs/tsconfig": "~7.3.2",
     "@xylabs/tsconfig-dom": "~7.3.2",

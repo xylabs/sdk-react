@@ -1,4 +1,4 @@
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 
 export const onCopy = async (value?: string) => {
   if (isDefined(value)) {

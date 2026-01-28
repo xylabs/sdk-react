@@ -1,7 +1,7 @@
 import {
   Box, Link, Typography,
 } from '@mui/material'
-import { isNumber } from '@xylabs/typeof'
+import { isNumber } from '@xylabs/sdk-js'
 import React from 'react'
 
 interface EthAccountProps {

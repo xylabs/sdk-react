@@ -1,5 +1,5 @@
-import type { JsonObject } from '@xylabs/object'
 import { XyPixel } from '@xylabs/pixel'
+import type { JsonObject } from '@xylabs/sdk-js'
 import { useEffect, useState } from 'react'
 
 export const usePixelAltSendHandler = (altHandler: (event: string, fields?: Record<string, unknown>) => void) => {

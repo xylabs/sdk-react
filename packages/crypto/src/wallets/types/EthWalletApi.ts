@@ -1,4 +1,4 @@
-import type { Hex } from '@xylabs/hex'
+import type { Hex } from '@xylabs/sdk-js'
 
 /**
  * An interface that includes methods defined in other EIP proposals that are wallet

@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@mui/material'
 import { FlexCol } from '@xylabs/react-flexbox'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import type { ReactNode } from 'react'
 import React from 'react'
 

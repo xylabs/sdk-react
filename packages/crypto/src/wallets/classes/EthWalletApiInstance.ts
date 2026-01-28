@@ -1,5 +1,5 @@
-import { assertEx } from '@xylabs/assert'
-import type { Hex } from '@xylabs/hex'
+import type { Hex } from '@xylabs/sdk-js'
+import { assertEx } from '@xylabs/sdk-js'
 import type { Eip1193Provider } from 'ethers/providers'
 
 import type { EthWalletApi } from '../types/index.ts'

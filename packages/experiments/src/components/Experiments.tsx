@@ -1,7 +1,7 @@
-import { forget } from '@xylabs/forget'
-import type { Logger } from '@xylabs/logger'
 import { useUserEvents } from '@xylabs/react-pixel'
 import { getLocalStorageObject, setLocalStorageObject } from '@xylabs/react-shared'
+import type { Logger } from '@xylabs/sdk-js'
+import { forget } from '@xylabs/sdk-js'
 import type { ReactElement } from 'react'
 import type React from 'react'
 

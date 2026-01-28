@@ -1,5 +1,5 @@
 import type { MetaMaskInpageProvider } from '@metamask/providers'
-import { forget } from '@xylabs/forget'
+import { forget } from '@xylabs/sdk-js'
 import { BrowserProvider } from 'ethers/providers'
 
 import { EthWalletConnectorBase } from '../../classes/index.ts'

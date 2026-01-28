@@ -1,6 +1,6 @@
 import type { MenuItemProps } from '@mui/material'
 import { Alert } from '@mui/material'
-import { exists } from '@xylabs/exists'
+import { exists } from '@xylabs/sdk-js'
 import React from 'react'
 
 import type { DiscoveredWallets } from '../../types/index.ts'

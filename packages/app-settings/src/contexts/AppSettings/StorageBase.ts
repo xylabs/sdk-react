@@ -1,5 +1,6 @@
-import { assertDefinedEx, assertEx } from '@xylabs/assert'
-import { isString } from '@xylabs/typeof'
+import {
+  assertDefinedEx, assertEx, isString,
+} from '@xylabs/sdk-js'
 
 export class AppSettingsStorageBase {
   private defaults: Record<string, unknown>

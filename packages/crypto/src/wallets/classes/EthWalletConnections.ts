@@ -1,4 +1,4 @@
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import { BrowserProvider } from 'ethers/providers'
 
 import { isEIP6963AnnounceProviderEvent } from '../eip/index.ts'

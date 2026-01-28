@@ -1,4 +1,4 @@
-import { delay } from '@xylabs/delay'
+import { delay } from '@xylabs/sdk-js'
 
 export type DripEvent<T extends Record<string, unknown>> = (string | T)[]
 

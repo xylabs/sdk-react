@@ -45,7 +45,7 @@
     "@xylabs/react-cookie-consent": "~7.1.11",
     "@xylabs/react-flexbox": "~7.1.11",
     "@xylabs/react-scroll-to-top": "~7.1.11",
-    "@xylabs/typeof": "~5.0.64",
+    "@xylabs/sdk-js": "~5.0.64",
     "react-helmet": "~6.1.0"
   },
   "devDependencies": {

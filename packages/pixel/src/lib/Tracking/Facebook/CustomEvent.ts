@@ -1,5 +1,5 @@
-import { delay } from '@xylabs/delay'
-import { type EmptyObject, toSafeJsonObject } from '@xylabs/object'
+import { delay } from '@xylabs/sdk-js'
+import { type EmptyObject, toSafeJsonObject } from '@xylabs/sdk-js'
 
 import { FacebookBaseEvent } from './BaseEvent.ts'
 

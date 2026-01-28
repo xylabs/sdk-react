@@ -1,9 +1,8 @@
 import { Typography, useTheme } from '@mui/material'
-import { assertEx } from '@xylabs/assert'
 import { FlexRow } from '@xylabs/react-flexbox'
 import type { LinkExProps } from '@xylabs/react-link'
 import { LinkEx } from '@xylabs/react-link'
-import { isString } from '@xylabs/typeof'
+import { assertEx, isString } from '@xylabs/sdk-js'
 import type { ReactNode } from 'react'
 import React from 'react'
 

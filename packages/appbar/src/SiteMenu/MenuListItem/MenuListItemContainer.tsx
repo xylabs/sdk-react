@@ -2,7 +2,7 @@ import type { ListItemProps } from '@mui/material'
 import { ListItemText, useTheme } from '@mui/material'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { useCollapsible } from '@xylabs/react-shared'
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 

@@ -3,7 +3,7 @@ import {
 } from '@mui/material'
 import { ButtonEx } from '@xylabs/react-button'
 import { FlexRow } from '@xylabs/react-flexbox'
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import React, { useEffect } from 'react'
 
 import { useCookieConsent } from '../contexts/index.ts'

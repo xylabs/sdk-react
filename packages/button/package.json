@@ -41,10 +41,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/promise": "~5.0.64",
     "@xylabs/react-pixel": "~7.1.11",
     "@xylabs/react-shared": "~7.1.11",
-    "@xylabs/typeof": "~5.0.64"
+    "@xylabs/sdk-js": "~5.0.64"
   },
   "devDependencies": {
     "@mui/material": "~7.3.7",

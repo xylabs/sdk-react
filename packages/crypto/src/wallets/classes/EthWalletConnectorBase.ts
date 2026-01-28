@@ -1,5 +1,6 @@
-import { toAddress } from '@xylabs/hex'
-import { isDefined, isString } from '@xylabs/typeof'
+import {
+  isDefined, isString, toAddress,
+} from '@xylabs/sdk-js'
 import { verifyTypedData } from 'ethers/hash'
 import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner,

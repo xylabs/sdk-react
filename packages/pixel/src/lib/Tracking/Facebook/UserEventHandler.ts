@@ -1,7 +1,7 @@
-import type { EmptyObject } from '@xylabs/object'
 import type {
   FunnelStartedFields, TestStartedFields, UserClickFields, UserEventHandler, ViewContentFields,
 } from '@xylabs/pixel'
+import type { EmptyObject } from '@xylabs/sdk-js'
 
 import { FacebookCustomEvent } from './CustomEvent.ts'
 

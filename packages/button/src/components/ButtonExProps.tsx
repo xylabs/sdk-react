@@ -1,6 +1,6 @@
 import type { ButtonProps } from '@mui/material'
 import type { BoxlikeComponentProps, BusyProps } from '@xylabs/react-shared'
-import { isDefined, isString } from '@xylabs/typeof'
+import { isDefined, isString } from '@xylabs/sdk-js'
 import type { NavigateOptions, To } from 'react-router-dom'
 
 export interface ButtonOnlyHrefProps {

@@ -1,5 +1,4 @@
-import { assertEx } from '@xylabs/assert'
-import { delay } from '@xylabs/delay'
+import { assertEx, delay } from '@xylabs/sdk-js'
 
 import { EF } from './EF.ts'
 

@@ -1,4 +1,4 @@
-import type { JsonObject } from '@xylabs/object'
+import type { JsonObject } from '@xylabs/sdk-js'
 
 export type FacebookStandardEventNames
   = | 'PageView'

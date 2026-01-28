@@ -1,4 +1,4 @@
-import { forget } from '@xylabs/forget'
+import { forget } from '@xylabs/sdk-js'
 import type { BrowserProvider, Eip1193Provider } from 'ethers/providers'
 import type { Listener } from 'ethers/utils'
 

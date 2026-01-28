@@ -41,13 +41,12 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "~5.0.64",
     "@xylabs/react-base-page": "~7.1.11",
     "@xylabs/react-error": "~7.1.11",
     "@xylabs/react-flexbox": "~7.1.11",
     "@xylabs/react-portal": "~7.1.11",
     "@xylabs/react-select": "~7.1.11",
-    "@xylabs/typeof": "~5.0.64"
+    "@xylabs/sdk-js": "~5.0.64"
   },
   "devDependencies": {
     "@mui/material": "~7.3.7",

@@ -1,5 +1,5 @@
-import { delay } from '@xylabs/delay'
-import type { EmptyObject } from '@xylabs/object'
+import type { EmptyObject } from '@xylabs/sdk-js'
+import { delay } from '@xylabs/sdk-js'
 
 import type { FbqCaller } from './Fbq.ts'
 import { Fbq } from './Fbq.ts'

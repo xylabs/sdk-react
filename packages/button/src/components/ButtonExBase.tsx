@@ -1,10 +1,9 @@
 import { Button, useTheme } from '@mui/material'
-import { toPromise } from '@xylabs/promise'
 import { useUserEvents } from '@xylabs/react-pixel'
 import {
   BusyCircularProgress, BusyLinearProgress, mergeBoxlikeStyles,
 } from '@xylabs/react-shared'
-import { isString } from '@xylabs/typeof'
+import { isString, toPromise } from '@xylabs/sdk-js'
 import type { MouseEvent } from 'react'
 import React from 'react'
 

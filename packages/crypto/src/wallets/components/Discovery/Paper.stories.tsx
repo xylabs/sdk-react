@@ -3,7 +3,7 @@ import {
 } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react-vite'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import React, { useEffect, useState } from 'react'
 
 import type { EIP6963Connector } from '../../classes/index.ts'

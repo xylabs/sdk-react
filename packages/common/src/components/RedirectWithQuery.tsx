@@ -1,4 +1,4 @@
-import { isString } from '@xylabs/typeof'
+import { isString } from '@xylabs/sdk-js'
 import React, { useEffect } from 'react'
 import type { NavigateOptions, To } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router-dom'

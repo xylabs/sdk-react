@@ -1,5 +1,5 @@
-import { assertEx } from '@xylabs/assert'
-import { type EmptyObject, toSafeJsonObject } from '@xylabs/object'
+import { assertEx } from '@xylabs/sdk-js'
+import { type EmptyObject, toSafeJsonObject } from '@xylabs/sdk-js'
 
 import { Gtag } from './Gtag.ts'
 import { Gtm } from './Gtm.ts'

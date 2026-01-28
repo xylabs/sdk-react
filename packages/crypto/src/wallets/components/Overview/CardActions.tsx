@@ -1,8 +1,8 @@
 import type { CardActionsProps } from '@mui/material'
 import { Button, CardActions } from '@mui/material'
 import type { EthAddressWrapper } from '@xylabs/eth-address'
-import type { Promisable } from '@xylabs/promise'
 import { FlexCol } from '@xylabs/react-flexbox'
+import type { Promisable } from '@xylabs/sdk-js'
 import React, { useState } from 'react'
 
 export interface WalletOverviewCardActions extends CardActionsProps {

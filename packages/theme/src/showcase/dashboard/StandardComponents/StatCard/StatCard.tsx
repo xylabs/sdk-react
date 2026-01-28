@@ -5,7 +5,7 @@ import {
   useTheme,
 } from '@mui/material'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import React from 'react'
 
 import type { DataCardProps } from '../DataCard/index.ts'

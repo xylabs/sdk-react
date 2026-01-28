@@ -6,7 +6,7 @@ import {
   Typography,
 } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react-vite'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import React, { useState } from 'react'
 
 import { CopyIconButton } from './CopyIconButton.tsx'

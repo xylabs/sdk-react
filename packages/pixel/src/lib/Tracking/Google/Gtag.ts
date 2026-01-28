@@ -1,4 +1,4 @@
-import { assertEx } from '@xylabs/assert'
+import { assertEx } from '@xylabs/sdk-js'
 import queryString from 'query-string'
 
 declare global {

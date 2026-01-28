@@ -1,4 +1,4 @@
-import { type EmptyObject, toSafeJsonObject } from '@xylabs/object'
+import { type EmptyObject, toSafeJsonObject } from '@xylabs/sdk-js'
 import type { Mixpanel } from 'mixpanel-browser'
 
 class MixpanelBaseEvent<T extends EmptyObject> {

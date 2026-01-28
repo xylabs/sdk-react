@@ -7,7 +7,7 @@ import {
 } from '@mui/material'
 import type { Theme } from '@mui/material/styles'
 import { useTheme } from '@mui/material/styles'
-import { isTruthy } from '@xylabs/typeof'
+import { isTruthy } from '@xylabs/sdk-js'
 import React from 'react'
 
 interface RecursiveAccordionProps {

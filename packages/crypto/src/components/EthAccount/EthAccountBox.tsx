@@ -1,11 +1,11 @@
 import {
   Typography, useMediaQuery, useTheme,
 } from '@mui/material'
-import { assertEx } from '@xylabs/assert'
 import { EthAddressWrapper } from '@xylabs/eth-address'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
 import { FlexRow } from '@xylabs/react-flexbox'
 import { Identicon } from '@xylabs/react-identicon'
+import { assertEx } from '@xylabs/sdk-js'
 import React, { use } from 'react'
 
 import { EthersContext } from '../../contexts/index.ts'

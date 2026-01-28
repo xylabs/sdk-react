@@ -1,6 +1,6 @@
 import { EthAddressWrapper } from '@xylabs/eth-address'
 import { usePromise } from '@xylabs/react-promise'
-import { isDefined } from '@xylabs/typeof'
+import { isDefined } from '@xylabs/sdk-js'
 import { useMemo } from 'react'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'

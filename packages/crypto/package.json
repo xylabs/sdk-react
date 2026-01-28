@@ -41,19 +41,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/assert": "~5.0.64",
     "@xylabs/eth-address": "~5.0.64",
-    "@xylabs/exists": "~5.0.64",
-    "@xylabs/forget": "~5.0.64",
-    "@xylabs/hex": "~5.0.64",
-    "@xylabs/promise": "~5.0.64",
     "@xylabs/react-async-effect": "~7.1.11",
     "@xylabs/react-button": "~7.1.11",
     "@xylabs/react-error": "~7.1.11",
     "@xylabs/react-flexbox": "~7.1.11",
     "@xylabs/react-identicon": "~7.1.11",
     "@xylabs/react-promise": "~7.1.11",
-    "@xylabs/typeof": "~5.0.64",
+    "@xylabs/sdk-js": "~5.0.64",
     "ethers": "^6.16.0",
     "lru-cache": "~11.2.5",
     "viem": "~2.45.0"

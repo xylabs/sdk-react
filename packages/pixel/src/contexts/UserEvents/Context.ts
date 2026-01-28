@@ -1,5 +1,5 @@
-import type { EmptyObject } from '@xylabs/object'
 import type { UserEventHandler } from '@xylabs/pixel'
+import type { EmptyObject } from '@xylabs/sdk-js'
 import { createContext } from 'react'
 
 export interface UserEventsProps<T extends EmptyObject = EmptyObject> {
