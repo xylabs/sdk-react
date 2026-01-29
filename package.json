@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/sdk-react-build",
-  "version": "7.1.12",
+  "version": "7.1.13",
   "private": true,
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
@@ -45,6 +45,7 @@
     "build-storybook": "storybook build",
     "build-typedoc-site": "typedoc && storybook build -o ./docs/storybook",
     "knip:unlisted": "echo ---Unlisted Dependencies--- && yarn workspaces foreach -Ap --exclude @xyo-network/sdk-js --no-interlaced run knip --include unlisted",
+    "publish-all": "npm publish --workspaces",
     "start": "NODE_OPTIONS=--max_old_space_size=8192 storybook dev -p 6006",
     "storybook": "storybook dev -p 6006"
   },
@@ -72,7 +73,7 @@
     "@types/react": "^19.2.10",
     "@xylabs/eslint-config-flat": "~7.3.2",
     "@xylabs/eslint-config-react-flat": "~7.3.2",
-    "@xylabs/react-crypto": "~7.1.12",
+    "@xylabs/react-crypto": "~7.1.13",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",
     "@xylabs/tsconfig": "~7.3.2",
     "@xylabs/tsconfig-dom": "~7.3.2",
