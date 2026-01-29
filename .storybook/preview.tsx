@@ -45,7 +45,7 @@ const getTheme = (themeName: ThemeName) => {
       },
       cssVariables: { colorSchemeSelector: 'class' },
     }),
-    'XYO': XyoTheme(theme, false),
+    'XYO': XyoTheme(theme),
     'xyOS': XyosTheme(),
     'Dataism': DataismTheme(theme),
     'XYLabs': XyLabsTheme(theme),
