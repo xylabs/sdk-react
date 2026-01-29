@@ -31,10 +31,9 @@ WithCustomSymbol.args = {
   value: '2,500.00',
 }
 
-const WithoutLabel = Template.bind({})
-WithoutLabel.args = {
+const WithoutHeightWidth = Template.bind({})
+WithoutHeightWidth.args = {
   currency: 'xl1',
-  showLabel: false,
   value: '750.00',
 }
 
@@ -55,25 +54,33 @@ WithCustomWeight.args = {
 const WithScale = Template.bind({})
 WithScale.args = {
   currency: 'xyo',
-  scale: 2.5,
+  tokenAvatarProps: { scale: 2.5 },
   textVariant: 'h4',
   value: '5,000.00',
+}
+
+const WithOverrides = Template.bind({})
+WithOverrides.args = {
+  currency: 'xl1',
+  tokenAvatarProps: { scale: 1 },
+  valueOverride: <span style={{ marginRight: '4px' }}>42,000.00</span>,
+  symbolOverride: <span>CUSTOM</span>,
 }
 
 const MultipleTemplate: StoryFn<typeof StandardTokenRow> = () => (
   <FlexCol gap={2}>
     <StandardTokenRow currency="xyo" value="100.00" textVariant="body2" />
-    <StandardTokenRow currency="xl1" value="500.00" textVariant="body1" />
+    <StandardTokenRow currency="xl1" value="500.00" textVariant="body1" tokenAvatarProps={{ sx: { height: '1.25rem', width: '1.25rem' } }} />
     <StandardTokenRow currency="xyo" value="1,000.00" textVariant="h6" />
     <StandardTokenRow currency="xl1" value="2,500.00" textVariant="h5" textWeight={600} />
-    <StandardTokenRow currency="xyo" value="10,000.00" textVariant="h4" scale={2} />
+    <StandardTokenRow currency="xyo" value="10,000.00" textVariant="h4" tokenAvatarProps={{ scale: 2 }} />
   </FlexCol>
 )
 
 const MultipleSizes = MultipleTemplate.bind({})
 
 export {
-  MultipleSizes, WithCustomSymbol, WithCustomVariant, WithCustomWeight, WithoutLabel, WithScale, XL1, XYO,
+  MultipleSizes, WithCustomSymbol, WithCustomVariant, WithCustomWeight, WithoutHeightWidth, WithOverrides, WithScale, XL1, XYO,
 }
 
 export default StorybookEntry
