@@ -1,7 +1,7 @@
 import type { StackProps, TypographyProps } from '@mui/material'
 import { Stack, Typography } from '@mui/material'
 import { isUndefinedOrNull } from '@xylabs/sdk-js'
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren, ReactNode } from 'react'
 import React from 'react'
 
 import { XL1ColorLogoIconSvg, XYOColorLogoIconSvg } from './img/index.ts'
@@ -11,12 +11,12 @@ import { TokenAvatar } from './TokenAvatar.tsx'
 export type StandardTokenRowProps = PropsWithChildren<{
   currency: 'xyo' | 'xl1' | null
   customSymbol?: string
-  symbolOverride?: React.ReactNode
+  symbolOverride?: ReactNode
   textVariant?: TypographyProps['variant']
   textWeight?: React.CSSProperties['fontWeight']
   tokenAvatarProps?: TokenAvatarProps
-  value: React.ReactNode
-  valueOverride?: React.ReactNode
+  value: ReactNode
+  valueOverride?: ReactNode
 } & StackProps>
 
 export const StandardTokenRow: React.FC<StandardTokenRowProps> = ({
