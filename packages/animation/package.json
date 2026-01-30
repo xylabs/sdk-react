@@ -43,12 +43,12 @@
   "dependencies": {
     "@react-spring/web": "~10.0.3",
     "@xylabs/react-flexbox": "~7.1.13",
-    "@xylabs/sdk-js": "~5.0.64"
+    "@xylabs/sdk-js": "~5.0.65"
   },
   "devDependencies": {
     "@mui/icons-material": "~7.3.7",
     "@mui/material": "~7.3.7",
-    "@storybook/react-vite": "~10.2.1",
+    "@storybook/react-vite": "~10.2.3",
     "@types/react": "^19.2.10",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",
     "@xylabs/tsconfig": "~7.3.2",
@@ -56,7 +56,7 @@
     "@xylabs/tsconfig-react": "~7.3.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "storybook": "~10.2.1",
+    "storybook": "~10.2.3",
     "typescript": "^5.9.3",
     "vite": "~7.3.1"
   },

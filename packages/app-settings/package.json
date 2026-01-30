@@ -42,7 +42,7 @@
     "src"
   ],
   "dependencies": {
-    "@xylabs/sdk-js": "~5.0.64"
+    "@xylabs/sdk-js": "~5.0.65"
   },
   "devDependencies": {
     "@mui/icons-material": "~7.3.7",
