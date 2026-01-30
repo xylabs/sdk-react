@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-button",
-  "version": "7.1.14",
+  "version": "7.1.15",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,16 +41,16 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-pixel": "~7.1.14",
-    "@xylabs/react-shared": "~7.1.14",
+    "@xylabs/react-pixel": "~7.1.15",
+    "@xylabs/react-shared": "~7.1.15",
     "@xylabs/sdk-js": "~5.0.65"
   },
   "devDependencies": {
     "@mui/material": "~7.3.7",
     "@storybook/react-vite": "~10.2.3",
     "@types/react": "^19.2.10",
-    "@xylabs/react-flexbox": "~7.1.14",
-    "@xylabs/react-pixel": "~7.1.14",
+    "@xylabs/react-flexbox": "~7.1.15",
+    "@xylabs/react-pixel": "~7.1.15",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",
     "@xylabs/tsconfig": "~7.3.2",
     "@xylabs/tsconfig-dom": "~7.3.2",
