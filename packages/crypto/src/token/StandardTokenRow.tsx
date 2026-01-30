@@ -1,16 +1,14 @@
-import {
-  Stack,
-  Typography,
-  type TypographyProps,
-} from '@mui/material'
+import type { StackProps, TypographyProps } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 import { isUndefinedOrNull } from '@xylabs/sdk-js'
-import React, { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
+import React from 'react'
 
 import { XL1ColorLogoIconSvg, XYOColorLogoIconSvg } from './img/index.ts'
 import type { TokenAvatarProps } from './TokenAvatar.tsx'
 import { TokenAvatar } from './TokenAvatar.tsx'
 
-type StandardTokenRowProps = PropsWithChildren<{
+export type StandardTokenRowProps = PropsWithChildren<{
   currency: 'xyo' | 'xl1' | null
   customSymbol?: string
   symbolOverride?: React.ReactNode
@@ -19,7 +17,7 @@ type StandardTokenRowProps = PropsWithChildren<{
   tokenAvatarProps?: TokenAvatarProps
   value: React.ReactNode
   valueOverride?: React.ReactNode
-}>
+} & StackProps>
 
 export const StandardTokenRow: React.FC<StandardTokenRowProps> = ({
   currency,
@@ -31,9 +29,10 @@ export const StandardTokenRow: React.FC<StandardTokenRowProps> = ({
   tokenAvatarProps,
   valueOverride,
   symbolOverride,
+  ...stackProps
 }) => {
   return (
-    <Stack direction="row" spacing={0.5} alignItems="center">
+    <Stack direction="row" spacing={0.5} alignItems="center" {...stackProps}>
       {currency === 'xyo'
         ? (
             <TokenAvatar
