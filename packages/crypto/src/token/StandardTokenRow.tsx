@@ -4,7 +4,7 @@ import { isUndefinedOrNull } from '@xylabs/sdk-js'
 import type { PropsWithChildren, ReactNode } from 'react'
 import React from 'react'
 
-import { XL1ColorLogoIconSvg, XYOColorLogoIconSvg } from './img/index.ts'
+import { imgXL1LogoSrcDataUrl, imgXYOLogoSrcDataUrl } from './img/index.ts'
 import type { TokenAvatarProps } from './TokenAvatar.tsx'
 import { TokenAvatar } from './TokenAvatar.tsx'
 
@@ -37,14 +37,14 @@ export const StandardTokenRow: React.FC<StandardTokenRowProps> = ({
         ? (
             <TokenAvatar
               imgAlt="xyo-token-logo"
-              imgSrc={XYOColorLogoIconSvg}
+              imgSrc={imgXYOLogoSrcDataUrl}
               {...tokenAvatarProps}
             />
           )
         : (
             <TokenAvatar
               imgAlt="xl1-token-logo"
-              imgSrc={XL1ColorLogoIconSvg}
+              imgSrc={imgXL1LogoSrcDataUrl}
               {...tokenAvatarProps}
             />
           )}
