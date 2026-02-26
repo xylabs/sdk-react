@@ -7,9 +7,12 @@ import { ErrorRender } from './Render.tsx'
 
 export interface PopoverErrorProps extends Omit<PopoverProps, 'open' | 'anchorEl' | 'onClose'> {
   error?: Error
+  scope?: string
 }
 
-export const PopoverErrorRender: React.FC<PopoverErrorProps> = ({ error, ...props }) => {
+export const PopoverErrorRender: React.FC<PopoverErrorProps> = ({
+  error, scope, ...props
+}) => {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLSpanElement>(null)
 
@@ -30,7 +33,7 @@ export const PopoverErrorRender: React.FC<PopoverErrorProps> = ({ error, ...prop
         open={open}
         {...props}
       >
-        <ErrorRender error={error} />
+        <ErrorRender error={error} scope={scope} />
       </Popover>
     </Icon>
   )
