@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-common",
-  "version": "7.1.15",
+  "version": "7.1.16",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,11 +41,11 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-base-page": "~7.1.15",
-    "@xylabs/react-error": "~7.1.15",
-    "@xylabs/react-flexbox": "~7.1.15",
-    "@xylabs/react-portal": "~7.1.15",
-    "@xylabs/react-select": "~7.1.15",
+    "@xylabs/react-base-page": "~7.1.16",
+    "@xylabs/react-error": "~7.1.16",
+    "@xylabs/react-flexbox": "~7.1.16",
+    "@xylabs/react-portal": "~7.1.16",
+    "@xylabs/react-select": "~7.1.16",
     "@xylabs/sdk-js": "~5.0.65"
   },
   "devDependencies": {

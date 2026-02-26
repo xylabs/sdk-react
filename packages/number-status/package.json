@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-number-status",
-  "version": "7.1.15",
+  "version": "7.1.16",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,8 +41,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-button": "~7.1.15",
-    "@xylabs/react-flexbox": "~7.1.15",
+    "@xylabs/react-button": "~7.1.16",
+    "@xylabs/react-flexbox": "~7.1.16",
     "numeral": "~2.0.6"
   },
   "devDependencies": {

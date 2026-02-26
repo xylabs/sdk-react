@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/sdk-react-build",
-  "version": "7.1.15",
+  "version": "7.1.16",
   "private": true,
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
@@ -73,7 +73,7 @@
     "@types/react": "^19.2.10",
     "@xylabs/eslint-config-flat": "~7.3.2",
     "@xylabs/eslint-config-react-flat": "~7.3.2",
-    "@xylabs/react-crypto": "~7.1.15",
+    "@xylabs/react-crypto": "~7.1.16",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",
     "@xylabs/tsconfig": "~7.3.2",
     "@xylabs/tsconfig-dom": "~7.3.2",

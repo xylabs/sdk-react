@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-link",
-  "version": "7.1.15",
+  "version": "7.1.16",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,16 +41,16 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-pixel": "~7.1.15",
+    "@xylabs/react-pixel": "~7.1.16",
     "@xylabs/sdk-js": "~5.0.65"
   },
   "devDependencies": {
     "@mui/material": "~7.3.7",
     "@storybook/react-vite": "~10.2.3",
     "@types/react": "^19.2.10",
-    "@xylabs/react-flexbox": "~7.1.15",
-    "@xylabs/react-pixel": "~7.1.15",
-    "@xylabs/react-theme": "~7.1.15",
+    "@xylabs/react-flexbox": "~7.1.16",
+    "@xylabs/react-pixel": "~7.1.16",
+    "@xylabs/react-theme": "~7.1.16",
     "@xylabs/ts-scripts-yarn3": "~7.3.2",
     "@xylabs/tsconfig": "~7.3.2",
     "@xylabs/tsconfig-dom": "~7.3.2",
