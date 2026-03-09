@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-theme",
-  "version": "7.1.16",
+  "version": "7.1.17",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -42,8 +42,8 @@
   ],
   "dependencies": {
     "@react-spring/web": "~10.0.3",
-    "@xylabs/react-animation": "~7.1.16",
-    "@xylabs/react-flexbox": "~7.1.16",
+    "@xylabs/react-animation": "~7.1.17",
+    "@xylabs/react-flexbox": "~7.1.17",
     "@xylabs/sdk-js": "~5.0.80",
     "recharts": "~3.8.0"
   },
@@ -52,8 +52,8 @@
     "@mui/material": "~7.3.9",
     "@storybook/react-vite": "~10.2.16",
     "@types/react": "^19.2.14",
-    "@xylabs/react-button": "~7.1.16",
-    "@xylabs/react-flexbox": "~7.1.16",
+    "@xylabs/react-button": "~7.1.17",
+    "@xylabs/react-flexbox": "~7.1.17",
     "@xylabs/ts-scripts-yarn3": "~7.4.9",
     "@xylabs/tsconfig": "~7.4.9",
     "@xylabs/tsconfig-dom": "~7.4.9",
