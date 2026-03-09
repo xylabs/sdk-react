@@ -38,14 +38,14 @@
     "src"
   ],
   "devDependencies": {
-    "@types/react": "^19.2.10",
-    "@xylabs/ts-scripts-yarn3": "~7.3.2",
-    "@xylabs/tsconfig": "~7.3.2",
-    "@xylabs/tsconfig-dom": "~7.3.2",
-    "@xylabs/tsconfig-react": "~7.3.2",
+    "@types/react": "^19.2.14",
+    "@xylabs/ts-scripts-yarn3": "~7.4.8",
+    "@xylabs/tsconfig": "~7.4.8",
+    "@xylabs/tsconfig-dom": "~7.4.8",
+    "@xylabs/tsconfig-react": "~7.4.8",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.0",
+    "react-router-dom": "^7.13.1",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {

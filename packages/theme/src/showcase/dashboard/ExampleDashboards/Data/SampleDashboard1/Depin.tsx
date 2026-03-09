@@ -1,5 +1,3 @@
-/* eslint-disable @stylistic/max-len */
-
 import React from 'react'
 
 import type { VerificationSummaryProps } from '../../../DataViewers/index.ts'

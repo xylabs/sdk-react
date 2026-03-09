@@ -42,20 +42,22 @@
   ],
   "dependencies": {
     "@xylabs/react-shared": "~7.1.16",
-    "mixpanel-browser": "~2.74.0"
+    "mixpanel-browser": "~2.75.0"
   },
   "devDependencies": {
     "@types/mixpanel-browser": "~2.66.0",
-    "@types/react": "^19.2.10",
-    "@xylabs/ts-scripts-yarn3": "~7.3.2",
-    "@xylabs/tsconfig": "~7.3.2",
-    "@xylabs/tsconfig-dom": "~7.3.2",
-    "@xylabs/tsconfig-react": "~7.3.2",
+    "@types/react": "^19.2.14",
+    "@xylabs/ts-scripts-yarn3": "~7.4.8",
+    "@xylabs/tsconfig": "~7.4.8",
+    "@xylabs/tsconfig-dom": "~7.4.8",
+    "@xylabs/tsconfig-react": "~7.4.8",
     "react": "^19.2.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "~4.3.6"
   },
   "peerDependencies": {
-    "react": "^19"
+    "react": "^19",
+    "zod": "^4"
   },
   "publishConfig": {
     "access": "public"

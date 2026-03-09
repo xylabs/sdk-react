@@ -1,3 +1,4 @@
+// eslint-disable-next-line import-x/no-internal-modules
 import type { BrowserProvider, Eip1193Provider } from 'ethers/providers'
 
 import type { EIP6963ProviderInfo } from '../eip/index.ts'

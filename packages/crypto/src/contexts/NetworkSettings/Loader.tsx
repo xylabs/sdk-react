@@ -1,4 +1,4 @@
-import { EthAddressWrapper } from '@xylabs/eth-address'
+import { EthAddressWrapper } from '@xylabs/sdk-js'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'
 

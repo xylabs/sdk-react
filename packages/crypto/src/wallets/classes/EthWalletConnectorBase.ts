@@ -1,10 +1,13 @@
 import {
   isDefined, isString, toAddress,
 } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import { verifyTypedData } from 'ethers/hash'
 import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner,
+// eslint-disable-next-line import-x/no-internal-modules
 } from 'ethers/providers'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { Listener } from 'ethers/utils'
 import { LRUCache } from 'lru-cache'
 

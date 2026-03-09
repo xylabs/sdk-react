@@ -1,7 +1,7 @@
 import { Paper } from '@mui/material'
 import type { Meta, StoryFn } from '@storybook/react-vite'
-import { EthAddressWrapper } from '@xylabs/eth-address'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
+import { EthAddressWrapper } from '@xylabs/sdk-js'
 import React from 'react'
 
 import { EthAccountBox } from './EthAccountBox.tsx'

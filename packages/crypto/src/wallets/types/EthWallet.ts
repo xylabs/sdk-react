@@ -1,6 +1,7 @@
-import type { EthAddressWrapper } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
 import type {
   BrowserProvider, Eip1193Provider, JsonRpcSigner,
+// eslint-disable-next-line import-x/no-internal-modules
 } from 'ethers/providers'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'

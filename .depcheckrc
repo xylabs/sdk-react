@@ -15,6 +15,7 @@ ignores: [
   "@storybook/manager-webpack5",
   "@storybook/mdx1-csf",
   "@storybook/react",
+  "@storybook/react-vite",
   "@storybook/react-webpack5",
   "@storybook/testing-library",
   "@storybook/theming",

@@ -38,23 +38,25 @@
     "src"
   ],
   "dependencies": {
-    "@xylabs/sdk-js": "~5.0.65"
+    "@xylabs/sdk-js": "~5.0.80"
   },
   "devDependencies": {
-    "@mui/material": "~7.3.7",
-    "@types/react": "^19.2.10",
-    "@xylabs/ts-scripts-yarn3": "~7.3.2",
-    "@xylabs/tsconfig": "~7.3.2",
-    "@xylabs/tsconfig-dom": "~7.3.2",
-    "@xylabs/tsconfig-react": "~7.3.2",
+    "@mui/material": "~7.3.9",
+    "@types/react": "^19.2.14",
+    "@xylabs/ts-scripts-yarn3": "~7.4.8",
+    "@xylabs/tsconfig": "~7.4.8",
+    "@xylabs/tsconfig-dom": "~7.4.8",
+    "@xylabs/tsconfig-react": "~7.4.8",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "~4.3.6"
   },
   "peerDependencies": {
     "@mui/material": ">=6 <8",
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "zod": "^4"
   },
   "publishConfig": {
     "access": "public"

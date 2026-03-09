@@ -1,7 +1,7 @@
 import { CheckCircleOutline } from '@mui/icons-material'
 import type { CardHeaderProps } from '@mui/material'
 import { CardHeader } from '@mui/material'
-import type { EthAddressWrapper } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
 import React from 'react'
 
 import { ConstrainedImage } from '../shared/index.ts'

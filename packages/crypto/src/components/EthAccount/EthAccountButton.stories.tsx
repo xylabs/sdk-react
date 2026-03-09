@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react-vite'
-import { EthAddressWrapper } from '@xylabs/eth-address'
 import { FlexRow } from '@xylabs/react-flexbox'
+import { EthAddressWrapper } from '@xylabs/sdk-js'
 import React from 'react'
 
 import { EthAccountButton } from './EthAccountButton.tsx'

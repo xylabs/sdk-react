@@ -1,5 +1,7 @@
 import { forget } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { BrowserProvider, Eip1193Provider } from 'ethers/providers'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { Listener } from 'ethers/utils'
 
 import type {

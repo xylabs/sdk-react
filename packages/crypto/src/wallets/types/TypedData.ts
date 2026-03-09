@@ -1,3 +1,4 @@
+// eslint-disable-next-line import-x/no-internal-modules
 import type { Signer } from 'ethers/providers'
 
 /**

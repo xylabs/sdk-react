@@ -1,4 +1,4 @@
-import type { EthAddressWrapper } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
 
 interface EthAccountProps {
   address?: EthAddressWrapper | null
