@@ -51,7 +51,7 @@ const sdkJsBarrelPackages = [
 ]
 
 export default [
-  {ignores: ['.yarn', 'dist', 'build', 'docs', '**/packages/*/dist', '**/packages/*/build', '**/packages/*/docs', '**/packages/*/node_modules', 'storybook-static', 'eslint.config.mjs', '.storybook']},
+  {ignores: ['.yarn', 'dist', 'build', 'docs', '**/packages/*/dist', '**/packages/*/build', '**/packages/*/docs', '**/packages/*/node_modules', 'storybook-static', 'eslint.config.mjs', '.storybook', '.claude/worktrees']},
   typescriptConfig,
   unicornConfig,
   workspacesConfig,

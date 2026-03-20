@@ -2,6 +2,6 @@
   "compilerOptions": {
     "allowJs": false
   },
-  "exclude": ["dist", "docs", "storybook-static"],
+  "exclude": ["dist", "docs", "storybook-static", ".claude/worktrees"],
   "extends": "@xylabs/tsconfig-react",
 }
