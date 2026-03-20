@@ -41,14 +41,14 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/sdk-js": "~5.0.80"
+    "@xylabs/sdk-js": "~5.0.86"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
-    "@xylabs/ts-scripts-yarn3": "~7.4.9",
-    "@xylabs/tsconfig": "~7.4.9",
-    "@xylabs/tsconfig-dom": "~7.4.9",
-    "@xylabs/tsconfig-react": "~7.4.9",
+    "@xylabs/ts-scripts-yarn3": "~7.4.24",
+    "@xylabs/tsconfig": "~7.4.24",
+    "@xylabs/tsconfig-dom": "~7.4.24",
+    "@xylabs/tsconfig-react": "~7.4.24",
     "react": "^19.2.4",
     "typescript": "^5.9.3",
     "zod": "~4.3.6"
