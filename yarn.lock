@@ -2592,7 +2592,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^19.2.14":
+"@types/react@npm:^19.2.14":
   version: 19.2.14
   resolution: "@types/react@npm:19.2.14"
   dependencies:
@@ -3425,7 +3425,6 @@ __metadata:
     "@mui/material": "npm:~7.3.9"
     "@storybook/react-vite": "npm:~10.3.1"
     "@types/react": "npm:^19.2.14"
-    "@types/react-helmet": "npm:~6.1.11"
     "@xylabs/react-appbar": "npm:~7.1.17"
     "@xylabs/react-cookie-consent": "npm:~7.1.17"
     "@xylabs/react-flexbox": "npm:~7.1.17"
@@ -3437,7 +3436,6 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:~7.4.24"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
-    react-helmet: "npm:~6.1.0"
     react-router-dom: "npm:^7.13.1"
     storybook: "npm:~10.3.1"
     typescript: "npm:^5.9.3"
@@ -4139,7 +4137,6 @@ __metadata:
     "@mui/material": "npm:~7.3.9"
     "@storybook/react-vite": "npm:~10.3.1"
     "@types/react": "npm:^19.2.14"
-    "@types/react-helmet": "npm:~6.1.11"
     "@xylabs/react-app-settings": "npm:~7.1.17"
     "@xylabs/react-appbar": "npm:~7.1.17"
     "@xylabs/react-async-effect": "npm:~7.1.17"
@@ -4156,7 +4153,6 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:~7.4.24"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
-    react-helmet: "npm:~6.1.0"
     react-router-dom: "npm:^7.13.1"
     storybook: "npm:~10.3.1"
     typescript: "npm:^5.9.3"
