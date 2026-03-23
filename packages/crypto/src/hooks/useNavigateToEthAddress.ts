@@ -1,4 +1,4 @@
-import type { EthAddressWrapper } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
 import { isDefined, isString } from '@xylabs/sdk-js'
 import type { NavigateOptions, To } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'

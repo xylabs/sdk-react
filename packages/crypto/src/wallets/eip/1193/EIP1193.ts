@@ -1,3 +1,4 @@
+// eslint-disable-next-line import-x/no-internal-modules
 import type { Listener } from 'ethers/utils'
 
 export type EIP1193EventNames = 'connect' | 'disconnect' | 'accountsChanged' | 'chainChanged'

@@ -1,4 +1,4 @@
-import type { EthAddressWrapper } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
 import { createContext } from 'react'
 
 const NetworkSettingsContext = createContext<{

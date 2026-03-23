@@ -5,22 +5,22 @@ import { CookieConsentLoader, useCookieConsent } from '../contexts/index.ts'
 import { CookieConsentBody } from './CookieConsentBody.tsx'
 import type { CookieConsentProps } from './CookieConsentProps.tsx'
 
+const CookieConsentInner: React.FC<CookieConsentProps> = (props) => {
+  const { accepted } = useCookieConsent()
+  return accepted ? null : <CookieConsentBody {...props} />
+}
+
 export const CookieConsent: React.FC<CookieConsentProps> = (props) => {
   const { storageName } = useCookieConsent()
-
-  const Inner: React.FC = () => {
-    const { accepted } = useCookieConsent()
-    return accepted ? null : <CookieConsentBody {...props} />
-  }
 
   // if not inside a context, make a context
   if (!isString(storageName)) {
     return (
       <CookieConsentLoader>
-        <Inner />
+        <CookieConsentInner {...props} />
       </CookieConsentLoader>
     )
   }
 
-  return <Inner />
+  return <CookieConsentInner {...props} />
 }

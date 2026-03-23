@@ -9,9 +9,9 @@ export interface MenuExProps extends MenuProps {
 }
 
 export const MenuEx: React.FC<MenuExProps> = ({
-  MenuListProps, slotProps, mode = 'light', colorize, ...props
+  slotProps, mode = 'light', colorize, ...props
 }) => {
-  const menuListProps = MenuListProps || slotProps?.list || {}
+  const menuListProps = slotProps?.list || {}
   const theme = useTheme()
   const colorizeMenuListProps = isString(colorize) ? { sx: { backgroundColor: theme.palette[colorize][mode] } } : {}
   return (

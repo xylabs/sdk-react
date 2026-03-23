@@ -1,6 +1,8 @@
-import { EthAddressWrapper } from '@xylabs/eth-address'
 import { useAsyncEffect } from '@xylabs/react-async-effect'
+import { EthAddressWrapper } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { JsonRpcSigner } from 'ethers/providers'
+// eslint-disable-next-line import-x/no-internal-modules
 import { BrowserProvider, InfuraProvider } from 'ethers/providers'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo, useState } from 'react'

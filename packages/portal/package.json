@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-portal",
-  "version": "7.1.16",
+  "version": "7.1.17",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,12 +41,12 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@types/react": "^19.2.10",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "~19.2.3",
-    "@xylabs/ts-scripts-yarn3": "~7.3.2",
-    "@xylabs/tsconfig": "~7.3.2",
-    "@xylabs/tsconfig-dom": "~7.3.2",
-    "@xylabs/tsconfig-react": "~7.3.2",
+    "@xylabs/ts-scripts-yarn3": "~7.4.24",
+    "@xylabs/tsconfig": "~7.4.24",
+    "@xylabs/tsconfig-dom": "~7.4.24",
+    "@xylabs/tsconfig-react": "~7.4.24",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "typescript": "^5.9.3"

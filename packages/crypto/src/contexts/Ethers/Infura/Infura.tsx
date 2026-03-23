@@ -1,4 +1,6 @@
+// eslint-disable-next-line import-x/no-internal-modules
 import type { BrowserProvider } from 'ethers/providers'
+// eslint-disable-next-line import-x/no-internal-modules
 import { InfuraProvider } from 'ethers/providers'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'

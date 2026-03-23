@@ -1,4 +1,5 @@
 import { isString } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import { BrowserProvider } from 'ethers/providers'
 
 import { isEIP6963AnnounceProviderEvent } from '../eip/index.ts'

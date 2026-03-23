@@ -27,3 +27,6 @@ docs
 
 storybook-static
 *storybook.log
+
+.claude
+CLAUDE.md

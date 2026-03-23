@@ -3,9 +3,10 @@ import type { CardContentProps } from '@mui/material'
 import {
   Alert, AlertTitle, CardContent, Chip, Divider, styled, Typography,
 } from '@mui/material'
-import type { EthAddressWrapper } from '@xylabs/eth-address'
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
 import { isDefined } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { TypedDataDomain } from 'ethers/hash'
 import React, { useMemo } from 'react'
 

@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-pixel",
-  "version": "7.1.16",
+  "version": "7.1.17",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,22 +41,24 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/pixel": "~5.0.65",
-    "@xylabs/sdk-js": "~5.0.65",
-    "mixpanel-browser": "~2.74.0",
+    "@xylabs/pixel": "~5.0.86",
+    "@xylabs/sdk-js": "~5.0.86",
+    "mixpanel-browser": "~2.76.0",
     "query-string": "~9.3.1"
   },
   "devDependencies": {
-    "@types/react": "^19.2.10",
-    "@xylabs/ts-scripts-yarn3": "~7.3.2",
-    "@xylabs/tsconfig": "~7.3.2",
-    "@xylabs/tsconfig-dom": "~7.3.2",
-    "@xylabs/tsconfig-react": "~7.3.2",
+    "@types/react": "^19.2.14",
+    "@xylabs/ts-scripts-yarn3": "~7.4.24",
+    "@xylabs/tsconfig": "~7.4.24",
+    "@xylabs/tsconfig-dom": "~7.4.24",
+    "@xylabs/tsconfig-react": "~7.4.24",
+    "axios": "^1.13.6",
     "react": "^19.2.4",
     "typescript": "^5.9.3",
     "zod": "^4.3.6"
   },
   "peerDependencies": {
+    "axios": "^1",
     "react": "^19",
     "zod": "^4"
   },

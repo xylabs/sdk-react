@@ -1,4 +1,5 @@
-import type { EthAddressWrapper } from '@xylabs/eth-address'
+import type { EthAddressWrapper } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { BrowserProvider, JsonRpcSigner } from 'ethers/providers'
 import { createContext } from 'react'
 

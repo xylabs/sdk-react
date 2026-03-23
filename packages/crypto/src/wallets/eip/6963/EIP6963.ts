@@ -1,4 +1,5 @@
 import { isDefined } from '@xylabs/sdk-js'
+// eslint-disable-next-line import-x/no-internal-modules
 import type { Eip1193Provider } from 'ethers/providers'
 
 /**

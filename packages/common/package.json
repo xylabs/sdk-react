@@ -1,6 +1,6 @@
 {
   "name": "@xylabs/react-common",
-  "version": "7.1.16",
+  "version": "7.1.17",
   "description": "Common React library for all XY Labs projects that use React",
   "keywords": [
     "utility",
@@ -41,34 +41,36 @@
     "packages/*"
   ],
   "dependencies": {
-    "@xylabs/react-base-page": "~7.1.16",
-    "@xylabs/react-error": "~7.1.16",
-    "@xylabs/react-flexbox": "~7.1.16",
-    "@xylabs/react-portal": "~7.1.16",
-    "@xylabs/react-select": "~7.1.16",
-    "@xylabs/sdk-js": "~5.0.65"
+    "@xylabs/react-base-page": "~7.1.17",
+    "@xylabs/react-error": "~7.1.17",
+    "@xylabs/react-flexbox": "~7.1.17",
+    "@xylabs/react-portal": "~7.1.17",
+    "@xylabs/react-select": "~7.1.17",
+    "@xylabs/sdk-js": "~5.0.86"
   },
   "devDependencies": {
-    "@mui/material": "~7.3.7",
-    "@storybook/react-vite": "~10.2.3",
-    "@types/react": "^19.2.10",
-    "@xylabs/ts-scripts-yarn3": "~7.3.2",
-    "@xylabs/tsconfig": "~7.3.2",
-    "@xylabs/tsconfig-dom": "~7.3.2",
-    "@xylabs/tsconfig-react": "~7.3.2",
+    "@mui/material": "~7.3.9",
+    "@storybook/react-vite": "~10.3.1",
+    "@types/react": "^19.2.14",
+    "@xylabs/ts-scripts-yarn3": "~7.4.24",
+    "@xylabs/tsconfig": "~7.4.24",
+    "@xylabs/tsconfig-dom": "~7.4.24",
+    "@xylabs/tsconfig-react": "~7.4.24",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.0",
-    "storybook": "~10.2.3",
+    "react-router-dom": "^7.13.1",
+    "storybook": "~10.3.1",
     "typescript": "^5.9.3",
-    "vite": "~7.3.1"
+    "vite": "~7.3.1",
+    "zod": "~4.3.6"
   },
   "peerDependencies": {
     "@mui/icons-material": ">=6 <8",
     "@mui/material": ">=6 <8",
     "react": "^19",
     "react-dom": "^19",
-    "react-router-dom": "^7"
+    "react-router-dom": "^7",
+    "zod": "^4"
   },
   "publishConfig": {
     "access": "public"
