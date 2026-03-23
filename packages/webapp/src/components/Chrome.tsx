@@ -9,7 +9,7 @@ import {
 import type { ReactNode } from 'react'
 import React from 'react'
 
-import { TitleTemplateProvider } from '../contexts/Provider.tsx'
+import { TitleTemplateProvider } from '../contexts/index.ts'
 import { WebAppErrorPage } from './ErrorPage.tsx'
 
 export interface WebAppChromeProps extends FlexBoxProps {
