@@ -1,5 +1,7 @@
 import type { PropsWithChildren } from 'react'
-import React, { useMemo, useState } from 'react'
+import React, {
+  useLayoutEffect, useMemo, useState,
+} from 'react'
 
 import { TitleTemplateContext } from './context.ts'
 import type { TitleTemplateState } from './state.ts'
@@ -15,9 +17,21 @@ export const TitleTemplateProvider: React.FC<TitleTemplateProviderProps> = ({ ap
     return value
   }, [appName])
 
+  useLayoutEffect(() => {
+    if (title) {
+      const existing = document.querySelector('title')
+      if (existing) {
+        existing.textContent = title
+      } else {
+        const el = document.createElement('title')
+        el.textContent = title
+        document.head.append(el)
+      }
+    }
+  }, [title])
+
   return (
     <TitleTemplateContext value={value}>
-      <title>{title}</title>
       {children}
     </TitleTemplateContext>
   )
