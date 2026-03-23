@@ -28,7 +28,6 @@ export const WebAppChrome = ({
 }: WebAppChromeProps) => {
   return (
     <TitleTemplateProvider appName={appName}>
-      <title>{appName}</title>
       <meta content="website" property="og:type" />
       <FlexCol id="web-chrome-flex" alignItems="stretch" overflow="hidden" height="100vh" ref={ref} {...props}>
         {appbar ?? <ApplicationAppBar systemToolbar={<SystemToolbar menuItems={navigationType === 'menu' ? menuItems : undefined} />} />}

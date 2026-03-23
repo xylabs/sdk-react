@@ -54,6 +54,10 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
   const { pathname } = useLocation()
   const { titleTemplate } = useTitleTemplate()
 
+  if (isDefined(title)) {
+    titleTemplate(title)
+  }
+
   useAsyncEffect(
     async () => {
       await userEvents?.viewContent({ name: title ?? 'NodeBasePage', path: location.pathname })
@@ -63,7 +67,6 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
 
   return (
     <WebAppPageRoot mobileScrollingBreakpoint={mobileScrollingBreakpoint} variant={variant} {...props}>
-      {title != null && <title>{titleTemplate ? titleTemplate(title) : title}</title>}
       {isDefined(container) && container !== 'none'
         ? (
             <Container

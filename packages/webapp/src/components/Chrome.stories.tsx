@@ -19,24 +19,26 @@ const StorybookEntry = {
 
 const rowArray = [32, 64, 128, 256, 512, 1024]
 
-const Children: React.FC<WebAppPageProps> = props => (
-  <WebAppPage
-    breadcrumbs={(
-      <Breadcrumbs>
-        <LinkEx>BreadCrumbs</LinkEx>
-      </Breadcrumbs>
-    )}
-    {...props}
-  >
-    {rowArray.map((height) => {
-      return (
-        <FlexRow key={height} height={height}>
-          {height}
-        </FlexRow>
-      )
-    })}
-  </WebAppPage>
-)
+const Children: React.FC<WebAppPageProps> = (props) => {
+  return (
+    <WebAppPage
+      breadcrumbs={(
+        <Breadcrumbs>
+          <LinkEx>BreadCrumbs</LinkEx>
+        </Breadcrumbs>
+      )}
+      {...props}
+    >
+      {rowArray.map((height) => {
+        return (
+          <FlexRow key={height} height={height}>
+            {height}
+          </FlexRow>
+        )
+      })}
+    </WebAppPage>
+  )
+}
 
 const Template: StoryFn<typeof WebAppChrome> = (args) => {
   return (
@@ -64,8 +66,13 @@ DefaultSideBar.args = { children: <Children />, navigationType: 'sidebar' }
 const WithFixedSizePage = Template.bind({})
 WithFixedSizePage.args = { children: <Children variant="fixed" />, navigationType: 'sidebar' }
 
+const WithAppName = Template.bind({})
+WithAppName.args = {
+  appName: 'My App', children: <Children variant="fixed" title="My Page" />, navigationType: 'sidebar',
+}
+
 export {
-  Default, DefaultSideBar, WithFixedSizePage,
+  Default, DefaultSideBar, WithAppName, WithFixedSizePage,
 }
 
 export default StorybookEntry
