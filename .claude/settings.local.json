@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn build:*)",
+      "Bash(yarn install:*)",
+      "Bash(yarn workspaces:*)",
+      "Bash(yarn xy:*)",
+      "Bash(grep -v \"^$\")",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

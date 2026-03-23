@@ -8,7 +8,6 @@ import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import { ScrollToTop, ScrollToTopButton } from '@xylabs/react-scroll-to-top'
 import { isString } from '@xylabs/sdk-js'
 import React, { use } from 'react'
-import { Helmet } from 'react-helmet'
 
 import { LoadStatusContext } from '../../contexts/index.ts'
 import type { BasePageProps } from './BasePageProps.ts'
@@ -54,13 +53,10 @@ const BasePage: React.FC<BasePageProps> = ({
       {...props}
     >
       <ScrollToTop />
-      <Helmet title={title}>
-        {noindex
-          ? <meta content="noindex" name="robots" />
-          : null}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description ?? title} />
-      </Helmet>
+      {title != null && <title>{title}</title>}
+      {noindex && <meta content="noindex" name="robots" />}
+      {title != null && <meta property="og:title" content={title} />}
+      <meta property="og:description" content={description ?? title} />
       {scrollToTopButton
         ? <div id={scrollToTopAnchorId} />
         : null}
@@ -104,17 +100,11 @@ const BasePage: React.FC<BasePageProps> = ({
             </ScrollToTopButton>
           )
         : null}
-      <Helmet>
-        <meta property="xy:meta:share:mode" content={shareMode} />
-        {isString(shareImage)
-          ? <meta property={xyoOgMetaName} content={shareImage} />
-          : null}
-        {/* This is here to make sure we report that the page is done */}
-        {((xyoOgMetaName === pageCompleteMetaName) && isString(shareImage))
-          ? null
-          : <meta property={pageCompleteMetaName} content="" />}
-        <meta property="xy:meta:status" content={status ?? 'done'} />
-      </Helmet>
+      <meta property="xy:meta:share:mode" content={shareMode} />
+      {isString(shareImage) && <meta property={xyoOgMetaName} content={shareImage} />}
+      {/* This is here to make sure we report that the page is done */}
+      {!((xyoOgMetaName === pageCompleteMetaName) && isString(shareImage)) && <meta property={pageCompleteMetaName} content="" />}
+      <meta property="xy:meta:status" content={status ?? 'done'} />
     </FlexCol>
   )
 }
