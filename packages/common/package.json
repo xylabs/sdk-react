@@ -46,22 +46,22 @@
     "@xylabs/react-flexbox": "~7.1.17",
     "@xylabs/react-portal": "~7.1.17",
     "@xylabs/react-select": "~7.1.17",
-    "@xylabs/sdk-js": "~5.0.86"
+    "@xylabs/sdk-js": "~5.0.87"
   },
   "devDependencies": {
     "@mui/material": "~7.3.9",
-    "@storybook/react-vite": "~10.3.1",
+    "@storybook/react-vite": "~10.3.3",
     "@types/react": "^19.2.14",
-    "@xylabs/ts-scripts-yarn3": "~7.4.24",
-    "@xylabs/tsconfig": "~7.4.24",
-    "@xylabs/tsconfig-dom": "~7.4.24",
-    "@xylabs/tsconfig-react": "~7.4.24",
+    "@xylabs/ts-scripts-yarn3": "~7.4.28",
+    "@xylabs/tsconfig": "~7.4.28",
+    "@xylabs/tsconfig-dom": "~7.4.28",
+    "@xylabs/tsconfig-react": "~7.4.28",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.1",
-    "storybook": "~10.3.1",
+    "react-router-dom": "^7.13.2",
+    "storybook": "~10.3.3",
     "typescript": "^5.9.3",
-    "vite": "~7.3.1",
+    "vite": "~8.0.2",
     "zod": "~4.3.6"
   },
   "peerDependencies": {

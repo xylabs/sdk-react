@@ -51,18 +51,25 @@ const sdkJsBarrelPackages = [
 ]
 
 export default [
-  {ignores: ['.yarn', 'dist', 'build', 'docs', '**/packages/*/dist', '**/packages/*/build', '**/packages/*/docs', '**/packages/*/node_modules', 'storybook-static', 'eslint.config.mjs', '.storybook', '.claude/worktrees']},
+  {
+    ignores: ['.yarn', 'dist', 'build', 'docs', '**/packages/*/dist', '**/packages/*/build', '**/packages/*/docs', '**/packages/*/node_modules', 'storybook-static', '.storybook', '.claude/worktrees']},
   typescriptConfig,
   unicornConfig,
   workspacesConfig,
   rulesConfig,
   sonarConfig,
   importConfig,
-  reactConfig,
-  
+  {
+    ...reactConfig,
+    rules: {
+      ...reactConfig.rules,
+      'react-x/no-create-ref': ['warn'],
+      'react-hooks/set-state-in-render': ['warn'],
+      'react-x/use-memo': ['warn'],
+    }
+  },
   {
     rules: {
-      'react-x/no-create-ref': ['warn'],
       'no-warning-comments': ['warn', { terms: ['note'], location: 'anywhere' }],
       '@typescript-eslint/strict-boolean-expressions': ['off'],
       '@eslint-react/no-array-index-key': ['off'],

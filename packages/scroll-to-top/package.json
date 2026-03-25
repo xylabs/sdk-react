@@ -39,13 +39,13 @@
   ],
   "devDependencies": {
     "@types/react": "^19.2.14",
-    "@xylabs/ts-scripts-yarn3": "~7.4.24",
-    "@xylabs/tsconfig": "~7.4.24",
-    "@xylabs/tsconfig-dom": "~7.4.24",
-    "@xylabs/tsconfig-react": "~7.4.24",
+    "@xylabs/ts-scripts-yarn3": "~7.4.28",
+    "@xylabs/tsconfig": "~7.4.28",
+    "@xylabs/tsconfig-dom": "~7.4.28",
+    "@xylabs/tsconfig-react": "~7.4.28",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.1",
+    "react-router-dom": "^7.13.2",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
