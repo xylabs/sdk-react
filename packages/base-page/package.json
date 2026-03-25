@@ -45,15 +45,13 @@
     "@xylabs/react-cookie-consent": "~7.1.17",
     "@xylabs/react-flexbox": "~7.1.17",
     "@xylabs/react-scroll-to-top": "~7.1.17",
-    "@xylabs/sdk-js": "~5.0.86",
-    "react-helmet": "~6.1.0"
+    "@xylabs/sdk-js": "~5.0.86"
   },
   "devDependencies": {
     "@mui/icons-material": "~7.3.9",
     "@mui/material": "~7.3.9",
     "@storybook/react-vite": "~10.3.1",
     "@types/react": "^19.2.14",
-    "@types/react-helmet": "~6.1.11",
     "@xylabs/ts-scripts-yarn3": "~7.4.24",
     "@xylabs/tsconfig": "~7.4.24",
     "@xylabs/tsconfig-dom": "~7.4.24",
@@ -61,6 +59,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.1",
+    "react-helmet": "~6.1.0",
     "storybook": "~10.3.1",
     "typescript": "^5.9.3",
     "vite": "~7.3.1",
@@ -71,6 +70,7 @@
     "@mui/material": ">=6 <8",
     "react": "^19",
     "react-dom": "^19",
+    "react-helmet": "^6",
     "react-router-dom": "^7",
     "zod": "^4"
   },

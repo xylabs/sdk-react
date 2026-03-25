@@ -99,7 +99,6 @@
     "axios": "^1",
     "react": "^19",
     "react-dom": "^19",
-    "react-helmet": "^7",
     "react-router-dom": "^7",
     "zod": "^4"
   },

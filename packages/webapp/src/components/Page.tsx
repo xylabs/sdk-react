@@ -7,9 +7,9 @@ import { useUserEvents } from '@xylabs/react-pixel'
 import { isDefined } from '@xylabs/sdk-js'
 import type { PropsWithChildren } from 'react'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { useLocation } from 'react-router-dom'
 
+import { useTitleTemplate } from '../contexts/index.ts'
 import type { WebAppBodyProps } from './Body.tsx'
 import { WebAppBody } from './Body.tsx'
 import { fixedWrap, scrollableWrap } from './lib/index.ts'
@@ -52,6 +52,7 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
 }) => {
   const userEvents = useUserEvents()
   const { pathname } = useLocation()
+  const { appName } = useTitleTemplate()
 
   useAsyncEffect(
     async () => {
@@ -62,7 +63,7 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
 
   return (
     <WebAppPageRoot mobileScrollingBreakpoint={mobileScrollingBreakpoint} variant={variant} {...props}>
-      <Helmet title={title} />
+      {title != null && <title>{appName ? `${title} | ${appName}` : title}</title>}
       {isDefined(container) && container !== 'none'
         ? (
             <Container

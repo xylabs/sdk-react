@@ -2583,15 +2583,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-helmet@npm:~6.1.11":
-  version: 6.1.11
-  resolution: "@types/react-helmet@npm:6.1.11"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10c0/f7b3bb2151d992a108ae46fed876fb9c8119108397d9a01d150c5642782997542c8b3c52e742b56e8689b7dbfa62ca9cfc76aa7e05dec4e60c652f7ef53fa783
-  languageName: node
-  linkType: hard
-
 "@types/react-transition-group@npm:^4.4.12":
   version: 4.4.12
   resolution: "@types/react-transition-group@npm:4.4.12"
@@ -2601,7 +2592,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^19.2.14":
+"@types/react@npm:^19.2.14":
   version: 19.2.14
   resolution: "@types/react@npm:19.2.14"
   dependencies:
@@ -3434,7 +3425,6 @@ __metadata:
     "@mui/material": "npm:~7.3.9"
     "@storybook/react-vite": "npm:~10.3.1"
     "@types/react": "npm:^19.2.14"
-    "@types/react-helmet": "npm:~6.1.11"
     "@xylabs/react-appbar": "npm:~7.1.17"
     "@xylabs/react-cookie-consent": "npm:~7.1.17"
     "@xylabs/react-flexbox": "npm:~7.1.17"
@@ -3446,7 +3436,6 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:~7.4.24"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
-    react-helmet: "npm:~6.1.0"
     react-router-dom: "npm:^7.13.1"
     storybook: "npm:~10.3.1"
     typescript: "npm:^5.9.3"
@@ -4148,7 +4137,6 @@ __metadata:
     "@mui/material": "npm:~7.3.9"
     "@storybook/react-vite": "npm:~10.3.1"
     "@types/react": "npm:^19.2.14"
-    "@types/react-helmet": "npm:~6.1.11"
     "@xylabs/react-app-settings": "npm:~7.1.17"
     "@xylabs/react-appbar": "npm:~7.1.17"
     "@xylabs/react-async-effect": "npm:~7.1.17"
@@ -4165,7 +4153,6 @@ __metadata:
     "@xylabs/tsconfig-react": "npm:~7.4.24"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
-    react-helmet: "npm:~6.1.0"
     react-router-dom: "npm:^7.13.1"
     storybook: "npm:~10.3.1"
     typescript: "npm:^5.9.3"
@@ -4276,7 +4263,6 @@ __metadata:
     axios: ^1
     react: ^19
     react-dom: ^19
-    react-helmet: ^7
     react-router-dom: ^7
     zod: ^4
   languageName: unknown
@@ -8552,7 +8538,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8654,27 +8640,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:^3.1.1":
-  version: 3.2.2
-  resolution: "react-fast-compare@npm:3.2.2"
-  checksum: 10c0/0bbd2f3eb41ab2ff7380daaa55105db698d965c396df73e6874831dbafec8c4b5b08ba36ff09df01526caa3c61595247e3269558c284e37646241cba2b90a367
-  languageName: node
-  linkType: hard
-
-"react-helmet@npm:~6.1.0":
-  version: 6.1.0
-  resolution: "react-helmet@npm:6.1.0"
-  dependencies:
-    object-assign: "npm:^4.1.1"
-    prop-types: "npm:^15.7.2"
-    react-fast-compare: "npm:^3.1.1"
-    react-side-effect: "npm:^2.1.0"
-  peerDependencies:
-    react: ">=16.3.0"
-  checksum: 10c0/1d2831d9c3b4f5c91f020076aeb6502437a4788077d0c438421e466eb9633d5dc2aacedf7b779a970b807d61cf87793c5ff76ee3190a185d71c90b5cfb367e96
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -8733,15 +8698,6 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10c0/a64c645cede74251f21483fbfad740b36dc5133522d6f53f12317a873a22865fce659d4c2377d5e19c912f85c7b12b88224a2c70d8f70c082496b569cc4abc31
-  languageName: node
-  linkType: hard
-
-"react-side-effect@npm:^2.1.0":
-  version: 2.1.2
-  resolution: "react-side-effect@npm:2.1.2"
-  peerDependencies:
-    react: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/5d934cae438f701ce646f566750ae6a445e99185ce1a026108f9db728147f7962a22ecf8db79ff26089953a3799b3607766904f4f10194ce42bcd5a1aa0215e8
   languageName: node
   linkType: hard
 
