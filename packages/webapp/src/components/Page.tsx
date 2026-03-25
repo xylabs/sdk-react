@@ -52,11 +52,7 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
 }) => {
   const userEvents = useUserEvents()
   const { pathname } = useLocation()
-  const { titleTemplate } = useTitleTemplate()
-
-  if (isDefined(title)) {
-    titleTemplate(title)
-  }
+  const { appName } = useTitleTemplate()
 
   useAsyncEffect(
     async () => {
@@ -67,6 +63,7 @@ export const WebAppPage: React.FC<PropsWithChildren<WebAppPageProps>> = ({
 
   return (
     <WebAppPageRoot mobileScrollingBreakpoint={mobileScrollingBreakpoint} variant={variant} {...props}>
+      {title != null && <title>{appName ? `${title} | ${appName}` : title}</title>}
       {isDefined(container) && container !== 'none'
         ? (
             <Container

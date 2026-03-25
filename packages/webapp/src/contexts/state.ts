@@ -1,7 +1,7 @@
 import type { ProvidedContextExState } from '@xylabs/react-shared'
 
 export interface TitleTemplateFields {
-  titleTemplate: (title: string) => void
+  appName: string
 }
 
 export type TitleTemplateState = ProvidedContextExState<TitleTemplateFields>
