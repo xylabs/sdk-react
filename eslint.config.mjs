@@ -66,6 +66,15 @@ export default [
       'react-x/no-create-ref': ['warn'],
       'react-hooks/set-state-in-render': ['warn'],
       'react-x/use-memo': ['warn'],
+      'react-hooks/rules-of-hooks': ['warn'],
+      'react-hooks/purity': ['warn'],
+      'react-hooks/immutability': ['warn'],
+      'react-hooks/preserve-manual-memoization': ['warn'],
+      'react-x/rules-of-hooks': ['warn'],
+      'react-hooks/globals': ['warn'],
+      'react-hooks/refs': ['warn'],
+      'react-hooks/use-memo': ['warn'],
+      'react-hooks/set-state-in-effect': ['warn'],
     }
   },
   {
@@ -74,6 +83,10 @@ export default [
       '@typescript-eslint/strict-boolean-expressions': ['off'],
       '@eslint-react/no-array-index-key': ['off'],
       '@typescript-eslint/no-misused-promises': ['off'],
+      '@stylistic/comma-dangle': ['warn'],
+      '@stylistic/object-curly-spacing': ['warn'],
+      '@stylistic/semi': ['warn'],
+      'quotes': ['warn'],
       'no-restricted-imports': ['error', {
         patterns: [
           './index.ts',

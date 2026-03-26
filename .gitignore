@@ -28,5 +28,7 @@ docs
 storybook-static
 *storybook.log
 
+# Ignore files related to Claude (for now)
+CLAUDE.local.md
 .claude
-CLAUDE.md
+.CLAUDE*
