@@ -1,6 +1,5 @@
-// eslint-disable-next-line import-x/no-internal-modules
+/* eslint-disable @typescript-eslint/no-deprecated, sonarjs/deprecation */
 import type { BrowserProvider } from 'ethers/providers'
-// eslint-disable-next-line import-x/no-internal-modules
 import { InfuraProvider } from 'ethers/providers'
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'
@@ -17,11 +16,13 @@ export const InfuraEthersLoader: React.FC<PropsWithChildren<Props>> = (props) =>
   const { children } = props
 
   const chainId = 1
-  const provider = new InfuraProvider(1, infuraKey) as unknown as BrowserProvider
 
-  const value = useMemo(() => ({
-    busy: false, chainId, provider, isConnected: false,
-  }), [chainId, provider])
+  const value = useMemo(() => {
+    const provider = new InfuraProvider(1, infuraKey) as unknown as BrowserProvider
+    return {
+      busy: false, chainId, provider, isConnected: false,
+    }
+  }, [chainId])
 
   return (
     <EthersContext

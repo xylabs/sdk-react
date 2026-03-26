@@ -1,4 +1,3 @@
-// eslint-disable-next-line import-x/no-internal-modules
 import { InfuraProvider } from 'ethers/providers'
 import { useMemo } from 'react'
 

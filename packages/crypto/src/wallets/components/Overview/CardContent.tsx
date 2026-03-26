@@ -6,7 +6,6 @@ import {
 import { FlexCol, FlexRow } from '@xylabs/react-flexbox'
 import type { EthAddressWrapper } from '@xylabs/sdk-js'
 import { isDefined } from '@xylabs/sdk-js'
-// eslint-disable-next-line import-x/no-internal-modules
 import type { TypedDataDomain } from 'ethers/hash'
 import React, { useMemo } from 'react'
 

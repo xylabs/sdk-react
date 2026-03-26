@@ -30,7 +30,7 @@ const Template: StoryFn<typeof AnimatedList> = ({ items, ...args }) => {
   const [index, setIndex] = useState(3)
   const [additionalItems, setAdditionalItems] = useState<NodesWithKeys[]>([])
 
-  const combinedItems = useMemo(() => [...additionalItems, ...items ?? []], [additionalItems])
+  const combinedItems = useMemo(() => [...additionalItems, ...items ?? []], [additionalItems, items])
 
   // Function to add a new item
   const addChild = () => {

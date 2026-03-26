@@ -5,7 +5,7 @@ import { FlexRow } from '@xylabs/react-flexbox'
 import { isDefined } from '@xylabs/sdk-js'
 import React, { useState } from 'react'
 import {
-  Cell, Pie, PieChart, ResponsiveContainer, Tooltip,
+  Pie, PieChart, ResponsiveContainer, Tooltip,
 } from 'recharts'
 
 import { alphaCss } from '../../../../../alphaCss.ts'
@@ -68,7 +68,7 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
           />
           {/* Inner Ring */}
           <Pie
-            data={data01}
+            data={data01.map((entry, index) => ({ ...entry, fill: colors[index % colors.length] }))}
             dataKey="value"
             nameKey="name"
             cx="50%"
@@ -82,20 +82,13 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
             paddingAngle={5}
             cornerRadius={3}
             stroke="none"
-          >
-            {data01.map((entry, index) => (
-              <Cell
-                key={`cell-${entry.name}`}
-                fill={colors[index % colors.length]}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-              />
-            ))}
-          </Pie>
+            onMouseEnter={(_, index) => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          />
           {/* Outer Ring */}
           {isDefined(data02) && (
             <Pie
-              data={data02}
+              data={data02.map((entry, index) => ({ ...entry, fill: colors[index % colors.length] }))}
               dataKey="value"
               nameKey="name"
               cx="50%"
@@ -109,16 +102,9 @@ export const StyledDualRingPieChart: React.FC<PieChartProps> = ({
               paddingAngle={5}
               cornerRadius={3}
               stroke="none"
-            >
-              {data02.map((entry, index) => (
-                <Cell
-                  key={`cell-${entry.name}`}
-                  fill={colors[index % colors.length]}
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={handleMouseLeave}
-                />
-              ))}
-            </Pie>
+              onMouseEnter={(_, index) => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            />
           )}
         </PieChart>
       </ResponsiveContainer>

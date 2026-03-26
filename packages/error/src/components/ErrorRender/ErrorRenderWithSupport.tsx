@@ -40,7 +40,7 @@ export const ErrorRenderWithSupport: React.FC<ErrorRenderWithSupportProps> = ({
         </Link>
       ),
     },
-  }), [slotProps, supportHref])
+  }), [slotProps, supportHref, supportIcon, supportLinkTitle])
 
   return (
     <ErrorRender

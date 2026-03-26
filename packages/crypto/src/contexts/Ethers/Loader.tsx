@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-deprecated, sonarjs/deprecation */
 import type { ReactNode } from 'react'
 import React from 'react'
 

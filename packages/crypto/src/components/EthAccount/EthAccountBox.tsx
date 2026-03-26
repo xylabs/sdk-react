@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-deprecated, sonarjs/deprecation */
 import {
   Typography, useMediaQuery, useTheme,
 } from '@mui/material'

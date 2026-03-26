@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-deprecated, sonarjs/deprecation */
 import type { PropsWithChildren } from 'react'
 import React, { useMemo } from 'react'
 
@@ -51,8 +52,7 @@ export const MetaMaskEthersLoader: React.FC<PropsWithChildren<Props>> = ({ child
     providerName,
     signMessage,
     signer,
-    signerAddress,
-    provider])
+    signerAddress])
 
   return (
     <EthersContext

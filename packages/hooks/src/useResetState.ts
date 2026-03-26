@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react'
 export const useResetState = <T>(resetValue: T): [T, Dispatch<SetStateAction<T>>] => {
   const [value, setValue] = useState<T>(resetValue)
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setValue(resetValue)
   }, [resetValue])
   return [value, setValue] as const

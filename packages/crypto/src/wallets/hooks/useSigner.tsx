@@ -1,6 +1,5 @@
 import { usePromise } from '@xylabs/react-promise'
 import type { EthAddressWrapper } from '@xylabs/sdk-js'
-// eslint-disable-next-line import-x/no-internal-modules
 import type { JsonRpcSigner } from 'ethers/providers'
 
 import type { EthWalletConnectorBase } from '../classes/index.ts'

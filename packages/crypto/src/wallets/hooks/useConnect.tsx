@@ -1,6 +1,4 @@
-// eslint-disable-next-line import-x/no-internal-modules
 import type { JsonRpcError } from 'ethers/providers'
-// eslint-disable-next-line import-x/no-internal-modules
 import { isError } from 'ethers/utils'
 import { useCallback, useState } from 'react'
 

@@ -19,5 +19,5 @@ export const useCheckUniversalRedirect = (name: string = DEFAULT_NAME) => {
       localStorage.removeItem(name)
       void navigate(pendingTo)
     }
-  }, [navigate])
+  }, [navigate, name])
 }

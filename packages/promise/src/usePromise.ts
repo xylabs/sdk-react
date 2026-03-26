@@ -3,7 +3,7 @@
 import { Mutex } from 'async-mutex'
 import type { DependencyList } from 'react'
 import {
-  useEffect, useMemo, useState,
+  useEffect, useMemo, useRef, useState,
 } from 'react'
 
 import { usePromiseSettings } from './context/index.ts'
@@ -32,9 +32,7 @@ export const usePromise = <TResult>(
   const [result, setResult] = useState<TResult | undefined>(config?.defaultValue)
   const [error, setError] = useState<Error>()
   const [state, setState] = useState<UsePromiseState>('pending')
-  const mutex = useMemo(() => {
-    return new Mutex()
-  }, [])
+  const mutex = useRef(new Mutex()).current
 
   if (config?.debug) console.log(`usePromise [${config?.debug}]: started [${typeof promise}]`)
 

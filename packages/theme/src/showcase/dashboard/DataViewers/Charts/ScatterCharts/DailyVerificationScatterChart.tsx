@@ -5,7 +5,7 @@ import {
 } from '@mui/material'
 import React, { useState } from 'react'
 import {
-  CartesianGrid, Cell, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis,
+  CartesianGrid, ReferenceLine, ResponsiveContainer, Scatter, ScatterChart, Tooltip, XAxis, YAxis,
 } from 'recharts'
 
 import { lightenCss } from '../../../../../lightenCss.ts'
@@ -106,14 +106,10 @@ export const DailyVerificationScatterChart: React.FC<DailyVerificationChartProps
           />
           <Scatter
             name="Verification Scatter"
-            data={data}
+            data={data.map(entry => ({ ...entry, fill: getVerificationColor(entry.verifications) }))}
             shape="circle"
             isAnimationActive={false}
-          >
-            {data.map(entry => (
-              <Cell key={`cell-${entry.time}-${entry.verifications}`} fill={getVerificationColor(entry.verifications)} />
-            ))}
-          </Scatter>
+          />
         </ScatterChart>
       </ResponsiveContainer>
     </div>

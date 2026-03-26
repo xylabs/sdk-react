@@ -1,6 +1,8 @@
 import { animated, useSpring } from '@react-spring/web'
 import type { FlexBoxProps } from '@xylabs/react-flexbox'
-import React, { useEffect, useState } from 'react'
+import React, {
+  useCallback, useEffect, useState,
+} from 'react'
 
 // Inspired by https://www.joshwcomeau.com/react/rotate/#bonus-that-star-animation-8
 
@@ -25,6 +27,19 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({
     from: { rotate: '0deg' },
   }))
 
+  const handleHover = useCallback(() => {
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    api.start({
+      from: { rotate: '0deg' },
+      to: { rotate: `${rotation}deg` },
+    })
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    api.start({
+      from: { rotate: `${rotation}deg` },
+      to: { rotate: '0deg' },
+    })
+  }, [api, rotation])
+
   useEffect(() => {
     let interval: NodeJS.Timeout
     if (activateOnTimer) {
@@ -37,20 +52,7 @@ export const RotationAnimation: React.FC<RotationAnimationProps> = ({
     return () => {
       clearInterval(interval)
     }
-  }, [activateOnTimer])
-
-  const handleHover = () => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    api.start({
-      from: { rotate: '0deg' },
-      to: { rotate: `${rotation}deg` },
-    })
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    api.start({
-      from: { rotate: `${rotation}deg` },
-      to: { rotate: '0deg' },
-    })
-  }
+  }, [activateOnTimer, handleHover])
 
   useEffect(() => {
     if (!isRotated) {

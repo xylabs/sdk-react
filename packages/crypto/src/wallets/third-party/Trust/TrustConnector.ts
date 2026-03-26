@@ -1,5 +1,4 @@
 import { forget } from '@xylabs/sdk-js'
-// eslint-disable-next-line import-x/no-internal-modules
 import { BrowserProvider } from 'ethers/providers'
 
 import { EthWalletConnectorBase } from '../../classes/index.ts'

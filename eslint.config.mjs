@@ -1,15 +1,14 @@
 // For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
-import storybook from "eslint-plugin-storybook";
-
 import {
+  importConfig,
+  rulesConfig,
+  sonarConfig,
   typescriptConfig,
   unicornConfig,
   workspacesConfig,
-  rulesConfig,
-  sonarConfig,
-  importConfig,
 } from '@xylabs/eslint-config-flat'
 import { reactConfig } from '@xylabs/eslint-config-react-flat'
+import storybook from 'eslint-plugin-storybook'
 
 // Packages re-exported by @xylabs/sdk-js that should not be imported directly
 const sdkJsBarrelPackages = [
@@ -52,7 +51,20 @@ const sdkJsBarrelPackages = [
 
 export default [
   {
-    ignores: ['.yarn', 'dist', 'build', 'docs', '**/packages/*/dist', '**/packages/*/build', '**/packages/*/docs', '**/packages/*/node_modules', 'storybook-static', '.storybook', '.claude/worktrees']},
+    ignores: [
+      '.yarn',
+      'dist',
+      'build',
+      'docs',
+      '**/packages/*/dist',
+      '**/packages/*/build',
+      '**/packages/*/docs',
+      '**/packages/*/node_modules',
+      'storybook-static',
+      '.storybook',
+      '.claude/worktrees',
+    ],
+  },
   typescriptConfig,
   unicornConfig,
   workspacesConfig,
@@ -75,7 +87,7 @@ export default [
       'react-hooks/refs': ['warn'],
       'react-hooks/use-memo': ['warn'],
       'react-hooks/set-state-in-effect': ['warn'],
-    }
+    },
   },
   {
     rules: {
@@ -102,5 +114,5 @@ export default [
       }],
     },
   },
-  ...storybook.configs["flat/recommended"]
-];
+  ...storybook.configs['flat/recommended'],
+]
